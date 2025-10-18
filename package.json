@@ -1,0 +1,22 @@
+{
+  "name": "avnir-studio-core",
+  "private": true,
+  "packageManager": "pnpm@9.6.0",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
+    "format": "prettier -w ."
+  },
+  "devDependencies": {
+    "prettier": "^3.3.3",
+    "turbo": "^2.1.1"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "features/*",
+    "brandkit"
+  ]
+}

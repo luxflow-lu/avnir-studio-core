@@ -1,0 +1,8 @@
+{
+  "name": "@avnir/design",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "index.ts",
+  "files": ["themes.css", "tokens.json", "tailwind-preset.cjs", "brands.ts", "index.ts"],
+  "license": "MIT"
+}

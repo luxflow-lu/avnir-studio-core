@@ -1,0 +1,8 @@
+{
+  "name": "@avnir/ui",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "files": ["src"],
+  "peerDependencies": { "react": "^18.2.0", "react-dom": "^18.2.0" }
+}
