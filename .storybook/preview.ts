@@ -4,29 +4,25 @@ import '../apps/avnir-studio/app/globals.css';
 export const globalTypes = {
   brand: {
     name: 'Brand',
-    defaultValue: 'muzipics', // change librement
+    defaultValue: 'avnir-studio',
     toolbar: {
       icon: 'paintbrush',
-      items: ['avnir-studio','muzidev','muzipics','muziweb','muzimerch','muzibase','muzimanager','muzitools','promozic','paradisebeats','lyrix']
+      items: ['avnir-studio','muzidev','muzipics','muziweb','muzimerch','muzibase','muzimanager','muzitools','promozic','paradisebeats','lyrix'],
+      showName: true,
+      dynamicTitle: true
     }
   }
 };
 
-function setBrandAttr(brand: string) {
-  // Canvas (preview iframe)
+const applyBrand = (brand: string) => {
   document.documentElement.setAttribute('data-brand', brand);
-  // Docs mode : certains wrappers utilisent #storybook-root
   const root = document.getElementById('storybook-root');
-  if (root) {
-    const html = root.ownerDocument?.documentElement;
-    html?.setAttribute('data-brand', brand);
-  }
-}
+  root?.ownerDocument?.documentElement?.setAttribute('data-brand', brand);
+};
 
 export const decorators = [
   (Story, ctx) => {
-    const brand = ctx.globals.brand || 'avnir-studio';
-    setBrandAttr(brand);
+    applyBrand(ctx.globals.brand || 'avnir-studio');
     return Story();
   }
 ];

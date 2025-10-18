@@ -16,3 +16,4 @@ export const Subtle: Story = { args: { variant: 'subtle' } };
 export const Danger: Story = { args: { variant: 'danger' } };
 export const Large: Story = { args: { size: 'lg' } };
 export const Small: Story = { args: { size: 'sm' } };
+export const FullWidth: Story = { args: { className: 'w-full' } };
