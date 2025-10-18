@@ -1,5 +1,10 @@
 {
-  "installCommand": "corepack enable && pnpm install",
+  "installCommand": "corepack enable && corepack prepare pnpm@9.6.0 --activate && pnpm -v && pnpm install",
   "buildCommand": "pnpm run build-storybook",
-  "outputDirectory": "storybook-static"
+  "outputDirectory": "storybook-static",
+  "build": {
+    "env": {
+      "NODE_VERSION": "20"
+    }
+  }
 }
