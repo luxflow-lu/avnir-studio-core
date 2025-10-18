@@ -1,5 +1,5 @@
-import '../../packages/design/themes.css';
-import '../../apps/avnir-studio/app/globals.css';
+import '../../../packages/design/themes.css';
+import '../../avnir-studio/app/globals.css';
 
 export const globalTypes = {
   brand: {
