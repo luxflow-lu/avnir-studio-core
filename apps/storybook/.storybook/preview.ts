@@ -1,5 +1,5 @@
-import '../packages/design/themes.css';
-import '../apps/avnir-studio/app/globals.css';
+import '../../packages/design/themes.css';
+import '../../apps/avnir-studio/app/globals.css';
 
 export const globalTypes = {
   brand: {
@@ -7,7 +7,10 @@ export const globalTypes = {
     defaultValue: 'avnir-studio',
     toolbar: {
       icon: 'paintbrush',
-      items: ['avnir-studio','muzidev','muzipics','muziweb','muzimerch','muzibase','muzimanager','muzitools','promozic','paradisebeats','lyrix'],
+      items: [
+        'avnir-studio','muzidev','muzipics','muziweb','muzimerch',
+        'muzibase','muzimanager','muzitools','promozic','paradisebeats','lyrix'
+      ],
       showName: true,
       dynamicTitle: true
     }
@@ -21,10 +24,7 @@ const applyBrand = (brand: string) => {
 };
 
 export const decorators = [
-  (Story, ctx) => {
-    applyBrand(ctx.globals.brand || 'avnir-studio');
-    return Story();
-  }
+  (Story, ctx) => { applyBrand(ctx.globals.brand || 'avnir-studio'); return Story(); }
 ];
 
 export const parameters = {
