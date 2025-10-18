@@ -5,7 +5,7 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
   size?: 'sm'|'md'|'lg';
 };
 
-const base = 'inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40';
+const base = 'inline-flex items-center justify-center font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-primary/40 disabled:opacity-50 disabled:pointer-events-none';
 const sizes = { sm: 'h-9 px-3 text-sm', md: 'h-10 px-4 text-base', lg: 'h-12 px-6 text-base' };
 const variants = {
   primary: 'bg-primary text-bg hover:opacity-90',
