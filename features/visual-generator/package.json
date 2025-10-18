@@ -1,1 +1,1 @@
-{ "name": "@features/visual-generator", "version": "0.1.0", "type": "module", "main": "src/index.ts", "files": ["src"], "dependencies": { "@avnir/ui": "*" } }
+{ "name": "@features/visual-generator", "version": "0.1.0", "type": "module", "main": "src/index.ts", "files": ["src"], "dependencies": { "@avnir/ui": "workspace:*" } }
