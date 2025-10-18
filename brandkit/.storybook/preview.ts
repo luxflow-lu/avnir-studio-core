@@ -1,43 +1,37 @@
-import '../../packages/design/themes.css';              // tokens + themes (REM)
-import './storybook.css';                                 // tailwind layers pour Storybook
+import '../packages/design/themes.css';
+import '../apps/avnir-studio/app/globals.css';
 
 export const globalTypes = {
   brand: {
     name: 'Brand',
-    description: 'Thème AVNIR brand via data-brand',
-    defaultValue: 'avnir-studio',
+    defaultValue: 'muzipics', // change librement
     toolbar: {
       icon: 'paintbrush',
-      items: [
-        { value: 'avnir-studio', title: 'AVNIR-Studio' },
-        { value: 'muzidev', title: 'MUZIDEV' },
-        { value: 'muzipics', title: 'MUZIPICS' },
-        { value: 'muziweb', title: 'MUZIWEB' },
-        { value: 'muzimerch', title: 'MUZIMERCH' },
-        { value: 'muzibase', title: 'MUZIBASE' },
-        { value: 'muzimanager', title: 'MUZIMANAGER' },
-        { value: 'muzitools', title: 'MUZITOOLS' },
-        { value: 'promozic', title: 'PROMOZIC' },
-        { value: 'paradisebeats', title: 'Paradise Beats' },
-        { value: 'lyrix', title: 'LYRIX' }
-      ],
-      showName: true,
-      dynamicTitle: true
+      items: ['avnir-studio','muzidev','muzipics','muziweb','muzimerch','muzibase','muzimanager','muzitools','promozic','paradisebeats','lyrix']
     }
   }
 };
 
+function setBrandAttr(brand: string) {
+  // Canvas (preview iframe)
+  document.documentElement.setAttribute('data-brand', brand);
+  // Docs mode : certains wrappers utilisent #storybook-root
+  const root = document.getElementById('storybook-root');
+  if (root) {
+    const html = root.ownerDocument?.documentElement;
+    html?.setAttribute('data-brand', brand);
+  }
+}
+
 export const decorators = [
-  (Story, context) => {
-    if (typeof document !== 'undefined') {
-      document.documentElement.setAttribute('data-brand', context.globals.brand || 'avnir-studio');
-    }
+  (Story, ctx) => {
+    const brand = ctx.globals.brand || 'avnir-studio';
+    setBrandAttr(brand);
     return Story();
   }
 ];
 
 export const parameters = {
   backgrounds: { default: 'bg', values: [{ name: 'bg', value: 'var(--bg)' }] },
-  layout: 'centered',
-  options: { storySort: { order: ['Intro', 'Tokens', 'UI'] } }
+  layout: 'padded'
 };
