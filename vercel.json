@@ -1,4 +1,4 @@
 {
-  "buildCommand": "corepack enable && pnpm install && pnpm storybook build -c brandkit/.storybook -o storybook-static",
+  "buildCommand": "corepack enable && pnpm install && pnpm run build-storybook",
   "outputDirectory": "storybook-static"
 }
