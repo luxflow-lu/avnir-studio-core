@@ -1,9 +1,15 @@
 import React, { useState } from "react";
 import { PlanPicker } from "./PlanPicker";
 
-export default { title: "SaaS/PlanPicker" };
+export default {
+  title: "SaaS/PlanPicker",
+  argTypes: {
+    billingCycle: { control: { type: "radio" }, options: ["monthly", "yearly"] },
+    featuredIndex: { control: { type: "number", min: 0, max: 2 } }
+  }
+};
 
-const mockPlans = [
+const basePlans = [
   {
     id: "starter",
     name: "Starter",
@@ -30,7 +36,6 @@ const mockPlans = [
       "Team collaboration",
       "API access"
     ],
-    popular: true,
     cta: "Start Free Trial"
   },
   {
@@ -50,35 +55,56 @@ const mockPlans = [
   }
 ];
 
-export const Default = () => {
-  const [billing, setBilling] = useState<"monthly" | "yearly">("monthly");
+function WithFeatured(plans: typeof basePlans, featuredIndex = 1) {
+  return plans.map((p, i) => ({ ...p, popular: i === featuredIndex }));
+}
+
+type Billing = "monthly" | "yearly";
+
+export const Default = (args: { billingCycle?: Billing; featuredIndex?: number }) => {
+  const [billing, setBilling] = useState<Billing>(args.billingCycle ?? "monthly");
   const [selectedPlan, setSelectedPlan] = useState<string>();
+  const plans = WithFeatured(basePlans, args.featuredIndex ?? 1);
 
   return (
-    <div className="bg-[var(--bg)] text-white p-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">Choose Your Plan</h2>
-          <p className="text-[var(--text-muted)]">Select the perfect plan for your needs</p>
-        </div>
-        
-        <PlanPicker
-          plans={mockPlans}
-          billing={billing}
-          onBillingChange={setBilling}
-          onSelectPlan={setSelectedPlan}
-          selectedPlan={selectedPlan}
-        />
-        
-        {selectedPlan && (
-          <div className="mt-8 text-center">
-            <p className="text-[var(--text-muted)]">
-              Selected plan: <span className="text-white font-medium">{selectedPlan}</span> 
-              {" "}({billing})
-            </p>
-          </div>
-        )}
-      </div>
+    <div className="mx-auto max-w-5xl p-6 md:p-10 bg-background text-foreground">
+      <PlanPicker
+        plans={plans}
+        billing={billing}
+        onBillingChange={setBilling}
+        onSelectPlan={setSelectedPlan}
+        selectedPlan={selectedPlan}
+      />
+    </div>
+  );
+};
+Default.args = { billingCycle: "monthly", featuredIndex: 1 };
+
+export const Yearly = () => {
+  const [billing, setBilling] = useState<Billing>("yearly");
+  const plans = WithFeatured(basePlans, 1);
+  return (
+    <div className="mx-auto max-w-5xl p-6 md:p-10 bg-background text-foreground">
+      <PlanPicker
+        plans={plans}
+        billing={billing}
+        onBillingChange={setBilling}
+        onSelectPlan={() => {}}
+      />
+    </div>
+  );
+};
+
+export const FeaturedCenter = () => {
+  const plans = WithFeatured(basePlans, 1);
+  return (
+    <div className="mx-auto max-w-5xl p-6 md:p-10 bg-background text-foreground">
+      <PlanPicker
+        plans={plans}
+        billing={"monthly"}
+        onBillingChange={() => {}}
+        onSelectPlan={() => {}}
+      />
     </div>
   );
 };

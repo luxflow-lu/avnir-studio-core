@@ -27,3 +27,6 @@ export * from "./ecommerce";
 
 // AVNIR
 export * from "./avnir";
+
+// Marketing
+export * from "./marketing";

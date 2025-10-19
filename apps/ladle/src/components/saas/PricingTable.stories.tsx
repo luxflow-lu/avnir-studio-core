@@ -1,7 +1,12 @@
 import React from "react";
 import { PricingTable } from "./PricingTable";
 
-export default { title: "SaaS/PricingTable" };
+export default {
+  title: "SaaS/PricingTable",
+  argTypes: {
+    featuredIndex: { control: { type: "number", min: 0, max: 2 } }
+  }
+};
 
 const plans = [
   {
@@ -32,7 +37,6 @@ const plans = [
       "Team collaboration",
       "API access"
     ],
-    popular: true,
     cta: { label: "Start Free Trial" }
   },
   {
@@ -52,22 +56,19 @@ const plans = [
   }
 ];
 
-export const Default = () => (
-  <div className="bg-[var(--bg)] text-white p-6">
-    <div className="max-w-6xl mx-auto">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl font-bold mb-4">Choose Your Plan</h2>
-        <p className="text-[var(--text-muted)]">Select the perfect plan for your needs</p>
-      </div>
-      <PricingTable plans={plans} />
-    </div>
+function withFeatured(index = 1) {
+  return plans.map((p, i) => ({ ...p, popular: i === index }));
+}
+
+export const Default = (args: { featuredIndex?: number }) => (
+  <div className="mx-auto max-w-5xl p-6 md:p-10 bg-background text-foreground">
+    <PricingTable plans={withFeatured(args.featuredIndex ?? 1)} />
   </div>
 );
+Default.args = { featuredIndex: 1 };
 
 export const Annual = () => (
-  <div className="bg-[var(--bg)] text-white p-6">
-    <div className="max-w-6xl mx-auto">
-      <PricingTable plans={plans} annual />
-    </div>
+  <div className="mx-auto max-w-5xl p-6 md:p-10 bg-background text-foreground">
+    <PricingTable plans={withFeatured(1)} annual />
   </div>
 );
