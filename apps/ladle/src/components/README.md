@@ -66,24 +66,24 @@
 - **RolesMatrix** - `SaaS/RolesMatrix`
 - **SavedViews** - `SaaS/SavedViews`
 
-### ⚠️ E-commerce (3/7)
+### ✅ E-commerce (7/7)
+- **CheckoutSteps** - `E-commerce/CheckoutSteps`
+- **FacetedSearch** - `E-commerce/FacetedSearch`
+- **MediaGallery** - `E-commerce/MediaGallery`
 - **MegaMenu** - `E-commerce/MegaMenu`
 - **MiniCart** - `E-commerce/MiniCart`
 - **Price** - `E-commerce/Price`
-- ⏳ **FacetedSearch** - Filtres + chips
-- ⏳ **PDP/MediaGallery** - Galerie produit
-- ⏳ **VariantsSwatches** - Sélecteur variantes
-- ⏳ **CheckoutSteps** - Étapes commande
+- **VariantsSwatches** - `E-commerce/VariantsSwatches`
 
-### ⚠️ AVNIR (2/8)
+### ✅ AVNIR (8/8)
+- **AssetTile** - `AVNIR/AssetTile`
+- **CreditBalance** - `AVNIR/CreditBalance`
+- **ModelSelector** - `AVNIR/ModelSelector`
+- **PermissionBadge** - `AVNIR/PermissionBadge`
 - **ProjectCard** - `AVNIR/ProjectCard`
 - **ProjectHeader** - `AVNIR/ProjectHeader`
-- ⏳ **PermissionBadge** - Badge permissions
-- ⏳ **AssetTile** - Tuile asset
-- ⏳ **PromptEditor** - Éditeur prompts
-- ⏳ **ModelSelector** - Sélecteur modèles
-- ⏳ **CreditBalance** - Solde crédits
-- ⏳ **RenderStatus** - Statut rendu
+- **PromptEditor** - `AVNIR/PromptEditor`
+- **RenderStatus** - `AVNIR/RenderStatus`
 
 ## Usage
 
