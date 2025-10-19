@@ -37,6 +37,6 @@ const css = `
 :root[data-brand="muzimanager"]{--brand:${brands.muzimanager.primary};--brand-on:${brands.muzimanager.onPrimary};}
 :root[data-brand="promozic"]{--brand:${brands.promozic.primary};--brand-on:${brands.promozic.onPrimary};}
 `.trim();
-fs.mkdirSync(path.resolve("packages/tokens/dist"), { recursive: true });
-fs.writeFileSync(path.resolve("packages/tokens/dist/vars.css"), css);
-console.log("Wrote packages/tokens/dist/vars.css");
+fs.mkdirSync(path.resolve("dist"), { recursive: true });
+fs.writeFileSync(path.resolve("dist/vars.css"), css);
+console.log("Wrote dist/vars.css");
