@@ -5,8 +5,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with: { node-version: 20 }
-      - run: corepack enable
-      - run: pnpm install
-      - run: pnpm build
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'pnpm'
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+          run_install: false
+      - name: Install deps
+        run: pnpm i --frozen-lockfile
+      - name: Build workspace
+        run: pnpm -w build
+      - name: Build demo
+        run: pnpm build:demo
