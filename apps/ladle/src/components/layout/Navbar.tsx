@@ -18,7 +18,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
     <header
       ref={ref}
       className={cx(
-        "sticky top-0 z-40 w-full bg-[var(--bg)]/80 backdrop-blur border-b border-white/10",
+        "surface-invert sticky top-0 z-40 w-full bg-[var(--bg)]/80 backdrop-blur border-b border-white/10",
         className
       )}
       {...props}

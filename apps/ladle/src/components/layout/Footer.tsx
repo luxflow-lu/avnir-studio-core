@@ -20,7 +20,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
   ({ className, sections = [], bottomContent, ...props }, ref) => (
     <footer
       ref={ref}
-      className={cx("bg-[var(--bg)] border-t border-white/10", className)}
+      className={cx("surface-invert bg-[var(--bg)] border-t border-white/10", className)}
       {...props}
     >
       {sections.length > 0 && (
