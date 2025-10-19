@@ -17,11 +17,11 @@ export const Steps = React.forwardRef<HTMLElement, StepsProps>(({ title, subtitl
         <ol className={cx(direction === "vertical" ? "space-y-6" : "grid gap-6 md:grid-cols-4")}
             aria-label="Étapes">
           {items.map((s, i) => (
-            <li key={i} className="rounded-[var(--radius)] border border-border bg-card text-card-foreground p-6">
-              {s.icon && <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-md bg-muted text-primary">{s.icon}</div>}
-              <div className="text-sm text-muted-foreground">Étape {i + 1}</div>
-              <div className="mt-1 font-medium text-card-foreground">{s.title}</div>
-              {s.description && <p className="mt-1 text-sm text-muted-foreground">{s.description}</p>}
+            <li key={i} className="rounded-[var(--radius-lg)] border border-white/10 bg-[var(--surface)] text-white p-6">
+              {s.icon && <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-md bg-white/5 text-[var(--brand)]">{s.icon}</div>}
+              <div className="text-sm text-[var(--text-muted)]">Étape {i + 1}</div>
+              <div className="mt-1 font-medium text-white">{s.title}</div>
+              {s.description && <p className="mt-1 text-sm text-[var(--text-muted)]">{s.description}</p>}
             </li>
           ))}
         </ol>

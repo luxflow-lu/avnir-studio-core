@@ -31,15 +31,15 @@ export const Features = React.forwardRef<HTMLElement, FeaturesProps>(
             {items.map((it, i) => (
               <div
                 key={i}
-                className="rounded-[var(--radius)] border border-border bg-card text-card-foreground p-6 shadow-sm transition-colors transition-shadow hover:shadow-md"
+                className="rounded-[var(--radius-lg)] border border-white/10 bg-[var(--surface)] text-white p-6 shadow-sm transition-colors transition-shadow hover:shadow-md"
               >
                 {it.icon && (
-                  <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-md bg-muted text-primary">
+                  <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-md bg-white/5 text-[var(--brand)]">
                     {it.icon}
                   </div>
                 )}
-                <h3 className="font-medium tracking-tight text-card-foreground">{it.title}</h3>
-                {it.description && <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{it.description}</p>}
+                <h3 className="font-medium tracking-tight text-white">{it.title}</h3>
+                {it.description && <p className="mt-2 text-sm leading-relaxed text-[var(--text-muted)]">{it.description}</p>}
               </div>
             ))}
           </div>

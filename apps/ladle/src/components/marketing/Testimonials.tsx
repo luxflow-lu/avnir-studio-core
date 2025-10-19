@@ -17,18 +17,18 @@ export const Testimonials = React.forwardRef<HTMLElement, TestimonialsProps>(({ 
         )}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {items.map((t, i) => (
-            <figure key={i} className="rounded-[var(--radius)] border border-border bg-card text-card-foreground p-6 shadow-sm">
-              <blockquote className="text-sm leading-relaxed text-muted-foreground">“{t.quote}”</blockquote>
+            <figure key={i} className="rounded-[var(--radius-lg)] border border-white/10 bg-[var(--surface)] text-white p-6 shadow-sm">
+              <blockquote className="text-sm leading-relaxed text-[var(--text-muted)]">“{t.quote}”</blockquote>
               <figcaption className="mt-4 flex items-center gap-3">
                 {t.avatarSrc ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={t.avatarSrc} alt="" className="h-9 w-9 rounded-full object-cover" />
                 ) : (
-                  <div className="h-9 w-9 rounded-full bg-muted" aria-hidden />
+                  <div className="h-9 w-9 rounded-full bg-white/10" aria-hidden />
                 )}
                 <div>
-                  <div className="font-medium text-card-foreground">{t.author}</div>
-                  {t.role && <div className="text-xs text-muted-foreground">{t.role}</div>}
+                  <div className="font-medium text-white">{t.author}</div>
+                  {t.role && <div className="text-xs text-[var(--text-muted)]">{t.role}</div>}
                 </div>
               </figcaption>
             </figure>

@@ -14,7 +14,7 @@ export const ContactBlock = React.forwardRef<HTMLElement, ContactBlockProps>(({ 
           </div>
         )}
         <div className="grid gap-8 md:grid-cols-2">
-          <div className="rounded-[var(--radius-lg)] border border-white/10 bg-[var(--surface)] text-white p-6">
+          <div className="rounded-[var(--radius)] border border-border bg-card text-card-foreground p-6">
             {form ?? (
               <form className="space-y-4">
                 <div>
@@ -33,9 +33,9 @@ export const ContactBlock = React.forwardRef<HTMLElement, ContactBlockProps>(({ 
               </form>
             )}
           </div>
-          <div className="rounded-[var(--radius-lg)] border border-white/10 bg-[var(--surface)] text-white p-6">
+          <div className="rounded-[var(--radius)] border border-border bg-card text-card-foreground p-6">
             {details ?? (
-              <div className="space-y-2 text-[var(--text-muted)]">
+              <div className="space-y-2 text-muted-foreground">
                 <p>contact@exemple.com</p>
                 <p>+33 1 23 45 67 89</p>
                 <p>10 rue Exemple, 75000 Paris</p>
