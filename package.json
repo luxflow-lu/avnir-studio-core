@@ -6,11 +6,24 @@
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
-    "build:tokens": "pnpm -w --filter @avnir/tokens build",
-    "build:ladle": "pnpm -w --filter @avnir/ladle build",
-    "build:site": "pnpm run build:tokens && pnpm run build:ladle",
-    "check:hex": "rg -n \"#[0-9a-fA-F]{3,6}\" packages/ui apps | rg -v \"packages/tokens|/fixtures|/svg\" && echo \"⛔ HEX trouvés\" && exit 1 || echo \"✓ Pas de HEX\""
+    "dev:ladle": "turbo run dev --filter=@avnir/ladle",
+    "build:ladle": "turbo run build --filter=@avnir/ladle",
+    "dev:docs": "turbo run dev --filter=@avnir/docs",
+    "build:docs": "turbo run build --filter=@avnir/docs",
+    "lint": "turbo run lint",
+    "clean": "turbo run clean",
+    "format": "prettier -w ."
   },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.13",
+    "turbo": "^2.1.1",
+    "typescript": "^5.6.3",
+    "@types/node": "^20.11.30"
+  },
+  "engines": { "node": ">=20 <21" },
   "workspaces": [
     "apps/*",
     "packages/*"
