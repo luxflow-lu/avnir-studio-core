@@ -1,0 +1,15 @@
+# Design Tokens
+
+Les tokens sont définis dans `packages/tokens/src/tokens.json` et exportés en CSS variables via `packages/tokens/dist/vars.css`.
+
+```css
+:root[data-brand="muzipics"] { --brand: #FF2D55; --brand-on: #1A0B0F; }
+```
+
+Tailwind preset partagé : `@avnir/tokens/tailwind-preset.cjs`.
+
+Pour changer de marque globalement, définir sur `<html>` :
+
+```html
+<html data-brand="muzibase">
+```
