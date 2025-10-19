@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "dev": "ladle serve",
+    "prebuild": "pnpm -w --filter @avnir/tokens build",
     "build": "ladle build",
     "preview": "ladle preview"
   },
