@@ -17,10 +17,10 @@ export const Stats = React.forwardRef<HTMLElement, StatsProps>(({ title, items, 
         {title && <h2 className="mb-8 text-center text-3xl md:text-4xl font-semibold tracking-tight text-foreground">{title}</h2>}
         <div className={cx("grid grid-cols-2 gap-6", colMap[columns])}>
           {items.map((s, i) => (
-            <div key={i} className="rounded-[var(--radius-lg)] border border-white/10 bg-[var(--surface)] text-white p-6 text-center">
+            <div key={i} className="rounded-[var(--radius)] border border-border bg-card text-card-foreground p-6 text-center">
               <div className="text-3xl md:text-4xl font-semibold tracking-tight">{s.value}</div>
-              <div className="mt-1 text-sm text-[var(--text-muted)]">{s.label}</div>
-              {s.sublabel && <div className="mt-1 text-xs text-[var(--text-muted)]">{s.sublabel}</div>}
+              <div className="mt-1 text-sm text-muted-foreground">{s.label}</div>
+              {s.sublabel && <div className="mt-1 text-xs text-muted-foreground">{s.sublabel}</div>}
             </div>
           ))}
         </div>

@@ -33,7 +33,7 @@ export const Faq = React.forwardRef<HTMLElement, FaqProps>(
             </div>
           )}
 
-          <div className="divide-y divide-white/10 rounded-[var(--radius-lg)] border border-white/10 bg-[var(--surface)] text-white shadow-sm">
+          <div className="divide-y divide-border rounded-[var(--radius)] border border-border bg-card text-card-foreground shadow-sm">
             {items.map((qa, i) => {
               const id = `faq-item-${i}`;
               const expanded = open.has(i);
@@ -42,14 +42,14 @@ export const Faq = React.forwardRef<HTMLElement, FaqProps>(
                   <button
                     className={cx(
                       "w-full flex items-center justify-between text-left rounded-[var(--radius-sm)] px-4 py-3 md:px-5 md:py-4",
-                      "hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--brand)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--surface)]"
+                      "hover:bg-muted/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                     )}
                     aria-controls={`${id}-panel`}
                     aria-expanded={expanded}
                     onClick={() => toggle(i)}
                   >
-                    <span className="font-medium text-white tracking-tight">{qa.q}</span>
-                    <span className="ml-4 inline-flex h-5 w-5 items-center justify-center rounded-sm border border-white/10 bg-white/5 text-[var(--brand)]" aria-hidden>
+                    <span className="font-medium text-card-foreground tracking-tight">{qa.q}</span>
+                    <span className="ml-4 inline-flex h-5 w-5 items-center justify-center rounded-sm border border-border bg-muted text-primary" aria-hidden>
                       {expanded ? "−" : "+"}
                     </span>
                   </button>
@@ -60,7 +60,7 @@ export const Faq = React.forwardRef<HTMLElement, FaqProps>(
                     className={cx("grid transition-all duration-200 ease-out px-4 md:px-5", expanded ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0")}
                   >
                     <div className="overflow-hidden">
-                      <p className="mt-3 pb-4 text-sm leading-relaxed text-[var(--text-muted)]">{qa.a}</p>
+                      <p className="mt-3 pb-4 text-sm leading-relaxed text-muted-foreground">{qa.a}</p>
                     </div>
                   </div>
                 </div>
