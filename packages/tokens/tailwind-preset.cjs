@@ -6,8 +6,8 @@ module.exports = {
       colors: {
         bg: "var(--bg)",
         "bg-dark": "var(--bg-dark)",
-        "bg-light": "var(--bg-light)",
         surface: "var(--surface)",
+        "bg-light": "var(--bg-light)",
         brand: "var(--brand)",
         "brand-on": "var(--brand-on)",
         muted: "var(--text-muted)"
