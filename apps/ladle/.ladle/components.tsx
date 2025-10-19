@@ -53,7 +53,7 @@ export const Provider = ({ children }: { children: React.ReactNode }) => {
 
   return <>
     {children}
-    <div style={{ position: "fixed", right: 12, bottom: 12, display: "flex", gap: 8, zIndex: 1000 }}>
+    <div style={{ position: "fixed", right: 12, top: 12, display: "flex", gap: 8, zIndex: 1000 }}>
       <ThemeToggle theme={theme} onThemeChange={onThemeChange} />
       <BrandToggle />
     </div>
