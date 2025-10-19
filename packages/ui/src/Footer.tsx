@@ -6,9 +6,9 @@ export function Footer(){
         <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <p>© {new Date().getFullYear()} AVNIR-Studio — Tous droits réservés.</p>
           <ul className="flex items-center gap-4">
-            <li><a className="hover:text-primary" href="/legal">Mentions légales</a></li>
-            <li><a className="hover:text-primary" href="/privacy">Confidentialité</a></li>
-            <li><a className="hover:text-primary" href="/contact">Contact</a></li>
+            <li><a className="hover:text-[var(--brand)]" href="/legal">Mentions légales</a></li>
+            <li><a className="hover:text-[var(--brand)]" href="/privacy">Confidentialité</a></li>
+            <li><a className="hover:text-[var(--brand)]" href="/contact">Contact</a></li>
           </ul>
         </div>
       </div>

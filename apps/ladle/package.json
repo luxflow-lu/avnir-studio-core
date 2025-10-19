@@ -1,0 +1,23 @@
+{
+  "name": "@avnir/ladle",
+  "private": true,
+  "scripts": {
+    "dev": "ladle serve",
+    "build": "ladle build",
+    "preview": "ladle preview"
+  },
+  "dependencies": {
+    "@ladle/react": "^4.0.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "clsx": "^2.1.1",
+    "@avnir/ui": "workspace:*",
+    "@avnir/tokens": "workspace:*"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.13",
+    "postcss": "^8.4.47",
+    "autoprefixer": "^10.4.20",
+    "typescript": "^5.6.3"
+  }
+}

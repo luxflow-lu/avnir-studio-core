@@ -3,9 +3,12 @@
   "private": true,
   "packageManager": "pnpm@9.6.0",
   "scripts": {
-    "preinstall": "corepack enable && corepack prepare pnpm@9.6.0 --activate",
+    "dev": "turbo run dev",
     "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
+    "dev:ladle": "turbo run dev --filter=@avnir/ladle",
+    "build:ladle": "turbo run build --filter=@avnir/ladle",
+    "dev:docs": "turbo run dev --filter=@avnir/docs",
+    "build:docs": "turbo run build --filter=@avnir/docs",
     "lint": "turbo run lint",
     "clean": "turbo run clean",
     "format": "prettier -w ."
@@ -15,9 +18,11 @@
     "postcss": "^8.4.47",
     "prettier": "^3.3.3",
     "tailwindcss": "^3.4.13",
-    "turbo": "^2.1.1"
+    "turbo": "^2.1.1",
+    "typescript": "^5.6.3",
+    "@types/node": "^20.11.30"
   },
-  "engines": { "node": "20.x" },
+  "engines": { "node": ">=20 <21" },
   "workspaces": [
     "apps/*",
     "packages/*",

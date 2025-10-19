@@ -1,3 +1,4 @@
+@import "../../../packages/tokens/dist/vars.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

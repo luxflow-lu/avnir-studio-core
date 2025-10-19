@@ -3,14 +3,13 @@
     "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "Bundler",
-    "jsx": "preserve",
+    "jsx": "react-jsx",
     "strict": true,
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@avnir/design/*": ["packages/design/*"],
-      "@avnir/ui/*": ["packages/ui/src/*"],
-      "@features/*": ["features/*"]
+      "@avnir/tokens/*": ["packages/tokens/*"],
+      "@avnir/ui/*": ["packages/ui/*"]
     },
     "types": ["node"]
   }
