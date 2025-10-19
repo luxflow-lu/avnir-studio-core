@@ -5,6 +5,8 @@ module.exports = {
     extend: {
       colors: {
         bg: "var(--bg)",
+        "bg-dark": "var(--bg-dark)",
+        "bg-light": "var(--bg-light)",
         surface: "var(--surface)",
         brand: "var(--brand)",
         "brand-on": "var(--brand-on)",
@@ -22,9 +24,6 @@ module.exports = {
         sm: "var(--shadow-sm)",
         md: "var(--shadow-md)",
         lg: "var(--shadow-lg)"
-      },
-      fontFamily: {
-        sans: ["Inter","system-ui","-apple-system","Segoe UI","Roboto","Helvetica","Arial","sans-serif"]
       }
     }
   }

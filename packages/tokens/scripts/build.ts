@@ -5,31 +5,38 @@ import path from "node:path";
 const tokensPath = path.resolve("src/tokens.json");
 const tokens = JSON.parse(fs.readFileSync(tokensPath, "utf-8"));
 
-const root = `
+const base = tokens.base;
+const brands = tokens.brand;
 
+const css = `
 :root{
---bg:${tokens.brand.avnir.bg};
---surface:${tokens.brand.avnir.surface};
---text-muted:${tokens.brand.avnir.muted};
---radius-xs:${tokens.radius.xs};
---radius-sm:${tokens.radius.sm};
---radius-md:${tokens.radius.md};
---radius-lg:${tokens.radius.lg};
---radius-xl:${tokens.radius.xl};
---radius-full:${tokens.radius.full};
---shadow-sm:${tokens.shadow.sm};
---shadow-md:${tokens.shadow.md};
---shadow-lg:${tokens.shadow.lg};
+  --bg-dark:${base.bgDark};
+  --bg-light:${base.bgLight};
+  --bg:var(--bg-dark);
+  --surface:${base.surface};
+  --text-muted:${base.textMuted};
+
+  --radius-xs:${base.radius.xs};
+  --radius-sm:${base.radius.sm};
+  --radius-md:${base.radius.md};
+  --radius-lg:${base.radius.lg};
+  --radius-xl:${base.radius.xl};
+  --radius-full:${base.radius.full};
+
+  --shadow-sm:${base.shadow.sm};
+  --shadow-md:${base.shadow.md};
+  --shadow-lg:${base.shadow.lg};
 }
-:root{--brand:${tokens.brand.avnir.accent};--brand-on:#FFFFFF;}
-:root{--brand:${tokens.brand.muzidev.primary};--brand-on:${tokens.brand.muzidev.onPrimary};}
-:root{--brand:${tokens.brand.muzipics.primary};--brand-on:${tokens.brand.muzipics.onPrimary};}
-:root{--brand:${tokens.brand.muziweb.primary};--brand-on:${tokens.brand.muziweb.onPrimary};}
-:root{--brand:${tokens.brand.muzimerch.primary};--brand-on:${tokens.brand.muzimerch.onPrimary};}
-:root{--brand:${tokens.brand.muzibase.primary};--brand-on:${tokens.brand.muzibase.onPrimary};}
-:root{--brand:${tokens.brand.muzimanager.primary};--brand-on:${tokens.brand.muzimanager.onPrimary};}
-:root{--brand:${tokens.brand.promozic.primary};--brand-on:${tokens.brand.promozic.onPrimary};}
+
+:root[data-brand="avnir"]{--brand:${brands.avnir.primary};--brand-on:${brands.avnir.onPrimary};}
+:root[data-brand="muzidev"]{--brand:${brands.muzidev.primary};--brand-on:${brands.muzidev.onPrimary};}
+:root[data-brand="muzipics"]{--brand:${brands.muzipics.primary};--brand-on:${brands.muzipics.onPrimary};}
+:root[data-brand="muziweb"]{--brand:${brands.muziweb.primary};--brand-on:${brands.muziweb.onPrimary};}
+:root[data-brand="muzimerch"]{--brand:${brands.muzimerch.primary};--brand-on:${brands.muzimerch.onPrimary};}
+:root[data-brand="muzibase"]{--brand:${brands.muzibase.primary};--brand-on:${brands.muzibase.onPrimary};}
+:root[data-brand="muzimanager"]{--brand:${brands.muzimanager.primary};--brand-on:${brands.muzimanager.onPrimary};}
+:root[data-brand="promozic"]{--brand:${brands.promozic.primary};--brand-on:${brands.promozic.onPrimary};}
 `.trim();
 fs.mkdirSync(path.resolve("packages/tokens/dist"), { recursive: true });
-fs.writeFileSync(path.resolve("packages/tokens/dist/vars.css"), root);
+fs.writeFileSync(path.resolve("packages/tokens/dist/vars.css"), css);
 console.log("Wrote packages/tokens/dist/vars.css");
