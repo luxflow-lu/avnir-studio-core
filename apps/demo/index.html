@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AVNIR Demo</title>
+    <script>
+      (function() {
+        try {
+          var t = localStorage.getItem('theme') || 'system';
+          var m = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)');
+          var r = t === 'system' ? (m && m.matches ? 'dark' : 'light') : t;
+          document.documentElement.setAttribute('data-theme', r);
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

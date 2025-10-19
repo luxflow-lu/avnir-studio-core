@@ -13,6 +13,9 @@
     "ladle": "pnpm dev:ladle",
     "dev:docs": "turbo run dev --filter=@avnir/docs",
     "build:docs": "turbo run build --filter=@avnir/docs",
+    "dev:demo": "vite --config apps/demo/vite.config.ts",
+    "build:demo": "vite build --config apps/demo/vite.config.ts",
+    "preview:demo": "vite preview --config apps/demo/vite.config.ts",
     "lint": "turbo run lint",
     "clean": "turbo run clean",
     "format": "prettier -w ."
