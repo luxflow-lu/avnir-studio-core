@@ -4,6 +4,10 @@
   "private": true,
   "type": "module",
   "main": "dist/index.js",
-  "scripts": { "build": "tsx scripts/build.ts" },
-  "devDependencies": { "tsx": "^4.19.1" }
+  "scripts": {
+    "build": "tsx scripts/build.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.1"
+  }
 }
