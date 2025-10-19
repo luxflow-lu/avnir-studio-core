@@ -4,6 +4,7 @@ module.exports = {
   presets: [preset],
   content: [
     "./src/**/*.{ts,tsx,mdx}",
+    "./.ladle/**/*.{ts,tsx,mdx}",
     "../../packages/ui/src/**/*.{ts,tsx}"
   ]
 };

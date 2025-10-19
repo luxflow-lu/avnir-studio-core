@@ -1,0 +1,280 @@
+
+
+> @avnir/ladle@ dev /Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle
+> ladle serve
+
+
+[33m╭─────────────────────────────╮[39m
+[33m│[39m                             [33m│[39m
+[33m│[39m   🥄 Ladle.dev served at    [33m│[39m
+[33m│[39m   http://localhost:61001/   [33m│[39m
+[33m│[39m                             [33m│[39m
+[33m╰─────────────────────────────╯[39m
+
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:20:19 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/saas/PlanPicker.stories.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m
+[2m10:20:22 PM[22m [36m[1m[vite][22m[39m [33mhmr invalidate [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/saas/PlanPicker.stories.tsx[22m Could not Fast Refresh ("default" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react-swc#consistent-components-exports
+[2m10:20:22 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/saas/PlanPicker.stories.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:20:36 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/saas/PricingTable.stories.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:22:59 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/saas/PlanPicker.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:23:34 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/saas/PricingTable.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:27:59 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/saas/PlanPicker.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:28:39 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/saas/PlanPicker.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:29:09 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/saas/PlanPicker.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:31:38 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/saas/PlanPicker.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:32:26 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/saas/PlanPicker.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:33:11 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/saas/PricingTable.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:33:49 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/saas/PlanPicker.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:35:42 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/saas/PlanPicker.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:39:46 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/saas/PlanPicker.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:43:59 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/saas/PricingTable.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:51:57 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/index.ts[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:56:56 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/marketing/Features.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:57:22 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/marketing/Faq.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:58:54 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/marketing/Features.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:59:26 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/marketing/Faq.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m11:03:29 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/marketing/index.ts[22m
+lanPicker.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:43:59 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/saas/PricingTable.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m10:51:57 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/index.ts[22m

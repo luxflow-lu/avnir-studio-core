@@ -10,6 +10,7 @@
     "build:ladle": "pnpm -w --filter @avnir/ladle build",
     "build:site": "pnpm run build:tokens && pnpm run build:ladle",
     "dev:ladle": "turbo run dev --filter=@avnir/ladle",
+    "ladle": "pnpm dev:ladle",
     "dev:docs": "turbo run dev --filter=@avnir/docs",
     "build:docs": "turbo run build --filter=@avnir/docs",
     "lint": "turbo run lint",

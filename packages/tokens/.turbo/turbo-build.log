@@ -1,5 +1,0 @@
-
-> @avnir/tokens@0.1.0 build /Users/maximezaoui/CascadeProjects/avnir-studio-core/packages/tokens
-> tsx scripts/build.ts
-
-Wrote packages/tokens/dist/vars.css
