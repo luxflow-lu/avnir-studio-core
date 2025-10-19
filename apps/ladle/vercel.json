@@ -1,0 +1,5 @@
+{
+  "installCommand": "corepack enable && corepack prepare pnpm@9.6.0 --activate && pnpm -w install --frozen-lockfile",
+  "buildCommand": "corepack enable && corepack prepare pnpm@9.6.0 --activate && pnpm -w --filter @avnir/tokens build && pnpm --filter @avnir/ladle run build",
+  "outputDirectory": "dist"
+}
