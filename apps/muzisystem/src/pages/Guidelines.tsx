@@ -90,11 +90,11 @@ export const Guidelines: React.FC = () => {
     <div className="min-h-screen bg-background text-foreground">
       
       {/* === HEADER === */}
-      <header className="py-6 border-b border-border bg-surface">
-        <div className="max-w-7xl mx-auto px-8">
+      <header className="section-tight border-b border-border bg-surface">
+        <div className="container">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
-              <a href="#home" className="flex items-center gap-4">
+            <div className="cluster">
+              <a href="#home" className="cluster">
                 <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
                   <span className="text-primary-foreground font-bold text-lg">M</span>
                 </div>
@@ -102,13 +102,13 @@ export const Guidelines: React.FC = () => {
               </a>
             </div>
             
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden md:flex cluster">
               <a href="#components" className="text-foreground hover:text-primary transition-colors">Composants</a>
               <a href="#tokens" className="text-foreground hover:text-primary transition-colors">Design Tokens</a>
               <a href="#guidelines" className="text-primary font-medium">Guidelines</a>
             </nav>
             
-            <div className="flex items-center gap-4">
+            <div className="cluster">
               <Button variant="outline">Documentation</Button>
               <Button variant="solid">Figma Kit</Button>
             </div>
@@ -117,13 +117,13 @@ export const Guidelines: React.FC = () => {
       </header>
 
       {/* === HERO === */}
-      <section className="py-24">
-        <div className="max-w-8xl mx-auto px-12">
-          <div className="text-center mb-16">
-            <h1 className="text-6xl font-bold text-foreground mb-8">
+      <section className="section">
+        <div className="container">
+          <div className="text-center stack">
+            <h1 className="text-6xl font-bold text-foreground">
               Guidelines de Design
             </h1>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-xl text-foreground/80 max-w-4xl mx-auto leading-relaxed">
               Règles et bonnes pratiques pour maintenir la cohérence visuelle 
               et l'expérience utilisateur à travers tout l'écosystème AVNIR Studio.
             </p>
@@ -132,11 +132,12 @@ export const Guidelines: React.FC = () => {
       </section>
 
       {/* === PRINCIPLES === */}
-      <section className="py-20">
-        <div className="max-w-8xl mx-auto px-12">
-          <h2 className="text-4xl font-bold text-foreground mb-12">Principes Fondamentaux</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <section className="section bg-surface">
+        <div className="container">
+          <div className="stack-lg">
+            <h2 className="text-4xl font-bold text-foreground">Principes Fondamentaux</h2>
+            
+            <div className="grid-2">
             {principles.map((principle, index) => (
               <div key={index} className="rounded-[var(--radius)] border border-border bg-card p-6">
                 <div className="flex items-start gap-4 mb-4">

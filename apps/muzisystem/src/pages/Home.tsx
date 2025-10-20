@@ -38,17 +38,17 @@ export const Home: React.FC = () => {
     <div className="min-h-screen bg-background text-foreground">
       
       {/* === HEADER === */}
-      <header className="py-6 border-b border-border bg-surface">
-        <div className="max-w-7xl mx-auto px-8">
+      <header className="section-tight border-b border-border bg-surface">
+        <div className="container">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
+            <div className="cluster">
               <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
                 <span className="text-primary-foreground font-bold text-lg">M</span>
               </div>
               <span className="text-xl font-bold text-foreground">MUZISYSTEM</span>
             </div>
             
-            <nav className="hidden md:flex items-center gap-8">
+            <nav className="hidden md:flex cluster">
               <a href="#components" className="text-foreground hover:text-primary transition-colors">Composants</a>
               <a href="#tokens" className="text-foreground hover:text-primary transition-colors">Design Tokens</a>
               <a href="#usage" className="text-foreground hover:text-primary transition-colors">Usage</a>
@@ -56,7 +56,7 @@ export const Home: React.FC = () => {
               <a href="#guidelines" className="text-foreground hover:text-primary transition-colors">Guidelines</a>
             </nav>
             
-            <div className="flex items-center gap-4">
+            <div className="cluster">
               <Button variant="outline">Documentation</Button>
               <Button variant="solid">Commencer</Button>
             </div>
@@ -83,125 +83,133 @@ export const Home: React.FC = () => {
       />
 
       {/* === NAVIGATION GRID === */}
-      <section className="py-32 bg-card">
-        <div className="max-w-8xl mx-auto px-12">
-          <div className="text-center mb-20">
-            <h2 className="text-5xl font-bold text-card-foreground mb-8">
-              Un système de design complet
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              MUZISYSTEM fournit tout ce dont vous avez besoin pour créer des interfaces 
-              professionnelles et cohérentes dans l'écosystème AVNIR Studio.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            <a href="#components" className="group rounded-2xl border border-border bg-background text-foreground p-10 shadow-lg hover:shadow-xl transition-all hover:border-primary hover:scale-105">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-primary/20 transition-colors">
-                  <span className="text-4xl">🧩</span>
+      <section className="section bg-surface">
+        <div className="container">
+          <div className="stack-lg">
+            <div className="text-center stack">
+              <h2 className="text-5xl font-bold text-foreground">
+                Un système de design complet
+              </h2>
+              <p className="text-xl text-foreground/80 max-w-4xl mx-auto leading-relaxed">
+                MUZISYSTEM fournit tout ce dont vous avez besoin pour créer des interfaces 
+                professionnelles et cohérentes dans l'écosystème AVNIR Studio.
+              </p>
+            </div>
+            
+            <div className="grid-3">
+              <a href="#components" className="card group hover:shadow-xl transition-all hover:border-primary hover:scale-105">
+                <div className="text-center stack">
+                  <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors">
+                    <span className="text-4xl">🧩</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground">Composants</h3>
+                  <p className="text-foreground/70 leading-relaxed">
+                    Bibliothèque complète de composants React organisés par catégories, 
+                    prêts à être utilisés dans vos projets.
+                  </p>
+                  <div className="inline-flex items-center text-primary font-semibold group-hover:gap-2 transition-all">
+                    Explorer les composants
+                    <span className="ml-1 group-hover:ml-0 transition-all">→</span>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-6">Composants</h3>
-                <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Bibliothèque complète de composants React organisés par catégories, 
-                  prêts à être utilisés dans vos projets.
-                </p>
-                <div className="inline-flex items-center text-primary font-semibold group-hover:gap-2 transition-all">
-                  Explorer les composants
-                  <span className="ml-1 group-hover:ml-0 transition-all">→</span>
-                </div>
-              </div>
-            </a>
+              </a>
 
-            <a href="#tokens" className="group rounded-2xl border border-border bg-background text-foreground p-10 shadow-lg hover:shadow-xl transition-all hover:border-primary hover:scale-105">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-primary/20 transition-colors">
-                  <span className="text-4xl">🎨</span>
+              <a href="#tokens" className="card group hover:shadow-xl transition-all hover:border-primary hover:scale-105">
+                <div className="text-center stack">
+                  <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors">
+                    <span className="text-4xl">🎨</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground">Design Tokens</h3>
+                  <p className="text-foreground/70 leading-relaxed">
+                    Palette de couleurs, typographie et espacements cohérents 
+                    pour tous les satellites AVNIR Studio.
+                  </p>
+                  <div className="inline-flex items-center text-primary font-semibold group-hover:gap-2 transition-all">
+                    Voir les tokens
+                    <span className="ml-1 group-hover:ml-0 transition-all">→</span>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-6">Design Tokens</h3>
-                <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Palette de couleurs, typographie et espacements cohérents 
-                  pour tous les satellites AVNIR Studio.
-                </p>
-                <div className="inline-flex items-center text-primary font-semibold group-hover:gap-2 transition-all">
-                  Voir les tokens
-                  <span className="ml-1 group-hover:ml-0 transition-all">→</span>
-                </div>
-              </div>
-            </a>
+              </a>
 
-            <a href="#guidelines" className="group rounded-2xl border border-border bg-background text-foreground p-10 shadow-lg hover:shadow-xl transition-all hover:border-primary hover:scale-105">
-              <div className="text-center">
-                <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-primary/20 transition-colors">
-                  <span className="text-4xl">📐</span>
+              <a href="#guidelines" className="card group hover:shadow-xl transition-all hover:border-primary hover:scale-105">
+                <div className="text-center stack">
+                  <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto group-hover:bg-primary/20 transition-colors">
+                    <span className="text-4xl">📐</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-foreground">Guidelines</h3>
+                  <p className="text-foreground/70 leading-relaxed">
+                    Règles et bonnes pratiques pour maintenir la cohérence 
+                    visuelle à travers tout l'écosystème.
+                  </p>
+                  <div className="inline-flex items-center text-primary font-semibold group-hover:gap-2 transition-all">
+                    Lire les guidelines
+                    <span className="ml-1 group-hover:ml-0 transition-all">→</span>
+                  </div>
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-6">Guidelines</h3>
-                <p className="text-muted-foreground mb-8 leading-relaxed">
-                  Règles et bonnes pratiques pour maintenir la cohérence 
-                  visuelle à travers tout l'écosystème.
-                </p>
-                <div className="inline-flex items-center text-primary font-semibold group-hover:gap-2 transition-all">
-                  Lire les guidelines
-                  <span className="ml-1 group-hover:ml-0 transition-all">→</span>
-                </div>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         </div>
       </section>
 
       {/* === DEMO SECTION === */}
-      <section id="components" className="py-32 bg-card">
-        <div className="max-w-6xl mx-auto px-12 text-center">
-          <h2 className="text-5xl font-bold text-card-foreground mb-8">
-            Composants en action
-          </h2>
-          <p className="text-xl text-muted-foreground mb-20 max-w-4xl mx-auto leading-relaxed">
-            Découvrez notre bibliothèque de composants React avec design tokens intégrés, 
-            prêts à être utilisés dans vos projets AVNIR Studio.
-          </p>
-          
-          <div className="rounded-2xl border border-border bg-background text-foreground p-12 shadow-lg text-left">
-            <h3 className="text-3xl font-bold text-foreground mb-12">Palette & Composants</h3>
-            
-            <div className="mb-16">
-              <h4 className="text-xl font-semibold text-foreground mb-6">Badges typés</h4>
-              <div className="flex flex-wrap gap-4">
-                <span className="badge badge-artist">Artist</span>
-                <span className="badge badge-studio">Studio</span>
-                <span className="badge badge-beatmaker">Beatmaker</span>
-                <span className="badge badge-draft">Draft</span>
-                <span className="badge badge-producer">Producer</span>
-                <span className="badge badge-archived">Archived</span>
-              </div>
+      <section id="components" className="section">
+        <div className="container">
+          <div className="stack-lg">
+            <div className="text-center stack">
+              <h2 className="text-5xl font-bold text-foreground">
+                Composants en action
+              </h2>
+              <p className="text-xl text-foreground/80 max-w-4xl mx-auto leading-relaxed">
+                Découvrez notre bibliothèque de composants React avec design tokens intégrés, 
+                prêts à être utilisés dans vos projets AVNIR Studio.
+              </p>
             </div>
             
-            <div className="mb-16">
-              <h4 className="text-xl font-semibold text-foreground mb-6">Boutons & Actions</h4>
-              <div className="flex flex-wrap gap-6">
-                <Button variant="solid" className="px-8 py-3 text-lg">Action principale</Button>
-                <Button variant="outline" className="px-8 py-3 text-lg">Action secondaire</Button>
-              </div>
-            </div>
+            <div className="card text-left">
+              <div className="stack-lg">
+                <h3 className="text-3xl font-bold text-foreground">Palette & Composants</h3>
+                
+                <div className="stack-sm">
+                  <h4 className="text-xl font-semibold text-foreground">Badges typés</h4>
+                  <div className="cluster">
+                    <span className="badge badge-artist">Artist</span>
+                    <span className="badge badge-studio">Studio</span>
+                    <span className="badge badge-beatmaker">Beatmaker</span>
+                    <span className="badge badge-draft">Draft</span>
+                    <span className="badge badge-producer">Producer</span>
+                    <span className="badge badge-archived">Archived</span>
+                  </div>
+                </div>
+                
+                <div className="stack-sm">
+                  <h4 className="text-xl font-semibold text-foreground">Boutons & Actions</h4>
+                  <div className="cluster">
+                    <Button className="btn-lg btn-primary">Action principale</Button>
+                    <Button className="btn-lg btn-surface">Action secondaire</Button>
+                  </div>
+                </div>
 
-            <div>
-              <h4 className="text-xl font-semibold text-foreground mb-6">Design Tokens</h4>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-                <div className="text-center">
-                  <div className="w-16 h-16 rounded-xl bg-primary mx-auto mb-4"></div>
-                  <span className="text-base font-medium text-muted-foreground">Primary</span>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 rounded-xl bg-card border-2 border-border mx-auto mb-4"></div>
-                  <span className="text-base font-medium text-muted-foreground">Surface</span>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 rounded-xl bg-muted mx-auto mb-4"></div>
-                  <span className="text-base font-medium text-muted-foreground">Muted</span>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 rounded-xl bg-accent mx-auto mb-4"></div>
-                  <span className="text-base font-medium text-muted-foreground">Accent</span>
+                <div className="stack-sm">
+                  <h4 className="text-xl font-semibold text-foreground">Design Tokens</h4>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                    <div className="text-center stack-sm">
+                      <div className="w-16 h-16 rounded-xl bg-primary mx-auto"></div>
+                      <span className="text-base font-medium text-foreground/70">Primary</span>
+                    </div>
+                    <div className="text-center stack-sm">
+                      <div className="w-16 h-16 rounded-xl bg-surface border-2 border-border mx-auto"></div>
+                      <span className="text-base font-medium text-foreground/70">Surface</span>
+                    </div>
+                    <div className="text-center stack-sm">
+                      <div className="w-16 h-16 rounded-xl bg-border mx-auto"></div>
+                      <span className="text-base font-medium text-foreground/70">Border</span>
+                    </div>
+                    <div className="text-center stack-sm">
+                      <div className="w-16 h-16 rounded-xl bg-primary/20 mx-auto"></div>
+                      <span className="text-base font-medium text-foreground/70">Accent</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
