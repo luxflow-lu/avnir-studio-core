@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Node 22
+      - name: Setup Node 20
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 20
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
@@ -26,9 +26,19 @@ jobs:
           path: ${{ env.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: ${{ runner.os }}-pnpm-store-
+      - name: Cache Turbo
+        uses: actions/cache@v4
+        with:
+          path: .turbo
+          key: ${{ runner.os }}-turbo-${{ github.sha }}
+          restore-keys: ${{ runner.os }}-turbo-
       - name: Install deps
         run: pnpm i --frozen-lockfile
+      - name: Lint
+        run: pnpm lint
+      - name: Typecheck
+        run: pnpm typecheck
       - name: Build workspace
-        run: pnpm -w build
+        run: pnpm build
       - name: Build demo
         run: pnpm build:demo

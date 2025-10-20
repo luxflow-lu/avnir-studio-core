@@ -5,7 +5,10 @@
     "prebuild": "pnpm -w --filter @avnir/tokens build",
     "build": "ladle build",
     "dev": "ladle serve",
-    "preview": "ladle preview"
+    "preview": "ladle preview",
+    "lint": "echo 'No lint configured for Ladle'",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf .turbo build .ladle"
   },
   "dependencies": {
     "@ladle/react": "^4.0.0",

@@ -4,6 +4,11 @@
   "private": true,
   "type": "module",
   "main": "src/index.ts",
+  "scripts": {
+    "lint": "echo 'No lint configured'",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf .turbo dist"
+  },
   "dependencies": {
     "clsx": "^2.1.1",
     "react": "^18.3.1",

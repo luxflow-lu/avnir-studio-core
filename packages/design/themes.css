@@ -39,8 +39,28 @@
 :root[data-brand="muzidev"] { --logo-url:url('/assets/muzidev/logo.svg'); }
 :root[data-brand="muzipics"] { --logo-url:url('/assets/muzipics/logo.svg'); }
 
+/* Light theme (semi-clair) - opt-in via data-theme="light" */
+:root[data-theme="light"] {
+  --bg:#F8F8F8;
+  --surface:#FFFFFF;
+  --text:#1F2937;
+  --titles:#0B0B0D;
+  --muted:#6B7280;
+}
+
+/* Forced dark for header/footer in light mode */
+:root[data-theme="light"] header,
+:root[data-theme="light"] footer {
+  --bg:#0B0B0D;
+  --surface:#141317;
+  --text:#C5CCD6;
+  --titles:#F4F4F4;
+  --muted:#9CA3AF;
+}
+
 /* helpers */
 html{color-scheme:dark}
+html[data-theme="light"]{color-scheme:light}
 body{background:var(--bg);color:var(--text);font-family:var(--font-sans)}
 .container{width:100%;max-width:var(--container-xl);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
 .container--lg{max-width:var(--container-2xl)} .container--md{max-width:var(--container-lg)}

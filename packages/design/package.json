@@ -4,5 +4,10 @@
   "type": "module",
   "main": "index.ts",
   "files": ["themes.css", "tokens.json", "tailwind-preset.cjs", "brands.ts", "index.ts"],
+  "scripts": {
+    "lint": "echo 'No lint configured'",
+    "typecheck": "echo 'No typecheck configured'",
+    "clean": "echo 'No build artifacts to clean'"
+  },
   "license": "MIT"
 }
