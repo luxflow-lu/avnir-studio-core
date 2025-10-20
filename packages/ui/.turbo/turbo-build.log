@@ -11,16 +11,16 @@
 [34mCLI[39m Cleaning output folder
 [34mESM[39m Build start
 [34mCJS[39m Build start
-[32mCJS[39m [1mdist/index.cjs     [22m[32m84.66 KB[39m
-[32mCJS[39m [1mdist/index.cjs.map [22m[32m149.50 KB[39m
-[32mCJS[39m ⚡️ Build success in 381ms
-[32mESM[39m [1mdist/index.js     [22m[32m81.74 KB[39m
-[32mESM[39m [1mdist/index.js.map [22m[32m149.31 KB[39m
-[32mESM[39m ⚡️ Build success in 395ms
+[32mESM[39m [1mdist/index.js     [22m[32m82.73 KB[39m
+[32mESM[39m [1mdist/index.js.map [22m[32m151.76 KB[39m
+[32mESM[39m ⚡️ Build success in 565ms
+[32mCJS[39m [1mdist/index.cjs     [22m[32m85.79 KB[39m
+[32mCJS[39m [1mdist/index.cjs.map [22m[32m152.23 KB[39m
+[32mCJS[39m ⚡️ Build success in 566ms
 DTS Build start
-DTS ⚡️ Build success in 3928ms
-DTS dist/index.d.ts  3.21 KB
-DTS dist/index.d.cts 3.21 KB
+DTS ⚡️ Build success in 5025ms
+DTS dist/index.d.ts  3.87 KB
+DTS dist/index.d.cts 3.87 KB
 
 > @avnir/ui@0.1.0 build:css /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui
 > tailwindcss -c tailwind.build.config.cjs -i ./src/styles-source.css -o ./dist/styles.css --postcss ./postcss.build.config.cjs --minify
@@ -31,4 +31,4 @@ Browserslist: caniuse-lite is outdated. Please run:
 
 Rebuilding...
 
-Done in 1384ms.
+Done in 1045ms.
