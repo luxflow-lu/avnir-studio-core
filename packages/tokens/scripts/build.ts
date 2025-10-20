@@ -1,8 +1,12 @@
 import fs from "node:fs";
 import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const TOK = JSON.parse(
-  fs.readFileSync(path.resolve("packages/tokens/src/tokens.json"), "utf8")
+  fs.readFileSync(path.join(__dirname, "../src/tokens.json"), "utf8")
 );
 
 const root = `
@@ -30,6 +34,7 @@ const brands = Object.entries(TOK.brand as Record<string, {primary:string; onPri
   .map(([name, v]) => `:root[data-brand="${name}"]{--brand:${v.primary};--brand-on:${v.onPrimary};}`)
   .join("\n");
 
-fs.mkdirSync(path.resolve("packages/tokens/dist"), { recursive: true });
-fs.writeFileSync(path.resolve("packages/tokens/dist/vars.css"), `${root}\n${brands}\n`);
-console.log("✓ Wrote packages/tokens/dist/vars.css");
+const distDir = path.join(__dirname, "../dist");
+fs.mkdirSync(distDir, { recursive: true });
+fs.writeFileSync(path.join(distDir, "vars.css"), `${root}\n${brands}\n`);
+console.log("✓ Wrote dist/vars.css");

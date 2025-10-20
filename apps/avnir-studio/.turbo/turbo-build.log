@@ -1,0 +1,37 @@
+
+> avnir-studio@ build /Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/avnir-studio
+> next build
+
+  ▲ Next.js 14.2.5
+
+   Creating an optimized production build ...
+Failed to compile.
+
+./app/layout.tsx
+Module not found: Can't resolve '../globals.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./app/layout.tsx
+Module not found: Can't resolve '../../packages/tokens/dist/vars.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./app/layout.tsx
+Module not found: Can't resolve '../../packages/ui/src'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./app/page.tsx
+Module not found: Can't resolve '../../packages/ui/src'
+
+https://nextjs.org/docs/messages/module-not-found
+
+./app/page.tsx
+Module not found: Can't resolve '../../features/visual-generator/src/ui/GeneratorCard'
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+> Build failed because of webpack errors
+ ELIFECYCLE  Command failed with exit code 1.
