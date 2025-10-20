@@ -1,12 +1,12 @@
-const preset = require("@avnir/tokens/tailwind-preset.cjs");
+const preset = require("@avnir/tokens/tailwind-preset");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   presets: [preset],
   content: [
     "./index.html",
-    "./src/**/*.{ts,tsx}",
-    "../../apps/ladle/src/**/*.{ts,tsx,mdx}",
-    "../../packages/ui/src/**/*.{ts,tsx}"
+    "./src/**/*.{ts,tsx,js,jsx,mdx}",
+    "../../packages/ui/dist/**/*.{js,ts,tsx}",
+    "../../packages/**/*.{ts,tsx,js,jsx,mdx}"
   ]
 };

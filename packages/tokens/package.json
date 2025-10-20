@@ -1,16 +1,22 @@
 {
   "name": "@avnir/tokens",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "type": "module",
-  "main": "dist/index.js",
+  "files": ["dist"],
+  "exports": {
+    "./themes.css": "./dist/themes.css",
+    "./tailwind-preset": "./dist/tailwind-preset.cjs"
+  },
   "scripts": {
-    "build": "tsx scripts/build.ts",
+    "build": "pnpm run build:css && pnpm run build:preset",
+    "build:css": "mkdir -p dist && cp src/themes.css dist/themes.css",
+    "build:preset": "mkdir -p dist && cp src/tailwind-preset.cjs dist/tailwind-preset.cjs",
     "lint": "echo 'No lint configured'",
     "typecheck": "tsc --noEmit",
     "clean": "rimraf .turbo dist"
   },
   "devDependencies": {
-    "tsx": "^4.19.1"
+    "rimraf": "^6.0.0"
   }
 }

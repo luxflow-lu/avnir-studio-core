@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "../../ladle/src/main.css";
-import { Provider } from "@/Provider";
+import "./styles/index.css";
+import { Provider } from "./Provider";
 import { App } from "./App";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(

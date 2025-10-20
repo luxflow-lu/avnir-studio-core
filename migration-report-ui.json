@@ -1,0 +1,352 @@
+{
+  "moved": [
+    {
+      "src": "apps/ladle/src/components/avnir/AssetTile.tsx",
+      "dst": "packages/ui/src/components/avnir/AssetTile.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/avnir/CreditBalance.tsx",
+      "dst": "packages/ui/src/components/avnir/CreditBalance.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/avnir/ModelSelector.tsx",
+      "dst": "packages/ui/src/components/avnir/ModelSelector.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/avnir/PermissionBadge.tsx",
+      "dst": "packages/ui/src/components/avnir/PermissionBadge.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/avnir/ProjectCard.tsx",
+      "dst": "packages/ui/src/components/avnir/ProjectCard.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/avnir/ProjectHeader.tsx",
+      "dst": "packages/ui/src/components/avnir/ProjectHeader.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/avnir/PromptEditor.tsx",
+      "dst": "packages/ui/src/components/avnir/PromptEditor.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/avnir/RenderStatus.tsx",
+      "dst": "packages/ui/src/components/avnir/RenderStatus.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/avnir/index.ts",
+      "dst": "packages/ui/src/components/avnir/index.ts"
+    },
+    {
+      "src": "apps/ladle/src/components/data/Avatar.tsx",
+      "dst": "packages/ui/src/components/data/Avatar.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/data/Badge.tsx",
+      "dst": "packages/ui/src/components/data/Badge.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/data/EmptyState.tsx",
+      "dst": "packages/ui/src/components/data/EmptyState.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/data/Progress.tsx",
+      "dst": "packages/ui/src/components/data/Progress.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/data/Skeleton.tsx",
+      "dst": "packages/ui/src/components/data/Skeleton.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/data/Spinner.tsx",
+      "dst": "packages/ui/src/components/data/Spinner.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/data/Table.tsx",
+      "dst": "packages/ui/src/components/data/Table.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/data/index.ts",
+      "dst": "packages/ui/src/components/data/index.ts"
+    },
+    {
+      "src": "apps/ladle/src/components/ecommerce/CheckoutSteps.tsx",
+      "dst": "packages/ui/src/components/ecommerce/CheckoutSteps.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/ecommerce/FacetedSearch.tsx",
+      "dst": "packages/ui/src/components/ecommerce/FacetedSearch.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/ecommerce/MediaGallery.tsx",
+      "dst": "packages/ui/src/components/ecommerce/MediaGallery.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/ecommerce/MegaMenu.tsx",
+      "dst": "packages/ui/src/components/ecommerce/MegaMenu.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/ecommerce/MiniCart.tsx",
+      "dst": "packages/ui/src/components/ecommerce/MiniCart.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/ecommerce/Price.tsx",
+      "dst": "packages/ui/src/components/ecommerce/Price.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/ecommerce/VariantsSwatches.tsx",
+      "dst": "packages/ui/src/components/ecommerce/VariantsSwatches.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/ecommerce/index.ts",
+      "dst": "packages/ui/src/components/ecommerce/index.ts"
+    },
+    {
+      "src": "apps/ladle/src/components/form/Button.tsx",
+      "dst": "packages/ui/src/components/form/Button.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/form/Checkbox.tsx",
+      "dst": "packages/ui/src/components/form/Checkbox.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/form/Field.tsx",
+      "dst": "packages/ui/src/components/form/Field.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/form/FileUpload.tsx",
+      "dst": "packages/ui/src/components/form/FileUpload.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/form/IconButton.tsx",
+      "dst": "packages/ui/src/components/form/IconButton.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/form/Input.tsx",
+      "dst": "packages/ui/src/components/form/Input.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/form/Radio.tsx",
+      "dst": "packages/ui/src/components/form/Radio.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/form/Select.tsx",
+      "dst": "packages/ui/src/components/form/Select.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/form/Switch.tsx",
+      "dst": "packages/ui/src/components/form/Switch.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/form/Textarea.tsx",
+      "dst": "packages/ui/src/components/form/Textarea.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/form/index.ts",
+      "dst": "packages/ui/src/components/form/index.ts"
+    },
+    {
+      "src": "apps/ladle/src/components/index.ts",
+      "dst": "packages/ui/src/components/index.ts"
+    },
+    {
+      "src": "apps/ladle/src/components/layout/Footer.tsx",
+      "dst": "packages/ui/src/components/layout/Footer.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/layout/Navbar.tsx",
+      "dst": "packages/ui/src/components/layout/Navbar.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/layout/Sidebar.tsx",
+      "dst": "packages/ui/src/components/layout/Sidebar.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/layout/index.ts",
+      "dst": "packages/ui/src/components/layout/index.ts"
+    },
+    {
+      "src": "apps/ladle/src/components/marketing/ContactBlock.tsx",
+      "dst": "packages/ui/src/components/marketing/ContactBlock.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/marketing/CtaSection.tsx",
+      "dst": "packages/ui/src/components/marketing/CtaSection.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/marketing/Faq.tsx",
+      "dst": "packages/ui/src/components/marketing/Faq.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/marketing/Features.tsx",
+      "dst": "packages/ui/src/components/marketing/Features.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/marketing/Footer.tsx",
+      "dst": "packages/ui/src/components/marketing/Footer.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/marketing/Hero.tsx",
+      "dst": "packages/ui/src/components/marketing/Hero.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/marketing/LogoCloud.tsx",
+      "dst": "packages/ui/src/components/marketing/LogoCloud.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/marketing/Newsletter.tsx",
+      "dst": "packages/ui/src/components/marketing/Newsletter.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/marketing/PricingStrip.tsx",
+      "dst": "packages/ui/src/components/marketing/PricingStrip.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/marketing/Stats.tsx",
+      "dst": "packages/ui/src/components/marketing/Stats.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/marketing/Steps.tsx",
+      "dst": "packages/ui/src/components/marketing/Steps.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/marketing/Testimonials.tsx",
+      "dst": "packages/ui/src/components/marketing/Testimonials.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/marketing/index.ts",
+      "dst": "packages/ui/src/components/marketing/index.ts"
+    },
+    {
+      "src": "apps/ladle/src/components/nav/Breadcrumbs.tsx",
+      "dst": "packages/ui/src/components/nav/Breadcrumbs.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/nav/CommandK.tsx",
+      "dst": "packages/ui/src/components/nav/CommandK.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/nav/Pagination.tsx",
+      "dst": "packages/ui/src/components/nav/Pagination.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/nav/Tabs.tsx",
+      "dst": "packages/ui/src/components/nav/Tabs.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/nav/index.ts",
+      "dst": "packages/ui/src/components/nav/index.ts"
+    },
+    {
+      "src": "apps/ladle/src/components/overlay/Drawer.tsx",
+      "dst": "packages/ui/src/components/overlay/Drawer.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/overlay/Modal.tsx",
+      "dst": "packages/ui/src/components/overlay/Modal.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/overlay/Popover.tsx",
+      "dst": "packages/ui/src/components/overlay/Popover.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/overlay/Toast.tsx",
+      "dst": "packages/ui/src/components/overlay/Toast.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/overlay/Tooltip.tsx",
+      "dst": "packages/ui/src/components/overlay/Tooltip.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/overlay/index.ts",
+      "dst": "packages/ui/src/components/overlay/index.ts"
+    },
+    {
+      "src": "apps/ladle/src/components/primitives/Card.tsx",
+      "dst": "packages/ui/src/components/primitives/Card.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/primitives/Container.tsx",
+      "dst": "packages/ui/src/components/primitives/Container.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/primitives/Divider.tsx",
+      "dst": "packages/ui/src/components/primitives/Divider.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/primitives/Section.tsx",
+      "dst": "packages/ui/src/components/primitives/Section.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/primitives/Spacer.tsx",
+      "dst": "packages/ui/src/components/primitives/Spacer.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/primitives/Stack.tsx",
+      "dst": "packages/ui/src/components/primitives/Stack.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/primitives/index.ts",
+      "dst": "packages/ui/src/components/primitives/index.ts"
+    },
+    {
+      "src": "apps/ladle/src/components/saas/ApiKeys.tsx",
+      "dst": "packages/ui/src/components/saas/ApiKeys.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/saas/DashboardKPI.tsx",
+      "dst": "packages/ui/src/components/saas/DashboardKPI.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/saas/ImportExport.tsx",
+      "dst": "packages/ui/src/components/saas/ImportExport.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/saas/InviteMembers.tsx",
+      "dst": "packages/ui/src/components/saas/InviteMembers.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/saas/PlanPicker.tsx",
+      "dst": "packages/ui/src/components/saas/PlanPicker.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/saas/PricingTable.tsx",
+      "dst": "packages/ui/src/components/saas/PricingTable.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/saas/RolesMatrix.tsx",
+      "dst": "packages/ui/src/components/saas/RolesMatrix.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/saas/SavedViews.tsx",
+      "dst": "packages/ui/src/components/saas/SavedViews.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/saas/index.ts",
+      "dst": "packages/ui/src/components/saas/index.ts"
+    },
+    {
+      "src": "apps/ladle/src/components/system/ErrorBoundary.tsx",
+      "dst": "packages/ui/src/components/system/ErrorBoundary.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/system/LoadingBoundary.tsx",
+      "dst": "packages/ui/src/components/system/LoadingBoundary.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/system/NotFound404.tsx",
+      "dst": "packages/ui/src/components/system/NotFound404.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/system/ServerError500.tsx",
+      "dst": "packages/ui/src/components/system/ServerError500.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/system/ThemeToggle.tsx",
+      "dst": "packages/ui/src/components/system/ThemeToggle.tsx"
+    },
+    {
+      "src": "apps/ladle/src/components/system/index.ts",
+      "dst": "packages/ui/src/components/system/index.ts"
+    }
+  ]
+}

@@ -1,23 +1,39 @@
 {
   "name": "@avnir/ui",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "type": "module",
-  "main": "src/index.ts",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "sideEffects": false,
   "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap --clean",
+    "gen:component": "plop --plopfile plopfile.cjs component",
     "lint": "echo 'No lint configured'",
     "typecheck": "tsc --noEmit",
     "clean": "rimraf .turbo dist"
   },
-  "dependencies": {
-    "clsx": "^2.1.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "tailwindcss": "^3"
   },
   "devDependencies": {
-    "tailwindcss": "^3.4.13",
-    "typescript": "^5.6.3",
     "@types/react": "^18.3.11",
-    "@types/react-dom": "^18.3.0"
+    "@types/react-dom": "^18.3.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "rimraf": "^6.0.1",
+    "tailwind-merge": "^2.6.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.6.3"
   }
 }

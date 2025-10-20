@@ -1,0 +1,59 @@
+
+> @avnir/ui@0.1.0 build /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui
+> tsup src/index.ts --format esm,cjs --dts --sourcemap --clean
+
+CLI Building entry: src/index.ts
+CLI Using tsconfig: tsconfig.json
+CLI tsup v8.5.0
+CLI Using tsup config: /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/tsup.config.ts
+CLI Target: es2022
+CLI Cleaning output folder
+ESM Build start
+CJS Build start
+✘ [ERROR] Could not resolve "class-variance-authority"
+
+    src/components/Banner.tsx:2:39:
+      2 │ import { cva, type VariantProps } from "class-variance-authority";
+        ╵                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  You can mark the path "class-variance-authority" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+✘ [ERROR] Could not resolve "class-variance-authority"
+
+    src/components/Banner.tsx:2:39:
+      2 │ import { cva, type VariantProps } from "class-variance-authority";
+        ╵                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+  You can mark the path "class-variance-authority" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+✘ [ERROR] Could not resolve "tailwind-merge"
+
+    src/components/Banner.tsx:3:24:
+      3 │ import { twMerge } from "tailwind-merge";
+        ╵                         ~~~~~~~~~~~~~~~~
+
+  You can mark the path "tailwind-merge" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+✘ [ERROR] Could not resolve "tailwind-merge"
+
+    src/components/Banner.tsx:3:24:
+      3 │ import { twMerge } from "tailwind-merge";
+        ╵                         ~~~~~~~~~~~~~~~~
+
+  You can mark the path "tailwind-merge" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
+
+CJS Build failed
+Error: Build failed with 2 errors:
+src/components/Banner.tsx:2:39: ERROR: Could not resolve "class-variance-authority"
+src/components/Banner.tsx:3:24: ERROR: Could not resolve "tailwind-merge"
+    at failureErrorWithLog (/Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/esbuild@0.25.11/node_modules/esbuild/lib/main.js:1467:15)
+    at /Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/esbuild@0.25.11/node_modules/esbuild/lib/main.js:926:25
+    at runOnEndCallbacks (/Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/esbuild@0.25.11/node_modules/esbuild/lib/main.js:1307:45)
+    at buildResponseToResult (/Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/esbuild@0.25.11/node_modules/esbuild/lib/main.js:924:7)
+    at /Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/esbuild@0.25.11/node_modules/esbuild/lib/main.js:951:16
+    at responseCallbacks.<computed> (/Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/esbuild@0.25.11/node_modules/esbuild/lib/main.js:603:9)
+    at handleIncomingPacket (/Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/esbuild@0.25.11/node_modules/esbuild/lib/main.js:658:12)
+    at Socket.rea    at Socket.readFromStdout (/Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/esbuild@0.25.11/node_modules/esbuild/lib/main.js:581:7)
+    at Socket.emit (node:events:524:28)
+    at addChunk (node:internal/streams/readable:561:12)
+DTS Build start

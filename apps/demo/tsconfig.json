@@ -8,7 +8,10 @@
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "@/*": ["../../apps/ladle/src/*"]
+      "@/*": ["src/*"],
+      "@ladle/*": ["../ladle/src/*"],
+      "@avnir/ui": ["../../packages/ui/dist/index.d.ts"],
+      "@avnir/tokens": ["../../packages/tokens/dist/*"]
     },
     "types": ["vite/client"]
   },

@@ -1,15 +1,14 @@
 
-
-> @avnir/ladle@ dev /Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle
+> @avnir/ladle@ dev /Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/ladle
 > ladle serve
 
 
-[33m╭─────────────────────────────╮[39m
-[33m│[39m                             [33m│[39m
-[33m│[39m   🥄 Ladle.dev served at    [33m│[39m
-[33m│[39m   http://localhost:62002/   [33m│[39m
-[33m│[39m                             [33m│[39m
-[33m╰─────────────────────────────╯[39m
+[33m   ╭─────────────────────────────╮[39m
+   [33m│[39m                             [33m│[39m
+   [33m│[39m   🥄 Ladle.dev served at    [33m│[39m
+   [33m│[39m   http://localhost:61000/   [33m│[39m
+   [33m│[39m                             [33m│[39m
+[33m   ╰─────────────────────────────╯[39m
 
 
 
@@ -22,7 +21,7 @@
 
 
 
-[1;1H[0J[2m11:51:05 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/.ladle/components.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m
+[1;1H[0J[2m12:09:49 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/ladle/src/main.css[22m
 
 
 
@@ -34,7 +33,7 @@
 
 
 
-[1;1H[0J[2m11:55:46 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/marketing/Features.tsx[22m
+[1;1H[0J[2m12:35:38 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/src/index.ts[22m
 
 
 
@@ -46,7 +45,7 @@
 
 
 
-[1;1H[0J[2m11:56:24 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/marketing/Faq.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m
+[1;1H[0J[2m12:38:13 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/src/index.ts[22m [33m(x2)[39m
 
 
 
@@ -58,7 +57,7 @@
 
 
 
-[1;1H[0J[2m11:57:28 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/marketing/Testimonials.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m
+[1;1H[0J[2m12:38:45 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/ladle/src/main.css[22m
 
 
 
@@ -70,16 +69,4 @@
 
 
 
-[1;1H[0J[2m11:57:58 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/marketing/Steps.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m
-
-
-
-
-
-
-
-
-
-
-
-[1;1H[0J[2m11:59:07 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/components/marketing/Stats.tsx, /@fs/Users/maximezaoui/CascadeProjects/avnir-studio-core/apps/ladle/src/main.css[22m
+[1;1H[0J[2m12:46:29 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/src/index.ts[22m

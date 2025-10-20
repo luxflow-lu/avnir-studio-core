@@ -1,18 +1,19 @@
 import * as React from "react";
 
 const brands = [
-  { id: "avnir-studio", name: "AVNIR Studio", color: "#EDEDED" },
+  { id: "avnir", name: "AVNIR", color: "#EDEDED" },
   { id: "muzidev", name: "MUZIDEV", color: "#5CB9F2" },
   { id: "muzipics", name: "MUZIPICS", color: "#FF2D55" },
   { id: "muziweb", name: "MUZIWEB", color: "#9802EB" },
   { id: "muzimerch", name: "MUZIMERCH", color: "#FF9D00" },
   { id: "muzibase", name: "MUZIBASE", color: "#2FAD66" },
   { id: "muzimanager", name: "MUZIMANAGER", color: "#FFD700" },
+  { id: "promozic", name: "PROMOZIC", color: "#FFD700" },
 ];
 
 export const BrandSelector: React.FC = () => {
   const [brand, setBrand] = React.useState(() => 
-    (typeof localStorage !== "undefined" && localStorage.getItem("brand")) || "avnir-studio"
+    (typeof localStorage !== "undefined" && localStorage.getItem("brand")) || "avnir"
   );
 
   React.useEffect(() => {

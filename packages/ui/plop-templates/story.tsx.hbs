@@ -1,0 +1,14 @@
+import React from "react";
+import { {{pascalCase name}} } from "../../../packages/ui/src/components/{{pascalCase name}}";
+
+export default {
+  title: "UI/{{pascalCase name}}",
+  args: { variant: "surface", size: "md" }
+};
+
+export const Demo = (args:any) => (
+  <div className="p-6 space-y-4">
+    <{{pascalCase name}} {...args}>{{pascalCase name}} default</{{pascalCase name}}>
+    <{{pascalCase name}} variant="primary">Primary</{{pascalCase name}}>
+  </div>
+);
