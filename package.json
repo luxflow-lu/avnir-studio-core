@@ -8,8 +8,8 @@
   },
   "scripts": {
     "dev": "turbo run dev --parallel",
-    "build": "turbo run build",
-    "lint": "turbo run lint",
+    "build": "pnpm -w run build --filter @avnir/tokens && pnpm -w run build --filter @avnir/ui",
+    "lint": "eslint .",
     "typecheck": "turbo run typecheck",
     "format": "prettier -w .",
     "clean": "turbo run clean && rimraf node_modules **/node_modules",
@@ -23,9 +23,9 @@
     "ladle": "pnpm dev:ladle",
     "dev:docs": "turbo run dev --filter=@avnir/docs",
     "build:docs": "turbo run build --filter=@avnir/docs",
-    "dev:demo": "vite --config apps/demo/vite.config.ts",
-    "build:demo": "vite build --config apps/demo/vite.config.ts",
-    "preview:demo": "vite preview --config apps/demo/vite.config.ts"
+    "dev:muzisystem": "pnpm --filter muzisystem dev",
+    "build:muzisystem": "vite build --config apps/muzisystem/vite.config.ts",
+    "preview:muzisystem": "vite preview --config apps/muzisystem/vite.config.ts"
   },
   "workspaces": [
     "apps/*",

@@ -1,6 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./styles/index.css";
+import "@avnir/tokens/themes.css";
+import "@avnir/ui/styles.css";
+import "./app.css";
 import { Provider } from "./Provider";
 import { App } from "./App";
 

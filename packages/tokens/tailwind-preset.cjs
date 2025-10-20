@@ -4,36 +4,25 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Old tokens (keep for compatibility)
+        // Base colors using RGB tuples
         bg: "rgb(var(--bg))",
-        "bg-dark": "var(--bg-dark)",
-        surface: "var(--surface)",
-        "bg-light": "var(--bg-light)",
-        brand: "var(--brand)",
-        "brand-on": "var(--brand-on)",
-        muted: "var(--text-muted)",
-        
-        // Semantic colors (for components)
-        background: "rgb(var(--bg))",
-        foreground: "rgb(var(--foreground))",
-        card: {
-          DEFAULT: "rgb(var(--card))",
-          foreground: "rgb(var(--card-foreground))"
-        },
-        primary: {
-          DEFAULT: "rgb(var(--primary))",
-          foreground: "rgb(var(--primary-foreground))"
-        },
-        secondary: {
-          DEFAULT: "rgb(var(--secondary))",
-          foreground: "rgb(var(--secondary-foreground))"
-        },
-        destructive: {
-          DEFAULT: "rgb(var(--destructive))",
-          foreground: "rgb(var(--destructive-foreground))"
-        },
+        surface: "rgb(var(--surface))",
         border: "rgb(var(--border))",
-        ring: "rgb(var(--ring))",
+        "on-bg": "rgb(var(--on-bg))",
+        "on-surface": "rgb(var(--on-surface))",
+        
+        // Primary colors
+        primary: "rgb(var(--primary))",
+        "on-primary": "rgb(var(--on-primary))",
+        
+        // Semantic aliases for components
+        background: "rgb(var(--bg))",
+        foreground: "rgb(var(--on-bg))",
+        card: {
+          DEFAULT: "rgb(var(--surface))",
+          foreground: "rgb(var(--on-surface))"
+        },
+        ring: "rgb(var(--primary))",
       },
       borderRadius: {
         xs: "var(--radius-xs)",

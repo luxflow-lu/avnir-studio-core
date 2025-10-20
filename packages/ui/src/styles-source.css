@@ -3,219 +3,37 @@
 @tailwind components;
 @tailwind utilities;
 
-/* === Base (global) === */
 @layer base {
   html, body { 
     background: rgb(var(--bg)); 
     color: rgb(var(--on-bg)); 
   }
-  body { 
-    margin: 0; 
-    font-family: system-ui, -apple-system, sans-serif;
-  }
-  
-  /* Typo alignée sur MUZIDEV - plus impactante */
-  h1 { font-size: 4rem; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em; } /* Hero titles plus gros */
-  h2 { font-size: 2.75rem; line-height: 1.2; font-weight: 700; letter-spacing: -0.01em; } /* Section titles */
-  h3 { font-size: 1.75rem; line-height: 1.3; font-weight: 600; } /* Subsection titles */
-  h4 { font-size: 1.5rem; line-height: 1.3; font-weight: 600; }
-  h5 { font-size: 1.25rem; line-height: 1.4; font-weight: 600; }
-  h6 { font-size: 1.125rem; line-height: 1.5; font-weight: 600; }
-  p  { font-size: 1.125rem; line-height: 1.6; } /* Texte plus lisible */
-  
-  /* Hero typography spécifique - FORCE LES VALEURS */
-  .hero-title { 
-    font-size: 4.5rem !important; 
-    line-height: 1.05 !important; 
-    font-weight: 900 !important; 
-    letter-spacing: -0.025em !important; 
-    margin-bottom: 2rem !important;
-  }
-  .hero-subtitle { 
-    font-size: 1.375rem !important; 
-    line-height: 1.5 !important; 
-    opacity: 0.85 !important; 
-    margin-bottom: 3rem !important;
-  }
-  
-  /* Section typography - FORCE LES VALEURS */
-  .section-title { 
-    font-size: 3rem !important; 
-    line-height: 1.15 !important; 
-    font-weight: 800 !important; 
-    letter-spacing: -0.015em !important; 
-    margin-bottom: 2rem !important;
-  }
-  .section-subtitle { 
-    font-size: 1.25rem !important; 
-    line-height: 1.5 !important; 
-    opacity: 0.8 !important; 
-    margin-bottom: 2rem !important;
-  }
 }
 
-/* === Components (skins) === */
 @layer components {
-  /* Surface inversée pour navbar/footer */
-  .surface-invert {
-    --bg: var(--surface-inverted-bg);
-    --foreground: var(--surface-inverted-fg);
-    --card: var(--surface-inverted-bg);
-    --card-foreground: var(--surface-inverted-fg);
-    --muted: 26 27 30;    /* #1A1B1E */
-    --muted-foreground: 161 166 176; /* #A1A6B0 */
-    --border: 34 36 42;    /* #22242A */
-    --ring: 147 197 253; /* #93C5FD */
+  .card { 
+    @apply rounded-2xl bg-surface text-on-surface border border-[color:var(--border)] p-6;
+    box-shadow: 0 10px 30px rgba(0,0,0,.28); 
   }
-
-  /* Wrapper/Card selon l'image fournie */
-  .card, .wrapper {
-    background: rgb(var(--surface)); /* #141317 selon image */
-    color: rgb(var(--on-surface));
-    border-radius: 0.25rem; /* border-radius: 0.25rem selon image */
-    padding: 1.25rem; /* global-padding: 1.25rem selon image */
-    border: 1px solid rgb(var(--border));
-    box-shadow: 0 10px 30px rgba(0,0,0,0.28);
-  }
-
-  /* Boutons selon les images fournies */
+  
   .btn { 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0.25rem; /* border-radius: 0.25rem selon image */
-    font-weight: 500;
-    transition: all 0.2s;
-    border: 1px solid transparent;
-    padding: 0.75rem 1.5rem; /* topbot-padding: 0.75rem, riglet-padding: 1.5rem */
-    font-size: 1rem;
-    line-height: 1.5;
-    cursor: pointer;
-  }
-  .btn:focus { 
-    outline: none;
-    box-shadow: 0 0 0 2px rgb(var(--primary) / 0.5);
-  }
-  .btn:disabled { 
-    opacity: 0.5; 
-    pointer-events: none; 
+    @apply inline-flex items-center justify-center rounded-xl font-medium transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:opacity-50 disabled:pointer-events-none;
   }
   
-  /* ButtonPrimary - background-color s'adapte selon le satellite/brand */
   .btn-primary { 
-    background: rgb(var(--primary)); /* #5cb9f2 pour MUZIDEV, s'adapte selon brand */
-    color: rgb(var(--on-primary));
-    border: none;
-  }
-  .btn-primary:hover { 
-    opacity: 0.9; 
+    @apply bg-primary text-on-primary hover:opacity-90;
   }
   
-  /* ButtonSecondary - background-color: #0b0b0d selon image */
-  .btn-secondary { 
-    background: rgb(var(--bg)); /* #0b0b0d selon image */
-    color: rgb(var(--on-bg));
-    border: 1px solid rgb(var(--border)); /* border-color: #2d2d2d selon image */
-  }
-  .btn-secondary:hover { 
-    background: rgb(var(--surface)); /* hover vers surface */
-  }
-
-  /* Badges (couleurs par type, proches de ton screen Ladle) */
   .badge { 
     @apply inline-flex items-center h-6 px-2 rounded-full text-xs font-medium;
-    color: #FFF; 
-    background: #555; /* fallback */
+    color: #fff; 
+    background: #555; 
   }
-  .badge-artist    { background: var(--badge-artist); }
-  .badge-studio    { background: var(--badge-studio); }
+  
+  .badge-artist { background: var(--badge-artist); }
+  .badge-studio { background: var(--badge-studio); }
   .badge-beatmaker { background: var(--badge-beatmaker); }
-  .badge-draft     { background: var(--badge-draft); color:#1E1F24; } /* jaune → texte sombre */
-  .badge-producer  { background: var(--badge-producer); }
-  .badge-archived  { background: var(--badge-archived); }
-}
-
-/* === Utilities (petits helpers si besoin) === */
-@layer utilities {
-  .shadow-card { box-shadow: 0 10px 30px rgba(0,0,0,0.28); }
-  .radius-2xl  { border-radius: 1rem; }
-  
-  /* === LAYOUT SYSTEM PROPRE === */
-  
-  /* Global padding system */
-  .global-padding { padding: 0 2rem; }
-  .global-padding-lg { padding: 0 3rem; }
-  
-  /* Container system */
-  .container-small { max-width: 768px; margin: 0 auto; }
-  .container-medium { max-width: 1024px; margin: 0 auto; }
-  .container-large { max-width: 1200px; margin: 0 auto; }
-  .container-xl { max-width: 1400px; margin: 0 auto; }
-  
-  /* Section spacing system */
-  .section { padding: 6rem 0; }
-  .section-sm { padding: 4rem 0; }
-  .section-lg { padding: 8rem 0; }
-  .section-xl { padding: 10rem 0; }
-  
-  /* Header specific */
-  .header { padding: 1.5rem 0; }
-  
-  /* Hero specific */
-  .hero { padding: 8rem 0; }
-  
-  /* Grid system */
-  .grid { display: grid; }
-  .grid-cols-1 { grid-template-columns: 1fr; }
-  .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
-  .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
-  .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
-  .grid-auto { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-  
-  /* Gap system */
-  .gap-sm { gap: 1.5rem; }
-  .gap-md { gap: 2rem; }
-  .gap-lg { gap: 3rem; }
-  .gap-xl { gap: 4rem; }
-  
-  /* Text alignment */
-  .text-center { text-align: center; }
-  .text-left { text-align: left; }
-  .text-right { text-align: right; }
-  
-  /* Spacing utilities */
-  .mb-sm { margin-bottom: 1rem; }
-  .mb-md { margin-bottom: 1.5rem; }
-  .mb-lg { margin-bottom: 2rem; }
-  .mb-xl { margin-bottom: 3rem; }
-  .mb-2xl { margin-bottom: 4rem; }
-  
-  .mt-sm { margin-top: 1rem; }
-  .mt-md { margin-top: 1.5rem; }
-  .mt-lg { margin-top: 2rem; }
-  .mt-xl { margin-top: 3rem; }
-  .mt-2xl { margin-top: 4rem; }
-  
-  /* Grid spacing MUZIDEV style */
-  .grid-gap { gap: 3rem !important; }
-  .grid-gap-lg { gap: 4rem !important; }
-  .grid-4-cols { 
-    display: grid !important; 
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)) !important; 
-    gap: 3rem !important; 
-  }
-  
-  /* Text spacing MUZIDEV */
-  .hero-spacing h1 { margin-bottom: 2rem !important; }
-  .hero-spacing p { margin-bottom: 3rem !important; }
-  .section-spacing h2 { margin-bottom: 2rem !important; }
-  .section-spacing p { margin-bottom: 2rem !important; }
-  
-  /* Section spacing MUZIDEV */
-  .section-gap { margin-bottom: 8rem !important; }
-  .section-gap-sm { margin-bottom: 6rem !important; }
-  
-  /* Alternating backgrounds comme MUZIDEV */
-  .bg-alternate:nth-child(even) { background: rgb(var(--surface)); }
-  .bg-alternate:nth-child(odd) { background: rgb(var(--bg)); }
+  .badge-draft { background: var(--badge-draft); color: #1E1F24; }
+  .badge-producer { background: var(--badge-producer); }
+  .badge-archived { background: var(--badge-archived); }
 }

@@ -51,8 +51,8 @@ export const Home: React.FC = () => {
             <nav className="hidden md:flex items-center gap-8">
               <a href="#components" className="text-foreground hover:text-primary transition-colors">Composants</a>
               <a href="#tokens" className="text-foreground hover:text-primary transition-colors">Design Tokens</a>
+              <a href="#usage" className="text-foreground hover:text-primary transition-colors">Usage</a>
               <a href="#guidelines" className="text-foreground hover:text-primary transition-colors">Guidelines</a>
-              <a href="#satellites" className="text-foreground hover:text-primary transition-colors">Satellites</a>
             </nav>
             
             <div className="flex items-center gap-4">

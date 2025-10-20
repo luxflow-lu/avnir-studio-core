@@ -1,4 +1,4 @@
-const preset = require("@avnir/tokens/tailwind-preset");
+const preset = require("../tokens/src/tailwind-preset.cjs");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   presets: [preset],

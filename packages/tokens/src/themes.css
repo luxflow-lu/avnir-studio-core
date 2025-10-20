@@ -1,18 +1,24 @@
 /* Base (dark par défaut) */
-:root{
-  --bg:11 11 13; --surface:20 19 23; --border:38 39 43;
-  --on-bg:197 204 214; --on-surface:244 244 244;
-  --primary:138 92 246; --on-primary:255 255 255;
+:root {
+  --bg: 11 11 13; 
+  --surface: 20 19 23; 
+  --border: 38 39 43;
+  --on-bg: 197 204 214; 
+  --on-surface: 244 244 244;
+  --primary: 138 92 246; 
+  --on-primary: 255 255 255;
 
   /* Neutres (pour badges/labels) */
-  --neutral-1:#111216; --neutral-2:#1A1B20; --neutral-3:#22232A;
+  --neutral-1: #111216; 
+  --neutral-2: #1A1B20; 
+  --neutral-3: #22232A;
 
   /* Accents génériques (fallback) */
-  --accent-blue:#4FA4FF;
-  --accent-green:#2FAD66;
-  --accent-orange:#FF9D00;
-  --accent-purple:#8A5CF6;
-  --accent-yellow:#FFD54A;
+  --accent-blue: #4FA4FF;
+  --accent-green: #2FAD66;
+  --accent-orange: #FF9D00;
+  --accent-purple: #8A5CF6;
+  --accent-yellow: #FFD54A;
 
   /* Badges (fallback par type) */
   --badge-artist: var(--accent-purple);
@@ -22,26 +28,41 @@
   --badge-producer: var(--accent-orange);
   --badge-archived: #7A7D87;
 
-  /* compatibility with UI components expecting --brand vars */
-  --brand: var(--primary);
-  --brand-on: var(--on-primary);
+  /* Border radius */
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+  --radius: 0.75rem;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.28);
 }
 
 /* Thème clair */
-html[data-theme="light"]{
-  --bg:248 248 248; --surface:255 255 255; --border:230 232 235;
-  --on-bg:36 37 42; --on-surface:30 31 36;
-  --on-primary:20 19 23;
+html[data-theme="light"] {
+  --bg: 248 248 248; 
+  --surface: 255 255 255; 
+  --border: 230 232 235;
+  --on-bg: 36 37 42; 
+  --on-surface: 30 31 36;
+  --on-primary: 20 19 23;
 
   /* Neutres ajustés pour le light */
-  --neutral-1:#F1F2F4; --neutral-2:#E6E8EB; --neutral-3:#D1D5DB;
+  --neutral-1: #F1F2F4; 
+  --neutral-2: #E6E8EB; 
+  --neutral-3: #D1D5DB;
 
   /* Accents restent identiques mais on les redéfinit pour clarté */
-  --accent-blue:#4FA4FF;
-  --accent-green:#2FAD66;
-  --accent-orange:#FF9D00;
-  --accent-purple:#8A5CF6;
-  --accent-yellow:#FFD54A;
+  --accent-blue: #4FA4FF;
+  --accent-green: #2FAD66;
+  --accent-orange: #FF9D00;
+  --accent-purple: #8A5CF6;
+  --accent-yellow: #FFD54A;
 
   /* Badges identiques en light */
   --badge-artist: var(--accent-purple);
@@ -52,41 +73,36 @@ html[data-theme="light"]{
   --badge-archived: #7A7D87;
 }
 
-/* Brand AVNIR (inchangé) */
-html[data-brand="avnir"]{
-  --primary:237 237 237;
-  --on-primary:20 19 23;
-  --brand:237 237 237;
-  --brand-on:20 19 23;
+/* Brand AVNIR */
+html[data-brand="avnir"] {
+  --primary: 237 237 237; /* #EDEDED */
+  --on-primary: 20 19 23; /* #141317 */
 }
 
-/* Brand MUZIDEV (à partir de ta maquette d'hier) */
-html[data-brand="muzidev"]{
-  /* primaire (si différent, sinon laisse le fallback) */
-  --primary:92 185 242;         /* bleu clair de ta landing */
-  --on-primary:14 17 22;      /* texte sombre lisible sur ce bleu clair */
-
-  /* accents (pour badges) – ajuste si tu as des valeurs exactes de la maquette */
-  --accent-blue:#5CB9F2;
-  --accent-green:#2FAD66;
-  --accent-orange:#FF9D00;
-  --accent-purple:#8A5CF6;
-  --accent-yellow:#FFD54A;
-
-  /* mappage badges */
-  --badge-artist:    var(--accent-purple);
-  --badge-studio:    var(--accent-green);
-  --badge-beatmaker: var(--accent-blue);
-  --badge-draft:     var(--accent-yellow);
-  --badge-producer:  var(--accent-orange);
-  --badge-archived:  #7A7D87;
-
-  --brand: 92 185 242;
-  --brand-on: 14 17 22;
+/* Brand MUZIDEV */
+html[data-brand="muzidev"] {
+  --primary: 92 185 242; /* #5CB9F2 */
+  --on-primary: 14 17 22; /* #0E1116 */
 }
 
-html[data-brand="muzipics"]{ --primary:#FF2D55; --brand: var(--primary); --brand-on: #FFFFFF; }
-html[data-brand="muzimerch"]{ --primary:#FF9D00; --brand: var(--primary); --brand-on: #FFFFFF; }
-html[data-brand="muzibase"]{ --primary:#2FAD66; --brand: var(--primary); --brand-on: #FFFFFF; }
-html[data-brand="muzimanager"]{ --primary:#9802EB; --brand: var(--primary); --brand-on: #FFFFFF; }
-html[data-brand="promozic"]{ --primary:#FFD700; --brand: var(--primary); --brand-on: #000000; }
+/* Autres brands */
+html[data-brand="muzipics"] { 
+  --primary: 255 45 85; /* #FF2D55 */
+  --on-primary: 255 255 255; 
+}
+html[data-brand="muzimerch"] { 
+  --primary: 255 157 0; /* #FF9D00 */
+  --on-primary: 255 255 255; 
+}
+html[data-brand="muzibase"] { 
+  --primary: 47 173 102; /* #2FAD66 */
+  --on-primary: 255 255 255; 
+}
+html[data-brand="muzimanager"] { 
+  --primary: 152 2 235; /* #9802EB */
+  --on-primary: 255 255 255; 
+}
+html[data-brand="promozic"] { 
+  --primary: 255 215 0; /* #FFD700 */
+  --on-primary: 0 0 0; 
+}

@@ -1,12 +1,6 @@
 export default {
-  title: "AVNIR UI — Playground",
+  title: "MUZISYSTEM — Playground",
   viteConfig: {
-    resolve: {
-      alias: {
-        "@avnir/tokens": "../../packages/tokens/dist",
-        "@avnir/ui": "../../packages/ui/dist/index.js"
-      }
-    },
     server: {
       fs: {
         allow: ['..', '../..']
