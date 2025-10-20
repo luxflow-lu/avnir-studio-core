@@ -6,6 +6,7 @@ import { Components } from "./pages/Components";
 import { Tokens } from "./pages/Tokens";
 import { Guidelines } from "./pages/Guidelines";
 import { Usage } from "./pages/Usage";
+import { LayoutShowcase } from "./pages/LayoutShowcase";
 import { Primitives } from "./pages/categories/Primitives";
 import { Form } from "./pages/categories/Form";
 import { Data } from "./pages/categories/Data";
@@ -44,6 +45,8 @@ export const App: React.FC = () => {
         return <Guidelines />;
       case 'usage':
         return <Usage />;
+      case 'layout-showcase':
+        return <LayoutShowcase />;
       case 'primitives':
         return <Primitives />;
       case 'form':

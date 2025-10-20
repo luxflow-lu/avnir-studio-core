@@ -52,6 +52,7 @@ export const Home: React.FC = () => {
               <a href="#components" className="text-foreground hover:text-primary transition-colors">Composants</a>
               <a href="#tokens" className="text-foreground hover:text-primary transition-colors">Design Tokens</a>
               <a href="#usage" className="text-foreground hover:text-primary transition-colors">Usage</a>
+              <a href="#layout-showcase" className="text-foreground hover:text-primary transition-colors">Layout</a>
               <a href="#guidelines" className="text-foreground hover:text-primary transition-colors">Guidelines</a>
             </nav>
             
