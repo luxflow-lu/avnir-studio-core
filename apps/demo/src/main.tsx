@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
+import "../../ladle/src/main.css";
 import { Provider } from "@/Provider";
 import { App } from "./App";
 
