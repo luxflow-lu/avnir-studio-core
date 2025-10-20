@@ -1,6 +1,2 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Tokens (CSS vars) */
 @import "@avnir/tokens/themes.css";
+@import "@avnir/ui/styles.css";

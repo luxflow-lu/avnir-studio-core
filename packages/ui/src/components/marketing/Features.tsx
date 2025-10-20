@@ -1,5 +1,5 @@
 import * as React from "react";
-import { cx } from "../../utils/cx";
+import clsx from "clsx";
 
 export type Feature = { icon?: React.ReactNode; title: string; description?: string };
 export type FeaturesProps = {
@@ -16,10 +16,10 @@ const colMap: Record<NonNullable<FeaturesProps["columns"]>, string> = {
   4: "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4",
 };
 
-export const Features = React.forwardRef<HTMLElement, FeaturesProps>(
+export const FeatureGrid = React.forwardRef<HTMLElement, FeaturesProps>(
   ({ title, subtitle, items, columns = 3, className, ...props }, ref) => {
     return (
-      <section ref={ref} className={cx("w-full mx-auto px-4 md:px-6 py-16 md:py-24", className)} {...props}>
+      <section ref={ref} className={clsx("w-full mx-auto px-4 md:px-6 py-16 md:py-24", className)} {...props}>
         <div className="mx-auto max-w-7xl">
           {(title || subtitle) && (
             <div className="mb-10 text-center">
@@ -27,7 +27,7 @@ export const Features = React.forwardRef<HTMLElement, FeaturesProps>(
               {subtitle && <p className="mt-3 text-lg text-muted-foreground">{subtitle}</p>}
             </div>
           )}
-          <div className={cx("grid grid-cols-1 gap-8", colMap[columns])}>
+          <div className={clsx("grid grid-cols-1 gap-8", colMap[columns])}>
             {items.map((it, i) => (
               <div
                 key={i}
@@ -48,4 +48,4 @@ export const Features = React.forwardRef<HTMLElement, FeaturesProps>(
     );
   }
 );
-Features.displayName = "Features";
+FeatureGrid.displayName = "FeatureGrid";

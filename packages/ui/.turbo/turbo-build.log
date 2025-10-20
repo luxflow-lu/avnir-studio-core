@@ -1,59 +1,34 @@
 
+
 > @avnir/ui@0.1.0 build /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui
-> tsup src/index.ts --format esm,cjs --dts --sourcemap --clean
+> tsup src/index.ts --format esm,cjs --dts --sourcemap --clean && pnpm run build:css
 
-CLI Building entry: src/index.ts
-CLI Using tsconfig: tsconfig.json
-CLI tsup v8.5.0
-CLI Using tsup config: /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/tsup.config.ts
-CLI Target: es2022
-CLI Cleaning output folder
-ESM Build start
-CJS Build start
-✘ [ERROR] Could not resolve "class-variance-authority"
-
-    src/components/Banner.tsx:2:39:
-      2 │ import { cva, type VariantProps } from "class-variance-authority";
-        ╵                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-  You can mark the path "class-variance-authority" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
-
-✘ [ERROR] Could not resolve "class-variance-authority"
-
-    src/components/Banner.tsx:2:39:
-      2 │ import { cva, type VariantProps } from "class-variance-authority";
-        ╵                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-  You can mark the path "class-variance-authority" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
-
-✘ [ERROR] Could not resolve "tailwind-merge"
-
-    src/components/Banner.tsx:3:24:
-      3 │ import { twMerge } from "tailwind-merge";
-        ╵                         ~~~~~~~~~~~~~~~~
-
-  You can mark the path "tailwind-merge" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
-
-✘ [ERROR] Could not resolve "tailwind-merge"
-
-    src/components/Banner.tsx:3:24:
-      3 │ import { twMerge } from "tailwind-merge";
-        ╵                         ~~~~~~~~~~~~~~~~
-
-  You can mark the path "tailwind-merge" as external to exclude it from the bundle, which will remove this error and leave the unresolved path in the bundle.
-
-CJS Build failed
-Error: Build failed with 2 errors:
-src/components/Banner.tsx:2:39: ERROR: Could not resolve "class-variance-authority"
-src/components/Banner.tsx:3:24: ERROR: Could not resolve "tailwind-merge"
-    at failureErrorWithLog (/Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/esbuild@0.25.11/node_modules/esbuild/lib/main.js:1467:15)
-    at /Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/esbuild@0.25.11/node_modules/esbuild/lib/main.js:926:25
-    at runOnEndCallbacks (/Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/esbuild@0.25.11/node_modules/esbuild/lib/main.js:1307:45)
-    at buildResponseToResult (/Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/esbuild@0.25.11/node_modules/esbuild/lib/main.js:924:7)
-    at /Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/esbuild@0.25.11/node_modules/esbuild/lib/main.js:951:16
-    at responseCallbacks.<computed> (/Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/esbuild@0.25.11/node_modules/esbuild/lib/main.js:603:9)
-    at handleIncomingPacket (/Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/esbuild@0.25.11/node_modules/esbuild/lib/main.js:658:12)
-    at Socket.rea    at Socket.readFromStdout (/Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/esbuild@0.25.11/node_modules/esbuild/lib/main.js:581:7)
-    at Socket.emit (node:events:524:28)
-    at addChunk (node:internal/streams/readable:561:12)
+[34mCLI[39m Building entry: src/index.ts
+[34mCLI[39m Using tsconfig: tsconfig.json
+[34mCLI[39m tsup v8.5.0
+[34mCLI[39m Using tsup config: /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/tsup.config.ts
+[34mCLI[39m Target: es2022
+[34mCLI[39m Cleaning output folder
+[34mESM[39m Build start
+[34mCJS[39m Build start
+[32mCJS[39m [1mdist/index.cjs     [22m[32m84.66 KB[39m
+[32mCJS[39m [1mdist/index.cjs.map [22m[32m149.50 KB[39m
+[32mCJS[39m ⚡️ Build success in 381ms
+[32mESM[39m [1mdist/index.js     [22m[32m81.74 KB[39m
+[32mESM[39m [1mdist/index.js.map [22m[32m149.31 KB[39m
+[32mESM[39m ⚡️ Build success in 395ms
 DTS Build start
+DTS ⚡️ Build success in 3928ms
+DTS dist/index.d.ts  3.21 KB
+DTS dist/index.d.cts 3.21 KB
+
+> @avnir/ui@0.1.0 build:css /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui
+> tailwindcss -c tailwind.build.config.cjs -i ./src/styles-source.css -o ./dist/styles.css --postcss ./postcss.build.config.cjs --minify
+
+Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+Rebuilding...
+
+Done in 1384ms.

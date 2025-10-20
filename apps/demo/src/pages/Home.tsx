@@ -4,46 +4,54 @@ import { Navbar, Footer, Hero, FeatureGrid, Button } from "@avnir/ui";
 export const Home: React.FC = () => {
   const items = [
     { title: "Design tokens", text: "Palette unifiée et thèmes dark/light." },
-    { title: "A11y d'office", text: "Focus visibles, navigation clavier, ARIA." },
-    { title: "UI kit", text: "Composants buildés et typés." },
-    { title: "SaaS/E-com packs", text: "Blocs réutilisables pour accélérer." },
+    { title: "Accessibilité", text: "Focus visibles, navigation clavier, ARIA." },
+    { title: "UI Kit", text: "Composants buildés et typés." },
+    { title: "SaaS / E‑com", text: "Blocs réutilisables pour accélérer." },
     { title: "Brandkit", text: "data-brand et presets prêts." },
     { title: "DX rapide", text: "Vite + TS + Tailwind intégrés." },
   ];
 
   return (
     <main className="bg-background text-foreground">
-      {/* Test Tailwind */}
-      <div className="min-h-16 w-full bg-blue-500 text-white p-4 rounded-xl">
-        ✅ Test Tailwind OK - Si vous voyez ce bloc bleu, Tailwind compile !
-      </div>
-
-      {/* Test tokens/vars */}
-      <div className="p-4 rounded-xl m-4" style={{ 
-        background: "var(--surface)", 
-        color: "var(--on-surface)" 
-      }}>
-        <div className="text-sm opacity-80">
-          brand: {typeof document !== 'undefined' ? document.documentElement.getAttribute('data-brand') : 'N/A'} • theme: {typeof document !== 'undefined' ? document.documentElement.getAttribute('data-theme') : 'N/A'}
-        </div>
-        <div>--primary = <span style={{ color: "var(--primary)" }}>●</span> (devrait être coloré selon la brand)</div>
-      </div>
-
       <div className="surface-invert">
-        <Navbar links={[]} />
+        <Navbar
+          logo={
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-full bg-primary flex items-center justify-center">
+                <span className="text-primary-foreground font-bold text-sm">A</span>
+              </div>
+              <span className="text-foreground font-semibold">Brand</span>
+            </div>
+          }
+          links={[
+            { label: "Home", href: "#home" },
+            { label: "Products", href: "#products" },
+            { label: "About", href: "#about" },
+            { label: "Contact", href: "#contact" },
+          ]}
+          actions={
+            <div className="flex items-center gap-3">
+              <Button variant="ghost" className="text-foreground hover:text-primary">
+                Sign In
+              </Button>
+              <Button variant="solid">
+                Sign Up
+              </Button>
+            </div>
+          }
+        />
       </div>
 
-      <section className="mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-20">
-        <Hero
-          title="Concevez plus vite. Shippez serein."
-          subtitle="Composants typés, tokens unifiés, theming semi-light — tout est prêt."
-          actions={<>
-            <Button>Commencer</Button>
-            <Button variant="outline">Voir la doc</Button>
-          </>}
-          media={<img alt="UI Kit preview" src="https://picsum.photos/800/600" className="rounded-[var(--radius-lg)] border border-[color:var(--border)] shadow-card" />}
-        />
-      </section>
+      <Hero
+        layout="split"
+        title="Concevez plus vite. Shippez serein."
+        subtitle="Composants typés, tokens unifiés, theming semi-light — tout est prêt."
+        actions={<>
+          <Button>Commencer</Button>
+          <Button variant="outline">Voir la doc</Button>
+        </>}
+        image={<img alt="UI Kit preview" src="https://picsum.photos/800/540" className="rounded-xl border border-border shadow-sm" />}
+      />
 
       <section className="mx-auto max-w-7xl px-4 md:px-6 py-12 md:py-20">
         <FeatureGrid items={items} />
@@ -51,27 +59,32 @@ export const Home: React.FC = () => {
 
       <div className="surface-invert">
         <Footer
-          columns={[
+          sections={[
             { title: "Produit", links: [
-              { label: "UI Kit", href: "#" },
-              { label: "Composants", href: "#" },
-              { label: "Pricing", href: "#" }
+              { label: "UI Kit", href: "#ui-kit" },
+              { label: "Composants", href: "#composants" },
+              { label: "Pricing", href: "#pricing" },
             ]},
             { title: "Ressources", links: [
-              { label: "Docs", href: "#" },
-              { label: "Guides", href: "#" },
-              { label: "Changelog", href: "#" }
+              { label: "Docs", href: "#docs" },
+              { label: "Guides", href: "#guides" },
+              { label: "Changelog", href: "#changelog" },
             ]},
             { title: "Entreprise", links: [
-              { label: "À propos", href: "#" },
-              { label: "Carrières", href: "#" }
+              { label: "À propos", href: "#about" },
+              { label: "Carrières", href: "#careers" },
             ]},
             { title: "Légal", links: [
-              { label: "Confidentialité", href: "#" },
-              { label: "CGU", href: "#" }
-            ]}
+              { label: "Confidentialité", href: "#privacy" },
+              { label: "CGU", href: "#terms" },
+            ]},
           ]}
-          legal={{ left: <>© 2025 AVNIR</>, right: <>Tous droits réservés</> }}
+          bottomContent={
+            <div className="flex justify-between items-center text-sm text-muted-foreground">
+              <span>© 2025 AVNIR</span>
+              <span>Tous droits réservés</span>
+            </div>
+          }
         />
       </div>
     </main>

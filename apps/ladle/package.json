@@ -2,13 +2,14 @@
   "name": "@avnir/ladle",
   "private": true,
   "scripts": {
-    "prebuild": "pnpm -w --filter @avnir/tokens build",
+    "prebuild": "pnpm -w --filter @avnir/tokens build && pnpm -w --filter @avnir/ui build && ./scripts/build-css.sh",
+    "predev": "./scripts/build-css.sh",
     "build": "ladle build",
     "dev": "ladle serve",
     "preview": "ladle preview",
     "lint": "echo 'No lint configured for Ladle'",
     "typecheck": "tsc --noEmit",
-    "clean": "rimraf .turbo build .ladle"
+    "clean": "rimraf .turbo build .ladle public/combined.css"
   },
   "dependencies": {
     "@ladle/react": "^4.0.0",
