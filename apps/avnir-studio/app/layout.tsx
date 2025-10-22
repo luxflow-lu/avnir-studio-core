@@ -1,6 +1,6 @@
-import '../globals.css';
-import '../../packages/tokens/dist/vars.css';
-import { Navbar, Footer } from '../../packages/ui/src';
+import './globals.css';
+import '@avnir/tokens/dist/themes.css';
+import { Navbar, Footer } from '@avnir/ui';
 
 export const metadata = { title: 'AVNIR-Studio' };
 export default function RootLayout({ children }: { children: React.ReactNode }) {

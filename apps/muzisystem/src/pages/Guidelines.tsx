@@ -1,351 +1,256 @@
-import React from "react";
-import { Button } from "@avnir/ui";
+import * as React from "react";
 
 export const Guidelines: React.FC = () => {
-  const principles = [
-    {
-      title: "Cohérence",
-      description: "Utiliser les mêmes patterns et composants à travers tous les satellites",
-      icon: "🎯",
-      examples: ["Même navigation", "Couleurs uniformes", "Espacements constants"]
-    },
-    {
-      title: "Accessibilité",
-      description: "Créer des interfaces inclusives conformes aux standards WCAG 2.1",
-      icon: "♿",
-      examples: ["Contraste suffisant", "Navigation clavier", "Lecteurs d'écran"]
-    },
-    {
-      title: "Performance",
-      description: "Optimiser pour la vitesse et l'efficacité sur tous les appareils",
-      icon: "⚡",
-      examples: ["Lazy loading", "Bundle splitting", "Images optimisées"]
-    },
-    {
-      title: "Responsive",
-      description: "Adapter l'interface à tous les écrans et contextes d'usage",
-      icon: "📱",
-      examples: ["Mobile first", "Breakpoints cohérents", "Touch-friendly"]
-    }
-  ];
-
-  const colorGuidelines = [
-    {
-      rule: "Contraste minimum",
-      description: "Ratio de 4.5:1 pour le texte normal, 3:1 pour le texte large",
-      example: "text-foreground sur bg-background"
-    },
-    {
-      rule: "Hiérarchie des couleurs",
-      description: "Primary pour les actions principales, muted pour les informations secondaires",
-      example: "Bouton CTA en primary, texte d'aide en muted"
-    },
-    {
-      rule: "États interactifs",
-      description: "Hover, focus et active states clairement définis",
-      example: "hover:opacity-90 pour les boutons"
-    },
-    {
-      rule: "Cohérence des marques",
-      description: "Chaque satellite garde sa couleur primary mais partage le système",
-      example: "MUZIDEV bleu, MUZIPICS rouge, etc."
-    }
-  ];
-
-  const spacingRules = [
-    {
-      context: "Composants internes",
-      spacing: "4px, 8px, 12px",
-      usage: "Padding interne, gaps entre éléments proches"
-    },
-    {
-      context: "Entre composants",
-      spacing: "16px, 24px, 32px",
-      usage: "Marges entre cartes, sections de formulaire"
-    },
-    {
-      context: "Sections de page",
-      spacing: "48px, 64px, 96px",
-      usage: "Espacement entre sections principales"
-    },
-    {
-      context: "Layout global",
-      spacing: "128px, 160px",
-      usage: "Marges de page, espacement hero"
-    }
-  ];
-
-  const typographyScale = [
-    { name: "Display", size: "4rem (64px)", usage: "Titres de landing page", weight: "900" },
-    { name: "H1", size: "3rem (48px)", usage: "Titres principaux", weight: "800" },
-    { name: "H2", size: "2.25rem (36px)", usage: "Titres de section", weight: "700" },
-    { name: "H3", size: "1.5rem (24px)", usage: "Sous-titres", weight: "600" },
-    { name: "Body Large", size: "1.125rem (18px)", usage: "Texte important", weight: "400" },
-    { name: "Body", size: "1rem (16px)", usage: "Texte standard", weight: "400" },
-    { name: "Small", size: "0.875rem (14px)", usage: "Métadonnées", weight: "400" },
-    { name: "Caption", size: "0.75rem (12px)", usage: "Labels, badges", weight: "500" }
-  ];
-
   return (
     <div className="min-h-screen bg-background text-foreground">
-      
-      {/* === HEADER === */}
-      <header className="section-tight border-b border-border bg-surface">
-        <div className="container">
+      {/* Header */}
+      <header data-force-dark className="sticky top-0 z-50 border-b border-border bg-surface/80 backdrop-blur-sm">
+        <div className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <div className="cluster">
-              <a href="#home" className="cluster">
-                <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold text-lg">M</span>
-                </div>
-                <span className="text-xl font-bold text-foreground">MUZISYSTEM</span>
-              </a>
+            <div>
+              <h1 className="h2 text-titles">Guidelines</h1>
+              <p className="text-muted">Règles et bonnes pratiques du Design System</p>
             </div>
-            
-            <nav className="hidden md:flex cluster">
-              <a href="#components" className="text-foreground hover:text-primary transition-colors">Composants</a>
-              <a href="#tokens" className="text-foreground hover:text-primary transition-colors">Design Tokens</a>
-              <a href="#guidelines" className="text-primary font-medium">Guidelines</a>
+            <nav className="flex gap-4">
+              <a href="#usage" className="text-sm text-muted hover:text-foreground transition-colors">Usage</a>
+              <a href="#patterns" className="text-sm text-muted hover:text-foreground transition-colors">Patterns</a>
+              <a href="#accessibility" className="text-sm text-muted hover:text-foreground transition-colors">A11y</a>
             </nav>
-            
-            <div className="cluster">
-              <Button variant="outline">Documentation</Button>
-              <Button variant="solid">Figma Kit</Button>
-            </div>
           </div>
         </div>
       </header>
 
-      {/* === HERO === */}
-      <section className="section">
-        <div className="container">
-          <div className="text-center stack">
-            <h1 className="text-6xl font-bold text-foreground">
-              Guidelines de Design
-            </h1>
-            <p className="text-xl text-foreground/80 max-w-4xl mx-auto leading-relaxed">
-              Règles et bonnes pratiques pour maintenir la cohérence visuelle 
-              et l'expérience utilisateur à travers tout l'écosystème AVNIR Studio.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* === PRINCIPLES === */}
-      <section className="section bg-surface">
-        <div className="container">
-          <div className="stack-lg">
-            <h2 className="text-4xl font-bold text-foreground">Principes Fondamentaux</h2>
-            
-            <div className="grid-2">
-            {principles.map((principle, index) => (
-              <div key={index} className="rounded-[var(--radius)] border border-border bg-card p-6">
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                    <span className="text-2xl">{principle.icon}</span>
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold text-card-foreground mb-2">{principle.title}</h3>
-                    <p className="text-muted-foreground">{principle.description}</p>
-                  </div>
-                </div>
-                <div className="ml-16">
-                  <h4 className="font-medium text-card-foreground mb-2">Exemples :</h4>
-                  <ul className="space-y-1">
-                    {principle.examples.map((example, idx) => (
-                      <li key={idx} className="text-sm text-muted-foreground flex items-center gap-2">
-                        <span className="w-1 h-1 bg-primary rounded-full"></span>
-                        {example}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* === COLOR GUIDELINES === */}
-      <section className="py-12 bg-card">
-        <div className="max-w-7xl mx-auto px-8">
-          <h2 className="text-3xl font-bold text-card-foreground mb-8">Règles de Couleur</h2>
-          
+      <main className="container mx-auto px-6 py-8 space-y-16">
+        {/* Usage data-brand */}
+        <section id="usage">
+          <h2 className="h3 text-titles mb-6">Usage data-brand</h2>
           <div className="space-y-6">
-            {colorGuidelines.map((guideline, index) => (
-              <div key={index} className="rounded-[var(--radius)] border border-border bg-background p-6">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-                  <div className="flex-1">
-                    <h3 className="text-lg font-semibold text-foreground mb-2">{guideline.rule}</h3>
-                    <p className="text-muted-foreground">{guideline.description}</p>
-                  </div>
-                  <div className="md:w-1/3">
-                    <div className="bg-muted p-3 rounded-lg">
-                      <code className="text-sm">{guideline.example}</code>
-                    </div>
-                  </div>
-                </div>
+            <div className="p-6 bg-surface rounded-lg border border-border">
+              <h3 className="font-medium text-titles mb-4">Configuration des marques</h3>
+              <p className="text-muted mb-4">
+                Chaque application doit définir sa marque via l'attribut <code className="text-accent">data-brand</code> sur l'élément HTML.
+              </p>
+              <div className="bg-background p-4 rounded-md">
+                <code className="text-sm font-mono text-accent">
+                  {'<html data-brand="muzidev" data-theme="dark">'}
+                </code>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* === SPACING GUIDELINES === */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-8">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Règles d'Espacement</h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <div className="space-y-6">
-              {spacingRules.map((rule, index) => (
-                <div key={index} className="rounded-[var(--radius)] border border-border bg-card p-6">
-                  <h3 className="text-lg font-semibold text-card-foreground mb-2">{rule.context}</h3>
-                  <div className="flex items-center gap-4 mb-2">
-                    <span className="font-mono text-primary">{rule.spacing}</span>
-                  </div>
-                  <p className="text-sm text-muted-foreground">{rule.usage}</p>
-                </div>
-              ))}
             </div>
-            
-            <div className="rounded-[var(--radius)] border border-border bg-card p-6">
-              <h3 className="text-lg font-semibold text-card-foreground mb-4">Échelle d'espacement</h3>
-              <div className="space-y-3">
-                {[4, 8, 12, 16, 24, 32, 48, 64, 96].map((size, index) => (
-                  <div key={index} className="flex items-center gap-4">
+
+            <div className="p-6 bg-surface rounded-lg border border-border">
+              <h3 className="font-medium text-titles mb-4">Marques disponibles</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {[
+                  { name: "avnir", color: "#EDEDED", desc: "AVNIR Studio principal" },
+                  { name: "muzidev", color: "#5CB9F2", desc: "Formation et développement" },
+                  { name: "muzipics", color: "#FF2D55", desc: "Galerie et médias" },
+                  { name: "muziweb", color: "#9802EB", desc: "Sites web" },
+                  { name: "muzimerch", color: "#FF9D00", desc: "E-commerce" },
+                  { name: "muzibase", color: "#2FAD66", desc: "Base de données" },
+                  { name: "muzimanager", color: "#FFD700", desc: "Gestion" },
+                ].map((brand) => (
+                  <div key={brand.name} className="flex items-center gap-3 p-3 bg-background rounded-md">
                     <div 
-                      className="bg-primary rounded"
-                      style={{ width: `${size}px`, height: '8px' }}
-                    ></div>
-                    <span className="font-mono text-sm">{size}px</span>
+                      className="w-4 h-4 rounded-full"
+                      style={{ backgroundColor: brand.color }}
+                    />
+                    <div>
+                      <code className="text-sm font-mono text-accent">{brand.name}</code>
+                      <p className="text-xs text-muted">{brand.desc}</p>
+                    </div>
                   </div>
                 ))}
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* === TYPOGRAPHY === */}
-      <section className="py-12 bg-card">
-        <div className="max-w-7xl mx-auto px-8">
-          <h2 className="text-3xl font-bold text-card-foreground mb-8">Échelle Typographique</h2>
-          
+        {/* Patterns theming */}
+        <section id="patterns">
+          <h2 className="h3 text-titles mb-6">Patterns de theming</h2>
           <div className="space-y-6">
-            {typographyScale.map((type, index) => (
-              <div key={index} className="rounded-[var(--radius)] border border-border bg-background p-6">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
-                  <div>
-                    <h3 className="font-semibold text-foreground mb-1">{type.name}</h3>
-                    <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                      <span>{type.size}</span>
-                      <span>Weight: {type.weight}</span>
-                    </div>
+            <div className="p-6 bg-surface rounded-lg border border-border">
+              <h3 className="font-medium text-titles mb-4">Semi-light mode</h3>
+              <p className="text-muted mb-4">
+                En mode light, les headers et footers restent en mode dark pour maintenir la cohérence visuelle.
+              </p>
+              <div className="bg-background p-4 rounded-md">
+                <code className="text-sm font-mono text-accent">
+                  {'<header data-force-dark>...</header>'}
+                  <br />
+                  {'<footer data-force-dark>...</footer>'}
+                </code>
+              </div>
+            </div>
+
+            <div className="p-6 bg-surface rounded-lg border border-border">
+              <h3 className="font-medium text-titles mb-4">Variables CSS dynamiques</h3>
+              <p className="text-muted mb-4">
+                Les couleurs s'adaptent automatiquement selon le thème et la marque active.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="bg-background p-4 rounded-md">
+                  <div className="text-sm font-mono text-accent mb-2">Couleurs de base</div>
+                  <div className="space-y-1 text-xs font-mono text-muted">
+                    <div>var(--bg) - Arrière-plan</div>
+                    <div>var(--surface) - Surfaces</div>
+                    <div>var(--text) - Texte principal</div>
+                    <div>var(--titles) - Titres</div>
+                    <div>var(--muted) - Texte secondaire</div>
                   </div>
-                  <div className="lg:col-span-2">
-                    <div 
-                      className="text-foreground"
-                      style={{ 
-                        fontSize: type.size.split(' ')[0], 
-                        fontWeight: type.weight,
-                        lineHeight: '1.2'
-                      }}
-                    >
-                      Exemple de texte
-                    </div>
-                    <p className="text-sm text-muted-foreground mt-2">{type.usage}</p>
+                </div>
+                <div className="bg-background p-4 rounded-md">
+                  <div className="text-sm font-mono text-accent mb-2">Couleurs d'action</div>
+                  <div className="space-y-1 text-xs font-mono text-muted">
+                    <div>var(--primary) - Couleur de marque</div>
+                    <div>var(--accent) - Liens et focus</div>
+                    <div>var(--on-primary) - Texte sur primary</div>
+                    <div>var(--on-surface) - Texte sur surface</div>
+                    <div>var(--on-accent) - Texte sur accent</div>
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* === COMPONENT GUIDELINES === */}
-      <section className="py-12">
-        <div className="max-w-7xl mx-auto px-8">
-          <h2 className="text-3xl font-bold text-foreground mb-8">Guidelines par Composant</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="rounded-[var(--radius)] border border-border bg-card p-6">
-              <h3 className="text-lg font-semibold text-card-foreground mb-4">Boutons</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Primary pour l'action principale</li>
-                <li>• Outline pour les actions secondaires</li>
-                <li>• Minimum 44px de hauteur (touch target)</li>
-                <li>• États hover/focus/disabled obligatoires</li>
-              </ul>
-            </div>
-
-            <div className="rounded-[var(--radius)] border border-border bg-card p-6">
-              <h3 className="text-lg font-semibold text-card-foreground mb-4">Formulaires</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Labels toujours visibles</li>
-                <li>• Messages d'erreur explicites</li>
-                <li>• Validation en temps réel</li>
-                <li>• États focus clairement visibles</li>
-              </ul>
-            </div>
-
-            <div className="rounded-[var(--radius)] border border-border bg-card p-6">
-              <h3 className="text-lg font-semibold text-card-foreground mb-4">Navigation</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Breadcrumb pour la hiérarchie</li>
-                <li>• État actif clairement marqué</li>
-                <li>• Navigation clavier complète</li>
-                <li>• Responsive sur mobile</li>
-              </ul>
-            </div>
-
-            <div className="rounded-[var(--radius)] border border-border bg-card p-6">
-              <h3 className="text-lg font-semibold text-card-foreground mb-4">Cartes</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Padding cohérent (24px)</li>
-                <li>• Border-radius standard (8px)</li>
-                <li>• Shadow subtile</li>
-                <li>• Hover state si interactive</li>
-              </ul>
-            </div>
-
-            <div className="rounded-[var(--radius)] border border-border bg-card p-6">
-              <h3 className="text-lg font-semibold text-card-foreground mb-4">Modales</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Overlay semi-transparent</li>
-                <li>• Fermeture par Escape</li>
-                <li>• Focus trap à l'intérieur</li>
-                <li>• Taille adaptée au contenu</li>
-              </ul>
-            </div>
-
-            <div className="rounded-[var(--radius)] border border-border bg-card p-6">
-              <h3 className="text-lg font-semibold text-card-foreground mb-4">Badges</h3>
-              <ul className="space-y-2 text-sm text-muted-foreground">
-                <li>• Couleurs selon le type</li>
-                <li>• Texte court et explicite</li>
-                <li>• Contraste suffisant</li>
-                <li>• Taille cohérente</li>
-              </ul>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* === FOOTER === */}
-      <footer className="py-12 border-t border-border">
-        <div className="max-w-7xl mx-auto px-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-muted-foreground">© 2025 MUZISYSTEM by AVNIR Studio</p>
-            <div className="flex items-center gap-4">
-              <a href="#components" className="text-muted-foreground hover:text-primary transition-colors">Composants</a>
-              <a href="#tokens" className="text-muted-foreground hover:text-primary transition-colors">Design Tokens</a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">Figma</a>
+        {/* Accessibilité */}
+        <section id="accessibility">
+          <h2 className="h3 text-titles mb-6">Bonnes pratiques d'accessibilité</h2>
+          <div className="space-y-6">
+            <div className="p-6 bg-surface rounded-lg border border-border">
+              <h3 className="font-medium text-titles mb-4">Focus visible</h3>
+              <p className="text-muted mb-4">
+                Tous les éléments interactifs doivent avoir un focus visible conforme aux standards WCAG.
+              </p>
+              <div className="flex gap-4 mb-4">
+                <button className="px-4 py-2 bg-primary text-on-primary rounded-md">Button</button>
+                <input className="px-3 py-2 bg-background border border-border rounded-md" placeholder="Input" />
+                <a href="#" className="px-4 py-2 text-accent underline">Link</a>
+              </div>
+              <div className="bg-background p-4 rounded-md">
+                <code className="text-sm font-mono text-accent">
+                  *:focus-visible {'{'}
+                  <br />
+                  &nbsp;&nbsp;outline: 2px solid var(--accent);
+                  <br />
+                  &nbsp;&nbsp;outline-offset: 2px;
+                  <br />
+                  {'}'}
+                </code>
+              </div>
             </div>
+
+            <div className="p-6 bg-surface rounded-lg border border-border">
+              <h3 className="font-medium text-titles mb-4">Rôles ARIA</h3>
+              <p className="text-muted mb-4">
+                Les composants complexes doivent inclure les rôles ARIA appropriés.
+              </p>
+              <div className="space-y-3">
+                <div className="bg-background p-3 rounded-md">
+                  <code className="text-xs font-mono text-accent">
+                    {'<nav role="navigation" aria-label="Navigation principale">'}
+                  </code>
+                </div>
+                <div className="bg-background p-3 rounded-md">
+                  <code className="text-xs font-mono text-accent">
+                    {'<button aria-expanded="false" aria-controls="menu">'}
+                  </code>
+                </div>
+                <div className="bg-background p-3 rounded-md">
+                  <code className="text-xs font-mono text-accent">
+                    {'<div role="alert" aria-live="polite">'}
+                  </code>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 bg-surface rounded-lg border border-border">
+              <h3 className="font-medium text-titles mb-4">Contraste des couleurs</h3>
+              <p className="text-muted mb-4">
+                Tous les textes doivent respecter un contraste minimum AA (4.5:1) ou AAA (7:1).
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="text-center p-4 bg-green-500/20 rounded-md">
+                  <div className="text-green-400 font-bold mb-1">AAA</div>
+                  <div className="text-sm text-muted">≥ 7:1</div>
+                  <div className="text-xs text-muted">Excellent</div>
+                </div>
+                <div className="text-center p-4 bg-yellow-500/20 rounded-md">
+                  <div className="text-yellow-400 font-bold mb-1">AA</div>
+                  <div className="text-sm text-muted">≥ 4.5:1</div>
+                  <div className="text-xs text-muted">Minimum requis</div>
+                </div>
+                <div className="text-center p-4 bg-red-500/20 rounded-md">
+                  <div className="text-red-400 font-bold mb-1">FAIL</div>
+                  <div className="text-sm text-muted">&lt; 4.5:1</div>
+                  <div className="text-xs text-muted">Non conforme</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Conventions */}
+        <section>
+          <h2 className="h3 text-titles mb-6">Conventions de props et naming</h2>
+          <div className="space-y-6">
+            <div className="p-6 bg-surface rounded-lg border border-border">
+              <h3 className="font-medium text-titles mb-4">Props des composants</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-sm font-medium text-titles mb-2">Variants</h4>
+                  <p className="text-sm text-muted mb-2">Utilisez des noms descriptifs pour les variants :</p>
+                  <code className="text-xs font-mono text-accent">variant="primary" | "secondary" | "outline" | "ghost"</code>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-titles mb-2">Sizes</h4>
+                  <p className="text-sm text-muted mb-2">Échelle de tailles cohérente :</p>
+                  <code className="text-xs font-mono text-accent">size="xs" | "sm" | "md" | "lg" | "xl"</code>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-titles mb-2">États</h4>
+                  <p className="text-sm text-muted mb-2">Props booléennes pour les états :</p>
+                  <code className="text-xs font-mono text-accent">loading, disabled, active, selected</code>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-6 bg-surface rounded-lg border border-border">
+              <h3 className="font-medium text-titles mb-4">Classes CSS</h3>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-sm font-medium text-titles mb-2">Préfixes</h4>
+                  <p className="text-sm text-muted mb-2">Utilisez des préfixes cohérents :</p>
+                  <div className="space-y-1">
+                    <code className="text-xs font-mono text-accent block">ui-* pour les composants UI</code>
+                    <code className="text-xs font-mono text-accent block">layout-* pour les composants de layout</code>
+                    <code className="text-xs font-mono text-accent block">data-* pour les composants de données</code>
+                  </div>
+                </div>
+                <div>
+                  <h4 className="text-sm font-medium text-titles mb-2">Modificateurs</h4>
+                  <p className="text-sm text-muted mb-2">Utilisez des modificateurs BEM :</p>
+                  <div className="space-y-1">
+                    <code className="text-xs font-mono text-accent block">ui-button--primary</code>
+                    <code className="text-xs font-mono text-accent block">ui-button--large</code>
+                    <code className="text-xs font-mono text-accent block">ui-button--loading</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer data-force-dark className="border-t border-border bg-surface">
+        <div className="container mx-auto px-6 py-8">
+          <div className="text-center text-muted">
+            <p>Guidelines du Design System - Règles et bonnes pratiques</p>
           </div>
         </div>
       </footer>
-      
     </div>
   );
 };

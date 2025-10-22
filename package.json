@@ -8,7 +8,7 @@
   },
   "scripts": {
     "dev": "turbo run dev --parallel",
-    "build": "pnpm -w run build --filter @avnir/tokens && pnpm -w run build --filter @avnir/ui",
+    "build": "turbo run build",
     "lint": "eslint .",
     "typecheck": "turbo run typecheck",
     "format": "prettier -w .",
@@ -16,16 +16,20 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "changeset publish",
-    "build:tokens": "pnpm -w --filter @avnir/tokens build",
+    "build:tokens": "turbo run build --filter=@avnir/tokens",
+    "build:ui": "turbo run build --filter=@avnir/ui",
     "build:ladle": "pnpm -w --filter @avnir/ladle build",
     "build:site": "pnpm run build:tokens && pnpm run build:ladle",
     "dev:ladle": "turbo run dev --filter=@avnir/ladle",
     "ladle": "pnpm dev:ladle",
     "dev:docs": "turbo run dev --filter=@avnir/docs",
     "build:docs": "turbo run build --filter=@avnir/docs",
-    "dev:muzisystem": "pnpm --filter muzisystem dev",
-    "build:muzisystem": "vite build --config apps/muzisystem/vite.config.ts",
-    "preview:muzisystem": "vite preview --config apps/muzisystem/vite.config.ts"
+    "dev:muzisystem": "turbo run dev --filter=muzisystem",
+    "build:muzisystem": "turbo run build --filter=muzisystem",
+    "preview:muzisystem": "vite preview --config apps/muzisystem/vite.config.ts",
+    "dev:avnir-studio": "turbo run dev --filter=avnir-studio",
+    "dev:muzidev": "turbo run dev --filter=muzidev",
+    "dev:muzipics": "turbo run dev --filter=muzipics"
   },
   "workspaces": [
     "apps/*",
@@ -40,9 +44,9 @@
     "@typescript-eslint/parser": "^8.46.1",
     "@vitejs/plugin-react": "^5.0.4",
     "autoprefixer": "^10.4.20",
-    "class-variance-authority": "^0.7.0",
+    "class-variance-authority": "^0.7.1",
     "eslint": "^8.57.1",
-    "eslint-config-next": "^14.2.5",
+    "eslint-config-next": "^15.5.6",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-react": "^7.37.5",
@@ -54,12 +58,20 @@
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "rimraf": "^6.0.1",
-    "tailwind-merge": "^2.5.0",
+    "tailwind-merge": "^2.6.0",
     "tailwindcss": "^3.4.13",
     "tsup": "^8.5.0",
     "turbo": "^2.1.3",
     "typescript": "^5.6.3",
     "vite": "^7.1.10",
     "vite-tsconfig-paths": "^4.3.2"
+  },
+  "dependencies": {
+    "@avnir/tokens": "workspace:^",
+    "@avnir/ui": "workspace:^",
+    "@features/audio-tools": "workspace:^",
+    "@features/visual-generator": "workspace:^",
+    "clsx": "^2.1.1",
+    "next": "^15.5.6"
   }
 }

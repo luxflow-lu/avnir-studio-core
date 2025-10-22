@@ -1,5 +1,5 @@
-import { Section } from '../../packages/ui/src';
-import { GeneratorCard } from '../../features/visual-generator/src/ui/GeneratorCard';
+import { Section } from '@avnir/ui';
+import { GeneratorCard } from '@features/visual-generator';
 export default function Page(){
   return (
     <Section size="lg">

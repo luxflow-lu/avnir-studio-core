@@ -1,5 +1,5 @@
-import { Section } from '../../packages/ui/src';
-import { TapperCard } from '../../features/audio-tools/src/ui/TapperCard';
+import { Section } from '@avnir/ui';
+import { TapperCard } from '@features/audio-tools';
 export default function Page(){
   return (
     <Section size="lg">

@@ -1,13 +1,4 @@
 
-
 > @avnir/tokens@0.1.0 build /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/tokens
 > pnpm run build:css && pnpm run build:preset
-
-
-> @avnir/tokens@0.1.0 build:css /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/tokens
-> mkdir -p dist && cp src/themes.css dist/themes.css
-
-
-> @avnir/tokens@0.1.0 build:preset /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/tokens
-> mkdir -p dist && cp src/tailwind-preset.cjs dist/tailwind-preset.cjs
 

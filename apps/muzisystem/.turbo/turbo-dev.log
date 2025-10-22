@@ -1,0 +1,156 @@
+
+> muzisystem@0.0.0 dev /Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem
+> vite
+
+Re-optimizing dependencies because lockfile has changed
+
+  [32m[1mVITE[22m v5.4.20[39m  [2mready in [0m[1m628[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5173[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:59:40 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@avnir/tokens/dist/themes.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/src/main.tsx[39m:3:7
+[33m  2  |  import React from "react";
+  3  |  import ReactDOM from "react-dom/client";
+  4  |  import "@avnir/tokens/dist/themes.css";
+     |          ^
+  5  |  import "@avnir/ui/styles.css";
+  6  |  import "./app.css";[39m
+      at TransformPluginContext._formatError (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49258:41)
+      at TransformPluginContext.error (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49253:16)
+      at normalizeUrl (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64306:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64438:39
+      at async Promise.all (index 3)
+      at async TransformPluginContext.transform (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64365:7)
+      at async PluginContainer.transform (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49099:18)
+      at async loadAndTransform (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:51977:27)
+[2m3:59:40 PM[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@avnir/tokens/dist/themes.css" from "src/main.tsx". Does the file exist?
+
+[1m[33mwarn[39m[22m - Your `content` configuration includes a pattern which looks like it's accidentally matching all of `node_modules` and can cause serious performance issues.
+[1m[33mwarn[39m[22m - Pattern: `../../packages/ui/**/*.ts`
+[1m[33mwarn[39m[22m - See our documentation for recommendations:
+[1m[33mwarn[39m[22m - https://tailwindcss.com/docs/content-configuration#pattern-recommendations
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:00:04 PM[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@avnir/tokens/dist/themes.css" from "src/main.tsx". Does the file exist? [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:00:42 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/main.tsx[22m
+[2m4:00:42 PM[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@avnir/tokens/src/themes.css" from "src/main.tsx". Does the file exist?
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:00:42 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@avnir/tokens/src/themes.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/src/main.tsx[39m:3:7
+[33m  2  |  import React from "react";
+  3  |  import ReactDOM from "react-dom/client";
+  4  |  import "@avnir/tokens/src/themes.css";
+     |          ^
+  5  |  import "@avnir/ui/styles.css";
+  6  |  import "./app.css";[39m
+      at TransformPluginContext._formatError (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49258:41)
+      at TransformPluginContext.error (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49253:16)
+      at normalizeUrl (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64306:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64438:39
+      at async Promise.all (index 3)
+      at async TransformPluginContext.transform (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64365:7)
+      at async PluginContainer.transform (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49099:18)
+      at async loadAndTransform (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:51977:27)
+      at async viteTransformMiddleware (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:62105:24)
+[2m4:00:43 PM[22m [31m[1m[vite][22m[39m Pre-transform error: Failed to resolve import "@avnir/tokens/src/themes.css" from "src/main.tsx". Does the file exist?
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:00:46 PM[22m [31m[1m[vite][22m[39m [31mInternal server error: Failed to resolve import "@avnir/tokens/src/themes.css" from "src/main.tsx". Does the file exist?[39m
+  Plugin: [35mvite:import-analysis[39m
+  File: [36m/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/src/main.tsx[39m:3:7
+[33m  2  |  import React from "react";
+  3  |  import ReactDOM from "react-dom/client";
+  4  |  import "@avnir/tokens/src/themes.css";
+     |          ^
+  5  |  import "@avnir/ui/styles.css";
+  6  |  import "./app.css";[39m
+      at TransformPluginContext._formatError (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49258:41)
+      at TransformPluginContext.error (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49253:16)
+      at normalizeUrl (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64306:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+      at async file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64438:39
+      at async Promise.all (index 3)
+      at async TransformPluginContext.transform (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:64365:7)
+      at async PluginContainer.transform (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:49099:18)
+      at async loadAndTransform (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:51977:27)
+      at async viteTransformMiddleware (file:///Users/maximezaoui/Desktop/repo/avnir-studio-core/node_modules/.pnpm/vite@5.4.20_@types+node@24.8.1_terser@5.44.0/node_modules/vite/dist/node/chunks/dep-D_zLpgQd.js:62105:24)
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:01:03 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/main.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m4:01:26 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2msrc/main.tsx[22m [33m(x2)[39m

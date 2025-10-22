@@ -1,8 +1,9 @@
 import * as React from "react";
-import { ThemeToggleDemo } from "./components/ThemeToggleDemo";
-import { BrandSelector } from "./components/BrandSelector";
+import { ThemeBrandSwitcher } from "./components/ThemeBrandSwitcher";
 import { Home } from "./pages/Home";
 import { Components } from "./pages/Components";
+import { Foundations } from "./pages/Foundations";
+import { Colors } from "./pages/Colors";
 import { Tokens } from "./pages/Tokens";
 import { Guidelines } from "./pages/Guidelines";
 import { Usage } from "./pages/Usage";
@@ -37,6 +38,10 @@ export const App: React.FC = () => {
 
   const renderPage = () => {
     switch (currentPage) {
+      case 'foundations':
+        return <Foundations />;
+      case 'colors':
+        return <Colors />;
       case 'components':
         return <Components />;
       case 'tokens':
@@ -76,11 +81,7 @@ export const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <div className="fixed right-4 top-4 z-50 flex flex-col gap-4">
-        <ThemeToggleDemo />
-        <BrandSelector />
-      </div>
-      
+      <ThemeBrandSwitcher />
       {renderPage()}
     </div>
   );

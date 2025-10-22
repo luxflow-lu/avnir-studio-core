@@ -1,2 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* CSS local pour l'app muzisystem */
 /* Styles spécifiques à l'app, pas de recompilation de la lib */
+
+/* Focus ring global pour l'accessibilité */
+*:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}

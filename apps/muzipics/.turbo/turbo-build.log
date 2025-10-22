@@ -2,6 +2,7 @@
 > muzipics@ build /Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzipics
 > next build
 
-  ▲ Next.js 14.2.5
+   ▲ Next.js 15.5.6
 
    Creating an optimized production build ...
+ ELIFECYCLE  Command failed with exit code 130.
