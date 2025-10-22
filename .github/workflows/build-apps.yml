@@ -13,10 +13,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: '20', cache: 'pnpm' }
+        with: 
+          node-version: '20'
 
-      - run: corepack enable && corepack prepare pnpm@9.6.0 --activate
-      - run: pnpm -w install --frozen-lockfile
+      - name: Setup pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@9.6.0 --activate
+          
+      - name: Install dependencies
+        run: pnpm -w install --frozen-lockfile
 
       # (optionnel) pré-build libs si tu désactives transpilePackages
       #- run: pnpm -w run build:tokens && pnpm -w run build:design && pnpm -w run build:ui
@@ -31,12 +37,23 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: { node-version: '20', cache: 'pnpm' }
+        with: 
+          node-version: '20'
 
-      - run: corepack enable && corepack prepare pnpm@9.6.0 --activate
-      - run: pnpm -w install --frozen-lockfile
-      - run: pnpm -w run build:tokens && pnpm -w run build:design && pnpm -w run build:ui
-      - run: pnpm -w run build
+      - name: Setup pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@9.6.0 --activate
+          
+      - name: Install dependencies
+        run: pnpm -w install --frozen-lockfile
+        
+      - name: Build packages and apps
+        run: |
+          pnpm -w run build:tokens
+          pnpm -w run build:design
+          pnpm -w run build:ui
+          pnpm -w run build
 
 # Optionnel: trigger nightly à 2h du matin
 # on:
