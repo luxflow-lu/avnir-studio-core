@@ -10,9 +10,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'pnpm'
 
-      - name: Corepack / pnpm
+      - name: Setup pnpm
         run: |
           corepack enable
           corepack prepare pnpm@9.6.0 --activate
@@ -23,7 +22,7 @@ jobs:
 
       - name: Build libs & apps
         run: |
-          pnpm -w run build:tokens && pnpm -w run build:ui && pnpm -w run build
+          pnpm -w run build:tokens && pnpm -w run build:design && pnpm -w run build:ui && pnpm -w run build
 
       - name: Lint
         run: pnpm -w run lint
