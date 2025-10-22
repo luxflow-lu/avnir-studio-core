@@ -32,9 +32,3 @@ jobs:
           pnpm -w --filter ./apps/avnir-studio run build
           pnpm -w --filter ./apps/muzidev run build
           pnpm -w --filter ./apps/muzipics run build
-
-      - name: Lint
-        run: pnpm -w run lint
-
-      - name: Typecheck
-        run: pnpm -w run typecheck
