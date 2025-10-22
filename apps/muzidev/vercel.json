@@ -1,0 +1,6 @@
+{
+  "buildCommand": "pnpm -w --filter ./apps/muzidev run build",
+  "installCommand": "pnpm -w install --frozen-lockfile",
+  "framework": "nextjs",
+  "outputDirectory": ".next"
+}

@@ -1,3 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {};
-export default nextConfig;
+export default {
+  transpilePackages: ["@avnir/ui","@avnir/design","@avnir/tokens"],
+  eslint: {
+    ignoreDuringBuilds: false,
+  },
+};

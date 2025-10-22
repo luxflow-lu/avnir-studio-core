@@ -2,12 +2,35 @@
   "name": "@avnir/design",
   "version": "0.1.0",
   "type": "module",
-  "main": "index.ts",
-  "files": ["themes.css", "tokens.json", "tailwind-preset.cjs", "brands.ts", "index.ts"],
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./themes.css": "./themes.css",
+    "./tailwind-preset.cjs": "./tailwind-preset.cjs",
+    "./brands": {
+      "types": "./dist/brands.d.ts",
+      "import": "./dist/brands.js",
+      "require": "./dist/brands.cjs"
+    }
+  },
+  "files": ["dist", "themes.css", "tailwind-preset.cjs"],
   "scripts": {
+    "build": "tsup src/index.ts src/brands.ts --format esm,cjs --dts --sourcemap --clean",
     "lint": "echo 'No lint configured'",
-    "typecheck": "echo 'No typecheck configured'",
-    "clean": "echo 'No build artifacts to clean'"
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf .turbo dist"
+  },
+  "devDependencies": {
+    "rimraf": "^6.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.6.3"
   },
   "license": "MIT"
 }

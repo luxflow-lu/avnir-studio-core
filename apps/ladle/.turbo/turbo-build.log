@@ -3,25 +3,15 @@
 > pnpm -w --filter @avnir/tokens build && pnpm -w --filter @avnir/ui build
 
 Scope: 2 of 12 workspace projects
-packages/tokens build$ pnpm run build:css && pnpm run build:preset
-packages/tokens build: > @avnir/tokens@0.1.0 build:css /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/tokens
-packages/tokens build: > mkdir -p dist && cp src/themes.css dist/themes.css
-packages/tokens build: > @avnir/tokens@0.1.0 build:preset /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/tokens
-packages/tokens build: > mkdir -p dist && cp src/tailwind-preset.cjs dist/tailwind-preset.cjs
+packages/tokens build$ echo 'No build step needed - JSON files are used directly'
+packages/tokens build: No build step needed - JSON files are used directly
 packages/tokens build: Done
 . build$ turbo run build
 . build: turbo 2.5.8
 . build: • Packages in scope: @avnir/design, @avnir/docs, @avnir/ladle, @avnir/tokens, @avnir/ui, @features/audio-tools, @features/visual-generator, avnir-studio, muzidev, muzipics, muzisystem
 . build: • Running build in 11 packages
 . build: • Remote caching disabled
-. build: @avnir/tokens:build: cache miss, executing fbf31b9289356f27
-. build: @avnir/ui:build: cache miss, executing 815f35c079924875
-. build: @avnir/ui:build: 
-. build: @avnir/ui:build: > @avnir/ui@0.1.0 build /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui
-. build: @avnir/ui:build: > tsup src/index.ts --format esm,cjs --dts --sourcemap --clean && pnpm run build:css
-. build: @avnir/ui:build: 
-. build: @avnir/tokens:build: 
-. build: @avnir/tokens:build: > @avnir/tokens@0.1.0 build /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/tokens
-. build: @avnir/tokens:build: > pnpm run build:css && pnpm run build:preset
-. build: @avnir/tokens:build: 
-. build:  ERROR  run failed: command  exited (1)
+. build: @avnir/tokens:build: cache miss, executing da0ce236fc93dba1
+. build: @avnir/ui:build: cache miss, executing 4686101dcbdedf36
+. build: @avnir/design:build: cache miss, executing c06c41e9efdccdc2
+ ELIFECYCLE  Command failed.

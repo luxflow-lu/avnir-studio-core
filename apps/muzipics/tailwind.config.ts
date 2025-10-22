@@ -1,3 +1,5 @@
-import preset from '../../packages/tokens/tailwind-preset.cjs';
-import type { Config } from 'tailwindcss';
-export default { presets: [preset as any], content: ['./app/**/*.{ts,tsx}', '../../packages/ui/src/**/*.{ts,tsx}', '../../features/**/*.{ts,tsx}'] } satisfies Config;
+module.exports = {
+  presets: [require("@avnir/design/tailwind-preset.cjs")],
+  content: ["./app/**/*.{ts,tsx}","./components/**/*.{ts,tsx}","../../packages/ui/**/*.tsx"],
+  darkMode: ["class", '[data-theme="dark"]'],
+};

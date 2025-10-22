@@ -1,11 +1,6 @@
-const preset = require("../tokens/src/tailwind-preset.cjs");
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  presets: [preset],
-  content: [
-    "./src/**/*.{ts,tsx,js,jsx}",          // scanner uniquement la lib
-    // si composants sont dans un dossier différent, adapter
-  ],
-  theme: { extend: {} },
-  plugins: []
+  content: ["./src/**/*.{ts,tsx}", "./src/styles-source.css"],
+  darkMode: ["class", '[data-theme="dark"]'],
+  presets: [require("@avnir/design/tailwind-preset.cjs")]
 };

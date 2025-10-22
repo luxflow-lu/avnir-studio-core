@@ -1,16 +1,18 @@
 {
   "compilerOptions": {
     "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "jsx": "react-jsx",
     "strict": true,
-    "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@avnir/tokens/*": ["packages/tokens/*"],
-      "@avnir/ui/*": ["packages/ui/*"]
+      "@avnir/tokens/*": ["packages/tokens/src/*"],
+      "@avnir/design/*": ["packages/design/src/*"],
+      "@avnir/ui": ["packages/ui/src"]
     },
-    "types": ["node"]
+    "skipLibCheck": true,
+    "noEmit": true
   }
 }

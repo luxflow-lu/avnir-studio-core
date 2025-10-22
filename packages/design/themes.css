@@ -24,6 +24,11 @@
   /* On-colors */
   --on-primary:#000000; --on-surface:var(--text); --on-accent:#000000;
 
+  /* Semantic aliases for Tailwind */
+  --background:var(--bg); --foreground:var(--text);
+  --card:var(--surface); --card-foreground:var(--text);
+  --primary-foreground:var(--on-primary);
+
   /* Containers */
   --container-sm:40rem; --container-md:48rem; --container-lg:64rem; --container-xl:75rem; --container-2xl:82.5rem; --grid-gutter:1.5rem;
 
@@ -42,6 +47,7 @@
 }
 
 /* Brand primaries (only var that changes) */
+:root[data-brand="avnir"]        { --primary:#FFD700; }
 :root[data-brand="avnir-studio"] { --primary:#ededed; }
 :root[data-brand="muzidev"]      { --primary:#5CB9F2; }
 :root[data-brand="muzipics"]     { --primary:#FF2D55; }

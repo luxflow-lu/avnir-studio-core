@@ -1,17 +1,17 @@
-@import "@avnir/tokens/themes.css";
+@import "../../../packages/design/themes.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   html, body { 
-    background: rgb(var(--bg)); 
-    color: rgb(var(--on-bg)); 
+    background: var(--bg); 
+    color: var(--text); 
   }
 
-  h1,h2,h3,h4,h5,h6 { margin: 0 0 var(--space-3); }
-  p, ul, ol         { margin: 0 0 var(--space-3); }
-  ul, ol            { padding-inline-start: var(--space-4); }
+  h1,h2,h3,h4,h5,h6 { margin: 0 0 var(--space-12); }
+  p, ul, ol         { margin: 0 0 var(--space-12); }
+  ul, ol            { padding-inline-start: var(--space-16); }
 }
 
 @layer components {
@@ -37,35 +37,60 @@
   .grid-3 { display: grid; gap: var(--space-6); grid-template-columns: repeat(3, minmax(0,1fr)); }
   @media (max-width: 900px){ .grid-2, .grid-3 { grid-template-columns: 1fr; } }
 
-  /* Card / Button (sur l'échelle tokens) */
+  /* Card / Button (design system) */
   .card {
-    @apply bg-surface text-on-surface border border-[color:var(--border)];
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--muted);
     border-radius: var(--radius-2xl);
-    padding: var(--space-6);
-    box-shadow: var(--shadow-card);
+    padding: var(--space-24);
+    box-shadow: var(--shadow-2);
   }
 
   .btn {
-    @apply inline-flex items-center justify-center font-medium transition-colors
-           focus:outline-none focus-visible:ring-2 focus-visible:ring-primary
-           disabled:opacity-50 disabled:pointer-events-none;
-    border-radius: var(--radius-xl);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    transition: all 0.2s;
+    border-radius: var(--radius-lg);
     height: 2.75rem; /* 44px => touch-friendly */
-    padding-inline: var(--space-4);
+    padding-inline: var(--space-16);
+    cursor: pointer;
+    border: none;
   }
-  .btn-sm { height: 2.25rem; padding-inline: var(--space-3); font-size: .875rem; }
-  .btn-lg { height: 3rem;   padding-inline: var(--space-5); font-size: 1rem;   }
+  .btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent);
+  }
+  .btn:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .btn-sm { height: 2.25rem; padding-inline: var(--space-12); font-size: 0.875rem; }
+  .btn-lg { height: 3rem; padding-inline: var(--space-24); font-size: 1rem; }
 
-  .btn-primary { @apply bg-primary text-on-primary hover:opacity-90; }
-  .btn-surface { @apply bg-surface text-on-surface border border-[color:var(--border)]; }
+  .btn-primary { 
+    background: var(--primary);
+    color: var(--bg);
+  }
+  .btn-primary:hover { opacity: 0.9; }
+  .btn-surface { 
+    background: var(--surface);
+    color: var(--text);
+    border: 1px solid var(--muted);
+  }
   
-  /* Badges (comme Ladle) */
-  .badge { @apply inline-flex items-center text-xs font-medium; 
-           height: 1.5rem; padding-inline: var(--space-2); border-radius: 999px; color:#fff; background:#555; }
-  .badge-artist    { background: var(--badge-artist); }
-  .badge-studio    { background: var(--badge-studio); }
-  .badge-beatmaker { background: var(--badge-beatmaker); }
-  .badge-draft     { background: var(--badge-draft); color:#1E1F24; }
-  .badge-producer  { background: var(--badge-producer); }
-  .badge-archived  { background: var(--badge-archived); }
+  /* Badges */
+  .badge { 
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.75rem;
+    font-weight: 500;
+    height: 1.5rem; 
+    padding-inline: var(--space-8); 
+    border-radius: 999px; 
+    color: #fff; 
+    background: var(--muted);
+  }
 }

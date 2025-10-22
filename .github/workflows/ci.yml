@@ -1,44 +1,32 @@
 name: CI
-on: [push, pull_request]
+on:
+  push: { branches: [main] }
+  pull_request:
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Node 20
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
-          node-version: 20
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v4
-        with:
-          version: 9
-          run_install: false
-          standalone: true
-      - name: Verify pnpm
-        run: pnpm -v
-      - name: Get pnpm store path
-        id: pnpm-cache
-        run: echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-      - name: Cache pnpm store
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.STORE_PATH }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: ${{ runner.os }}-pnpm-store-
-      - name: Cache Turbo
-        uses: actions/cache@v4
-        with:
-          path: .turbo
-          key: ${{ runner.os }}-turbo-${{ github.sha }}
-          restore-keys: ${{ runner.os }}-turbo-
-      - name: Install deps
-        run: pnpm i --frozen-lockfile
+          node-version: '20'
+          cache: 'pnpm'
+
+      - name: Corepack / pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@9.6.0 --activate
+          node -v && pnpm -v
+
+      - name: Install
+        run: pnpm -w install --frozen-lockfile
+
+      - name: Build libs & apps
+        run: |
+          pnpm -w run build:tokens && pnpm -w run build:ui && pnpm -w run build
+
       - name: Lint
-        run: pnpm lint
+        run: pnpm -w run lint
+
       - name: Typecheck
-        run: pnpm typecheck
-      - name: Build workspace
-        run: pnpm build
-      - name: Build demo
-        run: pnpm build:demo
+        run: pnpm -w run typecheck

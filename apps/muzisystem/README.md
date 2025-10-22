@@ -194,13 +194,36 @@ export const MaPage: React.FC = () => {
 
 ## 🚀 Déploiement
 
+### Build Local
 ```bash
 # Build optimisé
-pnpm build:muzisystem
+pnpm -w --filter ./apps/muzisystem run build
 
-# Preview du build
-pnpm preview:muzisystem
+# Preview du build (si disponible)
+pnpm -w --filter ./apps/muzisystem run start
 ```
+
+### Déploiement Vercel
+
+#### Configuration
+Le projet est configuré avec `vercel.json` :
+```json
+{
+  "buildCommand": "pnpm -w --filter ./apps/muzisystem run build",
+  "installCommand": "pnpm -w install --frozen-lockfile",
+  "framework": "nextjs",
+  "outputDirectory": ".next"
+}
+```
+
+#### Variables d'Environnement
+Aucune variable d'environnement requise pour le moment.
+
+#### Déploiement
+1. Connecter le repo à Vercel
+2. Sélectionner le dossier `apps/muzisystem` comme root directory
+3. Vercel détectera automatiquement la configuration
+4. Déployer automatiquement sur chaque push vers `main`
 
 ## 🤝 Contribution
 

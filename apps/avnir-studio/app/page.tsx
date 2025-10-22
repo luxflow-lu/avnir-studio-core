@@ -4,7 +4,7 @@ import { GeneratorCard } from '@features/visual-generator';
 export default function Page(){
   return (
     <>
-      <Section size="lg">
+      <Section className="py-20 md:py-24">
         <h1 className="h1">AVNIR-Studio — Hub</h1>
         <p className="mt-3 text-muted max-w-prose">Outils & satellites interconnectés. Style guide unifié, theming par brand.</p>
       </Section>

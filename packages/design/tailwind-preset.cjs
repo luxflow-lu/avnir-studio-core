@@ -10,7 +10,11 @@ module.exports = {
     extend: {
       colors: {
         bg: 'var(--bg)', surface: 'var(--surface)', text: 'var(--text)', titles: 'var(--titles)',
-        muted: 'var(--muted)', accent: 'var(--accent)', primary: 'var(--primary)'
+        muted: 'var(--muted)', accent: 'var(--accent)', primary: 'var(--primary)',
+        // Semantic aliases
+        background: 'var(--background)', foreground: 'var(--foreground)',
+        card: { DEFAULT: 'var(--card)', foreground: 'var(--card-foreground)' },
+        'primary-foreground': 'var(--primary-foreground)'
       },
       borderRadius: { sm: 'var(--radius-sm)', md: 'var(--radius-md)', lg: 'var(--radius-lg)', xl: 'var(--radius-xl)' },
       spacing: { 1: 'var(--space-1)', 2:'var(--space-2)', 3:'var(--space-3)', 4:'var(--space-4)', 5:'var(--space-5)', 6:'var(--space-6)', 7:'var(--space-7)', 8:'var(--space-8)' },

@@ -1,16 +1,12 @@
-// Core components that exist
-export * from './components/form/Button';
-export * from './components/layout/Navbar';
-export * from './components/layout/Footer';
-export * from './components/marketing/Hero';
-export * from './components/marketing/Features';
-export * from './components/layout/Card';
-export * from './components/Banner';
+// Core Design System Components
+export * from "./components/form/Button";
+export * from "./components/layout/Card";
+export * from "./components/layout/Footer";
+export * from "./components/layout/Navbar";
+export * from "./components/Banner";
+export * from "./components/primitives/Section";
 
-// Data
-export { Badge } from "./components/data/Badge";
-export type { BadgeProps } from "./components/data/Badge";
-export { TypedBadge } from "./components/data/TypedBadge";
-export type { TypedBadgeProps } from "./components/data/TypedBadge";
-
-// PLOP_EXPORT_ANCHOR
+// Marketing Components
+export * from "./components/marketing/Hero";
+export * from "./components/marketing/Features";
+// Note: marketing/Footer conflicts with layout/Footer, use layout/Footer as primary

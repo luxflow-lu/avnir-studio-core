@@ -1,0 +1,44 @@
+name: Build Apps (matrix)
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-app:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        app: [ muzisystem, avnir-studio, muzidev, muzipics ]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20', cache: 'pnpm' }
+
+      - run: corepack enable && corepack prepare pnpm@9.6.0 --activate
+      - run: pnpm -w install --frozen-lockfile
+
+      # (optionnel) pré-build libs si tu désactives transpilePackages
+      #- run: pnpm -w run build:tokens && pnpm -w run build:design && pnpm -w run build:ui
+
+      - name: Build app
+        run: pnpm -w --filter ./apps/${{ matrix.app }} run build
+
+  # Full safety nightly build
+  nightly-full-build:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20', cache: 'pnpm' }
+
+      - run: corepack enable && corepack prepare pnpm@9.6.0 --activate
+      - run: pnpm -w install --frozen-lockfile
+      - run: pnpm -w run build:tokens && pnpm -w run build:design && pnpm -w run build:ui
+      - run: pnpm -w run build
+
+# Optionnel: trigger nightly à 2h du matin
+# on:
+#   schedule:
+#     - cron: '0 2 * * *'  # tous les jours à 2h UTC

@@ -4,16 +4,6 @@
 
    ▲ Next.js 15.5.6
 
-   Linting and checking validity of types ...
-
- ⚠ The Next.js plugin was not detected in your ESLint configuration. See https://nextjs.org/docs/app/api-reference/config/eslint#migrating-existing-config
-
-Failed to compile.
-
-./pages/_app.jsx
-3:33  Error: 'Component' is missing in props validation  react/prop-types
-3:44  Error: 'pageProps' is missing in props validation  react/prop-types
-4:10  Error: 'React' must be in scope when using JSX  react/react-in-jsx-scope
-
-info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
- ELIFECYCLE  Command failed with exit code 1.
+   Skipping linting
+   Checking validity of types ...
+ ELIFECYCLE  Command failed with exit code 130.

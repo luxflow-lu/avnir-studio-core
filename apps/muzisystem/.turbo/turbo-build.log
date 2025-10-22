@@ -1,4 +1,8 @@
 
 > muzisystem@0.0.0 build /Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem
-> tsc && vite build
+> next build
 
+   ▲ Next.js 15.5.6
+
+   Creating an optimized production build ...
+ ELIFECYCLE  Command failed with exit code 130.
