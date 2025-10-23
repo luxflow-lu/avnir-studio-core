@@ -13,14 +13,12 @@ const mockData = [
 const columns = [
   { key: "name", title: "Name", sortable: true },
   { key: "email", title: "Email", sortable: true },
-  { 
-    key: "status", 
-    title: "Status", 
+  {
+    key: "status",
+    title: "Status",
     render: (value: string) => (
-      <Badge variant={value === "active" ? "success" : "warning"}>
-        {value}
-      </Badge>
-    )
+      <Badge variant={value === "active" ? "success" : "warning"}>{value}</Badge>
+    ),
   },
   { key: "role", title: "Role", sortable: true },
 ];
@@ -40,7 +38,7 @@ export const Default = () => {
 
   return (
     <div className="bg-[var(--bg)] text-white p-6">
-      <Table 
+      <Table
         columns={columns}
         data={mockData}
         sortBy={sortBy}

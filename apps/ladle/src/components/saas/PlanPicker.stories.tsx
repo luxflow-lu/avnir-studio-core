@@ -5,8 +5,8 @@ export default {
   title: "SaaS/PlanPicker",
   argTypes: {
     billingCycle: { control: { type: "radio" }, options: ["monthly", "yearly"] },
-    featuredIndex: { control: { type: "number", min: 0, max: 2 } }
-  }
+    featuredIndex: { control: { type: "number", min: 0, max: 2 } },
+  },
 };
 
 const basePlans = [
@@ -15,13 +15,8 @@ const basePlans = [
     name: "Starter",
     price: { monthly: 9, yearly: 90 },
     description: "Perfect for individuals",
-    features: [
-      "5 projects",
-      "10GB storage",
-      "Email support",
-      "Basic analytics"
-    ],
-    cta: "Get Started"
+    features: ["5 projects", "10GB storage", "Email support", "Basic analytics"],
+    cta: "Get Started",
   },
   {
     id: "pro",
@@ -34,9 +29,9 @@ const basePlans = [
       "Priority support",
       "Advanced analytics",
       "Team collaboration",
-      "API access"
+      "API access",
     ],
-    cta: "Start Free Trial"
+    cta: "Start Free Trial",
   },
   {
     id: "enterprise",
@@ -49,10 +44,10 @@ const basePlans = [
       "24/7 phone support",
       "Custom integrations",
       "SLA guarantee",
-      "Dedicated manager"
+      "Dedicated manager",
     ],
-    cta: "Contact Sales"
-  }
+    cta: "Contact Sales",
+  },
 ];
 
 function WithFeatured(plans: typeof basePlans, featuredIndex = 1) {

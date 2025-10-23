@@ -14,7 +14,16 @@ const mockSections = [
         label: "Smartphones",
         href: "/electronics/smartphones",
         description: "Latest iPhone, Samsung, and Android devices",
-        icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z" /></svg>
+        icon: (
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M12 18h.01M8 21h8a1 1 0 001-1V4a1 1 0 00-1-1H8a1 1 0 00-1 1v16a1 1 0 001 1z"
+            />
+          </svg>
+        ),
       },
       {
         id: "laptops",
@@ -22,15 +31,24 @@ const mockSections = [
         href: "/electronics/laptops",
         description: "MacBooks, Windows laptops, and gaming rigs",
         badge: "Sale",
-        icon: <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+        icon: (
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+            />
+          </svg>
+        ),
       },
       {
         id: "accessories",
         label: "Accessories",
         href: "/electronics/accessories",
-        description: "Chargers, cases, headphones, and more"
-      }
-    ]
+        description: "Chargers, cases, headphones, and more",
+      },
+    ],
   },
   {
     id: "clothing",
@@ -40,22 +58,22 @@ const mockSections = [
         id: "mens",
         label: "Men's Fashion",
         href: "/clothing/mens",
-        description: "Shirts, pants, jackets, and accessories"
+        description: "Shirts, pants, jackets, and accessories",
       },
       {
         id: "womens",
         label: "Women's Fashion",
         href: "/clothing/womens",
         description: "Dresses, tops, bottoms, and more",
-        badge: "New"
+        badge: "New",
       },
       {
         id: "shoes",
         label: "Shoes",
         href: "/clothing/shoes",
-        description: "Sneakers, boots, sandals for all occasions"
-      }
-    ]
+        description: "Sneakers, boots, sandals for all occasions",
+      },
+    ],
   },
   {
     id: "home",
@@ -65,22 +83,22 @@ const mockSections = [
         id: "furniture",
         label: "Furniture",
         href: "/home/furniture",
-        description: "Sofas, tables, chairs, and storage solutions"
+        description: "Sofas, tables, chairs, and storage solutions",
       },
       {
         id: "decor",
         label: "Home Decor",
         href: "/home/decor",
-        description: "Wall art, lighting, rugs, and decorative items"
+        description: "Wall art, lighting, rugs, and decorative items",
       },
       {
         id: "garden",
         label: "Garden",
         href: "/home/garden",
-        description: "Plants, tools, outdoor furniture"
-      }
-    ]
-  }
+        description: "Plants, tools, outdoor furniture",
+      },
+    ],
+  },
 ];
 
 export const Default = () => (
@@ -92,7 +110,12 @@ export const Default = () => (
           <Button variant="ghost">
             Shop Categories
             <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M19 9l-7 7-7-7"
+              />
             </svg>
           </Button>
         }
@@ -109,7 +132,7 @@ export const InNavbar = () => (
           <div className="w-8 h-8 bg-[var(--brand)] rounded-lg"></div>
           <span className="font-semibold">Store</span>
         </div>
-        
+
         <div className="flex items-center gap-6">
           <MegaMenu
             sections={mockSections}
@@ -119,14 +142,18 @@ export const InNavbar = () => (
               </button>
             }
           />
-          <a href="/deals" className="text-[var(--text-muted)] hover:text-white transition-colors">Deals</a>
-          <a href="/about" className="text-[var(--text-muted)] hover:text-white transition-colors">About</a>
+          <a href="/deals" className="text-[var(--text-muted)] hover:text-white transition-colors">
+            Deals
+          </a>
+          <a href="/about" className="text-[var(--text-muted)] hover:text-white transition-colors">
+            About
+          </a>
         </div>
       </div>
-      
+
       <Button size="sm">Sign In</Button>
     </nav>
-    
+
     <div className="p-6">
       <p>Hover over "Categories" in the navbar to see the mega menu</p>
     </div>

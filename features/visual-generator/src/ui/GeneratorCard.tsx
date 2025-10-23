@@ -1,7 +1,7 @@
-import * as React from 'react';
-import { Card, Button } from '@avnir/ui';
+import * as React from "react";
+import { Card, Button } from "@avnir/ui";
 
-export function GeneratorCard(){
+export function GeneratorCard() {
   return (
     <Card className="p-6">
       <h3 className="h3">Générateur visuel</h3>

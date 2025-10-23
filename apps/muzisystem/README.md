@@ -20,6 +20,7 @@ L'application sera disponible sur [http://localhost:5173](http://localhost:5173)
 ## 🎨 Fonctionnalités
 
 ### Theming & Brands
+
 - **Multi-marques** : Support de 7 marques (AVNIR, MUZIDEV, MUZIPICS, etc.)
 - **Thèmes adaptatifs** : Dark, Light, et System avec mode semi-light
 - **Persistance** : Préférences sauvegardées dans localStorage
@@ -28,6 +29,7 @@ L'application sera disponible sur [http://localhost:5173](http://localhost:5173)
 ### Pages du Design System
 
 #### 🏗️ Foundations (`#foundations`)
+
 - **Typography Scale** : H1-H4, Body, Small avec familles de polices
 - **Spacing Scale** : Tokens d'espacement de 2px à 64px
 - **Border Radius** : Échelle d'arrondis de xs à full
@@ -37,6 +39,7 @@ L'application sera disponible sur [http://localhost:5173](http://localhost:5173)
 - **Focus Ring** : Démonstration de l'accessibilité globale
 
 #### 🎨 Colors (`#colors`)
+
 - **Palette par thème** : Couleurs adaptatives dark/light
 - **Couleurs par marque** : Primaires spécifiques à chaque brand
 - **On-colors** : Couleurs de texte sur surfaces
@@ -45,12 +48,14 @@ L'application sera disponible sur [http://localhost:5173](http://localhost:5173)
 - **Guidelines accessibilité** : Standards WCAG
 
 #### 🧩 Components (`#components`)
+
 - **Galerie auto** : Tous les composants de `packages/ui`
 - **Canvas hérité** : Prévisualisation avec brand/theme actuel
 - **Pills de switch** : Changement live des variants/états
 - **Catégories** : Primitives, Form, Data, Marketing, etc.
 
 #### 📋 Guidelines (`#guidelines`)
+
 - **Usage data-brand** : Configuration des marques
 - **Patterns theming** : Semi-light et variables CSS
 - **Accessibilité** : Focus visible, ARIA, contrastes
@@ -59,6 +64,7 @@ L'application sera disponible sur [http://localhost:5173](http://localhost:5173)
 ## 🏗️ Architecture
 
 ### Structure des fichiers
+
 ```
 apps/muzisystem/
 ├── src/
@@ -81,28 +87,28 @@ apps/muzisystem/
 ```
 
 ### Configuration Tailwind
+
 ```js
 // tailwind.config.js
 export default {
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx}",
-    "../../packages/ui/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx}", "../../packages/ui/**/*.{js,ts,jsx,tsx}"],
   presets: [require("@avnir/design/tailwind-preset.cjs")],
   // ... extensions pour on-colors, animations
-}
+};
 ```
 
 ## 🎯 Theming
 
 ### Configuration HTML
+
 ```html
-<html data-brand="muzidev" data-theme="dark">
+<html data-brand="muzidev" data-theme="dark"></html>
 ```
 
 ### Marques disponibles
+
 - `avnir` - AVNIR Studio (#EDEDED)
-- `muzidev` - Formation (#5CB9F2)  
+- `muzidev` - Formation (#5CB9F2)
 - `muzipics` - Galerie (#FF2D55)
 - `muziweb` - Sites web (#9802EB)
 - `muzimerch` - E-commerce (#FF9D00)
@@ -110,13 +116,16 @@ export default {
 - `muzimanager` - Gestion (#FFD700)
 
 ### Mode Semi-light
+
 En thème light, les headers/footers restent dark :
+
 ```jsx
 <header data-force-dark>...</header>
 <footer data-force-dark>...</footer>
 ```
 
 ### Variables CSS dynamiques
+
 ```css
 /* Couleurs de base */
 var(--bg)       /* Arrière-plan */
@@ -136,17 +145,20 @@ var(--on-accent)   /* Texte sur accent */
 ## 🔧 Développement
 
 ### Ajout d'une nouvelle page
+
 1. Créer le composant dans `src/pages/`
 2. Ajouter l'import dans `App.tsx`
 3. Ajouter le case dans `renderPage()`
 4. Utiliser les classes CSS du design system
 
 ### Ajout d'un nouveau token
+
 1. Modifier `packages/design/themes.css`
 2. Mettre à jour `packages/design/tailwind-preset.cjs`
 3. Documenter dans la page Foundations
 
 ### Structure des pages
+
 ```jsx
 export const MaPage: React.FC = () => {
   return (
@@ -172,6 +184,7 @@ export const MaPage: React.FC = () => {
 ## 🎨 Accessibilité
 
 ### Focus Ring global
+
 ```css
 *:focus-visible {
   outline: 2px solid var(--accent);
@@ -181,11 +194,13 @@ export const MaPage: React.FC = () => {
 ```
 
 ### Contrastes requis
+
 - **AAA** : ≥ 7:1 (idéal)
 - **AA** : ≥ 4.5:1 (minimum WCAG)
 - **FAIL** : < 4.5:1 (non conforme)
 
 ### Rôles ARIA
+
 ```jsx
 <nav role="navigation" aria-label="Navigation principale">
 <button aria-expanded="false" aria-controls="menu">
@@ -195,6 +210,7 @@ export const MaPage: React.FC = () => {
 ## 🚀 Déploiement
 
 ### Build Local
+
 ```bash
 # Build optimisé
 pnpm -w --filter ./apps/muzisystem run build
@@ -206,7 +222,9 @@ pnpm -w --filter ./apps/muzisystem run start
 ### Déploiement Vercel
 
 #### Configuration
+
 Le projet est configuré avec `vercel.json` :
+
 ```json
 {
   "buildCommand": "pnpm -w --filter ./apps/muzisystem run build",
@@ -217,9 +235,11 @@ Le projet est configuré avec `vercel.json` :
 ```
 
 #### Variables d'Environnement
+
 Aucune variable d'environnement requise pour le moment.
 
 #### Déploiement
+
 1. Connecter le repo à Vercel
 2. Sélectionner le dossier `apps/muzisystem` comme root directory
 3. Vercel détectera automatiquement la configuration

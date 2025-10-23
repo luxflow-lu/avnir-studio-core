@@ -1,4 +1,4 @@
-import { Section, Button, Card } from '@avnir/ui';
+import { Section, Button, Card } from "@avnir/ui";
 
 export default function GuidelinesPage() {
   return (
@@ -16,12 +16,16 @@ export default function GuidelinesPage() {
             {/* Do Examples */}
             <div className="space-y-6">
               <h3 className="text-xl font-semibold text-success">✅ Do</h3>
-              
+
               <div className="p-6 bg-success/5 border border-success/20 rounded-lg">
                 <h4 className="font-medium text-titles mb-3">Utiliser les tokens de couleur</h4>
                 <div className="space-y-2">
-                  <Button variant="solid" className="bg-primary text-bg">Primary Action</Button>
-                  <code className="block text-sm bg-bg p-2 rounded">className="bg-primary text-bg"</code>
+                  <Button variant="solid" className="bg-primary text-bg">
+                    Primary Action
+                  </Button>
+                  <code className="block text-sm bg-bg p-2 rounded">
+                    className="bg-primary text-bg"
+                  </code>
                 </div>
               </div>
 
@@ -45,14 +49,16 @@ export default function GuidelinesPage() {
             {/* Don't Examples */}
             <div className="space-y-6">
               <h3 className="text-xl font-semibold text-error">❌ Don't</h3>
-              
+
               <div className="p-6 bg-error/5 border border-error/20 rounded-lg">
                 <h4 className="font-medium text-titles mb-3">Hardcoder les couleurs</h4>
                 <div className="space-y-2">
-                  <Button style={{ backgroundColor: '#ff0000', color: '#ffffff' }}>
+                  <Button style={{ backgroundColor: "#ff0000", color: "#ffffff" }}>
                     Bad Button
                   </Button>
-                  <code className="block text-sm bg-bg p-2 rounded">style=&#123;&#123; backgroundColor: '#ff0000' &#125;&#125;</code>
+                  <code className="block text-sm bg-bg p-2 rounded">
+                    style=&#123;&#123; backgroundColor: '#ff0000' &#125;&#125;
+                  </code>
                 </div>
               </div>
 
@@ -77,15 +83,20 @@ export default function GuidelinesPage() {
         {/* Accessibility Section */}
         <div className="mb-16">
           <h2 className="text-2xl font-semibold text-titles mb-6">Accessibilité (A11y)</h2>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-titles">Focus Management</h3>
               <div className="p-4 bg-surface rounded-lg">
-                <p className="text-sm text-muted mb-3">Tous les éléments interactifs doivent avoir un focus visible</p>
+                <p className="text-sm text-muted mb-3">
+                  Tous les éléments interactifs doivent avoir un focus visible
+                </p>
                 <div className="space-y-2">
                   <Button className="focus:ring-2 focus:ring-primary">Focusable Button</Button>
-                  <input placeholder="Focusable Input" className="px-3 py-2 border border-border rounded focus:ring-2 focus:ring-primary" />
+                  <input
+                    placeholder="Focusable Input"
+                    className="px-3 py-2 border border-border rounded focus:ring-2 focus:ring-primary"
+                  />
                 </div>
               </div>
             </div>
@@ -106,7 +117,9 @@ export default function GuidelinesPage() {
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-titles">Keyboard Navigation</h3>
               <div className="p-4 bg-surface rounded-lg">
-                <p className="text-sm text-muted mb-3">Support complet du clavier (Tab, Enter, Espace, Échap)</p>
+                <p className="text-sm text-muted mb-3">
+                  Support complet du clavier (Tab, Enter, Espace, Échap)
+                </p>
                 <div className="flex gap-2">
                   <Button>Tab 1</Button>
                   <Button>Tab 2</Button>
@@ -118,7 +131,9 @@ export default function GuidelinesPage() {
             <div className="space-y-4">
               <h3 className="text-lg font-semibold text-titles">Color Contrast</h3>
               <div className="p-4 bg-surface rounded-lg">
-                <p className="text-sm text-muted mb-3">Ratio minimum AA : 4.5:1 pour le texte normal</p>
+                <p className="text-sm text-muted mb-3">
+                  Ratio minimum AA : 4.5:1 pour le texte normal
+                </p>
                 <div className="space-y-2">
                   <div className="p-2 bg-primary text-bg rounded">Bon contraste ✓</div>
                   <div className="p-2 bg-gray-200 text-gray-300 rounded">Mauvais contraste ✗</div>
@@ -131,7 +146,7 @@ export default function GuidelinesPage() {
         {/* Naming & Props Section */}
         <div className="mb-16">
           <h2 className="text-2xl font-semibold text-titles mb-6">Naming & Props</h2>
-          
+
           <div className="space-y-6">
             <div className="p-6 bg-surface rounded-lg">
               <h3 className="text-lg font-semibold text-titles mb-4">Component Naming</h3>
@@ -139,17 +154,29 @@ export default function GuidelinesPage() {
                 <div>
                   <h4 className="font-medium text-success mb-2">✅ Good</h4>
                   <ul className="text-sm space-y-1">
-                    <li><code>Button</code> - Clair et concis</li>
-                    <li><code>NavigationMenu</code> - Descriptif</li>
-                    <li><code>UserAvatar</code> - Spécifique</li>
+                    <li>
+                      <code>Button</code> - Clair et concis
+                    </li>
+                    <li>
+                      <code>NavigationMenu</code> - Descriptif
+                    </li>
+                    <li>
+                      <code>UserAvatar</code> - Spécifique
+                    </li>
                   </ul>
                 </div>
                 <div>
                   <h4 className="font-medium text-error mb-2">❌ Bad</h4>
                   <ul className="text-sm space-y-1">
-                    <li><code>Btn</code> - Trop abrégé</li>
-                    <li><code>Menu</code> - Trop générique</li>
-                    <li><code>Thing</code> - Pas descriptif</li>
+                    <li>
+                      <code>Btn</code> - Trop abrégé
+                    </li>
+                    <li>
+                      <code>Menu</code> - Trop générique
+                    </li>
+                    <li>
+                      <code>Thing</code> - Pas descriptif
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -184,7 +211,7 @@ export default function GuidelinesPage() {
         {/* Theming Patterns Section */}
         <div className="mb-16">
           <h2 className="text-2xl font-semibold text-titles mb-6">Theming Patterns</h2>
-          
+
           <div className="space-y-6">
             <div className="p-6 bg-surface rounded-lg">
               <h3 className="text-lg font-semibold text-titles mb-4">CSS Variables</h3>
@@ -228,12 +255,8 @@ export default function GuidelinesPage() {
                 Support automatique du mode sombre via data-theme="dark".
               </p>
               <div className="flex gap-4">
-                <div className="p-3 bg-white text-black rounded border">
-                  Light Mode
-                </div>
-                <div className="p-3 bg-gray-900 text-white rounded">
-                  Dark Mode
-                </div>
+                <div className="p-3 bg-white text-black rounded border">Light Mode</div>
+                <div className="p-3 bg-gray-900 text-white rounded">Dark Mode</div>
               </div>
             </div>
           </div>

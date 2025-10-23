@@ -9,21 +9,22 @@ const styles = cva(
       variant: {
         primary: "bg-primary text-on-primary hover:opacity-90",
         surface: "bg-surface text-on-surface border border-[color:var(--border)]",
-        ghost: "bg-transparent text-on-surface hover:bg-[color:color-mix(in_oklab,var(--surface),#000_6%)]"
+        ghost:
+          "bg-transparent text-on-surface hover:bg-[color:color-mix(in_oklab,var(--surface),#000_6%)]",
       },
       size: {
         sm: "h-9 px-3 text-sm",
         md: "h-10 px-4 text-sm",
-        lg: "h-11 px-5 text-base"
-      }
+        lg: "h-11 px-5 text-base",
+      },
     },
-    defaultVariants: { variant: "surface", size: "md" }
-  }
+    defaultVariants: { variant: "surface", size: "md" },
+  },
 );
 
 export type BannerProps = React.HTMLAttributes<HTMLDivElement> & VariantProps<typeof styles>;
 
-export const Banner: React.FC<BannerProps> = ({ className="", variant, size, ...props }) => {
+export const Banner: React.FC<BannerProps> = ({ className = "", variant, size, ...props }) => {
   return <div className={twMerge(styles({ variant, size }), className)} {...props} />;
 };
 Banner.displayName = "Banner";

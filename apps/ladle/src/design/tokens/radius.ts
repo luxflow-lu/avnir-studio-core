@@ -4,5 +4,5 @@ export const radius = {
   md: "var(--radius-md)",
   lg: "var(--radius-lg)",
   xl: "var(--radius-xl)",
-  full: "var(--radius-full)"
+  full: "var(--radius-full)",
 };

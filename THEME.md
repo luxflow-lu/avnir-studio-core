@@ -13,11 +13,17 @@
 - **Snippets Tailwind**
   - Bouton primaire:
     ```html
-    <button class="bg-[var(--brand)] text-[var(--brand-on)] rounded-[var(--radius-sm)] shadow-sm">OK</button>
+    <button class="bg-[var(--brand)] text-[var(--brand-on)] rounded-[var(--radius-sm)] shadow-sm">
+      OK
+    </button>
     ```
   - Bouton secondaire:
     ```html
-    <button class="border border-[var(--brand)] text-[var(--brand)] hover:bg-[var(--brand)] hover:text-[var(--brand-on)] rounded-[var(--radius-sm)]">OK</button>
+    <button
+      class="border border-[var(--brand)] text-[var(--brand)] hover:bg-[var(--brand)] hover:text-[var(--brand-on)] rounded-[var(--radius-sm)]"
+    >
+      OK
+    </button>
     ```
   - Carte:
     ```html

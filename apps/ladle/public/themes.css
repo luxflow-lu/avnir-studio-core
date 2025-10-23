@@ -1,29 +1,48 @@
-:root{
-  --bg:#0B0B0D; --surface:#141317; --border:#26272B;
-  --on-bg:#C5CCD6; --on-surface:#F4F4F4;
+:root {
+  --bg: #0b0b0d;
+  --surface: #141317;
+  --border: #26272b;
+  --on-bg: #c5ccd6;
+  --on-surface: #f4f4f4;
   /* semantic primary */
-  --primary:#8A5CF6; --on-primary:#FFFFFF;
+  --primary: #8a5cf6;
+  --on-primary: #ffffff;
   /* compatibility with UI components expecting --brand vars */
   --brand: var(--primary);
   --brand-on: var(--on-primary);
 }
-html[data-theme="light"]{
-  --bg:#F8F8F8; --surface:#FFFFFF;
-  --on-bg:#24252A; --on-surface:#1E1F24;
-  --border:#E6E8EB; --on-primary:#FFFFFF;
+html[data-theme="light"] {
+  --bg: #f8f8f8;
+  --surface: #ffffff;
+  --on-bg: #24252a;
+  --on-surface: #1e1f24;
+  --border: #e6e8eb;
+  --on-primary: #ffffff;
 }
-html[data-brand="avnir"]{
-  --primary:#EDEDED;
-  --on-primary:#141317;
-  --brand:#EDEDED;
-  --brand-on:#141317;
+html[data-brand="avnir"] {
+  --primary: #ededed;
+  --on-primary: #141317;
+  --brand: #ededed;
+  --brand-on: #141317;
 }
-html[data-brand="muzidev"]{ --primary:#5CB9F2; }
-html[data-brand="muzipics"]{ --primary:#FF2D55; }
-html[data-brand="muzimerch"]{ --primary:#FF9D00; }
-html[data-brand="muzibase"]{ --primary:#2FAD66; }
-html[data-brand="muzimanager"]{ --primary:#9802EB; }
-html[data-brand="promozic"]{ --primary:#FFD700; }
+html[data-brand="muzidev"] {
+  --primary: #5cb9f2;
+}
+html[data-brand="muzipics"] {
+  --primary: #ff2d55;
+}
+html[data-brand="muzimerch"] {
+  --primary: #ff9d00;
+}
+html[data-brand="muzibase"] {
+  --primary: #2fad66;
+}
+html[data-brand="muzimanager"] {
+  --primary: #9802eb;
+}
+html[data-brand="promozic"] {
+  --primary: #ffd700;
+}
 
 /* mirror --primary to --brand for other brands too */
 html[data-brand="muzidev"],
@@ -31,7 +50,7 @@ html[data-brand="muzipics"],
 html[data-brand="muzimerch"],
 html[data-brand="muzibase"],
 html[data-brand="muzimanager"],
-html[data-brand="promozic"]{
+html[data-brand="promozic"] {
   --brand: var(--primary);
-  --brand-on: #FFFFFF;
+  --brand-on: #ffffff;
 }

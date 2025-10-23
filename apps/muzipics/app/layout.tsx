@@ -1,7 +1,7 @@
-import './globals.css';
-import { Navbar, Footer } from '@avnir/ui';
+import "./globals.css";
+import { Navbar, Footer } from "@avnir/ui";
 
-export const metadata = { title: 'MUZIPICS' };
+export const metadata = { title: "MUZIPICS" };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" data-brand="muzipics" data-theme="dark">

@@ -1,1 +1,12 @@
-{ "name": "@features/audio-tools", "version": "0.1.0", "type": "module", "main": "src/index.ts", "files": ["src"], "dependencies": { "@avnir/ui": "workspace:*" } }
+{
+  "name": "@features/audio-tools",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "src/index.ts",
+  "files": [
+    "src"
+  ],
+  "dependencies": {
+    "@avnir/ui": "workspace:*"
+  }
+}

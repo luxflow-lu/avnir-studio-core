@@ -7,9 +7,13 @@ export interface ProviderProps {
 export const Provider: React.FC<ProviderProps> = ({ children }) => {
   React.useEffect(() => {
     const root = document.documentElement;
-    const savedBrand = (typeof localStorage !== "undefined" && localStorage.getItem("brand")) || "avnir";
+    const savedBrand =
+      (typeof localStorage !== "undefined" && localStorage.getItem("brand")) || "avnir";
     root.setAttribute("data-brand", savedBrand);
-    const savedTheme = (typeof localStorage !== "undefined" && (localStorage.getItem("theme") as "light" | "dark" | "system" | null)) || "system";
+    const savedTheme =
+      (typeof localStorage !== "undefined" &&
+        (localStorage.getItem("theme") as "light" | "dark" | "system" | null)) ||
+      "system";
     const apply = (mode: "light" | "dark") => root.setAttribute("data-theme", mode);
     if (savedTheme === "system") {
       const m = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)");

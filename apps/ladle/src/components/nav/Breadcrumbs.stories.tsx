@@ -7,7 +7,7 @@ const items = [
   { label: "Home", href: "/" },
   { label: "Products", href: "/products" },
   { label: "Laptops", href: "/products/laptops" },
-  { label: "MacBook Pro", current: true }
+  { label: "MacBook Pro", current: true },
 ];
 
 export const Default = () => (
@@ -18,18 +18,17 @@ export const Default = () => (
 
 export const Simple = () => (
   <div className="bg-[var(--bg)] text-white p-6">
-    <Breadcrumbs items={[
-      { label: "Dashboard", href: "/dashboard" },
-      { label: "Settings", current: true }
-    ]} />
+    <Breadcrumbs
+      items={[
+        { label: "Dashboard", href: "/dashboard" },
+        { label: "Settings", current: true },
+      ]}
+    />
   </div>
 );
 
 export const CustomSeparator = () => (
   <div className="bg-[var(--bg)] text-white p-6">
-    <Breadcrumbs 
-      items={items}
-      separator={<span>/</span>}
-    />
+    <Breadcrumbs items={items} separator={<span>/</span>} />
   </div>
 );

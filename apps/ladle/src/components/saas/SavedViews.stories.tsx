@@ -7,25 +7,25 @@ const mockViews = [
   {
     id: "1",
     name: "Active Customers",
-    filters: { status: "active", type: "customer" },
+    filters: { status: "active", type: "customer" } as Record<string, any>,
     isDefault: true,
     createdAt: new Date("2024-01-15"),
-    updatedAt: new Date("2024-01-20")
+    updatedAt: new Date("2024-01-20"),
   },
   {
     id: "2",
     name: "High Value Orders",
-    filters: { amount: ">1000", status: "completed" },
+    filters: { amount: ">1000", status: "completed" } as Record<string, any>,
     createdAt: new Date("2024-01-10"),
-    updatedAt: new Date("2024-01-18")
+    updatedAt: new Date("2024-01-18"),
   },
   {
     id: "3",
     name: "Recent Signups",
-    filters: { created: "last_7_days", status: "pending" },
+    filters: { created: "last_7_days", status: "pending" } as Record<string, any>,
     createdAt: new Date("2024-01-12"),
-    updatedAt: new Date("2024-01-16")
-  }
+    updatedAt: new Date("2024-01-16"),
+  },
 ];
 
 export const Default = () => {
@@ -39,20 +39,20 @@ export const Default = () => {
       name,
       filters,
       createdAt: new Date(),
-      updatedAt: new Date()
+      updatedAt: new Date(),
     };
-    setViews(prev => [...prev, newView]);
+    setViews((prev) => [...prev, newView]);
   };
 
   const handleDeleteView = async (viewId: string) => {
-    setViews(prev => prev.filter(v => v.id !== viewId));
+    setViews((prev) => prev.filter((v) => v.id !== viewId));
     if (currentView === viewId) {
       setCurrentView("");
     }
   };
 
   const handleSetDefault = async (viewId: string) => {
-    setViews(prev => prev.map(v => ({ ...v, isDefault: v.id === viewId })));
+    setViews((prev) => prev.map((v) => ({ ...v, isDefault: v.id === viewId })));
   };
 
   return (
@@ -67,11 +67,11 @@ export const Default = () => {
           onSetDefault={handleSetDefault}
           currentFilters={currentFilters}
         />
-        
+
         <div className="mt-6 p-4 bg-[var(--surface)] rounded-[var(--radius-lg)]">
           <h4 className="text-sm font-medium text-white mb-2">Current State</h4>
           <p className="text-xs text-[var(--text-muted)]">
-            Selected view: {currentView ? views.find(v => v.id === currentView)?.name : "None"}
+            Selected view: {currentView ? views.find((v) => v.id === currentView)?.name : "None"}
           </p>
           <p className="text-xs text-[var(--text-muted)]">
             Active filters: {Object.keys(currentFilters).length}

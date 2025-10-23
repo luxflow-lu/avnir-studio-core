@@ -22,7 +22,12 @@ export const Minimal = () => (
 export const CustomDetails = () => (
   <Wrapper>
     <ContactBlock
-      details={<div className="space-y-2 text-[var(--text-muted)]"><p>support@avnir.io</p><p>Discord communautaire</p></div>}
+      details={
+        <div className="space-y-2 text-[var(--text-muted)]">
+          <p>support@avnir.io</p>
+          <p>Discord communautaire</p>
+        </div>
+      }
     />
   </Wrapper>
 );

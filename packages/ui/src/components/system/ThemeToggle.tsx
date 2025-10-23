@@ -12,8 +12,10 @@ export const ThemeToggle = React.forwardRef<HTMLDivElement, ThemeToggleProps>(
     const modes: ThemeMode[] = ["dark", "light", "system"];
     const next = () => {
       const idx = modes.indexOf(theme);
-      const t = modes[(idx + 1) % modes.length];
-      onThemeChange?.(t);
+      const nextTheme = modes[(idx + 1) % modes.length];
+      if (nextTheme) {
+        onThemeChange?.(nextTheme);
+      }
     };
 
     return (
@@ -22,7 +24,7 @@ export const ThemeToggle = React.forwardRef<HTMLDivElement, ThemeToggleProps>(
         className={cx(
           "inline-flex items-center rounded-[var(--radius-sm)] transition-colors",
           "text-[var(--text-muted)]",
-          className
+          className,
         )}
         {...props}
       >
@@ -31,7 +33,7 @@ export const ThemeToggle = React.forwardRef<HTMLDivElement, ThemeToggleProps>(
           className={cx(
             "inline-flex items-center justify-center h-9 px-3 rounded-[var(--radius-sm)]",
             "hover:bg-white/5 text-[var(--text-muted)] hover:text-white",
-            "focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]"
+            "focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]",
           )}
           aria-label={`Switch theme (current: ${theme})`}
         >
@@ -41,6 +43,6 @@ export const ThemeToggle = React.forwardRef<HTMLDivElement, ThemeToggleProps>(
         </button>
       </div>
     );
-  }
+  },
 );
 ThemeToggle.displayName = "ThemeToggle";

@@ -19,17 +19,13 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
       ref={ref}
       className={cx(
         "surface-invert sticky top-0 z-40 w-full bg-[var(--bg)]/80 backdrop-blur border-b border-white/10",
-        className
+        className,
       )}
       {...props}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-6 h-16 flex items-center justify-between">
         <div className="flex items-center gap-8">
-          {logo && (
-            <div className="flex items-center">
-              {logo}
-            </div>
-          )}
+          {logo && <div className="flex items-center">{logo}</div>}
           {links.length > 0 && (
             <nav className="hidden md:flex items-center gap-6">
               {links.map((link, index) => (
@@ -41,7 +37,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
                     "focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]",
                     link.active
                       ? "text-[var(--brand)]"
-                      : "text-[var(--text-muted)] hover:text-white"
+                      : "text-[var(--text-muted)] hover:text-white",
                   )}
                 >
                   {link.label}
@@ -50,13 +46,9 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
             </nav>
           )}
         </div>
-        {actions && (
-          <div className="flex items-center gap-4">
-            {actions}
-          </div>
-        )}
+        {actions && <div className="flex items-center gap-4">{actions}</div>}
       </div>
     </header>
-  )
+  ),
 );
 Navbar.displayName = "Navbar";

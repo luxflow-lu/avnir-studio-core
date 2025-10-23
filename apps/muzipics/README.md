@@ -18,6 +18,7 @@ pnpm -w --filter ./apps/muzipics run build
 ## 🌐 Déploiement Vercel
 
 ### Configuration
+
 ```json
 {
   "buildCommand": "pnpm -w --filter ./apps/muzipics run build",
@@ -28,9 +29,11 @@ pnpm -w --filter ./apps/muzipics run build
 ```
 
 ### Variables d'Environnement
+
 Aucune variable d'environnement requise pour le moment.
 
 ### Setup Vercel
+
 1. Connecter le repo à Vercel
 2. Sélectionner `apps/muzipics` comme root directory
 3. Déploiement automatique sur push vers `main`

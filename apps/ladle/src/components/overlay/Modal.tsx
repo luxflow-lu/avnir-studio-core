@@ -29,7 +29,7 @@ export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(
 
     return (
       <div className="fixed inset-0 z-50 flex items-center justify-center">
-        <div 
+        <div
           className="fixed inset-0 bg-black/50 backdrop-blur-sm"
           onClick={onClose}
           aria-hidden="true"
@@ -39,7 +39,7 @@ export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(
           className={cx(
             "relative bg-[var(--surface)] rounded-[var(--radius-lg)] shadow-lg max-w-md w-full mx-4 p-6",
             "focus:outline-none",
-            className
+            className,
           )}
           role="dialog"
           aria-modal="true"
@@ -54,6 +54,6 @@ export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(
         </div>
       </div>
     );
-  }
+  },
 );
 Modal.displayName = "Modal";

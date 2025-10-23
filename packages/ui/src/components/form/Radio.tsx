@@ -18,7 +18,7 @@ export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
             "h-4 w-4 rounded-full border border-white/20 bg-[color:var(--bg)/0.6]",
             "checked:bg-[var(--brand)] checked:border-[var(--brand)]",
             "focus:outline-none focus:ring-2 focus:ring-[color:var(--brand)/0.4]",
-            className
+            className,
           )}
           {...props}
         />
@@ -29,6 +29,6 @@ export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
         )}
       </div>
     );
-  }
+  },
 );
 Radio.displayName = "Radio";

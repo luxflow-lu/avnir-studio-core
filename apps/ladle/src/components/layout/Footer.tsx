@@ -48,12 +48,10 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
       )}
       {bottomContent && (
         <div className="border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-4 md:px-6 py-6">
-            {bottomContent}
-          </div>
+          <div className="max-w-7xl mx-auto px-4 md:px-6 py-6">{bottomContent}</div>
         </div>
       )}
     </footer>
-  )
+  ),
 );
 Footer.displayName = "Footer";

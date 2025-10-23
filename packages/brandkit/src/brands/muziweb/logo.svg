@@ -1,0 +1,6 @@
+<svg width="100" height="32" viewBox="0 0 100 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="8" fill="#9802EB"/>
+  <path d="M8 24V8H12V12H16V8H20V24H16V16H12V24H8Z" fill="white"/>
+  <circle cx="22" cy="10" r="2" fill="white"/>
+  <text x="40" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="currentColor">MUZIWEB</text>
+</svg>

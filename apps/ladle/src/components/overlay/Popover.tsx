@@ -12,7 +12,18 @@ export interface PopoverProps {
 }
 
 export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
-  ({ children, content, open: controlledOpen, onOpenChange, side = "bottom", align = "center", className }, ref) => {
+  (
+    {
+      children,
+      content,
+      open: controlledOpen,
+      onOpenChange,
+      side = "bottom",
+      align = "center",
+      className,
+    },
+    ref,
+  ) => {
     const [internalOpen, setInternalOpen] = React.useState(false);
     const [position, setPosition] = React.useState({ x: 0, y: 0 });
     const triggerRef = React.useRef<HTMLElement>(null);
@@ -26,8 +37,9 @@ export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
 
       const triggerRect = triggerRef.current.getBoundingClientRect();
       const contentRect = contentRef.current.getBoundingClientRect();
-      
-      let x = 0, y = 0;
+
+      let x = 0,
+        y = 0;
 
       // Calculate position based on side
       switch (side) {
@@ -78,11 +90,11 @@ export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
     React.useEffect(() => {
       if (isOpen) {
         updatePosition();
-        window.addEventListener('resize', updatePosition);
-        window.addEventListener('scroll', updatePosition);
+        window.addEventListener("resize", updatePosition);
+        window.addEventListener("scroll", updatePosition);
         return () => {
-          window.removeEventListener('resize', updatePosition);
-          window.removeEventListener('scroll', updatePosition);
+          window.removeEventListener("resize", updatePosition);
+          window.removeEventListener("scroll", updatePosition);
         };
       }
     }, [isOpen, updatePosition]);
@@ -90,7 +102,7 @@ export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
     React.useEffect(() => {
       const handleClickOutside = (event: MouseEvent) => {
         if (
-          triggerRef.current && 
+          triggerRef.current &&
           contentRef.current &&
           !triggerRef.current.contains(event.target as Node) &&
           !contentRef.current.contains(event.target as Node)
@@ -100,8 +112,8 @@ export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
       };
 
       if (isOpen) {
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
       }
     }, [isOpen, setOpen]);
 
@@ -111,14 +123,14 @@ export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
           ref: triggerRef,
           onClick: () => setOpen(!isOpen),
         })}
-        
+
         {isOpen && (
           <div
             ref={contentRef}
             className={cx(
               "fixed z-50 bg-[var(--surface)] border border-white/10 rounded-[var(--radius-lg)] shadow-lg p-4",
               "animate-in fade-in-0 zoom-in-95 duration-200",
-              className
+              className,
             )}
             style={{ left: position.x, top: position.y }}
           >
@@ -127,6 +139,6 @@ export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
         )}
       </div>
     );
-  }
+  },
 );
 Popover.displayName = "Popover";

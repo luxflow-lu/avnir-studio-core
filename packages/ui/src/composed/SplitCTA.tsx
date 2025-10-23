@@ -1,8 +1,16 @@
 import * as React from "react";
 import { Button } from "../primitives/Button";
 
-export function SplitCTA({ media, title, text, cta }:{
-  media: React.ReactNode; title: string; text?: string; cta: {label:string; href:string}
+export function SplitCTA({
+  media,
+  title,
+  text,
+  cta,
+}: {
+  media: React.ReactNode;
+  title: string;
+  text?: string;
+  cta: { label: string; href: string };
 }) {
   return (
     <section className="bg-[var(--bg)]">

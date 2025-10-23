@@ -12,5 +12,5 @@ export const color = {
   success: "#22c55e",
   warning: "#f59e0b",
   destructive: "#ef4444",
-  onDestructive: "white"
+  onDestructive: "white",
 };

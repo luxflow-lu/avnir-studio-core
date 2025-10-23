@@ -22,7 +22,9 @@ const AsyncContent = () => {
         <h3 className="text-lg font-semibold mb-4">Loaded Content</h3>
         <ul className="space-y-2">
           {data.map((item, index) => (
-            <li key={index} className="text-[var(--text-muted)]">{item}</li>
+            <li key={index} className="text-[var(--text-muted)]">
+              {item}
+            </li>
           ))}
         </ul>
       </div>
@@ -38,7 +40,7 @@ export const Default = () => (
 
 export const Manual = () => {
   const [loading, setLoading] = useState(false);
-  
+
   const simulateLoading = () => {
     setLoading(true);
     setTimeout(() => setLoading(false), 3000);
@@ -49,13 +51,11 @@ export const Manual = () => {
       <Button onClick={simulateLoading} disabled={loading} className="mb-6">
         {loading ? "Loading..." : "Simulate Loading"}
       </Button>
-      
+
       <LoadingBoundary loading={loading}>
         <div className="bg-[var(--surface)] p-6 rounded-[var(--radius-lg)]">
           <h3 className="text-lg font-semibold mb-2">Content Area</h3>
-          <p className="text-[var(--text-muted)]">
-            This content is shown when not loading.
-          </p>
+          <p className="text-[var(--text-muted)]">This content is shown when not loading.</p>
         </div>
       </LoadingBoundary>
     </div>
@@ -64,7 +64,7 @@ export const Manual = () => {
 
 export const CustomFallback = () => {
   const [loading, setLoading] = useState(false);
-  
+
   const customFallback = (
     <div className="min-h-[200px] flex items-center justify-center bg-[var(--surface)] rounded-[var(--radius-lg)]">
       <div className="text-center">
@@ -80,13 +80,11 @@ export const CustomFallback = () => {
       <Button onClick={() => setLoading(!loading)} className="mb-6">
         Toggle Loading
       </Button>
-      
+
       <LoadingBoundary loading={loading} fallback={customFallback}>
         <div className="bg-[var(--surface)] p-6 rounded-[var(--radius-lg)]">
           <h3 className="text-lg font-semibold mb-2">Custom Fallback Example</h3>
-          <p className="text-[var(--text-muted)]">
-            This uses a custom loading fallback component.
-          </p>
+          <p className="text-[var(--text-muted)]">This uses a custom loading fallback component.</p>
         </div>
       </LoadingBoundary>
     </div>

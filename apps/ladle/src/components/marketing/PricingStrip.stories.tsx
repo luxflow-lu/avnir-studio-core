@@ -10,7 +10,11 @@ const Wrapper: React.FC<React.PropsWithChildren> = ({ children }) => (
 
 export const Default = () => (
   <Wrapper>
-    <PricingStrip title="Des plans pour chaque équipe" subtitle="Simple et transparent" cta={<Button>Voir les tarifs</Button>} />
+    <PricingStrip
+      title="Des plans pour chaque équipe"
+      subtitle="Simple et transparent"
+      cta={<Button>Voir les tarifs</Button>}
+    />
   </Wrapper>
 );
 
@@ -22,6 +26,14 @@ export const Minimal = () => (
 
 export const WithSecondary = () => (
   <Wrapper>
-    <PricingStrip title="Des plans flexibles" cta={<><Button>Essayer</Button><Button variant="outline">Contact</Button></>} />
+    <PricingStrip
+      title="Des plans flexibles"
+      cta={
+        <>
+          <Button>Essayer</Button>
+          <Button variant="outline">Contact</Button>
+        </>
+      }
+    />
   </Wrapper>
 );

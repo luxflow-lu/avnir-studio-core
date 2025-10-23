@@ -1,2 +1,2 @@
-@import "@avnir/tokens/themes.css";
-@import "@avnir/ui/styles.css";
+@import "../../../packages/design/themes.css";
+@import "../../../packages/ui/dist/styles.css";

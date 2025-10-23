@@ -13,6 +13,7 @@ pnpm changeset
 ```
 
 Cette commande vous guidera pour :
+
 - Sélectionner les packages modifiés
 - Choisir le type de changement (patch, minor, major)
 - Écrire un résumé des changements
@@ -28,6 +29,7 @@ git push
 ### 3. Version Bump (Automatique via PR)
 
 Quand vous pushez sur `main`, GitHub Actions :
+
 1. Détecte les changesets
 2. Crée/met à jour une PR "Release" automatiquement
 3. Cette PR contient tous les bumps de version et changelogs
@@ -35,6 +37,7 @@ Quand vous pushez sur `main`, GitHub Actions :
 ### 4. Publier (Merge de la PR Release)
 
 Quand vous mergez la PR "Release" :
+
 1. Les versions sont bumpées
 2. Les changelogs sont générés
 3. Les packages sont publiés sur GitHub Packages (optionnel)
@@ -48,6 +51,7 @@ pnpm changeset:version
 ```
 
 Cette commande :
+
 - Applique tous les changesets en attente
 - Bumpe les versions des packages
 - Génère/met à jour les CHANGELOG.md
@@ -80,6 +84,7 @@ Publie tous les packages avec des versions non publiées.
 ## Types de Changements
 
 ### Patch (0.0.X)
+
 - Bug fixes
 - Corrections de typos
 - Améliorations de performance sans breaking changes
@@ -94,6 +99,7 @@ Fix button focus ring in Safari
 ```
 
 ### Minor (0.X.0)
+
 - Nouvelles fonctionnalités
 - Nouveaux composants
 - Nouvelles props (non-breaking)
@@ -108,6 +114,7 @@ Add new Badge component with variants
 ```
 
 ### Major (X.0.0)
+
 - Breaking changes
 - Suppression de props/composants
 - Changements d'API

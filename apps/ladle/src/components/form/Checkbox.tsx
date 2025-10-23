@@ -17,7 +17,7 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
             "h-4 w-4 rounded border border-white/20 bg-[color:var(--bg)/0.6]",
             "checked:bg-[var(--brand)] checked:border-[var(--brand)]",
             "focus:outline-none focus:ring-2 focus:ring-[color:var(--brand)/0.4]",
-            className
+            className,
           )}
           {...props}
         />
@@ -28,6 +28,6 @@ export const Checkbox = React.forwardRef<HTMLInputElement, CheckboxProps>(
         )}
       </div>
     );
-  }
+  },
 );
 Checkbox.displayName = "Checkbox";

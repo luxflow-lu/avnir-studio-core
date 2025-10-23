@@ -29,7 +29,8 @@ export const VariantsSwatches = React.forwardRef<HTMLDivElement, VariantsSwatche
   ({ className, variantGroups, selectedVariants, onVariantChange, ...props }, ref) => {
     const renderVariant = (group: VariantGroup, variant: Variant) => {
       const isSelected = selectedVariants[group.id] === variant.id;
-      const baseClasses = "transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]";
+      const baseClasses =
+        "transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]";
 
       switch (group.type) {
         case "color":
@@ -41,8 +42,10 @@ export const VariantsSwatches = React.forwardRef<HTMLDivElement, VariantsSwatche
               className={cx(
                 baseClasses,
                 "w-8 h-8 rounded-full border-2 relative",
-                isSelected ? "border-[var(--brand)] ring-2 ring-[var(--brand)]/20" : "border-white/20",
-                !variant.available && "opacity-50 cursor-not-allowed"
+                isSelected
+                  ? "border-[var(--brand)] ring-2 ring-[var(--brand)]/20"
+                  : "border-white/20",
+                !variant.available && "opacity-50 cursor-not-allowed",
               )}
               style={{ backgroundColor: variant.color }}
               title={`${variant.name}${!variant.available ? " (Out of stock)" : ""}`}
@@ -67,7 +70,7 @@ export const VariantsSwatches = React.forwardRef<HTMLDivElement, VariantsSwatche
                 isSelected
                   ? "border-[var(--brand)] bg-[var(--brand)]/10 text-[var(--brand)]"
                   : "border-white/20 text-white hover:border-white/40",
-                !variant.available && "opacity-50 cursor-not-allowed line-through"
+                !variant.available && "opacity-50 cursor-not-allowed line-through",
               )}
             >
               {variant.value}
@@ -84,15 +87,11 @@ export const VariantsSwatches = React.forwardRef<HTMLDivElement, VariantsSwatche
                 baseClasses,
                 "relative overflow-hidden rounded-[var(--radius-sm)] border-2",
                 isSelected ? "border-[var(--brand)]" : "border-white/20",
-                !variant.available && "opacity-50 cursor-not-allowed"
+                !variant.available && "opacity-50 cursor-not-allowed",
               )}
             >
               {variant.image ? (
-                <img
-                  src={variant.image}
-                  alt={variant.name}
-                  className="w-16 h-16 object-cover"
-                />
+                <img src={variant.image} alt={variant.name} className="w-16 h-16 object-cover" />
               ) : (
                 <div className="w-16 h-16 bg-white/5 flex items-center justify-center text-xs text-[var(--text-muted)]">
                   {variant.name}
@@ -119,13 +118,11 @@ export const VariantsSwatches = React.forwardRef<HTMLDivElement, VariantsSwatche
                 isSelected
                   ? "border-[var(--brand)] bg-[var(--brand)]/10 text-[var(--brand)]"
                   : "border-white/20 text-white hover:border-white/40",
-                !variant.available && "opacity-50 cursor-not-allowed"
+                !variant.available && "opacity-50 cursor-not-allowed",
               )}
             >
               {variant.name}
-              {variant.price && (
-                <span className="ml-2 text-xs">+€{variant.price}</span>
-              )}
+              {variant.price && <span className="ml-2 text-xs">+€{variant.price}</span>}
             </button>
           );
       }
@@ -134,8 +131,8 @@ export const VariantsSwatches = React.forwardRef<HTMLDivElement, VariantsSwatche
     return (
       <div ref={ref} className={cx("space-y-6", className)} {...props}>
         {variantGroups.map((group) => {
-          const selectedVariant = group.variants.find(v => v.id === selectedVariants[group.id]);
-          
+          const selectedVariant = group.variants.find((v) => v.id === selectedVariants[group.id]);
+
           return (
             <div key={group.id} className="space-y-3">
               <div className="flex items-center justify-between">
@@ -150,11 +147,8 @@ export const VariantsSwatches = React.forwardRef<HTMLDivElement, VariantsSwatche
                   </span>
                 )}
               </div>
-              
-              <div className={cx(
-                "flex flex-wrap gap-2",
-                group.type === "color" && "gap-3"
-              )}>
+
+              <div className={cx("flex flex-wrap gap-2", group.type === "color" && "gap-3")}>
                 {group.variants.map((variant) => renderVariant(group, variant))}
               </div>
             </div>
@@ -162,6 +156,6 @@ export const VariantsSwatches = React.forwardRef<HTMLDivElement, VariantsSwatche
         })}
       </div>
     );
-  }
+  },
 );
 VariantsSwatches.displayName = "VariantsSwatches";

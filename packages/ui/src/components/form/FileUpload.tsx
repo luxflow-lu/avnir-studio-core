@@ -1,7 +1,8 @@
 import * as React from "react";
 import { cx } from "../../utils/cx";
 
-export interface FileUploadProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'onChange'> {
+export interface FileUploadProps
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type" | "onChange"> {
   onFiles?: (files: File[]) => void;
   maxFiles?: number;
   accept?: string;
@@ -41,7 +42,7 @@ export const FileUpload = React.forwardRef<HTMLInputElement, FileUploadProps>(
         className={cx(
           "border-2 border-dashed border-white/20 rounded-[var(--radius-lg)] p-8 text-center transition-colors",
           isDragOver && "border-[var(--brand)] bg-[color:var(--brand)/0.05]",
-          className
+          className,
         )}
         onDrop={handleDrop}
         onDragOver={handleDragOver}
@@ -58,8 +59,18 @@ export const FileUpload = React.forwardRef<HTMLInputElement, FileUploadProps>(
         />
         <div className="space-y-4">
           <div className="text-[var(--text-muted)]">
-            <svg className="mx-auto h-12 w-12 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+            <svg
+              className="mx-auto h-12 w-12 mb-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={1.5}
+                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
+              />
             </svg>
           </div>
           <div>
@@ -73,12 +84,12 @@ export const FileUpload = React.forwardRef<HTMLInputElement, FileUploadProps>(
             <span className="text-[var(--text-muted)]"> ou glissez-déposez</span>
           </div>
           <p className="text-xs text-[var(--text-muted)]">
-            {maxFiles > 1 ? `Jusqu'à ${maxFiles} fichiers` : '1 fichier maximum'}
+            {maxFiles > 1 ? `Jusqu'à ${maxFiles} fichiers` : "1 fichier maximum"}
             {accept && ` • ${accept}`}
           </p>
         </div>
       </div>
     );
-  }
+  },
 );
 FileUpload.displayName = "FileUpload";

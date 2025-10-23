@@ -13,7 +13,7 @@ const BuggyComponent = ({ shouldError }: { shouldError: boolean }) => {
 
 export const Default = () => {
   const [shouldError, setShouldError] = useState(false);
-  
+
   return (
     <div className="bg-[var(--bg)] text-white p-6">
       <div className="mb-4">
@@ -21,7 +21,7 @@ export const Default = () => {
           {shouldError ? "Fix Component" : "Break Component"}
         </Button>
       </div>
-      
+
       <ErrorBoundary onError={(error) => console.error("Caught error:", error)}>
         <BuggyComponent shouldError={shouldError} />
       </ErrorBoundary>
@@ -31,7 +31,7 @@ export const Default = () => {
 
 export const CustomFallback = () => {
   const [shouldError, setShouldError] = useState(false);
-  
+
   const CustomErrorFallback = ({ error, resetError }: { error: Error; resetError: () => void }) => (
     <div className="bg-red-500/10 border border-red-500/20 rounded-[var(--radius-lg)] p-6 text-center">
       <h3 className="text-red-400 font-semibold mb-2">Custom Error Handler</h3>
@@ -41,7 +41,7 @@ export const CustomFallback = () => {
       </Button>
     </div>
   );
-  
+
   return (
     <div className="bg-[var(--bg)] text-white p-6">
       <div className="mb-4">
@@ -49,7 +49,7 @@ export const CustomFallback = () => {
           {shouldError ? "Fix Component" : "Break Component"}
         </Button>
       </div>
-      
+
       <ErrorBoundary fallback={CustomErrorFallback}>
         <BuggyComponent shouldError={shouldError} />
       </ErrorBoundary>

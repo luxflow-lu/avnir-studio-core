@@ -1,6 +1,6 @@
 export default { title: "Tokens/Preview" };
 
-const Box = ({ name, style }:{name:string; style:React.CSSProperties}) => (
+const Box = ({ name, style }: { name: string; style: React.CSSProperties }) => (
   <div className="flex items-center gap-3">
     <div className="w-10 h-10 rounded" style={style} />
     <code className="text-sm text-[var(--text-muted)]">{name}</code>

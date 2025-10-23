@@ -1,7 +1,7 @@
 import * as React from "react";
 import { cx } from "../../utils/cx";
 
-export interface SwitchProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type'> {
+export interface SwitchProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {
   label?: string;
 }
 
@@ -29,6 +29,6 @@ export const Switch = React.forwardRef<HTMLInputElement, SwitchProps>(
         )}
       </div>
     );
-  }
+  },
 );
 Switch.displayName = "Switch";

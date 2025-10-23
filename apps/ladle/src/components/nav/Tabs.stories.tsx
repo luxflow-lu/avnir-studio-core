@@ -7,24 +7,24 @@ const tabs = [
   {
     id: "overview",
     label: "Overview",
-    content: <div className="text-white">Overview content here</div>
+    content: <div className="text-white">Overview content here</div>,
   },
   {
     id: "analytics",
     label: "Analytics",
-    content: <div className="text-white">Analytics dashboard content</div>
+    content: <div className="text-white">Analytics dashboard content</div>,
   },
   {
     id: "settings",
     label: "Settings",
-    content: <div className="text-white">Settings panel content</div>
+    content: <div className="text-white">Settings panel content</div>,
   },
   {
     id: "disabled",
     label: "Disabled",
     content: <div className="text-white">This tab is disabled</div>,
-    disabled: true
-  }
+    disabled: true,
+  },
 ];
 
 export const Default = () => (

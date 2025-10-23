@@ -3,12 +3,18 @@ import { Banner } from "@avnir/ui";
 
 export default {
   title: "UI/Banner",
-  args: { variant: "surface", size: "md" }
 };
 
-export const Demo = (args:any) => (
+export const Default = () => (
   <div className="p-6 space-y-4">
-    <Banner {...args}>Banner default</Banner>
-    <Banner variant="primary">Primary</Banner>
+    <Banner>Default Banner</Banner>
+  </div>
+);
+
+export const AllVariants = () => (
+  <div className="p-6 space-y-4">
+    <Banner variant="surface">Surface banner</Banner>
+    <Banner variant="primary">Primary banner</Banner>
+    <Banner variant="ghost">Ghost banner</Banner>
   </div>
 );

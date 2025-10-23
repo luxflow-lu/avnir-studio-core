@@ -7,7 +7,7 @@ const customRoles = [
   { value: "viewer", label: "Viewer" },
   { value: "editor", label: "Editor" },
   { value: "admin", label: "Admin" },
-  { value: "owner", label: "Owner" }
+  { value: "owner", label: "Owner" },
 ];
 
 export const Default = () => (
@@ -15,7 +15,7 @@ export const Default = () => (
     <InviteMembers
       onInvite={(members) => {
         console.log("Inviting members:", members);
-        return new Promise(resolve => setTimeout(resolve, 2000));
+        return new Promise((resolve) => setTimeout(resolve, 2000));
       }}
     />
   </div>
@@ -27,7 +27,7 @@ export const CustomRoles = () => (
       roles={customRoles}
       onInvite={(members) => {
         console.log("Inviting members:", members);
-        return new Promise(resolve => setTimeout(resolve, 2000));
+        return new Promise((resolve) => setTimeout(resolve, 2000));
       }}
     />
   </div>
@@ -39,7 +39,7 @@ export const LimitedInvites = () => (
       maxInvites={3}
       onInvite={(members) => {
         console.log("Inviting members:", members);
-        return new Promise(resolve => setTimeout(resolve, 2000));
+        return new Promise((resolve) => setTimeout(resolve, 2000));
       }}
     />
   </div>

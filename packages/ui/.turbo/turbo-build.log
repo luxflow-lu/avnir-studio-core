@@ -10,16 +10,16 @@ CLI Target: es2022
 CLI Cleaning output folder
 ESM Build start
 CJS Build start
-CJS dist/index.cjs     13.54 KB
-CJS dist/index.cjs.map 17.90 KB
-CJS ⚡️ Build success in 49ms
-ESM dist/index.js     10.35 KB
-ESM dist/index.js.map 17.52 KB
-ESM ⚡️ Build success in 52ms
+CJS dist/index.cjs     258.77 KB
+CJS dist/index.cjs.map 357.70 KB
+CJS ⚡️ Build success in 1095ms
+ESM dist/index.js     231.33 KB
+ESM dist/index.js.map 363.83 KB
+ESM ⚡️ Build success in 1106ms
 DTS Build start
-DTS ⚡️ Build success in 5968ms
-DTS dist/index.d.ts  3.44 KB
-DTS dist/index.d.cts 3.44 KB
+DTS ⚡️ Build success in 59781ms
+DTS dist/index.d.ts  51.79 KB
+DTS dist/index.d.cts 51.79 KB
 
 > @avnir/ui@0.1.0 build:css /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui
 > tailwindcss -c tailwind.build.config.cjs -i ./src/styles-source.css -o ./dist/styles.css --postcss ./postcss.build.config.cjs --minify
@@ -30,4 +30,4 @@ Browserslist: caniuse-lite is outdated. Please run:
 
 Rebuilding...
 
-Done in 1995ms.
+Done in 12235ms.

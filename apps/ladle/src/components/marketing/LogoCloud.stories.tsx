@@ -18,7 +18,11 @@ const logos = [
 
 export const Default = () => (
   <Wrapper>
-    <LogoCloud title="Ils nous font confiance" subtitle="Des équipes ambitieuses dans toute l'Europe" logos={logos} />
+    <LogoCloud
+      title="Ils nous font confiance"
+      subtitle="Des équipes ambitieuses dans toute l'Europe"
+      logos={logos}
+    />
   </Wrapper>
 );
 

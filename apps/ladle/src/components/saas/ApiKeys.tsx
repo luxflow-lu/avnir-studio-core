@@ -26,15 +26,18 @@ export interface ApiKeysProps extends React.HTMLAttributes<HTMLDivElement> {
 const defaultPermissions = ["read", "write", "admin"];
 
 export const ApiKeys = React.forwardRef<HTMLDivElement, ApiKeysProps>(
-  ({ 
-    className, 
-    apiKeys, 
-    onCreateKey, 
-    onDeleteKey, 
-    onToggleKey,
-    availablePermissions = defaultPermissions,
-    ...props 
-  }, ref) => {
+  (
+    {
+      className,
+      apiKeys,
+      onCreateKey,
+      onDeleteKey,
+      onToggleKey,
+      availablePermissions = defaultPermissions,
+      ...props
+    },
+    ref,
+  ) => {
     const [showCreateModal, setShowCreateModal] = React.useState(false);
     const [newKeyName, setNewKeyName] = React.useState("");
     const [selectedPermissions, setSelectedPermissions] = React.useState<string[]>([]);
@@ -43,7 +46,7 @@ export const ApiKeys = React.forwardRef<HTMLDivElement, ApiKeysProps>(
 
     const handleCreateKey = async () => {
       if (!newKeyName.trim() || selectedPermissions.length === 0) return;
-      
+
       setIsCreating(true);
       try {
         const newKey = await onCreateKey?.(newKeyName, selectedPermissions);
@@ -68,10 +71,8 @@ export const ApiKeys = React.forwardRef<HTMLDivElement, ApiKeysProps>(
     };
 
     const togglePermission = (permission: string) => {
-      setSelectedPermissions(prev => 
-        prev.includes(permission)
-          ? prev.filter(p => p !== permission)
-          : [...prev, permission]
+      setSelectedPermissions((prev) =>
+        prev.includes(permission) ? prev.filter((p) => p !== permission) : [...prev, permission],
       );
     };
 
@@ -80,7 +81,11 @@ export const ApiKeys = React.forwardRef<HTMLDivElement, ApiKeysProps>(
     };
 
     return (
-      <div ref={ref} className={cx("bg-[var(--surface)] rounded-[var(--radius-lg)] p-6", className)} {...props}>
+      <div
+        ref={ref}
+        className={cx("bg-[var(--surface)] rounded-[var(--radius-lg)] p-6", className)}
+        {...props}
+      >
         <div className="flex items-center justify-between mb-6">
           <div>
             <h3 className="text-lg font-semibold text-white">API Keys</h3>
@@ -88,30 +93,34 @@ export const ApiKeys = React.forwardRef<HTMLDivElement, ApiKeysProps>(
               Manage API keys for programmatic access
             </p>
           </div>
-          <Button onClick={() => setShowCreateModal(true)}>
-            Create API Key
-          </Button>
+          <Button onClick={() => setShowCreateModal(true)}>Create API Key</Button>
         </div>
 
         {apiKeys.length === 0 ? (
           <div className="text-center py-12">
             <div className="w-16 h-16 mx-auto mb-4 text-[var(--text-muted)]">
               <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1}
+                  d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z"
+                />
               </svg>
             </div>
             <h4 className="text-white font-medium mb-2">No API Keys</h4>
             <p className="text-[var(--text-muted)] text-sm mb-4">
               Create your first API key to get started
             </p>
-            <Button onClick={() => setShowCreateModal(true)}>
-              Create API Key
-            </Button>
+            <Button onClick={() => setShowCreateModal(true)}>Create API Key</Button>
           </div>
         ) : (
           <div className="space-y-4">
-            {apiKeys.map(apiKey => (
-              <div key={apiKey.id} className="border border-white/10 rounded-[var(--radius-lg)] p-4">
+            {apiKeys.map((apiKey) => (
+              <div
+                key={apiKey.id}
+                className="border border-white/10 rounded-[var(--radius-lg)] p-4"
+              >
                 <div className="flex items-start justify-between mb-3">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
@@ -133,7 +142,7 @@ export const ApiKeys = React.forwardRef<HTMLDivElement, ApiKeysProps>(
                       </Button>
                     </div>
                     <div className="flex flex-wrap gap-1 mb-2">
-                      {apiKey.permissions.map(permission => (
+                      {apiKey.permissions.map((permission) => (
                         <Badge key={permission} className="text-xs">
                           {permission}
                         </Badge>
@@ -176,9 +185,7 @@ export const ApiKeys = React.forwardRef<HTMLDivElement, ApiKeysProps>(
         >
           <div className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-white mb-2">
-                Key Name
-              </label>
+              <label className="block text-sm font-medium text-white mb-2">Key Name</label>
               <Input
                 placeholder="Enter a name for this API key"
                 value={newKeyName}
@@ -187,11 +194,9 @@ export const ApiKeys = React.forwardRef<HTMLDivElement, ApiKeysProps>(
             </div>
 
             <div>
-              <label className="block text-sm font-medium text-white mb-2">
-                Permissions
-              </label>
+              <label className="block text-sm font-medium text-white mb-2">Permissions</label>
               <div className="space-y-2">
-                {availablePermissions.map(permission => (
+                {availablePermissions.map((permission) => (
                   <label key={permission} className="flex items-center gap-2 cursor-pointer">
                     <input
                       type="checkbox"
@@ -225,6 +230,6 @@ export const ApiKeys = React.forwardRef<HTMLDivElement, ApiKeysProps>(
         </Modal>
       </div>
     );
-  }
+  },
 );
 ApiKeys.displayName = "ApiKeys";

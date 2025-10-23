@@ -56,7 +56,7 @@ export const Sizes = () => (
         onBuyCredits={() => console.log("Buy credits")}
       />
     </div>
-    
+
     <div className="max-w-md">
       <h3 className="text-sm font-medium text-white mb-3">Medium</h3>
       <CreditBalance
@@ -66,7 +66,7 @@ export const Sizes = () => (
         onBuyCredits={() => console.log("Buy credits")}
       />
     </div>
-    
+
     <div className="max-w-lg">
       <h3 className="text-sm font-medium text-white mb-3">Large</h3>
       <CreditBalance
@@ -104,11 +104,11 @@ export const InDashboard = () => (
         nextRefillDate={new Date(Date.now() + 20 * 24 * 60 * 60 * 1000)}
         size="sm"
       />
-      
+
       <div className="bg-[var(--surface)] rounded-[var(--radius-lg)] p-4 flex items-center justify-center">
         <span className="text-[var(--text-muted)]">Autre widget</span>
       </div>
-      
+
       <div className="bg-[var(--surface)] rounded-[var(--radius-lg)] p-4 flex items-center justify-center">
         <span className="text-[var(--text-muted)]">Autre widget</span>
       </div>

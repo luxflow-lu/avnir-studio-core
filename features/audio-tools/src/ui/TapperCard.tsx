@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import * as React from 'react';
-import { Card } from '@avnir/ui';
+import * as React from "react";
+import { Card } from "@avnir/ui";
 
-export function TapperCard(){
+export function TapperCard() {
   const [bpm, setBpm] = React.useState<number | null>(null);
   const [times, setTimes] = React.useState<number[]>([]);
   const tap = () => {
@@ -19,16 +19,25 @@ export function TapperCard(){
     });
   };
   React.useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === ' ') { e.preventDefault(); tap(); } };
-    window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === " ") {
+        e.preventDefault();
+        tap();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
   }, []);
   return (
     <Card className="p-6">
       <h3 className="h3">Tap Tempo</h3>
       <p className="mt-2 text-muted">Tape la barre espace pour mesurer le BPM</p>
-      <button className="mt-4 bg-primary text-bg rounded-lg px-4 py-2" onClick={tap}>TAP</button>
-      <div className="mt-4">BPM: <strong>{bpm ?? '—'}</strong></div>
+      <button className="mt-4 bg-primary text-bg rounded-lg px-4 py-2" onClick={tap}>
+        TAP
+      </button>
+      <div className="mt-4">
+        BPM: <strong>{bpm ?? "—"}</strong>
+      </div>
     </Card>
   );
 }

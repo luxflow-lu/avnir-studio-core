@@ -12,7 +12,7 @@ const mockAssets = [
     duration: "3:24",
     size: "12.5 MB",
     createdAt: new Date("2024-01-15"),
-    thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=200&fit=crop"
+    thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=200&fit=crop",
   },
   {
     id: "2",
@@ -22,7 +22,7 @@ const mockAssets = [
     duration: "4:12",
     size: "245 MB",
     createdAt: new Date("2024-01-14"),
-    thumbnail: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=300&h=200&fit=crop"
+    thumbnail: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?w=300&h=200&fit=crop",
   },
   {
     id: "3",
@@ -31,7 +31,7 @@ const mockAssets = [
     status: "ready" as const,
     size: "2.1 MB",
     createdAt: new Date("2024-01-13"),
-    thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=200&fit=crop"
+    thumbnail: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=300&h=200&fit=crop",
   },
   {
     id: "4",
@@ -39,7 +39,7 @@ const mockAssets = [
     type: "document" as const,
     status: "ready" as const,
     size: "856 KB",
-    createdAt: new Date("2024-01-12")
+    createdAt: new Date("2024-01-12"),
   },
   {
     id: "5",
@@ -47,7 +47,7 @@ const mockAssets = [
     type: "preset" as const,
     status: "draft" as const,
     size: "45 KB",
-    createdAt: new Date("2024-01-11")
+    createdAt: new Date("2024-01-11"),
   },
   {
     id: "6",
@@ -56,18 +56,16 @@ const mockAssets = [
     status: "error" as const,
     duration: "3:45",
     size: "18.2 MB",
-    createdAt: new Date("2024-01-10")
-  }
+    createdAt: new Date("2024-01-10"),
+  },
 ];
 
 export const Grid = () => {
   const [selectedAssets, setSelectedAssets] = useState<string[]>([]);
 
   const handleSelect = (assetId: string) => {
-    setSelectedAssets(prev => 
-      prev.includes(assetId) 
-        ? prev.filter(id => id !== assetId)
-        : [...prev, assetId]
+    setSelectedAssets((prev) =>
+      prev.includes(assetId) ? prev.filter((id) => id !== assetId) : [...prev, assetId],
     );
   };
 
@@ -86,12 +84,13 @@ export const Grid = () => {
           />
         ))}
       </div>
-      
+
       {selectedAssets.length > 0 && (
         <div className="mt-6 p-4 bg-[var(--surface)] rounded-[var(--radius-lg)]">
           <h4 className="text-sm font-medium text-white mb-2">Assets sélectionnés</h4>
           <p className="text-xs text-[var(--text-muted)]">
-            {selectedAssets.length} asset{selectedAssets.length > 1 ? 's' : ''} sélectionné{selectedAssets.length > 1 ? 's' : ''}
+            {selectedAssets.length} asset{selectedAssets.length > 1 ? "s" : ""} sélectionné
+            {selectedAssets.length > 1 ? "s" : ""}
           </p>
         </div>
       )}

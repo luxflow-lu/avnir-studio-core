@@ -3,14 +3,16 @@
 ## Statut des composants
 
 ### ✅ Primitives (6/6)
+
 - **Container** - `Primitives/Container`
-- **Section** - `Primitives/Section` 
+- **Section** - `Primitives/Section`
 - **Stack** (HStack/VStack) - `Primitives/Stack`
 - **Card** - `Primitives/Card`
 - **Divider** - `Primitives/Divider`
 - **Spacer** - `Primitives/Spacer`
 
 ### ✅ Form (10/10)
+
 - **Button** - `Form/Button`
 - **IconButton** - `Form/IconButton`
 - **Input** - `Form/Input`
@@ -23,6 +25,7 @@
 - **FileUpload** - `Form/FileUpload`
 
 ### ✅ Data (7/7)
+
 - **Avatar** - `Data/Avatar`
 - **Badge** - `Data/Badge`
 - **EmptyState** - `Data/EmptyState`
@@ -32,6 +35,7 @@
 - **Table** - `Data/Table`
 
 ### ✅ Overlay (5/5)
+
 - **Drawer** - `Overlay/Drawer`
 - **Modal** - `Overlay/Modal`
 - **Popover** - `Overlay/Popover`
@@ -39,17 +43,20 @@
 - **Tooltip** - `Overlay/Tooltip`
 
 ### ✅ Navigation (4/4)
+
 - **Breadcrumbs** - `Nav/Breadcrumbs`
 - **CommandK** - `Nav/CommandK`
 - **Pagination** - `Nav/Pagination`
 - **Tabs** - `Nav/Tabs`
 
 ### ✅ Layout (3/3)
+
 - **Footer** - `Layout/Footer`
 - **Navbar** - `Layout/Navbar`
 - **Sidebar** - `Layout/Sidebar`
 
 ### ✅ System (5/5)
+
 - **ErrorBoundary** - `System/ErrorBoundary`
 - **LoadingBoundary** - `System/LoadingBoundary`
 - **NotFound404** - `System/NotFound404`
@@ -57,6 +64,7 @@
 - **ThemeToggle** - `System/ThemeToggle`
 
 ### ✅ SaaS (8/8)
+
 - **ApiKeys** - `SaaS/ApiKeys`
 - **DashboardKPI** - `SaaS/DashboardKPI`
 - **ImportExport** - `SaaS/ImportExport`
@@ -67,6 +75,7 @@
 - **SavedViews** - `SaaS/SavedViews`
 
 ### ✅ E-commerce (7/7)
+
 - **CheckoutSteps** - `E-commerce/CheckoutSteps`
 - **FacetedSearch** - `E-commerce/FacetedSearch`
 - **MediaGallery** - `E-commerce/MediaGallery`
@@ -76,6 +85,7 @@
 - **VariantsSwatches** - `E-commerce/VariantsSwatches`
 
 ### ✅ AVNIR (8/8)
+
 - **AssetTile** - `AVNIR/AssetTile`
 - **CreditBalance** - `AVNIR/CreditBalance`
 - **ModelSelector** - `AVNIR/ModelSelector`
@@ -105,6 +115,6 @@ import { Card } from "@/components/primitives/Card";
 
 - Tous les composants utilisent `forwardRef` et `displayName`
 - Classes CSS via `cx()` (clsx)
-- Focus visible et accessibilité (aria-*, sr-only)
+- Focus visible et accessibilité (aria-\*, sr-only)
 - Pas de couleurs HEX thémables
 - Props standards: `variant`, `size`, `disabled`, `loading`

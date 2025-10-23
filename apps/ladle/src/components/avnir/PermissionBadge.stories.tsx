@@ -39,7 +39,7 @@ export const InContext = () => (
   <div className="bg-[var(--bg)] text-white p-6">
     <div className="bg-[var(--surface)] rounded-[var(--radius-lg)] p-4 space-y-4">
       <h3 className="text-lg font-semibold text-white">Membres du projet</h3>
-      
+
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
@@ -53,7 +53,7 @@ export const InContext = () => (
           </div>
           <PermissionBadge level="owner" size="sm" />
         </div>
-        
+
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white text-sm font-medium">
@@ -66,7 +66,7 @@ export const InContext = () => (
           </div>
           <PermissionBadge level="admin" size="sm" />
         </div>
-        
+
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white text-sm font-medium">
@@ -79,7 +79,7 @@ export const InContext = () => (
           </div>
           <PermissionBadge level="write" size="sm" />
         </div>
-        
+
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-gray-500 rounded-full flex items-center justify-center text-white text-sm font-medium">

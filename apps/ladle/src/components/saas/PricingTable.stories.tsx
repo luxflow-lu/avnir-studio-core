@@ -4,8 +4,8 @@ import { PricingTable } from "./PricingTable";
 export default {
   title: "SaaS/PricingTable",
   argTypes: {
-    featuredIndex: { control: { type: "number", min: 0, max: 2 } }
-  }
+    featuredIndex: { control: { type: "number", min: 0, max: 2 } },
+  },
 };
 
 const plans = [
@@ -15,13 +15,8 @@ const plans = [
     price: "€9",
     period: "/mois",
     description: "Perfect for individuals",
-    features: [
-      "5 projects",
-      "10GB storage",
-      "Email support",
-      "Basic analytics"
-    ],
-    cta: { label: "Get Started" }
+    features: ["5 projects", "10GB storage", "Email support", "Basic analytics"],
+    cta: { label: "Get Started" },
   },
   {
     id: "pro",
@@ -35,9 +30,9 @@ const plans = [
       "Priority support",
       "Advanced analytics",
       "Team collaboration",
-      "API access"
+      "API access",
     ],
-    cta: { label: "Start Free Trial" }
+    cta: { label: "Start Free Trial" },
   },
   {
     id: "enterprise",
@@ -50,10 +45,10 @@ const plans = [
       "24/7 phone support",
       "Custom integrations",
       "SLA guarantee",
-      "Dedicated manager"
+      "Dedicated manager",
     ],
-    cta: { label: "Contact Sales" }
-  }
+    cta: { label: "Contact Sales" },
+  },
 ];
 
 function withFeatured(index = 1) {

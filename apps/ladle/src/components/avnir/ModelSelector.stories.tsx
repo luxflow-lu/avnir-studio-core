@@ -7,14 +7,15 @@ const mockModels = [
   {
     id: "beatmaker-pro",
     name: "BeatMaker Pro",
-    description: "Générateur de beats avancé avec intelligence artificielle. Capable de créer des rythmes complexes dans tous les styles.",
+    description:
+      "Générateur de beats avancé avec intelligence artificielle. Capable de créer des rythmes complexes dans tous les styles.",
     type: "audio" as const,
     version: "2.1",
     capabilities: ["Trap", "Drill", "Boom Bap", "Afrobeat", "Lo-Fi"],
     pricing: { credits: 5, unit: "beat" },
     quality: "pro" as const,
     processingTime: "30-60s",
-    available: true
+    available: true,
   },
   {
     id: "vocal-synth",
@@ -27,7 +28,7 @@ const mockModels = [
     quality: "premium" as const,
     processingTime: "45-90s",
     available: true,
-    beta: true
+    beta: true,
   },
   {
     id: "melody-gen",
@@ -39,7 +40,7 @@ const mockModels = [
     pricing: { credits: 3, unit: "mélodie" },
     quality: "standard" as const,
     processingTime: "20-40s",
-    available: true
+    available: true,
   },
   {
     id: "master-ai",
@@ -51,7 +52,7 @@ const mockModels = [
     pricing: { credits: 10, unit: "track" },
     quality: "pro" as const,
     processingTime: "60-120s",
-    available: false
+    available: false,
   },
   {
     id: "bass-synth",
@@ -63,7 +64,7 @@ const mockModels = [
     pricing: { credits: 4, unit: "ligne" },
     quality: "premium" as const,
     processingTime: "25-45s",
-    available: true
+    available: true,
   },
   {
     id: "harmony-ai",
@@ -75,8 +76,8 @@ const mockModels = [
     pricing: { credits: 6, unit: "arrangement" },
     quality: "standard" as const,
     processingTime: "40-70s",
-    available: true
-  }
+    available: true,
+  },
 ];
 
 export const Default = () => {
@@ -91,18 +92,18 @@ export const Default = () => {
             Choisissez le modèle d'intelligence artificielle adapté à votre création
           </p>
         </div>
-        
+
         <ModelSelector
           models={mockModels}
           selectedModel={selectedModel}
           onModelSelect={setSelectedModel}
         />
-        
+
         {selectedModel && (
           <div className="mt-6 p-4 bg-[var(--surface)] rounded-[var(--radius-lg)]">
             <h4 className="text-sm font-medium text-white mb-2">Modèle sélectionné</h4>
             <p className="text-xs text-[var(--text-muted)]">
-              {mockModels.find(m => m.id === selectedModel)?.name}
+              {mockModels.find((m) => m.id === selectedModel)?.name}
             </p>
           </div>
         )}
@@ -119,11 +120,9 @@ export const FilteredByType = () => {
       <div className="max-w-4xl mx-auto">
         <div className="mb-6">
           <h2 className="text-xl font-bold mb-2">Modèles Vocaux</h2>
-          <p className="text-[var(--text-muted)]">
-            Modèles spécialisés dans la génération vocale
-          </p>
+          <p className="text-[var(--text-muted)]">Modèles spécialisés dans la génération vocale</p>
         </div>
-        
+
         <ModelSelector
           models={mockModels}
           selectedModel={selectedModel}

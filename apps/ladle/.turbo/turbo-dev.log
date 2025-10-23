@@ -1,16 +1,290 @@
 
+
 > @avnir/ladle@ dev /Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/ladle
 > ladle serve
 
 Re-optimizing dependencies because lockfile has changed
 
-   ╭────────────────────────────────────────────────────╮
-   │                                                    │
-   │   🥄 Ladle.dev served at http://localhost:62002/   │
-   │   ╰────────────────────────────────────────────────────╯
+[33m   ╭─────────────────────────────╮[39m
+   [33m│[39m                             [33m│[39m
+   [33m│[39m   🥄 Ladle.dev served at    [33m│[39m
+   [33m│[39m   http://localhost:61000/   [33m│[39m
+   [33m│[39m                             [33m│[39m
+[33m   ╰─────────────────────────────╯[39m
 
 
-warn - The `content` option in your Tailwind CSS configuration is missing or empty.
-warn - Configure your content sources or your generated CSS will be missing styles.
-warn - https://tailwindcss.com/docs/content-configuration
-rn - https://tailwindcss.com/docs/content-configuration
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:01:33 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/src/sections/ContentSplitSection.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:01:34 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/src/sections/ContentSplitSection.tsx[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:01:34 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/src/sections/ContentSplitSection.tsx[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:01:34 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/src/sections/ContentSplitSection.tsx[22m [33m(x4)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:01:34 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/src/sections/ContentSplitSection.tsx[22m [33m(x5)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:01:56 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/src/sections/ContentSplitSection.tsx[22m [33m(x6)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:01:56 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/src/sections/ContentSplitSection.tsx[22m [33m(x7)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:02:52 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/icons/dist/index.js[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:02:53 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/icons/dist/index.js[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:02:54 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/brandkit/dist/index.js[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:03:50 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/src/sections/ContentSplitSection.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:03:51 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/src/sections/ContentSplitSection.tsx[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:07:08 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/brandkit/dist/index.js[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:07:09 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/brandkit/dist/index.js[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:07:10 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/brandkit/dist/index.js[22m [33m(x3)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:07:12 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/icons/dist/index.js[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:07:13 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/icons/dist/index.js[22m [33m(x2)[39m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:54:54 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/ladle/src/components/avnir/AssetTile.stories.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:54:56 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/ladle/src/components/avnir/AssetTile.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:54:59 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/ladle/src/components/data/Badge.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:55:27 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/src/sections/ContentSplitSection.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:55:27 PM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/@fs/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/ladle/src/stories/muzisystem.backup/ContentSplitSection.stories.tsx[22m
+
+
+
+
+
+
+
+
+
+
+
+[1;1H[0J[2m3:55:27 PM[22m [36m[1m[vite][22m[39m [32mpage reload [39m[2m/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/ladle/tailwind.config.cjs[22m

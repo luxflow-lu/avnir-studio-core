@@ -1,0 +1,5 @@
+<svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="8" fill="currentColor"/>
+  <path d="M8 24L16 8L24 24H20L18 20H14L12 24H8ZM15 16H17L18 18H14L15 16Z" fill="white"/>
+  <text x="40" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="currentColor">AVNIR STUDIO</text>
+</svg>

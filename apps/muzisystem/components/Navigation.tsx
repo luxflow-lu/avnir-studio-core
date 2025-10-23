@@ -1,43 +1,48 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { useState, useEffect } from "react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const brands = [
-  'avnir', 'muzidev', 'muzipics', 'muziweb', 'muzimerch', 
-  'muzibase', 'muzimanager', 'muzitools', 'promozic', 'paradisebeats', 'lyrix'
+  "avnir-studio",
+  "muzidev",
+  "muzipics",
+  "muziweb",
+  "muzimerch",
+  "muzibase",
+  "muzimanager",
 ];
 
-const themes = ['light', 'dark'];
+const themes = ["dark", "light"];
 
 const navItems = [
-  { href: '/', label: 'Home' },
-  { href: '/foundations', label: 'Foundations' },
-  { href: '/colors', label: 'Colors' },
-  { href: '/components', label: 'Components' },
-  { href: '/guidelines', label: 'Guidelines' },
+  { href: "/", label: "Home" },
+  { href: "/foundations", label: "Foundations" },
+  { href: "/colors", label: "Colors" },
+  { href: "/components", label: "Components" },
+  { href: "/guidelines", label: "Guidelines" },
 ];
 
 export function Navigation() {
   const pathname = usePathname();
-  const [currentBrand, setCurrentBrand] = useState('avnir');
-  const [currentTheme, setCurrentTheme] = useState('dark');
+  const [currentBrand, setCurrentBrand] = useState("avnir-studio");
+  const [currentTheme, setCurrentTheme] = useState("dark");
 
   useEffect(() => {
     // Read current values from HTML
     const html = document.documentElement;
-    setCurrentBrand(html.getAttribute('data-brand') || 'avnir');
-    setCurrentTheme(html.getAttribute('data-theme') || 'dark');
+    setCurrentBrand(html.getAttribute("data-brand") || "avnir-studio");
+    setCurrentTheme(html.getAttribute("data-theme") || "dark");
   }, []);
 
   const updateBrand = (brand: string) => {
-    document.documentElement.setAttribute('data-brand', brand);
+    document.documentElement.setAttribute("data-brand", brand);
     setCurrentBrand(brand);
   };
 
   const updateTheme = (theme: string) => {
-    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.setAttribute("data-theme", theme);
     setCurrentTheme(theme);
   };
 
@@ -56,8 +61,8 @@ export function Navigation() {
                   href={item.href}
                   className={`text-sm transition-colors ${
                     pathname === item.href
-                      ? 'text-primary font-medium'
-                      : 'text-text hover:text-titles'
+                      ? "text-primary font-medium"
+                      : "text-text hover:text-titles"
                   }`}
                 >
                   {item.label}
@@ -65,7 +70,7 @@ export function Navigation() {
               ))}
             </div>
           </div>
-          
+
           <div className="flex items-center space-x-4">
             <select
               value={currentBrand}
@@ -78,7 +83,7 @@ export function Navigation() {
                 </option>
               ))}
             </select>
-            
+
             <select
               value={currentTheme}
               onChange={(e) => updateTheme(e.target.value)}

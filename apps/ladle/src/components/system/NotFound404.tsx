@@ -13,21 +13,29 @@ export interface NotFound404Props extends React.HTMLAttributes<HTMLDivElement> {
 const DefaultIllustration = () => (
   <div className="w-64 h-64 mx-auto mb-8 text-[var(--text-muted)]">
     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={0.5} d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.47.881-6.08 2.33l-.147.15C4.688 18.644 5.312 20 6.5 20h11c1.188 0 1.812-1.356.727-2.52l-.147-.15A7.962 7.962 0 0112 15z" />
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={0.5}
+        d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.47.881-6.08 2.33l-.147.15C4.688 18.644 5.312 20 6.5 20h11c1.188 0 1.812-1.356.727-2.52l-.147-.15A7.962 7.962 0 0112 15z"
+      />
     </svg>
   </div>
 );
 
 export const NotFound404 = React.forwardRef<HTMLDivElement, NotFound404Props>(
-  ({ 
-    className, 
-    title = "Page not found", 
-    description = "Sorry, we couldn't find the page you're looking for.",
-    showHomeButton = true,
-    onHomeClick,
-    illustration,
-    ...props 
-  }, ref) => (
+  (
+    {
+      className,
+      title = "Page not found",
+      description = "Sorry, we couldn't find the page you're looking for.",
+      showHomeButton = true,
+      onHomeClick,
+      illustration,
+      ...props
+    },
+    ref,
+  ) => (
     <div
       ref={ref}
       className={cx("min-h-screen flex items-center justify-center bg-[var(--bg)] px-4", className)}
@@ -35,7 +43,7 @@ export const NotFound404 = React.forwardRef<HTMLDivElement, NotFound404Props>(
     >
       <div className="text-center max-w-md">
         {illustration || <DefaultIllustration />}
-        
+
         <div className="mb-8">
           <h1 className="text-6xl font-bold text-[var(--brand)] mb-4">404</h1>
           <h2 className="text-2xl font-semibold text-white mb-4">{title}</h2>
@@ -48,7 +56,7 @@ export const NotFound404 = React.forwardRef<HTMLDivElement, NotFound404Props>(
               Go back home
             </Button>
             <div>
-              <button 
+              <button
                 onClick={() => window.history.back()}
                 className="text-[var(--text-muted)] hover:text-white transition-colors text-sm"
               >
@@ -59,6 +67,6 @@ export const NotFound404 = React.forwardRef<HTMLDivElement, NotFound404Props>(
         )}
       </div>
     </div>
-  )
+  ),
 );
 NotFound404.displayName = "NotFound404";

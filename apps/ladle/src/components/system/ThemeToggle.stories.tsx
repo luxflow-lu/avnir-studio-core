@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { ThemeToggle } from "./ThemeToggle";
+import { ThemeToggle, type ThemeMode } from "./ThemeToggle";
 
 export default { title: "System/ThemeToggle" };
 
 export const Default = () => {
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
-  
+  const [theme, setTheme] = useState<ThemeMode>("dark");
+
   return (
     <div className="bg-[var(--bg)] text-white p-6">
       <div className="flex items-center gap-4">
@@ -17,8 +17,8 @@ export const Default = () => {
 };
 
 export const InNavbar = () => {
-  const [theme, setTheme] = useState<"light" | "dark">("dark");
-  
+  const [theme, setTheme] = useState<ThemeMode>("dark");
+
   return (
     <div className="bg-[var(--bg)] text-white">
       <div className="flex items-center justify-between p-4 border-b border-white/10">

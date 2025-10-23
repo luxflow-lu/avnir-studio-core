@@ -28,7 +28,9 @@ export const WithImage = () => (
     <CtaSection
       title="Tout ce qu'il faut pour lancer"
       subtitle="Composants réactifs et accessibles."
-      image={<div className="aspect-video w-full rounded-[var(--radius)] bg-card border border-border" />}
+      image={
+        <div className="aspect-video w-full rounded-[var(--radius)] bg-card border border-border" />
+      }
       actions={<Button>Voir la démo</Button>}
     />
   </Wrapper>
@@ -40,7 +42,9 @@ export const Reverse = () => (
       title="Un design cohérent"
       subtitle="Un seul système de tokens pour toute l'app."
       reverse
-      image={<div className="aspect-video w-full rounded-[var(--radius)] bg-card border border-border" />}
+      image={
+        <div className="aspect-video w-full rounded-[var(--radius)] bg-card border border-border" />
+      }
       actions={<Button>Documentation</Button>}
     />
   </Wrapper>

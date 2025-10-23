@@ -45,8 +45,8 @@ export const MegaMenu = React.forwardRef<HTMLDivElement, MegaMenuProps>(
       };
 
       if (isOpen) {
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
       }
     }, [isOpen, setOpen]);
 
@@ -114,10 +114,7 @@ export const MegaMenu = React.forwardRef<HTMLDivElement, MegaMenuProps>(
                   <h4 className="text-sm font-medium text-white">Featured Products</h4>
                   <p className="text-xs text-[var(--text-muted)]">Discover our latest offerings</p>
                 </div>
-                <a
-                  href="/featured"
-                  className="text-sm text-[var(--brand)] hover:underline"
-                >
+                <a href="/featured" className="text-sm text-[var(--brand)] hover:underline">
                   View All →
                 </a>
               </div>
@@ -126,6 +123,6 @@ export const MegaMenu = React.forwardRef<HTMLDivElement, MegaMenuProps>(
         )}
       </div>
     );
-  }
+  },
 );
 MegaMenu.displayName = "MegaMenu";

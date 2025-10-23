@@ -1,0 +1,6 @@
+<svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="8" fill="#FF9D00"/>
+  <path d="M8 24V8H12L16 16L20 8H24V24H20V14L16 22L12 14V24H8Z" fill="white"/>
+  <rect x="10" y="18" width="12" height="4" rx="2" fill="white"/>
+  <text x="40" y="20" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="currentColor">MUZIMERCH</text>
+</svg>

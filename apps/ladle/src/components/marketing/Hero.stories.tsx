@@ -31,7 +31,9 @@ export const Split = () => (
       eyebrow="Plateforme"
       title="Accélérez vos lancements"
       subtitle="Une base solide avec des primitives, styles et tokens unifiés."
-      image={<div className="aspect-video w-full rounded-[var(--radius)] bg-card border border-border" />}
+      image={
+        <div className="aspect-video w-full rounded-[var(--radius)] bg-card border border-border" />
+      }
       actions={<Button>Essayer maintenant</Button>}
     />
   </Wrapper>

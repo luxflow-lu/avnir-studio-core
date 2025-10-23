@@ -13,7 +13,7 @@ const mockJobs = [
     startTime: new Date(Date.now() - 45000),
     estimatedTime: 30,
     modelUsed: "BeatMaker Pro v2.1",
-    creditsUsed: 5
+    creditsUsed: 5,
   },
   {
     id: "2",
@@ -24,7 +24,7 @@ const mockJobs = [
     endTime: new Date(Date.now() - 30000),
     outputUrl: "https://example.com/output.mp4",
     modelUsed: "Video AI v1.5",
-    creditsUsed: 15
+    creditsUsed: 15,
   },
   {
     id: "3",
@@ -35,14 +35,14 @@ const mockJobs = [
     endTime: new Date(Date.now() - 90000),
     errorMessage: "Erreur de traitement: format audio non supporté",
     modelUsed: "Vocal Synth v1.8",
-    creditsUsed: 8
+    creditsUsed: 8,
   },
   {
     id: "4",
     name: "Cover Album.jpg",
     type: "image" as const,
     status: "queued" as const,
-    modelUsed: "Image Gen v2.0"
+    modelUsed: "Image Gen v2.0",
   },
   {
     id: "5",
@@ -51,8 +51,8 @@ const mockJobs = [
     status: "cancelled" as const,
     startTime: new Date(Date.now() - 60000),
     endTime: new Date(Date.now() - 45000),
-    modelUsed: "Master AI v3.0"
-  }
+    modelUsed: "Master AI v3.0",
+  },
 ];
 
 export const AllStates = () => (
@@ -71,28 +71,19 @@ export const AllStates = () => (
 
 export const Processing = () => (
   <div className="bg-[var(--bg)] text-white p-6">
-    <RenderStatus
-      job={mockJobs[0]}
-      onCancel={(id) => console.log("Cancel", id)}
-    />
+    <RenderStatus job={mockJobs[0]} onCancel={(id) => console.log("Cancel", id)} />
   </div>
 );
 
 export const Completed = () => (
   <div className="bg-[var(--bg)] text-white p-6">
-    <RenderStatus
-      job={mockJobs[1]}
-      onDownload={(id) => console.log("Download", id)}
-    />
+    <RenderStatus job={mockJobs[1]} onDownload={(id) => console.log("Download", id)} />
   </div>
 );
 
 export const Failed = () => (
   <div className="bg-[var(--bg)] text-white p-6">
-    <RenderStatus
-      job={mockJobs[2]}
-      onRetry={(id) => console.log("Retry", id)}
-    />
+    <RenderStatus job={mockJobs[2]} onRetry={(id) => console.log("Retry", id)} />
   </div>
 );
 

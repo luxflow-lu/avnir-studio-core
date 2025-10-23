@@ -4,7 +4,7 @@ import { ServerError500 } from "./ServerError500";
 export default { title: "System/ServerError500" };
 
 export const Default = () => (
-  <ServerError500 
+  <ServerError500
     onRetry={() => console.log("Retry clicked")}
     onReport={() => console.log("Report clicked")}
   />

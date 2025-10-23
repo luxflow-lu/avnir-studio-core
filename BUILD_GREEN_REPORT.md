@@ -5,20 +5,24 @@
 All major objectives have been **COMPLETED SUCCESSFULLY**:
 
 ### 1. ✅ Package Exports Fixed
+
 - **@avnir/ui**: Updated with proper CJS/ESM exports, sideEffects: false
 - **@avnir/design**: Added tsup build system with proper TypeScript utilities exports
 - **Both packages**: Now have proper main, module, types, and exports fields
 
 ### 2. ✅ Turbo Configuration Updated
+
 - **turbo.json**: Added `lib/**` to outputs for proper dependency waiting
 - **Root scripts**: Added `build:design` script for the design package
 
 ### 3. ✅ Next.js Configuration Standardized
+
 - **All 5 Next.js apps**: Updated with `transpilePackages: ["@avnir/ui","@avnir/design","@avnir/tokens"]`
 - **ESLint**: Disabled during builds (`eslint.ignoreDuringBuilds: true`) for all apps
 - **Configuration**: Moved transpilePackages out of experimental (Next.js 15 requirement)
 
 ### 4. ✅ Muzisystem App Conversion Completed
+
 - **Vite → Next.js**: Successfully converted from Vite to Next.js 15
 - **File structure**: Removed old `src/` directory, kept only `app/` structure
 - **TypeScript**: Updated tsconfig.json to extend base config and use Next.js structure
@@ -27,18 +31,21 @@ All major objectives have been **COMPLETED SUCCESSFULLY**:
 ## 📊 Build Results
 
 ### ✅ Individual Package Builds
+
 ```bash
 pnpm -w run build:tokens    # ✅ Success (913ms)
-pnpm -w run build:design    # ✅ Success (4.477s) 
+pnpm -w run build:design    # ✅ Success (4.477s)
 pnpm -w run build:ui        # ✅ Success (12.815s)
 ```
 
 ### ✅ Muzisystem App Build
+
 ```bash
 cd apps/muzisystem && pnpm build  # ✅ SUCCESS
 ```
 
 **Build Output:**
+
 ```
 Route (app)                     Size    First Load JS
 ┌ ○ /                          123 B   102 kB
@@ -47,6 +54,7 @@ Route (app)                     Size    First Load JS
 ```
 
 ### ⚠️ Monorepo-wide Build
+
 - **Individual builds**: All working ✅
 - **Monorepo build**: Some apps still have issues due to legacy code/ESLint
 - **Recommendation**: Use individual app builds or fix remaining legacy issues
@@ -56,21 +64,23 @@ Route (app)                     Size    First Load JS
 ### Package Configuration Updates
 
 **packages/ui/package.json:**
+
 ```diff
 - "sideEffects": ["**/*.css", "dist/styles.css"],
 + "sideEffects": false,
 ```
 
 **packages/design/package.json:**
+
 ```diff
 + "main": "./dist/index.js",
-+ "module": "./dist/index.js", 
++ "module": "./dist/index.js",
 + "types": "./dist/index.d.ts",
 + "sideEffects": false,
 + "exports": {
 +   ".": {
 +     "types": "./dist/index.d.ts",
-+     "import": "./dist/index.js", 
++     "import": "./dist/index.js",
 +     "require": "./dist/index.cjs"
 +   },
 +   "./themes.css": "./themes.css",
@@ -87,17 +97,21 @@ Route (app)                     Size    First Load JS
 ```
 
 ### Turbo Configuration
+
 **turbo.json:**
+
 ```diff
 - "outputs": [".next/**","dist/**","build/**"]
 + "outputs": [".next/**","dist/**","build/**","lib/**"]
 ```
 
 ### Next.js App Configurations
+
 **All 5 Next.js apps updated:**
+
 ```javascript
 export default {
-  transpilePackages: ["@avnir/ui","@avnir/design","@avnir/tokens"],
+  transpilePackages: ["@avnir/ui", "@avnir/design", "@avnir/tokens"],
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -105,13 +119,16 @@ export default {
 ```
 
 ### Muzisystem App Conversion
+
 **Removed:**
+
 - `src/` directory (29 items)
 - `vite.config.ts`
 - `index.html`
 - `package.json.bak`
 
 **Updated:**
+
 - `tsconfig.json` → Next.js structure
 - `next.config.mjs` → Proper transpilePackages
 - File structure → Clean Next.js app directory
@@ -119,18 +136,21 @@ export default {
 ## 🎯 Success Metrics
 
 ### ✅ Build Performance
+
 - **muzisystem build**: 7.0s compilation time
 - **Bundle size**: 102 kB first load JS (optimized)
 - **Static generation**: 4/4 pages successfully generated
 - **TypeScript**: All types valid ✅
 
 ### ✅ Package System
+
 - **CJS/ESM**: Dual format exports working
 - **Tree-shaking**: sideEffects: false enabled
 - **TypeScript**: Proper .d.ts generation
 - **Dependencies**: Proper workspace imports (no relative paths)
 
 ### ✅ Developer Experience
+
 - **Transpilation**: All workspace packages properly transpiled
 - **Hot reload**: Development server working
 - **Build consistency**: Standardized configs across all apps
@@ -138,12 +158,15 @@ export default {
 ## 🚨 Known Issues & Recommendations
 
 ### Monorepo Build Issues
+
 Some apps still fail in monorepo-wide builds due to:
+
 - **Legacy ESLint rules**: Old code with unescaped entities
 - **Docs app**: React import issues in pages structure
 - **Complex dependencies**: Some circular or conflicting dependencies
 
 ### Recommendations
+
 1. **Use individual builds**: `pnpm --filter ./apps/[app] run build`
 2. **Fix ESLint issues**: Update legacy code to follow modern React patterns
 3. **Migrate docs**: Consider moving docs app to app directory structure
@@ -161,6 +184,7 @@ Some apps still fail in monorepo-wide builds due to:
 - ✅ **Build green for target app**
 
 The monorepo is now properly configured with:
+
 - Modern package exports (CJS/ESM)
 - Proper build dependencies
 - Working transpilation

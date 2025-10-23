@@ -3,9 +3,7 @@ import { NotFound404 } from "./NotFound404";
 
 export default { title: "System/NotFound404" };
 
-export const Default = () => (
-  <NotFound404 onHomeClick={() => console.log("Go home clicked")} />
-);
+export const Default = () => <NotFound404 onHomeClick={() => console.log("Go home clicked")} />;
 
 export const CustomContent = () => (
   <NotFound404
@@ -27,7 +25,12 @@ export const CustomIllustration = () => {
   const customIllustration = (
     <div className="w-64 h-64 mx-auto mb-8 text-[var(--brand)]">
       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={1}
+          d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+        />
       </svg>
     </div>
   );

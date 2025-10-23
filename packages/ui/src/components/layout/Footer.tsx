@@ -30,16 +30,17 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
               <div key={index}>
                 <h3 className="text-white font-semibold mb-4">{section.title}</h3>
                 <ul className="space-y-2">
-                  {section.links && section.links.map((link, linkIndex) => (
-                    <li key={linkIndex}>
-                      <a
-                        href={link.href}
-                        className="text-[var(--text-muted)] hover:text-white transition-colors text-sm"
-                      >
-                        {link.label}
-                      </a>
-                    </li>
-                  ))}
+                  {section.links &&
+                    section.links.map((link, linkIndex) => (
+                      <li key={linkIndex}>
+                        <a
+                          href={link.href}
+                          className="text-[var(--text-muted)] hover:text-white transition-colors text-sm"
+                        >
+                          {link.label}
+                        </a>
+                      </li>
+                    ))}
                 </ul>
               </div>
             ))}
@@ -48,12 +49,10 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
       )}
       {bottomContent && (
         <div className="border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-4 md:px-6 py-6">
-            {bottomContent}
-          </div>
+          <div className="max-w-7xl mx-auto px-4 md:px-6 py-6">{bottomContent}</div>
         </div>
       )}
     </footer>
-  )
+  ),
 );
 Footer.displayName = "Footer";

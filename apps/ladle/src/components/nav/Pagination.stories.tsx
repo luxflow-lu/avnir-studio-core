@@ -7,11 +7,7 @@ export const Default = () => {
   const [currentPage, setCurrentPage] = useState(5);
   return (
     <div className="bg-[var(--bg)] text-white p-6">
-      <Pagination
-        currentPage={currentPage}
-        totalPages={20}
-        onPageChange={setCurrentPage}
-      />
+      <Pagination currentPage={currentPage} totalPages={20} onPageChange={setCurrentPage} />
       <p className="mt-4 text-sm text-[var(--text-muted)]">Current page: {currentPage}</p>
     </div>
   );

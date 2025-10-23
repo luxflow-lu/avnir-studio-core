@@ -1,34 +1,59 @@
 name: CI
-on:
-  push: { branches: [main] }
-  pull_request:
+on: [push, pull_request]
+
 jobs:
-  build:
+  ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: 20
+          cache: "pnpm"
 
       - name: Setup pnpm
-        run: |
-          corepack enable
-          corepack prepare pnpm@9.6.0 --activate
-          node -v && pnpm -v
+        run: corepack enable && corepack prepare pnpm@9.6.0 --activate
 
-      - name: Install
-        run: pnpm -w install --frozen-lockfile
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
 
-      - name: Build libs
-        run: |
-          pnpm -w run build:tokens
-          pnpm -w run build:design  
-          pnpm -w run build:ui
+      - name: Type check
+        run: pnpm typecheck
 
-      - name: Build apps individually
-        run: |
-          pnpm -w --filter ./apps/muzisystem run build
-          pnpm -w --filter ./apps/avnir-studio run build
-          pnpm -w --filter ./apps/muzidev run build
-          pnpm -w --filter ./apps/muzipics run build
+      - name: Lint
+        run: pnpm lint
+
+      - name: Test
+        run: pnpm test
+
+      - name: Build
+        run: pnpm -w build
+
+  ladle-preview:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    needs: ci
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+
+      - name: Setup pnpm
+        run: corepack enable && corepack prepare pnpm@9.6.0 --activate
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build Ladle static
+        run: pnpm build:ladle
+
+      - name: Upload Ladle preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: ladle-preview
+          path: apps/ladle/build/
+          retention-days: 7

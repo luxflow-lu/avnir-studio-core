@@ -22,9 +22,10 @@ export const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
       if (isVisible && triggerRef.current && tooltipRef.current) {
         const triggerRect = triggerRef.current.getBoundingClientRect();
         const tooltipRect = tooltipRef.current.getBoundingClientRect();
-        
-        let x = 0, y = 0;
-        
+
+        let x = 0,
+          y = 0;
+
         switch (side) {
           case "top":
             x = triggerRect.left + triggerRect.width / 2 - tooltipRect.width / 2;
@@ -43,7 +44,7 @@ export const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
             y = triggerRect.top + triggerRect.height / 2 - tooltipRect.height / 2;
             break;
         }
-        
+
         setPosition({ x, y });
       }
     }, [isVisible, side]);
@@ -62,7 +63,7 @@ export const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
             ref={tooltipRef}
             className={cx(
               "fixed z-50 px-2 py-1 text-xs text-white bg-black rounded shadow-lg pointer-events-none",
-              className
+              className,
             )}
             style={{ left: position.x, top: position.y }}
             role="tooltip"
@@ -72,6 +73,6 @@ export const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
         )}
       </div>
     );
-  }
+  },
 );
 Tooltip.displayName = "Tooltip";

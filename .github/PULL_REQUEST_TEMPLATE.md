@@ -19,12 +19,14 @@ Décrivez brièvement les changements apportés dans cette PR.
 ## 🎨 Design System Checklist
 
 ### Tokens & Couleurs
+
 - [ ] **Tokens utilisés** : Pas de couleurs hex hardcodées (`#ff0000`, etc.)
 - [ ] **Variables CSS** : Utilisation des variables CSS (`var(--primary)`, `var(--bg)`, etc.)
 - [ ] **Thèmes testés** : Testé en mode light et dark
 - [ ] **Brands testées** : Testé avec différentes brands si applicable
 
 ### Accessibilité (A11y)
+
 - [ ] **Focus visible** : Tous les éléments interactifs ont un focus visible
 - [ ] **ARIA labels** : Attributs ARIA appropriés ajoutés si nécessaire
 - [ ] **Navigation clavier** : Support complet du clavier (Tab, Enter, Espace, Échap)
@@ -32,12 +34,14 @@ Décrivez brièvement les changements apportés dans cette PR.
 - [ ] **Screen readers** : Testé avec un lecteur d'écran si applicable
 
 ### Responsive Design
+
 - [ ] **Mobile (sm)** : Testé sur mobile (≥ 640px)
 - [ ] **Tablet (md)** : Testé sur tablet (≥ 768px)
 - [ ] **Desktop (lg)** : Testé sur desktop (≥ 1024px)
 - [ ] **Breakpoints** : Utilisation des breakpoints Tailwind appropriés
 
 ### Code Quality
+
 - [ ] **No relative imports** : Pas d'imports relatifs vers `../../packages/`
 - [ ] **Package imports** : Utilisation des imports de packages (`@avnir/ui`, `@avnir/design`, etc.)
 - [ ] **TypeScript** : Types corrects et pas de `any`
@@ -45,6 +49,7 @@ Décrivez brièvement les changements apportés dans cette PR.
 - [ ] **Naming** : Conventions de nommage respectées
 
 ### Components & UI
+
 - [ ] **Stories Ladle** : Stories mises à jour si composants UI touchés
 - [ ] **Variants** : Tous les variants du composant testés
 - [ ] **États** : États disabled, loading, error testés si applicable
@@ -61,9 +66,11 @@ Décrivez brièvement les changements apportés dans cette PR.
 <!-- Ajoutez des screenshots ou vidéos pour les changements visuels -->
 
 ### Avant
+
 <!-- Screenshot avant les changements -->
 
 ### Après
+
 <!-- Screenshot après les changements -->
 
 ## 🔗 Issues liées

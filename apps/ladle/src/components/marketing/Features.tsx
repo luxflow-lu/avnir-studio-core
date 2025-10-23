@@ -19,11 +19,19 @@ const colMap: Record<NonNullable<FeaturesProps["columns"]>, string> = {
 export const Features = React.forwardRef<HTMLElement, FeaturesProps>(
   ({ title, subtitle, items, columns = 3, className, ...props }, ref) => {
     return (
-      <section ref={ref} className={cx("w-full mx-auto px-4 md:px-6 py-16 md:py-24", className)} {...props}>
+      <section
+        ref={ref}
+        className={cx("w-full mx-auto px-4 md:px-6 py-16 md:py-24", className)}
+        {...props}
+      >
         <div className="mx-auto max-w-7xl">
           {(title || subtitle) && (
             <div className="mb-10 text-center">
-              {title && <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">{title}</h2>}
+              {title && (
+                <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
+                  {title}
+                </h2>
+              )}
               {subtitle && <p className="mt-3 text-lg text-muted-foreground">{subtitle}</p>}
             </div>
           )}
@@ -39,13 +47,17 @@ export const Features = React.forwardRef<HTMLElement, FeaturesProps>(
                   </div>
                 )}
                 <h3 className="font-medium tracking-tight text-card-foreground">{it.title}</h3>
-                {it.description && <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{it.description}</p>}
+                {it.description && (
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    {it.description}
+                  </p>
+                )}
               </div>
             ))}
           </div>
         </div>
       </section>
     );
-  }
+  },
 );
 Features.displayName = "Features";

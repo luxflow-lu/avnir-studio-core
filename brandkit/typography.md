@@ -1,5 +1,7 @@
 # Typographie
+
 Base rem (1rem=16px)
+
 - H1: 3rem / 1.15 / 700
 - H2: 2rem / 1.2 / 700
 - H3: 1.625rem / 1.25 / 600

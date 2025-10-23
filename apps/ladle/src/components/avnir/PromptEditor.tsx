@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import { cx } from "../../utils/cx";
 import { Button } from "../form/Button";
 import { Textarea } from "../form/Textarea";
@@ -19,7 +19,7 @@ export interface PromptHistory {
   result?: string;
 }
 
-export interface PromptEditorProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface PromptEditorProps extends Omit<React.HTMLAttributes<HTMLDivElement>, "onChange"> {
   value: string;
   onChange: (value: string) => void;
   presets?: PromptPreset[];
@@ -32,26 +32,29 @@ export interface PromptEditorProps extends React.HTMLAttributes<HTMLDivElement> 
 }
 
 export const PromptEditor = React.forwardRef<HTMLDivElement, PromptEditorProps>(
-  ({ 
-    className, 
-    value, 
-    onChange, 
-    presets = [], 
-    history = [], 
-    onGenerate, 
-    onSavePreset,
-    loading = false,
-    maxLength = 2000,
-    placeholder = "Décrivez votre création musicale...",
-    ...props 
-  }, ref) => {
+  (
+    {
+      className,
+      value,
+      onChange,
+      presets = [],
+      history = [],
+      onGenerate,
+      onSavePreset,
+      loading = false,
+      maxLength = 2000,
+      placeholder = "Décrivez votre création musicale...",
+      ...props
+    },
+    ref,
+  ) => {
     const [showPresets, setShowPresets] = React.useState(false);
     const [showHistory, setShowHistory] = React.useState(false);
     const [savePresetName, setSavePresetName] = React.useState("");
     const [showSavePreset, setShowSavePreset] = React.useState(false);
 
     const presetCategories = React.useMemo(() => {
-      const categories = new Set(presets.map(p => p.category));
+      const categories = new Set(presets.map((p) => p.category));
       return Array.from(categories);
     }, [presets]);
 
@@ -73,7 +76,10 @@ export const PromptEditor = React.forwardRef<HTMLDivElement, PromptEditorProps>(
       }
     };
 
-    const wordCount = value.trim().split(/\s+/).filter(word => word.length > 0).length;
+    const wordCount = value
+      .trim()
+      .split(/\s+/)
+      .filter((word) => word.length > 0).length;
     const charCount = value.length;
 
     return (
@@ -81,36 +87,39 @@ export const PromptEditor = React.forwardRef<HTMLDivElement, PromptEditorProps>(
         {/* Toolbar */}
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setShowPresets(!showPresets)}
-            >
+            <Button variant="ghost" size="sm" onClick={() => setShowPresets(!showPresets)}>
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                />
               </svg>
               Presets
             </Button>
-            
-            <Button
-              variant="ghost"
-              size="sm"
-              onClick={() => setShowHistory(!showHistory)}
-            >
+
+            <Button variant="ghost" size="sm" onClick={() => setShowHistory(!showHistory)}>
               <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
               </svg>
               Historique
             </Button>
 
             {value.trim() && (
-              <Button
-                variant="ghost"
-                size="sm"
-                onClick={() => setShowSavePreset(true)}
-              >
+              <Button variant="ghost" size="sm" onClick={() => setShowSavePreset(true)}>
                 <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3-3m0 0l-3 3m3-3v12" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3-3m0 0l-3 3m3-3v12"
+                  />
                 </svg>
                 Sauver
               </Button>
@@ -132,38 +141,45 @@ export const PromptEditor = React.forwardRef<HTMLDivElement, PromptEditorProps>(
                 className="text-[var(--text-muted)] hover:text-white"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             </div>
-            
-            {presetCategories.map(category => (
+
+            {presetCategories.map((category) => (
               <div key={category} className="space-y-2">
                 <h4 className="text-xs font-medium text-[var(--text-muted)] uppercase tracking-wide">
                   {category}
                 </h4>
                 <div className="space-y-2">
-                  {presets.filter(p => p.category === category).map(preset => (
-                    <button
-                      key={preset.id}
-                      onClick={() => handlePresetSelect(preset)}
-                      className="w-full text-left p-3 rounded-[var(--radius-sm)] hover:bg-white/5 transition-colors"
-                    >
-                      <div className="flex items-start justify-between mb-2">
-                        <h5 className="text-sm font-medium text-white">{preset.name}</h5>
-                        <div className="flex flex-wrap gap-1">
-                          {preset.tags.slice(0, 2).map(tag => (
-                            <Badge key={tag} className="text-xs">
-                              {tag}
-                            </Badge>
-                          ))}
+                  {presets
+                    .filter((p) => p.category === category)
+                    .map((preset) => (
+                      <button
+                        key={preset.id}
+                        onClick={() => handlePresetSelect(preset)}
+                        className="w-full text-left p-3 rounded-[var(--radius-sm)] hover:bg-white/5 transition-colors"
+                      >
+                        <div className="flex items-start justify-between mb-2">
+                          <h5 className="text-sm font-medium text-white">{preset.name}</h5>
+                          <div className="flex flex-wrap gap-1">
+                            {preset.tags.slice(0, 2).map((tag) => (
+                              <Badge key={tag} className="text-xs">
+                                {tag}
+                              </Badge>
+                            ))}
+                          </div>
                         </div>
-                      </div>
-                      <p className="text-xs text-[var(--text-muted)] line-clamp-2">
-                        {preset.prompt}
-                      </p>
-                    </button>
-                  ))}
+                        <p className="text-xs text-[var(--text-muted)] line-clamp-2">
+                          {preset.prompt}
+                        </p>
+                      </button>
+                    ))}
                 </div>
               </div>
             ))}
@@ -180,18 +196,23 @@ export const PromptEditor = React.forwardRef<HTMLDivElement, PromptEditorProps>(
                 className="text-[var(--text-muted)] hover:text-white"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             </div>
-            
+
             <div className="space-y-2 max-h-60 overflow-y-auto">
               {history.length === 0 ? (
                 <p className="text-sm text-[var(--text-muted)] text-center py-4">
                   Aucun historique disponible
                 </p>
               ) : (
-                history.map(item => (
+                history.map((item) => (
                   <button
                     key={item.id}
                     onClick={() => handleHistorySelect(item)}
@@ -202,14 +223,10 @@ export const PromptEditor = React.forwardRef<HTMLDivElement, PromptEditorProps>(
                         {item.timestamp.toLocaleDateString()} {item.timestamp.toLocaleTimeString()}
                       </span>
                       {item.result && (
-                        <Badge className="text-xs bg-green-500/15 text-green-400">
-                          Généré
-                        </Badge>
+                        <Badge className="text-xs bg-green-500/15 text-green-400">Généré</Badge>
                       )}
                     </div>
-                    <p className="text-sm text-white line-clamp-2">
-                      {item.prompt}
-                    </p>
+                    <p className="text-sm text-white line-clamp-2">{item.prompt}</p>
                   </button>
                 ))
               )}
@@ -266,6 +283,6 @@ export const PromptEditor = React.forwardRef<HTMLDivElement, PromptEditorProps>(
         )}
       </div>
     );
-  }
+  },
 );
 PromptEditor.displayName = "PromptEditor";

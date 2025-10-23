@@ -19,23 +19,27 @@ export interface MediaGalleryProps extends React.HTMLAttributes<HTMLDivElement> 
 }
 
 export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
-  ({ 
-    className, 
-    media, 
-    selectedIndex = 0, 
-    onMediaChange, 
-    showThumbnails = true,
-    autoPlay = false,
-    loop = true,
-    ...props 
-  }, ref) => {
+  (
+    {
+      className,
+      media,
+      selectedIndex = 0,
+      onMediaChange,
+      showThumbnails = true,
+      autoPlay = false,
+      loop = true,
+      ...props
+    },
+    ref,
+  ) => {
     const [currentIndex, setCurrentIndex] = React.useState(selectedIndex);
     const [isZoomed, setIsZoomed] = React.useState(false);
 
     const currentMedia = media[currentIndex];
 
     const goToNext = () => {
-      const nextIndex = currentIndex === media.length - 1 ? (loop ? 0 : currentIndex) : currentIndex + 1;
+      const nextIndex =
+        currentIndex === media.length - 1 ? (loop ? 0 : currentIndex) : currentIndex + 1;
       setCurrentIndex(nextIndex);
       onMediaChange?.(nextIndex);
     };
@@ -72,10 +76,10 @@ export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
       <div ref={ref} className={cx("space-y-4", className)} {...props}>
         {/* Main Media Display */}
         <div className="relative group">
-          <div 
+          <div
             className={cx(
               "relative aspect-square bg-white/5 rounded-[var(--radius-lg)] overflow-hidden",
-              isZoomed && "fixed inset-4 z-50 aspect-auto"
+              isZoomed && "fixed inset-4 z-50 aspect-auto",
             )}
           >
             {currentMedia.type === "image" ? (
@@ -84,7 +88,7 @@ export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
                 alt={currentMedia.alt}
                 className={cx(
                   "w-full h-full object-cover cursor-zoom-in transition-transform",
-                  isZoomed && "cursor-zoom-out object-contain"
+                  isZoomed && "cursor-zoom-out object-contain",
                 )}
                 onClick={() => setIsZoomed(!isZoomed)}
               />
@@ -107,7 +111,12 @@ export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
                   aria-label="Previous image"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 19l-7-7 7-7"
+                    />
                   </svg>
                 </button>
                 <button
@@ -116,7 +125,12 @@ export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
                   aria-label="Next image"
                 >
                   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
                   </svg>
                 </button>
               </>
@@ -137,7 +151,12 @@ export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
                 aria-label="Close zoom"
               >
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M6 18L18 6M6 6l12 12"
+                  />
                 </svg>
               </button>
             )}
@@ -155,7 +174,7 @@ export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
                   "flex-shrink-0 w-16 h-16 rounded-[var(--radius-sm)] overflow-hidden border-2 transition-all",
                   index === currentIndex
                     ? "border-[var(--brand)]"
-                    : "border-white/20 hover:border-white/40"
+                    : "border-white/20 hover:border-white/40",
                 )}
               >
                 {item.type === "image" ? (
@@ -166,8 +185,18 @@ export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
                   />
                 ) : (
                   <div className="w-full h-full bg-white/5 flex items-center justify-center">
-                    <svg className="w-6 h-6 text-[var(--text-muted)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <svg
+                      className="w-6 h-6 text-[var(--text-muted)]"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
                     </svg>
                   </div>
                 )}
@@ -178,13 +207,10 @@ export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
 
         {/* Zoom Backdrop */}
         {isZoomed && (
-          <div 
-            className="fixed inset-0 bg-black/80 z-40"
-            onClick={() => setIsZoomed(false)}
-          />
+          <div className="fixed inset-0 bg-black/80 z-40" onClick={() => setIsZoomed(false)} />
         )}
       </div>
     );
-  }
+  },
 );
 MediaGallery.displayName = "MediaGallery";

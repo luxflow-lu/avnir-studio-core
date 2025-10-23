@@ -3,7 +3,7 @@ import { cx } from "../../utils/cx";
 import { Button } from "../form/Button";
 import { FileUpload } from "../form/FileUpload";
 import { Select } from "../form/Select";
-import { Progress } from "../data/Progress";
+import { Progress } from "../data-display/Progress";
 
 export type ExportFormat = "csv" | "json" | "xlsx";
 export type ImportStatus = "idle" | "uploading" | "processing" | "success" | "error";
@@ -19,23 +19,30 @@ export interface ImportExportProps extends React.HTMLAttributes<HTMLDivElement> 
 
 const formatLabels: Record<ExportFormat, string> = {
   csv: "CSV",
-  json: "JSON", 
-  xlsx: "Excel (XLSX)"
+  json: "JSON",
+  xlsx: "Excel (XLSX)",
 };
 
 export const ImportExport = React.forwardRef<HTMLDivElement, ImportExportProps>(
-  ({ 
-    className, 
-    onExport, 
-    onImport, 
-    supportedFormats = ["csv", "json", "xlsx"],
-    importStatus = "idle",
-    importProgress = 0,
-    exportCount,
-    ...props 
-  }, ref) => {
-    const [exportFormat, setExportFormat] = React.useState<ExportFormat>(supportedFormats[0]);
-    const [importFormat, setImportFormat] = React.useState<ExportFormat>(supportedFormats[0]);
+  (
+    {
+      className,
+      onExport,
+      onImport,
+      supportedFormats = ["csv", "json", "xlsx"],
+      importStatus = "idle",
+      importProgress = 0,
+      exportCount,
+      ...props
+    },
+    ref,
+  ) => {
+    const [exportFormat, setExportFormat] = React.useState<ExportFormat>(
+      supportedFormats[0] || "json",
+    );
+    const [importFormat, setImportFormat] = React.useState<ExportFormat>(
+      supportedFormats[0] || "json",
+    );
     const [isExporting, setIsExporting] = React.useState(false);
 
     const handleExport = async () => {
@@ -48,8 +55,9 @@ export const ImportExport = React.forwardRef<HTMLDivElement, ImportExportProps>(
     };
 
     const handleImport = async (files: File[]) => {
-      if (files.length > 0) {
-        await onImport?.(files[0], importFormat);
+      const file = files[0];
+      if (file) {
+        await onImport?.(file, importFormat);
       }
     };
 
@@ -80,7 +88,11 @@ export const ImportExport = React.forwardRef<HTMLDivElement, ImportExportProps>(
     };
 
     return (
-      <div ref={ref} className={cx("bg-[var(--surface)] rounded-[var(--radius-lg)] p-6", className)} {...props}>
+      <div
+        ref={ref}
+        className={cx("bg-[var(--surface)] rounded-[var(--radius-lg)] p-6", className)}
+        {...props}
+      >
         <div className="mb-6">
           <h3 className="text-lg font-semibold text-white mb-2">Import & Export</h3>
           <p className="text-[var(--text-muted)] text-sm">
@@ -102,27 +114,33 @@ export const ImportExport = React.forwardRef<HTMLDivElement, ImportExportProps>(
                     value={exportFormat}
                     onChange={(e) => setExportFormat(e.target.value as ExportFormat)}
                   >
-                    {supportedFormats.map(format => (
+                    {supportedFormats.map((format) => (
                       <option key={format} value={format}>
                         {formatLabels[format]}
                       </option>
                     ))}
                   </Select>
                 </div>
-                
+
                 {exportCount !== undefined && (
                   <div className="text-xs text-[var(--text-muted)]">
                     {exportCount.toLocaleString()} records will be exported
                   </div>
                 )}
 
-                <Button
-                  onClick={handleExport}
-                  loading={isExporting}
-                  className="w-full"
-                >
-                  <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                <Button onClick={handleExport} loading={isExporting} className="w-full">
+                  <svg
+                    className="w-4 h-4 mr-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                    />
                   </svg>
                   Export {formatLabels[exportFormat]}
                 </Button>
@@ -144,7 +162,7 @@ export const ImportExport = React.forwardRef<HTMLDivElement, ImportExportProps>(
                     onChange={(e) => setImportFormat(e.target.value as ExportFormat)}
                     disabled={importStatus === "uploading" || importStatus === "processing"}
                   >
-                    {supportedFormats.map(format => (
+                    {supportedFormats.map((format) => (
                       <option key={format} value={format}>
                         {formatLabels[format]}
                       </option>
@@ -154,23 +172,21 @@ export const ImportExport = React.forwardRef<HTMLDivElement, ImportExportProps>(
 
                 <FileUpload
                   onFiles={handleImport}
-                  accept={importFormat === "csv" ? ".csv" : importFormat === "json" ? ".json" : ".xlsx"}
+                  accept={
+                    importFormat === "csv" ? ".csv" : importFormat === "json" ? ".json" : ".xlsx"
+                  }
                   disabled={importStatus === "uploading" || importStatus === "processing"}
                 />
 
                 {(importStatus === "uploading" || importStatus === "processing") && (
                   <div className="space-y-2">
                     <Progress value={importProgress} showValue />
-                    <p className={cx("text-xs", getStatusColor())}>
-                      {getStatusMessage()}
-                    </p>
+                    <p className={cx("text-xs", getStatusColor())}>{getStatusMessage()}</p>
                   </div>
                 )}
 
                 {(importStatus === "success" || importStatus === "error") && (
-                  <div className={cx("text-xs", getStatusColor())}>
-                    {getStatusMessage()}
-                  </div>
+                  <div className={cx("text-xs", getStatusColor())}>{getStatusMessage()}</div>
                 )}
               </div>
             </div>
@@ -181,13 +197,19 @@ export const ImportExport = React.forwardRef<HTMLDivElement, ImportExportProps>(
         <div className="mt-8 p-4 bg-[var(--bg)] rounded-[var(--radius-sm)]">
           <h5 className="text-sm font-medium text-white mb-2">Format Guidelines</h5>
           <ul className="text-xs text-[var(--text-muted)] space-y-1">
-            <li>• <strong>CSV:</strong> Comma-separated values with headers in first row</li>
-            <li>• <strong>JSON:</strong> Array of objects with consistent property names</li>
-            <li>• <strong>Excel:</strong> XLSX format with data starting from row 1</li>
+            <li>
+              • <strong>CSV:</strong> Comma-separated values with headers in first row
+            </li>
+            <li>
+              • <strong>JSON:</strong> Array of objects with consistent property names
+            </li>
+            <li>
+              • <strong>Excel:</strong> XLSX format with data starting from row 1
+            </li>
           </ul>
         </div>
       </div>
     );
-  }
+  },
 );
 ImportExport.displayName = "ImportExport";

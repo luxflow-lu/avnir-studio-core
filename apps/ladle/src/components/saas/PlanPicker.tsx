@@ -28,9 +28,7 @@ export const PlanPicker = React.forwardRef<HTMLDivElement, PlanPickerProps>(
   ({ className, plans, billing, onBillingChange, onSelectPlan, selectedPlan, ...props }, ref) => {
     const yearlyDiscount = Math.max(
       0,
-      Math.round(
-        (1 - (plans[0]?.price.yearly * 12) / (plans[0]?.price.monthly * 12)) * 100
-      ) || 0
+      Math.round((1 - (plans[0]?.price.yearly * 12) / (plans[0]?.price.monthly * 12)) * 100) || 0,
     );
 
     return (
@@ -44,7 +42,7 @@ export const PlanPicker = React.forwardRef<HTMLDivElement, PlanPickerProps>(
                 "px-4 py-2 text-sm font-medium rounded-[var(--radius-md)] transition-colors",
                 billing === "monthly"
                   ? "bg-[var(--brand)] text-[var(--brand-on)]"
-                  : "text-[var(--text-muted)] hover:text-white"
+                  : "text-[var(--text-muted)] hover:text-white",
               )}
             >
               Monthly
@@ -55,7 +53,7 @@ export const PlanPicker = React.forwardRef<HTMLDivElement, PlanPickerProps>(
                 "px-4 py-2 text-sm font-medium rounded-[var(--radius-md)] transition-colors relative",
                 billing === "yearly"
                   ? "bg-[var(--brand)] text-[var(--brand-on)]"
-                  : "text-[var(--text-muted)] hover:text-white"
+                  : "text-[var(--text-muted)] hover:text-white",
               )}
             >
               Yearly
@@ -80,7 +78,7 @@ export const PlanPicker = React.forwardRef<HTMLDivElement, PlanPickerProps>(
                 className={cx(
                   "relative bg-[var(--surface)] rounded-[var(--radius-lg)] p-6 shadow-md transition-all",
                   plan.popular && "ring-2 ring-[var(--brand)]",
-                  isSelected && "ring-2 ring-[var(--brand)]/50"
+                  isSelected && "ring-2 ring-[var(--brand)]/50",
                 )}
               >
                 {plan.popular && (
@@ -105,15 +103,25 @@ export const PlanPicker = React.forwardRef<HTMLDivElement, PlanPickerProps>(
                   </div>
 
                   {billing === "yearly" && (
-                    <p className="text-xs text-[var(--text-muted)]">€{Math.round(price / 12)}/mois facturé annuellement</p>
+                    <p className="text-xs text-[var(--text-muted)]">
+                      €{Math.round(price / 12)}/mois facturé annuellement
+                    </p>
                   )}
                 </div>
 
                 <ul className="space-y-3 mb-6">
                   {plan.features.map((feature, index) => (
                     <li key={index} className="flex items-start gap-2 text-sm">
-                      <svg className="w-4 h-4 text-[var(--brand)] mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      <svg
+                        className="w-4 h-4 text-[var(--brand)] mt-0.5 flex-shrink-0"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                          clipRule="evenodd"
+                        />
                       </svg>
                       <span className="text-[var(--text-muted)]">{feature}</span>
                     </li>
@@ -133,6 +141,6 @@ export const PlanPicker = React.forwardRef<HTMLDivElement, PlanPickerProps>(
         </div>
       </div>
     );
-  }
+  },
 );
 PlanPicker.displayName = "PlanPicker";

@@ -2,8 +2,20 @@ import * as React from "react";
 import { Button } from "../../primitives/Button";
 import { Card } from "../../primitives/Card";
 
-export function PlanCard({ name, price, period = "/mois", features, cta, highlight }:{
-  name:string; price:string; period?:string; features:string[]; cta:{label:string; href:string}; highlight?:boolean;
+export function PlanCard({
+  name,
+  price,
+  period = "/mois",
+  features,
+  cta,
+  highlight,
+}: {
+  name: string;
+  price: string;
+  period?: string;
+  features: string[];
+  cta: { label: string; href: string };
+  highlight?: boolean;
 }) {
   return (
     <Card className={highlight ? "ring-1 ring-[var(--brand)]" : ""}>
@@ -16,7 +28,11 @@ export function PlanCard({ name, price, period = "/mois", features, cta, highlig
         <span className="text-[var(--text-muted)]">{period}</span>
       </div>
       <ul className="mt-4 space-y-2">
-        {features.map((f,i)=><li key={i} className="text-[var(--text-muted)]">• {f}</li>)}
+        {features.map((f, i) => (
+          <li key={i} className="text-[var(--text-muted)]">
+            • {f}
+          </li>
+        ))}
       </ul>
       <a href={cta.href} className="inline-flex mt-6">
         <Button>{cta.label}</Button>

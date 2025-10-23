@@ -1,0 +1,43 @@
+import React from "react";
+import { Button } from "@avnir/ui";
+
+export default {
+  title: "Form/Button"
+};
+
+export const Default = () => (
+  <div className="p-6 space-y-4">
+    <Button>Default Button</Button>
+  </div>
+);
+
+export const AllVariants = () => (
+  <div className="p-6 space-y-6">
+    <div className="space-y-2">
+      <h3 className="text-lg font-semibold">Variants</h3>
+      <div className="flex gap-4">
+        <Button variant="solid">Solid</Button>
+        <Button variant="outline">Outline</Button>
+        <Button variant="ghost">Ghost</Button>
+      </div>
+    </div>
+
+    <div className="space-y-2">
+      <h3 className="text-lg font-semibold">Sizes</h3>
+      <div className="flex gap-4 items-center">
+        <Button size="sm">Small</Button>
+        <Button size="md">Medium</Button>
+        <Button size="lg">Large</Button>
+      </div>
+    </div>
+
+    <div className="space-y-2">
+      <h3 className="text-lg font-semibold">States</h3>
+      <div className="flex gap-4">
+        <Button>Normal</Button>
+        <Button disabled>Disabled</Button>
+        <Button loading>Loading</Button>
+      </div>
+    </div>
+  </div>
+);

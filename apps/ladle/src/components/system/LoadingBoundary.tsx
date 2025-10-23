@@ -29,6 +29,6 @@ export const LoadingBoundary = React.forwardRef<HTMLDivElement, LoadingBoundaryP
     }
 
     return <>{children}</>;
-  }
+  },
 );
 LoadingBoundary.displayName = "LoadingBoundary";

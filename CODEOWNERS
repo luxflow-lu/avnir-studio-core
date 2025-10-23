@@ -1,0 +1,17 @@
+# Global ownership
+* @zaoui-maxime
+
+# Package-specific ownership
+packages/ui/* @zaoui-maxime
+packages/design/* @zaoui-maxime
+packages/icons/* @zaoui-maxime
+packages/brandkit/* @zaoui-maxime
+
+# App-specific ownership
+apps/muzisystem/* @zaoui-maxime
+apps/ladle/* @zaoui-maxime
+
+# Infrastructure
+.github/* @zaoui-maxime
+turbo.json @zaoui-maxime
+package.json @zaoui-maxime

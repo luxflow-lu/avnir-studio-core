@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": false,
   "type": "module",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "exports": {
     "./tokens.json": "./src/tokens.json"
   },

@@ -1,24 +1,24 @@
 /* Base (dark par défaut) */
 :root {
-  --bg: 11 11 13; 
-  --surface: 20 19 23; 
+  --bg: 11 11 13;
+  --surface: 20 19 23;
   --border: 38 39 43;
-  --on-bg: 197 204 214; 
+  --on-bg: 197 204 214;
   --on-surface: 244 244 244;
-  --primary: 138 92 246; 
+  --primary: 138 92 246;
   --on-primary: 255 255 255;
 
   /* Neutres (pour badges/labels) */
-  --neutral-1: #111216; 
-  --neutral-2: #1A1B20; 
-  --neutral-3: #22232A;
+  --neutral-1: #111216;
+  --neutral-2: #1a1b20;
+  --neutral-3: #22232a;
 
   /* Accents génériques (fallback) */
-  --accent-blue: #4FA4FF;
-  --accent-green: #2FAD66;
-  --accent-orange: #FF9D00;
-  --accent-purple: #8A5CF6;
-  --accent-yellow: #FFD54A;
+  --accent-blue: #4fa4ff;
+  --accent-green: #2fad66;
+  --accent-orange: #ff9d00;
+  --accent-purple: #8a5cf6;
+  --accent-yellow: #ffd54a;
 
   /* Badges (fallback par type) */
   --badge-artist: var(--accent-purple);
@@ -26,50 +26,50 @@
   --badge-beatmaker: var(--accent-blue);
   --badge-draft: var(--accent-yellow);
   --badge-producer: var(--accent-orange);
-  --badge-archived: #7A7D87;
+  --badge-archived: #7a7d87;
 
   /* Spacing (8px scale) */
-  --space-1: .25rem;  /* 4px  */
-  --space-2: .5rem;   /* 8px  */
-  --space-3: .75rem;  /* 12px */
-  --space-4: 1rem;    /* 16px */
+  --space-1: 0.25rem; /* 4px  */
+  --space-2: 0.5rem; /* 8px  */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
   --space-5: 1.25rem; /* 20px */
-  --space-6: 1.5rem;  /* 24px */
-  --space-8: 2rem;    /* 32px */
+  --space-6: 1.5rem; /* 24px */
+  --space-8: 2rem; /* 32px */
   --space-10: 2.5rem; /* 40px */
-  --space-12: 3rem;   /* 48px */
-  --space-16: 4rem;   /* 64px */
+  --space-12: 3rem; /* 48px */
+  --space-16: 4rem; /* 64px */
 
   /* Radii */
-  --radius-md: .5rem;    /* 8px  */
-  --radius-lg: .75rem;   /* 12px */
-  --radius-xl: 1rem;     /* 16px */
+  --radius-md: 0.5rem; /* 8px  */
+  --radius-lg: 0.75rem; /* 12px */
+  --radius-xl: 1rem; /* 16px */
   --radius-2xl: 1.25rem; /* 20px */
 
   /* Shadows */
-  --shadow-card: 0 10px 30px rgba(0,0,0,.28);
+  --shadow-card: 0 10px 30px rgba(0, 0, 0, 0.28);
 }
 
 /* Thème clair */
 html[data-theme="light"] {
-  --bg: 248 248 248; 
-  --surface: 255 255 255; 
+  --bg: 248 248 248;
+  --surface: 255 255 255;
   --border: 230 232 235;
-  --on-bg: 36 37 42; 
+  --on-bg: 36 37 42;
   --on-surface: 30 31 36;
   --on-primary: 20 19 23;
 
   /* Neutres ajustés pour le light */
-  --neutral-1: #F1F2F4; 
-  --neutral-2: #E6E8EB; 
-  --neutral-3: #D1D5DB;
+  --neutral-1: #f1f2f4;
+  --neutral-2: #e6e8eb;
+  --neutral-3: #d1d5db;
 
   /* Accents restent identiques mais on les redéfinit pour clarté */
-  --accent-blue: #4FA4FF;
-  --accent-green: #2FAD66;
-  --accent-orange: #FF9D00;
-  --accent-purple: #8A5CF6;
-  --accent-yellow: #FFD54A;
+  --accent-blue: #4fa4ff;
+  --accent-green: #2fad66;
+  --accent-orange: #ff9d00;
+  --accent-purple: #8a5cf6;
+  --accent-yellow: #ffd54a;
 
   /* Badges identiques en light */
   --badge-artist: var(--accent-purple);
@@ -77,7 +77,7 @@ html[data-theme="light"] {
   --badge-beatmaker: var(--accent-blue);
   --badge-draft: var(--accent-yellow);
   --badge-producer: var(--accent-orange);
-  --badge-archived: #7A7D87;
+  --badge-archived: #7a7d87;
 }
 
 /* Brand AVNIR */
@@ -93,23 +93,23 @@ html[data-brand="muzidev"] {
 }
 
 /* Autres brands */
-html[data-brand="muzipics"] { 
+html[data-brand="muzipics"] {
   --primary: 255 45 85; /* #FF2D55 */
-  --on-primary: 255 255 255; 
+  --on-primary: 255 255 255;
 }
-html[data-brand="muzimerch"] { 
+html[data-brand="muzimerch"] {
   --primary: 255 157 0; /* #FF9D00 */
-  --on-primary: 255 255 255; 
+  --on-primary: 255 255 255;
 }
-html[data-brand="muzibase"] { 
+html[data-brand="muzibase"] {
   --primary: 47 173 102; /* #2FAD66 */
-  --on-primary: 255 255 255; 
+  --on-primary: 255 255 255;
 }
-html[data-brand="muzimanager"] { 
+html[data-brand="muzimanager"] {
   --primary: 152 2 235; /* #9802EB */
-  --on-primary: 255 255 255; 
+  --on-primary: 255 255 255;
 }
-html[data-brand="promozic"] { 
+html[data-brand="promozic"] {
   --primary: 255 215 0; /* #FFD700 */
-  --on-primary: 0 0 0; 
+  --on-primary: 0 0 0;
 }

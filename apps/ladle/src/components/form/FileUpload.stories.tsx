@@ -5,18 +5,15 @@ export default { title: "Form/FileUpload" };
 
 export const Single = () => (
   <div className="bg-[var(--bg)] text-white p-6">
-    <FileUpload 
-      onFiles={(files) => console.log('Files:', files)}
-      accept="image/*"
-    />
+    <FileUpload onFiles={(files) => console.log("Files:", files)} accept="image/*" />
   </div>
 );
 
 export const Multiple = () => (
   <div className="bg-[var(--bg)] text-white p-6">
-    <FileUpload 
+    <FileUpload
       maxFiles={5}
-      onFiles={(files) => console.log('Files:', files)}
+      onFiles={(files) => console.log("Files:", files)}
       accept=".pdf,.doc,.docx"
     />
   </div>

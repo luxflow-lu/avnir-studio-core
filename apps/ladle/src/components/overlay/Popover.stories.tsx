@@ -12,7 +12,9 @@ const PopoverContent = () => (
     </p>
     <div className="flex gap-2">
       <Button size="sm">Action</Button>
-      <Button size="sm" variant="outline">Cancel</Button>
+      <Button size="sm" variant="outline">
+        Cancel
+      </Button>
     </div>
   </div>
 );
@@ -22,15 +24,15 @@ export const Sides = () => (
     <Popover content={<PopoverContent />} side="top">
       <Button>Top</Button>
     </Popover>
-    
+
     <Popover content={<PopoverContent />} side="bottom">
       <Button>Bottom</Button>
     </Popover>
-    
+
     <Popover content={<PopoverContent />} side="left">
       <Button>Left</Button>
     </Popover>
-    
+
     <Popover content={<PopoverContent />} side="right">
       <Button>Right</Button>
     </Popover>
@@ -42,11 +44,11 @@ export const Alignments = () => (
     <Popover content={<PopoverContent />} align="start">
       <Button>Start</Button>
     </Popover>
-    
+
     <Popover content={<PopoverContent />} align="center">
       <Button>Center</Button>
     </Popover>
-    
+
     <Popover content={<PopoverContent />} align="end">
       <Button>End</Button>
     </Popover>
@@ -55,11 +57,13 @@ export const Alignments = () => (
 
 export const SimpleContent = () => (
   <div className="bg-[var(--bg)] text-white p-6">
-    <Popover content={
-      <div className="text-white">
-        <p className="text-sm">Simple popover content</p>
-      </div>
-    }>
+    <Popover
+      content={
+        <div className="text-white">
+          <p className="text-sm">Simple popover content</p>
+        </div>
+      }
+    >
       <Button>Click me</Button>
     </Popover>
   </div>

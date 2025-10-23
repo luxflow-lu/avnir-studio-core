@@ -1,4 +1,4 @@
-import { Section } from '@avnir/ui';
+import { Section } from "@avnir/ui";
 
 export default function FoundationsPage() {
   return (
@@ -6,7 +6,8 @@ export default function FoundationsPage() {
       <Section>
         <h1 className="text-4xl font-bold text-titles mb-8">Foundations</h1>
         <p className="text-lg text-muted mb-12">
-          Les fondations du design system : typographie, espacement, rayons, ombres, z-index, motion et focus ring.
+          Les fondations du design system : typographie, espacement, rayons, ombres, z-index, motion
+          et focus ring.
         </p>
 
         {/* Typography */}
@@ -54,7 +55,7 @@ export default function FoundationsPage() {
         <div className="mb-16">
           <h2 className="text-2xl font-semibold text-titles mb-6">Border Radius</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            {['none', 'sm', 'md', 'lg', 'xl', '2xl', '3xl', 'full'].map((radius) => (
+            {["none", "sm", "md", "lg", "xl", "2xl", "3xl", "full"].map((radius) => (
               <div key={radius} className="text-center">
                 <div className={`bg-primary h-16 w-16 mx-auto mb-2 rounded-${radius}`}></div>
                 <code className="text-sm">rounded-{radius}</code>
@@ -67,9 +68,11 @@ export default function FoundationsPage() {
         <div className="mb-16">
           <h2 className="text-2xl font-semibold text-titles mb-6">Shadows</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            {['sm', 'md', 'lg', 'xl', '2xl'].map((shadow) => (
+            {["sm", "md", "lg", "xl", "2xl"].map((shadow) => (
               <div key={shadow} className="text-center">
-                <div className={`bg-surface h-20 w-20 mx-auto mb-2 rounded-lg shadow-${shadow}`}></div>
+                <div
+                  className={`bg-surface h-20 w-20 mx-auto mb-2 rounded-lg shadow-${shadow}`}
+                ></div>
                 <code className="text-sm">shadow-{shadow}</code>
               </div>
             ))}
@@ -99,8 +102,8 @@ export default function FoundationsPage() {
             <button className="px-4 py-2 bg-primary text-bg rounded focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-bg">
               Button with focus ring
             </button>
-            <input 
-              type="text" 
+            <input
+              type="text"
               placeholder="Input with focus ring"
               className="px-3 py-2 border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
             />
@@ -113,11 +116,15 @@ export default function FoundationsPage() {
           <div className="space-y-4">
             <div className="p-4 bg-surface rounded-lg">
               <div className="w-16 h-16 bg-primary rounded transition-transform duration-300 hover:scale-110 cursor-pointer"></div>
-              <code className="text-sm text-muted">transition-transform duration-300 hover:scale-110</code>
+              <code className="text-sm text-muted">
+                transition-transform duration-300 hover:scale-110
+              </code>
             </div>
             <div className="p-4 bg-surface rounded-lg">
               <div className="w-16 h-16 bg-primary rounded transition-colors duration-200 hover:bg-primary/80 cursor-pointer"></div>
-              <code className="text-sm text-muted">transition-colors duration-200 hover:bg-primary/80</code>
+              <code className="text-sm text-muted">
+                transition-colors duration-200 hover:bg-primary/80
+              </code>
             </div>
           </div>
         </div>

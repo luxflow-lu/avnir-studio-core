@@ -33,18 +33,21 @@ export interface FacetedSearchProps extends React.HTMLAttributes<HTMLDivElement>
 }
 
 export const FacetedSearch = React.forwardRef<HTMLDivElement, FacetedSearchProps>(
-  ({ 
-    className, 
-    filters, 
-    activeFilters, 
-    onFilterChange, 
-    onClearFilter, 
-    onClearAll,
-    searchQuery = "",
-    onSearchChange,
-    resultCount,
-    ...props 
-  }, ref) => {
+  (
+    {
+      className,
+      filters,
+      activeFilters,
+      onFilterChange,
+      onClearFilter,
+      onClearAll,
+      searchQuery = "",
+      onSearchChange,
+      resultCount,
+      ...props
+    },
+    ref,
+  ) => {
     const renderFilter = (filter: SearchFilter) => {
       switch (filter.type) {
         case "checkbox":
@@ -54,7 +57,9 @@ export const FacetedSearch = React.forwardRef<HTMLDivElement, FacetedSearchProps
                 <div key={option.value} className="flex items-center justify-between">
                   <Checkbox
                     label={option.label}
-                    checked={activeFilters.some(af => af.filterId === filter.id && af.value === option.value)}
+                    checked={activeFilters.some(
+                      (af) => af.filterId === filter.id && af.value === option.value,
+                    )}
                     onChange={(e) => {
                       if (e.target.checked) {
                         onFilterChange(filter.id, option.value);
@@ -105,9 +110,11 @@ export const FacetedSearch = React.forwardRef<HTMLDivElement, FacetedSearchProps
                   onClick={() => onFilterChange(filter.id, option.value)}
                   className={cx(
                     "w-full text-left p-2 rounded-[var(--radius-sm)] text-sm transition-colors",
-                    activeFilters.some(af => af.filterId === filter.id && af.value === option.value)
+                    activeFilters.some(
+                      (af) => af.filterId === filter.id && af.value === option.value,
+                    )
                       ? "bg-[var(--brand)]/10 text-[var(--brand)]"
-                      : "text-[var(--text-muted)] hover:text-white hover:bg-white/5"
+                      : "text-[var(--text-muted)] hover:text-white hover:bg-white/5",
                   )}
                 >
                   <div className="flex items-center justify-between">
@@ -156,17 +163,19 @@ export const FacetedSearch = React.forwardRef<HTMLDivElement, FacetedSearchProps
             </div>
             <div className="flex flex-wrap gap-2">
               {activeFilters.map((filter, index) => (
-                <Badge
-                  key={`${filter.filterId}-${index}`}
-                  className="flex items-center gap-2 pr-1"
-                >
+                <Badge key={`${filter.filterId}-${index}`} className="flex items-center gap-2 pr-1">
                   <span>{filter.label}</span>
                   <button
                     onClick={() => onClearFilter(filter.filterId)}
                     className="hover:text-red-400 transition-colors"
                   >
                     <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M6 18L18 6M6 6l12 12"
+                      />
                     </svg>
                   </button>
                 </Badge>
@@ -188,6 +197,6 @@ export const FacetedSearch = React.forwardRef<HTMLDivElement, FacetedSearchProps
         </div>
       </div>
     );
-  }
+  },
 );
 FacetedSearch.displayName = "FacetedSearch";

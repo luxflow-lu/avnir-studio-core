@@ -67,9 +67,6 @@ export const Producteur = () => (
 
 export const Minimal = () => (
   <div className="bg-[var(--bg)] text-white p-6">
-    <ProjectHeader
-      title="Nouveau Projet"
-      type="artiste"
-    />
+    <ProjectHeader title="Nouveau Projet" type="artiste" />
   </div>
 );

@@ -14,7 +14,9 @@ export const Default = () => {
           This is a modal dialog. Press ESC or click outside to close.
         </p>
         <div className="flex gap-2 justify-end">
-          <Button variant="ghost" onClick={() => setOpen(false)}>Cancel</Button>
+          <Button variant="ghost" onClick={() => setOpen(false)}>
+            Cancel
+          </Button>
           <Button onClick={() => setOpen(false)}>Confirm</Button>
         </div>
       </Modal>

@@ -30,6 +30,11 @@ export const Minimal = () => (
 
 export const WithAvatars = () => (
   <Wrapper>
-    <Testimonials items={items.map(i => ({ ...i, avatarSrc: "https://dummyimage.com/72x72/fff/aaa.png&text=A" }))} />
+    <Testimonials
+      items={items.map((i) => ({
+        ...i,
+        avatarSrc: "https://dummyimage.com/72x72/fff/aaa.png&text=A",
+      }))}
+    />
   </Wrapper>
 );

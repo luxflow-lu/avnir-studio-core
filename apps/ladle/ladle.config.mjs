@@ -3,15 +3,15 @@ export default {
   viteConfig: {
     server: {
       fs: {
-        allow: ['..', '../..']
-      }
+        allow: ["..", "../.."],
+      },
     },
     css: {
       preprocessorOptions: {
         css: {
-          charset: false
-        }
-      }
-    }
-  }
+          charset: false,
+        },
+      },
+    },
+  },
 };

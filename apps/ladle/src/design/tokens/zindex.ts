@@ -4,5 +4,5 @@ export const zindex = {
   overlay: 40,
   modal: 50,
   toast: 60,
-  max: 9999
+  max: 9999,
 };

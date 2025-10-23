@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cx } from "../../utils/cx";
-import { Spinner } from "../data/Spinner";
+import { Spinner } from "../data-display/Spinner";
 
 export interface LoadingBoundaryProps {
   children: React.ReactNode;
@@ -29,6 +29,6 @@ export const LoadingBoundary = React.forwardRef<HTMLDivElement, LoadingBoundaryP
     }
 
     return <>{children}</>;
-  }
+  },
 );
 LoadingBoundary.displayName = "LoadingBoundary";

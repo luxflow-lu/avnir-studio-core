@@ -5,9 +5,7 @@ import { fileURLToPath } from "node:url";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const TOK = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "../src/tokens.json"), "utf8")
-);
+const TOK = JSON.parse(fs.readFileSync(path.join(__dirname, "../src/tokens.json"), "utf8"));
 
 const root = `
 :root{
@@ -30,8 +28,10 @@ const root = `
 }
 `.trim();
 
-const brands = Object.entries(TOK.brand as Record<string, {primary:string; onPrimary:string}>)
-  .map(([name, v]) => `:root[data-brand="${name}"]{--brand:${v.primary};--brand-on:${v.onPrimary};}`)
+const brands = Object.entries(TOK.brand as Record<string, { primary: string; onPrimary: string }>)
+  .map(
+    ([name, v]) => `:root[data-brand="${name}"]{--brand:${v.primary};--brand-on:${v.onPrimary};}`,
+  )
   .join("\n");
 
 const distDir = path.join(__dirname, "../dist");

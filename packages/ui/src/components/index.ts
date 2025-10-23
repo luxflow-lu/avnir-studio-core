@@ -4,14 +4,14 @@ export * from "./primitives";
 // Form
 export * from "./form";
 
-// Data
-export * from "./data";
+// Data Display
+export * from "./data-display";
 
 // Overlay
 export * from "./overlay";
 
 // Navigation
-export * from "./nav";
+export * from "./navigation";
 
 // Layout
 export * from "./layout";
@@ -28,5 +28,23 @@ export * from "./ecommerce";
 // AVNIR
 export * from "./avnir";
 
-// Marketing
-export * from "./marketing";
+// Marketing (excluding Footer to avoid conflict with layout/Footer)
+export {
+  ContactBlock,
+  CtaSection,
+  Faq,
+  FeatureGrid,
+  Hero,
+  LogoCloud,
+  Newsletter,
+  PricingStrip,
+  Stats,
+  Steps,
+  Testimonials,
+} from "./marketing";
+
+// Feedback
+export * from "./feedback";
+
+// Templates
+export * from "./templates";

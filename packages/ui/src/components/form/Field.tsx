@@ -26,8 +26,8 @@ export const Field = React.forwardRef<HTMLDivElement, FieldProps>(
         <div>
           {React.cloneElement(children as React.ReactElement, {
             id: fieldId,
-            'aria-describedby': cx(helpId, errorId).trim() || undefined,
-            'aria-invalid': error ? 'true' : undefined,
+            "aria-describedby": cx(helpId, errorId).trim() || undefined,
+            "aria-invalid": error ? "true" : undefined,
           })}
         </div>
         {help && !error && (
@@ -42,6 +42,6 @@ export const Field = React.forwardRef<HTMLDivElement, FieldProps>(
         )}
       </div>
     );
-  }
+  },
 );
 Field.displayName = "Field";

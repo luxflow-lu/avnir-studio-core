@@ -1,6 +1,6 @@
 import * as React from "react";
 import { cx } from "../../utils/cx";
-import { Badge } from "../data/Badge";
+import { Badge } from "../data-display/Badge";
 
 export interface Permission {
   id: string;
@@ -27,16 +27,16 @@ export interface RolesMatrixProps extends React.HTMLAttributes<HTMLDivElement> {
 export const RolesMatrix = React.forwardRef<HTMLDivElement, RolesMatrixProps>(
   ({ className, roles, permissions, onPermissionChange, readonly = false, ...props }, ref) => {
     const categories = React.useMemo(() => {
-      const cats = new Set(permissions.map(p => p.category || 'General'));
+      const cats = new Set(permissions.map((p) => p.category || "General"));
       return Array.from(cats).sort();
     }, [permissions]);
 
     const getPermissionsByCategory = (category: string) => {
-      return permissions.filter(p => (p.category || 'General') === category);
+      return permissions.filter((p) => (p.category || "General") === category);
     };
 
     const hasPermission = (roleId: string, permissionId: string) => {
-      const role = roles.find(r => r.id === roleId);
+      const role = roles.find((r) => r.id === roleId);
       return role?.permissions.includes(permissionId) || false;
     };
 
@@ -47,7 +47,11 @@ export const RolesMatrix = React.forwardRef<HTMLDivElement, RolesMatrixProps>(
     };
 
     return (
-      <div ref={ref} className={cx("bg-[var(--surface)] rounded-[var(--radius-lg)] overflow-hidden", className)} {...props}>
+      <div
+        ref={ref}
+        className={cx("bg-[var(--surface)] rounded-[var(--radius-lg)] overflow-hidden", className)}
+        {...props}
+      >
         <div className="p-6 border-b border-white/10">
           <h3 className="text-lg font-semibold text-white mb-2">Roles & Permissions</h3>
           <p className="text-[var(--text-muted)] text-sm">
@@ -59,11 +63,12 @@ export const RolesMatrix = React.forwardRef<HTMLDivElement, RolesMatrixProps>(
           <table className="w-full">
             <thead className="bg-[var(--bg)]">
               <tr>
-                <th className="text-left p-4 text-sm font-medium text-white w-1/3">
-                  Permission
-                </th>
-                {roles.map(role => (
-                  <th key={role.id} className="text-center p-4 text-sm font-medium text-white min-w-[120px]">
+                <th className="text-left p-4 text-sm font-medium text-white w-1/3">Permission</th>
+                {roles.map((role) => (
+                  <th
+                    key={role.id}
+                    className="text-center p-4 text-sm font-medium text-white min-w-[120px]"
+                  >
                     <div className="flex flex-col items-center gap-2">
                       <Badge className={role.color || "bg-[var(--brand)]/15 text-[var(--brand)]"}>
                         {role.name}
@@ -79,14 +84,14 @@ export const RolesMatrix = React.forwardRef<HTMLDivElement, RolesMatrixProps>(
               </tr>
             </thead>
             <tbody>
-              {categories.map(category => (
+              {categories.map((category) => (
                 <React.Fragment key={category}>
                   <tr>
                     <td colSpan={roles.length + 1} className="p-4 bg-white/5">
                       <div className="text-sm font-medium text-white">{category}</div>
                     </td>
                   </tr>
-                  {getPermissionsByCategory(category).map(permission => (
+                  {getPermissionsByCategory(category).map((permission) => (
                     <tr key={permission.id} className="border-b border-white/5 hover:bg-white/5">
                       <td className="p-4">
                         <div>
@@ -98,7 +103,7 @@ export const RolesMatrix = React.forwardRef<HTMLDivElement, RolesMatrixProps>(
                           )}
                         </div>
                       </td>
-                      {roles.map(role => (
+                      {roles.map((role) => (
                         <td key={role.id} className="p-4 text-center">
                           <button
                             onClick={() => togglePermission(role.id, permission.id)}
@@ -109,13 +114,21 @@ export const RolesMatrix = React.forwardRef<HTMLDivElement, RolesMatrixProps>(
                                 ? "bg-[var(--brand)] border-[var(--brand)]"
                                 : "border-white/20 hover:border-white/40",
                               readonly ? "cursor-default" : "cursor-pointer",
-                              "focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2 focus:ring-offset-[var(--surface)]"
+                              "focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2 focus:ring-offset-[var(--surface)]",
                             )}
-                            aria-label={`${hasPermission(role.id, permission.id) ? 'Remove' : 'Grant'} ${permission.name} for ${role.name}`}
+                            aria-label={`${hasPermission(role.id, permission.id) ? "Remove" : "Grant"} ${permission.name} for ${role.name}`}
                           >
                             {hasPermission(role.id, permission.id) && (
-                              <svg className="w-3 h-3 text-[var(--brand-on)] mx-auto" fill="currentColor" viewBox="0 0 20 20">
-                                <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                              <svg
+                                className="w-3 h-3 text-[var(--brand-on)] mx-auto"
+                                fill="currentColor"
+                                viewBox="0 0 20 20"
+                              >
+                                <path
+                                  fillRule="evenodd"
+                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                  clipRule="evenodd"
+                                />
                               </svg>
                             )}
                           </button>
@@ -130,6 +143,6 @@ export const RolesMatrix = React.forwardRef<HTMLDivElement, RolesMatrixProps>(
         </div>
       </div>
     );
-  }
+  },
 );
 RolesMatrix.displayName = "RolesMatrix";
