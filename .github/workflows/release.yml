@@ -32,6 +32,8 @@ jobs:
         run: |
           pnpm -w run build:tokens
           pnpm -w run build:design
+          pnpm -w run build:icons
+          pnpm -w run build:brandkit
           pnpm -w run build:ui
 
       - name: Create Release Pull Request or Publish to GitHub Packages

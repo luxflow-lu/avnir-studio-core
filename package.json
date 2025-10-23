@@ -26,6 +26,7 @@
     "format": "prettier --write .",
     "clean": "turbo run clean && rimraf node_modules .turbo",
     "changeset": "changeset",
+    "changeset:version": "changeset version",
     "version-packages": "changeset version",
     "release": "turbo run build --filter=@avnir/ui",
     "prepare": "husky"
