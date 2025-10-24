@@ -5,6 +5,7 @@
  * Comprehensive security validation for AVNIR platform
  */
 
+/* eslint-disable @typescript-eslint/no-require-imports, @typescript-eslint/no-unused-vars */
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
