@@ -1,5 +1,6 @@
 import * as React from "react";
 import { cx } from "../../utils/cx";
+import { SectionHeader } from "../layout/SectionHeader";
 
 export type Testimonial = { quote: string; author: string; role?: string; avatarSrc?: string };
 export type TestimonialsProps = {
@@ -16,39 +17,30 @@ export const Testimonials = React.forwardRef<HTMLElement, TestimonialsProps>(
     return (
       <section
         ref={ref}
-        className={cx("w-full mx-auto px-4 md:px-6 py-16 md:py-24", className)}
+        className={cx("testimonials-section", className)}
         {...props}
       >
-        <div className="mx-auto max-w-7xl">
-          {(title || subtitle) && (
-            <div className="mb-10 text-center">
-              {title && (
-                <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
-                  {title}
-                </h2>
-              )}
-              {subtitle && <p className="mt-3 text-lg text-muted-foreground">{subtitle}</p>}
-            </div>
-          )}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div className="testimonials-container">
+          <SectionHeader title={title} subtitle={subtitle} />
+          <div className="testimonials-grid">
             {items.map((t, i) => (
               <figure
                 key={i}
-                className="rounded-[var(--radius)] border border-border bg-card text-card-foreground p-6 shadow-sm"
+                className="testimonial-card"
               >
-                <blockquote className="text-sm leading-relaxed text-muted-foreground">
+                <blockquote className="testimonial-quote">
                   “{t.quote}”
                 </blockquote>
-                <figcaption className="mt-4 flex items-center gap-3">
+                <figcaption className="testimonial-author">
                   {t.avatarSrc ? (
                     // eslint-disable-next-line @next/next/no-img-element
-                    <img src={t.avatarSrc} alt="" className="h-9 w-9 rounded-full object-cover" />
+                    <img src={t.avatarSrc} alt="" className="testimonial-avatar" />
                   ) : (
-                    <div className="h-9 w-9 rounded-full bg-muted" aria-hidden />
+                    <div className="testimonial-avatar testimonial-avatar--placeholder" aria-hidden />
                   )}
-                  <div>
-                    <div className="font-medium text-card-foreground">{t.author}</div>
-                    {t.role && <div className="text-xs text-muted-foreground">{t.role}</div>}
+                  <div className="testimonial-info">
+                    <div className="testimonial-name">{t.author}</div>
+                    {t.role && <div className="testimonial-role">{t.role}</div>}
                   </div>
                 </figcaption>
               </figure>

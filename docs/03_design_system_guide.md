@@ -1,5 +1,16 @@
 # Styles & Brands — Guide de personnalisation
 
+<!-- METADATA -->
+<!-- Version: 1.0.0 -->
+<!-- Last Updated: 2025-10-24 -->
+<!-- Last Validated: 2025-10-24 -->
+<!-- Next Review: 2025-11-23 -->
+<!-- Dependencies: None -->
+<!-- Breaking Changes: None -->
+<!-- Status: ACTIVE -->
+<!-- /METADATA -->
+
+
 **Objectif :** modifier les styles sans casser la cohérence. Sert aussi de base à Windsurf pour appliquer les changements.
 
 ---

@@ -20,17 +20,17 @@ export const Newsletter = React.forwardRef<HTMLElement, NewsletterProps>(
     return (
       <section
         ref={ref}
-        className={cx("w-full mx-auto px-4 md:px-6 py-16 md:py-24", className)}
+        className={cx("newsletter", className)}
         {...props}
       >
-        <div className="mx-auto max-w-2xl text-center">
+        <div className="newsletter-container">
           {title && (
-            <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
+            <h2 className="newsletter-title">
               {title}
             </h2>
           )}
-          {subtitle && <p className="mt-3 text-muted-foreground">{subtitle}</p>}
-          <form onSubmit={submit} className="mt-6 flex gap-3 justify-center">
+          {subtitle && <p className="newsletter-description">{subtitle}</p>}
+          <form onSubmit={submit} className="newsletter-form">
             <label htmlFor="email" className="sr-only">
               Email
             </label>
@@ -41,12 +41,12 @@ export const Newsletter = React.forwardRef<HTMLElement, NewsletterProps>(
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="h-10 w-64 rounded-[var(--radius)] bg-card text-card-foreground border border-border px-3 focus:outline-none focus:ring-2 focus:ring-ring"
+              className="newsletter-input"
               placeholder="Votre email"
             />
             <button
               type="submit"
-              className="h-10 rounded-[var(--radius)] bg-[var(--brand)] text-[var(--brand-on)] px-4 font-medium"
+              className="newsletter-button"
             >
               S'inscrire
             </button>

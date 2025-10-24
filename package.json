@@ -29,7 +29,15 @@
     "changeset:version": "changeset version",
     "version-packages": "changeset version",
     "release": "turbo run build --filter=@avnir/ui",
-    "prepare": "husky"
+    "prepare": "husky",
+    "docs:validate": "node scripts/validate-docs.js",
+    "docs:health": "node scripts/validate-docs.js",
+    "docs:check": "node scripts/validate-docs.js",
+    "docs:update": "node scripts/update-doc-metadata.js update",
+    "docs:add-metadata": "node scripts/update-doc-metadata.js add-all",
+    "cascade:sync": "node scripts/sync-cascade.js",
+    "architecture:check": "node scripts/architecture-check.js",
+    "architecture:graph": "depcruise --config .dependency-cruiser.js --output-type dot apps/muzisystem/src | dot -T svg > dep-graph.svg"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,css,md,json}": "prettier --write"
@@ -59,6 +67,7 @@
     "@vitejs/plugin-react": "^5.0.4",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",
+    "dependency-cruiser": "^17.1.0",
     "eslint": "^8.57.1",
     "eslint-config-next": "^15.5.6",
     "eslint-config-prettier": "^9.1.0",

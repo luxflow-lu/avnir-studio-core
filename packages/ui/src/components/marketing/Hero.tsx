@@ -76,11 +76,7 @@ export const Hero = React.forwardRef<HTMLElement, HeroProps>(
     return (
       <section
         ref={ref}
-        className={cx(
-          "relative w-full min-h-full flex items-center py-16 md:py-24",
-          layout === "left" && maxWidth === "full" ? "px-4 md:px-6 lg:px-8" : "px-4 md:px-6",
-          className
-        )}
+        className={cx("hero", layout === "left" ? "hero--left" : layout === "center" ? "hero--center" : "hero--split", className)}
         style={resolvedBackgroundImage ? {
           backgroundImage: `url(${resolvedBackgroundImage})`,
           backgroundSize: 'cover',
@@ -92,26 +88,20 @@ export const Hero = React.forwardRef<HTMLElement, HeroProps>(
       >
         {/* Overlay gradient */}
         {resolvedBackgroundImage && (
-          <div 
-            className="absolute inset-0 bg-gradient-to-t from-[#0b0b0d] via-[#0b0b0d]/60 to-transparent"
-            aria-hidden="true"
-          />
+          <div className="hero-overlay" aria-hidden="true" />
         )}
-        <div className={cx(
-          "relative z-10",
-          layout === "left" && maxWidth === "full" ? "w-full" : cx("mx-auto", maxMap[maxWidth])
-        )}>
+        <div className="hero-container">
           {layout === "center" ? (
-            <div className="text-center">
-              <h1 className="h1">
+            <div className="hero-content hero-content--center">
+              <h1 className="hero-title">
                 {title}
               </h1>
-              {subtitle && <p className="body mt-4">{subtitle}</p>}
-              {actions && <div className="mt-6 inline-flex flex-wrap gap-3">{actions}</div>}
-              {image && <div className="mt-10">{image}</div>}
+              {subtitle && <p className="hero-subtitle">{subtitle}</p>}
+              {actions && <div className="hero-actions">{actions}</div>}
+              {image && <div className="hero-image">{image}</div>}
             </div>
           ) : layout === "left" ? (
-            <div className="text-left w-full">
+            <div className="hero-content hero-content--left">
               <h1 className="hero-title">
                 {title}
               </h1>
@@ -119,16 +109,16 @@ export const Hero = React.forwardRef<HTMLElement, HeroProps>(
               {actions && <div className="hero-actions">{actions}</div>}
             </div>
           ) : (
-            <div className="grid md:grid-cols-2 gap-8 items-center">
-              <div>
-                {eyebrow && <p className="mb-2 text-sm font-medium text-primary">{eyebrow}</p>}
-                <h1 className="h1">
+            <div className="hero-content hero-content--split">
+              <div className="hero-text">
+                {eyebrow && <p className="hero-eyebrow">{eyebrow}</p>}
+                <h1 className="hero-title">
                   {title}
                 </h1>
-                {subtitle && <p className="body mt-4">{subtitle}</p>}
-                {actions && <div className="mt-6 inline-flex flex-wrap gap-3">{actions}</div>}
+                {subtitle && <p className="hero-subtitle">{subtitle}</p>}
+                {actions && <div className="hero-actions">{actions}</div>}
               </div>
-              <div style={{ minHeight: '200px' }}>{image}</div>
+              <div className="hero-image">{image}</div>
             </div>
           )}
         </div>

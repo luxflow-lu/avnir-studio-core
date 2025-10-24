@@ -1,0 +1,89 @@
+module.exports = {
+  root: true,
+  extends: [
+    '@next/eslint-config-next',
+    '@typescript-eslint/recommended',
+  ],
+  parser: '@typescript-eslint/parser',
+  plugins: ['@typescript-eslint', 'import'],
+  rules: {
+    // ZERO TOLERANCE - Architecture
+    'import/no-cycle': 'error',
+    'import/no-relative-parent-imports': 'error',
+    '@typescript-eslint/no-any': 'error',
+    '@typescript-eslint/no-explicit-any': 'error',
+    
+    // ZERO TOLERANCE - Code Quality
+    'no-console': 'error',
+    'no-debugger': 'error',
+    'no-unused-vars': 'error',
+    '@typescript-eslint/no-unused-vars': 'error',
+    
+    // ZERO TOLERANCE - Imports
+    'import/order': ['error', {
+      'groups': [
+        'builtin',
+        'external', 
+        'internal',
+        'parent',
+        'sibling',
+        'index'
+      ],
+      'newlines-between': 'always'
+    }],
+    
+    // ARCHITECTURE ENFORCEMENT
+    'no-restricted-imports': ['error', {
+      'patterns': [
+        {
+          'group': ['../../../*'],
+          'message': 'Use package imports (@avnir/*) instead of relative imports across packages'
+        },
+        {
+          'group': ['**/apps/**'],
+          'message': 'Packages cannot import from apps'
+        }
+      ]
+    }],
+    
+    // DESIGN SYSTEM ENFORCEMENT
+    'no-restricted-syntax': ['error', {
+      'selector': 'JSXAttribute[name.name="style"]',
+      'message': 'Inline styles are forbidden. Use CSS classes from design system.'
+    }]
+  },
+  overrides: [
+    {
+      // Apps rules - STRICT
+      files: ['apps/**/*.{ts,tsx}'],
+      rules: {
+        'no-restricted-imports': ['error', {
+          'patterns': [
+            {
+              'group': ['**/packages/design/**'],
+              'message': 'Apps must use @avnir/ui components, not direct design imports'
+            }
+          ]
+        }]
+      }
+    },
+    {
+      // UI Package rules - STRICT  
+      files: ['packages/ui/**/*.{ts,tsx}'],
+      rules: {
+        'no-restricted-imports': ['error', {
+          'patterns': [
+            {
+              'group': ['**/apps/**'],
+              'message': 'UI package cannot import from apps'
+            },
+            {
+              'group': ['**/packages/core/**'],
+              'message': 'UI package cannot import business logic from core'
+            }
+          ]
+        }]
+      }
+    }
+  ]
+};

@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { cx } from "../../utils/cx";
+import { SectionHeader } from "../layout/SectionHeader";
 
 export type Qa = { q: string; a: string };
 export type FaqProps = {
@@ -32,16 +33,7 @@ export const Faq = React.forwardRef<HTMLElement, FaqProps>(
         {...props}
       >
         <div className="container">
-          {(title || subtitle) && (
-            <div className="section-header">
-              {title && (
-                <h2 className="section-title">
-                  {title}
-                </h2>
-              )}
-              {subtitle && <p className="section-subtitle">{subtitle}</p>}
-            </div>
-          )}
+          <SectionHeader title={title} subtitle={subtitle} />
 
           <div className="faq-container">
             {items.map((qa, i) => {
@@ -56,12 +48,20 @@ export const Faq = React.forwardRef<HTMLElement, FaqProps>(
                     onClick={() => toggle(i)}
                   >
                     <span>{qa.q}</span>
-                    <span
+                    <svg
                       className={cx("faq-icon", expanded && "faq-icon--open")}
                       aria-hidden
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
                     >
-                      {expanded ? "−" : "+"}
-                    </span>
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
                   </button>
                   {expanded && (
                     <div

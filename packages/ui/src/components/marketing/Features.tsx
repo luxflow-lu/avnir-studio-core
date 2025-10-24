@@ -1,5 +1,6 @@
 import * as React from "react";
 import clsx from "clsx";
+import { SectionHeader } from "../layout/SectionHeader";
 
 export type Feature = { icon?: React.ReactNode; title: string; description?: string };
 export type FeaturesProps = {
@@ -11,9 +12,9 @@ export type FeaturesProps = {
 } & React.HTMLAttributes<HTMLElement>;
 
 const colMap: Record<NonNullable<FeaturesProps["columns"]>, string> = {
-  2: "sm:grid-cols-2",
-  3: "sm:grid-cols-2 md:grid-cols-3",
-  4: "sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4",
+  2: "features-grid--2",
+  3: "features-grid--3",
+  4: "features-grid--4",
 };
 
 export const FeatureGrid = React.forwardRef<HTMLElement, FeaturesProps>(
@@ -21,34 +22,25 @@ export const FeatureGrid = React.forwardRef<HTMLElement, FeaturesProps>(
     return (
       <section
         ref={ref}
-        className={clsx("w-full mx-auto px-4 md:px-6 py-16 md:py-24", className)}
+        className={clsx("features-section", className)}
         {...props}
       >
-        <div className="mx-auto max-w-7xl">
-          {(title || subtitle) && (
-            <div className="mb-10 text-center">
-              {title && (
-                <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
-                  {title}
-                </h2>
-              )}
-              {subtitle && <p className="mt-3 text-lg text-muted-foreground">{subtitle}</p>}
-            </div>
-          )}
-          <div className={clsx("grid grid-cols-1 gap-8", colMap[columns])}>
+        <div className="features-container">
+          <SectionHeader title={title} subtitle={subtitle} />
+          <div className={clsx("features-grid", colMap[columns])}>
             {items.map((it, i) => (
               <div
                 key={i}
-                className="rounded-[var(--radius)] border border-border bg-card text-card-foreground p-6 shadow-sm transition-colors transition-shadow hover:shadow-md"
+                className="feature-card"
               >
                 {it.icon && (
-                  <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-md bg-muted text-primary">
+                  <div className="feature-icon">
                     {it.icon}
                   </div>
                 )}
-                <h3 className="font-medium tracking-tight text-card-foreground">{it.title}</h3>
+                <h3 className="feature-title">{it.title}</h3>
                 {it.description && (
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  <p className="feature-description">
                     {it.description}
                   </p>
                 )}

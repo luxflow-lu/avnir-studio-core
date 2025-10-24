@@ -1,1 +1,35 @@
-pnpm lint-staged
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+# ZERO TOLERANCE - All checks must pass
+echo "🔒 ARCHITECTURE VALIDATION - ZERO TOLERANCE"
+
+# 1. Lint (ZERO warnings tolerated)
+echo "📋 Running ESLint..."
+pnpm lint --max-warnings 0 || exit 1
+
+# 2. TypeScript (STRICT mode)
+echo "🔍 TypeScript check..."
+pnpm typecheck || exit 1
+
+# 3. Build (Must succeed)
+echo "🏗️ Building packages..."
+pnpm build || exit 1
+
+# 4. Tests (Must pass)
+echo "🧪 Running tests..."
+pnpm test || exit 1
+
+# 5. Documentation validation
+echo "📚 Validating documentation..."
+pnpm docs:validate || exit 1
+
+# 5.5. Architecture validation
+echo "🏗️ Validating architecture..."
+pnpm architecture:check || exit 1
+
+# 6. Performance budget check
+echo "⚡ Performance budget check..."
+pnpm build:muzisystem || exit 1
+
+echo "✅ All validations passed - Commit authorized"

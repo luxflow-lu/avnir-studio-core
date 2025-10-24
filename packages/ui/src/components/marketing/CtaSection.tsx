@@ -1,5 +1,6 @@
 import * as React from "react";
 import { cx } from "../../utils/cx";
+import { SectionHeader } from "../layout/SectionHeader";
 
 export type CtaSectionProps = {
   title: string;
@@ -18,18 +19,24 @@ export const CtaSection = React.forwardRef<HTMLElement, CtaSectionProps>(
         className={cx("cta-section", className)}
         {...props}
       >
-        <div className="container">
-          <div className={cx("grid items-center gap-8", image ? "md:grid-cols-2" : "")}>
-            {image && reverse && <div className="order-1 md:order-none">{image}</div>}
-            <div>
-              <h2 className="cta-title">
-                {title}
-              </h2>
-              {subtitle && <p className="cta-subtitle">{subtitle}</p>}
+        <div className="cta-container">
+          {!image ? (
+            // Text-only CTA with centered header
+            <div className="cta-content--text-only">
+              <SectionHeader title={title} subtitle={subtitle} />
               <div className="cta-actions">{actions}</div>
             </div>
-            {image && !reverse && <div>{image}</div>}
-          </div>
+          ) : (
+            // CTA with image - keep custom layout
+            <div className={cx("cta-content--with-image", reverse ? "cta-content--reverse" : "")}>
+              {reverse && <div className="cta-image cta-image--reverse">{image}</div>}
+              <div className="cta-text">
+                <SectionHeader title={title} subtitle={subtitle} align="left" />
+                <div className="cta-actions">{actions}</div>
+              </div>
+              {!reverse && <div className="cta-image">{image}</div>}
+            </div>
+          )}
         </div>
       </section>
     );
