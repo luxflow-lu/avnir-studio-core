@@ -10,9 +10,9 @@ export interface PriceProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const sizes = {
-  sm: { price: "text-lg", currency: "text-sm", original: "text-sm" },
-  md: { price: "text-xl", currency: "text-base", original: "text-base" },
-  lg: { price: "text-3xl", currency: "text-lg", original: "text-lg" },
+  sm: "price--sm",
+  md: "price--md",
+  lg: "price--lg",
 };
 
 export const Price = React.forwardRef<HTMLDivElement, PriceProps>(
@@ -28,19 +28,19 @@ export const Price = React.forwardRef<HTMLDivElement, PriceProps>(
     },
     ref,
   ) => {
-    const sizeClasses = sizes[size];
+    const sizeClass = sizes[size];
     const hasDiscount = originalAmount && originalAmount > amount;
 
     return (
-      <div ref={ref} className={cx("flex items-baseline gap-2", className)} {...props}>
+      <div ref={ref} className={cx("price", sizeClass, className)} {...props}>
         <div className="flex items-baseline">
           {showCurrency && (
-            <span className={cx("text-[var(--text-muted)]", sizeClasses.currency)}>{currency}</span>
+            <span className="price-currency">{currency}</span>
           )}
-          <span className={cx("font-bold text-white", sizeClasses.price)}>{amount.toFixed(2)}</span>
+          <span className="price-amount">{amount.toFixed(2)}</span>
         </div>
         {hasDiscount && (
-          <span className={cx("line-through text-[var(--text-muted)]", sizeClasses.original)}>
+          <span className="price-original">
             {showCurrency && currency}
             {originalAmount.toFixed(2)}
           </span>

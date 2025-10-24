@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import { cx } from "../../utils/cx";
 
@@ -26,59 +28,51 @@ export const Faq = React.forwardRef<HTMLElement, FaqProps>(
     return (
       <section
         ref={ref}
-        className={cx("w-full mx-auto px-4 md:px-6 py-16 md:py-24", className)}
+        className={cx("section", className)}
         {...props}
       >
-        <div className="mx-auto max-w-4xl">
+        <div className="container">
           {(title || subtitle) && (
-            <div className="mb-8 text-center">
+            <div className="section-header">
               {title && (
-                <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
+                <h2 className="section-title">
                   {title}
                 </h2>
               )}
-              {subtitle && <p className="mt-3 text-lg text-muted-foreground">{subtitle}</p>}
+              {subtitle && <p className="section-subtitle">{subtitle}</p>}
             </div>
           )}
 
-          <div className="divide-y divide-border rounded-[var(--radius)] border border-border bg-card text-card-foreground shadow-sm">
+          <div className="faq-container">
             {items.map((qa, i) => {
               const id = `faq-item-${i}`;
               const expanded = open.has(i);
               return (
-                <div key={i} className="p-1 md:p-1">
+                <div key={i} className="faq-item">
                   <button
-                    className={cx(
-                      "w-full flex items-center justify-between text-left rounded-[var(--radius-sm)] px-4 py-3 md:px-5 md:py-4",
-                      "hover:bg-muted/40 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background",
-                    )}
+                    className="faq-question"
                     aria-controls={`${id}-panel`}
                     aria-expanded={expanded}
                     onClick={() => toggle(i)}
                   >
-                    <span className="font-medium text-card-foreground tracking-tight">{qa.q}</span>
+                    <span>{qa.q}</span>
                     <span
-                      className="ml-4 inline-flex h-5 w-5 items-center justify-center rounded-sm border border-border bg-muted text-primary"
+                      className={cx("faq-icon", expanded && "faq-icon--open")}
                       aria-hidden
                     >
                       {expanded ? "−" : "+"}
                     </span>
                   </button>
-                  <div
-                    id={`${id}-panel`}
-                    role="region"
-                    aria-labelledby={id}
-                    className={cx(
-                      "grid transition-all duration-200 ease-out px-4 md:px-5",
-                      expanded ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0",
-                    )}
-                  >
-                    <div className="overflow-hidden">
-                      <p className="mt-3 pb-4 text-sm leading-relaxed text-muted-foreground">
-                        {qa.a}
-                      </p>
+                  {expanded && (
+                    <div
+                      id={`${id}-panel`}
+                      role="region"
+                      aria-labelledby={id}
+                      className="faq-answer"
+                    >
+                      <p>{qa.a}</p>
                     </div>
-                  </div>
+                  )}
                 </div>
               );
             })}

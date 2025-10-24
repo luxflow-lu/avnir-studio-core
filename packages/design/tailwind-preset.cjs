@@ -72,9 +72,26 @@ module.exports = {
   plugins: [
     function ({ addUtilities }) {
       addUtilities({
+        /* container with responsive inline padding */
         ".container": {
-          "@apply mx-auto max-w-7xl px-4 md:px-6 lg:px-8": {},
+          "margin-inline": "auto",
+          "max-width": "80rem", /* ~1280px */
+          "padding-inline": "var(--space-global-x)"
         },
+      });
+      /* responsive container paddings */
+      addUtilities({
+        ".container": { "padding-inline": "1.5rem" }
+      }, { variants: ["md"] });
+      addUtilities({
+        ".container": { "padding-inline": "2rem" }
+      }, { variants: ["lg"] });
+
+      /* section vertical spacings */
+      addUtilities({
+        ".section-medium": { "padding-block": "var(--space-section-md)" },
+        ".section-large":  { "padding-block": "var(--space-section-lg)" },
+        ".global-padding": { "padding-inline": "var(--space-global-x)" }
       });
     },
   ],

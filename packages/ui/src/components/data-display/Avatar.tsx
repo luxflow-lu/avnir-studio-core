@@ -1,3 +1,5 @@
+"use client";
+
 import * as React from "react";
 import { cx } from "../../utils/cx";
 
@@ -11,10 +13,10 @@ export interface AvatarProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const sizes: Record<AvatarSize, string> = {
-  sm: "h-8 w-8 text-xs",
-  md: "h-10 w-10 text-sm",
-  lg: "h-12 w-12 text-base",
-  xl: "h-16 w-16 text-lg",
+  sm: "avatar--sm",
+  md: "avatar--md",
+  lg: "avatar--lg",
+  xl: "avatar--xl",
 };
 
 export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
@@ -34,7 +36,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       <div
         ref={ref}
         className={cx(
-          "relative inline-flex items-center justify-center rounded-full bg-[var(--surface)] text-white font-medium overflow-hidden",
+          "avatar",
           sizes[size],
           className,
         )}
@@ -44,7 +46,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
           <img
             src={src}
             alt={alt}
-            className="h-full w-full object-cover"
+            className="avatar img"
             onError={() => setImageError(true)}
           />
         ) : (

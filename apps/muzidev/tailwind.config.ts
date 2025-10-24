@@ -1,5 +1,4 @@
 module.exports = {
   presets: [require("@avnir/design/tailwind-preset.cjs")],
-  content: ["./app/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "../../packages/ui/**/*.tsx"],
-  darkMode: ["class", '[data-theme="dark"]'],
+  content: ["./src/**/*.{ts,tsx}", "../../packages/ui/src/**/*.{ts,tsx}"],
 };

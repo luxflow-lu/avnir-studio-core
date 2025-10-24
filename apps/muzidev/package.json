@@ -9,6 +9,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@avnir/brandkit": "workspace:^",
     "@avnir/design": "workspace:^",
     "@avnir/ui": "workspace:^",
     "@features/audio-tools": "workspace:^",

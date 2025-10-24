@@ -7,10 +7,10 @@ export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
 }
 
 const variants: Record<BadgeVariant, string> = {
-  default: "badge", // Use our CSS class
-  success: "badge badge-studio", // Use our CSS class
-  warning: "badge badge-draft", // Use our CSS class
-  destructive: "badge badge-archived", // Use our CSS class
+  default: "badge badge--secondary",
+  success: "badge badge--success",
+  warning: "badge badge--warning",
+  destructive: "badge badge--error",
 };
 
 export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(

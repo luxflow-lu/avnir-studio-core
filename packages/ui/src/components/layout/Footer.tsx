@@ -20,22 +20,22 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
   ({ className, sections = [], bottomContent, ...props }, ref) => (
     <footer
       ref={ref}
-      className={cx("surface-invert bg-[var(--bg)] border-t border-white/10", className)}
+      className={cx("footer", className)}
       {...props}
     >
       {sections && sections.length > 0 && (
-        <div className="max-w-7xl mx-auto px-4 md:px-6 py-12">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="footer-container">
+          <div className="footer-grid">
             {sections.map((section, index) => (
-              <div key={index}>
-                <h3 className="text-white font-semibold mb-4">{section.title}</h3>
-                <ul className="space-y-2">
+              <div key={index} className="footer-section">
+                <h3>{section.title}</h3>
+                <ul className="footer-links">
                   {section.links &&
                     section.links.map((link, linkIndex) => (
                       <li key={linkIndex}>
                         <a
                           href={link.href}
-                          className="text-[var(--text-muted)] hover:text-white transition-colors text-sm"
+                          className="footer-link"
                         >
                           {link.label}
                         </a>
@@ -48,8 +48,8 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
         </div>
       )}
       {bottomContent && (
-        <div className="border-t border-white/10">
-          <div className="max-w-7xl mx-auto px-4 md:px-6 py-6">{bottomContent}</div>
+        <div className="footer-bottom">
+          {bottomContent}
         </div>
       )}
     </footer>

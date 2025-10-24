@@ -56,19 +56,19 @@ const componentShowcase = [
 function ComponentSection({ name, description, examples }: (typeof componentShowcase)[0]) {
   return (
     <div className="mb-12">
-      <h3 className="text-xl font-semibold text-titles mb-2">{name}</h3>
-      <p className="text-muted mb-6">{description}</p>
+      <h3 className="content-title">{name}</h3>
+      <p className="content-description">{description}</p>
 
       <div className="grid gap-6">
         {examples.map((example, index) => (
-          <div key={index} className="p-6 bg-surface rounded-lg border border-border">
+          <div key={index} className="card">
             <div className="flex flex-col lg:flex-row lg:items-center gap-4">
               <div className="flex-1">
-                <h4 className="font-medium text-titles mb-2">{example.label}</h4>
+                <h4 className="font-medium mb-2">{example.label}</h4>
                 <div className="flex items-center gap-4">{example.component}</div>
               </div>
               <div className="lg:w-1/3">
-                <code className="text-xs bg-bg p-2 rounded block overflow-x-auto">
+                <code className="text-xs p-2 rounded block overflow-x-auto">
                   {`<${name} ${example.label.toLowerCase().includes("disabled") ? "disabled " : ""}${
                     example.label.toLowerCase().includes("outline")
                       ? 'variant="outline" '
@@ -90,21 +90,23 @@ function ComponentSection({ name, description, examples }: (typeof componentShow
 
 export default function ComponentsPage() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <Section>
-        <h1 className="text-4xl font-bold text-titles mb-8">Components</h1>
-        <p className="text-lg text-muted mb-12">
-          Galerie automatique des composants @avnir/ui avec leurs variants, états et exemples
-          responsive.
-        </p>
+    <section className="section">
+      <div className="container">
+        <div className="section-header">
+          <h1 className="section-title">Components</h1>
+          <p className="section-subtitle">
+            Galerie automatique des composants @avnir/ui avec leurs variants, états et exemples
+            responsive.
+          </p>
+        </div>
 
         {/* Responsive Demo */}
-        <div className="mb-16 p-6 bg-surface rounded-lg border border-border">
-          <h2 className="text-2xl font-semibold text-titles mb-4">Responsive Demo</h2>
-          <p className="text-muted mb-6">
+        <div className="card mb-16">
+          <h2 className="content-title">Responsive Demo</h2>
+          <p className="content-description">
             Les composants s'adaptent automatiquement aux différentes tailles d'écran.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid-3">
             <Button variant="solid" className="w-full">
               Mobile First
             </Button>
@@ -124,9 +126,9 @@ export default function ComponentsPage() {
 
         {/* Usage Guidelines */}
         <div className="mt-16">
-          <h2 className="text-2xl font-semibold text-titles mb-6">Component Guidelines</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-6 bg-success/10 border border-success/20 rounded-lg">
+          <h2 className="content-title">Component Guidelines</h2>
+          <div className="grid-2">
+            <div className="card">
               <h3 className="text-lg font-semibold text-success mb-3">✅ Best Practices</h3>
               <ul className="space-y-2 text-sm">
                 <li>• Utiliser les variants appropriés</li>
@@ -136,7 +138,7 @@ export default function ComponentsPage() {
                 <li>• Suivre les patterns d'accessibilité</li>
               </ul>
             </div>
-            <div className="p-6 bg-warning/10 border border-warning/20 rounded-lg">
+            <div className="card">
               <h3 className="text-lg font-semibold text-warning mb-3">⚠️ Common Pitfalls</h3>
               <ul className="space-y-2 text-sm">
                 <li>• Oublier les états de focus</li>
@@ -148,7 +150,7 @@ export default function ComponentsPage() {
             </div>
           </div>
         </div>
-      </Section>
-    </div>
+      </div>
+    </section>
   );
 }

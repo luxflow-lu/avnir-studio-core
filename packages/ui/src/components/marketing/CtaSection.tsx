@@ -15,18 +15,18 @@ export const CtaSection = React.forwardRef<HTMLElement, CtaSectionProps>(
     return (
       <section
         ref={ref}
-        className={cx("w-full mx-auto px-4 md:px-6 py-16 md:py-24", className)}
+        className={cx("cta-section", className)}
         {...props}
       >
-        <div className="mx-auto max-w-7xl">
-          <div className={cx("grid gap-8 items-center", image ? "md:grid-cols-2" : "")}>
+        <div className="container">
+          <div className={cx("grid items-center gap-8", image ? "md:grid-cols-2" : "")}>
             {image && reverse && <div className="order-1 md:order-none">{image}</div>}
             <div>
-              <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
+              <h2 className="cta-title">
                 {title}
               </h2>
-              {subtitle && <p className="mt-3 text-lg text-muted-foreground">{subtitle}</p>}
-              <div className="mt-6 inline-flex flex-wrap gap-3">{actions}</div>
+              {subtitle && <p className="cta-subtitle">{subtitle}</p>}
+              <div className="cta-actions">{actions}</div>
             </div>
             {image && !reverse && <div>{image}</div>}
           </div>

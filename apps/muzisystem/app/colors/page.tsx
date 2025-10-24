@@ -41,17 +41,17 @@ function ColorCard({
   }, [cssVar]);
 
   return (
-    <div className="bg-surface rounded-lg p-4 border border-border">
+    <div className="card">
       <div
-        className="w-full h-20 rounded-lg mb-3 border border-border"
+        className="w-full h-20 rounded-lg mb-3 border"
         style={{ backgroundColor: `var(${cssVar})` }}
       ></div>
-      <h3 className="font-semibold text-titles mb-1">{name}</h3>
+      <h3 className="font-semibold mb-1">{name}</h3>
       <p className="text-sm text-muted mb-2">{description}</p>
-      <code className="text-xs bg-bg px-2 py-1 rounded">{cssVar}</code>
+      <code className="text-xs px-2 py-1 rounded">{cssVar}</code>
       {computedColor && <div className="text-xs text-muted mt-1">{computedColor}</div>}
       <div className="mt-2 text-xs">
-        <span className="inline-block bg-success/20 text-success px-2 py-1 rounded">
+        <span className="badge badge--success">
           AA ✓ 4.5:1
         </span>
       </div>
@@ -68,23 +68,25 @@ export default function ColorsPage() {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <Section>
-        <h1 className="text-4xl font-bold text-titles mb-8">Colors</h1>
-        <p className="text-lg text-muted mb-12">
-          Palettes de couleurs par brand avec ratios de contraste AA. Changez de brand dans la
-          navigation pour voir les variations.
-        </p>
+    <section className="section">
+      <div className="container">
+        <div className="section-header">
+          <h1 className="section-title">Colors</h1>
+          <p className="section-subtitle">
+            Palettes de couleurs par brand avec ratios de contraste AA. Changez de brand dans la
+            navigation pour voir les variations.
+          </p>
+        </div>
 
-        <div className="mb-8 p-4 bg-surface rounded-lg">
-          <h2 className="text-xl font-semibold text-titles mb-2">Brand actuelle</h2>
+        <div className="card mb-8">
+          <h2 className="text-xl font-semibold mb-2">Brand actuelle</h2>
           <div className="text-2xl font-bold text-primary">{currentBrand.toUpperCase()}</div>
         </div>
 
         {/* Semantic Colors */}
         <div className="mb-16">
-          <h2 className="text-2xl font-semibold text-titles mb-6">Semantic Colors</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <h2 className="content-title">Semantic Colors</h2>
+          <div className="grid-3">
             {colorTokens.map((token) => (
               <ColorCard
                 key={token.name}
@@ -98,27 +100,20 @@ export default function ColorsPage() {
 
         {/* Brand Variations */}
         <div className="mb-16">
-          <h2 className="text-2xl font-semibold text-titles mb-6">Brand Variations</h2>
-          <p className="text-muted mb-6">
+          <h2 className="content-title">Brand Variations</h2>
+          <p className="content-description">
             Chaque brand a sa propre palette de couleurs. Utilisez le sélecteur dans la navigation
             pour voir les différences.
           </p>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid-4">
             {["avnir", "muzidev", "muzipics", "promozic"].map((brand) => (
-              <div key={brand} className="text-center p-4 bg-surface rounded-lg">
-                <div className="text-sm font-medium text-titles mb-2">{brand.toUpperCase()}</div>
+              <div key={brand} className="card text-center">
+                <div className="text-sm font-medium mb-2">{brand.toUpperCase()}</div>
                 <div
                   className="w-full h-8 rounded"
                   style={{
-                    backgroundColor:
-                      brand === "avnir"
-                        ? "#3b82f6"
-                        : brand === "muzidev"
-                          ? "#10b981"
-                          : brand === "muzipics"
-                            ? "#f59e0b"
-                            : "#8b5cf6",
+                    backgroundColor: "var(--primary)"
                   }}
                 ></div>
               </div>
@@ -128,9 +123,9 @@ export default function ColorsPage() {
 
         {/* Usage Guidelines */}
         <div className="mb-16">
-          <h2 className="text-2xl font-semibold text-titles mb-6">Usage Guidelines</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="p-6 bg-success/10 border border-success/20 rounded-lg">
+          <h2 className="content-title">Usage Guidelines</h2>
+          <div className="grid-2">
+            <div className="card">
               <h3 className="text-lg font-semibold text-success mb-3">✅ Do</h3>
               <ul className="space-y-2 text-sm">
                 <li>• Utiliser les tokens CSS variables</li>
@@ -139,7 +134,7 @@ export default function ColorsPage() {
                 <li>• Utiliser les couleurs sémantiques</li>
               </ul>
             </div>
-            <div className="p-6 bg-error/10 border border-error/20 rounded-lg">
+            <div className="card">
               <h3 className="text-lg font-semibold text-error mb-3">❌ Don't</h3>
               <ul className="space-y-2 text-sm">
                 <li>• Hardcoder des valeurs hex (#ff0000)</li>
@@ -150,7 +145,7 @@ export default function ColorsPage() {
             </div>
           </div>
         </div>
-      </Section>
-    </div>
+      </div>
+    </section>
   );
 }

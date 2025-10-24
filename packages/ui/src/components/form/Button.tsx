@@ -13,16 +13,16 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
   asChild?: boolean; // reserved for future use
 }
 
-const base = "btn"; // Use our CSS class with correct border-radius: 0.25rem
+const base = "btn";
 const sizes: Record<ButtonSize, string> = {
-  sm: "h-9 px-3 text-xs",
-  md: "h-10 px-4 py-2 text-sm",
-  lg: "h-11 px-8 text-base",
+  sm: "btn--sm",
+  md: "btn--md",
+  lg: "btn--lg",
 };
 const variants: Record<ButtonVariant, string> = {
-  solid: "btn-primary", // Uses our CSS class
-  outline: "btn-secondary", // Uses our CSS class
-  ghost: "hover:bg-accent hover:text-accent-foreground",
+  solid: "btn-primary",
+  outline: "btn-secondary",
+  ghost: "btn-ghost",
 };
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -46,21 +46,18 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       {...props}
     >
       {leftIcon && (
-        <span className="mr-2 inline-flex" aria-hidden>
+        <span className="btn-icon-left" aria-hidden>
           {leftIcon}
         </span>
       )}
       <span>{children}</span>
       {rightIcon && (
-        <span className="ml-2 inline-flex" aria-hidden>
+        <span className="btn-icon-right" aria-hidden>
           {rightIcon}
         </span>
       )}
       {loading && (
-        <span
-          className="ml-2 inline-block h-4 w-4 animate-spin border-2 border-primary-foreground border-t-transparent rounded-full"
-          aria-hidden
-        />
+        <span className="spinner" aria-hidden />
       )}
     </button>
   ),
