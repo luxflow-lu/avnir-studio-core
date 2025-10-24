@@ -22,7 +22,15 @@ import {
   Avnir
 } from "@avnir/ui";
 
+import { useEffect, useState } from "react";
+
 export default function AllComponentsPage() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   return (
     <section className="section">
       <div className="container">
@@ -59,55 +67,113 @@ export default function AllComponentsPage() {
           {/* Contact Form Example */}
           <div className="mb-8">
             <h3 className="text-lg font-semibold mb-4">Contact Form Example</h3>
-            <form className="max-w-md space-y-4">
-              <Form.Field label="Full Name" required>
-                <Input placeholder="Your name" />
-              </Form.Field>
-              <Form.Field label="Email Address" required>
-                <Input placeholder="Email address" type="email" />
-              </Form.Field>
-              <Form.Field label="Message">
-                <Textarea placeholder="Your message" rows={4} />
-              </Form.Field>
-              <div className="flex items-center gap-3">
-                <Form.Checkbox id="newsletter" />
-                <label htmlFor="newsletter" className="text-sm">Subscribe to newsletter</label>
+            {isClient ? (
+              <form className="max-w-md space-y-4">
+                <Form.Field label="Full Name" required>
+                  <Input placeholder="Your name" />
+                </Form.Field>
+                <Form.Field label="Email Address" required>
+                  <Input placeholder="Email address" type="email" />
+                </Form.Field>
+                <Form.Field label="Message">
+                  <Textarea placeholder="Your message" rows={4} />
+                </Form.Field>
+                <div className="flex items-center gap-3">
+                  <Form.Checkbox id="newsletter" />
+                  <label htmlFor="newsletter" className="text-sm">Subscribe to newsletter</label>
+                </div>
+                <Button variant="solid" className="w-full">Send Message</Button>
+              </form>
+            ) : (
+              <div className="max-w-md space-y-4">
+                <div className="space-y-2">
+                  <label className="block text-sm font-medium text-white">Full Name *</label>
+                  <Input placeholder="Your name" />
+                </div>
+                <div className="space-y-2">
+                  <label className="block text-sm font-medium text-white">Email Address *</label>
+                  <Input placeholder="Email address" type="email" />
+                </div>
+                <div className="space-y-2">
+                  <label className="block text-sm font-medium text-white">Message</label>
+                  <Textarea placeholder="Your message" rows={4} />
+                </div>
+                <div className="flex items-center gap-3">
+                  <input type="checkbox" className="checkbox" />
+                  <label className="text-sm">Subscribe to newsletter</label>
+                </div>
+                <Button variant="solid" className="w-full">Send Message</Button>
               </div>
-              <Button variant="solid" className="w-full">Send Message</Button>
-            </form>
+            )}
           </div>
 
           {/* Advanced Form Controls */}
           <div className="mb-8">
             <h3 className="text-lg font-semibold mb-4">Advanced Form Controls</h3>
-            <div className="max-w-md space-y-6">
-              <Form.Field label="File Upload">
-                <Form.FileUpload 
-                  accept="image/*"
-                  placeholder="Drop your image here or click to browse"
-                />
-              </Form.Field>
-              
-              <Form.Field label="Preferences">
-                <div className="space-y-3">
-                  <div className="flex items-center gap-3">
-                    <Form.Radio name="plan" value="basic" id="basic" />
-                    <label htmlFor="basic">Basic Plan</label>
+            {isClient ? (
+              <div className="max-w-md space-y-6">
+                <Form.Field label="File Upload">
+                  <Form.FileUpload 
+                    accept="image/*"
+                    placeholder="Drop your image here or click to browse"
+                  />
+                </Form.Field>
+                
+                <Form.Field label="Preferences">
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <Form.Radio name="plan" value="basic" id="basic" />
+                      <label htmlFor="basic">Basic Plan</label>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Form.Radio name="plan" value="pro" id="pro" />
+                      <label htmlFor="pro">Pro Plan</label>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <Form.Radio name="plan" value="pro" id="pro" />
-                    <label htmlFor="pro">Pro Plan</label>
-                  </div>
-                </div>
-              </Form.Field>
+                </Form.Field>
 
-              <Form.Field label="Notifications">
-                <div className="flex items-center justify-between">
-                  <span className="text-sm">Email notifications</span>
-                  <Form.Switch />
+                <Form.Field label="Notifications">
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Email notifications</span>
+                    <Form.Switch />
+                  </div>
+                </Form.Field>
+              </div>
+            ) : (
+              <div className="max-w-md space-y-6">
+                <div className="space-y-2">
+                  <label className="block text-sm font-medium text-white">File Upload</label>
+                  <div className="border-2 border-dashed border-gray-600 rounded-lg p-6 text-center">
+                    <p className="text-sm text-muted">Drop your image here or click to browse</p>
+                  </div>
                 </div>
-              </Form.Field>
-            </div>
+                
+                <div className="space-y-2">
+                  <label className="block text-sm font-medium text-white">Preferences</label>
+                  <div className="space-y-3">
+                    <div className="flex items-center gap-3">
+                      <input type="radio" name="plan" value="basic" className="radio" />
+                      <label>Basic Plan</label>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <input type="radio" name="plan" value="pro" className="radio" />
+                      <label>Pro Plan</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="space-y-2">
+                  <label className="block text-sm font-medium text-white">Notifications</label>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm">Email notifications</span>
+                    <div className="switch">
+                      <input type="checkbox" className="switch-input" />
+                      <span className="switch-slider"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Settings Form Example */}
