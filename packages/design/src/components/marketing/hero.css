@@ -51,28 +51,32 @@
 
 /* Hero typography */
 .hero-eyebrow {
-  font-size: 0.875rem;
-  font-weight: 500;
+  font-size: var(--text-sm);
+  font-weight: var(--font-semibold);
   color: var(--primary);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-12);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wider);
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  line-height: 1.1;
-  font-weight: 700;
+  font-size: clamp(var(--text-5xl), 8vw, var(--text-8xl));
+  line-height: var(--leading-tight);
+  font-weight: var(--font-bold);
   color: var(--titles);
   max-width: 50rem;
   margin-bottom: var(--space-24);
+  letter-spacing: var(--tracking-tight);
 }
 
 .hero-subtitle {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  font-weight: 400;
+  font-size: var(--text-xl);
+  line-height: var(--leading-relaxed);
+  font-weight: var(--font-normal);
   color: var(--text);
   margin-bottom: var(--space-32);
   max-width: 42rem;
+  opacity: 0.9;
 }
 
 .hero-actions {

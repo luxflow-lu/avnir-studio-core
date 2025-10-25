@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: center;
   gap: var(--space-8);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   font-weight: 500;
   transition: all 0.2s ease;
   cursor: pointer;

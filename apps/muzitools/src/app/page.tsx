@@ -1,4 +1,5 @@
-import { Layout, Marketing } from "@avnir/ui";
+import { Layout, Marketing, Button } from "@avnir/ui";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -10,68 +11,142 @@ export default function HomePage() {
           { label: "Outils", href: "/analyzer" },
           { label: "À propos", href: "/about" }
         ]}
+        actions={
+          <Link href="/analyzer">
+            <Button variant="solid" size="sm">Essayer gratuitement</Button>
+          </Link>
+        }
       />
       
       <Marketing.Hero
-        title="MUZITOOLS"
-        subtitle="La suite d'outils professionnels pour la production musicale. Analysez, créez et perfectionnez vos productions avec nos outils spécialisés."
+        eyebrow="Outils professionnels pour producteurs"
+        title="Analysez vos productions en quelques secondes"
+        subtitle="MUZITOOLS vous aide à identifier le BPM, la tonalité et le code Camelot de vos tracks pour des mixages harmoniques parfaits. 100% gratuit, 100% local, 0% tracking."
         layout="center"
         actions={
           <div className="hero-actions">
-            <a href="/analyzer" className="btn btn-primary btn--lg">
-              Commencer l'analyse
-            </a>
-            <a href="/about" className="btn btn-secondary btn--lg">
-              En savoir plus
-            </a>
+            <Link href="/analyzer">
+              <Button variant="solid" size="lg">Commencer l'analyse</Button>
+            </Link>
+            <Link href="/about">
+              <Button variant="outline" size="lg">En savoir plus</Button>
+            </Link>
           </div>
         }
       />
 
       <Marketing.Features
-        title="Nos Outils"
-        subtitle="Découvrez notre collection d'outils professionnels pour la production musicale"
+        title="Outils Professionnels"
+        subtitle="Tout ce dont vous avez besoin pour analyser et perfectionner vos productions musicales"
         columns={3}
         items={[
           {
             icon: "🎵",
-            title: "Key & BPM Analyzer",
-            description: "Analysez instantanément le BPM, la tonalité et le code Camelot de vos tracks pour des mixages parfaits"
+            title: "Détection BPM",
+            description: "Analyse précise du tempo de vos tracks avec une précision de 99%. Compatible MP3, WAV, M4A."
           },
           {
-            icon: "🤖",
-            title: "Audio Enhancer",
-            description: "Améliorez la qualité audio de vos productions avec l'IA avancée (Bientôt disponible)"
+            icon: "🎹",
+            title: "Détection de Tonalité",
+            description: "Identifiez la tonalité musicale (Do, Ré, Mi...) et le mode (majeur/mineur) pour des mixages harmoniques."
           },
           {
-            icon: "🎛️",
-            title: "Stem Separator", 
-            description: "Séparez les instruments d'une piste audio complète en quelques secondes (Bientôt disponible)"
+            icon: "🎨",
+            title: "Code Camelot",
+            description: "Obtenez le code Camelot (1A-12B) pour mixer facilement des tracks compatibles harmoniquement."
+          },
+          {
+            icon: "⚡",
+            title: "Analyse Instantanée",
+            description: "Résultats en moins de 3 secondes. Traitement 100% local, vos fichiers ne quittent jamais votre appareil."
+          },
+          {
+            icon: "🔒",
+            title: "Confidentialité Totale",
+            description: "Aucune donnée envoyée sur internet. Aucun tracking, aucun cookie, aucune collecte de données personnelles."
+          },
+          {
+            icon: "💯",
+            title: "100% Gratuit",
+            description: "Aucun compte requis, aucune limite d'utilisation. Analysez autant de fichiers que vous voulez, gratuitement."
+          }
+        ]}
+      />
+
+      {/* Section Comment ça marche */}
+      <Marketing.Steps
+        title="Comment ça marche ?"
+        subtitle="Analysez vos productions en 3 étapes simples"
+        items={[
+          {
+            title: "1. Importez votre fichier",
+            description: "Glissez-déposez votre fichier audio (MP3, WAV, M4A) ou cliquez pour sélectionner. Taille max: 50MB."
+          },
+          {
+            title: "2. Analyse automatique",
+            description: "Notre algorithme analyse le BPM, la tonalité et calcule le code Camelot en quelques secondes."
+          },
+          {
+            title: "3. Utilisez les résultats",
+            description: "Copiez les informations pour vos playlists, DJ sets ou sessions de production musicale."
           }
         ]}
       />
 
       <Marketing.Stats
-        title="Faites confiance à MUZITOOLS"
+        title="MUZITOOLS en chiffres"
         items={[
-          { label: "Fichiers analysés", value: "10K+" },
-          { label: "Producteurs actifs", value: "500+" },
-          { label: "Précision", value: "99%" },
-          { label: "Temps d'analyse", value: "<3s" }
+          { label: "Précision BPM", value: "99%" },
+          { label: "Temps d'analyse", value: "<3s" },
+          { label: "Formats supportés", value: "3" },
+          { label: "Taille max fichier", value: "50MB" }
+        ]}
+      />
+
+      {/* Section FAQ */}
+      <Marketing.Faq
+        id="faq"
+        title="Questions fréquentes"
+        subtitle="Tout ce que vous devez savoir sur MUZITOOLS"
+        items={[
+          {
+            q: "Quels formats audio sont supportés ?",
+            a: "MUZITOOLS supporte les formats MP3, WAV et M4A. La taille maximale par fichier est de 50MB."
+          },
+          {
+            q: "Mes fichiers sont-ils envoyés sur un serveur ?",
+            a: "Non, absolument pas. L'analyse est effectuée 100% localement dans votre navigateur. Vos fichiers ne quittent jamais votre appareil."
+          },
+          {
+            q: "Est-ce vraiment gratuit ?",
+            a: "Oui, MUZITOOLS est 100% gratuit sans limitation. Aucun compte requis, aucun abonnement, aucune publicité."
+          },
+          {
+            q: "Quelle est la précision de l'analyse ?",
+            a: "Notre algorithme offre une précision de 99% pour la détection du BPM et de la tonalité sur la plupart des genres musicaux."
+          },
+          {
+            q: "Qu'est-ce que le code Camelot ?",
+            a: "Le code Camelot (1A-12B) est un système de notation qui facilite le mixage harmonique. Les tracks avec des codes adjacents se mixent harmonieusement."
+          },
+          {
+            q: "Puis-je utiliser MUZITOOLS hors ligne ?",
+            a: "Actuellement non, mais une version PWA avec support hors ligne est prévue dans une future mise à jour."
+          }
         ]}
       />
 
       <Marketing.CtaSection
         title="Prêt à analyser vos productions ?"
-        subtitle="Rejoignez des centaines de producteurs qui utilisent déjà MUZITOOLS pour perfectionner leurs mixages"
+        subtitle="Commencez dès maintenant, aucun compte requis"
         actions={
           <div className="cta-actions">
-            <a href="/analyzer" className="btn btn-primary btn--lg">
-              Commencer maintenant
-            </a>
-            <a href="/demo" className="btn btn-secondary btn--lg">
-              Voir la démo
-            </a>
+            <Link href="/analyzer">
+              <Button variant="solid" size="lg">Commencer l'analyse</Button>
+            </Link>
+            <Link href="/about">
+              <Button variant="outline" size="lg">En savoir plus</Button>
+            </Link>
           </div>
         }
       />
@@ -82,34 +157,44 @@ export default function HomePage() {
             title: "MUZITOOLS",
             links: [
               { label: "Accueil", href: "/" },
-              { label: "Outils", href: "/analyzer" },
+              { label: "Analyzer", href: "/analyzer" },
               { label: "À propos", href: "/about" }
             ]
           },
           {
-            title: "Outils",
+            title: "Fonctionnalités",
             links: [
-              { label: "Key & BPM Analyzer", href: "/analyzer" },
-              { label: "Audio Enhancer", href: "#" },
-              { label: "Stem Separator", href: "#" }
+              { label: "Détection BPM", href: "/analyzer" },
+              { label: "Détection Tonalité", href: "/analyzer" },
+              { label: "Code Camelot", href: "/analyzer" }
             ]
           },
           {
-            title: "Support",
+            title: "Ressources",
             links: [
-              { label: "Documentation", href: "#" },
-              { label: "Contact", href: "#" },
-              { label: "FAQ", href: "#" }
+              { label: "Guide d'utilisation", href: "/about" },
+              { label: "FAQ", href: "/#faq" },
+              { label: "Formats supportés", href: "/about" }
             ]
           },
           {
             title: "Légal",
             links: [
-              { label: "Conditions d'utilisation", href: "#" },
-              { label: "Politique de confidentialité", href: "#" }
+              { label: "Confidentialité", href: "#" },
+              { label: "Conditions", href: "#" }
             ]
           }
         ]}
+        bottomContent={
+          <div className="footer-bottom">
+            <p>© 2025 MUZITOOLS - Fait avec ❤️ par AVNIR Studio</p>
+            <div className="footer-badges">
+              <span className="badge badge--outline">v0.1.0</span>
+              <span className="badge badge--outline">100% Gratuit</span>
+              <span className="badge badge--outline">0% Tracking</span>
+            </div>
+          </div>
+        }
       />
     </>
   );
