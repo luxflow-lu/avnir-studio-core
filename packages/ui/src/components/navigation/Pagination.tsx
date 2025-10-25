@@ -58,7 +58,7 @@ export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
     const buttonClass =
       "px-3 py-2 text-sm font-medium rounded-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]";
     const activeClass = "bg-brand text-[var(--brand-on)]";
-    const inactiveClass = "text-muted hover:text-white hover:bg-white/5";
+    const inactiveClass = "text-muted hover:text-on-primary hover:bg-white/5";
     const disabledClass = "text-muted opacity-50 cursor-not-allowed";
 
     return (

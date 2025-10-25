@@ -20,7 +20,7 @@ export function FeatureGrid({
                   </span>
                 )}
                 <div className="flex-1">
-                  <h3 className="text-white font-semibold">{it.title}</h3>
+                  <h3 className="text-on-primary font-semibold">{it.title}</h3>
                   {it.text && <p className="mt-1 text-[var(--text-muted)]">{it.text}</p>}
                   <div className="mt-3 text-[var(--brand)] opacity-90 group-hover:opacity-100">
                     En savoir plus →

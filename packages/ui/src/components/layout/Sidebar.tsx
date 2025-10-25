@@ -46,7 +46,7 @@ export const Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>(
               "flex-center gap-3 px-3 py-2-sm",
               item.active
                 ? "bg-brand/10 text-brand"
-                : "text-muted hover:text-white hover:bg-muted",
+                : "text-muted hover:text-on-primary hover:bg-muted",
               level > 0 && "ml-6",
             )}
             onClick={hasChildren ? () => toggleExpanded(item.id) : undefined}

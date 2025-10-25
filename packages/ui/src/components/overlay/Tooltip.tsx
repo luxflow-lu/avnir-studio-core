@@ -63,7 +63,7 @@ export const Tooltip = React.forwardRef<HTMLDivElement, TooltipProps>(
           <div
             ref={tooltipRef}
             className={cx(
-              "fixed z-50 px-2 py-1 text-xs text-white bg-black rounded shadow-lg pointer-events-none",
+              "fixed z-50 px-2 py-1 text-xs text-on-primary bg-black rounded shadow-lg pointer-events-none",
               className,
             )}
             style={{ left: position.x, top: position.y }}

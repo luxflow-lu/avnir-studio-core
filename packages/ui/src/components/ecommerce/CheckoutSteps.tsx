@@ -83,13 +83,13 @@ export const CheckoutSteps = React.forwardRef<HTMLDivElement, CheckoutStepsProps
                     className={cx(
                       "text-sm font-medium transition-colors",
                       step.current
-                        ? "text-white"
+                        ? "text-on-primary"
                         : step.completed
-                          ? "text-white"
+                          ? "text-on-primary"
                           : step.disabled
                             ? "text-muted"
                             : "text-muted",
-                      canClick && "group-hover:text-white",
+                      canClick && "group-hover:text-on-primary",
                     )}
                   >
                     {step.title}

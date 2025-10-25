@@ -19,7 +19,7 @@ export function SplitCTA({
         <div className="grid md:grid-cols-2 gap-8 items-center bg-[var(--surface)] rounded-[var(--radius-lg)] p-6 md:p-8 shadow-md">
           <div className="rounded-[var(--radius-md)] overflow-hidden shadow-sm">{media}</div>
           <div>
-            <h2 className="text-3xl md:text-4xl font-semibold text-white">{title}</h2>
+            <h2 className="text-3xl md:text-4xl font-semibold text-on-primary">{title}</h2>
             {text && <p className="mt-3 text-[var(--text-muted)]">{text}</p>}
             <a href={cta.href} className="inline-flex mt-6">
               <Button>{cta.label}</Button>

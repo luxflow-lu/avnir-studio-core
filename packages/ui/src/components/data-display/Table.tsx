@@ -36,7 +36,7 @@ export const Table = React.forwardRef<HTMLDivElement, TableProps>(
                   <th
                     key={column.key}
                     className={cx(
-                      "px-4 py-3 text-sm font-medium text-white",
+                      "px-4 py-3 text-sm font-medium text-on-primary",
                       column.sortable && "cursor-pointer hover:bg-muted",
                     )}
                     onClick={column.sortable ? () => onSort?.(column.key) : undefined}
