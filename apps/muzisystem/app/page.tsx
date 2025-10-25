@@ -1,6 +1,6 @@
 "use client";
 
-import { Button, Card, Marketing } from "@avnir/ui";
+import { Button, Card, Layout, Marketing } from "@avnir/ui";
 
 export default function HomePage() {
   return (
@@ -45,8 +45,11 @@ export default function HomePage() {
         {/* Design Principles */}
         <section className="section--md">
           <div className="container">
-            <h2>Design Principles</h2>
-            <p>Our core principles guide every design decision</p>
+            <Layout.SectionHeader 
+              title="Design Principles" 
+              subtitle="Our core principles guide every design decision"
+              align="center"
+            />
             <div className="grid-3">
               <Card>
                 <h3>🎯 Consistency</h3>
@@ -67,8 +70,11 @@ export default function HomePage() {
         {/* Component Categories */}
         <section className="section--md">
           <div className="container">
-            <h2>Component Library</h2>
-            <p>Comprehensive collection of production-ready components</p>
+            <Layout.SectionHeader 
+              title="Component Library" 
+              subtitle="Comprehensive collection of production-ready components"
+              align="center"
+            />
             <div className="grid-2">
               <Card>
                 <h3>Foundation</h3>
@@ -96,8 +102,11 @@ export default function HomePage() {
         {/* Design Tokens */}
         <section className="section--md">
           <div className="container">
-            <h2>Design Tokens</h2>
-            <p>Consistent design decisions codified as data</p>
+            <Layout.SectionHeader 
+              title="Design Tokens" 
+              subtitle="Consistent design decisions codified as data"
+              align="center"
+            />
             <div className="grid-3">
               <Card>
                 <h3>Colors</h3>
@@ -118,8 +127,11 @@ export default function HomePage() {
         {/* Developer Experience */}
         <section className="section--md">
           <div className="container">
-            <h2>Developer Experience</h2>
-            <p>Built for developers, by developers</p>
+            <Layout.SectionHeader 
+              title="Developer Experience" 
+              subtitle="Built for developers, by developers"
+              align="center"
+            />
             <div className="grid-2">
               <Card>
                 <h3>TypeScript First</h3>
@@ -136,8 +148,11 @@ export default function HomePage() {
         {/* CTA Section */}
         <section className="section--md">
           <div className="container">
-            <h2>Start Building Today</h2>
-            <p>Join hundreds of teams using MUZISYSTEM to build consistent, accessible interfaces</p>
+            <Layout.SectionHeader 
+              title="Start Building Today" 
+              subtitle="Join hundreds of teams using MUZISYSTEM to build consistent, accessible interfaces"
+              align="center"
+            />
             <Button variant="solid" size="lg">View All Components</Button>
             <Button variant="outline" size="lg">Read Documentation</Button>
           </div>
