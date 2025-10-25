@@ -52,14 +52,35 @@
   --space-80: 5rem;
   --space-96: 6rem;
   
-  /* Global layout spacing */
-  --space-global-x: 1rem; /* Default horizontal padding for containers */
+  /* ==================== SEMANTIC SPACING ==================== */
+  /* Container padding */
+  --padding-container: 1rem;
   
-  /* Section spacing */
-  --space-section-sm: 2rem;
-  --space-section-md: 4rem;
-  --space-section-lg: 6rem;
-  --space-section-xl: 8rem;
+  /* Section padding */
+  --padding-section-sm: 2rem;
+  --padding-section-md: 4rem;
+  --padding-section-lg: 6rem;
+  --padding-section-xl: 8rem;
+  
+  /* Gap spacing */
+  --gap-xs: 0.25rem;   /* 4px */
+  --gap-sm: 0.5rem;    /* 8px */
+  --gap-md: 1rem;      /* 16px */
+  --gap-lg: 1.5rem;    /* 24px */
+  --gap-xl: 2rem;      /* 32px */
+  
+  /* Margin spacing */
+  --margin-sm: 0.5rem;
+  --margin-md: 1rem;
+  --margin-lg: 2rem;
+  --margin-xl: 3rem;
+  
+  /* Legacy aliases (deprecated - use semantic names) */
+  --space-global-x: var(--padding-container);
+  --space-section-sm: var(--padding-section-sm);
+  --space-section-md: var(--padding-section-md);
+  --space-section-lg: var(--padding-section-lg);
+  --space-section-xl: var(--padding-section-xl);
 
   /* ==================== RADII ==================== */
   --radius-xs: 0.125rem;
@@ -109,19 +130,42 @@
   --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   
-  /* Font sizes */
-  --text-xs: 0.75rem;      /* 12px */
-  --text-sm: 0.875rem;     /* 14px */
-  --text-base: 1rem;       /* 16px */
-  --text-lg: 1.125rem;     /* 18px */
-  --text-xl: 1.25rem;      /* 20px */
-  --text-2xl: 1.5rem;      /* 24px */
-  --text-3xl: 1.875rem;    /* 30px */
-  --text-4xl: 2.25rem;     /* 36px */
-  --text-5xl: 3rem;        /* 48px */
-  --text-6xl: 3.75rem;     /* 60px */
-  --text-7xl: 4.5rem;      /* 72px */
-  --text-8xl: 6rem;        /* 96px */
+  /* ==================== SEMANTIC TYPOGRAPHY ==================== */
+  /* Headings */
+  --text-h1: 3rem;         /* 48px */
+  --text-h2: 2.25rem;      /* 36px */
+  --text-h3: 1.875rem;     /* 30px */
+  --text-h4: 1.5rem;       /* 24px */
+  --text-h5: 1.25rem;      /* 20px */
+  --text-h6: 1.125rem;     /* 18px */
+  
+  /* Display (hero titles) */
+  --text-display-sm: 3.75rem;  /* 60px */
+  --text-display-md: 4.5rem;   /* 72px */
+  --text-display-lg: 6rem;     /* 96px */
+  
+  /* Body text */
+  --text-body: 1rem;       /* 16px */
+  --text-body-sm: 0.875rem; /* 14px */
+  --text-body-lg: 1.125rem; /* 18px */
+  
+  /* Utility */
+  --text-small: 0.875rem;  /* 14px */
+  --text-tiny: 0.75rem;    /* 12px */
+  
+  /* Legacy aliases (deprecated - use semantic names) */
+  --text-xs: var(--text-tiny);
+  --text-sm: var(--text-small);
+  --text-base: var(--text-body);
+  --text-lg: var(--text-body-lg);
+  --text-xl: var(--text-h5);
+  --text-2xl: var(--text-h4);
+  --text-3xl: var(--text-h3);
+  --text-4xl: var(--text-h2);
+  --text-5xl: var(--text-h1);
+  --text-6xl: var(--text-display-sm);
+  --text-7xl: var(--text-display-md);
+  --text-8xl: var(--text-display-lg);
   
   /* Line heights */
   --leading-none: 1;
@@ -332,48 +376,48 @@ body {
   max-width: var(--container-max-width, 1280px);
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--space-global-x);
-  padding-right: var(--space-global-x);
+  padding-left: var(--padding-container);
+  padding-right: var(--padding-container);
 }
 
 /* Section - Vertical spacing */
 .section {
-  padding-top: var(--space-section-md);
-  padding-bottom: var(--space-section-md);
+  padding-top: var(--padding-section-md);
+  padding-bottom: var(--padding-section-md);
 }
 
 .section--sm {
-  padding-top: var(--space-section-sm);
-  padding-bottom: var(--space-section-sm);
+  padding-top: var(--padding-section-sm);
+  padding-bottom: var(--padding-section-sm);
 }
 
 .section--lg {
-  padding-top: var(--space-section-lg);
-  padding-bottom: var(--space-section-lg);
+  padding-top: var(--padding-section-lg);
+  padding-bottom: var(--padding-section-lg);
 }
 
 .section--xl {
-  padding-top: var(--space-section-xl);
-  padding-bottom: var(--space-section-xl);
+  padding-top: var(--padding-section-xl);
+  padding-bottom: var(--padding-section-xl);
 }
 
 /* Grid utilities */
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-32);
+  gap: var(--gap-xl);
 }
 
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-32);
+  gap: var(--gap-xl);
 }
 
 .grid-4 {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-32);
+  gap: var(--gap-xl);
 }
 
 /* Responsive grids */

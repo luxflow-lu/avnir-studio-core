@@ -214,3 +214,81 @@ Import trace for requested module:
  GET / 200 in 356ms
  GET / 200 in 1373ms
  ✓ Compiled in 5.2s (521 modules)
+ GET / 200 in 1133ms
+ ✓ Compiled in 2.5s (521 modules)
+ GET / 200 in 748ms
+ GET / 200 in 882ms
+ ✓ Compiled in 13s (521 modules)
+ GET / 200 in 845ms
+ ✓ Compiled in 6.3s (521 modules)
+ GET / 200 in 832ms
+ ✓ Compiled in 5.2s (521 modules)
+ GET / 200 in 639ms
+ ✓ Compiled in 4.4s (521 modules)
+ GET / 200 in 1007ms
+ ○ Compiling /foundations ...
+ ✓ Compiled /foundations in 9.1s (1048 modules)
+ GET / 200 in 1661ms
+ GET /foundations 200 in 12128ms
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/foundations'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 59.6s (1286 modules)
+ GET /foundations 500 in 60708ms
+ ✓ Compiled in 8.9s (674 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /foundations 200 in 437ms
+ GET /foundations 200 in 5092ms
+ ✓ Compiled in 5.5s (674 modules)
+ GET /foundations 200 in 1449ms
+ GET /foundations 200 in 1695ms
+ ⨯ SyntaxError: Unexpected end of JSON input
+    at JSON.parse (<anonymous>) {
+  page: '/foundations'
+}
+ ✓ Compiled in 11.4s (1286 modules)
+ GET /foundations 500 in 10296ms
+ GET /foundations 200 in 1342ms
+ ✓ Compiled in 16.7s (674 modules)
+ GET /foundations 200 in 2768ms
+ ✓ Compiled in 9.8s (674 modules)
+ GET /foundations 200 in 842ms
+ ✓ Compiled in 9.8s (674 modules)
+ GET /foundations 200 in 1301ms
+ ✓ Compiled in 7.1s (674 modules)
+ GET /foundations 200 in 140ms
+ ✓ Compiled in 10.8s (674 modules)
+ GET /foundations 200 in 618ms
+ ✓ Compiled in 9.3s (674 modules)
+ GET /foundations 200 in 940ms
+ GET / 200 in 3398ms
+ GET /foundations 200 in 1419ms
+ ✓ Compiled in 10.2s (674 modules)
+ GET /foundations 200 in 1153ms
+ GET /foundations 200 in 6002ms
+ ✓ Compiled in 13.5s (674 modules)
+ ✓ Compiled in 13.3s (674 modules)
+ GET /foundations 200 in 1686ms
+ GET /foundations 200 in 9124ms
+ ✓ Compiled in 8.4s (674 modules)
+ GET /foundations 200 in 1699ms
+ GET /foundations 200 in 3102ms
+ ✓ Compiled in 12.7s (674 modules)
+ GET /foundations 200 in 783ms
+ ✓ Compiled in 8.5s (674 modules)
+ GET /foundations 200 in 1790ms
+ ✓ Compiled in 4.7s (674 modules)
+ GET /foundations 200 in 682ms
+ ✓ Compiled in 4.8s (674 modules)
+ GET /foundations 200 in 1358ms
+ ✓ Compiled in 7.8s (674 modules)
+ GET /foundations 200 in 7847ms
+ ✓ Compiled in 7.8s (674 modules)
+ GET /foundations 200 in 1297ms
+ GET / 200 in 1671ms
+ ✓ Compiled in 26.8s (1388 modules)
+ GET / 200 in 3437ms
+ ✓ Compiled in 11.4s (1388 modules)
+ GET / 200 in 4966ms

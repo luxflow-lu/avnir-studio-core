@@ -3,8 +3,8 @@
 .page-header {
   display: flex;
   flex-direction: column;
-  gap: var(--space-16);
-  padding: var(--space-32) 0;
+  gap: var(--gap-md);
+  padding: var(--padding-section-xl) 0;
   border-bottom: 1px solid var(--border);
 }
 
@@ -12,7 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-16);
+  gap: var(--gap-md);
 }
 
 .page-header-content {
@@ -20,52 +20,74 @@
 }
 
 .page-header-breadcrumb {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--margin-sm);
 }
 
-.page-header-title {
-  font-size: 2rem;
-  font-weight: 700;
-  line-height: 1.2;
-  color: var(--foreground);
-  margin-bottom: var(--space-8);
+.page-title {
+  font-size: var(--text-h1);
+  font-weight: var(--font-bold);
+  line-height: var(--leading-tight);
+  color: var(--titles);
+  margin-bottom: var(--margin-sm);
 }
 
-.page-header-description {
-  font-size: 1rem;
-  color: var(--muted-foreground);
-  line-height: 1.5;
+.page-subtitle {
+  font-size: var(--text-body-lg);
+  color: var(--muted);
+  line-height: var(--leading-normal);
   max-width: 48rem;
 }
 
 .page-header-actions {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .page-header-tabs {
-  margin-top: var(--space-16);
+  margin-top: var(--margin-md);
+}
+
+/* PageHeader alignment */
+.page-header--left {
+  text-align: left;
+}
+
+.page-header--center {
+  text-align: center;
+}
+
+.page-header--center .page-subtitle {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.page-header--right {
+  text-align: right;
+}
+
+.page-header--right .page-subtitle {
+  margin-left: auto;
 }
 
 /* PageHeader variants */
 .page-header--compact {
-  padding: var(--space-24) 0;
+  padding: var(--padding-section-sm) 0;
 }
 
-.page-header--compact .page-header-title {
-  font-size: 1.5rem;
-  margin-bottom: var(--space-4);
+.page-header--compact .page-title {
+  font-size: var(--text-h1);
+  margin-bottom: var(--margin-sm);
 }
 
-.page-header--compact .page-header-description {
-  font-size: 0.875rem;
+.page-header--compact .page-subtitle {
+  font-size: var(--text-body);
 }
 
 /* PageHeader responsive */
 @media (max-width: 768px) {
   .page-header {
-    padding: var(--space-24) 0;
+    padding: var(--padding-section-md) 0;
   }
 
   .page-header-top {
@@ -73,12 +95,12 @@
     align-items: flex-start;
   }
 
-  .page-header-title {
-    font-size: 1.5rem;
+  .page-title {
+    font-size: var(--text-h1);
   }
 
-  .page-header-description {
-    font-size: 0.875rem;
+  .page-subtitle {
+    font-size: var(--text-body);
   }
 
   .page-header-actions {

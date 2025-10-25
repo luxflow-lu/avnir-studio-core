@@ -19,7 +19,7 @@ export default function HomePage() {
       />
 
         {/* Stats Section */}
-        <section className="section--md">
+        <section className="section">
           <div className="container">
             <div className="grid-4" data-debug="stats-grid">
               <Card>
@@ -43,7 +43,7 @@ export default function HomePage() {
         </section>
 
         {/* Design Principles */}
-        <section className="section--md">
+        <section className="section">
           <div className="container">
             <Layout.SectionHeader 
               title="Design Principles" 
@@ -68,7 +68,7 @@ export default function HomePage() {
         </section>
 
         {/* Component Categories */}
-        <section className="section--md">
+        <section className="section">
           <div className="container">
             <Layout.SectionHeader 
               title="Component Library" 
@@ -79,8 +79,6 @@ export default function HomePage() {
               <Card>
                 <h3>Foundation</h3>
                 <p>Core building blocks including typography, colors, spacing, and layout primitives</p>
-                <Button variant="solid" size="sm">Button</Button>
-                <Button variant="outline" size="sm">Secondary</Button>
               </Card>
 
               <Card>
@@ -100,7 +98,7 @@ export default function HomePage() {
         </section>
 
         {/* Design Tokens */}
-        <section className="section--md">
+        <section className="section">
           <div className="container">
             <Layout.SectionHeader 
               title="Design Tokens" 
@@ -125,7 +123,7 @@ export default function HomePage() {
         </section>
 
         {/* Developer Experience */}
-        <section className="section--md">
+        <section className="section">
           <div className="container">
             <Layout.SectionHeader 
               title="Developer Experience" 
@@ -146,15 +144,19 @@ export default function HomePage() {
         </section>
 
         {/* CTA Section */}
-        <section className="section--md">
+        <section className="section">
           <div className="container">
             <Layout.SectionHeader 
               title="Start Building Today" 
               subtitle="Join hundreds of teams using MUZISYSTEM to build consistent, accessible interfaces"
               align="center"
+              actions={
+                <>
+                  <Button variant="solid" size="lg">View All Components</Button>
+                  <Button variant="outline" size="lg">Read Documentation</Button>
+                </>
+              }
             />
-            <Button variant="solid" size="lg">View All Components</Button>
-            <Button variant="outline" size="lg">Read Documentation</Button>
           </div>
         </section>
     </>
