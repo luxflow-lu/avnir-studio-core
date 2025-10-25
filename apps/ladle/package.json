@@ -13,7 +13,7 @@
   "dependencies": {
     "@avnir/tokens": "workspace:*",
     "@avnir/ui": "workspace:*",
-    "@ladle/react": "^4.0.0",
+    "@ladle/react": "^5.1.0",
     "clsx": "^2.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
