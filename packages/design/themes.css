@@ -14,28 +14,27 @@
   --primary: #ededed;
   --border: #1f1f23;
   
-  /* Semi-light: Variables fixes dark pour navbar/footer */
-  --navbar-bg: var(--bg);
-  --navbar-surface: var(--surface);
-  --navbar-border: var(--border);
-  --navbar-text: var(--titles);
-  --footer-bg: var(--bg);
-  --footer-surface: var(--surface);
-  --footer-border: var(--border);
-  --footer-text: var(--titles);
+  /* Semi-light: Variables FIXES dark pour navbar/footer (ne changent jamais) */
+  --navbar-bg: #0b0b0d;
+  --navbar-surface: #141317;
+  --navbar-border: #1f1f23;
+  --navbar-text: #ffffff;
+  --footer-bg: #0b0b0d;
+  --footer-surface: #141317;
+  --footer-border: #1f1f23;
+  --footer-text: #ffffff;
   
   /* Status colors */
   --success: #10b981;
   --warning: #f59e0b;
   --error: #ef4444;
-  --destructive: #ef4444;
   --info: #3b82f6;
   
   /* RGB variants for alpha */
   --primary-rgb: 237, 237, 237;
   --success-rgb: 16, 185, 129;
   --warning-rgb: 245, 158, 11;
-  --destructive-rgb: 239, 68, 68;
+  --error-rgb: 239, 68, 68;
   --info-rgb: 59, 130, 246;
 
   /* ==================== SPACING ==================== */
@@ -50,6 +49,7 @@
   --space-32: 2rem;
   --space-48: 3rem;
   --space-64: 4rem;
+  --space-80: 5rem;
   --space-96: 6rem;
   
   /* Global layout spacing */
@@ -89,27 +89,21 @@
   --duration-300: 300ms;
   --duration-500: 500ms;
   --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  /* Transitions */
+  --transition-all: all 0.2s ease;
+  --transition-colors: color, background-color, border-color 0.2s ease;
 
   /* ==================== SEMANTIC ALIASES ==================== */
-  --background: var(--bg);
-  --foreground: var(--text);
-  --muted-foreground: var(--muted);
-  --accent-foreground: var(--text);
+  /* Card colors */
   --card: var(--surface);
   --card-foreground: var(--text);
-  --ring: var(--primary);
   
   /* Primary foreground */
   --on-primary: #0b0b0d;
-  --primary-foreground: var(--on-primary);
   
-  /* Secondary colors */
-  --secondary: var(--surface);
-  --secondary-foreground: var(--text);
-  
-  /* Popover/Dropdown colors */
-  --popover: var(--surface);
-  --popover-foreground: var(--text);
+  /* Ring/Focus */
+  --ring: var(--primary);
 
   /* ==================== TYPOGRAPHY ==================== */
   --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;

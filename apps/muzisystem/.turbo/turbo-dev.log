@@ -104,3 +104,21 @@ https://nextjs.org/docs/messages/module-not-found
 Import trace for requested module:
 ./app/globals.css
  ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ✓ Compiled in 6.1s (521 modules)
+ GET / 200 in 1008ms
+ ✓ Compiled in 9.2s (521 modules)
+ GET / 200 in 893ms
+ ✓ Compiled in 5.5s (521 modules)
