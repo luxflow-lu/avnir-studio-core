@@ -25,12 +25,12 @@ export function generateId(prefix = "avnir"): string {
 /**
  * Get ARIA attributes for interactive elements
  */
-export function getAriaProps(props: Record<string, any>): AriaProps {
+export function getAriaProps(props: Record<string, unknown>): AriaProps {
   return Object.keys(props).reduce((acc, key) => {
     if (key.startsWith("aria-") || key === "role") {
       const value = props[key];
       if (value !== undefined) {
-        (acc as any)[key] = value;
+        (acc as Record<string, unknown>)[key] = value;
       }
     }
     return acc;

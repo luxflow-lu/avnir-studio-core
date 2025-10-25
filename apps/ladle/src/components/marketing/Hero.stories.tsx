@@ -1,6 +1,8 @@
 import React from "react";
-import { Hero } from "./Hero";
+
 import { Button } from "../form/Button";
+
+import { Hero } from "./Hero";
 
 export default { title: "Marketing/Hero", parameters: { layout: "padded" } };
 

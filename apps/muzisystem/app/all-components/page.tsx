@@ -21,7 +21,6 @@ import {
   Primitives,
   Avnir
 } from "@avnir/ui";
-
 import { useEffect, useState } from "react";
 
 export default function AllComponentsPage() {

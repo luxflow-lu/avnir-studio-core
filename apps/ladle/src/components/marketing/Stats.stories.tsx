@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Stats } from "./Stats";
 
 export default { title: "Marketing/Stats", parameters: { layout: "padded" } };

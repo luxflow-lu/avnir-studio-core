@@ -1,4 +1,5 @@
 import type { Story } from "@ladle/react";
+
 import { HeroSection } from "../../../../../apps/muzisystem/src/sections/HeroSection";
 
 export const Default: Story = () => <HeroSection />;

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { FacetedSearch } from "./FacetedSearch";
 
 export default { title: "E-commerce/FacetedSearch" };

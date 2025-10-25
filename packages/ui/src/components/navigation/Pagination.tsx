@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import { cx } from "../../utils/cx";
 
 export interface PaginationProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -29,7 +30,7 @@ export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
       const half = Math.floor(maxVisible / 2);
 
       let start = Math.max(1, currentPage - half);
-      let end = Math.min(totalPages, start + maxVisible - 1);
+      const end = Math.min(totalPages, start + maxVisible - 1);
 
       if (end - start + 1 < maxVisible) {
         start = Math.max(1, end - maxVisible + 1);

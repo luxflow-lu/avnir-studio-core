@@ -1,4 +1,5 @@
 import type { Story } from "@ladle/react";
+
 import { TestimonialsSection } from "../../../../../apps/muzisystem/src/sections/TestimonialsSection";
 
 export const Default: Story = () => <TestimonialsSection />;

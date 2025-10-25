@@ -1,6 +1,8 @@
 import React from "react";
-import { ToastProvider, useToast } from "./Toast";
+
 import { Button } from "../form/Button";
+
+import { ToastProvider, useToast } from "./Toast";
 
 export default { title: "Overlay/Toast" };
 

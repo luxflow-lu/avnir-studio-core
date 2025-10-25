@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import { cx } from "../../utils/cx";
 
 export interface SwitchProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {

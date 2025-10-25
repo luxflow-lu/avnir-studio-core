@@ -1,6 +1,8 @@
 import React from "react";
-import { PricingStrip } from "./PricingStrip";
+
 import { Button } from "../form/Button";
+
+import { PricingStrip } from "./PricingStrip";
 
 export default { title: "Marketing/PricingStrip", parameters: { layout: "padded" } };
 

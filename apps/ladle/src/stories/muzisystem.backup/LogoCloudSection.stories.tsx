@@ -1,4 +1,5 @@
 import type { Story } from "@ladle/react";
+
 import { LogoCloudSection } from "../../../../../apps/muzisystem/src/sections/LogoCloudSection";
 
 export const Default: Story = () => <LogoCloudSection />;
