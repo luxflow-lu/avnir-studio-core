@@ -1,11 +1,15 @@
 module.exports = {
   root: true,
   extends: [
-    '@next/eslint-config-next',
-    '@typescript-eslint/recommended',
+    'eslint:recommended',
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'import'],
+  env: {
+    node: true,
+    browser: true,
+    es2021: true,
+  },
   rules: {
     // ZERO TOLERANCE - Architecture
     'import/no-cycle': 'error',

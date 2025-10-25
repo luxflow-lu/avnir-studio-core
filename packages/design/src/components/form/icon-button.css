@@ -50,7 +50,7 @@
 /* IconButton variants */
 .icon-btn--solid {
   background-color: var(--primary);
-  color: #0b0b0d;
+  color: var(--bg);
   box-shadow: var(--shadow-sm);
 }
 
@@ -70,7 +70,7 @@
 
 .icon-btn--outline:hover:not(:disabled) {
   background-color: var(--primary);
-  color: #0b0b0d;
+  color: var(--bg);
 }
 
 .icon-btn--outline:active:not(:disabled) {

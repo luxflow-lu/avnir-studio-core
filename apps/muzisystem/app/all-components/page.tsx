@@ -739,7 +739,7 @@ export default function AllComponentsPage() {
 
           {/* Features Section */}
           <div className="mb-8">
-            <Marketing.FeatureGrid
+            <Marketing.Features
               title="Why Choose Our Platform"
               subtitle="Everything you need to succeed in one place"
               items={[

@@ -33,12 +33,12 @@
 
 .checkout-step--active .checkout-step-indicator {
   background-color: var(--primary);
-  color: #0b0b0d;
+  color: var(--bg);
 }
 
 .checkout-step--completed .checkout-step-indicator {
   background-color: var(--success);
-  color: #0b0b0d;
+  color: var(--bg);
 }
 
 .checkout-step-label {

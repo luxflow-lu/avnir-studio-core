@@ -52,7 +52,7 @@
 /* Button variants */
 .btn-primary {
   background-color: var(--primary);
-  color: #0b0b0d;
+  color: var(--bg);
 }
 
 .btn-primary:hover:not(:disabled) {

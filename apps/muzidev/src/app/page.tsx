@@ -77,7 +77,7 @@ export default function Page() {
         {/* 4 Pillars Grid */}
         <section className="section">
           <div className="container">
-            <Marketing.FeatureGrid
+            <Marketing.Features
             title="Les 4 piliers de la formation"
             subtitle="Maîtrise tous les aspects de ta carrière musicale"
             items={[
