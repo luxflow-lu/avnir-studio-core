@@ -278,8 +278,8 @@ export default function Page() {
               title="Rejoins la newsletter pour suivre les nouveautés"
               subtitle="Reçois en avant-première les nouveaux modules, les événements exclusifs et les conseils d'experts. En t'inscrivant, tu acceptes notre politique de confidentialité."
               onSubmit={(email) => {
-                console.log("Newsletter signup:", email);
                 // TODO: Implement newsletter signup
+                void email; // Placeholder until API is implemented
               }}
             />
           </div>
