@@ -346,3 +346,162 @@ https://nextjs.org/docs/messages/module-not-found
 Import trace for requested module:
 ./app/globals.css
  ✓ Compiled in 3.3s (674 modules)
+ GET / 200 in 522ms
+ GET / 200 in 3052ms
+ ✓ Compiled in 13.2s (674 modules)
+ GET / 200 in 840ms
+ ✓ Compiled in 6s (674 modules)
+ GET / 200 in 1432ms
+ GET / 200 in 10258ms
+ ✓ Compiled in 22.7s (1388 modules)
+ GET / 200 in 1960ms
+ ✓ Compiled in 9.8s (674 modules)
+ GET / 200 in 595ms
+ ✓ Compiled in 18.9s (1388 modules)
+ GET / 200 in 2518ms
+ ✓ Compiled in 3.7s (714 modules)
+ ✓ Compiled in 8.8s (1286 modules)
+ ✓ Compiled in 6.8s (674 modules)
+ GET / 200 in 2102ms
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ✓ Compiled in 5.8s (674 modules)
+ GET / 200 in 567ms
+ ✓ Compiled in 9.8s (714 modules)
+ ✓ Compiled in 14.2s (1388 modules)
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+    at async L (.next/server/app/page.js:1:10686) {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json',
+  page: '/'
+}
+ ⨯ Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+    at async (.next/server/pages/_error.js:19:2492) {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+ ✓ Compiled in 12.3s (674 modules)
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+    at async L (.next/server/app/page.js:1:10686) {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json',
+  page: '/'
+}
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+ GET / 500 in 72557ms
+ GET / 500 in 431ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+ GET / 500 in 4909ms
+ GET / 500 in 390ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+ GET / 500 in 1077ms
+ GET / 500 in 345ms
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ✓ Compiled in 5s (674 modules)
+ ✓ Compiled in 22.7s (674 modules)
+ ✓ Compiled in 12.6s (714 modules)
+ ✓ Compiled in 8.9s (1286 modules)
+ ✓ Compiled in 3.1s (674 modules)
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+

@@ -12,7 +12,6 @@ export function ClientNavbar() {
         { label: "Foundations", href: "/foundations" },
         { label: "Colors", href: "/colors" },
         { label: "Components", href: "/components" },
-        { label: "All Components", href: "/all-components" },
         { label: "Guidelines", href: "/guidelines" },
       ]}
       actions={<System.BrandThemeSelector />}

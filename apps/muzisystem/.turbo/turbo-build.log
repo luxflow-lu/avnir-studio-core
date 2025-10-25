@@ -5,9 +5,38 @@
    ▲ Next.js 15.5.6
 
    Creating an optimized production build ...
+Failed to compile.
 
-warn - Your `content` configuration includes a pattern which looks like it's accidentally matching all of `node_modules` and can cause serious performance issues.
-warn - Pattern: `../../packages/ui/**/*.tsx`
-warn - See our documentation for recommendations:
-warn - https://tailwindcss.com/docs/content-configuration#pattern-recommendations
- ELIFECYCLE  Command failed with exit code 130.
+./app/all-components/page.tsx
+Error:   [31mx[0m Expression expected
+     ,-[[36;1;4m/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/app/all-components/page.tsx[0m:752:1]
+ [2m749[0m |           //               ]}
+ [2m750[0m |           //               columns={2}
+ [2m751[0m |           //             />
+ [2m752[0m |           </div>
+     : [35;1m          ^[0m
+ [2m753[0m | 
+ [2m754[0m |           {/* Social Proof */}
+ [2m755[0m |           <div className="mb-8">
+     `----
+  [31mx[0m Unterminated regexp literal
+     ,-[[36;1;4m/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/app/all-components/page.tsx[0m:752:1]
+ [2m749[0m |           //               ]}
+ [2m750[0m |           //               columns={2}
+ [2m751[0m |           //             />
+ [2m752[0m |           </div>
+     : [35;1m           ^^^^^[0m
+ [2m753[0m | 
+ [2m754[0m |           {/* Social Proof */}
+ [2m755[0m |           <div className="mb-8">
+     `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/all-components/page.tsx
+
+
+> Build failed because of webpack errors
+ ELIFECYCLE  Command failed with exit code 1.

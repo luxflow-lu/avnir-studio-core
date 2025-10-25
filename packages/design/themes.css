@@ -433,3 +433,18 @@ body {
    Component styles are in src/components/
    Import via src/index.css
    ============================================ */
+
+/* Component Showcase Utilities */
+.component-preview {
+  display: flex;
+  gap: var(--gap-md);
+  align-items: center;
+  flex-wrap: wrap;
+  padding: var(--padding-section-sm) 0;
+}
+
+.component-count {
+  font-size: var(--text-small);
+  color: var(--muted);
+  margin-top: var(--margin-sm);
+}

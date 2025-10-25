@@ -738,17 +738,17 @@ export default function AllComponentsPage() {
 
           {/* Features Section */}
           <div className="mb-8">
-            <Marketing.Features
-              title="Why Choose Our Platform"
-              subtitle="Everything you need to succeed in one place"
-              items={[
-                { title: "Lightning Fast", description: "Optimized for speed and performance" },
-                { title: "Secure & Reliable", description: "Enterprise-grade security you can trust" },
-                { title: "Easy Integration", description: "Connect with your existing tools seamlessly" },
-                { title: "24/7 Support", description: "Get help whenever you need it" }
-              ]}
-              columns={2}
-            />
+          //             <Marketing.Features
+          //               title="Why Choose Our Platform"
+          //               subtitle="Everything you need to succeed in one place"
+          //               items={[
+          //                 { title: "Lightning Fast", description: "Optimized for speed and performance" },
+          //                 { title: "Secure & Reliable", description: "Enterprise-grade security you can trust" },
+          //                 { title: "Easy Integration", description: "Connect with your existing tools seamlessly" },
+          //                 { title: "24/7 Support", description: "Get help whenever you need it" }
+          //               ]}
+          //               columns={2}
+          //             />
           </div>
 
           {/* Social Proof */}
