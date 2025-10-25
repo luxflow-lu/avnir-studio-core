@@ -72,9 +72,8 @@ export default function AnalyzerPage() {
     } catch (error) {
       // Logging sécurisé : pas d'exposition d'infos sensibles
       const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-      if (process.env.NODE_ENV === 'development') {
-        console.error('Erreur analyse audio:', errorMessage);
-      }
+      // TODO: Implement proper error logging service
+      void errorMessage; // Placeholder for future logger
       
       addNotification('error', 'Impossible d\'analyser le fichier audio');
     } finally {

@@ -36,7 +36,7 @@
   width: 0.375rem;
   height: 0.375rem;
   border-radius: var(--radius-full);
-  background-color: #0b0b0d;
+  background-color: var(--bg);
 }
 
 .radio:disabled {

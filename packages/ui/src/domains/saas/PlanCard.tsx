@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import { Button } from "../../primitives/Button";
 import { Card } from "../../primitives/Card";
 
@@ -20,11 +21,11 @@ export function PlanCard({
   return (
     <Card className={highlight ? "ring-1 ring-[var(--brand)]" : ""}>
       <div className="flex items-baseline justify-between">
-        <h3 className="text-white text-lg font-semibold">{name}</h3>
+        <h3 className="text-on-primary text-lg font-semibold">{name}</h3>
         {highlight && <span className="text-[var(--brand)] text-sm">Recommandé</span>}
       </div>
       <div className="mt-3">
-        <span className="text-3xl font-bold text-white">{price}</span>
+        <span className="text-3xl font-bold text-on-primary">{price}</span>
         <span className="text-[var(--text-muted)]">{period}</span>
       </div>
       <ul className="mt-4 space-y-2">

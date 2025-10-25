@@ -3,68 +3,58 @@
 > pnpm -w --filter @avnir/tokens build && pnpm -w --filter @avnir/ui build
 
 .                                        |  WARN  Unsupported engine: wanted: {"node":"20.x"} (current: {"node":"v18.20.8","pnpm":"9.6.0"})
-Scope: 2 of 14 workspace projects
+Scope: 2 of 16 workspace projects
 packages/tokens build$ echo 'No build step needed - JSON files are used directly'
 packages/tokens build: No build step needed - JSON files are used directly
 packages/tokens build: Done
 . build$ turbo run build
 . build: turbo 2.5.8
-. build: • Packages in scope: @avnir/brandkit, @avnir/design, @avnir/docs, @avnir/icons, @avnir/ladle, @avnir/tokens, @avnir/ui, @features/audio-tools, @features/visual-generator, avnir-studio, muzidev, muzipics, muzisystem
-. build: • Running build in 13 packages
+. build: • Packages in scope: @avnir/brandkit, @avnir/design, @avnir/docs, @avnir/icons, @avnir/ladle, @avnir/security, @avnir/tokens, @avnir/ui, @features/audio-tools, @features/visual-generator, avnir-studio, muzidev, muzipics, muzisystem, muzitools
+. build: • Running build in 15 packages
 . build: • Remote caching disabled
-. build: @avnir/design:build: cache miss, executing 43dc8b2ff12f4302
-. build: @avnir/brandkit:build: cache miss, executing 1f29bd9ccee3cb40
-. build: @avnir/icons:build: cache miss, executing 6c3b31c38baf172f
-. build: @avnir/tokens:build: cache miss, executing 778ed20a9a0738a4
-. build: @avnir/icons:build: 
-. build: @avnir/icons:build: > @avnir/icons@0.1.0 build /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/icons
-. build: @avnir/icons:build: > tsup src/index.ts --format esm,cjs --dts --sourcemap --clean
-. build: @avnir/icons:build: 
+. build: @avnir/design:build: cache miss, executing eced464b3d8d72bc
+. build: @avnir/brandkit:build: cache miss, executing a677b708020131c5
+. build: @avnir/tokens:build: cache miss, executing 9ead257291f64d0a
+. build: @avnir/icons:build: cache miss, executing e47f0133fea326cd
+. build: @avnir/security:build: cache miss, executing ce5a0a970808bc66
 . build: @avnir/brandkit:build: 
 . build: @avnir/brandkit:build: > @avnir/brandkit@0.1.0 build /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/brandkit
 . build: @avnir/brandkit:build: > tsup src/index.ts --format esm,cjs --dts --sourcemap --clean
 . build: @avnir/brandkit:build: 
+. build: @avnir/security:build: 
+. build: @avnir/security:build: > @avnir/security@0.1.0 build /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/security
+. build: @avnir/security:build: > tsup src/index.ts --format esm,cjs --dts --sourcemap --clean
+. build: @avnir/security:build: 
 . build: @avnir/design:build: 
 . build: @avnir/design:build: > @avnir/design@0.1.0 build /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/design
-. build: @avnir/design:build: > tsup src/index.ts src/brands.ts --format esm,cjs --dts --sourcemap --clean
+. build: @avnir/design:build: > npm run build:js && npm run build:css
 . build: @avnir/design:build: 
+. build: @avnir/icons:build: 
+. build: @avnir/icons:build: > @avnir/icons@0.1.0 build /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/icons
+. build: @avnir/icons:build: > tsup src/index.ts --format esm,cjs --dts --sourcemap --clean
+. build: @avnir/icons:build: 
 . build: @avnir/tokens:build: 
 . build: @avnir/tokens:build: > @avnir/tokens@0.1.0 build /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/tokens
 . build: @avnir/tokens:build: > echo 'No build step needed - JSON files are used directly'
 . build: @avnir/tokens:build: 
 . build: @avnir/tokens:build: No build step needed - JSON files are used directly
-. build: @avnir/icons:build: CLI Building entry: src/index.ts
-. build: @avnir/icons:build: CLI Using tsconfig: tsconfig.json
-. build: @avnir/icons:build: CLI tsup v8.5.0
-. build: @avnir/icons:build: CLI Target: es2022
-. build: @avnir/icons:build: CLI Cleaning output folder
-. build: @avnir/design:build: CLI Building entry: src/brands.ts, src/index.ts
-. build: @avnir/design:build: CLI Using tsconfig: tsconfig.json
-. build: @avnir/design:build: CLI tsup v8.5.0
-. build: @avnir/design:build: CLI Target: es2022
-. build: @avnir/icons:build: ESM Build start
-. build: @avnir/icons:build: CJS Build start
-. build: @avnir/design:build: CLI Cleaning output folder
-. build: @avnir/design:build: ESM Build start
-. build: @avnir/design:build: CJS Build start
-. build: @avnir/icons:build: ESM dist/index.js     2.54 KB
-. build: @avnir/icons:build: ESM dist/index.js.map 4.23 KB
-. build: @avnir/icons:build: ESM ⚡️ Build success in 412ms
-. build: @avnir/icons:build: CJS dist/index.cjs     3.98 KB
-. build: @avnir/icons:build: CJS dist/index.cjs.map 4.35 KB
-. build: @avnir/icons:build: CJS ⚡️ Build success in 413ms
-. build: @avnir/design:build: CJS dist/index.cjs      1.85 KB
-. build: @avnir/design:build: CJS dist/brands.cjs     1.83 KB
-. build: @avnir/design:build: CJS dist/index.cjs.map  1.82 KB
-. build: @avnir/design:build: CJS dist/brands.cjs.map 1.77 KB
-. build: @avnir/design:build: CJS ⚡️ Build success in 432ms
-. build: @avnir/design:build: ESM dist/index.js              102.00 B
-. build: @avnir/design:build: ESM dist/brands.js             103.00 B
-. build: @avnir/design:build: ESM dist/chunk-T2MLN4OF.js     880.00 B
-. build: @avnir/design:build: ESM dist/index.js.map          71.00 B
-. build: @avnir/design:build: ESM dist/brands.js.map         71.00 B
-. build: @avnir/design:build: ESM dist/chunk-T2MLN4OF.js.map 1.72 KB
-. build: @avnir/design:build: ESM ⚡️ Build success in 434ms
+. build: @avnir/security:build: CLI Building entry: src/index.ts
+. build: @avnir/security:build: CLI Using tsconfig: tsconfig.json
+. build: @avnir/security:build: CLI tsup v7.3.0
+. build: @avnir/security:build: CLI Target: es2020
+. build: @avnir/security:build: CLI Cleaning output folder
+. build: @avnir/security:build: ESM Build start
+. build: @avnir/security:build: CJS Build start
+. build: @avnir/security:build: ESM dist/index.mjs     12.77 KB
+. build: @avnir/security:build: ESM dist/index.mjs.map 25.90 KB
+. build: @avnir/security:build: ESM ⚡️ Build success in 490ms
+. build: @avnir/security:build: CJS dist/index.js     16.10 KB
+. build: @avnir/security:build: CJS dist/index.js.map 27.13 KB
+. build: @avnir/security:build: CJS ⚡️ Build success in 490ms
+. build: @avnir/design:build: 
+. build: @avnir/design:build: > @avnir/design@0.1.0 build:js
+. build: @avnir/design:build: > tsup src/index.ts src/brands.ts --format esm,cjs --dts --sourcemap --clean
+. build: @avnir/design:build: 
 . build: @avnir/brandkit:build: CLI Building entry: src/index.ts
 . build: @avnir/brandkit:build: CLI Using tsconfig: tsconfig.json
 . build: @avnir/brandkit:build: CLI tsup v8.5.0
@@ -72,31 +62,67 @@ packages/tokens build: Done
 . build: @avnir/brandkit:build: CLI Cleaning output folder
 . build: @avnir/brandkit:build: ESM Build start
 . build: @avnir/brandkit:build: CJS Build start
-. build: @avnir/brandkit:build: ESM dist/index.js     6.32 KB
-. build: @avnir/brandkit:build: ESM dist/index.js.map 9.56 KB
-. build: @avnir/brandkit:build: ESM ⚡️ Build success in 309ms
 . build: @avnir/brandkit:build: CJS dist/index.cjs     8.37 KB
 . build: @avnir/brandkit:build: CJS dist/index.cjs.map 9.78 KB
-. build: @avnir/brandkit:build: CJS ⚡️ Build success in 310ms
-. build: @avnir/design:build: DTS Build start
-. build: @avnir/icons:build: DTS Build start
+. build: @avnir/brandkit:build: CJS ⚡️ Build success in 585ms
+. build: @avnir/brandkit:build: ESM dist/index.js     6.32 KB
+. build: @avnir/brandkit:build: ESM dist/index.js.map 9.56 KB
+. build: @avnir/brandkit:build: ESM ⚡️ Build success in 588ms
+. build: @avnir/icons:build: CLI Building entry: src/index.ts
+. build: @avnir/icons:build: CLI Using tsconfig: tsconfig.json
+. build: @avnir/icons:build: CLI tsup v8.5.0
+. build: @avnir/icons:build: CLI Target: es2022
+. build: @avnir/icons:build: CLI Cleaning output folder
+. build: @avnir/icons:build: ESM Build start
+. build: @avnir/icons:build: CJS Build start
+. build: @avnir/icons:build: CJS dist/index.cjs     3.98 KB
+. build: @avnir/icons:build: CJS dist/index.cjs.map 4.35 KB
+. build: @avnir/icons:build: CJS ⚡️ Build success in 354ms
+. build: @avnir/icons:build: ESM dist/index.js     2.54 KB
+. build: @avnir/icons:build: ESM dist/index.js.map 4.23 KB
+. build: @avnir/icons:build: ESM ⚡️ Build success in 355ms
+. build: @avnir/security:build: DTS Build start
+. build: @avnir/design:build: CLI Building entry: src/brands.ts, src/index.ts
+. build: @avnir/design:build: CLI Using tsconfig: tsconfig.json
+. build: @avnir/design:build: CLI tsup v8.5.0
+. build: @avnir/design:build: CLI Target: es2022
+. build: @avnir/design:build: CLI Cleaning output folder
+. build: @avnir/design:build: ESM Build start
+. build: @avnir/design:build: CJS Build start
+. build: @avnir/design:build: ESM dist/brands.js             103.00 B
+. build: @avnir/design:build: ESM dist/chunk-T2MLN4OF.js     880.00 B
+. build: @avnir/design:build: ESM dist/index.js              102.00 B
+. build: @avnir/design:build: ESM dist/brands.js.map         71.00 B
+. build: @avnir/design:build: ESM dist/chunk-T2MLN4OF.js.map 1.72 KB
+. build: @avnir/design:build: ESM dist/index.js.map          71.00 B
+. build: @avnir/design:build: ESM ⚡️ Build success in 368ms
+. build: @avnir/design:build: CJS dist/index.cjs      1.85 KB
+. build: @avnir/design:build: CJS dist/brands.cjs     1.83 KB
+. build: @avnir/design:build: CJS dist/index.cjs.map  1.82 KB
+. build: @avnir/design:build: CJS dist/brands.cjs.map 1.77 KB
+. build: @avnir/design:build: CJS ⚡️ Build success in 370ms
 . build: @avnir/brandkit:build: DTS Build start
-. build: @avnir/icons:build: DTS ⚡️ Build success in 26967ms
-. build: @avnir/icons:build: DTS dist/index.d.ts  426.00 B
-. build: @avnir/icons:build: DTS dist/index.d.cts 426.00 B
-. build: @avnir/brandkit:build: DTS ⚡️ Build success in 26650ms
+. build: @avnir/icons:build: DTS Build start
+. build: @avnir/design:build: DTS Build start
+. build: @avnir/brandkit:build: DTS ⚡️ Build success in 29892ms
 . build: @avnir/brandkit:build: DTS dist/index.d.ts  1.71 KB
 . build: @avnir/brandkit:build: DTS dist/index.d.cts 1.71 KB
-. build: @avnir/ui:build: cache miss, executing b4678aa9bb671d85
-. build: @avnir/design:build: DTS ⚡️ Build success in 31541ms
-. build: @avnir/design:build: DTS dist/brands.d.ts  306.00 B
-. build: @avnir/design:build: DTS dist/index.d.ts   48.00 B
-. build: @avnir/design:build: DTS dist/brands.d.cts 306.00 B
-. build: @avnir/design:build: DTS dist/index.d.cts  49.00 B
+. build: @avnir/icons:build: DTS ⚡️ Build success in 29329ms
+. build: @avnir/icons:build: DTS dist/index.d.ts  426.00 B
+. build: @avnir/icons:build: DTS dist/index.d.cts 426.00 B
+. build: @avnir/ui:build: cache miss, executing d20a786ba41f8fbe
+. build: @avnir/security:build: DTS ⚡️ Build success in 32838ms
+. build: @avnir/security:build: DTS dist/index.d.mts 8.27 KB
+. build: @avnir/security:build: DTS dist/index.d.ts  8.27 KB
 . build: @avnir/ui:build: 
 . build: @avnir/ui:build: > @avnir/ui@0.1.0 build /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui
 . build: @avnir/ui:build: > tsup src/index.ts --format esm,cjs --dts --sourcemap --clean && pnpm run build:css
 . build: @avnir/ui:build: 
+. build: @avnir/design:build: DTS ⚡️ Build success in 34275ms
+. build: @avnir/design:build: DTS dist/brands.d.ts  306.00 B
+. build: @avnir/design:build: DTS dist/index.d.ts   48.00 B
+. build: @avnir/design:build: DTS dist/brands.d.cts 306.00 B
+. build: @avnir/design:build: DTS dist/index.d.cts  49.00 B
 . build: @avnir/ui:build: CLI Building entry: src/index.ts
 . build: @avnir/ui:build: CLI Using tsconfig: tsconfig.json
 . build: @avnir/ui:build: CLI tsup v8.5.0
@@ -105,12 +131,25 @@ packages/tokens build: Done
 . build: @avnir/ui:build: CLI Cleaning output folder
 . build: @avnir/ui:build: ESM Build start
 . build: @avnir/ui:build: CJS Build start
-. build: @avnir/ui:build: ESM dist/index.js     250.55 KB
-. build: @avnir/ui:build: ESM dist/index.js.map 386.74 KB
-. build: @avnir/ui:build: ESM ⚡️ Build success in 706ms
-. build: @avnir/ui:build: CJS dist/index.cjs     278.58 KB
-. build: @avnir/ui:build: CJS dist/index.cjs.map 380.29 KB
-. build: @avnir/ui:build: CJS ⚡️ Build success in 771ms
+. build: @avnir/design:build: 
+. build: @avnir/design:build: > @avnir/design@0.1.0 build:css
+. build: @avnir/design:build: > postcss src/index.css -o dist/index.css
+. build: @avnir/design:build: 
+. build: @avnir/ui:build: CJS dist/index.cjs     257.73 KB
+. build: @avnir/ui:build: CJS dist/index.cjs.map 357.14 KB
+. build: @avnir/ui:build: CJS ⚡️ Build success in 918ms
+. build: @avnir/ui:build: ESM dist/index.js     230.35 KB
+. build: @avnir/ui:build: ESM dist/index.js.map 363.44 KB
+. build: @avnir/ui:build: ESM ⚡️ Build success in 922ms
 . build: @avnir/ui:build: DTS Build start
+. build: @avnir/ui:build: DTS ⚡️ Build success in 47032ms
+. build: @avnir/ui:build: DTS dist/index.d.ts  52.71 KB
+. build: @avnir/ui:build: DTS dist/index.d.cts 52.71 KB
+. build: @avnir/ui:build: 
+. build: @avnir/ui:build: > @avnir/ui@0.1.0 build:css /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui
+. build: @avnir/ui:build: > tailwindcss -c tailwind.build.config.cjs -i ./src/styles-source.css -o ./dist/styles.css --postcss ./postcss.build.config.cjs --minify
+. build: @avnir/ui:build: 
+. build: @avnir/ui:build: 
+. build: @avnir/ui:build: Rebuilding...
 . build:  WARNING  no output files found for task @avnir/tokens#build. Please check your `outputs` key in `turbo.json`
 . build:  ERROR  run failed: command  exited (1)

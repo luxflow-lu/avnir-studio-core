@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import { cx } from "../../utils/cx";
 
 export interface Variant {
@@ -69,7 +70,7 @@ export const VariantsSwatches = React.forwardRef<HTMLDivElement, VariantsSwatche
                 "px-3 py-2 text-sm font-medium-sm",
                 isSelected
                   ? "border-brand bg-brand/10 text-brand"
-                  : "border-muted text-white hover:border-white/40",
+                  : "border-muted text-on-primary hover:border-white/40",
                 !variant.available && "opacity-50 cursor-not-allowed line-through",
               )}
             >
@@ -117,7 +118,7 @@ export const VariantsSwatches = React.forwardRef<HTMLDivElement, VariantsSwatche
                 "px-4 py-2 text-sm font-medium-sm",
                 isSelected
                   ? "border-brand bg-brand/10 text-brand"
-                  : "border-muted text-white hover:border-white/40",
+                  : "border-muted text-on-primary hover:border-white/40",
                 !variant.available && "opacity-50 cursor-not-allowed",
               )}
             >

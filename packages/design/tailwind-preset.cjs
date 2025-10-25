@@ -42,30 +42,29 @@ module.exports = {
         16: "4rem",
       },
       maxWidth: {
-        "container-md": "var(--container-lg)",
-        "container-lg": "var(--container-xl)",
-        "container-xl": "var(--container-2xl)",
+        // Removed: container-* variables not needed (using .container utility instead)
       },
       fontFamily: { sans: "var(--font-sans)", mono: "var(--font-mono)" },
       fontSize: {
-        h1: ["var(--h1-size)", { lineHeight: "var(--h1-line)", fontWeight: "var(--h1-weight)" }],
-        h2: ["var(--h2-size)", { lineHeight: "var(--h2-line)", fontWeight: "var(--h2-weight)" }],
-        h3: ["var(--h3-size)", { lineHeight: "var(--h3-line)", fontWeight: "var(--h3-weight)" }],
-        h4: ["var(--h4-size)", { lineHeight: "var(--h4-line)", fontWeight: "var(--h4-weight)" }],
+        // Using existing tokens from themes.css
+        h1: ["var(--text-5xl)", { lineHeight: "var(--leading-tight)", fontWeight: "var(--font-extrabold)" }],
+        h2: ["var(--text-4xl)", { lineHeight: "var(--leading-tight)", fontWeight: "var(--font-bold)" }],
+        h3: ["var(--text-2xl)", { lineHeight: "var(--leading-snug)", fontWeight: "var(--font-semibold)" }],
+        h4: ["var(--text-xl)", { lineHeight: "var(--leading-snug)", fontWeight: "var(--font-semibold)" }],
         body: [
-          "var(--body-size)",
-          { lineHeight: "var(--body-line)", fontWeight: "var(--body-weight)" },
+          "var(--text-base)",
+          { lineHeight: "var(--leading-normal)", fontWeight: "var(--font-normal)" },
         ],
         small: [
-          "var(--small-size)",
-          { lineHeight: "var(--small-line)", fontWeight: "var(--small-weight)" },
+          "var(--text-sm)",
+          { lineHeight: "var(--leading-snug)", fontWeight: "var(--font-medium)" },
         ],
       },
       boxShadow: { soft: "0 0.375rem 1.5rem rgba(0,0,0,.2)" },
       padding: {
-        "section-sm": "var(--section-sm)",
-        "section-md": "var(--section-md)",
-        "section-lg": "var(--section-lg)",
+        "section-sm": "var(--space-section-sm)",
+        "section-md": "var(--space-section-md)",
+        "section-lg": "var(--space-section-lg)",
       },
     },
   },
@@ -79,12 +78,12 @@ module.exports = {
           "padding-inline": "var(--space-global-x)"
         },
       });
-      /* responsive container paddings */
+      /* responsive container paddings - using tokens */
       addUtilities({
-        ".container": { "padding-inline": "1.5rem" }
+        ".container": { "padding-inline": "var(--space-24)" }
       }, { variants: ["md"] });
       addUtilities({
-        ".container": { "padding-inline": "2rem" }
+        ".container": { "padding-inline": "var(--space-32)" }
       }, { variants: ["lg"] });
 
       /* section vertical spacings */

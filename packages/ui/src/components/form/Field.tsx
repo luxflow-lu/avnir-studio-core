@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import { cx } from "../../utils/cx";
 
 export interface FieldProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -11,7 +12,7 @@ export interface FieldProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export const Field = React.forwardRef<HTMLDivElement, FieldProps>(
   ({ className, label, help, error, required, children, ...props }, ref) => {
-    const fieldId = `field-${Math.random().toString(36).substr(2, 9)}`;
+    const fieldId = React.useId();
     const helpId = help ? `${fieldId}-help` : undefined;
     const errorId = error ? `${fieldId}-error` : undefined;
 

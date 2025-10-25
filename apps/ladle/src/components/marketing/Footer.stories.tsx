@@ -1,4 +1,5 @@
 import React from "react";
+
 import { MarketingFooter } from "./Footer";
 
 export default { title: "Marketing/Footer", parameters: { layout: "padded" } };

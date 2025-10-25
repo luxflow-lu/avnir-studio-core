@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { ThemeToggle, type ThemeMode } from "./ThemeToggle";
 
 export default { title: "System/ThemeToggle" };

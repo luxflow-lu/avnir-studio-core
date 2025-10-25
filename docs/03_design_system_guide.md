@@ -11,13 +11,19 @@
 <!-- /METADATA -->
 
 
-**Objectif :** Guide complet du Design System CSS modulaire AVNIR. Architecture 100% CSS, 0% Tailwind.
+**Objectif :** Guide complet du Design System CSS modulaire AVNIR.
 
 ---
 
 ## 🎯 Architecture CSS Modulaire
 
 **Conversion complète Tailwind → CSS terminée le 2025-10-25**
+
+### Politique Tailwind
+
+**Composants `@avnir/ui`** : 100% CSS pur via design tokens. Aucune classe Tailwind dans les composants.
+
+**Applications** : Tailwind autorisé via utilitaires mappés aux tokens CSS fournis par `@avnir/design/tailwind-preset.cjs`. Toute couleur/espacement/typo doit provenir des tokens (ex: `var(--primary)`, `var(--space-16)`, etc.).
 
 ### Structure
 ```

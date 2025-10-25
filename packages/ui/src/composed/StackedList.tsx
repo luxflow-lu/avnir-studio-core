@@ -14,7 +14,7 @@ export function StackedList({ items }: { items: Item[] }) {
               ✓
             </span>
             <div>
-              <p className="text-white">{title}</p>
+              <p className="text-on-primary">{title}</p>
               {text && <p className="text-[var(--text-muted)] mt-1">{text}</p>}
             </div>
           </li>

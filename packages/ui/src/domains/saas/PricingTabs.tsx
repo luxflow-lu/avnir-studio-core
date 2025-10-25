@@ -26,7 +26,7 @@ export function PricingTabs({
               "px-3 h-9 rounded-[var(--radius-xs)] text-sm " +
               (t.key === active
                 ? "bg-[var(--brand)] text-[var(--brand-on)]"
-                : "text-[var(--text-muted)] hover:text-white")
+                : "text-[var(--text-muted)] hover:text-on-primary")
             }
           >
             {t.label}

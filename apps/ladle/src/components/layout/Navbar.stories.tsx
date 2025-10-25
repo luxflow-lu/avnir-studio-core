@@ -1,6 +1,8 @@
 import React from "react";
-import { Navbar } from "./Navbar";
+
 import { Button } from "../form/Button";
+
+import { Navbar } from "./Navbar";
 
 export default { title: "Layout/Navbar" };
 

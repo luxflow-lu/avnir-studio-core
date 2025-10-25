@@ -62,7 +62,7 @@
 
 .sidebar-nav-item--active {
   background-color: var(--primary);
-  color: #0b0b0d;
+  color: var(--bg);
   font-weight: 500;
 }
 

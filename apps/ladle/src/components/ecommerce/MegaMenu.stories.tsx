@@ -1,6 +1,8 @@
 import React from "react";
-import { MegaMenu } from "./MegaMenu";
+
 import { Button } from "../form/Button";
+
+import { MegaMenu } from "./MegaMenu";
 
 export default { title: "E-commerce/MegaMenu" };
 

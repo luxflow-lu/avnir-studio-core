@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import { cx } from "../../utils/cx";
 
 export interface PaginationProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -29,7 +30,7 @@ export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
       const half = Math.floor(maxVisible / 2);
 
       let start = Math.max(1, currentPage - half);
-      let end = Math.min(totalPages, start + maxVisible - 1);
+      const end = Math.min(totalPages, start + maxVisible - 1);
 
       if (end - start + 1 < maxVisible) {
         start = Math.max(1, end - maxVisible + 1);
@@ -57,7 +58,7 @@ export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
     const buttonClass =
       "px-3 py-2 text-sm font-medium rounded-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]";
     const activeClass = "bg-brand text-[var(--brand-on)]";
-    const inactiveClass = "text-muted hover:text-white hover:bg-white/5";
+    const inactiveClass = "text-muted hover:text-on-primary hover:bg-white/5";
     const disabledClass = "text-muted opacity-50 cursor-not-allowed";
 
     return (

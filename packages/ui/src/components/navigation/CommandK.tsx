@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import { cx } from "../../utils/cx";
 
 export interface CommandItem {
@@ -136,7 +137,7 @@ export const CommandK = React.forwardRef<HTMLDivElement, CommandKProps>(
                       "w-full items-center gap-3 px-4 py-3",
                       index === selectedIndex
                         ? "bg-brand/10 text-brand"
-                        : "text-white hover:bg-muted",
+                        : "text-on-primary hover:bg-muted",
                     )}
                   >
                     {item.icon && <span className="flex-shrink-0 icon">{item.icon}</span>}

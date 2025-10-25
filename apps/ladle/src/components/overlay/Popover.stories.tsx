@@ -1,6 +1,8 @@
 import React from "react";
-import { Popover } from "./Popover";
+
 import { Button } from "../form/Button";
+
+import { Popover } from "./Popover";
 
 export default { title: "Overlay/Popover" };
 

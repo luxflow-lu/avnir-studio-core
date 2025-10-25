@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { ErrorBoundary } from "./ErrorBoundary";
+
 import { Button } from "../form/Button";
+
+import { ErrorBoundary } from "./ErrorBoundary";
 
 export default { title: "System/ErrorBoundary" };
 

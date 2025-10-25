@@ -33,7 +33,7 @@ export {
   ContactBlock,
   CtaSection,
   Faq,
-  FeatureGrid,
+  Features,
   Hero,
   LogoCloud,
   Newsletter,

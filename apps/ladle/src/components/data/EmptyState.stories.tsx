@@ -1,6 +1,8 @@
 import React from "react";
-import { EmptyState } from "./EmptyState";
+
 import { Button } from "../form/Button";
+
+import { EmptyState } from "./EmptyState";
 
 export default { title: "Data/EmptyState" };
 

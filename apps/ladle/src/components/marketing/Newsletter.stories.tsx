@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Newsletter } from "./Newsletter";
 
 export default { title: "Marketing/Newsletter", parameters: { layout: "padded" } };

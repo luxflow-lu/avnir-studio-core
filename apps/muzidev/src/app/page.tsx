@@ -77,7 +77,7 @@ export default function Page() {
         {/* 4 Pillars Grid */}
         <section className="section">
           <div className="container">
-            <Marketing.FeatureGrid
+            <Marketing.Features
             title="Les 4 piliers de la formation"
             subtitle="Maîtrise tous les aspects de ta carrière musicale"
             items={[
@@ -278,8 +278,8 @@ export default function Page() {
               title="Rejoins la newsletter pour suivre les nouveautés"
               subtitle="Reçois en avant-première les nouveaux modules, les événements exclusifs et les conseils d'experts. En t'inscrivant, tu acceptes notre politique de confidentialité."
               onSubmit={(email) => {
-                console.log("Newsletter signup:", email);
                 // TODO: Implement newsletter signup
+                void email; // Placeholder until API is implemented
               }}
             />
           </div>

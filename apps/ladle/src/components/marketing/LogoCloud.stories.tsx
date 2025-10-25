@@ -1,4 +1,5 @@
 import React from "react";
+
 import { LogoCloud } from "./LogoCloud";
 
 export default { title: "Marketing/LogoCloud", parameters: { layout: "padded" } };

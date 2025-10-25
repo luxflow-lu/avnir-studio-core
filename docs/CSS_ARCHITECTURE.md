@@ -18,9 +18,14 @@
 
 ### Architecture
 - **85 fichiers CSS modulaires** organisés par familles
-- **0% Tailwind** dans les composants
-- **100% CSS** avec variables design system
+- **100% CSS pur** dans les composants `@avnir/ui` (0% Tailwind)
+- **Tailwind autorisé** dans les apps via preset mappé aux tokens
 - **Build optimisé** : CSS minifié + source maps
+
+### Politique Tailwind
+**Composants `@avnir/ui`** : Aucune classe Tailwind. 100% CSS pur via design tokens.
+
+**Applications** : Tailwind autorisé via `@avnir/design/tailwind-preset.cjs` qui mappe les utilitaires aux tokens CSS (`var(--primary)`, `var(--space-16)`, etc.).
 
 ### Performance
 - **CSS minifié:** 74.4 KB

@@ -37,15 +37,15 @@
 }
 
 .credit-balance-indicator--good {
-  background: #4ade80;
+  background: var(--success);
 }
 
 .credit-balance-indicator--low {
-  background: #fbbf24;
+  background: var(--warning);
 }
 
 .credit-balance-indicator--critical {
-  background: #f87171;
+  background: var(--destructive);
 }
 
 .credit-balance-heading {
@@ -98,11 +98,11 @@
 }
 
 .credit-balance-current--low {
-  color: #fbbf24;
+  color: var(--warning);
 }
 
 .credit-balance-current--critical {
-  color: #f87171;
+  color: var(--destructive);
 }
 
 .credit-balance-total {
@@ -183,10 +183,10 @@
 .credit-balance-alert-icon {
   width: 1rem;
   height: 1rem;
-  color: #f87171;
+  color: var(--destructive);
   flex-shrink: 0;
 }
 
 .credit-balance-alert-text {
-  color: #f87171;
+  color: var(--destructive);
 }

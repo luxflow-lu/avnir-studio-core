@@ -1,5 +1,6 @@
 import * as React from "react";
 import clsx from "clsx";
+
 import { SectionHeader } from "../layout/SectionHeader";
 
 export type Feature = { icon?: React.ReactNode; title: string; description?: string };

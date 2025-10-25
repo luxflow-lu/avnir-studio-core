@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { MediaGallery } from "./MediaGallery";
 
 export default { title: "E-commerce/MediaGallery" };

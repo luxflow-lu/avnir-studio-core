@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { CommandK } from "./CommandK";
+
 import { Button } from "../form/Button";
+
+import { CommandK } from "./CommandK";
 
 export default { title: "Nav/CommandK" };
 

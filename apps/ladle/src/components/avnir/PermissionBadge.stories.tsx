@@ -1,4 +1,5 @@
 import React from "react";
+
 import { PermissionBadge } from "./PermissionBadge";
 
 export default { title: "AVNIR/PermissionBadge" };

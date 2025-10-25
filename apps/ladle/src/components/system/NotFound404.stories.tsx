@@ -1,4 +1,5 @@
 import React from "react";
+
 import { NotFound404 } from "./NotFound404";
 
 export default { title: "System/NotFound404" };

@@ -1,4 +1,5 @@
 import React from "react";
+
 import { PricingTable } from "./PricingTable";
 
 export default {

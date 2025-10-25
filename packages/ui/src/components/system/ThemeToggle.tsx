@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import { cx } from "../../utils/cx";
 
 export type ThemeMode = "light" | "dark" | "system";
@@ -31,7 +32,7 @@ export const ThemeToggle = React.forwardRef<HTMLDivElement, ThemeToggleProps>(
           onClick={next}
           className={cx(
             "inline-flex items-center justify-center h-9 px-3 rounded-[var(--radius-sm)]",
-            "hover:bg-white/5 text-[var(--text-muted)] hover:text-white",
+            "hover:bg-white/5 text-[var(--text-muted)] hover:text-on-primary",
             "focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]",
           )}
           aria-label={`Switch theme (current: ${theme})`}

@@ -1,4 +1,5 @@
 import React from "react";
+
 import { Price } from "./Price";
 
 export default { title: "E-commerce/Price" };

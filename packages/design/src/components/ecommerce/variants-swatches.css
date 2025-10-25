@@ -77,7 +77,7 @@
 
 .swatch--size.swatch--active {
   background-color: var(--primary);
-  color: #0b0b0d;
+  color: var(--bg);
 }
 
 .swatch--size.swatch--disabled {
@@ -106,7 +106,7 @@
 
 .swatch--text.swatch--active {
   background-color: var(--primary);
-  color: #0b0b0d;
+  color: var(--bg);
   border-color: var(--primary);
 }
 

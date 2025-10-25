@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { LoadingBoundary } from "./LoadingBoundary";
+
 import { Button } from "../form/Button";
+
+import { LoadingBoundary } from "./LoadingBoundary";
 
 export default { title: "System/LoadingBoundary" };
 

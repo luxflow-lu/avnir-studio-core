@@ -1,6 +1,8 @@
 import React from "react";
-import { Tooltip } from "./Tooltip";
+
 import { Button } from "../form/Button";
+
+import { Tooltip } from "./Tooltip";
 
 export default { title: "Overlay/Tooltip" };
 
