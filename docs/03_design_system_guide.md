@@ -1,17 +1,46 @@
 # Styles & Brands — Guide de personnalisation
 
 <!-- METADATA -->
-<!-- Version: 1.0.0 -->
-<!-- Last Updated: 2025-10-24 -->
-<!-- Last Validated: 2025-10-24 -->
-<!-- Next Review: 2025-11-23 -->
+<!-- Version: 2.0.0 -->
+<!-- Last Updated: 2025-10-25 -->
+<!-- Last Validated: 2025-10-25 -->
+<!-- Next Review: 2025-11-24 -->
 <!-- Dependencies: None -->
 <!-- Breaking Changes: None -->
 <!-- Status: ACTIVE -->
 <!-- /METADATA -->
 
 
-**Objectif :** modifier les styles sans casser la cohérence. Sert aussi de base à Windsurf pour appliquer les changements.
+**Objectif :** Guide complet du Design System CSS modulaire AVNIR. Architecture 100% CSS, 0% Tailwind.
+
+---
+
+## 🎯 Architecture CSS Modulaire
+
+**Conversion complète Tailwind → CSS terminée le 2025-10-25**
+
+### Structure
+```
+packages/design/
+├── themes.css (variables + base)
+├── src/
+│   ├── index.css (point d'entrée)
+│   └── components/
+│       ├── avnir/ (8 fichiers)
+│       ├── data-display/ (8 fichiers)
+│       ├── ecommerce/ (7 fichiers)
+│       ├── form/ (10 fichiers)
+│       ├── layout/ (7 fichiers)
+│       ├── marketing/ (12 fichiers)
+│       ├── navigation/ (4 fichiers)
+│       ├── overlay/ (5 fichiers)
+│       ├── saas/ (9 fichiers)
+│       └── system/ (7 fichiers)
+└── dist/
+    └── index.min.css
+```
+
+**85 fichiers CSS modulaires** pour une architecture scalable.
 
 ---
 
@@ -69,74 +98,156 @@ html[data-brand="promozic"] {
 }
 ```
 
-**Stockage `r g b`** pour pouvoir utiliser `rgb(var(--primary))` dans Tailwind.
+**Stockage `r g b`** pour compatibilité avec `rgb()` et `color-mix()`.
 
-### Dans Tailwind (classes arbitraires)
-
-- **Surface :** `bg-[rgb(var(--surface))]`
-- **Texte :** `text-[rgb(var(--on-surface))]`
-- **Bouton primary :** `bg-[rgb(var(--primary))] text-[rgb(var(--on-primary))]`
-
----
-
-## 2) Spacing & Layout
-
-- **Sections :** `py-12 md:py-16 lg:py-24`
-- **Grids/Stacks :** `gap-6 md:gap-8`
-- **Utilitaire global :**
-  ```css
-  .container {
-    @apply mx-auto max-w-7xl px-4 md:px-6 lg:px-8;
-  }
-  ```
-
----
-
-## 3) Typographie
-
-Définir la scale dans `@avnir/design` (ou preset Tailwind).
-
-**Exemples classes :**
-
-- **Display/Hero :** `text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight`
-- **H2 :** `text-2xl md:text-3xl font-semibold`
-- **Lead :** `text-lg text-[rgb(var(--on-surface)/0.8)]`
-
----
-
-## 4) États & Feedback
-
-**Tokens :** `--success`, `--warning`, `--danger`, `--info`.
-
-- **Bouton success :** `bg-[rgb(var(--success))] text-[rgb(var(--on-primary))]`
-- **Alerte (ex.) :**
-  ```html
-  <div
-    class="bg-[rgb(var(--danger)/0.1)] text-[rgb(var(--danger))] border border-[rgb(var(--danger)/0.2)]"
-  >
-    Erreur…
-  </div>
-  ```
-
----
-
-## 5) Semi-light (header/footer dark)
-
-Le thème light n'éclaircit pas la navbar ni le footer.
-
-**Implémentation** dans un `@layer components` (pas global) :
+### Utilisation dans CSS
 
 ```css
-.header,
-.footer {
-  background: rgb(20 23 28);
-  color: rgb(237 237 237);
+.ma-classe {
+  background-color: rgb(var(--surface));
+  color: rgb(var(--on-surface));
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--brand-on);
 }
 ```
 
 ---
 
-## 6) Ajouter / modifier une marque
+## 2) Variables d'Espacement
+
+### Tokens disponibles
+```css
+--space-1: 0.25rem;   /* 4px */
+--space-2: 0.5rem;    /* 8px */
+--space-4: 1rem;      /* 16px */
+--space-8: 2rem;      /* 32px */
+--space-12: 3rem;     /* 48px */
+--space-16: 4rem;     /* 64px */
+--space-24: 6rem;     /* 96px */
+--space-32: 8rem;     /* 128px */
+```
+
+### Classes utilitaires
+- **Sections :** `.section`, `.section--sm`, `.section--md`, `.section--lg`
+- **Container :** `.container` (max-width + padding responsive)
+- **Grids :** `.grid-1`, `.grid-2`, `.grid-3`
+- **Flex :** `.flex-row`, `.flex-col`, `.flex-center`, `.flex-between`
+- **Spacing :** `.gap-2`, `.gap-4`, `.p-4`, `.mb-4`
+
+---
+
+## 3) Typographie
+
+### Variables
+```css
+--font-sans: system-ui, -apple-system, sans-serif;
+--font-mono: 'Fira Code', monospace;
+```
+
+### Classes disponibles
+- **Tailles :** `.text-xs`, `.text-sm`, `.text-lg`, `.text-xl`, `.text-3xl`
+- **Poids :** `.font-medium`, `.font-semibold`, `.font-bold`
+- **Couleurs :** `.text-foreground`, `.text-muted`, `.text-brand`
+- **Alignement :** `.text-center`, `.text-left`, `.text-right`
+
+---
+
+## 4) États & Feedback
+
+### Variables de couleurs
+```css
+--success: 16 185 129;
+--warning: 245 158 11;
+--destructive: 239 68 68;
+--info: 59 130 246;
+```
+
+### Classes disponibles
+- **Texte :** `.text-success`, `.text-warning`, `.text-destructive`
+- **Background :** `.bg-success`, `.bg-warning`, `.bg-destructive`
+- **Bordures :** `.border-success`, `.border-warning`, `.border-destructive`
+
+### Composants
+- `<Alert variant="success|warning|error|info" />`
+- `<Toast variant="success|error" />`
+- `<Badge variant="success|warning|error" />`
+
+---
+
+## 5) Composants Layout
+
+### Navbar & Footer
+- **Transparents par défaut** : héritent de `--bg`
+- **Responsive** : menu hamburger sur mobile
+- **Classes :** `.navbar`, `.navbar-link`, `.footer`, `.footer-section`
+
+### Container & Section
+```css
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-16);
+}
+
+.section {
+  padding: var(--space-32) 0;
+}
+```
+
+---
+
+## 6) Créer un Nouveau Composant
+
+### Workflow
+1. **Créer le CSS** dans `packages/design/src/components/<famille>/<nom>.css`
+   ```css
+   /* mon-composant.css */
+   .mon-composant {
+     background-color: var(--surface);
+     padding: var(--space-16);
+     border-radius: var(--radius-lg);
+   }
+   
+   .mon-composant__title {
+     font-size: 1.5rem;
+     font-weight: 600;
+     color: var(--foreground);
+   }
+   ```
+
+2. **Importer dans index.css**
+   ```css
+   @import "./components/<famille>/<nom>.css";
+   ```
+
+3. **Créer le composant TSX**
+   ```tsx
+   export const MonComposant = ({ className, ...props }) => (
+     <div className={cx("mon-composant", className)} {...props}>
+       <h2 className="mon-composant__title">Titre</h2>
+     </div>
+   );
+   ```
+
+4. **Build**
+   ```bash
+   pnpm build --filter=@avnir/design
+   pnpm build --filter=@avnir/ui
+   ```
+
+### Standards
+- ✅ **Utiliser variables CSS** : `var(--primary)`, `var(--space-*)`, `var(--radius-*)`
+- ✅ **Classes sémantiques** : `.mon-composant`, `.mon-composant__element`
+- ✅ **Pas de Tailwind** dans les composants
+- ✅ **Pas de couleurs hardcodées**
+- ✅ **Pas de styles inline**
+
+---
+
+## 7) Ajouter / modifier une marque
 
 1. **Ajouter un bloc** dans `@avnir/design/themes.css` :
 
@@ -154,7 +265,7 @@ Le thème light n'éclaircit pas la navbar ni le footer.
 
 ---
 
-## 7) Où placer les assets
+## 8) Où placer les assets
 
 - **Commun** (logos/OG/favicons) → `@avnir/brandkit`.
 - **Icônes** → `@avnir/icons` (SVG→React).
@@ -163,7 +274,7 @@ Le thème light n'éclaircit pas la navbar ni le footer.
 
 ---
 
-## 8) Check-list "je modifie les styles"
+## 9) Check-list "je modifie les styles"
 
 1. **Modifier les tokens** dans `@avnir/design/themes.css`.
 2. **`pnpm -w build`** si preset/tokens changent.
@@ -173,13 +284,42 @@ Le thème light n'éclaircit pas la navbar ni le footer.
 
 ---
 
-## 9) Prompt Windsurf — appliquer des modifs de style
+## 10) Scripts d'Automatisation
+
+### Vérifier conformité
+```bash
+node scripts/convert-tailwind-to-css.js
+```
+
+### Convertir un composant
+```bash
+node scripts/auto-convert-tailwind.js <fichier.tsx>
+```
+
+### Nettoyage
+```bash
+node scripts/ultra-cleanup.js
+```
+
+---
+
+## 11) Documentation Complète
+
+- **CONVERSION_100_COMPLETE.md** - Rapport détaillé de la conversion
+- **CHANGELOG_TAILWIND_CONVERSION.md** - Changelog complet
+- **CONVERSION_SUMMARY.md** - Résumé exécutif
+
+---
+
+## 12) Prompt Cascade — appliquer des modifs de style
 
 ```
-Update @avnir/design/themes.css to change the following tokens:
-- <décris précisément les variables et nouvelles valeurs r g b>
+Update @avnir/design/src/components/<famille>/<nom>.css:
+- Modifier les classes CSS selon les besoins
+- Utiliser UNIQUEMENT les variables CSS (var(--primary), var(--space-*))
+- Pas de couleurs hardcodées
+- Pas de Tailwind
 
-Keep semi-light behavior: header/footer remain dark via components layer.
-Do not hardcode colors in components; use CSS variables only.
-Run pnpm -w build and update Ladle stories if needed.
+Run pnpm build --filter=@avnir/design && pnpm build --filter=@avnir/ui
+Update Ladle stories if needed.
 ```

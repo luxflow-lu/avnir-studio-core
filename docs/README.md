@@ -1,10 +1,10 @@
 # Documentation AVNIR - Index des Standards
 
 <!-- METADATA -->
-<!-- Version: 2.0.1 -->
-<!-- Last Updated: 2025-10-24 -->
-<!-- Last Validated: 2025-10-24 -->
-<!-- Next Review: 2025-11-23 -->
+<!-- Version: 2.1.0 -->
+<!-- Last Updated: 2025-10-25 -->
+<!-- Last Validated: 2025-10-25 -->
+<!-- Next Review: 2025-11-24 -->
 <!-- Dependencies: ALL -->
 <!-- Breaking Changes: Reorganization of file numbering -->
 <!-- Status: ACTIVE -->
@@ -22,7 +22,7 @@
 ### **🏗️ FONDATIONS (01-04)**
 1. **[01_repository_overview.md](./01_repository_overview.md)** - Vue d'ensemble du monorepo
 2. **[02_architecture_framework.md](./02_architecture_framework.md)** - Règles architecturales & RFC process
-3. **[03_design_system_guide.md](./03_design_system_guide.md)** - Styles, brands & composants
+3. **[03_design_system_guide.md](./03_design_system_guide.md)** - ⭐ **Design System CSS modulaire** (v2.0 - Conversion complète 2025-10-25)
 4. **[04_development_best_practices.md](./04_development_best_practices.md)** - Bonnes pratiques de code
 
 ### **🛡️ QUALITÉ & SÉCURITÉ (05-07)**
@@ -44,7 +44,7 @@
 
 ### **Règles critiques à TOUJOURS respecter :**
 - **Architecture** : Pas de logique métier dans apps, composants uniquement dans @avnir/ui
-- **Styles** : Jamais de Tailwind dans composants, toujours classes CSS du design system
+- **Styles** : ⭐ **Architecture CSS modulaire** - 0% Tailwind, 100% CSS design system (85 fichiers modulaires)
 - **Sécurité** : Jamais de secrets en dur, validation côté serveur obligatoire
 - **Performance** : Bundle <300KB, Core Web Vitals respectés
 - **Tests** : Coverage ≥80%, tous tests passent avant commit
