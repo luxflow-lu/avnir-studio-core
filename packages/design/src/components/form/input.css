@@ -1,0 +1,59 @@
+/* Input Component */
+
+.input {
+  display: flex;
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background-color: var(--bg);
+  padding: var(--space-8) var(--space-12);
+  font-size: 0.875rem;
+  color: var(--text);
+  transition: all 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.1);
+}
+
+.input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--muted);
+}
+
+.input::placeholder {
+  color: var(--muted);
+}
+
+/* Input variants */
+.input--sm {
+  padding: var(--space-6) var(--space-8);
+  font-size: 0.75rem;
+}
+
+.input--lg {
+  padding: var(--space-12) var(--space-16);
+  font-size: 1rem;
+}
+
+/* Input states */
+.input--error {
+  border-color: var(--destructive);
+}
+
+.input--error:focus {
+  border-color: var(--destructive);
+  box-shadow: 0 0 0 2px rgba(var(--destructive-rgb), 0.1);
+}
+
+.input--success {
+  border-color: var(--success);
+}
+
+.input--success:focus {
+  border-color: var(--success);
+  box-shadow: 0 0 0 2px rgba(var(--success-rgb), 0.1);
+}

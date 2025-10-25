@@ -1,4 +1,4 @@
-@import "@avnir/design/themes.css";
+@import "@avnir/design/index.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

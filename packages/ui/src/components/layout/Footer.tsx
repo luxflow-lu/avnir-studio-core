@@ -20,8 +20,7 @@ export const Footer = React.forwardRef<HTMLElement, FooterProps>(
   ({ className, sections = [], bottomContent, ...props }, ref) => (
     <footer
       ref={ref}
-      className={cx("footer", className)}
-      {...props}
+      className={cx("footer", className)} {...props}
     >
       {sections && sections.length > 0 && (
         <div className="footer-container">

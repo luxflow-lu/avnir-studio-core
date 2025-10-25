@@ -79,35 +79,34 @@ export const ImportExport = React.forwardRef<HTMLDivElement, ImportExportProps>(
     const getStatusColor = () => {
       switch (importStatus) {
         case "success":
-          return "text-green-400";
+          return "import-export-status-text--success";
         case "error":
-          return "text-red-400";
+          return "import-export-status-text--error";
         default:
-          return "text-[var(--text-muted)]";
+          return "import-export-status-text--muted";
       }
     };
 
     return (
       <div
         ref={ref}
-        className={cx("bg-[var(--surface)] rounded-[var(--radius-lg)] p-6", className)}
-        {...props}
+        className={cx("import-export-container", className)} {...props}
       >
-        <div className="mb-6">
-          <h3 className="text-lg font-semibold text-white mb-2">Import & Export</h3>
-          <p className="text-[var(--text-muted)] text-sm">
+        <div className="import-export-header">
+          <h3>Import & Export</h3>
+          <p>
             Import data from files or export your current data
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <div className="import-export-grid">
           {/* Export Section */}
-          <div className="space-y-4">
+          <div className="import-export-section">
             <div>
-              <h4 className="text-sm font-medium text-white mb-3">Export Data</h4>
-              <div className="space-y-3">
-                <div>
-                  <label className="block text-xs font-medium text-[var(--text-muted)] mb-2">
+              <h4>Export Data</h4>
+              <div className="import-export-form">
+                <div className="import-export-field">
+                  <label>
                     Format
                   </label>
                   <Select
@@ -123,14 +122,14 @@ export const ImportExport = React.forwardRef<HTMLDivElement, ImportExportProps>(
                 </div>
 
                 {exportCount !== undefined && (
-                  <div className="text-xs text-[var(--text-muted)]">
+                  <div className="import-export-count">
                     {exportCount.toLocaleString()} records will be exported
                   </div>
                 )}
 
-                <Button onClick={handleExport} loading={isExporting} className="w-full">
+                <Button onClick={handleExport} loading={isExporting} className="btn-full-width">
                   <svg
-                    className="w-4 h-4 mr-2"
+                    className="icon-sm"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -149,12 +148,12 @@ export const ImportExport = React.forwardRef<HTMLDivElement, ImportExportProps>(
           </div>
 
           {/* Import Section */}
-          <div className="space-y-4">
+          <div className="import-export-section">
             <div>
-              <h4 className="text-sm font-medium text-white mb-3">Import Data</h4>
-              <div className="space-y-3">
-                <div>
-                  <label className="block text-xs font-medium text-[var(--text-muted)] mb-2">
+              <h4>Import Data</h4>
+              <div className="import-export-form">
+                <div className="import-export-field">
+                  <label>
                     Format
                   </label>
                   <Select
@@ -179,14 +178,14 @@ export const ImportExport = React.forwardRef<HTMLDivElement, ImportExportProps>(
                 />
 
                 {(importStatus === "uploading" || importStatus === "processing") && (
-                  <div className="space-y-2">
+                  <div className="import-export-status">
                     <Progress value={importProgress} showValue />
-                    <p className={cx("text-xs", getStatusColor())}>{getStatusMessage()}</p>
+                    <p className={cx("import-export-status-text", getStatusColor())}>{getStatusMessage()}</p>
                   </div>
                 )}
 
                 {(importStatus === "success" || importStatus === "error") && (
-                  <div className={cx("text-xs", getStatusColor())}>{getStatusMessage()}</div>
+                  <div className={cx("import-export-status-text", getStatusColor())}>{getStatusMessage()}</div>
                 )}
               </div>
             </div>
@@ -194,9 +193,9 @@ export const ImportExport = React.forwardRef<HTMLDivElement, ImportExportProps>(
         </div>
 
         {/* Help Section */}
-        <div className="mt-8 p-4 bg-[var(--bg)] rounded-[var(--radius-sm)]">
-          <h5 className="text-sm font-medium text-white mb-2">Format Guidelines</h5>
-          <ul className="text-xs text-[var(--text-muted)] space-y-1">
+        <div className="import-export-help">
+          <h5>Format Guidelines</h5>
+          <ul>
             <li>
               • <strong>CSV:</strong> Comma-separated values with headers in first row
             </li>

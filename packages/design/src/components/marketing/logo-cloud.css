@@ -1,0 +1,84 @@
+/* LogoCloud Component */
+
+.logo-cloud {
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space-64) var(--space-16);
+}
+
+@media (min-width: 768px) {
+  .logo-cloud {
+    padding: var(--space-96) var(--space-24);
+  }
+}
+
+.logo-cloud-container {
+  margin: 0 auto;
+  max-width: 80rem;
+}
+
+.logo-cloud-header {
+  margin-bottom: var(--space-32);
+  text-align: center;
+}
+
+.logo-cloud-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: var(--titles);
+  margin-bottom: var(--space-8);
+}
+
+@media (min-width: 768px) {
+  .logo-cloud-title {
+    font-size: 1.875rem;
+  }
+}
+
+.logo-cloud-subtitle {
+  color: var(--muted);
+  margin: 0;
+}
+
+.logo-cloud-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-24);
+  align-items: center;
+}
+
+@media (min-width: 640px) {
+  .logo-cloud-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .logo-cloud-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo-cloud-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.logo-cloud-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.logo-cloud-item:hover {
+  opacity: 1;
+}
+
+.logo-cloud-image {
+  height: 2rem;
+  object-fit: contain;
+}

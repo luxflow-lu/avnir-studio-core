@@ -62,13 +62,12 @@ export const SavedViews = React.forwardRef<HTMLDivElement, SavedViewsProps>(
     return (
       <div
         ref={ref}
-        className={cx("bg-[var(--surface)] rounded-[var(--radius-lg)] p-4", className)}
-        {...props}
+        className={cx("saved-views-container", className)} {...props}
       >
-        <div className="flex items-center justify-between mb-4">
+        <div className="saved-views-header">
           <div>
-            <h3 className="text-sm font-medium text-white">Saved Views</h3>
-            <p className="text-xs text-[var(--text-muted)]">
+            <h3>Saved Views</h3>
+            <p>
               Save and manage your filter combinations
             </p>
           </div>
@@ -78,9 +77,9 @@ export const SavedViews = React.forwardRef<HTMLDivElement, SavedViewsProps>(
         </div>
 
         {views.length === 0 ? (
-          <div className="text-center py-8">
-            <div className="w-12 h-12 mx-auto mb-3 text-[var(--text-muted)]">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full">
+          <div className="saved-views-empty">
+            <div className="saved-views-empty-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -89,37 +88,35 @@ export const SavedViews = React.forwardRef<HTMLDivElement, SavedViewsProps>(
                 />
               </svg>
             </div>
-            <p className="text-sm text-[var(--text-muted)] mb-3">No saved views yet</p>
-            <p className="text-xs text-[var(--text-muted)]">
+            <p>No saved views yet</p>
+            <p>
               Apply some filters and save them as a view
             </p>
           </div>
         ) : (
-          <div className="space-y-2">
+          <div className="saved-views-list">
             {views.map((view) => (
               <div
                 key={view.id}
                 className={cx(
-                  "flex items-center justify-between p-3 rounded-[var(--radius-sm)] border transition-colors cursor-pointer",
-                  currentView === view.id
-                    ? "border-[var(--brand)] bg-[var(--brand)]/5"
-                    : "border-white/10 hover:border-white/20",
+                  "saved-view-card",
+                  currentView === view.id && "saved-view-card--active",
                 )}
                 onClick={() => onSelectView?.(view.id)}
               >
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-sm font-medium text-white truncate">{view.name}</span>
-                    {view.isDefault && <Badge className="text-xs">Default</Badge>}
+                <div className="saved-view-content">
+                  <div className="saved-view-header">
+                    <span className="saved-view-name">{view.name}</span>
+                    {view.isDefault && <Badge>Default</Badge>}
                   </div>
-                  <div className="flex items-center gap-2 text-xs text-[var(--text-muted)]">
+                  <div className="saved-view-meta">
                     <span>{Object.keys(view.filters).length} filters</span>
                     <span>•</span>
                     <span>Updated {view.updatedAt.toLocaleDateString()}</span>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-1">
+                <div className="saved-view-actions">
                   {!view.isDefault && onSetDefault && (
                     <Button
                       variant="ghost"
@@ -128,7 +125,6 @@ export const SavedViews = React.forwardRef<HTMLDivElement, SavedViewsProps>(
                         e.stopPropagation();
                         onSetDefault(view.id);
                       }}
-                      className="text-xs"
                     >
                       Set Default
                     </Button>
@@ -141,10 +137,10 @@ export const SavedViews = React.forwardRef<HTMLDivElement, SavedViewsProps>(
                         e.stopPropagation();
                         onDeleteView(view.id);
                       }}
-                      className="text-red-400 hover:text-red-300"
+                      className="btn-destructive"
                     >
                       <svg
-                        className="w-4 h-4"
+                        className="icon-sm"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -169,9 +165,9 @@ export const SavedViews = React.forwardRef<HTMLDivElement, SavedViewsProps>(
           onClose={() => setShowSaveModal(false)}
           title="Save Current View"
         >
-          <div className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium text-white mb-2">View Name</label>
+          <div className="saved-views-form">
+            <div className="saved-views-form-field">
+              <label>View Name</label>
               <Input
                 placeholder="Enter a name for this view"
                 value={viewName}
@@ -179,18 +175,18 @@ export const SavedViews = React.forwardRef<HTMLDivElement, SavedViewsProps>(
               />
             </div>
 
-            <div className="bg-[var(--bg)] p-3 rounded-[var(--radius-sm)]">
-              <p className="text-xs text-[var(--text-muted)] mb-2">Current filters:</p>
-              <div className="flex flex-wrap gap-1">
+            <div className="saved-views-filters-preview">
+              <p>Current filters:</p>
+              <div className="saved-views-filters-list">
                 {Object.entries(currentFilters).map(([key, value]) => (
-                  <Badge key={key} className="text-xs">
+                  <Badge key={key}>
                     {key}: {String(value)}
                   </Badge>
                 ))}
               </div>
             </div>
 
-            <div className="flex gap-3 pt-4">
+            <div className="saved-views-form-actions">
               <Button variant="outline" onClick={() => setShowSaveModal(false)} disabled={isSaving}>
                 Cancel
               </Button>

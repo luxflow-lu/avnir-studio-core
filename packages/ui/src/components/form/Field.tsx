@@ -18,9 +18,9 @@ export const Field = React.forwardRef<HTMLDivElement, FieldProps>(
     return (
       <div ref={ref} className={cx("space-y-2", className)} {...props}>
         {label && (
-          <label htmlFor={fieldId} className="block text-sm font-medium text-white">
+          <label htmlFor={fieldId} className="block text-sm font-medium text-foreground">
             {label}
-            {required && <span className="text-red-400 ml-1">*</span>}
+            {required && <span className="text-destructive ml-1">*</span>}
           </label>
         )}
         <div>
@@ -31,12 +31,12 @@ export const Field = React.forwardRef<HTMLDivElement, FieldProps>(
           })}
         </div>
         {help && !error && (
-          <p id={helpId} className="text-xs text-[var(--text-muted)]">
+          <p id={helpId} className="text-xs text-muted">
             {help}
           </p>
         )}
         {error && (
-          <p id={errorId} className="text-xs text-red-400">
+          <p id={errorId} className="text-xs text-destructive">
             {error}
           </p>
         )}

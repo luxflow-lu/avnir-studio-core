@@ -25,15 +25,14 @@ export const DashboardKPI = React.forwardRef<HTMLDivElement, DashboardKPIProps>(
       return (
         <div
           ref={ref}
-          className={cx("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6", className)}
-          {...props}
+          className={cx("grid-1 md:grid-2 lg:grid-cols-4 gap-6", className)} {...props}
         >
           {Array.from({ length: 4 }).map((_, i) => (
-            <div key={i} className="bg-[var(--surface)] rounded-[var(--radius-lg)] p-6">
+            <div key={i} className="bg-surface-lg p-6">
               <div className="animate-pulse">
-                <div className="h-4 bg-white/10 rounded mb-2"></div>
-                <div className="h-8 bg-white/10 rounded mb-2"></div>
-                <div className="h-3 bg-white/10 rounded w-2/3"></div>
+                <div className="h-4 bg-muted mb-2"></div>
+                <div className="h-8 bg-muted mb-2"></div>
+                <div className="h-3 bg-muted w-2/3"></div>
               </div>
             </div>
           ))}
@@ -44,26 +43,25 @@ export const DashboardKPI = React.forwardRef<HTMLDivElement, DashboardKPIProps>(
     return (
       <div
         ref={ref}
-        className={cx("grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6", className)}
-        {...props}
+        className={cx("grid-1 md:grid-2 lg:grid-cols-4 gap-6", className)} {...props}
       >
         {kpis.map((kpi) => (
           <div
             key={kpi.id}
-            className="bg-[var(--surface)] rounded-[var(--radius-lg)] p-6 border border-white/5 hover:border-white/10 transition-colors"
+            className="bg-surface-lg p-6-white/5 hover:border-muted"
           >
-            <div className="flex items-start justify-between mb-4">
-              <div className="flex-1">
-                <h3 className="text-sm font-medium text-[var(--text-muted)] mb-1">{kpi.title}</h3>
-                <div className="text-2xl font-bold text-white">
+            <div className="flex flex-start justify-between mb-4">
+              <div >
+                <h3 className="text-sm font-medium text-muted mb-1">{kpi.title}</h3>
+                <div className="text-2xl font-bold text-foreground">
                   {typeof kpi.value === "number" ? kpi.value.toLocaleString() : kpi.value}
                 </div>
               </div>
               {kpi.icon && (
                 <div
                   className={cx(
-                    "p-2 rounded-[var(--radius-sm)]",
-                    kpi.color || "text-[var(--brand)]",
+                    "p-2 rounded-sm",
+                    kpi.color || "text-brand",
                   )}
                 >
                   {kpi.icon}
@@ -72,19 +70,19 @@ export const DashboardKPI = React.forwardRef<HTMLDivElement, DashboardKPIProps>(
             </div>
 
             {kpi.change && (
-              <div className="flex items-center gap-1">
+              <div className="flex-center gap-1">
                 <div
                   className={cx(
-                    "flex items-center gap-1 text-sm",
+                    "flex-center gap-1 text-sm",
                     kpi.change.trend === "up"
                       ? "text-green-400"
                       : kpi.change.trend === "down"
                         ? "text-red-400"
-                        : "text-[var(--text-muted)]",
+                        : "text-muted",
                   )}
                 >
                   {kpi.change.trend === "up" && (
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -94,7 +92,7 @@ export const DashboardKPI = React.forwardRef<HTMLDivElement, DashboardKPIProps>(
                     </svg>
                   )}
                   {kpi.change.trend === "down" && (
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -108,7 +106,7 @@ export const DashboardKPI = React.forwardRef<HTMLDivElement, DashboardKPIProps>(
                     {kpi.change.value}%
                   </span>
                 </div>
-                <span className="text-xs text-[var(--text-muted)]">vs {kpi.change.period}</span>
+                <span className="text-xs text-muted">vs {kpi.change.period}</span>
               </div>
             )}
           </div>

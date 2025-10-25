@@ -13,6 +13,8 @@
       "require": "./dist/index.cjs"
     },
     "./themes.css": "./themes.css",
+    "./index.css": "./dist/index.css",
+    "./index.min.css": "./dist/index.min.css",
     "./tailwind-preset.cjs": "./tailwind-preset.cjs",
     "./brands": {
       "types": "./dist/brands.d.ts",
@@ -26,12 +28,24 @@
     "tailwind-preset.cjs"
   ],
   "scripts": {
-    "build": "tsup src/index.ts src/brands.ts --format esm,cjs --dts --sourcemap --clean",
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "tsup src/index.ts src/brands.ts --format esm,cjs --dts --sourcemap --clean",
+    "build:css": "postcss src/index.css -o dist/index.css",
+    "build:css:prod": "NODE_ENV=production postcss src/index.css -o dist/index.min.css",
+    "analyze:css": "echo 'CSS Analysis:' && wc -c dist/index.min.css && echo 'Gzipped:' && gzip -c dist/index.min.css | wc -c",
     "lint": "echo 'No lint configured'",
     "typecheck": "tsc --noEmit",
     "clean": "rimraf .turbo dist"
   },
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "autoprefixer": "^10.4.16",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "postcss-custom-properties": "^13.3.2",
+    "postcss-import": "^15.1.0",
+    "postcss-nested": "^6.0.1",
     "rimraf": "^6.0.0",
     "tsup": "^8.0.0",
     "typescript": "^5.6.3"

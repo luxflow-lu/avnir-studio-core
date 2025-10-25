@@ -31,7 +31,7 @@ const typeConfig: Record<
 > = {
   audio: {
     icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="asset-tile-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -40,12 +40,12 @@ const typeConfig: Record<
         />
       </svg>
     ),
-    color: "text-blue-400",
+    color: "asset-tile-icon--audio",
     label: "Audio",
   },
   video: {
     icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="asset-tile-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -54,12 +54,12 @@ const typeConfig: Record<
         />
       </svg>
     ),
-    color: "text-purple-400",
+    color: "asset-tile-icon--video",
     label: "Vidéo",
   },
   image: {
     icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="asset-tile-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -68,12 +68,12 @@ const typeConfig: Record<
         />
       </svg>
     ),
-    color: "text-green-400",
+    color: "asset-tile-icon--image",
     label: "Image",
   },
   document: {
     icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="asset-tile-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -82,12 +82,12 @@ const typeConfig: Record<
         />
       </svg>
     ),
-    color: "text-orange-400",
+    color: "asset-tile-icon--document",
     label: "Document",
   },
   preset: {
     icon: (
-      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <svg className="asset-tile-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -102,7 +102,7 @@ const typeConfig: Record<
         />
       </svg>
     ),
-    color: "text-yellow-400",
+    color: "asset-tile-icon--preset",
     label: "Preset",
   },
 };
@@ -114,10 +114,10 @@ const statusConfig: Record<
     label: string;
   }
 > = {
-  processing: { color: "bg-blue-500/15 text-blue-400", label: "En cours" },
-  ready: { color: "bg-green-500/15 text-green-400", label: "Prêt" },
-  error: { color: "bg-red-500/15 text-red-400", label: "Erreur" },
-  draft: { color: "bg-yellow-500/15 text-yellow-400", label: "Brouillon" },
+  processing: { color: "asset-status--processing", label: "En cours" },
+  ready: { color: "asset-status--ready", label: "Prêt" },
+  error: { color: "asset-status--error", label: "Erreur" },
+  draft: { color: "asset-status--draft", label: "Brouillon" },
 };
 
 export const AssetTile = React.forwardRef<HTMLDivElement, AssetTileProps>(
@@ -148,110 +148,67 @@ export const AssetTile = React.forwardRef<HTMLDivElement, AssetTileProps>(
       <div
         ref={ref}
         className={cx(
-          "group relative bg-[var(--surface)] rounded-[var(--radius-lg)] p-4 border transition-all hover:shadow-lg",
-          selected
-            ? "border-[var(--brand)] ring-2 ring-[var(--brand)]/20"
-            : "border-white/5 hover:border-white/10",
-          onSelect && "cursor-pointer",
+          "card-base",
+          "asset-tile",
+          selected && "asset-tile--selected",
+          onSelect && "asset-tile--clickable",
           className,
         )}
-        onClick={onSelect}
-        {...props}
+        onClick={onSelect} {...props}
       >
-        {/* Thumbnail/Icon */}
-        <div className="relative mb-3">
+        <div className="asset-tile-media">
           {thumbnail ? (
-            <div className="aspect-video rounded-[var(--radius-sm)] overflow-hidden bg-white/5">
-              <img src={thumbnail} alt={name} className="w-full h-full object-cover" />
-            </div>
+            <img src={thumbnail} alt={name} className="asset-tile-image" />
           ) : (
-            <div className="aspect-video rounded-[var(--radius-sm)] bg-white/5 flex items-center justify-center">
-              <div className={cx("text-2xl", typeInfo.color)}>{typeInfo.icon}</div>
+            <div className="asset-tile-placeholder">
+              <div className={cx("asset-tile-icon", typeInfo.color)}>{typeInfo.icon}</div>
             </div>
           )}
 
-          {/* Status Badge */}
-          <div className="absolute top-2 right-2">
-            <Badge className={cx("text-xs", statusInfo.color)}>{statusInfo.label}</Badge>
-          </div>
+          <Badge className={cx("asset-tile-status", statusInfo.color)}>{statusInfo.label}</Badge>
 
-          {/* Play Button Overlay */}
           {(type === "audio" || type === "video") && onPlay && status === "ready" && (
-            <button
-              onClick={(e) => {
-                e.stopPropagation();
-                onPlay();
-              }}
-              className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-[var(--radius-sm)]"
-            >
-              <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
-                <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z" />
-                </svg>
-              </div>
+            <button onClick={(e) => { e.stopPropagation(); onPlay(); }} className="asset-tile-play">
+              <svg className="asset-tile-play-icon" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
             </button>
           )}
         </div>
 
-        {/* Asset Info */}
-        <div className="space-y-2">
-          <div className="flex items-start justify-between">
-            <h3 className="text-sm font-medium text-white truncate pr-2">{name}</h3>
-            <div className={cx("flex-shrink-0 text-xs", typeInfo.color)}>{typeInfo.label}</div>
+        <div className="asset-tile-content">
+          <div className="asset-tile-header">
+            <h3 className="asset-tile-name">{name}</h3>
+            <span className={cx("asset-tile-type", typeInfo.color)}>{typeInfo.label}</span>
           </div>
-
-          <div className="flex items-center justify-between text-xs text-[var(--text-muted)]">
-            <div className="flex items-center gap-2">
-              {duration && <span>{duration}</span>}
-              {size && <span>{size}</span>}
-            </div>
-            <span>{createdAt.toLocaleDateString()}</span>
+          <div className="asset-tile-meta">
+            {(duration || size) && (
+              <span className="asset-tile-details">
+                {[duration, size].filter(Boolean).join(" • ")}
+              </span>
+            )}
+            <span className="asset-tile-date">{createdAt.toLocaleDateString()}</span>
           </div>
         </div>
 
-        {/* Actions */}
-        <div className="absolute top-2 left-2 opacity-0 group-hover:opacity-100 transition-opacity">
-          <div className="flex gap-1">
+        {(onDownload || onDelete) && (
+          <div className="asset-tile-actions">
             {onDownload && status === "ready" && (
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onDownload();
-                }}
-                className="w-8 h-8 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center"
-                title="Télécharger"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                  />
+              <button onClick={(e) => { e.stopPropagation(); onDownload(); }} className="asset-tile-action" title="Télécharger">
+                <svg className="asset-tile-action-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </button>
             )}
             {onDelete && (
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onDelete();
-                }}
-                className="w-8 h-8 bg-black/50 hover:bg-red-500/70 text-white rounded-full flex items-center justify-center"
-                title="Supprimer"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"
-                  />
+              <button onClick={(e) => { e.stopPropagation(); onDelete(); }} className="asset-tile-action asset-tile-action--delete" title="Supprimer">
+                <svg className="asset-tile-action-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                 </svg>
               </button>
             )}
           </div>
-        </div>
+        )}
       </div>
     );
   },

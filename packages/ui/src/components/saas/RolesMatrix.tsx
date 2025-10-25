@@ -49,32 +49,31 @@ export const RolesMatrix = React.forwardRef<HTMLDivElement, RolesMatrixProps>(
     return (
       <div
         ref={ref}
-        className={cx("bg-[var(--surface)] rounded-[var(--radius-lg)] overflow-hidden", className)}
-        {...props}
+        className={cx("bg-surface-lg overflow-hidden", className)} {...props}
       >
-        <div className="p-6 border-b border-white/10">
-          <h3 className="text-lg font-semibold text-white mb-2">Roles & Permissions</h3>
-          <p className="text-[var(--text-muted)] text-sm">
+        <div className="p-6-b-white/10">
+          <h3 className="text-lg font-semibold text-foreground mb-2">Roles & Permissions</h3>
+          <p className="text-muted text-sm">
             Manage what each role can do in your workspace
           </p>
         </div>
 
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-[var(--bg)]">
+            <thead className="bg-muted">
               <tr>
-                <th className="text-left p-4 text-sm font-medium text-white w-1/3">Permission</th>
+                <th className="text-left p-4 text-sm font-medium text-foreground w-1/3">Permission</th>
                 {roles.map((role) => (
                   <th
                     key={role.id}
-                    className="text-center p-4 text-sm font-medium text-white min-w-[120px]"
+                    className="text-center p-4 text-sm font-medium text-foreground min-w-[120px]"
                   >
-                    <div className="flex flex-col items-center gap-2">
-                      <Badge className={role.color || "bg-[var(--brand)]/15 text-[var(--brand)]"}>
+                    <div className="flex-col items-center gap-2">
+                      <Badge className={role.color || "bg-brand-muted text-brand"}>
                         {role.name}
                       </Badge>
                       {role.description && (
-                        <span className="text-xs text-[var(--text-muted)] text-center">
+                        <span className="text-xs text-muted">
                           {role.description}
                         </span>
                       )}
@@ -87,32 +86,32 @@ export const RolesMatrix = React.forwardRef<HTMLDivElement, RolesMatrixProps>(
               {categories.map((category) => (
                 <React.Fragment key={category}>
                   <tr>
-                    <td colSpan={roles.length + 1} className="p-4 bg-white/5">
-                      <div className="text-sm font-medium text-white">{category}</div>
+                    <td colSpan={roles.length + 1} className="p-4 bg-muted">
+                      <div className="text-sm font-medium text-foreground">{category}</div>
                     </td>
                   </tr>
                   {getPermissionsByCategory(category).map((permission) => (
-                    <tr key={permission.id} className="border-b border-white/5 hover:bg-white/5">
+                    <tr key={permission.id} className="border-b-white/5 hover:bg-muted">
                       <td className="p-4">
                         <div>
-                          <div className="text-sm font-medium text-white">{permission.name}</div>
+                          <div className="text-sm font-medium text-foreground">{permission.name}</div>
                           {permission.description && (
-                            <div className="text-xs text-[var(--text-muted)] mt-1">
+                            <div className="text-xs text-muted mt-1">
                               {permission.description}
                             </div>
                           )}
                         </div>
                       </td>
                       {roles.map((role) => (
-                        <td key={role.id} className="p-4 text-center">
+                        <td key={role.id} className="p-4">
                           <button
                             onClick={() => togglePermission(role.id, permission.id)}
                             disabled={readonly}
                             className={cx(
-                              "w-5 h-5 rounded border-2 transition-colors",
+                              "w-5 h-5-2",
                               hasPermission(role.id, permission.id)
-                                ? "bg-[var(--brand)] border-[var(--brand)]"
-                                : "border-white/20 hover:border-white/40",
+                                ? "bg-brand-[var(--brand)]"
+                                : "border-muted hover:border-white/40",
                               readonly ? "cursor-default" : "cursor-pointer",
                               "focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2 focus:ring-offset-[var(--surface)]",
                             )}

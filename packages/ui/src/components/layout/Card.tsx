@@ -9,8 +9,7 @@ export const Card = React.forwardRef<HTMLDivElement, CardProps>(
   ({ className, variant = "default", ...props }, ref) => (
     <div
       ref={ref}
-      className={cx(variant === "wrapper" ? "wrapper" : "card", className)}
-      {...props}
+      className={cx(variant === "wrapper" ? "wrapper" : "card", className)} {...props}
     />
   ),
 );

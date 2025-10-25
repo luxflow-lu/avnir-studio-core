@@ -14,8 +14,7 @@ export const ContactBlock = React.forwardRef<HTMLElement, ContactBlockProps>(
     return (
       <section
         ref={ref}
-        className={cx("section", className)}
-        {...props}
+        className={cx("section", className)} {...props}
       >
         <div className="container">
           {(title || subtitle) && (
@@ -31,7 +30,7 @@ export const ContactBlock = React.forwardRef<HTMLElement, ContactBlockProps>(
           <div className="grid-2">
             <div className="card">
               {form ?? (
-                <form className="space-y-4">
+                <form className="stack-4">
                   <div className="field">
                     <label htmlFor="name" className="label">
                       Nom

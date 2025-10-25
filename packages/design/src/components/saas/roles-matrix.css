@@ -1,0 +1,31 @@
+/* RolesMatrix Component */
+
+.roles-matrix {
+  overflow-x: auto;
+}
+
+.roles-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.roles-matrix-header {
+  background-color: var(--muted);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-align: left;
+  padding: var(--space-12);
+  border-bottom: 1px solid var(--border);
+}
+
+.roles-matrix-cell {
+  padding: var(--space-12);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.roles-matrix-permission {
+  font-size: 0.875rem;
+  color: var(--foreground);
+  text-align: left;
+}

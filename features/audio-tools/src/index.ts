@@ -1,1 +1,1 @@
-export * from "./ui/TapperCard";
+// Audio tools package - ready for future components

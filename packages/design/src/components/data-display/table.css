@@ -1,0 +1,134 @@
+/* Table Component */
+
+.table-container {
+  position: relative;
+  width: 100%;
+  overflow: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+}
+
+.table {
+  width: 100%;
+  caption-side: bottom;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.table-header {
+  border-bottom: 1px solid var(--border);
+}
+
+.table-header-row {
+  border-bottom: 1px solid var(--border);
+  transition: colors 0.2s ease;
+}
+
+.table-header-row:hover {
+  background-color: var(--muted);
+}
+
+.table-header-cell {
+  height: 3rem;
+  padding: 0 var(--space-12);
+  text-align: left;
+  align-items: center;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  background-color: var(--muted);
+}
+
+.table-body {
+  /* Table body styles */
+}
+
+.table-row {
+  border-bottom: 1px solid var(--border);
+  transition: colors 0.2s ease;
+}
+
+.table-row:hover {
+  background-color: var(--muted);
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-cell {
+  padding: var(--space-12);
+  align-items: center;
+  color: var(--text);
+}
+
+.table-footer {
+  border-top: 1px solid var(--border);
+  background-color: var(--muted);
+}
+
+.table-footer-cell {
+  padding: var(--space-12);
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
+
+.table-caption {
+  margin-top: var(--space-16);
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+/* Table variants */
+.table--striped .table-row:nth-child(even) {
+  background-color: var(--muted);
+}
+
+.table--bordered {
+  border: 1px solid var(--border);
+}
+
+.table--bordered .table-cell,
+.table--bordered .table-header-cell,
+.table--bordered .table-footer-cell {
+  border-right: 1px solid var(--border);
+}
+
+.table--bordered .table-cell:last-child,
+.table--bordered .table-header-cell:last-child,
+.table--bordered .table-footer-cell:last-child {
+  border-right: none;
+}
+
+/* Table sizes */
+.table--sm .table-cell,
+.table--sm .table-header-cell,
+.table--sm .table-footer-cell {
+  padding: var(--space-6) var(--space-8);
+  height: 2rem;
+}
+
+.table--lg .table-cell,
+.table--lg .table-header-cell,
+.table--lg .table-footer-cell {
+  padding: var(--space-16) var(--space-20);
+  height: 4rem;
+}
+
+/* Sortable headers */
+.table-header-cell--sortable {
+  cursor: pointer;
+  user-select: none;
+}
+
+.table-header-cell--sortable:hover {
+  background-color: var(--accent);
+}
+
+.table-sort-icon {
+  margin-left: var(--space-4);
+  opacity: 0.5;
+}
+
+.table-header-cell--sorted .table-sort-icon {
+  opacity: 1;
+}

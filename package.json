@@ -18,6 +18,8 @@
     "dev:ui": "turbo run dev --filter=@avnir/ui",
     "dev:muzisystem": "turbo run dev --filter=muzisystem",
     "build:muzisystem": "turbo run build --filter=muzisystem",
+    "dev:muzitools": "turbo run dev --filter=muzitools",
+    "build:muzitools": "turbo run build --filter=muzitools",
     "dev:ladle": "turbo run dev --filter=@avnir/ladle",
     "build:ladle": "turbo run build --filter=@avnir/ladle",
     "typecheck": "turbo run typecheck",

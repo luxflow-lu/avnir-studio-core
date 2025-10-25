@@ -1,0 +1,75 @@
+/* EmptyState Component */
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--space-48) var(--space-24);
+  min-height: 20rem;
+}
+
+.empty-state-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: var(--space-16);
+  border-radius: var(--radius-full);
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+}
+
+.empty-state-icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.empty-state-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: var(--space-8);
+}
+
+.empty-state-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  max-width: 32rem;
+  margin-bottom: var(--space-24);
+  line-height: 1.5;
+}
+
+.empty-state-action {
+  display: flex;
+  gap: var(--space-8);
+}
+
+/* EmptyState variants */
+.empty-state--compact {
+  padding: var(--space-24) var(--space-16);
+  min-height: 12rem;
+}
+
+.empty-state--compact .empty-state-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: var(--space-12);
+}
+
+.empty-state--compact .empty-state-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.empty-state--compact .empty-state-title {
+  font-size: 1rem;
+  margin-bottom: var(--space-4);
+}
+
+.empty-state--compact .empty-state-description {
+  font-size: 0.8125rem;
+  margin-bottom: var(--space-16);
+}

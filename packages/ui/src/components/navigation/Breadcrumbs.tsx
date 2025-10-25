@@ -13,7 +13,7 @@ export interface BreadcrumbsProps extends React.HTMLAttributes<HTMLElement> {
 }
 
 const ChevronRightIcon = () => (
-  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  <svg className="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
   </svg>
 );
@@ -22,31 +22,30 @@ export const Breadcrumbs = React.forwardRef<HTMLElement, BreadcrumbsProps>(
   ({ className, items, separator = <ChevronRightIcon />, ...props }, ref) => (
     <nav
       ref={ref}
-      className={cx("flex items-center space-x-2", className)}
-      aria-label="Breadcrumb"
-      {...props}
+      className={cx("flex-center space-x-2", className)}
+      aria-label="Breadcrumb" {...props}
     >
-      <ol className="flex items-center space-x-2">
+      <ol className="flex-center space-x-2">
         {items.map((item, index) => (
-          <li key={index} className="flex items-center">
+          <li key={index} className="flex-center">
             {index > 0 && (
-              <span className="text-[var(--text-muted)] mx-2" aria-hidden="true">
+              <span className="text-muted mx-2" aria-hidden="true">
                 {separator}
               </span>
             )}
             {item.current ? (
-              <span className="text-white font-medium" aria-current="page">
+              <span className="text-foreground font-medium" aria-current="page">
                 {item.label}
               </span>
             ) : item.href ? (
               <a
                 href={item.href}
-                className="text-[var(--text-muted)] hover:text-white transition-colors"
+                className="text-muted hover:text-foreground"
               >
                 {item.label}
               </a>
             ) : (
-              <span className="text-[var(--text-muted)]">{item.label}</span>
+              <span className="text-muted">{item.label}</span>
             )}
           </li>
         ))}

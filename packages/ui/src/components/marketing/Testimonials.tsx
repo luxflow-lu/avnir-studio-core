@@ -17,8 +17,7 @@ export const Testimonials = React.forwardRef<HTMLElement, TestimonialsProps>(
     return (
       <section
         ref={ref}
-        className={cx("testimonials-section", className)}
-        {...props}
+        className={cx("testimonials-section", className)} {...props}
       >
         <div className="testimonials-container">
           <SectionHeader title={title} subtitle={subtitle} />

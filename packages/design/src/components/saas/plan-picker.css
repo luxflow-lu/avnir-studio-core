@@ -1,0 +1,164 @@
+/* PlanPicker Component */
+
+.plan-picker-container {
+  width: 100%;
+}
+
+/* Billing Toggle */
+.plan-picker-billing {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--space-32);
+}
+
+.plan-picker-billing-toggle {
+  display: flex;
+  background-color: var(--surface);
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+}
+
+.plan-picker-billing-button {
+  padding: var(--space-8) var(--space-16);
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: var(--muted-foreground);
+  position: relative;
+}
+
+.plan-picker-billing-button:hover {
+  color: var(--foreground);
+}
+
+.plan-picker-billing-button--active {
+  background-color: var(--brand);
+  color: var(--brand-on);
+}
+
+/* Plans Grid */
+.plan-picker-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-24);
+  overflow: visible;
+}
+
+@media (min-width: 768px) {
+  .plan-picker-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-32);
+  }
+}
+
+/* Plan Card */
+.plan-picker-card {
+  position: relative;
+  background-color: var(--surface);
+  padding: var(--space-24);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
+  transition: all 0.2s ease;
+}
+
+.plan-picker-card--popular {
+  box-shadow: 0 0 0 2px var(--brand);
+}
+
+.plan-picker-card--selected {
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--brand) 50%, transparent);
+}
+
+.plan-picker-badge {
+  position: absolute;
+  top: -0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.plan-picker-badge-content {
+  display: inline-block;
+  padding: var(--space-4) var(--space-8);
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border);
+}
+
+/* Plan Content */
+.plan-picker-header {
+  text-align: center;
+  margin-bottom: var(--space-24);
+}
+
+.plan-picker-name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: var(--space-8);
+}
+
+.plan-picker-description {
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-16);
+}
+
+.plan-picker-price {
+  margin-bottom: var(--space-8);
+}
+
+.plan-picker-price-amount {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.plan-picker-price-period {
+  color: var(--muted-foreground);
+  margin-left: var(--space-4);
+}
+
+.plan-picker-price-note {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+/* Features List */
+.plan-picker-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  margin-bottom: var(--space-24);
+}
+
+.plan-picker-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-8);
+  font-size: 0.875rem;
+}
+
+.plan-picker-feature-icon {
+  width: 1rem;
+  height: 1rem;
+  color: var(--brand);
+  margin-top: 0.125rem;
+  flex-shrink: 0;
+}
+
+.plan-picker-feature-text {
+  color: var(--muted-foreground);
+}
+
+/* CTA Button */
+.plan-picker-cta {
+  width: 100%;
+  margin-top: var(--space-16);
+}

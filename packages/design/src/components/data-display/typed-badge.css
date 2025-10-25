@@ -1,0 +1,13 @@
+/* TypedBadge Component - Extends Badge */
+@import './badge.css';
+
+.typed-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.typed-badge-icon {
+  width: 0.875rem;
+  height: 0.875rem;
+}

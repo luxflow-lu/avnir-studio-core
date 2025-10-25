@@ -1,0 +1,64 @@
+/* PricingStrip Component */
+
+.pricing-strip {
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space-64) var(--space-16);
+  background-color: var(--surface);
+}
+
+.pricing-strip-container {
+  margin: 0 auto;
+  max-width: 60rem;
+  text-align: center;
+}
+
+.pricing-strip-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--titles);
+  margin-bottom: var(--space-16);
+}
+
+.pricing-strip-description {
+  color: var(--muted);
+  margin-bottom: var(--space-32);
+}
+
+.pricing-strip-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-24);
+}
+
+@media (min-width: 768px) {
+  .pricing-strip-content {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.pricing-strip-price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-8);
+}
+
+.pricing-strip-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.pricing-strip-period {
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.pricing-strip-actions {
+  display: flex;
+  gap: var(--space-16);
+  flex-wrap: wrap;
+  justify-content: center;
+}

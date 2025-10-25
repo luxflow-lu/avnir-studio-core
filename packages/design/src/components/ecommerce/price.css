@@ -1,0 +1,56 @@
+/* Price Component */
+
+.price {
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--space-8);
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.price-currency {
+  font-size: 0.875em;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  margin-right: var(--space-2);
+}
+
+.price-amount {
+  font-size: 1em;
+  font-weight: 700;
+  color: var(--foreground);
+}
+
+.price-original {
+  font-size: 0.875em;
+  font-weight: 400;
+  color: var(--muted-foreground);
+  text-decoration: line-through;
+}
+
+/* Price sizes */
+.price--sm {
+  font-size: 0.875rem;
+}
+
+.price--md {
+  font-size: 1rem;
+}
+
+.price--lg {
+  font-size: 1.5rem;
+}
+
+/* Price with discount */
+.price:has(.price-original) .price-amount {
+  color: var(--destructive);
+}
+
+/* Price variants */
+.price--sale {
+  color: var(--destructive);
+}
+
+.price--sale .price-amount {
+  color: var(--destructive);
+}

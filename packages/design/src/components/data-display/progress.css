@@ -1,0 +1,76 @@
+/* Progress Component */
+
+.progress {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--secondary);
+  border-radius: var(--radius-full);
+}
+
+.progress-indicator {
+  height: 100%;
+  width: 100%;
+  flex: 1;
+  background-color: var(--primary);
+  transition: all 0.3s ease;
+  border-radius: var(--radius-full);
+}
+
+/* Progress sizes */
+.progress--sm {
+  height: 0.25rem;
+}
+
+.progress--md {
+  height: 0.5rem;
+}
+
+.progress--lg {
+  height: 0.75rem;
+}
+
+.progress--xl {
+  height: 1rem;
+}
+
+/* Progress variants */
+.progress--primary .progress-indicator {
+  background-color: var(--primary);
+}
+
+.progress--secondary .progress-indicator {
+  background-color: var(--secondary);
+}
+
+.progress--success .progress-indicator {
+  background-color: var(--success);
+}
+
+.progress--warning .progress-indicator {
+  background-color: var(--warning);
+}
+
+.progress--destructive .progress-indicator {
+  background-color: var(--destructive);
+}
+
+/* Progress with label */
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  color: var(--text);
+}
+
+.progress-value {
+  font-weight: 500;
+  color: var(--muted-foreground);
+}

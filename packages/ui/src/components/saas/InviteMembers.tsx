@@ -69,13 +69,12 @@ export const InviteMembers = React.forwardRef<HTMLDivElement, InviteMembersProps
     return (
       <div
         ref={ref}
-        className={cx("bg-[var(--surface)] rounded-[var(--radius-lg)] p-6", className)}
-        {...props}
+        className={cx("bg-surface-lg p-6", className)} {...props}
       >
-        <div className="flex items-center justify-between mb-6">
+        <div className="flex-between mb-6">
           <div>
-            <h3 className="text-lg font-semibold text-white">Invite Team Members</h3>
-            <p className="text-[var(--text-muted)] text-sm">
+            <h3 className="text-lg font-semibold text-foreground">Invite Team Members</h3>
+            <p className="text-muted text-sm">
               Add people to your workspace and assign roles
             </p>
           </div>
@@ -84,10 +83,10 @@ export const InviteMembers = React.forwardRef<HTMLDivElement, InviteMembersProps
           </Badge>
         </div>
 
-        <div className="space-y-4 mb-6">
+        <div className="stack-4 mb-6">
           {invites.map((invite, index) => (
-            <div key={index} className="flex gap-3 items-start">
-              <div className="flex-1">
+            <div key={index} className="flex-row gap-3 items flex-start">
+              <div >
                 <Input
                   type="email"
                   placeholder="Enter email address"
@@ -112,9 +111,9 @@ export const InviteMembers = React.forwardRef<HTMLDivElement, InviteMembersProps
                   variant="ghost"
                   size="sm"
                   onClick={() => removeInvite(index)}
-                  className="text-red-400 hover:text-red-300"
+                  className="text-destructive hover:text-destructive"
                 >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -128,9 +127,9 @@ export const InviteMembers = React.forwardRef<HTMLDivElement, InviteMembersProps
           ))}
         </div>
 
-        <div className="flex items-center justify-between">
+        <div className="flex-between">
           <Button variant="ghost" onClick={addInvite} disabled={invites.length >= maxInvites}>
-            <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="icon-sm mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -141,7 +140,7 @@ export const InviteMembers = React.forwardRef<HTMLDivElement, InviteMembersProps
             Add Another
           </Button>
 
-          <div className="flex gap-3">
+          <div className="flex-row gap-3">
             <Button variant="outline" disabled={isLoading}>
               Cancel
             </Button>

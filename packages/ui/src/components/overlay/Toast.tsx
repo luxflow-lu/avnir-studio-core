@@ -17,21 +17,21 @@ export interface ToastProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const variants: Record<ToastVariant, string> = {
-  default: "bg-[var(--surface)] border-white/10",
-  success: "bg-green-500/10 border-green-500/20 text-green-400",
-  warning: "bg-yellow-500/10 border-yellow-500/20 text-yellow-400",
-  destructive: "bg-red-500/10 border-red-500/20 text-red-400",
+  default: "bg-surface-white/10",
+  success: "bg-green-500/10-green-500/20 text-green-400",
+  warning: "bg-yellow-500/10-yellow-500/20 text-yellow-400",
+  destructive: "bg-red-500/10-red-500/20 text-red-400",
 };
 
 const icons: Record<ToastVariant, React.ReactNode> = {
   default: null,
   success: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
     </svg>
   ),
   warning: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -41,7 +41,7 @@ const icons: Record<ToastVariant, React.ReactNode> = {
     </svg>
   ),
   destructive: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
     </svg>
   ),
@@ -62,30 +62,29 @@ export const ToastComponent = React.forwardRef<HTMLDivElement, ToastProps>(
       <div
         ref={ref}
         className={cx(
-          "relative flex items-start gap-3 p-4 rounded-[var(--radius-lg)] border shadow-lg",
+          "relative items flex-start gap-3 p-4-lg",
           "animate-in slide-in-from-right-full duration-300",
           variants[toast.variant || "default"],
           className,
-        )}
-        {...props}
+        )} {...props}
       >
         {icons[toast.variant || "default"] && (
           <div className="flex-shrink-0 mt-0.5">{icons[toast.variant || "default"]}</div>
         )}
 
-        <div className="flex-1 min-w-0">
-          {toast.title && <div className="font-medium text-white mb-1">{toast.title}</div>}
+        <div >
+          {toast.title && <div className="font-medium text-foreground mb-1">{toast.title}</div>}
           {toast.description && (
-            <div className="text-sm text-[var(--text-muted)]">{toast.description}</div>
+            <div className="text-sm text-muted">{toast.description}</div>
           )}
         </div>
 
         <button
           onClick={() => onClose(toast.id)}
-          className="flex-shrink-0 text-[var(--text-muted)] hover:text-white transition-colors"
+          className="flex-shrink-0 text-muted hover:text-foreground"
           aria-label="Close"
         >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -132,7 +131,7 @@ export const ToastProvider = ({ children }: { children: React.ReactNode }) => {
   return (
     <ToastContext.Provider value={{ toasts, addToast, removeToast }}>
       {children}
-      <div className="fixed top-4 right-4 z-50 flex flex-col gap-2 max-w-sm w-full">
+      <div className="fixed top-4 right-4 z-50-col gap-2 max-w-sm">
         {toasts.map((toast) => (
           <ToastComponent key={toast.id} toast={toast} onClose={removeToast} />
         ))}

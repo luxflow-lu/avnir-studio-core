@@ -40,8 +40,8 @@ export const FileUpload = React.forwardRef<HTMLInputElement, FileUploadProps>(
     return (
       <div
         className={cx(
-          "border-2 border-dashed border-white/20 rounded-[var(--radius-lg)] p-8 text-center transition-colors",
-          isDragOver && "border-[var(--brand)] bg-[color:var(--brand)/0.05]",
+          "file-upload",
+          isDragOver && "file-upload--active",
           className,
         )}
         onDrop={handleDrop}
@@ -51,16 +51,15 @@ export const FileUpload = React.forwardRef<HTMLInputElement, FileUploadProps>(
         <input
           ref={inputRef}
           type="file"
-          className="sr-only"
+          className="file-upload-input"
           multiple={maxFiles > 1}
           accept={accept}
-          onChange={(e) => handleFiles(e.target.files)}
-          {...props}
+          onChange={(e) => handleFiles(e.target.files)} {...props}
         />
-        <div className="space-y-4">
-          <div className="text-[var(--text-muted)]">
+        <div className="file-upload-content">
+          <div className="file-upload-icon-container">
             <svg
-              className="mx-auto h-12 w-12 mb-4"
+              className="file-upload-icon"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -73,17 +72,17 @@ export const FileUpload = React.forwardRef<HTMLInputElement, FileUploadProps>(
               />
             </svg>
           </div>
-          <div>
+          <div className="file-upload-text">
             <button
               type="button"
               onClick={() => inputRef.current?.click()}
-              className="text-[var(--brand)] hover:underline font-medium"
+              className="file-upload-button"
             >
               Cliquez pour télécharger
             </button>
-            <span className="text-[var(--text-muted)]"> ou glissez-déposez</span>
+            <span className="file-upload-or"> ou glissez-déposez</span>
           </div>
-          <p className="text-xs text-[var(--text-muted)]">
+          <p className="file-upload-info">
             {maxFiles > 1 ? `Jusqu'à ${maxFiles} fichiers` : "1 fichier maximum"}
             {accept && ` • ${accept}`}
           </p>

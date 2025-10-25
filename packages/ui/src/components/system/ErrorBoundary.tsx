@@ -13,9 +13,9 @@ interface ErrorBoundaryState {
 }
 
 const DefaultErrorFallback = ({ error, resetError }: { error: Error; resetError: () => void }) => (
-  <div className="min-h-[400px] flex items-center justify-center bg-[var(--bg)]">
+  <div className="min-h-[400px]-center bg-muted">
     <div className="text-center max-w-md mx-auto p-6">
-      <div className="w-16 h-16 mx-auto mb-4 text-red-400">
+      <div className="icon-xl mx-auto mb-4 text-destructive">
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
             strokeLinecap="round"
@@ -25,21 +25,21 @@ const DefaultErrorFallback = ({ error, resetError }: { error: Error; resetError:
           />
         </svg>
       </div>
-      <h2 className="text-xl font-semibold text-white mb-2">Something went wrong</h2>
-      <p className="text-[var(--text-muted)] mb-4">
+      <h2 className="text-xl font-semibold text-foreground mb-2">Something went wrong</h2>
+      <p className="text-muted mb-4">
         An unexpected error occurred. Please try again.
       </p>
       <details className="text-left mb-4">
-        <summary className="cursor-pointer text-sm text-[var(--text-muted)] hover:text-white">
+        <summary className="cursor-pointer text-sm text-muted hover:text-foreground">
           Error details
         </summary>
-        <pre className="mt-2 text-xs bg-[var(--surface)] p-3 rounded overflow-auto text-red-400">
+        <pre className="mt-2 text-xs bg-surface p-3 overflow-auto text-destructive">
           {error.message}
         </pre>
       </details>
       <button
         onClick={resetError}
-        className="px-4 py-2 bg-[var(--brand)] text-[var(--brand-on)] rounded-[var(--radius-sm)] hover:opacity-90 transition-opacity"
+        className="px-4 py-2 bg-brand text-[var(--brand-on)]-sm hover:opacity-90 transition-opacity"
       >
         Try again
       </button>

@@ -11,8 +11,8 @@ export interface NotFound404Props extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const DefaultIllustration = () => (
-  <div className="w-64 h-64 mx-auto mb-8 text-[var(--text-muted)]">
-    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full">
+  <div className="w-64 h-64 mx-auto mb-8 text-muted">
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full">
       <path
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -38,27 +38,26 @@ export const NotFound404 = React.forwardRef<HTMLDivElement, NotFound404Props>(
   ) => (
     <div
       ref={ref}
-      className={cx("min-h-screen flex items-center justify-center bg-[var(--bg)] px-4", className)}
-      {...props}
+      className={cx("min-h-screen items-center justify-center bg-muted px-4", className)} {...props}
     >
       <div className="text-center max-w-md">
         {illustration || <DefaultIllustration />}
 
         <div className="mb-8">
-          <h1 className="text-6xl font-bold text-[var(--brand)] mb-4">404</h1>
-          <h2 className="text-2xl font-semibold text-white mb-4">{title}</h2>
-          <p className="text-[var(--text-muted)] leading-relaxed">{description}</p>
+          <h1 className="text-6xl font-bold text-brand mb-4">404</h1>
+          <h2 className="text-2xl font-semibold text-foreground mb-4">{title}</h2>
+          <p className="text-muted leading-relaxed">{description}</p>
         </div>
 
         {showHomeButton && (
-          <div className="space-y-4">
+          <div className="stack-4">
             <Button onClick={onHomeClick} className="w-full sm:w-auto">
               Go back home
             </Button>
             <div>
               <button
                 onClick={() => window.history.back()}
-                className="text-[var(--text-muted)] hover:text-white transition-colors text-sm"
+                className="text-muted hover:text-foreground text-sm"
               >
                 ← Go back
               </button>

@@ -6,8 +6,7 @@ export const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, ...props }, ref) => (
     <textarea
       ref={ref}
-      className={cx("textarea", className)}
-      {...props}
+      className={cx("textarea", className)} {...props}
     />
   ),
 );

@@ -21,8 +21,7 @@ export const Skeleton = React.forwardRef<HTMLDivElement, SkeletonProps>(
         height: height || "1rem",
         ...style,
       }}
-      aria-hidden="true"
-      {...props}
+      aria-hidden="true" {...props}
     />
   ),
 );

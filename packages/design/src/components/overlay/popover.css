@@ -1,0 +1,46 @@
+/* Popover Component */
+
+.popover {
+  position: absolute;
+  z-index: 50;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-12);
+  min-width: 12rem;
+  max-width: 20rem;
+}
+
+.popover-arrow {
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  transform: rotate(45deg);
+}
+
+.popover--top .popover-arrow {
+  bottom: -0.25rem;
+  border-bottom: none;
+  border-right: none;
+}
+
+.popover--bottom .popover-arrow {
+  top: -0.25rem;
+  border-top: none;
+  border-left: none;
+}
+
+.popover--left .popover-arrow {
+  right: -0.25rem;
+  border-right: none;
+  border-bottom: none;
+}
+
+.popover--right .popover-arrow {
+  left: -0.25rem;
+  border-left: none;
+  border-top: none;
+}

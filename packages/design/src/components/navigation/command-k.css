@@ -1,0 +1,104 @@
+/* CommandK Component */
+
+.command-k-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.5);
+  animation: fade-in 0.2s ease;
+}
+
+.command-k {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  width: 90%;
+  max-width: 40rem;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  animation: slide-in 0.2s ease;
+}
+
+.command-k-input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-16);
+  border-bottom: 1px solid var(--border);
+}
+
+.command-k-input {
+  flex: 1;
+  background: none;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: var(--foreground);
+}
+
+.command-k-list {
+  max-height: 20rem;
+  overflow-y: auto;
+  padding: var(--space-8);
+}
+
+.command-k-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+  padding: var(--space-12);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.command-k-item:hover,
+.command-k-item--selected {
+  background-color: var(--accent);
+}
+
+.command-k-item-icon {
+  flex-shrink: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--muted-foreground);
+}
+
+.command-k-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.command-k-item-title {
+  font-size: 0.875rem;
+  color: var(--foreground);
+  font-weight: 500;
+}
+
+.command-k-item-subtitle {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+}
+
+.command-k-item-shortcut {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  padding: var(--space-2) var(--space-6);
+  background-color: var(--muted);
+  border-radius: var(--radius-sm);
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+}

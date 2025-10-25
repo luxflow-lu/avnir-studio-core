@@ -27,8 +27,7 @@ export const CheckoutSteps = React.forwardRef<HTMLDivElement, CheckoutStepsProps
           "w-full",
           isHorizontal ? "flex items-center" : "flex flex-col space-y-4",
           className,
-        )}
-        {...props}
+        )} {...props}
       >
         {steps.map((step, index) => {
           const isLast = index === steps.length - 1;
@@ -43,7 +42,7 @@ export const CheckoutSteps = React.forwardRef<HTMLDivElement, CheckoutStepsProps
               <div
                 className={cx(
                   "flex items-center",
-                  canClick && "cursor-pointer group",
+                  canClick && "cursor-pointer",
                   isHorizontal ? "flex-col text-center" : "flex-row",
                 )}
                 onClick={canClick ? () => onStepClick(step.id) : undefined}
@@ -51,20 +50,20 @@ export const CheckoutSteps = React.forwardRef<HTMLDivElement, CheckoutStepsProps
                 {/* Step Circle */}
                 <div
                   className={cx(
-                    "flex items-center justify-center w-10 h-10 rounded-full border-2 transition-all",
+                    "flex items-center justify-center icon-lg rounded-full border-2 transition-all",
                     step.completed
-                      ? "bg-[var(--brand)] border-[var(--brand)] text-[var(--brand-on)]"
+                      ? "bg-brand border-brand text-[var(--brand-on)]"
                       : step.current
-                        ? "border-[var(--brand)] text-[var(--brand)] bg-[var(--brand)]/10"
+                        ? "border-brand text-brand bg-brand/10"
                         : step.disabled
-                          ? "border-white/20 text-[var(--text-muted)] bg-white/5"
-                          : "border-white/40 text-[var(--text-muted)] hover:border-white/60",
+                          ? "border-white/20 text-muted bg-white/5"
+                          : "border-white/40 text-muted hover:border-white/60",
                     canClick && "group-hover:scale-105",
                     isHorizontal ? "mb-2" : "mr-4",
                   )}
                 >
                   {step.completed ? (
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -87,8 +86,8 @@ export const CheckoutSteps = React.forwardRef<HTMLDivElement, CheckoutStepsProps
                         : step.completed
                           ? "text-white"
                           : step.disabled
-                            ? "text-[var(--text-muted)]"
-                            : "text-[var(--text-muted)]",
+                            ? "text-muted"
+                            : "text-muted",
                       canClick && "group-hover:text-white",
                     )}
                   >
@@ -99,8 +98,8 @@ export const CheckoutSteps = React.forwardRef<HTMLDivElement, CheckoutStepsProps
                       className={cx(
                         "text-xs mt-1 transition-colors",
                         step.current || step.completed
-                          ? "text-[var(--text-muted)]"
-                          : "text-[var(--text-muted)]/70",
+                          ? "text-muted"
+                          : "text-muted/70",
                       )}
                     >
                       {step.description}
@@ -115,7 +114,7 @@ export const CheckoutSteps = React.forwardRef<HTMLDivElement, CheckoutStepsProps
                   className={cx(
                     "transition-colors",
                     isHorizontal ? "flex-1 h-0.5 mx-4" : "w-0.5 h-8 ml-5 -mt-2 mb-2",
-                    step.completed ? "bg-[var(--brand)]" : "bg-white/20",
+                    step.completed ? "bg-brand" : "bg-white/20",
                   )}
                 />
               )}

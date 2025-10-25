@@ -42,10 +42,10 @@ export const Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>(
         <div key={item.id}>
           <div
             className={cx(
-              "flex items-center gap-3 px-3 py-2 rounded-[var(--radius-sm)] transition-colors cursor-pointer",
+              "flex-center gap-3 px-3 py-2-sm",
               item.active
-                ? "bg-[var(--brand)]/10 text-[var(--brand)]"
-                : "text-[var(--text-muted)] hover:text-white hover:bg-white/5",
+                ? "bg-brand/10 text-brand"
+                : "text-muted hover:text-white hover:bg-muted",
               level > 0 && "ml-6",
             )}
             onClick={hasChildren ? () => toggleExpanded(item.id) : undefined}
@@ -91,24 +91,23 @@ export const Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>(
       <div
         ref={ref}
         className={cx(
-          "flex flex-col bg-[var(--surface)] border-r border-white/10 transition-all duration-300",
+          "flex-col bg-surface-r-white/10 duration-300",
           collapsed ? "w-16" : "w-64",
           className,
-        )}
-        {...props}
+        )} {...props}
       >
-        {header && <div className="p-4 border-b border-white/10">{header}</div>}
+        {header && <div className="p-4-b-white/10">{header}</div>}
 
-        <div className="flex-1 p-4 space-y-2 overflow-y-auto">
+        <div className="flex-1 p-4 stack-2 overflow-y-auto">
           {items.map((item) => renderItem(item))}
         </div>
 
-        {footer && <div className="p-4 border-t border-white/10">{footer}</div>}
+        {footer && <div className="p-4-t-white/10">{footer}</div>}
 
         {onToggle && (
           <button
             onClick={onToggle}
-            className="absolute -right-3 top-6 bg-[var(--surface)] border border-white/10 rounded-full p-1 text-[var(--text-muted)] hover:text-white"
+            className="absolute -right-3 top-6 bg-surface-white/10-full p-1 text-muted hover:text-foreground"
           >
             <svg
               className={cx("w-4 h-4 transition-transform", collapsed && "rotate-180")}

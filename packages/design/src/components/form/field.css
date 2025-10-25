@@ -1,0 +1,41 @@
+/* Field Component */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.field-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.field-label--required::after {
+  content: "*";
+  color: var(--destructive);
+  margin-left: var(--space-4);
+}
+
+.field-help {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  line-height: 1.4;
+}
+
+.field-error {
+  font-size: 0.75rem;
+  color: var(--destructive);
+  line-height: 1.4;
+}
+
+.field--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.field--disabled .field-label {
+  cursor: not-allowed;
+}

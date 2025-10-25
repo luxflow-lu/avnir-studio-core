@@ -22,22 +22,21 @@ export const Stack = React.forwardRef<HTMLDivElement, StackProps>(
         direction === "row" ? "flex flex-row" : "flex flex-col",
         gaps[gap],
         align === "start"
-          ? "items-start"
+          ? "items flex-start"
           : align === "center"
             ? "items-center"
             : align === "end"
               ? "items-end"
               : "items-stretch",
         justify === "start"
-          ? "justify-start"
+          ? "justify flex-start"
           : justify === "center"
             ? "justify-center"
             : justify === "end"
               ? "justify-end"
               : "justify-between",
         className,
-      )}
-      {...props}
+      )} {...props}
     />
   ),
 );

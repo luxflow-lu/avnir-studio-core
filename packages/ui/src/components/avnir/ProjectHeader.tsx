@@ -24,10 +24,16 @@ const typeLabels: Record<ProjectType, string> = {
 };
 
 const typeColors: Record<ProjectType, string> = {
-  artiste: "bg-purple-500/15 text-purple-400",
-  beatmaker: "bg-blue-500/15 text-blue-400",
-  studio: "bg-green-500/15 text-green-400",
-  producteur: "bg-orange-500/15 text-orange-400",
+  artiste: "project-header-type--artiste",
+  beatmaker: "project-header-type--beatmaker",
+  studio: "project-header-type--studio",
+  producteur: "project-header-type--producteur",
+};
+
+const statusColors: Record<NonNullable<ProjectHeaderProps["status"]>, string> = {
+  draft: "project-header-status--draft",
+  active: "project-header-status--active",
+  archived: "project-header-status--archived",
 };
 
 export const ProjectHeader = React.forwardRef<HTMLDivElement, ProjectHeaderProps>(
@@ -37,7 +43,7 @@ export const ProjectHeader = React.forwardRef<HTMLDivElement, ProjectHeaderProps
       title,
       type,
       description,
-      status = "active",
+      status = "draft",
       lastModified,
       collaborators,
       onEdit,
@@ -46,111 +52,93 @@ export const ProjectHeader = React.forwardRef<HTMLDivElement, ProjectHeaderProps
       ...props
     },
     ref,
-  ) => (
-    <div
-      ref={ref}
-      className={cx("bg-[var(--surface)] rounded-[var(--radius-lg)] p-6", className)}
-      {...props}
-    >
-      <div className="flex items-start justify-between mb-4">
-        <div className="flex-1">
-          <div className="flex items-center gap-3 mb-2">
-            <Badge className={typeColors[type]}>{typeLabels[type]}</Badge>
-            {status === "draft" && <Badge variant="warning">Brouillon</Badge>}
-            {status === "archived" && <Badge>Archivé</Badge>}
+  ) => {
+    return (
+      <div
+        ref={ref}
+        className={cx("card-base", "project-header", className)} {...props}
+      >
+        {/* Header */}
+        <div className="project-header-content">
+          <div className="project-header-info">
+            <div className="project-header-title-row">
+              <h1 className="project-header-title">{title}</h1>
+              <Badge className={cx("project-header-badge", typeColors[type])}>{typeLabels[type]}</Badge>
+              {status && (
+                <Badge className={cx("project-header-badge", statusColors[status])}>
+                  {status === "draft" && "Brouillon"}
+                  {status === "active" && "Actif"}
+                  {status === "archived" && "Archivé"}
+                </Badge>
+              )}
+            </div>
+            {description && (
+              <p className="project-header-description">{description}</p>
+            )}
+            <div className="project-header-meta">
+              {lastModified && (
+                <span className="project-header-meta-item">Modifié le {lastModified.toLocaleDateString()}</span>
+              )}
+              {collaborators !== undefined && (
+                <span className="project-header-meta-item">{collaborators} collaborateur{collaborators > 1 ? "s" : ""}</span>
+              )}
+            </div>
           </div>
 
-          <h1 className="text-2xl font-bold text-white mb-2">{title}</h1>
-
-          {description && <p className="text-[var(--text-muted)] leading-relaxed">{description}</p>}
-        </div>
-
-        <div className="flex items-center gap-2">
-          {onEdit && (
-            <button
-              onClick={onEdit}
-              className="p-2 text-[var(--text-muted)] hover:text-white hover:bg-white/5 rounded-[var(--radius-sm)] transition-colors"
-              aria-label="Modifier le projet"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"
-                />
-              </svg>
-            </button>
-          )}
-
-          {onShare && (
-            <button
-              onClick={onShare}
-              className="p-2 text-[var(--text-muted)] hover:text-white hover:bg-white/5 rounded-[var(--radius-sm)] transition-colors"
-              aria-label="Partager le projet"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"
-                />
-              </svg>
-            </button>
-          )}
-
-          {onArchive && (
-            <button
-              onClick={onArchive}
-              className="p-2 text-[var(--text-muted)] hover:text-red-400 hover:bg-red-500/10 rounded-[var(--radius-sm)] transition-colors"
-              aria-label="Archiver le projet"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M5 8l4 4 4-4m6 5l-3 3-3-3"
-                />
-              </svg>
-            </button>
-          )}
+          {/* Actions */}
+          <div className="project-header-actions">
+            {onShare && (
+              <button
+                onClick={onShare}
+                className="project-header-action"
+                title="Partager"
+              >
+                <svg className="project-header-action-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"
+                  />
+                </svg>
+              </button>
+            )}
+            {onEdit && (
+              <button
+                onClick={onEdit}
+                className="project-header-action"
+                title="Modifier"
+              >
+                <svg className="project-header-action-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
+                  />
+                </svg>
+              </button>
+            )}
+            {onArchive && (
+              <button
+                onClick={onArchive}
+                className="project-header-action"
+                title="Archiver"
+              >
+                <svg className="project-header-action-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 8l4 4 4-4m0 5l-4 4-4-4"
+                  />
+                </svg>
+              </button>
+            )}
+          </div>
         </div>
       </div>
-
-      <div className="flex items-center gap-6 text-sm text-[var(--text-muted)]">
-        {lastModified && (
-          <div className="flex items-center gap-2">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-              />
-            </svg>
-            <span>Modifié le {lastModified.toLocaleDateString()}</span>
-          </div>
-        )}
-
-        {collaborators !== undefined && (
-          <div className="flex items-center gap-2">
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z"
-              />
-            </svg>
-            <span>
-              {collaborators} collaborateur{collaborators > 1 ? "s" : ""}
-            </span>
-          </div>
-        )}
-      </div>
-    </div>
-  ),
+    );
+  },
 );
 ProjectHeader.displayName = "ProjectHeader";

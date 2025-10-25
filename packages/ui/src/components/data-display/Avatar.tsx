@@ -39,8 +39,7 @@ export const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
           "avatar",
           sizes[size],
           className,
-        )}
-        {...props}
+        )} {...props}
       >
         {src && !imageError ? (
           <img

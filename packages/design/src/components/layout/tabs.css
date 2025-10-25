@@ -1,0 +1,94 @@
+/* Tabs Component */
+
+.tabs {
+  width: 100%;
+}
+
+.tabs-list {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background-color: var(--muted);
+  padding: var(--space-4);
+  color: var(--muted-foreground);
+}
+
+.tabs-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  border-radius: var(--radius-sm);
+  padding: var(--space-6) var(--space-12);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: var(--muted-foreground);
+}
+
+.tabs-trigger:hover {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.tabs-trigger:focus {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.tabs-trigger--active {
+  background-color: var(--background);
+  color: var(--foreground);
+  box-shadow: var(--shadow-sm);
+}
+
+.tabs-trigger:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.tabs-content {
+  margin-top: var(--space-8);
+  border-radius: var(--radius-md);
+}
+
+.tabs-content:focus {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+/* Tabs variants */
+.tabs-list--underline {
+  background-color: transparent;
+  border-bottom: 1px solid var(--border);
+  border-radius: 0;
+  padding: 0;
+}
+
+.tabs-list--underline .tabs-trigger {
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  padding-bottom: var(--space-8);
+}
+
+.tabs-list--underline .tabs-trigger--active {
+  background-color: transparent;
+  border-bottom-color: var(--primary);
+  color: var(--primary);
+  box-shadow: none;
+}
+
+/* Tabs sizes */
+.tabs-list--sm .tabs-trigger {
+  padding: var(--space-4) var(--space-8);
+  font-size: 0.75rem;
+}
+
+.tabs-list--lg .tabs-trigger {
+  padding: var(--space-8) var(--space-16);
+  font-size: 1rem;
+}

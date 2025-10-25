@@ -1,0 +1,225 @@
+/* MiniCart Component */
+
+.mini-cart {
+  position: relative;
+}
+
+.mini-cart-trigger {
+  position: relative;
+}
+
+.mini-cart-badge {
+  position: absolute;
+  top: -0.5rem;
+  right: -0.5rem;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--primary);
+  color: #0b0b0d;
+  border-radius: var(--radius-full);
+  padding: 0 var(--space-4);
+}
+
+.mini-cart-panel {
+  position: absolute;
+  top: calc(100% + var(--space-8));
+  right: 0;
+  width: 20rem;
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  z-index: 50;
+}
+
+.mini-cart-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-16);
+  border-bottom: 1px solid var(--border);
+}
+
+.mini-cart-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.mini-cart-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-4);
+  color: var(--muted-foreground);
+  transition: color 0.2s ease;
+}
+
+.mini-cart-close:hover {
+  color: var(--foreground);
+}
+
+.mini-cart-items {
+  max-height: 20rem;
+  overflow-y: auto;
+  padding: var(--space-16);
+}
+
+.mini-cart-item {
+  display: flex;
+  gap: var(--space-12);
+  padding-bottom: var(--space-16);
+  margin-bottom: var(--space-16);
+  border-bottom: 1px solid var(--border);
+}
+
+.mini-cart-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.mini-cart-item-image {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  background-color: var(--muted);
+  flex-shrink: 0;
+}
+
+.mini-cart-item-placeholder {
+  width: 3rem;
+  height: 3rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted-foreground);
+  flex-shrink: 0;
+}
+
+.mini-cart-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.mini-cart-item-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--foreground);
+  margin-bottom: var(--space-4);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mini-cart-item-variant {
+  font-size: 0.75rem;
+  color: var(--muted-foreground);
+  margin-bottom: var(--space-8);
+}
+
+.mini-cart-item-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mini-cart-quantity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.mini-cart-quantity-btn {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mini-cart-quantity-btn:hover {
+  border-color: var(--primary);
+  color: var(--foreground);
+}
+
+.mini-cart-quantity-value {
+  font-size: 0.875rem;
+  color: var(--foreground);
+  min-width: 2rem;
+  text-align: center;
+}
+
+.mini-cart-item-price {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.mini-cart-item-remove {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-4);
+  color: var(--destructive);
+  transition: opacity 0.2s ease;
+}
+
+.mini-cart-item-remove:hover {
+  opacity: 0.8;
+}
+
+.mini-cart-empty {
+  padding: var(--space-48) var(--space-24);
+  text-align: center;
+}
+
+.mini-cart-empty-icon {
+  width: 4rem;
+  height: 4rem;
+  margin: 0 auto var(--space-16);
+  color: var(--muted-foreground);
+}
+
+.mini-cart-empty-text {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.mini-cart-footer {
+  padding: var(--space-16);
+  border-top: 1px solid var(--border);
+}
+
+.mini-cart-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-16);
+}
+
+.mini-cart-total-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--foreground);
+}
+
+.mini-cart-total-amount {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--foreground);
+}

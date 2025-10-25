@@ -9,36 +9,24 @@ export type StatsProps = {
   className?: string;
 } & React.HTMLAttributes<HTMLElement>;
 
-const colMap: Record<NonNullable<StatsProps["columns"]>, string> = {
-  2: "sm:grid-cols-2",
-  3: "sm:grid-cols-3",
-  4: "sm:grid-cols-2 md:grid-cols-4",
-};
-
 export const Stats = React.forwardRef<HTMLElement, StatsProps>(
   ({ title, items, columns = 4, className, ...props }, ref) => {
     return (
       <section
         ref={ref}
-        className={cx("w-full mx-auto px-4 md:px-6 py-16 md:py-24", className)}
-        {...props}
+        className={cx("stats-section", `stats-section--${columns}`, className)} {...props}
       >
-        <div className="mx-auto max-w-7xl">
+        <div className="stats-container">
           {title && (
-            <h2 className="mb-8 text-center text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
-              {title}
-            </h2>
+            <h2 className="stats-title">{title}</h2>
           )}
-          <div className={cx("grid grid-cols-2 gap-6", colMap[columns])}>
+          <div className={cx("stats-grid", `stats-grid--${columns}`)}>
             {items.map((s, i) => (
-              <div
-                key={i}
-                className="rounded-[var(--radius)] border border-border bg-card text-card-foreground p-6 text-center"
-              >
-                <div className="text-3xl md:text-4xl font-semibold tracking-tight">{s.value}</div>
-                <div className="mt-1 text-sm text-muted-foreground">{s.label}</div>
+              <div key={i} className="stat-card">
+                <div className="stat-value">{s.value}</div>
+                <div className="stat-label">{s.label}</div>
                 {s.sublabel && (
-                  <div className="mt-1 text-xs text-muted-foreground">{s.sublabel}</div>
+                  <div className="stat-sublabel">{s.sublabel}</div>
                 )}
               </div>
             ))}

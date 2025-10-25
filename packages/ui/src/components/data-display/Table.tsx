@@ -23,34 +23,33 @@ export const Table = React.forwardRef<HTMLDivElement, TableProps>(
       <div
         ref={ref}
         className={cx(
-          "overflow-hidden rounded-[var(--radius-lg)] border border-white/10",
+          "overflow-hidden-lg-white/10",
           className,
-        )}
-        {...props}
+        )} {...props}
       >
         <div className="overflow-x-auto">
           <table className="w-full">
-            <thead className="bg-[var(--surface)]">
+            <thead className="bg-surface">
               <tr>
                 {columns.map((column) => (
                   <th
                     key={column.key}
                     className={cx(
-                      "px-4 py-3 text-left text-sm font-medium text-white",
-                      column.sortable && "cursor-pointer hover:bg-white/5",
+                      "px-4 py-3 text-sm font-medium text-white",
+                      column.sortable && "cursor-pointer hover:bg-muted",
                     )}
                     onClick={column.sortable ? () => onSort?.(column.key) : undefined}
                   >
-                    <div className="flex items-center gap-2">
+                    <div className="flex-row gap-2">
                       {column.title}
                       {column.sortable && (
-                        <div className="flex flex-col">
+                        <div className="flex-col">
                           <svg
                             className={cx(
                               "w-3 h-3",
                               sortBy === column.key && sortOrder === "asc"
-                                ? "text-[var(--brand)]"
-                                : "text-[var(--text-muted)]",
+                                ? "text-brand"
+                                : "text-muted",
                             )}
                             fill="currentColor"
                             viewBox="0 0 20 20"
@@ -64,15 +63,15 @@ export const Table = React.forwardRef<HTMLDivElement, TableProps>(
                 ))}
               </tr>
             </thead>
-            <tbody className="bg-[var(--bg)] divide-y divide-white/10">
+            <tbody className="bg-muted divide-y divide-white/10">
               {loading ? (
                 <tr>
                   <td
                     colSpan={columns.length}
-                    className="px-4 py-8 text-center text-[var(--text-muted)]"
+                    className="px-4 py-8 text-muted"
                   >
-                    <div className="flex items-center justify-center gap-2">
-                      <div className="w-4 h-4 border-2 border-[var(--brand)] border-t-transparent rounded-full animate-spin" />
+                    <div className="flex-center gap-2">
+                      <div className="spinner" />
                       Chargement...
                     </div>
                   </td>
@@ -81,16 +80,16 @@ export const Table = React.forwardRef<HTMLDivElement, TableProps>(
                 <tr>
                   <td
                     colSpan={columns.length}
-                    className="px-4 py-8 text-center text-[var(--text-muted)]"
+                    className="px-4 py-8 text-muted"
                   >
                     Aucune donnée disponible
                   </td>
                 </tr>
               ) : (
                 data.map((row, index) => (
-                  <tr key={index} className="hover:bg-white/5">
+                  <tr key={index} className="hover:bg-muted">
                     {columns.map((column) => (
-                      <td key={column.key} className="px-4 py-3 text-sm text-white">
+                      <td key={column.key} className="px-4 py-3 text-sm text-foreground">
                         {column.render ? column.render(row[column.key], row) : row[column.key]}
                       </td>
                     ))}

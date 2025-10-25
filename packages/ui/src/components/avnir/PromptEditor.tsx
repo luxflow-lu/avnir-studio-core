@@ -83,103 +83,56 @@ export const PromptEditor = React.forwardRef<HTMLDivElement, PromptEditorProps>(
     const charCount = value.length;
 
     return (
-      <div ref={ref} className={cx("space-y-4", className)} {...props}>
-        {/* Toolbar */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <Button variant="ghost" size="sm" onClick={() => setShowPresets(!showPresets)}>
-              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
-                />
+      <div ref={ref} className={cx("prompt-editor", className)} {...props}>
+        <div className="prompt-editor-toolbar">
+          <div className="prompt-editor-actions">
+            <Button variant="outline" size="sm" onClick={() => setShowPresets(!showPresets)} className="prompt-editor-button">
+              <svg className="prompt-editor-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14-4H3m16 8H7m14 4H3" />
               </svg>
-              Presets
+              Presets ({presets.length})
             </Button>
-
-            <Button variant="ghost" size="sm" onClick={() => setShowHistory(!showHistory)}>
-              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                />
+            <Button variant="outline" size="sm" onClick={() => setShowHistory(!showHistory)} className="prompt-editor-button">
+              <svg className="prompt-editor-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
-              Historique
+              Historique ({history.length})
             </Button>
-
-            {value.trim() && (
-              <Button variant="ghost" size="sm" onClick={() => setShowSavePreset(true)}>
-                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3-3m0 0l-3 3m3-3v12"
-                  />
+            {onSavePreset && value.trim() && (
+              <Button variant="outline" size="sm" onClick={() => setShowSavePreset(!showSavePreset)} className="prompt-editor-button">
+                <svg className="prompt-editor-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3-3m0 0l-3 3m3-3v12" />
                 </svg>
-                Sauver
+                Sauvegarder
               </Button>
             )}
           </div>
-
-          <div className="text-xs text-[var(--text-muted)]">
+          <div className="prompt-editor-stats">
             {wordCount} mots • {charCount}/{maxLength} caractères
           </div>
         </div>
 
         {/* Presets Panel */}
-        {showPresets && (
-          <div className="bg-[var(--surface)] rounded-[var(--radius-lg)] p-4 space-y-4">
-            <div className="flex items-center justify-between">
-              <h3 className="text-sm font-medium text-white">Presets disponibles</h3>
-              <button
-                onClick={() => setShowPresets(false)}
-                className="text-[var(--text-muted)] hover:text-white"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-
+        {showPresets && presets.length > 0 && (
+          <div className="card-base prompt-editor-presets">
+            <h3 className="prompt-editor-panel-title">Presets disponibles</h3>
             {presetCategories.map((category) => (
-              <div key={category} className="space-y-2">
-                <h4 className="text-xs font-medium text-[var(--text-muted)] uppercase tracking-wide">
-                  {category}
-                </h4>
-                <div className="space-y-2">
-                  {presets
-                    .filter((p) => p.category === category)
-                    .map((preset) => (
-                      <button
-                        key={preset.id}
-                        onClick={() => handlePresetSelect(preset)}
-                        className="w-full text-left p-3 rounded-[var(--radius-sm)] hover:bg-white/5 transition-colors"
-                      >
-                        <div className="flex items-start justify-between mb-2">
-                          <h5 className="text-sm font-medium text-white">{preset.name}</h5>
-                          <div className="flex flex-wrap gap-1">
-                            {preset.tags.slice(0, 2).map((tag) => (
-                              <Badge key={tag} className="text-xs">
-                                {tag}
-                              </Badge>
-                            ))}
-                          </div>
+              <div key={category} className="prompt-editor-category">
+                <h4 className="prompt-editor-category-title">{category}</h4>
+                <div className="prompt-editor-preset-list">
+                  {presets.filter((preset) => preset.category === category).map((preset) => (
+                    <button key={preset.id} onClick={() => handlePresetSelect(preset)} className="prompt-editor-preset">
+                      <div className="prompt-editor-preset-header">
+                        <h5 className="prompt-editor-preset-name">{preset.name}</h5>
+                        <div className="prompt-editor-preset-tags">
+                          {preset.tags.slice(0, 2).map((tag) => (
+                            <Badge key={tag} className="prompt-editor-tag">{tag}</Badge>
+                          ))}
                         </div>
-                        <p className="text-xs text-[var(--text-muted)] line-clamp-2">
-                          {preset.prompt}
-                        </p>
-                      </button>
-                    ))}
+                      </div>
+                      <p className="prompt-editor-preset-text">{preset.prompt}</p>
+                    </button>
+                  ))}
                 </div>
               </div>
             ))}
@@ -187,100 +140,84 @@ export const PromptEditor = React.forwardRef<HTMLDivElement, PromptEditorProps>(
         )}
 
         {/* History Panel */}
-        {showHistory && (
-          <div className="bg-[var(--surface)] rounded-[var(--radius-lg)] p-4 space-y-4">
-            <div className="flex items-center justify-between">
-              <h3 className="text-sm font-medium text-white">Historique récent</h3>
-              <button
-                onClick={() => setShowHistory(false)}
-                className="text-[var(--text-muted)] hover:text-white"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M6 18L18 6M6 6l12 12"
-                  />
-                </svg>
-              </button>
-            </div>
-
-            <div className="space-y-2 max-h-60 overflow-y-auto">
-              {history.length === 0 ? (
-                <p className="text-sm text-[var(--text-muted)] text-center py-4">
-                  Aucun historique disponible
-                </p>
-              ) : (
-                history.map((item) => (
-                  <button
-                    key={item.id}
-                    onClick={() => handleHistorySelect(item)}
-                    className="w-full text-left p-3 rounded-[var(--radius-sm)] hover:bg-white/5 transition-colors"
-                  >
-                    <div className="flex items-center justify-between mb-1">
-                      <span className="text-xs text-[var(--text-muted)]">
-                        {item.timestamp.toLocaleDateString()} {item.timestamp.toLocaleTimeString()}
-                      </span>
-                      {item.result && (
-                        <Badge className="text-xs bg-green-500/15 text-green-400">Généré</Badge>
-                      )}
-                    </div>
-                    <p className="text-sm text-white line-clamp-2">{item.prompt}</p>
-                  </button>
-                ))
-              )}
+        {showHistory && history.length > 0 && (
+          <div className="card-base prompt-editor-history">
+            <h3 className="prompt-editor-panel-title">Historique récent</h3>
+            <div className="prompt-editor-history-list">
+              {history.slice(0, 10).map((item) => (
+                <button key={item.id} onClick={() => handleHistorySelect(item)} className="prompt-editor-history-item">
+                  <div className="prompt-editor-history-header">
+                    <span className="prompt-editor-history-date">
+                      {item.timestamp.toLocaleDateString()} à {item.timestamp.toLocaleTimeString()}
+                    </span>
+                    {item.result && <Badge className="prompt-editor-history-badge">Généré</Badge>}
+                  </div>
+                  <p className="prompt-editor-history-text">{item.prompt}</p>
+                </button>
+              ))}
             </div>
           </div>
         )}
 
         {/* Save Preset Modal */}
         {showSavePreset && (
-          <div className="bg-[var(--surface)] rounded-[var(--radius-lg)] p-4 space-y-4">
-            <h3 className="text-sm font-medium text-white">Sauvegarder comme preset</h3>
-            <input
-              type="text"
-              placeholder="Nom du preset..."
-              value={savePresetName}
-              onChange={(e) => setSavePresetName(e.target.value)}
-              className="w-full h-10 rounded-[var(--radius-sm)] bg-[color:var(--bg)/0.6] border border-white/10 px-3 placeholder:opacity-60 text-white focus:outline-none focus:ring-2 focus:ring-[color:var(--brand)/0.4]"
-            />
-            <div className="flex gap-2">
-              <Button variant="outline" size="sm" onClick={() => setShowSavePreset(false)}>
-                Annuler
-              </Button>
-              <Button size="sm" onClick={handleSavePreset} disabled={!savePresetName.trim()}>
-                Sauvegarder
-              </Button>
+          <div className="card-base prompt-editor-save-modal">
+            <h3 className="prompt-editor-save-title">Sauvegarder comme preset</h3>
+            <div className="prompt-editor-save-form">
+              <input
+                type="text"
+                value={savePresetName}
+                onChange={(e) => setSavePresetName(e.target.value)}
+                placeholder="Nom du preset..."
+                className="prompt-editor-save-input"
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") handleSavePreset();
+                  else if (e.key === "Escape") setShowSavePreset(false);
+                }}
+              />
+              <Button variant="solid" size="sm" onClick={handleSavePreset}>Sauvegarder</Button>
+              <Button variant="outline" size="sm" onClick={() => setShowSavePreset(false)}>Annuler</Button>
             </div>
           </div>
         )}
 
-        {/* Main Editor */}
-        <div className="space-y-2">
+        <div className="prompt-editor-main">
           <Textarea
             value={value}
             onChange={(e) => onChange(e.target.value)}
             placeholder={placeholder}
+            className="prompt-editor-textarea"
             maxLength={maxLength}
-            rows={8}
-            className="resize-none"
           />
+          {onGenerate && (
+            <div className="prompt-editor-generate">
+              <Button
+                variant="solid"
+                size="sm"
+                onClick={() => onGenerate(value)}
+                disabled={loading || !value.trim()}
+                className="prompt-editor-generate-button"
+              >
+                {loading ? (
+                  <>
+                    <svg className="prompt-editor-spinner" fill="none" viewBox="0 0 24 24">
+                      <circle className="prompt-editor-spinner-track" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                      <path className="prompt-editor-spinner-fill" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                    </svg>
+                    Génération...
+                  </>
+                ) : (
+                  <>
+                    <svg className="prompt-editor-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    Générer
+                  </>
+                )}
+              </Button>
+            </div>
+          )}
         </div>
-
-        {/* Generate Button */}
-        {onGenerate && (
-          <div className="flex justify-end">
-            <Button
-              onClick={() => onGenerate(value)}
-              loading={loading}
-              disabled={!value.trim() || loading}
-              className="min-w-[120px]"
-            >
-              {loading ? "Génération..." : "Générer"}
-            </Button>
-          </div>
-        )}
       </div>
     );
   },

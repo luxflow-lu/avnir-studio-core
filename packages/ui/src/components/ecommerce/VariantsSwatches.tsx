@@ -41,17 +41,17 @@ export const VariantsSwatches = React.forwardRef<HTMLDivElement, VariantsSwatche
               disabled={!variant.available}
               className={cx(
                 baseClasses,
-                "w-8 h-8 rounded-full border-2 relative",
+                "w-8 h-8-full-2",
                 isSelected
-                  ? "border-[var(--brand)] ring-2 ring-[var(--brand)]/20"
-                  : "border-white/20",
+                  ? "border-brand ring-2 ring-[var(--brand)]/20"
+                  : "border-muted",
                 !variant.available && "opacity-50 cursor-not-allowed",
               )}
               style={{ backgroundColor: variant.color }}
               title={`${variant.name}${!variant.available ? " (Out of stock)" : ""}`}
             >
               {!variant.available && (
-                <div className="absolute inset-0 flex items-center justify-center">
+                <div className="absolute inset-0-center">
                   <div className="w-6 h-0.5 bg-red-400 rotate-45"></div>
                 </div>
               )}
@@ -66,10 +66,10 @@ export const VariantsSwatches = React.forwardRef<HTMLDivElement, VariantsSwatche
               disabled={!variant.available}
               className={cx(
                 baseClasses,
-                "px-3 py-2 text-sm font-medium rounded-[var(--radius-sm)] border",
+                "px-3 py-2 text-sm font-medium-sm",
                 isSelected
-                  ? "border-[var(--brand)] bg-[var(--brand)]/10 text-[var(--brand)]"
-                  : "border-white/20 text-white hover:border-white/40",
+                  ? "border-brand bg-brand/10 text-brand"
+                  : "border-muted text-white hover:border-white/40",
                 !variant.available && "opacity-50 cursor-not-allowed line-through",
               )}
             >
@@ -85,21 +85,21 @@ export const VariantsSwatches = React.forwardRef<HTMLDivElement, VariantsSwatche
               disabled={!variant.available}
               className={cx(
                 baseClasses,
-                "relative overflow-hidden rounded-[var(--radius-sm)] border-2",
-                isSelected ? "border-[var(--brand)]" : "border-white/20",
+                "relative overflow-hidden-sm-2",
+                isSelected ? "border-brand" : "border-muted",
                 !variant.available && "opacity-50 cursor-not-allowed",
               )}
             >
               {variant.image ? (
-                <img src={variant.image} alt={variant.name} className="w-16 h-16 object-cover" />
+                <img src={variant.image} alt={variant.name} className="icon-xl object-cover" />
               ) : (
-                <div className="w-16 h-16 bg-white/5 flex items-center justify-center text-xs text-[var(--text-muted)]">
+                <div className="icon-xl bg-muted flex-center text-xs text-muted">
                   {variant.name}
                 </div>
               )}
               {!variant.available && (
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                  <span className="text-xs text-white font-medium">Out</span>
+                <div className="absolute inset-0 bg-overlay-center">
+                  <span className="text-xs text-foreground font-medium">Out</span>
                 </div>
               )}
             </button>
@@ -114,10 +114,10 @@ export const VariantsSwatches = React.forwardRef<HTMLDivElement, VariantsSwatche
               disabled={!variant.available}
               className={cx(
                 baseClasses,
-                "px-4 py-2 text-sm font-medium rounded-[var(--radius-sm)] border",
+                "px-4 py-2 text-sm font-medium-sm",
                 isSelected
-                  ? "border-[var(--brand)] bg-[var(--brand)]/10 text-[var(--brand)]"
-                  : "border-white/20 text-white hover:border-white/40",
+                  ? "border-brand bg-brand/10 text-brand"
+                  : "border-muted text-white hover:border-white/40",
                 !variant.available && "opacity-50 cursor-not-allowed",
               )}
             >
@@ -134,21 +134,21 @@ export const VariantsSwatches = React.forwardRef<HTMLDivElement, VariantsSwatche
           const selectedVariant = group.variants.find((v) => v.id === selectedVariants[group.id]);
 
           return (
-            <div key={group.id} className="space-y-3">
-              <div className="flex items-center justify-between">
-                <h3 className="text-sm font-medium text-white">
+            <div key={group.id} className="stack-3">
+              <div className="flex-between">
+                <h3 className="text-sm font-medium text-foreground">
                   {group.name}
-                  {group.required && <span className="text-red-400 ml-1">*</span>}
+                  {group.required && <span className="text-destructive ml-1">*</span>}
                 </h3>
                 {selectedVariant && (
-                  <span className="text-sm text-[var(--text-muted)]">
+                  <span className="text-sm text-muted">
                     {selectedVariant.name}
                     {selectedVariant.price && ` (+€${selectedVariant.price})`}
                   </span>
                 )}
               </div>
 
-              <div className={cx("flex flex-wrap gap-2", group.type === "color" && "gap-3")}>
+              <div className={cx("flex-wrap gap-2", group.type === "color" && "gap-3")}>
                 {group.variants.map((variant) => renderVariant(group, variant))}
               </div>
             </div>

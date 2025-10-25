@@ -27,39 +27,36 @@ export const PricingTable = React.forwardRef<HTMLDivElement, PricingTableProps>(
   ({ className, plans, annual = false, ...props }, ref) => (
     <div
       ref={ref}
-      className={cx("grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 overflow-visible", className)}
-      {...props}
+      className={cx("pricing-table", className)} {...props}
     >
       {plans.map((plan) => (
         <div
           key={plan.id}
           className={cx(
-            "relative bg-[var(--surface)] rounded-[var(--radius-lg)] p-6 shadow-md transition-all",
-            plan.popular && "ring-2 ring-[var(--brand)]",
+            "pricing-card",
+            plan.popular ? "pricing-card--popular" : "",
           )}
         >
           {plan.popular && (
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-              <span className="px-2 py-1 rounded-full bg-muted text-foreground/80 text-[11px] font-medium border border-border shadow-sm">
-                Most Popular
-              </span>
+            <div className="pricing-badge">
+              <span className="pricing-badge-text">Most Popular</span>
             </div>
           )}
-          <div className="text-center mb-6">
-            <h3 className="text-lg font-semibold text-white mb-2">{plan.name}</h3>
+          <div className="pricing-header">
+            <h3 className="pricing-name">{plan.name}</h3>
             {plan.description && (
-              <p className="text-[var(--text-muted)] text-sm mb-4">{plan.description}</p>
+              <p className="pricing-description">{plan.description}</p>
             )}
-            <div className="mb-2">
-              <span className="text-3xl font-bold text-white">{plan.price}</span>
-              {plan.period && <span className="text-[var(--text-muted)] ml-1">{plan.period}</span>}
+            <div className="pricing-price">
+              <span className="pricing-amount">{plan.price}</span>
+              {plan.period && <span className="pricing-period">{plan.period}</span>}
             </div>
           </div>
-          <ul className="space-y-3 mb-6">
+          <ul className="pricing-features">
             {plan.features.map((feature, index) => (
-              <li key={index} className="flex items-start gap-2 text-sm">
+              <li key={index} className="pricing-feature">
                 <svg
-                  className="w-4 h-4 text-[var(--brand)] mt-0.5 flex-shrink-0"
+                  className="pricing-feature-icon"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -69,12 +66,12 @@ export const PricingTable = React.forwardRef<HTMLDivElement, PricingTableProps>(
                     clipRule="evenodd"
                   />
                 </svg>
-                <span className="text-[var(--text-muted)]">{feature}</span>
+                <span className="pricing-feature-text">{feature}</span>
               </li>
             ))}
           </ul>
           <Button
-            className="w-full mt-4"
+            className="pricing-cta"
             variant={plan.popular ? "solid" : "outline"}
             onClick={plan.cta.onClick}
           >

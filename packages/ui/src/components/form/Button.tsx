@@ -42,8 +42,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     <button
       ref={ref}
       className={cx(base, sizes[size], variants[variant], className)}
-      aria-busy={loading || undefined}
-      {...props}
+      aria-busy={loading || undefined} {...props}
     >
       {leftIcon && (
         <span className="btn-icon-left" aria-hidden>

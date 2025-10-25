@@ -1,0 +1,103 @@
+/* IconButton Component */
+
+.icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  flex-shrink: 0;
+  user-select: none;
+}
+
+.icon-btn:focus {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.icon-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.icon-btn[aria-busy="true"] {
+  position: relative;
+}
+
+/* IconButton sizes */
+.icon-btn--sm {
+  width: 2rem;
+  height: 2rem;
+  font-size: 0.875rem;
+}
+
+.icon-btn--md {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 1rem;
+}
+
+.icon-btn--lg {
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.125rem;
+}
+
+/* IconButton variants */
+.icon-btn--solid {
+  background-color: var(--primary);
+  color: #0b0b0d;
+  box-shadow: var(--shadow-sm);
+}
+
+.icon-btn--solid:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.icon-btn--solid:active:not(:disabled) {
+  opacity: 0.8;
+}
+
+.icon-btn--outline {
+  background-color: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+
+.icon-btn--outline:hover:not(:disabled) {
+  background-color: var(--primary);
+  color: #0b0b0d;
+}
+
+.icon-btn--outline:active:not(:disabled) {
+  opacity: 0.8;
+}
+
+.icon-btn--ghost {
+  background-color: transparent;
+  color: var(--foreground);
+}
+
+.icon-btn--ghost:hover:not(:disabled) {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.icon-btn--ghost:active:not(:disabled) {
+  background-color: var(--muted);
+}
+
+/* Loading spinner in icon button */
+.icon-btn[aria-busy="true"] .icon-btn-spinner {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: var(--radius-full);
+  animation: spin 1s linear infinite;
+}

@@ -1,0 +1,192 @@
+/* CreditBalance Component */
+.credit-balance--sm {
+  padding: var(--space-12);
+}
+
+.credit-balance--lg {
+  padding: var(--space-24);
+}
+
+.credit-balance--critical {
+  border-color: rgba(239, 68, 68, 0.5);
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.credit-balance--low {
+  border-color: rgba(245, 158, 11, 0.5);
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.credit-balance-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-12);
+}
+
+.credit-balance-title {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+}
+
+.credit-balance-indicator {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+}
+
+.credit-balance-indicator--good {
+  background: #4ade80;
+}
+
+.credit-balance-indicator--low {
+  background: #fbbf24;
+}
+
+.credit-balance-indicator--critical {
+  background: #f87171;
+}
+
+.credit-balance-heading {
+  font-weight: 500;
+  color: var(--titles);
+  margin: 0;
+}
+
+.credit-balance--sm .credit-balance-heading {
+  font-size: 0.875rem;
+}
+
+.credit-balance--lg .credit-balance-heading {
+  font-size: 1.125rem;
+}
+
+.credit-balance-buy-button {
+  font-size: 0.75rem;
+}
+
+.credit-balance-display {
+  margin-bottom: var(--space-16);
+}
+
+.credit-balance-numbers {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-8);
+  margin-bottom: var(--space-8);
+}
+
+.credit-balance-current {
+  font-weight: 700;
+}
+
+.credit-balance--sm .credit-balance-current {
+  font-size: 1.25rem;
+}
+
+.credit-balance--md .credit-balance-current {
+  font-size: 1.5rem;
+}
+
+.credit-balance--lg .credit-balance-current {
+  font-size: 1.875rem;
+}
+
+.credit-balance-current--good {
+  color: var(--titles);
+}
+
+.credit-balance-current--low {
+  color: #fbbf24;
+}
+
+.credit-balance-current--critical {
+  color: #f87171;
+}
+
+.credit-balance-total {
+  color: var(--muted);
+}
+
+.credit-balance--sm .credit-balance-total {
+  font-size: 0.75rem;
+}
+
+.credit-balance--md .credit-balance-total {
+  font-size: 0.875rem;
+}
+
+.credit-balance--lg .credit-balance-total {
+  font-size: 0.875rem;
+}
+
+.credit-balance-progress {
+  height: 0.5rem;
+}
+
+.credit-balance--sm .credit-balance-progress {
+  height: 0.375rem;
+}
+
+.credit-balance--lg .credit-balance-progress {
+  height: 0.75rem;
+}
+
+.credit-balance-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.credit-balance-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--muted);
+}
+
+.credit-balance--sm .credit-balance-row {
+  font-size: 0.75rem;
+}
+
+.credit-balance--md .credit-balance-row {
+  font-size: 0.875rem;
+}
+
+.credit-balance--lg .credit-balance-row {
+  font-size: 0.875rem;
+}
+
+.credit-balance-alert {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  padding: var(--space-8);
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: var(--radius-sm);
+}
+
+.credit-balance--sm .credit-balance-alert {
+  font-size: 0.75rem;
+}
+
+.credit-balance--md .credit-balance-alert {
+  font-size: 0.875rem;
+}
+
+.credit-balance--lg .credit-balance-alert {
+  font-size: 0.875rem;
+}
+
+.credit-balance-alert-icon {
+  width: 1rem;
+  height: 1rem;
+  color: #f87171;
+  flex-shrink: 0;
+}
+
+.credit-balance-alert-text {
+  color: #f87171;
+}

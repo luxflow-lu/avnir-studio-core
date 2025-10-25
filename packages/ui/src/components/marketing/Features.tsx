@@ -17,13 +17,12 @@ const colMap: Record<NonNullable<FeaturesProps["columns"]>, string> = {
   4: "features-grid--4",
 };
 
-export const FeatureGrid = React.forwardRef<HTMLElement, FeaturesProps>(
+export const Features = React.forwardRef<HTMLElement, FeaturesProps>(
   ({ title, subtitle, items, columns = 3, className, ...props }, ref) => {
     return (
       <section
         ref={ref}
-        className={clsx("features-section", className)}
-        {...props}
+        className={clsx("features-section", className)} {...props}
       >
         <div className="features-container">
           <SectionHeader title={title} subtitle={subtitle} />
@@ -52,4 +51,4 @@ export const FeatureGrid = React.forwardRef<HTMLElement, FeaturesProps>(
     );
   },
 );
-FeatureGrid.displayName = "FeatureGrid";
+Features.displayName = "Features";

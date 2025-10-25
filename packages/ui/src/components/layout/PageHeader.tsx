@@ -13,8 +13,7 @@ export const PageHeader = React.forwardRef<HTMLElement, PageHeaderProps>(
     return (
       <section
         ref={ref}
-        className={cx("page-header", `page-header--${align}`, className)}
-        {...props}
+        className={cx("page-header", `page-header--${align}`, className)} {...props}
       >
         <div className="container">
           <div className="page-header-content">

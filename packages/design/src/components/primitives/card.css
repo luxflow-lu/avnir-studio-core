@@ -1,0 +1,108 @@
+/* Card Component */
+
+.card {
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background-color: var(--card);
+  color: var(--card-foreground);
+  box-shadow: var(--shadow-sm);
+  transition: all 0.2s ease;
+}
+
+.card-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  padding: var(--space-24);
+  padding-bottom: 0;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.025em;
+  color: var(--card-foreground);
+}
+
+.card-description {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  line-height: 1.5;
+}
+
+.card-content {
+  padding: var(--space-24);
+  padding-top: 0;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  padding: var(--space-24);
+  padding-top: 0;
+}
+
+/* Card variants */
+.card--elevated {
+  box-shadow: var(--shadow-md);
+}
+
+.card--elevated:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.card--outline {
+  border: 2px solid var(--border);
+  box-shadow: none;
+}
+
+.card--ghost {
+  border: none;
+  box-shadow: none;
+  background-color: transparent;
+}
+
+/* Card sizes */
+.card--sm .card-header,
+.card--sm .card-content,
+.card--sm .card-footer {
+  padding: var(--space-16);
+}
+
+.card--sm .card-content {
+  padding-top: 0;
+}
+
+.card--sm .card-footer {
+  padding-top: 0;
+}
+
+.card--lg .card-header,
+.card--lg .card-content,
+.card--lg .card-footer {
+  padding: var(--space-32);
+}
+
+.card--lg .card-content {
+  padding-top: 0;
+}
+
+.card--lg .card-footer {
+  padding-top: 0;
+}
+
+/* Interactive card */
+.card--interactive {
+  cursor: pointer;
+}
+
+.card--interactive:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-1px);
+}
+
+.card--interactive:active {
+  transform: translateY(0);
+}

@@ -1,0 +1,83 @@
+/* Skeleton Component */
+
+.skeleton {
+  display: inline-block;
+  height: 1rem;
+  background: linear-gradient(
+    110deg,
+    var(--muted) 8%,
+    var(--muted-foreground) 18%,
+    var(--muted) 33%
+  );
+  border-radius: var(--radius-sm);
+  background-size: 200% 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
+
+/* Skeleton variants */
+.skeleton--text {
+  height: 0.875rem;
+  width: 100%;
+}
+
+.skeleton--title {
+  height: 1.25rem;
+  width: 75%;
+}
+
+.skeleton--avatar {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: var(--radius-full);
+}
+
+.skeleton--button {
+  height: 2.5rem;
+  width: 6rem;
+  border-radius: var(--radius-md);
+}
+
+.skeleton--card {
+  height: 8rem;
+  width: 100%;
+  border-radius: var(--radius-lg);
+}
+
+.skeleton--circle {
+  border-radius: var(--radius-full);
+}
+
+.skeleton--rectangle {
+  border-radius: var(--radius-sm);
+}
+
+/* Skeleton sizes */
+.skeleton--xs {
+  height: 0.75rem;
+}
+
+.skeleton--sm {
+  height: 1rem;
+}
+
+.skeleton--md {
+  height: 1.25rem;
+}
+
+.skeleton--lg {
+  height: 1.5rem;
+}
+
+.skeleton--xl {
+  height: 2rem;
+}
+
+/* Skeleton animation */
+@keyframes skeleton-loading {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: calc(200% + 200px) 0;
+  }
+}

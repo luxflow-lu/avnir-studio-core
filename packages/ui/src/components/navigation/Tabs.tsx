@@ -40,8 +40,8 @@ export const Tabs = React.forwardRef<HTMLDivElement, TabsProps>(
                   "py-2 px-1 border-b-2 font-medium text-sm transition-colors",
                   "focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]",
                   activeTab === tab.id
-                    ? "border-[var(--brand)] text-[var(--brand)]"
-                    : "border-transparent text-[var(--text-muted)] hover:text-white hover:border-white/20",
+                    ? "border-brand text-brand"
+                    : "border-transparent text-muted hover:text-white hover:border-white/20",
                   tab.disabled && "opacity-50 cursor-not-allowed",
                 )}
                 disabled={tab.disabled}

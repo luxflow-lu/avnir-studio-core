@@ -52,9 +52,9 @@ export const FacetedSearch = React.forwardRef<HTMLDivElement, FacetedSearchProps
       switch (filter.type) {
         case "checkbox":
           return (
-            <div className="space-y-2">
+            <div className="faceted-search-facet-options">
               {filter.options?.map((option) => (
-                <div key={option.value} className="flex items-center justify-between">
+                <div key={option.value} className="faceted-search-option">
                   <Checkbox
                     label={option.label}
                     checked={activeFilters.some(
@@ -69,7 +69,7 @@ export const FacetedSearch = React.forwardRef<HTMLDivElement, FacetedSearchProps
                     }}
                   />
                   {option.count !== undefined && (
-                    <span className="text-xs text-[var(--text-muted)]">({option.count})</span>
+                    <span className="faceted-search-checkbox-option-count">({option.count})</span>
                   )}
                 </div>
               ))}
@@ -78,24 +78,24 @@ export const FacetedSearch = React.forwardRef<HTMLDivElement, FacetedSearchProps
 
         case "range":
           return (
-            <div className="space-y-3">
-              <div className="flex gap-2">
+            <div className="faceted-search-range">
+              <div className="faceted-search-range-values">
                 <Input
                   type="number"
                   placeholder="Min"
                   min={filter.min}
                   max={filter.max}
-                  className="flex-1"
+                  className="faceted-search-range-input"
                 />
                 <Input
                   type="number"
                   placeholder="Max"
                   min={filter.min}
                   max={filter.max}
-                  className="flex-1"
+                  className="faceted-search-range-input"
                 />
               </div>
-              <div className="text-xs text-[var(--text-muted)]">
+              <div className="faceted-search-option-count">
                 {filter.min} - {filter.max}
               </div>
             </div>
@@ -103,24 +103,22 @@ export const FacetedSearch = React.forwardRef<HTMLDivElement, FacetedSearchProps
 
         case "select":
           return (
-            <div className="space-y-2">
+            <div className="faceted-search-facet-options">
               {filter.options?.map((option) => (
                 <button
                   key={option.value}
                   onClick={() => onFilterChange(filter.id, option.value)}
                   className={cx(
-                    "w-full text-left p-2 rounded-[var(--radius-sm)] text-sm transition-colors",
+                    "faceted-search-option",
                     activeFilters.some(
                       (af) => af.filterId === filter.id && af.value === option.value,
-                    )
-                      ? "bg-[var(--brand)]/10 text-[var(--brand)]"
-                      : "text-[var(--text-muted)] hover:text-white hover:bg-white/5",
+                    ) && "faceted-search-option--active",
                   )}
                 >
-                  <div className="flex items-center justify-between">
+                  <div>
                     <span>{option.label}</span>
                     {option.count !== undefined && (
-                      <span className="text-xs">({option.count})</span>
+                      <span className="faceted-search-option-count">({option.count})</span>
                     )}
                   </div>
                 </button>
@@ -134,18 +132,17 @@ export const FacetedSearch = React.forwardRef<HTMLDivElement, FacetedSearchProps
     };
 
     return (
-      <div ref={ref} className={cx("space-y-6", className)} {...props}>
+      <div ref={ref} className={cx("faceted-search", className)} {...props}>
         {/* Search Bar */}
         {onSearchChange && (
-          <div className="space-y-3">
+          <div className="faceted-search-search">
             <Input
               placeholder="Search products..."
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
-              className="w-full"
             />
             {resultCount !== undefined && (
-              <div className="text-sm text-[var(--text-muted)]">
+              <div className="faceted-search-result-count">
                 {resultCount.toLocaleString()} results found
               </div>
             )}
@@ -154,22 +151,22 @@ export const FacetedSearch = React.forwardRef<HTMLDivElement, FacetedSearchProps
 
         {/* Active Filters */}
         {activeFilters.length > 0 && (
-          <div className="space-y-3">
-            <div className="flex items-center justify-between">
-              <h3 className="text-sm font-medium text-white">Active Filters</h3>
+          <div className="faceted-search-active-section">
+            <div className="faceted-search-header">
+              <h3 className="faceted-search-title">Active Filters</h3>
               <Button variant="ghost" size="sm" onClick={onClearAll}>
                 Clear All
               </Button>
             </div>
-            <div className="flex flex-wrap gap-2">
+            <div className="faceted-search-active">
               {activeFilters.map((filter, index) => (
-                <Badge key={`${filter.filterId}-${index}`} className="flex items-center gap-2 pr-1">
+                <Badge key={`${filter.filterId}-${index}`} className="faceted-search-active-filter">
                   <span>{filter.label}</span>
                   <button
                     onClick={() => onClearFilter(filter.filterId)}
-                    className="hover:text-red-400 transition-colors"
+                    className="faceted-search-active-filter-remove"
                   >
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="icon-xs" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
@@ -185,10 +182,10 @@ export const FacetedSearch = React.forwardRef<HTMLDivElement, FacetedSearchProps
         )}
 
         {/* Filters */}
-        <div className="space-y-6">
+        <div className="faceted-search-facets">
           {filters.map((filter) => (
-            <div key={filter.id} className="space-y-3">
-              <h4 className="text-sm font-medium text-white border-b border-white/10 pb-2">
+            <div key={filter.id} className="faceted-search-facet">
+              <h4 className="faceted-search-facet-title">
                 {filter.label}
               </h4>
               {renderFilter(filter)}

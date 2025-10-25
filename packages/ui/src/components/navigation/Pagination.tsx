@@ -55,10 +55,10 @@ export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
     const visiblePages = getVisiblePages();
 
     const buttonClass =
-      "px-3 py-2 text-sm font-medium rounded-[var(--radius-sm)] transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]";
-    const activeClass = "bg-[var(--brand)] text-[var(--brand-on)]";
-    const inactiveClass = "text-[var(--text-muted)] hover:text-white hover:bg-white/5";
-    const disabledClass = "text-[var(--text-muted)] opacity-50 cursor-not-allowed";
+      "px-3 py-2 text-sm font-medium rounded-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]";
+    const activeClass = "bg-brand text-[var(--brand-on)]";
+    const inactiveClass = "text-muted hover:text-white hover:bg-white/5";
+    const disabledClass = "text-muted opacity-50 cursor-not-allowed";
 
     return (
       <div ref={ref} className={cx("flex items-center gap-1", className)} {...props}>
@@ -85,7 +85,7 @@ export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
         {visiblePages.map((page, index) => (
           <React.Fragment key={index}>
             {typeof page === "string" ? (
-              <span className="px-3 py-2 text-[var(--text-muted)]">{page}</span>
+              <span className="px-3 py-2 text-muted">{page}</span>
             ) : (
               <button
                 onClick={() => onPageChange(page)}

@@ -1,0 +1,133 @@
+/* Avatar Component */
+
+.avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+  font-weight: 500;
+  user-select: none;
+}
+
+.avatar-image {
+  aspect-ratio: 1;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.avatar-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Avatar sizes */
+.avatar--xs {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.avatar--xs .avatar-fallback {
+  font-size: 0.625rem;
+}
+
+.avatar--sm {
+  width: 2rem;
+  height: 2rem;
+}
+
+.avatar--sm .avatar-fallback {
+  font-size: 0.75rem;
+}
+
+.avatar--md {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.avatar--md .avatar-fallback {
+  font-size: 0.875rem;
+}
+
+.avatar--lg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.avatar--lg .avatar-fallback {
+  font-size: 1rem;
+}
+
+.avatar--xl {
+  width: 4rem;
+  height: 4rem;
+}
+
+.avatar--xl .avatar-fallback {
+  font-size: 1.25rem;
+}
+
+/* Avatar group */
+.avatar-group {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-group .avatar {
+  margin-left: -0.5rem;
+  border: 2px solid var(--background);
+}
+
+.avatar-group .avatar:first-child {
+  margin-left: 0;
+}
+
+.avatar-group .avatar:hover {
+  z-index: 1;
+}
+
+/* Avatar with status indicator */
+.avatar--with-status {
+  position: relative;
+}
+
+.avatar-status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: var(--radius-full);
+  border: 2px solid var(--background);
+}
+
+.avatar-status--online {
+  background-color: var(--success);
+}
+
+.avatar-status--offline {
+  background-color: var(--muted);
+}
+
+.avatar-status--busy {
+  background-color: var(--destructive);
+}
+
+.avatar-status--away {
+  background-color: var(--warning);
+}

@@ -20,8 +20,7 @@ export const Newsletter = React.forwardRef<HTMLElement, NewsletterProps>(
     return (
       <section
         ref={ref}
-        className={cx("newsletter", className)}
-        {...props}
+        className={cx("newsletter", className)} {...props}
       >
         <div className="newsletter-container">
           {title && (

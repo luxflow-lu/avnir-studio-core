@@ -83,13 +83,12 @@ export const ApiKeys = React.forwardRef<HTMLDivElement, ApiKeysProps>(
     return (
       <div
         ref={ref}
-        className={cx("bg-[var(--surface)] rounded-[var(--radius-lg)] p-6", className)}
-        {...props}
+        className={cx("api-keys-container", className)} {...props}
       >
-        <div className="flex items-center justify-between mb-6">
-          <div>
-            <h3 className="text-lg font-semibold text-white">API Keys</h3>
-            <p className="text-[var(--text-muted)] text-sm">
+        <div className="api-keys-header">
+          <div className="api-keys-header-content">
+            <h3>API Keys</h3>
+            <p>
               Manage API keys for programmatic access
             </p>
           </div>
@@ -97,9 +96,9 @@ export const ApiKeys = React.forwardRef<HTMLDivElement, ApiKeysProps>(
         </div>
 
         {apiKeys.length === 0 ? (
-          <div className="text-center py-12">
-            <div className="w-16 h-16 mx-auto mb-4 text-[var(--text-muted)]">
-              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" className="w-full h-full">
+          <div className="api-keys-empty">
+            <div className="api-keys-empty-icon">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -108,29 +107,29 @@ export const ApiKeys = React.forwardRef<HTMLDivElement, ApiKeysProps>(
                 />
               </svg>
             </div>
-            <h4 className="text-white font-medium mb-2">No API Keys</h4>
-            <p className="text-[var(--text-muted)] text-sm mb-4">
+            <h4>No API Keys</h4>
+            <p>
               Create your first API key to get started
             </p>
             <Button onClick={() => setShowCreateModal(true)}>Create API Key</Button>
           </div>
         ) : (
-          <div className="space-y-4">
+          <div className="api-keys-list">
             {apiKeys.map((apiKey) => (
               <div
                 key={apiKey.id}
-                className="border border-white/10 rounded-[var(--radius-lg)] p-4"
+                className="api-key-item"
               >
-                <div className="flex items-start justify-between mb-3">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-3 mb-2">
-                      <h4 className="font-medium text-white">{apiKey.name}</h4>
+                <div className="api-key-content">
+                  <div className="api-key-info">
+                    <div className="api-key-header">
+                      <h4 className="api-key-name">{apiKey.name}</h4>
                       <Badge variant={apiKey.active ? "success" : "warning"}>
                         {apiKey.active ? "Active" : "Inactive"}
                       </Badge>
                     </div>
-                    <div className="flex items-center gap-2 mb-2">
-                      <code className="text-sm bg-[var(--bg)] px-2 py-1 rounded text-[var(--text-muted)]">
+                    <div className="api-key-code-wrapper">
+                      <code className="api-key-code">
                         {maskKey(apiKey.key)}
                       </code>
                       <Button
@@ -141,21 +140,21 @@ export const ApiKeys = React.forwardRef<HTMLDivElement, ApiKeysProps>(
                         {copiedKey === apiKey.id ? "Copied!" : "Copy"}
                       </Button>
                     </div>
-                    <div className="flex flex-wrap gap-1 mb-2">
+                    <div className="api-key-permissions">
                       {apiKey.permissions.map((permission) => (
-                        <Badge key={permission} className="text-xs">
+                        <Badge key={permission}>
                           {permission}
                         </Badge>
                       ))}
                     </div>
-                    <div className="text-xs text-[var(--text-muted)]">
+                    <div className="api-key-meta">
                       Created {apiKey.createdAt.toLocaleDateString()}
                       {apiKey.lastUsed && (
                         <span> • Last used {apiKey.lastUsed.toLocaleDateString()}</span>
                       )}
                     </div>
                   </div>
-                  <div className="flex gap-2">
+                  <div className="api-key-actions">
                     <Button
                       variant="ghost"
                       size="sm"
@@ -167,7 +166,7 @@ export const ApiKeys = React.forwardRef<HTMLDivElement, ApiKeysProps>(
                       variant="ghost"
                       size="sm"
                       onClick={() => onDeleteKey?.(apiKey.id)}
-                      className="text-red-400 hover:text-red-300"
+                      className="btn-destructive"
                     >
                       Delete
                     </Button>
@@ -183,9 +182,9 @@ export const ApiKeys = React.forwardRef<HTMLDivElement, ApiKeysProps>(
           onClose={() => setShowCreateModal(false)}
           title="Create API Key"
         >
-          <div className="space-y-4">
-            <div>
-              <label className="block text-sm font-medium text-white mb-2">Key Name</label>
+          <div className="api-keys-form">
+            <div className="api-keys-form-field">
+              <label>Key Name</label>
               <Input
                 placeholder="Enter a name for this API key"
                 value={newKeyName}
@@ -193,24 +192,23 @@ export const ApiKeys = React.forwardRef<HTMLDivElement, ApiKeysProps>(
               />
             </div>
 
-            <div>
-              <label className="block text-sm font-medium text-white mb-2">Permissions</label>
-              <div className="space-y-2">
+            <div className="api-keys-form-field">
+              <label>Permissions</label>
+              <div className="api-keys-permissions-list">
                 {availablePermissions.map((permission) => (
-                  <label key={permission} className="flex items-center gap-2 cursor-pointer">
+                  <label key={permission} className="api-keys-permission-item">
                     <input
                       type="checkbox"
                       checked={selectedPermissions.includes(permission)}
                       onChange={() => togglePermission(permission)}
-                      className="rounded border-white/20 bg-transparent"
                     />
-                    <span className="text-sm text-white capitalize">{permission}</span>
+                    <span>{permission}</span>
                   </label>
                 ))}
               </div>
             </div>
 
-            <div className="flex gap-3 pt-4">
+            <div className="api-keys-form-actions">
               <Button
                 variant="outline"
                 onClick={() => setShowCreateModal(false)}

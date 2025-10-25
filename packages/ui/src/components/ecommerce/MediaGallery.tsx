@@ -75,10 +75,10 @@ export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
     return (
       <div ref={ref} className={cx("space-y-4", className)} {...props}>
         {/* Main Media Display */}
-        <div className="relative group">
+        <div >
           <div
             className={cx(
-              "relative aspect-square bg-white/5 rounded-[var(--radius-lg)] overflow-hidden",
+              "relative aspect-square bg-muted-lg overflow-hidden",
               isZoomed && "fixed inset-4 z-50 aspect-auto",
             )}
           >
@@ -87,7 +87,7 @@ export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
                 src={currentMedia.src}
                 alt={currentMedia.alt}
                 className={cx(
-                  "w-full h-full object-cover cursor-zoom-in transition-transform",
+                  "w-full object-cover cursor-zoom-in transition-transform",
                   isZoomed && "cursor-zoom-out object-contain",
                 )}
                 onClick={() => setIsZoomed(!isZoomed)}
@@ -95,7 +95,7 @@ export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
             ) : (
               <video
                 src={currentMedia.src}
-                className="w-full h-full object-cover"
+                className="w-full object-cover"
                 controls
                 autoPlay={autoPlay}
                 loop={loop}
@@ -107,10 +107,10 @@ export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
               <>
                 <button
                   onClick={goToPrevious}
-                  className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute left-4 top-1/2 -translate-y-1/2 icon-lg bg-overlay hover:bg-black/70 text-foreground rounded-full flex-center opacity-0 group-hover:opacity-100 transition-opacity"
                   aria-label="Previous image"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -121,10 +121,10 @@ export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
                 </button>
                 <button
                   onClick={goToNext}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute right-4 top-1/2 -translate-y-1/2 icon-lg bg-overlay hover:bg-black/70 text-foreground rounded-full flex-center opacity-0 group-hover:opacity-100 transition-opacity"
                   aria-label="Next image"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -138,7 +138,7 @@ export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
 
             {/* Media Counter */}
             {media.length > 1 && !isZoomed && (
-              <div className="absolute bottom-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+              <div className="absolute bottom-4 right-4 bg-overlay text-foreground px-3 py-1-full text-sm">
                 {currentIndex + 1} / {media.length}
               </div>
             )}
@@ -147,10 +147,10 @@ export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
             {isZoomed && (
               <button
                 onClick={() => setIsZoomed(false)}
-                className="absolute top-4 right-4 w-10 h-10 bg-black/50 hover:bg-black/70 text-white rounded-full flex items-center justify-center"
+                className="absolute top-4 right-4 icon-lg bg-overlay hover:bg-black/70 text-foreground rounded-full flex-center"
                 aria-label="Close zoom"
               >
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -165,28 +165,28 @@ export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
 
         {/* Thumbnails */}
         {showThumbnails && media.length > 1 && !isZoomed && (
-          <div className="flex gap-2 overflow-x-auto pb-2">
+          <div className="flex-row gap-2 overflow-x-auto pb-2">
             {media.map((item, index) => (
               <button
                 key={item.id}
                 onClick={() => goToIndex(index)}
                 className={cx(
-                  "flex-shrink-0 w-16 h-16 rounded-[var(--radius-sm)] overflow-hidden border-2 transition-all",
+                  "flex-shrink-0 w-16 h-16-sm overflow-hidden-2",
                   index === currentIndex
-                    ? "border-[var(--brand)]"
-                    : "border-white/20 hover:border-white/40",
+                    ? "border-brand"
+                    : "border-muted hover:border-white/40",
                 )}
               >
                 {item.type === "image" ? (
                   <img
                     src={item.thumbnail || item.src}
                     alt={item.alt}
-                    className="w-full h-full object-cover"
+                    className="w-full object-cover"
                   />
                 ) : (
-                  <div className="w-full h-full bg-white/5 flex items-center justify-center">
+                  <div className="w-full bg-muted flex-center">
                     <svg
-                      className="w-6 h-6 text-[var(--text-muted)]"
+                      className="icon text-muted"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -207,7 +207,7 @@ export const MediaGallery = React.forwardRef<HTMLDivElement, MediaGalleryProps>(
 
         {/* Zoom Backdrop */}
         {isZoomed && (
-          <div className="fixed inset-0 bg-black/80 z-40" onClick={() => setIsZoomed(false)} />
+          <div className="fixed inset-0 bg-overlay-dark z-40" onClick={() => setIsZoomed(false)} />
         )}
       </div>
     );

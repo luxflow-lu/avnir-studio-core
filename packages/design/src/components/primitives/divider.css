@@ -1,0 +1,64 @@
+/* Divider Primitive */
+
+.divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: var(--space-16) 0;
+}
+
+/* Divider orientations */
+.divider--vertical {
+  display: inline-block;
+  width: 1px;
+  height: 1.5rem;
+  border-top: none;
+  border-left: 1px solid var(--border);
+  margin: 0 var(--space-16);
+  vertical-align: middle;
+}
+
+/* Divider sizes */
+.divider--sm {
+  margin: var(--space-8) 0;
+}
+
+.divider--md {
+  margin: var(--space-16) 0;
+}
+
+.divider--lg {
+  margin: var(--space-24) 0;
+}
+
+.divider--xl {
+  margin: var(--space-32) 0;
+}
+
+/* Divider with label */
+.divider--label {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: var(--space-16) 0;
+}
+
+.divider--label::before,
+.divider--label::after {
+  content: "";
+  flex: 1;
+  border-top: 1px solid var(--border);
+}
+
+.divider--label::before {
+  margin-right: var(--space-16);
+}
+
+.divider--label::after {
+  margin-left: var(--space-16);
+}
+
+.divider-label-text {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  white-space: nowrap;
+}

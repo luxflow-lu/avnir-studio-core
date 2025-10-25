@@ -1,0 +1,16 @@
+/* Navbar Component - Already exists in themes.css as global styles */
+/* This file is a placeholder for component-specific navbar styles */
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.navbar-brand:hover {
+  opacity: 0.9;
+}

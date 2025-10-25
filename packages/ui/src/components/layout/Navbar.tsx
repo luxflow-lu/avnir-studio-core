@@ -68,8 +68,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
     return (
       <header
         ref={ref}
-        className={cx("navbar", className)}
-        {...props}
+        className={cx("navbar", className)} {...props}
       >
         <div className="navbar-container">
           {/* Brand Logo - Left */}

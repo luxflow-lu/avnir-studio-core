@@ -6,8 +6,7 @@ export const Select = React.forwardRef<HTMLSelectElement, SelectProps>(
   ({ className, children, ...props }, ref) => (
     <select
       ref={ref}
-      className={cx("select", className)}
-      {...props}
+      className={cx("select", className)} {...props}
     >
       {children}
     </select>

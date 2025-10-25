@@ -1,0 +1,71 @@
+/* ContactBlock Component */
+
+.contact-block {
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space-64) var(--space-16);
+}
+
+.contact-block-container {
+  margin: 0 auto;
+  max-width: 80rem;
+  display: grid;
+  gap: var(--space-48);
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .contact-block-container {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-64);
+  }
+}
+
+.contact-block-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-24);
+}
+
+.contact-block-title {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: var(--titles);
+  margin-bottom: var(--space-16);
+}
+
+.contact-block-description {
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: var(--space-24);
+}
+
+.contact-block-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-16);
+}
+
+.contact-block-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+.contact-block-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.contact-block-text {
+  color: var(--text);
+}
+
+.contact-block-form {
+  background-color: var(--surface);
+  padding: var(--space-32);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+}

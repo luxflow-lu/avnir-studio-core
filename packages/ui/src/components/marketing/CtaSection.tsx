@@ -16,8 +16,7 @@ export const CtaSection = React.forwardRef<HTMLElement, CtaSectionProps>(
     return (
       <section
         ref={ref}
-        className={cx("cta-section", className)}
-        {...props}
+        className={cx("cta-section", className)} {...props}
       >
         <div className="cta-container">
           {!image ? (

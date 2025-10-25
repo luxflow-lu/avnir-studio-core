@@ -15,8 +15,7 @@ export const SectionHeader = React.forwardRef<HTMLDivElement, SectionHeaderProps
     return (
       <div
         ref={ref}
-        className={cx("section-header", `section-header--${align}`, className)}
-        {...props}
+        className={cx("section-header", `section-header--${align}`, className)} {...props}
       >
         {title && (
           <h2 className="section-title">

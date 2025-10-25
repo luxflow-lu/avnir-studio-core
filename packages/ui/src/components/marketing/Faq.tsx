@@ -29,8 +29,7 @@ export const Faq = React.forwardRef<HTMLElement, FaqProps>(
     return (
       <section
         ref={ref}
-        className={cx("section", className)}
-        {...props}
+        className={cx("section", className)} {...props}
       >
         <div className="container">
           <SectionHeader title={title} subtitle={subtitle} />

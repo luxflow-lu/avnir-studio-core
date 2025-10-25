@@ -14,28 +14,27 @@ export const LogoCloud = React.forwardRef<HTMLElement, LogoCloudProps>(
     return (
       <section
         ref={ref}
-        className={cx("w-full mx-auto px-4 md:px-6 py-16 md:py-24", className)}
-        {...props}
+        className={cx("logo-cloud", className)} {...props}
       >
-        <div className="mx-auto max-w-7xl">
+        <div className="logo-cloud-container">
           {(title || subtitle) && (
-            <div className="mb-8 text-center">
+            <div className="logo-cloud-header">
               {title && (
-                <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
+                <h2 className="logo-cloud-title">
                   {title}
                 </h2>
               )}
-              {subtitle && <p className="mt-2 text-muted-foreground">{subtitle}</p>}
+              {subtitle && <p className="logo-cloud-subtitle">{subtitle}</p>}
             </div>
           )}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center">
+          <div className="logo-cloud-grid">
             {logos.map((l, i) => (
               <div
                 key={i}
-                className="flex items-center justify-center opacity-80 hover:opacity-100 transition"
+                className="logo-cloud-item"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={l.src} alt={l.alt} className="h-8 object-contain" />
+                <img src={l.src} alt={l.alt} className="logo-cloud-image" />
               </div>
             ))}
           </div>

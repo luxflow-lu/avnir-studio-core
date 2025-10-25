@@ -25,8 +25,7 @@ export const ThemeToggle = React.forwardRef<HTMLDivElement, ThemeToggleProps>(
           "inline-flex items-center rounded-[var(--radius-sm)] transition-colors",
           "text-[var(--text-muted)]",
           className,
-        )}
-        {...props}
+        )} {...props}
       >
         <button
           onClick={next}

@@ -15,39 +15,35 @@ export const Steps = React.forwardRef<HTMLElement, StepsProps>(
     return (
       <section
         ref={ref}
-        className={cx("w-full mx-auto px-4 md:px-6 py-16 md:py-24", className)}
-        {...props}
+        className={cx("steps", className)} {...props}
       >
-        <div className="mx-auto max-w-7xl">
+        <div className="steps-container">
           {(title || subtitle) && (
-            <div className="mb-10 text-center">
+            <div className="steps-header">
               {title && (
-                <h2 className="text-3xl md:text-4xl font-semibold tracking-tight text-foreground">
+                <h2 className="steps-title">
                   {title}
                 </h2>
               )}
-              {subtitle && <p className="mt-3 text-lg text-muted-foreground">{subtitle}</p>}
+              {subtitle && <p className="steps-subtitle">{subtitle}</p>}
             </div>
           )}
           <ol
-            className={cx(direction === "vertical" ? "space-y-6" : "grid gap-6 md:grid-cols-4")}
+            className="steps-list"
             aria-label="Étapes"
           >
             {items.map((s, i) => (
               <li
                 key={i}
-                className="rounded-[var(--radius)] border border-border bg-card text-card-foreground p-6"
+                className="step-item"
               >
-                {s.icon && (
-                  <div className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-md bg-muted text-primary">
-                    {s.icon}
-                  </div>
-                )}
-                <div className="text-sm text-muted-foreground">Étape {i + 1}</div>
-                <div className="mt-1 font-medium text-card-foreground">{s.title}</div>
-                {s.description && (
-                  <p className="mt-1 text-sm text-muted-foreground">{s.description}</p>
-                )}
+                <div className="step-number">{i + 1}</div>
+                <div className="step-content">
+                  <div className="step-title">{s.title}</div>
+                  {s.description && (
+                    <p className="step-description">{s.description}</p>
+                  )}
+                </div>
               </li>
             ))}
           </ol>

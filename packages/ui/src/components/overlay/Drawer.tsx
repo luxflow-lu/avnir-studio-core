@@ -14,7 +14,7 @@ export interface DrawerProps {
 
 const sideClasses: Record<DrawerSide, { container: string; panel: string }> = {
   left: {
-    container: "justify-start",
+    container: "justify flex-start",
     panel: "h-full w-80 transform transition-transform data-[closed]:-translate-x-full",
   },
   right: {
@@ -22,7 +22,7 @@ const sideClasses: Record<DrawerSide, { container: string; panel: string }> = {
     panel: "h-full w-80 transform transition-transform data-[closed]:translate-x-full",
   },
   top: {
-    container: "items-start",
+    container: "items flex-start",
     panel: "w-full h-80 transform transition-transform data-[closed]:-translate-y-full",
   },
   bottom: {
@@ -50,17 +50,17 @@ export const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
     if (!open) return null;
 
     return (
-      <div className="fixed inset-0 z-50 flex">
+      <div className="fixed inset-0 z-50">
         <div
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+          className="fixed inset-0 bg-overlay backdrop-blur-sm"
           onClick={onClose}
           aria-hidden="true"
         />
-        <div className={cx("relative flex", sideClasses[side].container)}>
+        <div className={cx("relative", sideClasses[side].container)}>
           <div
             ref={ref}
             className={cx(
-              "bg-[var(--surface)] shadow-lg flex flex-col",
+              "bg-surface-col",
               sideClasses[side].panel,
               className,
             )}
@@ -69,16 +69,16 @@ export const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
             aria-labelledby={title ? "drawer-title" : undefined}
           >
             {title && (
-              <div className="flex items-center justify-between p-6 border-b border-white/10">
-                <h2 id="drawer-title" className="text-lg font-semibold text-white">
+              <div className="flex-between p-6-b-white/10">
+                <h2 id="drawer-title" className="text-lg font-semibold text-foreground">
                   {title}
                 </h2>
                 <button
                   onClick={onClose}
-                  className="text-[var(--text-muted)] hover:text-white"
+                  className="text-muted hover:text-foreground"
                   aria-label="Fermer"
                 >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -89,7 +89,7 @@ export const Drawer = React.forwardRef<HTMLDivElement, DrawerProps>(
                 </button>
               </div>
             )}
-            <div className="flex-1 p-6 text-white overflow-auto">{children}</div>
+            <div className="flex-1 p-6 text-foreground overflow-auto">{children}</div>
           </div>
         </div>
       </div>

@@ -1,0 +1,138 @@
+/* Dropdown Component */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-8);
+  border-radius: var(--radius-md);
+  transition: background-color 0.2s ease;
+}
+
+.dropdown-trigger:hover {
+  background-color: var(--accent);
+}
+
+.dropdown-trigger:focus {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 50;
+  min-width: 8rem;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  background-color: var(--popover);
+  color: var(--popover-foreground);
+  box-shadow: var(--shadow-md);
+  animation: dropdown-show 0.2s ease-out;
+  margin-top: var(--space-4);
+}
+
+.dropdown-content--right {
+  right: 0;
+  left: auto;
+}
+
+.dropdown-content--top {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+}
+
+.dropdown-item {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  align-items: center;
+  border-radius: var(--radius-sm);
+  padding: var(--space-6) var(--space-8);
+  font-size: 0.875rem;
+  outline: none;
+  transition: colors 0.2s ease;
+  color: var(--popover-foreground);
+}
+
+.dropdown-item:focus {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.dropdown-item:hover {
+  background-color: var(--accent);
+  color: var(--accent-foreground);
+}
+
+.dropdown-item--disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.dropdown-item--destructive {
+  color: var(--destructive);
+}
+
+.dropdown-item--destructive:focus,
+.dropdown-item--destructive:hover {
+  background-color: var(--destructive);
+  color: var(--destructive-foreground);
+}
+
+.dropdown-separator {
+  height: 1px;
+  background-color: var(--border);
+  margin: var(--space-4) 0;
+}
+
+.dropdown-label {
+  padding: var(--space-6) var(--space-8);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+}
+
+.dropdown-shortcut {
+  margin-left: auto;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  opacity: 0.6;
+}
+
+/* Dropdown animations */
+@keyframes dropdown-show {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes dropdown-hide {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.dropdown-content--exiting {
+  animation: dropdown-hide 0.15s ease-in forwards;
+}

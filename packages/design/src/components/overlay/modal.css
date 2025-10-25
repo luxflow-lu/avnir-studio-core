@@ -1,0 +1,149 @@
+/* Modal Component */
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-16);
+  animation: modal-overlay-show 0.2s ease-out;
+}
+
+.modal-content {
+  position: relative;
+  background-color: var(--background);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 32rem;
+  max-height: 85vh;
+  overflow: hidden;
+  animation: modal-content-show 0.2s ease-out;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-24);
+  border-bottom: 1px solid var(--border);
+}
+
+.modal-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--foreground);
+}
+
+.modal-close {
+  position: absolute;
+  right: var(--space-16);
+  top: var(--space-16);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-4);
+  border-radius: var(--radius-sm);
+  color: var(--muted-foreground);
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.modal-close:hover {
+  opacity: 1;
+}
+
+.modal-close:focus {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.modal-body {
+  padding: var(--space-24);
+  overflow-y: auto;
+  max-height: calc(85vh - 8rem);
+}
+
+.modal-footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--space-8);
+  padding: var(--space-24);
+  border-top: 1px solid var(--border);
+}
+
+/* Modal sizes */
+.modal-content--sm {
+  max-width: 24rem;
+}
+
+.modal-content--md {
+  max-width: 32rem;
+}
+
+.modal-content--lg {
+  max-width: 48rem;
+}
+
+.modal-content--xl {
+  max-width: 64rem;
+}
+
+.modal-content--full {
+  max-width: 95vw;
+  max-height: 95vh;
+}
+
+/* Modal animations */
+@keyframes modal-overlay-show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-content-show {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes modal-overlay-hide {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes modal-content-hide {
+  from {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.95);
+  }
+}
+
+.modal-overlay--exiting {
+  animation: modal-overlay-hide 0.2s ease-in forwards;
+}
+
+.modal-content--exiting {
+  animation: modal-content-hide 0.2s ease-in forwards;
+}

@@ -17,13 +17,12 @@ export const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(
     <div
       ref={ref}
       className={cx(
-        "animate-spin rounded-full border-[var(--brand)] border-t-transparent",
+        "animate-spin rounded-full border-brand border-t-transparent",
         sizes[size],
         className,
       )}
       role="status"
-      aria-label="Loading"
-      {...props}
+      aria-label="Loading" {...props}
     />
   ),
 );

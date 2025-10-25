@@ -85,17 +85,17 @@ export const CommandK = React.forwardRef<HTMLDivElement, CommandKProps>(
     if (!open) return null;
 
     return (
-      <div className="fixed inset-0 z-50 flex items-start justify-center pt-[20vh]">
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
+      <div className="fixed inset-0 z-50 flex-start justify-center pt-[20vh]">
+        <div className="fixed inset-0 bg-overlay backdrop-blur-sm" onClick={onClose} />
         <div
           ref={ref}
-          className="relative bg-[var(--surface)] rounded-[var(--radius-lg)] shadow-lg w-full max-w-lg mx-4 overflow-hidden"
+          className="relative bg-surface-lg max-w-lg mx-4 overflow-hidden"
           role="dialog"
           aria-modal="true"
         >
-          <div className="flex items-center border-b border-white/10 px-4">
+          <div className="flex-center-b-white/10 px-4">
             <svg
-              className="w-5 h-5 text-[var(--text-muted)] mr-3"
+              className="icon text-muted mr-3"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -112,17 +112,17 @@ export const CommandK = React.forwardRef<HTMLDivElement, CommandKProps>(
               placeholder={placeholder}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="flex-1 bg-transparent border-none outline-none py-4 text-white placeholder-[var(--text-muted)]"
+              className="flex-1 bg-transparent-none outline-none py-4 text-foreground placeholder-[var(--text-muted)]"
               autoFocus
             />
-            <kbd className="hidden sm:inline-flex items-center gap-1 rounded border border-white/20 px-2 py-1 text-xs text-[var(--text-muted)]">
+            <kbd className="hidden sm:inline-flex-center gap-1-white/20 px-2 py-1 text-xs text-muted">
               ESC
             </kbd>
           </div>
 
           <div className="max-h-80 overflow-y-auto">
             {filteredItems.length === 0 ? (
-              <div className="px-4 py-8 text-center text-[var(--text-muted)]">No results found</div>
+              <div className="px-4 py-8 text-muted">No results found</div>
             ) : (
               <div className="py-2">
                 {filteredItems.map((item, index) => (
@@ -133,17 +133,17 @@ export const CommandK = React.forwardRef<HTMLDivElement, CommandKProps>(
                       onClose();
                     }}
                     className={cx(
-                      "w-full flex items-center gap-3 px-4 py-3 text-left transition-colors",
+                      "w-full items-center gap-3 px-4 py-3",
                       index === selectedIndex
-                        ? "bg-[var(--brand)]/10 text-[var(--brand)]"
-                        : "text-white hover:bg-white/5",
+                        ? "bg-brand/10 text-brand"
+                        : "text-white hover:bg-muted",
                     )}
                   >
-                    {item.icon && <span className="flex-shrink-0 w-5 h-5">{item.icon}</span>}
-                    <div className="flex-1 min-w-0">
+                    {item.icon && <span className="flex-shrink-0 icon">{item.icon}</span>}
+                    <div >
                       <div className="font-medium">{item.label}</div>
                       {item.description && (
-                        <div className="text-sm text-[var(--text-muted)] truncate">
+                        <div className="text-sm text-muted truncate">
                           {item.description}
                         </div>
                       )}

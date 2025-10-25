@@ -36,17 +36,15 @@ export const PlanPicker = React.forwardRef<HTMLDivElement, PlanPickerProps>(
       : 0;
 
     return (
-      <div ref={ref} className={cx("w-full", className)} {...props}>
+      <div ref={ref} className={cx("plan-picker-container", className)} {...props}>
         {/* Billing Toggle */}
-        <div className="flex justify-center mb-8">
-          <div className="bg-[var(--surface)] p-1 rounded-[var(--radius-lg)] flex">
+        <div className="plan-picker-billing">
+          <div className="plan-picker-billing-toggle">
             <button
               onClick={() => onBillingChange("monthly")}
               className={cx(
-                "px-4 py-2 text-sm font-medium rounded-[var(--radius-md)] transition-colors",
-                billing === "monthly"
-                  ? "bg-[var(--brand)] text-[var(--brand-on)]"
-                  : "text-[var(--text-muted)] hover:text-white",
+                "plan-picker-billing-button",
+                billing === "monthly" && "plan-picker-billing-button--active",
               )}
             >
               Monthly
@@ -54,15 +52,13 @@ export const PlanPicker = React.forwardRef<HTMLDivElement, PlanPickerProps>(
             <button
               onClick={() => onBillingChange("yearly")}
               className={cx(
-                "px-4 py-2 text-sm font-medium rounded-[var(--radius-md)] transition-colors relative",
-                billing === "yearly"
-                  ? "bg-[var(--brand)] text-[var(--brand-on)]"
-                  : "text-[var(--text-muted)] hover:text-white",
+                "plan-picker-billing-button",
+                billing === "yearly" && "plan-picker-billing-button--active",
               )}
             >
               Yearly
               {yearlyDiscount > 0 && (
-                <Badge className="absolute -top-2 -right-2 text-xs bg-green-500/15 text-green-400">
+                <Badge className="plan-picker-badge">
                   -{yearlyDiscount}%
                 </Badge>
               )}
@@ -71,7 +67,7 @@ export const PlanPicker = React.forwardRef<HTMLDivElement, PlanPickerProps>(
         </div>
 
         {/* Plans Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 overflow-visible">
+        <div className="plan-picker-grid">
           {plans.map((plan) => {
             const price = billing === "monthly" ? plan.price.monthly : plan.price.yearly;
             const isSelected = selectedPlan === plan.id;
@@ -80,44 +76,44 @@ export const PlanPicker = React.forwardRef<HTMLDivElement, PlanPickerProps>(
               <div
                 key={plan.id}
                 className={cx(
-                  "relative bg-[var(--surface)] rounded-[var(--radius-lg)] p-6 shadow-md transition-all",
-                  plan.popular && "ring-2 ring-[var(--brand)]",
-                  isSelected && "ring-2 ring-[var(--brand)]/50",
+                  "plan-picker-card",
+                  plan.popular && "plan-picker-card--popular",
+                  isSelected && "plan-picker-card--selected",
                 )}
               >
                 {plan.popular && (
-                  <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                    <span className="px-2 py-1 rounded-full bg-muted text-foreground/80 text-[11px] font-medium border border-border shadow-sm">
+                  <div className="plan-picker-badge">
+                    <span className="plan-picker-badge-content">
                       Most Popular
                     </span>
                   </div>
                 )}
 
-                <div className="text-center mb-6">
-                  <h3 className="text-lg font-semibold text-white mb-2">{plan.name}</h3>
+                <div className="plan-picker-header">
+                  <h3 className="plan-picker-name">{plan.name}</h3>
                   {plan.description && (
-                    <p className="text-[var(--text-muted)] text-sm mb-4">{plan.description}</p>
+                    <p className="plan-picker-description">{plan.description}</p>
                   )}
 
-                  <div className="mb-2">
-                    <span className="text-3xl font-bold text-white">€{price}</span>
-                    <span className="text-[var(--text-muted)] ml-1">
+                  <div className="plan-picker-price">
+                    <span className="plan-picker-price-amount">€{price}</span>
+                    <span className="plan-picker-price-period">
                       /{billing === "monthly" ? "mois" : "an"}
                     </span>
                   </div>
 
                   {billing === "yearly" && (
-                    <p className="text-xs text-[var(--text-muted)]">
+                    <p className="plan-picker-price-note">
                       €{Math.round(price / 12)}/mois facturé annuellement
                     </p>
                   )}
                 </div>
 
-                <ul className="space-y-3 mb-6">
+                <ul className="plan-picker-features">
                   {plan.features.map((feature, index) => (
-                    <li key={index} className="flex items-start gap-2 text-sm">
+                    <li key={index} className="plan-picker-feature">
                       <svg
-                        className="w-4 h-4 text-[var(--brand)] mt-0.5 flex-shrink-0"
+                        className="plan-picker-feature-icon"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -127,13 +123,13 @@ export const PlanPicker = React.forwardRef<HTMLDivElement, PlanPickerProps>(
                           clipRule="evenodd"
                         />
                       </svg>
-                      <span className="text-[var(--text-muted)]">{feature}</span>
+                      <span className="plan-picker-feature-text">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <Button
-                  className="w-full mt-4"
+                  className="plan-picker-cta"
                   variant={plan.popular ? "solid" : "outline"}
                   onClick={() => onSelectPlan(plan.id)}
                 >

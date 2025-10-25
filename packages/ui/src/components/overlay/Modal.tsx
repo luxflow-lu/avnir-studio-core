@@ -28,16 +28,16 @@ export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(
     if (!open) return null;
 
     return (
-      <div className="fixed inset-0 z-50 flex items-center justify-center">
+      <div className="fixed inset-0 z-50 flex-center">
         <div
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm"
+          className="fixed inset-0 bg-overlay backdrop-blur-sm"
           onClick={onClose}
           aria-hidden="true"
         />
         <div
           ref={ref}
           className={cx(
-            "relative bg-[var(--surface)] rounded-[var(--radius-lg)] shadow-lg max-w-md w-full mx-4 p-6",
+            "relative bg-surface rounded-lg shadow-lg max-w-md mx-4 p-6",
             "focus:outline-none",
             className,
           )}
@@ -46,11 +46,11 @@ export const Modal = React.forwardRef<HTMLDivElement, ModalProps>(
           aria-labelledby={title ? "modal-title" : undefined}
         >
           {title && (
-            <h2 id="modal-title" className="text-lg font-semibold text-white mb-4">
+            <h2 id="modal-title" className="text-lg font-semibold text-foreground mb-4">
               {title}
             </h2>
           )}
-          <div className="text-white">{children}</div>
+          <div className="text-foreground">{children}</div>
         </div>
       </div>
     );

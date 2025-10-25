@@ -68,8 +68,8 @@ export const MiniCart = React.forwardRef<HTMLDivElement, MiniCartProps>(
     }, [isOpen, setOpen]);
 
     const defaultTrigger = (
-      <Button variant="ghost" className="relative">
-        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <Button variant="ghost" className="mini-cart-trigger">
+        <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -78,7 +78,7 @@ export const MiniCart = React.forwardRef<HTMLDivElement, MiniCartProps>(
           />
         </svg>
         {totalItems > 0 && (
-          <Badge className="absolute -top-2 -right-2 min-w-[20px] h-5 flex items-center justify-center text-xs">
+          <Badge className="mini-cart-badge">
             {totalItems}
           </Badge>
         )}
@@ -86,7 +86,7 @@ export const MiniCart = React.forwardRef<HTMLDivElement, MiniCartProps>(
     );
 
     return (
-      <div ref={ref} className={cx("relative", className)} {...props}>
+      <div ref={ref} className={cx("mini-cart", className)} {...props}>
         {React.cloneElement(trigger || defaultTrigger, {
           ref: triggerRef,
           onClick: () => setOpen(!isOpen),
@@ -95,16 +95,15 @@ export const MiniCart = React.forwardRef<HTMLDivElement, MiniCartProps>(
         {isOpen && (
           <div
             ref={cartRef}
-            className="absolute top-full right-0 w-80 bg-[var(--surface)] border border-white/10 rounded-[var(--radius-lg)] shadow-lg z-50"
+            className="mini-cart-panel"
           >
-            <div className="p-4 border-b border-white/10">
-              <div className="flex items-center justify-between">
-                <h3 className="text-sm font-semibold text-white">Shopping Cart</h3>
-                <button
-                  onClick={() => setOpen(false)}
-                  className="text-[var(--text-muted)] hover:text-white"
-                >
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="mini-cart-header">
+              <h3 className="mini-cart-title">Shopping Cart</h3>
+              <button
+                onClick={() => setOpen(false)}
+                className="mini-cart-close"
+              >
+                <svg className="icon-sm" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -113,18 +112,16 @@ export const MiniCart = React.forwardRef<HTMLDivElement, MiniCartProps>(
                     />
                   </svg>
                 </button>
-              </div>
             </div>
 
-            <div className="max-h-80 overflow-y-auto">
+            <div className="mini-cart-items">
               {items.length === 0 ? (
-                <div className="p-6 text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 text-[var(--text-muted)]">
+                <div className="mini-cart-empty">
+                  <div className="mini-cart-empty-icon">
                     <svg
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
-                      className="w-full h-full"
                     >
                       <path
                         strokeLinecap="round"
@@ -134,22 +131,22 @@ export const MiniCart = React.forwardRef<HTMLDivElement, MiniCartProps>(
                       />
                     </svg>
                   </div>
-                  <p className="text-[var(--text-muted)] text-sm">Your cart is empty</p>
+                  <p className="mini-cart-empty-text">Your cart is empty</p>
                 </div>
               ) : (
-                <div className="p-4 space-y-4">
+                <div>
                   {items.map((item) => (
-                    <div key={item.id} className="flex items-start gap-3">
+                    <div key={item.id} className="mini-cart-item">
                       {item.image ? (
                         <img
                           src={item.image}
                           alt={item.name}
-                          className="w-12 h-12 rounded-[var(--radius-sm)] object-cover bg-white/5"
+                          className="mini-cart-item-image"
                         />
                       ) : (
-                        <div className="w-12 h-12 rounded-[var(--radius-sm)] bg-white/5 flex items-center justify-center">
+                        <div className="mini-cart-item-placeholder">
                           <svg
-                            className="w-6 h-6 text-[var(--text-muted)]"
+                            className="icon"
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -164,42 +161,42 @@ export const MiniCart = React.forwardRef<HTMLDivElement, MiniCartProps>(
                         </div>
                       )}
 
-                      <div className="flex-1 min-w-0">
-                        <h4 className="text-sm font-medium text-white truncate">{item.name}</h4>
+                      <div className="mini-cart-item-content">
+                        <h4 className="mini-cart-item-name">{item.name}</h4>
                         {item.variant && (
-                          <p className="text-xs text-[var(--text-muted)]">{item.variant}</p>
+                          <p className="mini-cart-item-variant">{item.variant}</p>
                         )}
-                        <div className="flex items-center justify-between mt-2">
-                          <div className="flex items-center gap-2">
+                        <div className="mini-cart-item-footer">
+                          <div className="mini-cart-quantity">
                             <button
                               onClick={() =>
                                 onUpdateQuantity?.(item.id, Math.max(0, item.quantity - 1))
                               }
-                              className="w-6 h-6 rounded border border-white/20 flex items-center justify-center text-[var(--text-muted)] hover:text-white hover:border-white/40"
+                              className="mini-cart-quantity-btn"
                             >
                               -
                             </button>
-                            <span className="text-sm text-white w-8 text-center">
+                            <span className="mini-cart-quantity-value">
                               {item.quantity}
                             </span>
                             <button
                               onClick={() => onUpdateQuantity?.(item.id, item.quantity + 1)}
-                              className="w-6 h-6 rounded border border-white/20 flex items-center justify-center text-[var(--text-muted)] hover:text-white hover:border-white/40"
+                              className="mini-cart-quantity-btn"
                             >
                               +
                             </button>
                           </div>
-                          <div className="flex items-center gap-2">
-                            <span className="text-sm font-medium text-white">
+                          <div>
+                            <span className="mini-cart-item-price">
                               {currency}
                               {(item.price * item.quantity).toFixed(2)}
                             </span>
                             <button
                               onClick={() => onRemoveItem?.(item.id)}
-                              className="text-red-400 hover:text-red-300"
+                              className="mini-cart-item-remove"
                             >
                               <svg
-                                className="w-4 h-4"
+                                className="icon-sm"
                                 fill="none"
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
@@ -222,15 +219,15 @@ export const MiniCart = React.forwardRef<HTMLDivElement, MiniCartProps>(
             </div>
 
             {items.length > 0 && (
-              <div className="p-4 border-t border-white/10">
-                <div className="flex items-center justify-between mb-4">
-                  <span className="text-sm font-medium text-white">Total</span>
-                  <span className="text-lg font-bold text-white">
+              <div className="mini-cart-footer">
+                <div className="mini-cart-total">
+                  <span className="mini-cart-total-label">Total</span>
+                  <span className="mini-cart-total-amount">
                     {currency}
                     {totalPrice.toFixed(2)}
                   </span>
                 </div>
-                <Button onClick={onCheckout} className="w-full">
+                <Button onClick={onCheckout} className="btn-full-width">
                   Checkout ({totalItems} items)
                 </Button>
               </div>

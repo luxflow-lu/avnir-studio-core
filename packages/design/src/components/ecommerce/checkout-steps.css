@@ -1,0 +1,111 @@
+/* CheckoutSteps Component */
+
+.checkout-steps {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-24) 0;
+}
+
+.checkout-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-8);
+  flex: 1;
+  position: relative;
+}
+
+.checkout-step-indicator {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-full);
+  background-color: var(--muted);
+  color: var(--muted-foreground);
+  font-weight: 600;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.checkout-step--active .checkout-step-indicator {
+  background-color: var(--primary);
+  color: #0b0b0d;
+}
+
+.checkout-step--completed .checkout-step-indicator {
+  background-color: var(--success);
+  color: #0b0b0d;
+}
+
+.checkout-step-label {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  text-align: center;
+  font-weight: 500;
+}
+
+.checkout-step--active .checkout-step-label {
+  color: var(--foreground);
+}
+
+.checkout-step--completed .checkout-step-label {
+  color: var(--foreground);
+}
+
+.checkout-step-connector {
+  position: absolute;
+  top: 1.25rem;
+  left: 50%;
+  right: -50%;
+  height: 2px;
+  background-color: var(--border);
+  z-index: 1;
+}
+
+.checkout-step:last-child .checkout-step-connector {
+  display: none;
+}
+
+.checkout-step--completed .checkout-step-connector {
+  background-color: var(--success);
+}
+
+/* Checkout steps responsive */
+@media (max-width: 768px) {
+  .checkout-steps {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .checkout-step {
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: var(--space-12) 0;
+  }
+
+  .checkout-step-indicator {
+    flex-shrink: 0;
+  }
+
+  .checkout-step-label {
+    text-align: left;
+    flex: 1;
+  }
+
+  .checkout-step-connector {
+    top: auto;
+    left: 1.25rem;
+    right: auto;
+    bottom: -50%;
+    width: 2px;
+    height: 100%;
+  }
+
+  .checkout-step:last-child .checkout-step-connector {
+    display: none;
+  }
+}

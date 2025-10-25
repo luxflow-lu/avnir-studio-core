@@ -12,16 +12,15 @@ export const EmptyState = React.forwardRef<HTMLDivElement, EmptyStateProps>(
   ({ className, icon, title, description, action, ...props }, ref) => (
     <div
       ref={ref}
-      className={cx("flex flex-col items-center justify-center text-center py-12", className)}
-      {...props}
+      className={cx("flex flex-col items-center justify-center text-center py-12", className)} {...props}
     >
       {icon && (
-        <div className="mb-4 text-[var(--text-muted)]" aria-hidden="true">
+        <div className="mb-4 text-muted" aria-hidden="true">
           {icon}
         </div>
       )}
-      <h3 className="text-lg font-semibold text-white mb-2">{title}</h3>
-      {description && <p className="text-[var(--text-muted)] mb-6 max-w-sm">{description}</p>}
+      <h3 className="text-lg font-semibold text-foreground mb-2">{title}</h3>
+      {description && <p className="text-muted mb-6 max-w-sm">{description}</p>}
       {action && <div>{action}</div>}
     </div>
   ),
