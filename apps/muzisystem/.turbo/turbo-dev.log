@@ -43,3 +43,64 @@ Import trace for requested module:
  ⨯ ./app/globals.css
 Module not found: Can't resolve '@avnir/ui/styles.css'
 
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ✓ Compiled in 6.4s (524 modules)
+ GET / 200 in 1133ms
+ GET / 200 in 1890ms
+ ⨯ ../../packages/design/src/index.css
+Module not found: Can't resolve './components/marketing/footer.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ✓ Compiled in 4.2s (522 modules)
+ GET / 200 in 1117ms
+ ⨯ ../../packages/ui/src/components/marketing/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/src/components/marketing/Footer.tsx
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+../../packages/ui/src/components/marketing/Footer.tsx
+../../packages/ui/src/components/marketing/index.ts
+../../packages/ui/src/index.ts
+./app/components/ClientFooter.tsx
+ ⨯ ../../packages/ui/src/components/marketing/Footer.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/src/components/marketing/Footer.tsx
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+../../packages/ui/src/components/marketing/Footer.tsx
+../../packages/ui/src/components/marketing/index.ts
+../../packages/ui/src/index.ts
+./app/components/ClientFooter.tsx
+ ✓ Compiled in 12.5s (940 modules)
+ GET / 200 in 2556ms
+ ✓ Compiled in 2.5s (419 modules)
+ ✓ Compiled in 2.9s (838 modules)
+ ✓ Compiled in 4.5s (521 modules)
+ GET / 200 in 1102ms
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css

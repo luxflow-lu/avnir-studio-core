@@ -8,4 +8,3 @@ export * from "./Steps";
 export * from "./PricingStrip";
 export * from "./Newsletter";
 export * from "./ContactBlock";
-export * from "./Footer";
