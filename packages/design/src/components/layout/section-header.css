@@ -1,7 +1,7 @@
 /* SectionHeader Component */
 
 .section-header {
-  margin-bottom: var(--space-48);
+  margin-bottom: var(--margin-xl);
 }
 
 .section-header--left {
@@ -17,14 +17,34 @@
 }
 
 .section-header-title {
-  font-size: var(--text-4xl);
+  font-size: var(--text-h2);
   font-weight: var(--font-bold);
   color: var(--titles);
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--margin-sm);
 }
 
 .section-header-subtitle {
-  font-size: var(--text-lg);
+  font-size: var(--text-body-lg);
   color: var(--muted);
   line-height: var(--leading-relaxed);
+  margin-bottom: var(--margin-md);
+}
+
+.section-header-actions {
+  display: flex;
+  gap: var(--gap-md);
+  align-items: center;
+  margin-top: var(--margin-lg);
+}
+
+.section-header--center .section-header-actions {
+  justify-content: center;
+}
+
+.section-header--left .section-header-actions {
+  justify-content: flex-start;
+}
+
+.section-header--right .section-header-actions {
+  justify-content: flex-end;
 }

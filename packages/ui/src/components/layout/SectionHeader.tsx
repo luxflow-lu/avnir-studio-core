@@ -6,11 +6,12 @@ export type SectionHeaderProps = {
   title?: string | undefined;
   subtitle?: string | undefined;
   align?: "left" | "center" | "right";
+  actions?: React.ReactNode;
   className?: string;
 } & React.HTMLAttributes<HTMLDivElement>;
 
 export const SectionHeader = React.forwardRef<HTMLDivElement, SectionHeaderProps>(
-  ({ title, subtitle, align = "center", className, ...props }, ref) => {
+  ({ title, subtitle, align = "center", actions, className, ...props }, ref) => {
     if (!title && !subtitle) return null;
 
     return (
@@ -24,6 +25,7 @@ export const SectionHeader = React.forwardRef<HTMLDivElement, SectionHeaderProps
           </h2>
         )}
         {subtitle && <p className="section-header-subtitle">{subtitle}</p>}
+        {actions && <div className="section-header-actions">{actions}</div>}
       </div>
     );
   },
