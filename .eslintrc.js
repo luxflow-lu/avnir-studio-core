@@ -69,6 +69,16 @@ module.exports = {
       }
     },
     {
+      // Demo/Test apps - Relax rules
+      files: ['apps/ladle/**/*', 'apps/muzisystem/**/*', '**/test-*.tsx', '**/*-test.tsx'],
+      rules: {
+        'no-restricted-syntax': 'off', // Allow inline styles in demos
+        'no-console': 'warn', // Allow console in demos
+        'no-unused-vars': 'warn',
+        '@typescript-eslint/no-unused-vars': 'warn',
+      }
+    },
+    {
       // Apps rules - STRICT
       files: ['apps/**/*.{ts,tsx}'],
       rules: {
