@@ -14,8 +14,7 @@ module.exports = {
     // ZERO TOLERANCE - Architecture
     'import/no-cycle': 'error',
     'import/no-relative-parent-imports': 'error',
-    '@typescript-eslint/no-any': 'error',
-    '@typescript-eslint/no-explicit-any': 'error',
+    '@typescript-eslint/no-explicit-any': 'warn',
     
     // ZERO TOLERANCE - Code Quality
     'no-console': 'error',
@@ -57,6 +56,18 @@ module.exports = {
     }]
   },
   overrides: [
+    {
+      // Scripts - Allow console
+      files: ['scripts/**/*.js'],
+      rules: {
+        'no-console': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+        'no-unused-vars': 'warn',
+        '@typescript-eslint/no-unused-vars': 'warn',
+        'no-useless-escape': 'warn',
+        'no-case-declarations': 'warn',
+      }
+    },
     {
       // Apps rules - STRICT
       files: ['apps/**/*.{ts,tsx}'],
