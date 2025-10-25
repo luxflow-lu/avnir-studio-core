@@ -1,6 +1,5 @@
 export * from "./Hero";
 export * from "./CtaSection";
-export * from "./Features";
 export * from "./Faq";
 export * from "./LogoCloud";
 export * from "./Testimonials";

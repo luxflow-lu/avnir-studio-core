@@ -1,3 +1,5 @@
+"use client";
+
 import { Layout, Marketing, Button } from "@avnir/ui";
 import Link from "next/link";
 
@@ -152,7 +154,21 @@ export default function HomePage() {
       />
 
       <Layout.Footer 
-        sections={[
+        logo={<span>MUZI<span style={{color: 'var(--primary)'}}>TOOLS</span></span>}
+        newsletterTitle="Restez informé des nouvelles fonctionnalités et mises à jour."
+        newsletterPlaceholder="Votre email"
+        newsletterButtonText="S'abonner"
+        newsletterDisclaimer={
+          <>
+            En vous abonnant, vous acceptez notre{" "}
+            <a href="/privacy">Politique de confidentialité</a>.
+          </>
+        }
+        onNewsletterSubmit={(email) => {
+          // TODO: Implement newsletter API
+          void email;
+        }}
+        columns={[
           {
             title: "MUZITOOLS",
             links: [
@@ -174,27 +190,13 @@ export default function HomePage() {
             links: [
               { label: "Guide d'utilisation", href: "/about" },
               { label: "FAQ", href: "/#faq" },
-              { label: "Formats supportés", href: "/about" }
-            ]
-          },
-          {
-            title: "Légal",
-            links: [
+              { label: "Formats supportés", href: "/about" },
               { label: "Confidentialité", href: "#" },
               { label: "Conditions", href: "#" }
             ]
           }
         ]}
-        bottomContent={
-          <div className="footer-bottom">
-            <p>© 2025 MUZITOOLS - Fait avec ❤️ par AVNIR Studio</p>
-            <div className="footer-badges">
-              <span className="badge badge--outline">v0.1.0</span>
-              <span className="badge badge--outline">100% Gratuit</span>
-              <span className="badge badge--outline">0% Tracking</span>
-            </div>
-          </div>
-        }
+        copyright="© 2025 MUZITOOLS - Fait avec ❤️ par AVNIR Studio"
       />
     </>
   );

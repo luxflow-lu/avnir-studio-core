@@ -1,16 +1,143 @@
-/* Navbar Component - Already exists in themes.css as global styles */
-/* This file is a placeholder for component-specific navbar styles */
+/* Navbar Component */
 
+/* Main navbar container */
+.navbar {
+  background-color: var(--navbar-bg);
+  border-bottom: 1px solid var(--navbar-border);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+/* Navbar inner container */
+.navbar-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-16);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+}
+
+/* Brand logo - Left */
 .navbar-brand {
   display: flex;
   align-items: center;
   gap: var(--space-8);
-  font-size: 1.125rem;
+  font-size: var(--text-lg);
   font-weight: 600;
-  color: var(--foreground);
+  color: var(--titles);
   text-decoration: none;
+  transition: opacity 0.2s;
+  max-height: var(--space-16);
 }
 
 .navbar-brand:hover {
-  opacity: 0.9;
+  opacity: 0.8;
+}
+
+.navbar-brand svg,
+.navbar-brand img {
+  max-height: var(--space-16);
+  width: auto;
+}
+
+/* Navigation links - Right (desktop) */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-32);
+}
+
+.navbar-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: var(--text-base);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar-link:hover {
+  color: var(--primary);
+}
+
+.navbar-link--active {
+  color: var(--primary);
+}
+
+/* Actions container */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--space-12);
+}
+
+/* Mobile menu toggle button */
+.navbar-toggle {
+  display: none;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: var(--space-8);
+  transition: opacity 0.2s;
+}
+
+.navbar-toggle:hover {
+  opacity: 0.8;
+}
+
+/* Mobile menu */
+.navbar-menu {
+  display: none;
+  background-color: var(--navbar-bg);
+  border-top: 1px solid var(--navbar-border);
+  padding: var(--space-16);
+}
+
+.navbar-menu-nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+.navbar-menu-link {
+  color: var(--text);
+  text-decoration: none;
+  font-size: var(--text-base);
+  font-weight: 500;
+  padding: var(--space-12);
+  border-radius: var(--radius-xs);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.navbar-menu-link:hover {
+  background-color: var(--surface);
+  color: var(--primary);
+}
+
+.navbar-menu-link--active {
+  color: var(--primary);
+  background-color: var(--surface);
+}
+
+.navbar-menu-actions {
+  margin-top: var(--space-16);
+  padding-top: var(--space-16);
+  border-top: 1px solid var(--border);
+}
+
+/* Responsive - Tablet and Mobile */
+@media (max-width: 768px) {
+  .navbar-nav {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: block;
+  }
 }

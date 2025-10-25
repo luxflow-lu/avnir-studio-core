@@ -10,9 +10,19 @@
   --text: #c5ccd6;
   --titles: #ffffff;
   --muted: #9ca3af;
-  --accent: #06e7c7;
+  --accent: var(--primary);
   --primary: #ededed;
   --border: #1f1f23;
+  
+  /* Semi-light: Variables fixes dark pour navbar/footer */
+  --navbar-bg: var(--bg);
+  --navbar-surface: var(--surface);
+  --navbar-border: var(--border);
+  --navbar-text: var(--titles);
+  --footer-bg: var(--bg);
+  --footer-surface: var(--surface);
+  --footer-border: var(--border);
+  --footer-text: var(--titles);
   
   /* Status colors */
   --success: #10b981;
@@ -148,13 +158,13 @@
 }
 
 /* ==================== BRAND COLORS ==================== */
-[data-brand="avnir"] { --primary: #ffd700; }
 [data-brand="avnir-studio"] { --primary: #ededed; }
 [data-brand="muzidev"] { --primary: #5cb9f2; }
 [data-brand="muzipics"] { --primary: #ff2d55; }
 [data-brand="muziweb"] { --primary: #9802eb; }
 [data-brand="muzimerch"] { --primary: #ff9d00; }
 [data-brand="muzibase"] { --primary: #2fad66; }
+[data-brand="muzisystem"] { --primary: #ededed; }
 
 /* ==================== LIGHT THEME ==================== */
 [data-theme="light"] {
@@ -164,6 +174,98 @@
   --titles: #111827;
   --muted: #6b7280;
   --border: #e5e7eb;
+}
+
+/* Semi-light: Force dark navbar and footer in light theme */
+[data-theme="light"] .navbar,
+[data-theme="light"] .footer {
+  background-color: var(--navbar-bg) !important;
+}
+
+/* Border bottom navbar reste dark */
+[data-theme="light"] .navbar {
+  border-bottom-color: var(--navbar-border) !important;
+}
+
+/* Textes navbar et footer */
+[data-theme="light"] .navbar-brand,
+[data-theme="light"] .navbar-link,
+[data-theme="light"] .navbar-menu-link,
+[data-theme="light"] .footer-logo,
+[data-theme="light"] .footer-link,
+[data-theme="light"] .footer-text,
+[data-theme="light"] .footer-newsletter-text,
+[data-theme="light"] .footer-copyright {
+  color: var(--navbar-text) !important;
+}
+
+/* Titres des colonnes footer */
+[data-theme="light"] .footer-column-title {
+  color: var(--footer-text) !important;
+}
+
+/* Liens hover */
+[data-theme="light"] .navbar-link:hover,
+[data-theme="light"] .navbar-menu-link:hover,
+[data-theme="light"] .footer-link:hover {
+  color: var(--primary) !important;
+}
+
+/* Borders dark dans navbar/footer */
+[data-theme="light"] .navbar-menu,
+[data-theme="light"] .footer-top {
+  background-color: var(--navbar-bg) !important;
+  border-color: var(--navbar-border) !important;
+}
+
+/* Footer separator garde border dark */
+[data-theme="light"] .footer-separator {
+  background: var(--footer-border) !important;
+}
+
+[data-theme="light"] .navbar-menu-link:hover {
+  background-color: var(--navbar-surface) !important;
+}
+
+/* Force dark inputs in navbar/footer */
+[data-theme="light"] .navbar input,
+[data-theme="light"] .navbar select,
+[data-theme="light"] .footer input,
+[data-theme="light"] .footer select,
+[data-theme="light"] .footer-newsletter-input {
+  background-color: var(--navbar-surface) !important;
+  border-color: var(--navbar-border) !important;
+  color: var(--navbar-text) !important;
+}
+
+/* Bouton Subscribe garde la couleur primary */
+[data-theme="light"] .footer-newsletter-button {
+  background-color: var(--primary) !important;
+  color: var(--navbar-bg) !important;
+  border-color: var(--primary) !important;
+}
+
+/* Lien Privacy Policy toujours en primary */
+[data-theme="light"] .footer-newsletter-disclaimer a {
+  color: var(--primary) !important;
+}
+
+/* Autres boutons dans navbar (selects) - exclure toggle */
+[data-theme="light"] .navbar button:not(.navbar-toggle),
+[data-theme="light"] .navbar select {
+  background-color: var(--navbar-surface) !important;
+  border-color: var(--navbar-border) !important;
+  color: var(--navbar-text) !important;
+}
+
+/* Navbar toggle button sans background */
+[data-theme="light"] .navbar-toggle {
+  background-color: transparent !important;
+}
+
+/* Separator dans navbar menu reste dark */
+[data-theme="light"] .navbar-menu-actions {
+  border-top-color: var(--navbar-border) !important;
 }
 
 /* ==================== GLOBAL STYLES ==================== */
@@ -212,21 +314,6 @@ body {
 }
 
 /* ==================== UTILITY CLASSES ==================== */
-.container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: var(--space-16);
-  padding-right: var(--space-16);
-  max-width: 80rem;
-}
-
-@media (min-width: 640px) {
-  .container {
-    padding-left: var(--space-24);
-    padding-right: var(--space-24);
-  }
-}
 
 /* Screen reader only */
 .sr-only {
@@ -239,6 +326,69 @@ body {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border-width: 0;
+}
+
+/* ============================================
+   FINSWEET STRUCTURE CLASSES
+   Used in apps for page layout
+   ============================================ */
+
+/* Container - Max width + horizontal padding */
+.container {
+  max-width: var(--container-max-width, 1280px);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-global-x);
+  padding-right: var(--space-global-x);
+}
+
+/* Section - Vertical spacing */
+.section {
+  padding-top: var(--space-section-md);
+  padding-bottom: var(--space-section-md);
+}
+
+.section--sm {
+  padding-top: var(--space-section-sm);
+  padding-bottom: var(--space-section-sm);
+}
+
+.section--lg {
+  padding-top: var(--space-section-lg);
+  padding-bottom: var(--space-section-lg);
+}
+
+.section--xl {
+  padding-top: var(--space-section-xl);
+  padding-bottom: var(--space-section-xl);
+}
+
+/* Grid utilities */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-32);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-32);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-32);
+}
+
+/* Responsive grids */
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ============================================

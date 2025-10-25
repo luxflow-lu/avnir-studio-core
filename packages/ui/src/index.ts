@@ -26,7 +26,6 @@ export * from "./components/Banner";
 
 // Marketing Components (for backward compatibility)
 export * from "./components/marketing/Hero";
-export * from "./components/marketing/Features";
 export * from "./components/marketing/CtaSection";
 export * from "./components/marketing/Faq";
 export * from "./components/marketing/LogoCloud";

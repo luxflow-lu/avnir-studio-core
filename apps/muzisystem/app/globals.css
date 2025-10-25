@@ -1,5 +1,13 @@
-@import "@avnir/design/index.css";
-@import "@avnir/ui/styles.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import "@avnir/design/index.css";
+@import "@avnir/ui/styles.css";
+
+/* Force grid gaps - debug */
+.grid-2,
+.grid-3,
+.grid-4 {
+  gap: 2rem !important;
+}

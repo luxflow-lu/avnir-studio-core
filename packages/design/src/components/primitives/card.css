@@ -1,12 +1,12 @@
 /* Card Component */
 
 .card {
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-xs);
   border: 1px solid var(--border);
   background-color: var(--card);
   color: var(--card-foreground);
   box-shadow: var(--shadow-sm);
-  transition: all 0.2s ease;
+  transition: var(--transition-all);
 }
 
 .card-header {
@@ -18,17 +18,17 @@
 }
 
 .card-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1;
-  letter-spacing: -0.025em;
+  font-size: var(--text-2xl);
+  font-weight: var(--font-semibold);
+  line-height: var(--leading-none);
+  letter-spacing: var(--tracking-tight);
   color: var(--card-foreground);
 }
 
 .card-description {
-  font-size: 0.875rem;
+  font-size: var(--text-sm);
   color: var(--muted-foreground);
-  line-height: 1.5;
+  line-height: var(--leading-normal);
 }
 
 .card-content {
@@ -54,7 +54,7 @@
 }
 
 .card--outline {
-  border: 2px solid var(--border);
+  border: var(--border-width-thick) solid var(--border);
   box-shadow: none;
 }
 
