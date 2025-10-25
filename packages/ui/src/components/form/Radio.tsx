@@ -8,13 +8,14 @@ export interface RadioProps extends React.InputHTMLAttributes<HTMLInputElement> 
 
 export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
   ({ className, label, id, ...props }, ref) => {
-    const radioId = id || `radio-${Math.random().toString(36).substr(2, 9)}`;
+    const radioId = React.useId();
+    const finalId = id || radioId;
     return (
       <div className="flex-row gap-2">
         <input
           ref={ref}
           type="radio"
-          id={radioId}
+          id={finalId}
           className={cx(
             "h-4 w-4 rounded-full border border-white/20 bg-[color:var(--bg)/0.6]",
             "checked:bg-brand checked:border-brand",
@@ -23,7 +24,7 @@ export const Radio = React.forwardRef<HTMLInputElement, RadioProps>(
           )} {...props}
         />
         {label && (
-          <label htmlFor={radioId} className="text-sm cursor-pointer">
+          <label htmlFor={finalId} className="text-sm cursor-pointer">
             {label}
           </label>
         )}

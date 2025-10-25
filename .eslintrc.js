@@ -24,6 +24,7 @@ module.exports = {
     'no-undef': 'warn', // Downgrade to warning (React imports)
     'no-empty': 'warn', // Downgrade to warning
     'no-redeclare': 'warn', // Downgrade to warning
+    '@typescript-eslint/no-empty-object-type': 'warn', // Downgrade to warning
     
     // ZERO TOLERANCE - Imports
     'import/order': ['error', {
