@@ -8,7 +8,6 @@
   },
   "scripts": {
     "dev": "turbo run dev",
-    "dev:all": "turbo run dev --parallel --filter=apps/ladle --filter=apps/muzisystem",
     "build": "turbo run build",
     "build:tokens": "turbo run build --filter=@avnir/tokens",
     "build:design": "turbo run build --filter=@avnir/design",
@@ -20,8 +19,6 @@
     "build:muzisystem": "turbo run build --filter=muzisystem",
     "dev:muzitools": "turbo run dev --filter=muzitools",
     "build:muzitools": "turbo run build --filter=muzitools",
-    "dev:ladle": "turbo run dev --filter=@avnir/ladle",
-    "build:ladle": "turbo run build --filter=@avnir/ladle",
     "typecheck": "turbo run typecheck",
     "lint": "eslint .",
     "test": "turbo run test",
