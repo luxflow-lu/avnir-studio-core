@@ -1,9 +1,13 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
 
-@import "@avnir/design/index.css";
+/* UI styles (Tailwind compilé) en premier */
 @import "@avnir/ui/styles.css";
+
+/* Design system en dernier pour avoir la priorité */
+@import "@avnir/design/index.css";
+
+@tailwind utilities;
 
 /* Force grid gaps - debug */
 .grid-2,

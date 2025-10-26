@@ -3,11 +3,11 @@
 .dashboard-kpi-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
-  gap: var(--space-16);
+  gap: var(--gap-md);
 }
 
 .dashboard-kpi-card {
-  padding: var(--space-20);
+  padding: var(--gap-lg);
   background-color: var(--background);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -23,7 +23,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--gap-md);
 }
 
 .dashboard-kpi-title {
@@ -43,13 +43,13 @@
   font-weight: 700;
   color: var(--foreground);
   line-height: 1;
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--gap-sm);
 }
 
 .dashboard-kpi-change {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--gap-xs);
   font-size: 0.875rem;
   font-weight: 500;
 }

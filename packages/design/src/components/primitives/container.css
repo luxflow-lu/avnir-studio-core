@@ -4,8 +4,8 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--space-16);
-  padding-right: var(--space-16);
+  padding-left: var(--gap-md);
+  padding-right: var(--gap-md);
 }
 
 /* Container sizes */
@@ -36,14 +36,14 @@
 /* Container responsive padding */
 @media (min-width: 640px) {
   .container {
-    padding-left: var(--space-24);
-    padding-right: var(--space-24);
+    padding-left: var(--gap-xl);
+    padding-right: var(--gap-xl);
   }
 }
 
 @media (min-width: 1024px) {
   .container {
-    padding-left: var(--space-32);
-    padding-right: var(--space-32);
+    padding-left: var(--gap-xl);
+    padding-right: var(--gap-xl);
   }
 }

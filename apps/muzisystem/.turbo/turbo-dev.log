@@ -1,507 +1,1026 @@
 
+
 > muzisystem@0.0.0 dev /Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem
 > next dev
 
- ⚠ Port 3000 is in use by process 12781, using available port 3005 instead.
-   ▲ Next.js 15.5.6
-   - Local:        http://localhost:3005
-   - Network:      http://192.168.1.237:3005
+   [1m[38;2;173;127;168m▲ Next.js 15.5.6[39m[22m
+   - Local:        http://localhost:3000
+   - Network:      http://192.168.1.237:3000
 
- ✓ Starting...
- ✓ Ready in 10s
- ○ Compiling / ...
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 4.7s
+ [37m[1m○[22m[39m Compiling / ...
 
-warn - Your `content` configuration includes a pattern which looks like it's accidentally matching all of `node_modules` and can cause serious performance issues.
-warn - Pattern: `../../packages/ui/**/*.tsx`
-warn - See our documentation for recommendations:
-warn - https://tailwindcss.com/docs/content-configuration#pattern-recommendations
- ✓ Compiled / in 38s (944 modules)
- GET / 200 in 43594ms
- ✓ Compiled in 5.4s (524 modules)
- ✓ Compiled in 15.8s (944 modules)
- GET / 200 in 4828ms
- ✓ Compiled in 1921ms (420 modules)
- ✓ Compiled in 2.9s (841 modules)
- ✓ Compiled in 2.6s (524 modules)
- GET / 200 in 1381ms
- ✓ Compiled in 2.2s (524 modules)
- GET / 200 in 1653ms
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
+[1m[33mwarn[39m[22m - Your `content` configuration includes a pattern which looks like it's accidentally matching all of `node_modules` and can cause serious performance issues.
+[1m[33mwarn[39m[22m - Pattern: `../../packages/ui/**/*.tsx`
+[1m[33mwarn[39m[22m - See our documentation for recommendations:
+[1m[33mwarn[39m[22m - https://tailwindcss.com/docs/content-configuration#pattern-recommendations
+ [32m[1m✓[22m[39m Compiled / in 8.7s (933 modules)
+ GET / [32m200[39m in 10547ms
+ [32m[1m✓[22m[39m Compiled in 1925ms (517 modules)
+ [32m[1m✓[22m[39m Compiled in 1867ms (416 modules)
+ [32m[1m✓[22m[39m Compiled in 6s (832 modules)
+ [32m[1m✓[22m[39m Compiled in 2.4s (517 modules)
+ GET / [32m200[39m in 1178ms
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
 
 https://nextjs.org/docs/messages/module-not-found
 
 Import trace for requested module:
 ./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
 
 https://nextjs.org/docs/messages/module-not-found
 
 Import trace for requested module:
 ./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
 
 https://nextjs.org/docs/messages/module-not-found
 
 Import trace for requested module:
 ./app/globals.css
- ✓ Compiled in 6.4s (524 modules)
- GET / 200 in 1133ms
- GET / 200 in 1890ms
- ⨯ ../../packages/design/src/index.css
-Module not found: Can't resolve './components/marketing/footer.css'
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
 
 https://nextjs.org/docs/messages/module-not-found
 
 Import trace for requested module:
 ./app/globals.css
- ✓ Compiled in 4.2s (522 modules)
- GET / 200 in 1117ms
- ⨯ ../../packages/ui/src/components/marketing/Footer.tsx
+ [32m[1m✓[22m[39m Compiled in 2.4s (517 modules)
+ GET / [32m200[39m in 283ms
+ [32m[1m✓[22m[39m Compiled in 1210ms (416 modules)
+ [32m[1m✓[22m[39m Compiled in 4.7s (933 modules)
+ GET / [32m200[39m in 1395ms
+ [32m[1m✓[22m[39m Compiled in 846ms (517 modules)
+ GET / [32m200[39m in 416ms
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [32m[1m✓[22m[39m Compiled in 1292ms (517 modules)
+ GET / [32m200[39m in 299ms
+ [31m[1m⨯[22m[39m ../../packages/icons/dist/index.js
 Error: 
 
 Caused by:
-    0: Failed to read source code from /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/src/components/marketing/Footer.tsx
+    0: Failed to read source code from /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/icons/dist/index.js
     1: No such file or directory (os error 2)
 
 Import trace for requested module:
-../../packages/ui/src/components/marketing/Footer.tsx
-../../packages/ui/src/components/marketing/index.ts
+../../packages/icons/dist/index.js
 ../../packages/ui/src/index.ts
-./app/components/ClientFooter.tsx
- ⨯ ../../packages/ui/src/components/marketing/Footer.tsx
+./app/providers.tsx
+ [32m[1m✓[22m[39m Compiled in 5.9s (832 modules)
+ GET / [32m200[39m in 3058ms
+ [32m[1m✓[22m[39m Compiled in 1297ms (517 modules)
+ GET / [32m200[39m in 91ms
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [32m[1m✓[22m[39m Compiled in 2.3s (517 modules)
+ GET / [32m200[39m in 346ms
+ [32m[1m✓[22m[39m Compiled in 2.6s (517 modules)
+ GET / [32m200[39m in 266ms
+ GET / [32m200[39m in 874ms
+ [32m[1m✓[22m[39m Compiled in 1334ms (416 modules)
+ [32m[1m✓[22m[39m Compiled in 2.7s (832 modules)
+ [32m[1m✓[22m[39m Compiled in 1518ms (517 modules)
+ GET / [32m200[39m in 1066ms
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [32m[1m✓[22m[39m Compiled in 2.3s (517 modules)
+ GET / [32m200[39m in 421ms
+ [32m[1m✓[22m[39m Compiled in 1494ms (517 modules)
+ GET / [32m200[39m in 507ms
+ [32m[1m✓[22m[39m Compiled in 676ms (517 modules)
+ GET / [32m200[39m in 589ms
+ [32m[1m✓[22m[39m Compiled in 341ms (517 modules)
+ GET / [32m200[39m in 144ms
+ GET / [32m200[39m in 623ms
+ [32m[1m✓[22m[39m Compiled in 536ms (517 modules)
+ GET / [32m200[39m in 249ms
+ [32m[1m✓[22m[39m Compiled in 870ms (517 modules)
+ GET / [32m200[39m in 820ms
+ GET / [32m200[39m in 174ms
+ GET / [32m200[39m in 440ms
+ [32m[1m✓[22m[39m Compiled in 657ms (517 modules)
+ GET / [32m200[39m in 477ms
+ GET / [32m200[39m in 670ms
+ [32m[1m✓[22m[39m Compiled in 2.2s (517 modules)
+ GET / [32m200[39m in 229ms
+ [32m[1m✓[22m[39m Compiled in 3.4s (933 modules)
+ GET / [32m200[39m in 565ms
+ [32m[1m✓[22m[39m Compiled in 657ms (517 modules)
+ GET / [32m200[39m in 298ms
+ [32m[1m✓[22m[39m Compiled in 3.7s (933 modules)
+ GET / [32m200[39m in 670ms
+ [32m[1m✓[22m[39m Compiled in 1394ms (517 modules)
+ GET / [32m200[39m in 813ms
+ GET / [32m200[39m in 622ms
+ [32m[1m✓[22m[39m Compiled in 2.1s (517 modules)
+ GET / [32m200[39m in 344ms
+ [32m[1m✓[22m[39m Compiled in 803ms (517 modules)
+ GET / [32m200[39m in 400ms
+ [32m[1m✓[22m[39m Compiled in 1108ms (517 modules)
+ GET / [32m200[39m in 207ms
+ [32m[1m✓[22m[39m Compiled in 1065ms (515 modules)
+ [32m[1m✓[22m[39m Compiled in 32ms
+ [37m[1m○[22m[39m Compiling / ...
+ [32m[1m✓[22m[39m Compiled / in 5s (938 modules)
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [32m200[39m in 9333ms
+ [32m[1m✓[22m[39m Compiled in 2.4s (518 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 1770ms
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [32m[1m✓[22m[39m Compiled in 7.6s (1039 modules)
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 7267ms
+ [32m[1m✓[22m[39m Compiled in 1986ms (518 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 875ms
+ [32m[1m✓[22m[39m Compiled in 2.1s (518 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 867ms
+ [32m[1m✓[22m[39m Compiled in 999ms (518 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 1170ms
+ [32m[1m✓[22m[39m Compiled in 4.7s (1042 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 1401ms
+ [32m[1m✓[22m[39m Compiled in 780ms (521 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 766ms
+ [32m[1m✓[22m[39m Compiled in 554ms (521 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 706ms
+ [31m[1m⨯[22m[39m ../../packages/icons/dist/index.js
 Error: 
 
 Caused by:
-    0: Failed to read source code from /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/src/components/marketing/Footer.tsx
+    0: Failed to read source code from /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/icons/dist/index.js
     1: No such file or directory (os error 2)
 
 Import trace for requested module:
-../../packages/ui/src/components/marketing/Footer.tsx
-../../packages/ui/src/components/marketing/index.ts
+../../packages/icons/dist/index.js
 ../../packages/ui/src/index.ts
-./app/components/ClientFooter.tsx
- ✓ Compiled in 12.5s (940 modules)
- GET / 200 in 2556ms
- ✓ Compiled in 2.5s (419 modules)
- ✓ Compiled in 2.9s (838 modules)
- ✓ Compiled in 4.5s (521 modules)
- GET / 200 in 1102ms
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ✓ Compiled in 6.1s (521 modules)
- GET / 200 in 1008ms
- ✓ Compiled in 9.2s (521 modules)
- GET / 200 in 893ms
- ✓ Compiled in 5.5s (521 modules)
- GET / 200 in 1311ms
- ✓ Compiled in 7.5s (521 modules)
- GET / 200 in 1154ms
- ✓ Compiled in 4.9s (521 modules)
- GET / 200 in 1167ms
- GET / 200 in 4025ms
- ✓ Compiled in 9.8s (521 modules)
- GET / 200 in 779ms
- ✓ Compiled in 9.7s (521 modules)
- GET / 200 in 887ms
- ✓ Compiled in 7.8s (521 modules)
- GET / 200 in 495ms
- ✓ Compiled in 14.8s (940 modules)
- GET / 200 in 3070ms
- ✓ Compiled in 11.4s (940 modules)
- GET / 200 in 1890ms
- ✓ Compiled in 2.7s (419 modules)
- ✓ Compiled in 3.2s (838 modules)
- ✓ Compiled in 6.1s (521 modules)
- GET / 200 in 15693ms
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ✓ Compiled in 5.4s (521 modules)
- GET / 200 in 1833ms
- ✓ Compiled in 3.1s (521 modules)
- GET / 200 in 364ms
- ✓ Compiled in 7.6s (521 modules)
- GET / 200 in 1643ms
- ✓ Compiled in 4.2s (419 modules)
- ✓ Compiled in 8.3s (838 modules)
- ✓ Compiled in 7.5s (521 modules)
- GET / 200 in 4359ms
- ✓ Compiled in 3.5s (521 modules)
- GET / 200 in 1137ms
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ✓ Compiled in 3.2s (521 modules)
- GET / 200 in 356ms
- GET / 200 in 1373ms
- ✓ Compiled in 5.2s (521 modules)
- GET / 200 in 1133ms
- ✓ Compiled in 2.5s (521 modules)
- GET / 200 in 748ms
- GET / 200 in 882ms
- ✓ Compiled in 13s (521 modules)
- GET / 200 in 845ms
- ✓ Compiled in 6.3s (521 modules)
- GET / 200 in 832ms
- ✓ Compiled in 5.2s (521 modules)
- GET / 200 in 639ms
- ✓ Compiled in 4.4s (521 modules)
- GET / 200 in 1007ms
- ○ Compiling /foundations ...
- ✓ Compiled /foundations in 9.1s (1048 modules)
- GET / 200 in 1661ms
- GET /foundations 200 in 12128ms
- ⨯ SyntaxError: Unexpected end of JSON input
-    at JSON.parse (<anonymous>) {
-  page: '/foundations'
+./app/providers.tsx
+ [32m[1m✓[22m[39m Compiled in 2.9s (942 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
 }
- ○ Compiling /_error ...
- ✓ Compiled /_error in 59.6s (1286 modules)
- GET /foundations 500 in 60708ms
- ✓ Compiled in 8.9s (674 modules)
- ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- GET /foundations 200 in 437ms
- GET /foundations 200 in 5092ms
- ✓ Compiled in 5.5s (674 modules)
- GET /foundations 200 in 1449ms
- GET /foundations 200 in 1695ms
- ⨯ SyntaxError: Unexpected end of JSON input
-    at JSON.parse (<anonymous>) {
-  page: '/foundations'
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
 }
- ✓ Compiled in 11.4s (1286 modules)
- GET /foundations 500 in 10296ms
- GET /foundations 200 in 1342ms
- ✓ Compiled in 16.7s (674 modules)
- GET /foundations 200 in 2768ms
- ✓ Compiled in 9.8s (674 modules)
- GET /foundations 200 in 842ms
- ✓ Compiled in 9.8s (674 modules)
- GET /foundations 200 in 1301ms
- ✓ Compiled in 7.1s (674 modules)
- GET /foundations 200 in 140ms
- ✓ Compiled in 10.8s (674 modules)
- GET /foundations 200 in 618ms
- ✓ Compiled in 9.3s (674 modules)
- GET /foundations 200 in 940ms
- GET / 200 in 3398ms
- GET /foundations 200 in 1419ms
- ✓ Compiled in 10.2s (674 modules)
- GET /foundations 200 in 1153ms
- GET /foundations 200 in 6002ms
- ✓ Compiled in 13.5s (674 modules)
- ✓ Compiled in 13.3s (674 modules)
- GET /foundations 200 in 1686ms
- GET /foundations 200 in 9124ms
- ✓ Compiled in 8.4s (674 modules)
- GET /foundations 200 in 1699ms
- GET /foundations 200 in 3102ms
- ✓ Compiled in 12.7s (674 modules)
- GET /foundations 200 in 783ms
- ✓ Compiled in 8.5s (674 modules)
- GET /foundations 200 in 1790ms
- ✓ Compiled in 4.7s (674 modules)
- GET /foundations 200 in 682ms
- ✓ Compiled in 4.8s (674 modules)
- GET /foundations 200 in 1358ms
- ✓ Compiled in 7.8s (674 modules)
- GET /foundations 200 in 7847ms
- ✓ Compiled in 7.8s (674 modules)
- GET /foundations 200 in 1297ms
- GET / 200 in 1671ms
- ✓ Compiled in 26.8s (1388 modules)
- GET / 200 in 3437ms
- ✓ Compiled in 11.4s (1388 modules)
- GET / 200 in 4966ms
- ✓ Compiled in 16.2s (1388 modules)
- GET / 200 in 1772ms
- ✓ Compiled in 10.2s (1388 modules)
- GET / 200 in 1430ms
- ✓ Compiled in 12.2s (1388 modules)
- GET / 200 in 3187ms
- ✓ Compiled in 18s (1388 modules)
- GET / 200 in 2181ms
- ✓ Compiled in 14.6s (1388 modules)
- GET / 200 in 3876ms
- GET / 200 in 2884ms
- ✓ Compiled in 24s (1388 modules)
- GET / 200 in 2582ms
- ✓ Compiled in 21.7s (1388 modules)
- GET / 200 in 2576ms
- ✓ Compiled in 12.6s (674 modules)
- GET / 200 in 1945ms
- ✓ Compiled in 5.9s (674 modules)
- GET / 200 in 991ms
- ✓ Compiled in 5s (674 modules)
- GET / 200 in 1640ms
- ✓ Compiled in 11s (714 modules)
- ✓ Compiled in 8.4s (1286 modules)
- ✓ Compiled in 3.7s (674 modules)
- GET / 200 in 2072ms
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ✓ Compiled in 3.3s (674 modules)
- GET / 200 in 522ms
- GET / 200 in 3052ms
- ✓ Compiled in 13.2s (674 modules)
- GET / 200 in 840ms
- ✓ Compiled in 6s (674 modules)
- GET / 200 in 1432ms
- GET / 200 in 10258ms
- ✓ Compiled in 22.7s (1388 modules)
- GET / 200 in 1960ms
- ✓ Compiled in 9.8s (674 modules)
- GET / 200 in 595ms
- ✓ Compiled in 18.9s (1388 modules)
- GET / 200 in 2518ms
- ✓ Compiled in 3.7s (714 modules)
- ✓ Compiled in 8.8s (1286 modules)
- ✓ Compiled in 6.8s (674 modules)
- GET / 200 in 2102ms
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
-
-https://nextjs.org/docs/messages/module-not-found
-
-Import trace for requested module:
-./app/globals.css
- ✓ Compiled in 5.8s (674 modules)
- GET / 200 in 567ms
- ✓ Compiled in 9.8s (714 modules)
- ✓ Compiled in 14.2s (1388 modules)
- ⨯ Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
-    at async L (.next/server/app/page.js:1:10686) {
-  errno: -2,
-  syscall: 'open',
-  code: 'ENOENT',
-  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json',
-  page: '/'
+ GET / [31m500[39m in 2885ms
+ [32m[1m✓[22m[39m Compiled in 956ms (521 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
 }
- ⨯ Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
-    at async (.next/server/pages/_error.js:19:2492) {
-  errno: -2,
-  syscall: 'open',
-  code: 'ENOENT',
-  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
 }
- ✓ Compiled in 12.3s (674 modules)
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
+ GET / [31m500[39m in 1026ms
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
 
 https://nextjs.org/docs/messages/module-not-found
 
 Import trace for requested module:
 ./app/globals.css
-Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
-    at async L (.next/server/app/page.js:1:10686) {
-  errno: -2,
-  syscall: 'open',
-  code: 'ENOENT',
-  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json',
-  page: '/'
-}
-[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
-  errno: -2,
-  syscall: 'open',
-  code: 'ENOENT',
-  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
-}
- GET / 500 in 72557ms
- GET / 500 in 431ms
- ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
-  errno: -2,
-  syscall: 'open',
-  code: 'ENOENT',
-  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
-}
-[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
-  errno: -2,
-  syscall: 'open',
-  code: 'ENOENT',
-  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
-}
-[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
-  errno: -2,
-  syscall: 'open',
-  code: 'ENOENT',
-  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
-}
- GET / 500 in 4909ms
- GET / 500 in 390ms
- ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
-  errno: -2,
-  syscall: 'open',
-  code: 'ENOENT',
-  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
-}
-[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
-  errno: -2,
-  syscall: 'open',
-  code: 'ENOENT',
-  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
-}
-[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
-  errno: -2,
-  syscall: 'open',
-  code: 'ENOENT',
-  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
-}
- GET / 500 in 1077ms
- GET / 500 in 345ms
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
 
 https://nextjs.org/docs/messages/module-not-found
 
 Import trace for requested module:
 ./app/globals.css
- ✓ Compiled in 5s (674 modules)
- ✓ Compiled in 22.7s (674 modules)
- ✓ Compiled in 12.6s (714 modules)
- ✓ Compiled in 8.9s (1286 modules)
- ✓ Compiled in 3.1s (674 modules)
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
 
 https://nextjs.org/docs/messages/module-not-found
 
 Import trace for requested module:
 ./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
 
 https://nextjs.org/docs/messages/module-not-found
 
 Import trace for requested module:
 ./app/globals.css
- ⨯ ./app/globals.css
-Module not found: Can't resolve '@avnir/ui/styles.css'
+ [32m[1m✓[22m[39m Compiled in 1852ms (521 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 697ms
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 280ms
+ [32m[1m✓[22m[39m Compiled in 894ms (521 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 883ms
+ [32m[1m✓[22m[39m Compiled in 686ms (521 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 724ms
+ [32m[1m✓[22m[39m Compiled in 572ms (521 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 831ms
+ [32m[1m✓[22m[39m Compiled in 698ms (523 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 567ms
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [32m[1m✓[22m[39m Compiled in 4.7s (1052 modules)
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 4227ms
+ [32m[1m✓[22m[39m Compiled in 1011ms (525 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 1343ms
+ [32m[1m✓[22m[39m Compiled in 291ms (525 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 1111ms
+ [32m[1m✓[22m[39m Compiled in 2.7s (525 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [32m[1m✓[22m[39m Compiled in 13.4s (949 modules)
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 16389ms
+ [32m[1m✓[22m[39m Compiled in 2.1s (525 modules)
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 1137ms
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
 
 https://nextjs.org/docs/messages/module-not-found
 
+Import trace for requested module:
+./app/globals.css
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [32m[1m✓[22m[39m Compiled in 2s (525 modules)
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ GET / [31m500[39m in 739ms
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2368249980'[39m
+}
+ [31m[1m⨯[22m[39m TypeError: useState only works in Client Components. Add the "use client" directive at the top of the file to use it. Read more: https://nextjs.org/docs/messages/react-client-hook-in-server-component
+    at BrandLogo (../src/BrandLogo.tsx:24:35)
+[0m [90m 22 |[39m   size [33m=[39m [32m"md"[39m[33m,[39m
+ [90m 23 |[39m }) [33m=>[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mconst[39m [brand[33m,[39m setBrand] [33m=[39m [33mReact[39m[33m.[39museState([32m"avnir-studio"[39m)[33m;[39m
+ [90m    |[39m                                   [31m[1m^[22m[39m
+ [90m 25 |[39m   [36mconst[39m [theme[33m,[39m setTheme] [33m=[39m [33mReact[39m[33m.[39museState([32m"dark"[39m)[33m;[39m
+ [90m 26 |[39m
+ [90m 27 |[39m   [33mReact[39m[33m.[39museEffect(() [33m=>[39m {[0m {
+  digest: [32m'2429983124'[39m
+}
+ GET / [31m500[39m in 477ms
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [32m[1m✓[22m[39m Compiled in 7.3s (949 modules)
+ GET / [32m200[39m in 5754ms
+ [32m[1m✓[22m[39m Compiled in 725ms (526 modules)
+ GET / [32m200[39m in 338ms
+ [32m[1m✓[22m[39m Compiled in 1071ms (526 modules)
+ GET / [32m200[39m in 364ms
+ [37m[1m○[22m[39m Compiling /overview/intro ...
+ [32m[1m✓[22m[39m Compiled /overview/intro in 2000ms (1065 modules)
+ GET /overview/intro [32m200[39m in 2784ms
+ GET / [32m200[39m in 291ms
+ [32m[1m✓[22m[39m Compiled in 5.4s (1065 modules)
+ GET / [32m200[39m in 352ms
+ [32m[1m✓[22m[39m Compiled in 1352ms (1065 modules)
+ GET / [32m200[39m in 715ms
+ [32m[1m✓[22m[39m Compiled in 3.3s (1063 modules)
+ GET / [32m200[39m in 921ms
+ [32m[1m✓[22m[39m Compiled in 1608ms (1063 modules)
+ GET / [32m200[39m in 159ms
+ [32m[1m✓[22m[39m Compiled in 2.8s (528 modules)
+ GET / [32m200[39m in 516ms
+ [32m[1m✓[22m[39m Compiled in 7.8s (1063 modules)
+ GET / [32m200[39m in 367ms
+ [37m[1m○[22m[39m Compiling /_not-found ...
+ [32m[1m✓[22m[39m Compiled /_not-found in 2.4s (1068 modules)
+ GET /components/button [33m404[39m in 3274ms
+ GET / [32m200[39m in 487ms
+ [32m[1m✓[22m[39m Compiled in 4.1s (1063 modules)
+ GET / [32m200[39m in 1007ms
+ [32m[1m✓[22m[39m Compiled in 2.6s (1063 modules)
+ GET / [32m200[39m in 778ms
+ [32m[1m✓[22m[39m Compiled in 1426ms (1063 modules)
+ GET / [32m200[39m in 515ms
+ [32m[1m✓[22m[39m Compiled in 5.1s (1063 modules)
+ GET / [32m200[39m in 906ms
+ [32m[1m✓[22m[39m Compiled in 3.1s (1063 modules)
+ GET / [32m200[39m in 848ms
+ [32m[1m✓[22m[39m Compiled in 2.3s (1063 modules)
+ GET / [32m200[39m in 426ms
+ [32m[1m✓[22m[39m Compiled in 2.2s (1063 modules)
+ GET / [32m200[39m in 599ms
+ [32m[1m✓[22m[39m Compiled in 2.7s (1063 modules)
+ GET / [32m200[39m in 606ms
+ [32m[1m✓[22m[39m Compiled in 7.3s (1063 modules)
+ GET / [32m200[39m in 1304ms
+ [32m[1m✓[22m[39m Compiled in 8.1s (1063 modules)
+ GET / [32m200[39m in 554ms
+ [32m[1m✓[22m[39m Compiled in 1243ms (1063 modules)
+ GET / [32m200[39m in 304ms
+ [31m[1m⨯[22m[39m ../../packages/brandkit/dist/index.js
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/brandkit/dist/index.js
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+../../packages/brandkit/dist/index.js
+./app/providers.tsx
+ [32m[1m✓[22m[39m Compiled in 3s (960 modules)
+ GET / [32m200[39m in 856ms
+ [32m[1m✓[22m[39m Compiled in 1390ms (528 modules)
+ GET / [32m200[39m in 474ms
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [32m[1m✓[22m[39m Compiled in 2.9s (528 modules)
+ GET / [32m200[39m in 307ms
+ [32m[1m✓[22m[39m Compiled in 1957ms (528 modules)
+ GET / [32m200[39m in 704ms
+ [32m[1m✓[22m[39m Compiled in 1077ms (528 modules)
+ GET / [32m200[39m in 467ms
+ [32m[1m✓[22m[39m Compiled in 999ms (528 modules)
+ GET / [32m200[39m in 481ms
+ GET / [32m200[39m in 448ms
+ [32m[1m✓[22m[39m Compiled in 731ms (528 modules)
+ GET / [32m200[39m in 540ms
+ [32m[1m✓[22m[39m Compiled in 400ms (528 modules)
+ GET / [32m200[39m in 297ms
+ [32m[1m✓[22m[39m Compiled in 475ms (528 modules)
+ GET / [32m200[39m in 231ms
+ GET / [32m200[39m in 496ms
+ [32m[1m✓[22m[39m Compiled in 7.6s (1063 modules)
+ GET / [32m200[39m in 733ms
+ GET / [32m200[39m in 398ms
+ [32m[1m✓[22m[39m Compiled in 2.2s (528 modules)
+ GET / [32m200[39m in 519ms
+ [32m[1m✓[22m[39m Compiled in 245ms (528 modules)
+ GET / [32m200[39m in 189ms
+ [32m[1m✓[22m[39m Compiled in 2.4s (528 modules)
+ GET / [32m200[39m in 308ms
+ [32m[1m✓[22m[39m Compiled in 488ms (528 modules)
+ GET / [32m200[39m in 297ms
+ [32m[1m✓[22m[39m Compiled in 902ms (528 modules)
+ GET / [32m200[39m in 297ms
+ GET / [32m200[39m in 733ms
+ [32m[1m✓[22m[39m Compiled in 10.5s (1063 modules)
+ GET / [32m200[39m in 820ms
+ [32m[1m✓[22m[39m Compiled in 5.8s (528 modules)
+ [32m[1m✓[22m[39m Compiled in 3.2s (960 modules)
+ GET / [32m200[39m in 4087ms
+ [32m[1m✓[22m[39m Compiled in 1254ms (528 modules)
+ GET / [32m200[39m in 247ms
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [31m[1m⨯[22m[39m ./app/globals.css
+[31m[1mModule not found[22m[39m: Can't resolve '[32m@avnir/ui/styles.css[39m'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ [32m[1m✓[22m[39m Compiled in 3.1s (528 modules)
+ GET / [32m200[39m in 280ms
+ GET / [32m200[39m in 606ms
+ [32m[1m✓[22m[39m Compiled in 3.8s (528 modules)
+ GET / [32m200[39m in 364ms

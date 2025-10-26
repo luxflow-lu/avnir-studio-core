@@ -1,10 +1,10 @@
 /* CreditBalance Component */
 .credit-balance--sm {
-  padding: var(--space-12);
+  padding: var(--gap-md);
 }
 
 .credit-balance--lg {
-  padding: var(--space-24);
+  padding: var(--gap-xl);
 }
 
 .credit-balance--critical {
@@ -21,13 +21,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--gap-md);
 }
 
 .credit-balance-title {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .credit-balance-indicator {
@@ -67,14 +67,14 @@
 }
 
 .credit-balance-display {
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--gap-md);
 }
 
 .credit-balance-numbers {
   display: flex;
   align-items: baseline;
-  gap: var(--space-8);
-  margin-bottom: var(--space-8);
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-sm);
 }
 
 .credit-balance-current {
@@ -136,7 +136,7 @@
 .credit-balance-info {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .credit-balance-row {
@@ -161,8 +161,8 @@
 .credit-balance-alert {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
-  padding: var(--space-8);
+  gap: var(--gap-sm);
+  padding: var(--gap-sm);
   background: rgba(239, 68, 68, 0.1);
   border: 1px solid rgba(239, 68, 68, 0.2);
   border-radius: var(--radius-sm);

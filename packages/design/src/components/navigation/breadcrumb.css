@@ -4,7 +4,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-6);
+  gap: var(--gap-sm);
   font-size: 0.875rem;
 }
 
@@ -12,7 +12,7 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-6);
+  gap: var(--gap-sm);
   list-style: none;
   margin: 0;
   padding: 0;
@@ -21,13 +21,13 @@
 .breadcrumb-item {
   display: flex;
   align-items: center;
-  gap: var(--space-6);
+  gap: var(--gap-sm);
 }
 
 .breadcrumb-link {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--gap-xs);
   color: var(--muted-foreground);
   text-decoration: none;
   transition: color 0.2s ease;
@@ -56,26 +56,26 @@
 /* Breadcrumb variants */
 .breadcrumb--sm {
   font-size: 0.75rem;
-  gap: var(--space-4);
+  gap: var(--gap-xs);
 }
 
 .breadcrumb--sm .breadcrumb-list {
-  gap: var(--space-4);
+  gap: var(--gap-xs);
 }
 
 .breadcrumb--sm .breadcrumb-item {
-  gap: var(--space-4);
+  gap: var(--gap-xs);
 }
 
 .breadcrumb--lg {
   font-size: 1rem;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .breadcrumb--lg .breadcrumb-list {
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .breadcrumb--lg .breadcrumb-item {
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }

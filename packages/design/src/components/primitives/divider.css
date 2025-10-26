@@ -3,7 +3,7 @@
 .divider {
   border: none;
   border-top: 1px solid var(--border);
-  margin: var(--space-16) 0;
+  margin: var(--gap-md) 0;
 }
 
 /* Divider orientations */
@@ -13,25 +13,25 @@
   height: 1.5rem;
   border-top: none;
   border-left: 1px solid var(--border);
-  margin: 0 var(--space-16);
+  margin: 0 var(--gap-md);
   vertical-align: middle;
 }
 
 /* Divider sizes */
 .divider--sm {
-  margin: var(--space-8) 0;
+  margin: var(--gap-sm) 0;
 }
 
 .divider--md {
-  margin: var(--space-16) 0;
+  margin: var(--gap-md) 0;
 }
 
 .divider--lg {
-  margin: var(--space-24) 0;
+  margin: var(--gap-xl) 0;
 }
 
 .divider--xl {
-  margin: var(--space-32) 0;
+  margin: var(--gap-xl) 0;
 }
 
 /* Divider with label */
@@ -39,7 +39,7 @@
   display: flex;
   align-items: center;
   text-align: center;
-  margin: var(--space-16) 0;
+  margin: var(--gap-md) 0;
 }
 
 .divider--label::before,
@@ -50,11 +50,11 @@
 }
 
 .divider--label::before {
-  margin-right: var(--space-16);
+  margin-right: var(--gap-md);
 }
 
 .divider--label::after {
-  margin-left: var(--space-16);
+  margin-left: var(--gap-md);
 }
 
 .divider-label-text {

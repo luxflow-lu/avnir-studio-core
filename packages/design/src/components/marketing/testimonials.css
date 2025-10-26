@@ -2,7 +2,7 @@
 
 /* Testimonials section layout */
 .testimonials-section {
-  padding: var(--space-section-lg) var(--space-global-x);
+  padding: var(--space-section-lg) var(--padding-container);
 }
 
 .testimonials-container {
@@ -14,7 +14,7 @@
 .testimonials-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: var(--space-32);
+  gap: var(--gap-xl);
 }
 
 /* Legacy responsive grid */
@@ -32,7 +32,7 @@
 
 /* Testimonial card */
 .testimonial-card {
-  padding: var(--space-24);
+  padding: var(--gap-xl);
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -45,7 +45,7 @@
   font-size: 0.875rem;
   color: var(--text);
   line-height: 1.6;
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--gap-md);
   font-style: italic;
 }
 
@@ -53,7 +53,7 @@
 .testimonial-author {
   display: flex;
   align-items: center;
-  gap: var(--space-12);
+  gap: var(--gap-md);
 }
 
 .testimonial-avatar {
@@ -70,7 +70,7 @@
 .testimonial-info {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--gap-xs);
 }
 
 .testimonial-info h4 {

@@ -26,8 +26,8 @@
 .command-k-input-wrapper {
   display: flex;
   align-items: center;
-  gap: var(--space-12);
-  padding: var(--space-16);
+  gap: var(--gap-md);
+  padding: var(--gap-md);
   border-bottom: 1px solid var(--border);
 }
 
@@ -43,14 +43,14 @@
 .command-k-list {
   max-height: 20rem;
   overflow-y: auto;
-  padding: var(--space-8);
+  padding: var(--gap-sm);
 }
 
 .command-k-item {
   display: flex;
   align-items: center;
-  gap: var(--space-12);
-  padding: var(--space-12);
+  gap: var(--gap-md);
+  padding: var(--gap-md);
   border-radius: var(--radius-md);
   cursor: pointer;
   transition: background-color 0.15s ease;
@@ -87,7 +87,7 @@
 .command-k-item-shortcut {
   font-size: 0.75rem;
   color: var(--muted-foreground);
-  padding: var(--space-2) var(--space-6);
+  padding: var(--gap-xs) var(--gap-sm);
   background-color: var(--muted);
   border-radius: var(--radius-sm);
 }

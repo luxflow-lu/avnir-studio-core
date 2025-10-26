@@ -65,7 +65,7 @@
 .checkbox-wrapper {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .checkbox-label {

@@ -11,7 +11,7 @@ const brands = [
   "muziweb",
   "muzimerch",
   "muzibase",
-  "muzimanager",
+  "muzisystem",
 ];
 
 const themes = ["dark", "light"];

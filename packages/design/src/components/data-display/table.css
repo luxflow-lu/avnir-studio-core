@@ -30,7 +30,7 @@
 
 .table-header-cell {
   height: 3rem;
-  padding: 0 var(--space-12);
+  padding: 0 var(--gap-md);
   text-align: left;
   align-items: center;
   font-weight: 500;
@@ -56,7 +56,7 @@
 }
 
 .table-cell {
-  padding: var(--space-12);
+  padding: var(--gap-md);
   align-items: center;
   color: var(--text);
 }
@@ -67,13 +67,13 @@
 }
 
 .table-footer-cell {
-  padding: var(--space-12);
+  padding: var(--gap-md);
   font-weight: 500;
   color: var(--muted-foreground);
 }
 
 .table-caption {
-  margin-top: var(--space-16);
+  margin-top: var(--gap-md);
   font-size: 0.875rem;
   color: var(--muted-foreground);
 }
@@ -103,14 +103,14 @@
 .table--sm .table-cell,
 .table--sm .table-header-cell,
 .table--sm .table-footer-cell {
-  padding: var(--space-6) var(--space-8);
+  padding: var(--gap-sm) var(--gap-sm);
   height: 2rem;
 }
 
 .table--lg .table-cell,
 .table--lg .table-header-cell,
 .table--lg .table-footer-cell {
-  padding: var(--space-16) var(--space-20);
+  padding: var(--gap-md) var(--gap-lg);
   height: 4rem;
 }
 
@@ -125,7 +125,7 @@
 }
 
 .table-sort-icon {
-  margin-left: var(--space-4);
+  margin-left: var(--gap-xs);
   opacity: 0.5;
 }
 

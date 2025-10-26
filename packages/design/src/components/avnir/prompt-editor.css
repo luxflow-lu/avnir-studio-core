@@ -2,7 +2,7 @@
 .prompt-editor {
   display: flex;
   flex-direction: column;
-  gap: var(--space-16);
+  gap: var(--gap-md);
 }
 
 .prompt-editor-toolbar {
@@ -10,13 +10,13 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .prompt-editor-actions {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .prompt-editor-button {
@@ -26,7 +26,7 @@
 .prompt-editor-icon {
   width: 1rem;
   height: 1rem;
-  margin-right: var(--space-4);
+  margin-right: var(--gap-xs);
 }
 
 .prompt-editor-stats {
@@ -44,11 +44,11 @@
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--titles);
-  margin: 0 0 var(--space-12);
+  margin: 0 0 var(--gap-md);
 }
 
 .prompt-editor-category {
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--gap-md);
 }
 
 .prompt-editor-category:last-child {
@@ -61,21 +61,21 @@
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin: 0 0 var(--space-8);
+  margin: 0 0 var(--gap-sm);
 }
 
 .prompt-editor-preset-list,
 .prompt-editor-history-list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .prompt-editor-preset,
 .prompt-editor-history-item {
   width: 100%;
   text-align: left;
-  padding: var(--space-12);
+  padding: var(--gap-md);
   background: rgba(255, 255, 255, 0.05);
   border: none;
   border-radius: var(--radius-sm);
@@ -93,7 +93,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--gap-sm);
 }
 
 .prompt-editor-preset-name {
@@ -109,7 +109,7 @@
 
 .prompt-editor-preset-tags {
   display: flex;
-  gap: var(--space-4);
+  gap: var(--gap-xs);
 }
 
 .prompt-editor-tag {
@@ -150,17 +150,17 @@
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--titles);
-  margin: 0 0 var(--space-12);
+  margin: 0 0 var(--gap-md);
 }
 
 .prompt-editor-save-form {
   display: flex;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .prompt-editor-save-input {
   flex: 1;
-  padding: var(--space-8) var(--space-12);
+  padding: var(--gap-sm) var(--gap-md);
   background: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
@@ -188,8 +188,8 @@
 
 .prompt-editor-generate {
   position: absolute;
-  bottom: var(--space-12);
-  right: var(--space-12);
+  bottom: var(--gap-md);
+  right: var(--gap-md);
 }
 
 .prompt-editor-generate-button {
@@ -199,7 +199,7 @@
 .prompt-editor-spinner {
   width: 1rem;
   height: 1rem;
-  margin-right: var(--space-8);
+  margin-right: var(--gap-sm);
   animation: spin 1s linear infinite;
 }
 

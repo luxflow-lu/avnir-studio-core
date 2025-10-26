@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  padding: var(--space-24);
+  padding: var(--gap-xl);
   text-align: center;
 }
 
@@ -15,27 +15,27 @@
   font-weight: 700;
   color: var(--primary);
   line-height: 1;
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--gap-md);
 }
 
 .error-page-title {
   font-size: 2rem;
   font-weight: 600;
   color: var(--foreground);
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--gap-md);
 }
 
 .error-page-description {
   font-size: 1rem;
   color: var(--muted-foreground);
   max-width: 32rem;
-  margin-bottom: var(--space-32);
+  margin-bottom: var(--gap-xl);
   line-height: 1.6;
 }
 
 .error-page-actions {
   display: flex;
-  gap: var(--space-12);
+  gap: var(--gap-md);
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -68,8 +68,8 @@
 /* Brand Theme Selector */
 .brand-theme-selector {
   display: flex;
-  gap: var(--space-12);
-  padding: var(--space-12);
+  gap: var(--gap-md);
+  padding: var(--gap-md);
   background-color: var(--muted);
   border-radius: var(--radius-md);
 }
@@ -98,7 +98,7 @@
   align-items: center;
   justify-content: center;
   min-height: 20rem;
-  padding: var(--space-48);
+  padding: var(--padding-section-sm);
 }
 
 .loading-boundary-spinner {
@@ -111,7 +111,7 @@
 }
 
 .loading-boundary-text {
-  margin-top: var(--space-16);
+  margin-top: var(--gap-md);
   font-size: 0.875rem;
   color: var(--muted-foreground);
 }

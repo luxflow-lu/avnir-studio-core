@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { cx } from "../../utils/cx";
+import { Button as UIButton } from "../form/Button";
 
 // Main Footer component - accepts children for composition
 export interface FooterProps extends React.HTMLAttributes<HTMLElement> {}
@@ -17,7 +18,9 @@ FooterRoot.displayName = "Footer";
 // Sub-components for composition
 const Top: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ className, children, ...props }) => (
   <div className={cx("footer-top", className)} {...props}>
-    {children}
+    <div className="container">
+      {children}
+    </div>
   </div>
 );
 
@@ -50,9 +53,9 @@ const Input: React.FC<React.InputHTMLAttributes<HTMLInputElement>> = ({ classNam
 );
 
 const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ className, children, ...props }) => (
-  <button className={cx("footer-newsletter-button", className)} {...props}>
+  <UIButton variant="solid" className={cx("footer-newsletter-button", className)} {...props}>
     {children}
-  </button>
+  </UIButton>
 );
 
 const Disclaimer: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ className, children, ...props }) => (
@@ -87,12 +90,16 @@ const Link: React.FC<LinkProps> = ({ className, children, ...props }) => (
 );
 
 const Separator: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ className, ...props }) => (
-  <div className={cx("footer-separator", className)} {...props} />
+  <div className="container">
+    <div className={cx("footer-separator", className)} {...props} />
+  </div>
 );
 
 const Bottom: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ className, children, ...props }) => (
   <div className={cx("footer-bottom", className)} {...props}>
-    {children}
+    <div className="container">
+      {children}
+    </div>
   </div>
 );
 

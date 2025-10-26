@@ -2,7 +2,7 @@
 .render-status-card {
   display: flex;
   flex-direction: column;
-  gap: var(--space-16);
+  gap: var(--gap-md);
 }
 
 .render-status-header {
@@ -14,7 +14,7 @@
 .render-status-info {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-12);
+  gap: var(--gap-md);
   flex: 1;
 }
 
@@ -37,7 +37,7 @@
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--titles);
-  margin: 0 0 var(--space-4);
+  margin: 0 0 var(--gap-xs);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -46,7 +46,7 @@
 .render-status-meta {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
   flex-wrap: wrap;
 }
 
@@ -54,7 +54,7 @@
   font-size: 0.75rem;
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--gap-xs);
 }
 
 .render-status-icon {
@@ -104,11 +104,11 @@
 .render-status-actions {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--gap-xs);
 }
 
 .render-action {
-  padding: var(--space-4);
+  padding: var(--gap-xs);
   background: transparent;
   border: none;
   border-radius: var(--radius-sm);
@@ -137,7 +137,7 @@
 .render-status-progress {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .render-status-timing {
@@ -148,7 +148,7 @@
 }
 
 .render-status-error {
-  padding: var(--space-12);
+  padding: var(--gap-md);
   background: rgba(239, 68, 68, 0.1);
   border: 1px solid rgba(239, 68, 68, 0.2);
   border-radius: var(--radius-sm);
@@ -171,13 +171,13 @@
 .render-status-times {
   display: flex;
   align-items: center;
-  gap: var(--space-16);
+  gap: var(--gap-md);
 }
 
 .render-status-credits {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--gap-xs);
 }
 
 .render-status-credits-icon {

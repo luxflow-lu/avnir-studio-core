@@ -3,7 +3,7 @@
 .price {
   display: inline-flex;
   align-items: baseline;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
   font-weight: 600;
   color: var(--foreground);
 }
@@ -12,7 +12,7 @@
   font-size: 0.875em;
   font-weight: 500;
   color: var(--muted-foreground);
-  margin-right: var(--space-2);
+  margin-right: var(--gap-xs);
 }
 
 .price-amount {

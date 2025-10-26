@@ -4,7 +4,7 @@
 .stats-section {
   width: 100%;
   margin: 0 auto;
-  padding: var(--space-64) var(--space-16);
+  padding: var(--padding-section-md) var(--gap-md);
 }
 
 .stats-container {
@@ -13,16 +13,16 @@
 }
 
 .stats-title {
-  font-size: var(--text-2xl);
+  font-size: var(--text-h4);
   font-weight: var(--font-semibold);
   color: var(--titles);
   text-align: center;
-  margin-bottom: var(--space-48);
+  margin-bottom: var(--padding-section-sm);
 }
 
 .stats-grid {
   display: grid;
-  gap: var(--space-32);
+  gap: var(--gap-xl);
   grid-template-columns: 1fr;
 }
 
@@ -41,7 +41,7 @@
 .stat-item,
 .stat-card {
   text-align: center;
-  padding: var(--space-32);
+  padding: var(--gap-xl);
   transition: transform 0.3s ease;
 }
 
@@ -50,23 +50,23 @@
 }
 
 .stat-value {
-  font-size: clamp(var(--text-5xl), 5vw, var(--text-6xl));
+  font-size: clamp(var(--text-h1), 5vw, var(--text-display-sm));
   font-weight: var(--font-bold);
   color: var(--primary);
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--gap-md);
   line-height: var(--leading-none);
   letter-spacing: var(--tracking-tight);
 }
 
 .stat-label {
-  font-size: var(--text-lg);
+  font-size: var(--text-body-lg);
   font-weight: var(--font-medium);
   color: var(--titles);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--gap-xs);
   opacity: 0.9;
 }
 
 .stat-sublabel {
-  font-size: var(--text-sm);
+  font-size: var(--text-small);
   color: var(--muted);
 }

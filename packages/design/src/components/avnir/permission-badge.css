@@ -2,20 +2,20 @@
 .permission-badge {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-4);
-  padding: var(--space-4) var(--space-8);
+  gap: var(--gap-xs);
+  padding: var(--gap-xs) var(--gap-sm);
   border-radius: var(--radius-full);
   font-size: 0.75rem;
   font-weight: 500;
 }
 
 .permission-badge--sm {
-  padding: var(--space-2) var(--space-6);
+  padding: var(--gap-xs) var(--gap-sm);
   font-size: 0.625rem;
 }
 
 .permission-badge--md {
-  padding: var(--space-4) var(--space-8);
+  padding: var(--gap-xs) var(--gap-sm);
   font-size: 0.75rem;
 }
 

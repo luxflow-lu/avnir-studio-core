@@ -4,13 +4,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-4);
+  gap: var(--gap-xs);
 }
 
 .pagination-content {
   display: flex;
   align-items: center;
-  gap: var(--space-2);
+  gap: var(--gap-xs);
 }
 
 .pagination-item {
@@ -19,7 +19,7 @@
   justify-content: center;
   min-width: 2.25rem;
   height: 2.25rem;
-  padding: 0 var(--space-8);
+  padding: 0 var(--gap-sm);
   font-size: 0.875rem;
   font-weight: 500;
   border-radius: var(--radius-md);
@@ -72,8 +72,8 @@
 .pagination-next {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
-  padding: 0 var(--space-12);
+  gap: var(--gap-xs);
+  padding: 0 var(--gap-md);
 }
 
 /* Pagination sizes */
@@ -81,7 +81,7 @@
   min-width: 2rem;
   height: 2rem;
   font-size: 0.75rem;
-  padding: 0 var(--space-6);
+  padding: 0 var(--gap-sm);
 }
 
 .pagination--sm .pagination-ellipsis {
@@ -91,14 +91,14 @@
 
 .pagination--sm .pagination-previous,
 .pagination--sm .pagination-next {
-  padding: 0 var(--space-8);
+  padding: 0 var(--gap-sm);
 }
 
 .pagination--lg .pagination-item {
   min-width: 2.75rem;
   height: 2.75rem;
   font-size: 1rem;
-  padding: 0 var(--space-12);
+  padding: 0 var(--gap-md);
 }
 
 .pagination--lg .pagination-ellipsis {
@@ -108,12 +108,12 @@
 
 .pagination--lg .pagination-previous,
 .pagination--lg .pagination-next {
-  padding: 0 var(--space-16);
+  padding: 0 var(--gap-md);
 }
 
 /* Pagination info */
 .pagination-info {
   font-size: 0.875rem;
   color: var(--muted-foreground);
-  margin: 0 var(--space-16);
+  margin: 0 var(--gap-md);
 }

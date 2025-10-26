@@ -4,6 +4,7 @@ export * as Layout from "./components/layout";
 export * as Navigation from "./components/navigation";
 export * as Form from "./components/form";
 export * as DataDisplay from "./components/data-display";
+export * as Content from "./components/content";
 export * as Feedback from "./components/feedback";
 export * as Marketing from "./components/marketing";
 export * as Ecommerce from "./components/ecommerce";
@@ -16,7 +17,7 @@ export * as Avnir from "./components/avnir";
 // Direct exports for common primitives and components
 export * from "./components/primitives/Card";
 export * from "./components/primitives/Container";
-export * from "./components/primitives/Section";
+// Section supprimé - utiliser directement <section className="section">
 export * from "./components/form/Button";
 export * from "./components/form/Input";
 export * from "./components/form/Textarea";

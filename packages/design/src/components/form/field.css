@@ -3,7 +3,7 @@
 .field {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .field-label {
@@ -16,7 +16,7 @@
 .field-label--required::after {
   content: "*";
   color: var(--destructive);
-  margin-left: var(--space-4);
+  margin-left: var(--gap-xs);
 }
 
 .field-help {

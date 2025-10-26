@@ -10,7 +10,7 @@
 
 .project-card-media {
   position: relative;
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--gap-md);
 }
 
 .project-card-thumbnail,
@@ -44,8 +44,8 @@
 
 .project-card-status {
   position: absolute;
-  top: var(--space-8);
-  right: var(--space-8);
+  top: var(--gap-sm);
+  right: var(--gap-sm);
 }
 
 .project-card-badge {
@@ -69,12 +69,12 @@
 
 .project-card-actions {
   position: absolute;
-  top: var(--space-8);
-  left: var(--space-8);
+  top: var(--gap-sm);
+  left: var(--gap-sm);
   opacity: 0;
   transition: opacity 0.2s ease;
   display: flex;
-  gap: var(--space-4);
+  gap: var(--gap-xs);
 }
 
 .project-card:hover .project-card-actions {
@@ -111,7 +111,7 @@
 .project-card-info {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .project-card-header {
@@ -128,7 +128,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding-right: var(--space-8);
+  padding-right: var(--gap-sm);
   margin: 0;
 }
 

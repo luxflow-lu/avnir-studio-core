@@ -22,12 +22,12 @@
   background-color: var(--primary);
   color: var(--bg);
   border-radius: var(--radius-full);
-  padding: 0 var(--space-4);
+  padding: 0 var(--gap-xs);
 }
 
 .mini-cart-panel {
   position: absolute;
-  top: calc(100% + var(--space-8));
+  top: calc(100% + var(--gap-sm));
   right: 0;
   width: 20rem;
   background-color: var(--background);
@@ -41,7 +41,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-16);
+  padding: var(--gap-md);
   border-bottom: 1px solid var(--border);
 }
 
@@ -55,7 +55,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: var(--space-4);
+  padding: var(--gap-xs);
   color: var(--muted-foreground);
   transition: color 0.2s ease;
 }
@@ -67,14 +67,14 @@
 .mini-cart-items {
   max-height: 20rem;
   overflow-y: auto;
-  padding: var(--space-16);
+  padding: var(--gap-md);
 }
 
 .mini-cart-item {
   display: flex;
-  gap: var(--space-12);
-  padding-bottom: var(--space-16);
-  margin-bottom: var(--space-16);
+  gap: var(--gap-md);
+  padding-bottom: var(--gap-md);
+  margin-bottom: var(--gap-md);
   border-bottom: 1px solid var(--border);
 }
 
@@ -114,7 +114,7 @@
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--foreground);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--gap-xs);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -123,7 +123,7 @@
 .mini-cart-item-variant {
   font-size: 0.75rem;
   color: var(--muted-foreground);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--gap-sm);
 }
 
 .mini-cart-item-footer {
@@ -135,7 +135,7 @@
 .mini-cart-quantity {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .mini-cart-quantity-btn {
@@ -174,7 +174,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: var(--space-4);
+  padding: var(--gap-xs);
   color: var(--destructive);
   transition: opacity 0.2s ease;
 }
@@ -184,14 +184,14 @@
 }
 
 .mini-cart-empty {
-  padding: var(--space-48) var(--space-24);
+  padding: var(--padding-section-sm) var(--gap-xl);
   text-align: center;
 }
 
 .mini-cart-empty-icon {
   width: 4rem;
   height: 4rem;
-  margin: 0 auto var(--space-16);
+  margin: 0 auto var(--gap-md);
   color: var(--muted-foreground);
 }
 
@@ -201,7 +201,7 @@
 }
 
 .mini-cart-footer {
-  padding: var(--space-16);
+  padding: var(--gap-md);
   border-top: 1px solid var(--border);
 }
 
@@ -209,7 +209,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--gap-md);
 }
 
 .mini-cart-total-label {

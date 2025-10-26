@@ -15,7 +15,7 @@
 
 .asset-tile-media {
   position: relative;
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--gap-md);
 }
 
 .asset-tile-image {
@@ -63,8 +63,8 @@
 
 .asset-tile-status {
   position: absolute;
-  top: var(--space-8);
-  right: var(--space-8);
+  top: var(--gap-sm);
+  right: var(--gap-sm);
   font-size: 0.75rem;
 }
 
@@ -112,13 +112,13 @@
   color: white;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
-  padding: var(--space-8);
+  padding: var(--gap-sm);
 }
 
 .asset-tile-content {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .asset-tile-header {
@@ -135,7 +135,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding-right: var(--space-8);
+  padding-right: var(--gap-sm);
   margin: 0;
 }
 
@@ -162,12 +162,12 @@
 
 .asset-tile-actions {
   position: absolute;
-  top: var(--space-8);
-  left: var(--space-8);
+  top: var(--gap-sm);
+  left: var(--gap-sm);
   opacity: 0;
   transition: opacity 0.2s ease;
   display: flex;
-  gap: var(--space-4);
+  gap: var(--gap-xs);
 }
 
 .asset-tile:hover .asset-tile-actions {

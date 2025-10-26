@@ -48,7 +48,7 @@
 .radio-wrapper {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .radio-label {
@@ -67,10 +67,10 @@
 .radio-group {
   display: flex;
   flex-direction: column;
-  gap: var(--space-12);
+  gap: var(--gap-md);
 }
 
 .radio-group--horizontal {
   flex-direction: row;
-  gap: var(--space-16);
+  gap: var(--gap-md);
 }

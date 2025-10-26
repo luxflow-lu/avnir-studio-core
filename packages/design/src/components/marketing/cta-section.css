@@ -1,7 +1,7 @@
 /* CTA Section Component */
 
 .cta-section {
-  padding: var(--space-section-lg) var(--space-global-x);
+  padding: var(--space-section-lg) var(--padding-container);
   text-align: center;
   background-color: var(--surface);
 }

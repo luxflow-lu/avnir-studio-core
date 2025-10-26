@@ -59,7 +59,7 @@
 .progress-container {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--gap-xs);
 }
 
 .progress-label {

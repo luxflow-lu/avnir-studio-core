@@ -64,7 +64,7 @@
 .spinner-container {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .spinner-text {

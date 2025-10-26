@@ -13,7 +13,7 @@
 .navbar-container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 var(--space-16);
+  padding: 0 var(--gap-md);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,13 +24,13 @@
 .navbar-brand {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
-  font-size: var(--text-lg);
+  gap: var(--gap-sm);
+  font-size: var(--text-body-lg);
   font-weight: 600;
   color: var(--titles);
   text-decoration: none;
   transition: opacity 0.2s;
-  max-height: var(--space-16);
+  max-height: var(--gap-md);
 }
 
 .navbar-brand:hover {
@@ -39,7 +39,7 @@
 
 .navbar-brand svg,
 .navbar-brand img {
-  max-height: var(--space-16);
+  max-height: var(--gap-md);
   width: auto;
 }
 
@@ -47,13 +47,13 @@
 .navbar-nav {
   display: flex;
   align-items: center;
-  gap: var(--space-32);
+  gap: var(--gap-xl);
 }
 
 .navbar-link {
   color: var(--text);
   text-decoration: none;
-  font-size: var(--text-base);
+  font-size: var(--text-body);
   font-weight: 500;
   transition: color 0.2s;
 }
@@ -70,7 +70,7 @@
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: var(--space-12);
+  gap: var(--gap-md);
 }
 
 /* Mobile menu toggle button */
@@ -79,7 +79,7 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  padding: var(--space-8);
+  padding: var(--gap-sm);
   transition: opacity 0.2s;
 }
 
@@ -92,21 +92,21 @@
   display: none;
   background-color: var(--navbar-bg);
   border-top: 1px solid var(--navbar-border);
-  padding: var(--space-16);
+  padding: var(--gap-md);
 }
 
 .navbar-menu-nav {
   display: flex;
   flex-direction: column;
-  gap: var(--space-12);
+  gap: var(--gap-md);
 }
 
 .navbar-menu-link {
   color: var(--text);
   text-decoration: none;
-  font-size: var(--text-base);
+  font-size: var(--text-body);
   font-weight: 500;
-  padding: var(--space-12);
+  padding: var(--gap-md);
   border-radius: var(--radius-xs);
   transition: background-color 0.2s, color 0.2s;
 }
@@ -122,8 +122,8 @@
 }
 
 .navbar-menu-actions {
-  margin-top: var(--space-16);
-  padding-top: var(--space-16);
+  margin-top: var(--gap-md);
+  padding-top: var(--gap-md);
   border-top: 1px solid var(--border);
 }
 

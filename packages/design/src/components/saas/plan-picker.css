@@ -8,18 +8,18 @@
 .plan-picker-billing {
   display: flex;
   justify-content: center;
-  margin-bottom: var(--space-32);
+  margin-bottom: var(--gap-xl);
 }
 
 .plan-picker-billing-toggle {
   display: flex;
   background-color: var(--surface);
-  padding: var(--space-4);
+  padding: var(--gap-xs);
   border-radius: var(--radius-lg);
 }
 
 .plan-picker-billing-button {
-  padding: var(--space-8) var(--space-16);
+  padding: var(--gap-sm) var(--gap-md);
   font-size: 0.875rem;
   font-weight: 500;
   border-radius: var(--radius-md);
@@ -44,14 +44,14 @@
 .plan-picker-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-24);
+  gap: var(--gap-xl);
   overflow: visible;
 }
 
 @media (min-width: 768px) {
   .plan-picker-grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-32);
+    gap: var(--gap-xl);
   }
 }
 
@@ -59,7 +59,7 @@
 .plan-picker-card {
   position: relative;
   background-color: var(--surface);
-  padding: var(--space-24);
+  padding: var(--gap-xl);
   border-radius: var(--radius-lg);
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1);
   transition: all 0.2s ease;
@@ -82,7 +82,7 @@
 
 .plan-picker-badge-content {
   display: inline-block;
-  padding: var(--space-4) var(--space-8);
+  padding: var(--gap-xs) var(--gap-sm);
   background-color: var(--muted);
   color: var(--muted-foreground);
   font-size: 0.6875rem;
@@ -94,24 +94,24 @@
 /* Plan Content */
 .plan-picker-header {
   text-align: center;
-  margin-bottom: var(--space-24);
+  margin-bottom: var(--gap-xl);
 }
 
 .plan-picker-name {
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--foreground);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--gap-sm);
 }
 
 .plan-picker-description {
   color: var(--muted-foreground);
   font-size: 0.875rem;
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--gap-md);
 }
 
 .plan-picker-price {
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--gap-sm);
 }
 
 .plan-picker-price-amount {
@@ -122,7 +122,7 @@
 
 .plan-picker-price-period {
   color: var(--muted-foreground);
-  margin-left: var(--space-4);
+  margin-left: var(--gap-xs);
 }
 
 .plan-picker-price-note {
@@ -134,14 +134,14 @@
 .plan-picker-features {
   display: flex;
   flex-direction: column;
-  gap: var(--space-12);
-  margin-bottom: var(--space-24);
+  gap: var(--gap-md);
+  margin-bottom: var(--gap-xl);
 }
 
 .plan-picker-feature {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
   font-size: 0.875rem;
 }
 
@@ -160,5 +160,5 @@
 /* CTA Button */
 .plan-picker-cta {
   width: 100%;
-  margin-top: var(--space-16);
+  margin-top: var(--gap-md);
 }

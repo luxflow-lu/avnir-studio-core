@@ -5,7 +5,7 @@
   z-index: 100;
   background-color: var(--foreground);
   color: var(--background);
-  padding: var(--space-6) var(--space-12);
+  padding: var(--gap-sm) var(--gap-md);
   border-radius: var(--radius-sm);
   font-size: 0.875rem;
   line-height: 1.4;

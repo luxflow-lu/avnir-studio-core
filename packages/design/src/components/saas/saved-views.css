@@ -3,21 +3,21 @@
 .saved-views-container {
   background-color: var(--surface);
   border-radius: var(--radius-lg);
-  padding: var(--space-16);
+  padding: var(--gap-md);
 }
 
 .saved-views-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--gap-md);
 }
 
 .saved-views-header h3 {
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--foreground);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--gap-xs);
 }
 
 .saved-views-header p {
@@ -27,20 +27,20 @@
 
 .saved-views-empty {
   text-align: center;
-  padding: var(--space-32) 0;
+  padding: var(--gap-xl) 0;
 }
 
 .saved-views-empty-icon {
   width: 3rem;
   height: 3rem;
-  margin: 0 auto var(--space-12);
+  margin: 0 auto var(--gap-md);
   color: var(--muted-foreground);
 }
 
 .saved-views-empty p {
   font-size: 0.875rem;
   color: var(--muted-foreground);
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--gap-md);
 }
 
 .saved-views-empty p:last-of-type {
@@ -50,14 +50,14 @@
 .saved-views-list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .saved-view-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-12);
+  padding: var(--gap-md);
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
   cursor: pointer;
@@ -81,8 +81,8 @@
 .saved-view-header {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
-  margin-bottom: var(--space-4);
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-xs);
 }
 
 .saved-view-name {
@@ -97,7 +97,7 @@
 .saved-view-meta {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
   font-size: 0.75rem;
   color: var(--muted-foreground);
 }
@@ -105,14 +105,14 @@
 .saved-view-actions {
   display: flex;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--gap-xs);
 }
 
 /* Modal Form */
 .saved-views-form {
   display: flex;
   flex-direction: column;
-  gap: var(--space-16);
+  gap: var(--gap-md);
 }
 
 .saved-views-form-field label {
@@ -120,29 +120,29 @@
   font-size: 0.875rem;
   font-weight: 500;
   color: var(--foreground);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--gap-sm);
 }
 
 .saved-views-filters-preview {
   background-color: var(--muted);
-  padding: var(--space-12);
+  padding: var(--gap-md);
   border-radius: var(--radius-sm);
 }
 
 .saved-views-filters-preview p {
   font-size: 0.75rem;
   color: var(--muted-foreground);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--gap-sm);
 }
 
 .saved-views-filters-list {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-4);
+  gap: var(--gap-xs);
 }
 
 .saved-views-form-actions {
   display: flex;
-  gap: var(--space-12);
-  padding-top: var(--space-16);
+  gap: var(--gap-md);
+  padding-top: var(--gap-md);
 }

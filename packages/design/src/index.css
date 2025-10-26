@@ -45,7 +45,7 @@
 @import './components/primitives/card.css';
 @import './components/primitives/container.css';
 @import './components/primitives/divider.css';
-@import './components/primitives/section.css';
+/* section.css supprimé - définition dans themes.css */
 @import './components/primitives/spacer.css';
 @import './components/primitives/stack.css';
 
@@ -73,6 +73,10 @@
 @import './components/layout/navbar.css';
 @import './components/layout/footer.css';
 @import './components/layout/section-header.css';
+@import './components/layout/doc-layout.css';
+
+/* Content Components */
+@import './components/content/prose.css';
 
 /* Marketing Components */
 @import './components/marketing/hero.css';

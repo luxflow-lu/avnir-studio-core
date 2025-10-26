@@ -8,7 +8,7 @@
   max-height: 100vh;
   width: 100%;
   flex-direction: column-reverse;
-  padding: var(--space-16);
+  padding: var(--gap-md);
   pointer-events: none;
 }
 
@@ -22,7 +22,7 @@
   max-height: 100vh;
   width: 420px;
   flex-direction: column-reverse;
-  padding: var(--space-16);
+  padding: var(--gap-md);
   pointer-events: none;
 }
 
@@ -33,16 +33,16 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-16);
+  gap: var(--gap-md);
   overflow: hidden;
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
-  padding: var(--space-24);
-  padding-right: var(--space-32);
+  padding: var(--gap-xl);
+  padding-right: var(--gap-xl);
   background-color: var(--background);
   color: var(--foreground);
   box-shadow: var(--shadow-lg);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--gap-sm);
   animation: toast-slide-in 0.3s ease-out;
 }
 
@@ -53,7 +53,7 @@
 .toast-content {
   display: flex;
   align-items: center;
-  gap: var(--space-12);
+  gap: var(--gap-md);
   flex: 1;
 }
 
@@ -66,7 +66,7 @@
 .toast-text {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  gap: var(--gap-xs);
 }
 
 .toast-title {
@@ -83,12 +83,12 @@
 
 .toast-close {
   position: absolute;
-  right: var(--space-8);
-  top: var(--space-8);
+  right: var(--gap-sm);
+  top: var(--gap-sm);
   background: none;
   border: none;
   cursor: pointer;
-  padding: var(--space-4);
+  padding: var(--gap-xs);
   border-radius: var(--radius-sm);
   color: inherit;
   opacity: 0.7;

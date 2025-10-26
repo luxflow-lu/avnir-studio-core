@@ -8,7 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--space-16);
+  padding: var(--gap-md);
   animation: modal-overlay-show 0.2s ease-out;
 }
 
@@ -28,7 +28,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-24);
+  padding: var(--gap-xl);
   border-bottom: 1px solid var(--border);
 }
 
@@ -41,12 +41,12 @@
 
 .modal-close {
   position: absolute;
-  right: var(--space-16);
-  top: var(--space-16);
+  right: var(--gap-md);
+  top: var(--gap-md);
   background: none;
   border: none;
   cursor: pointer;
-  padding: var(--space-4);
+  padding: var(--gap-xs);
   border-radius: var(--radius-sm);
   color: var(--muted-foreground);
   opacity: 0.7;
@@ -63,7 +63,7 @@
 }
 
 .modal-body {
-  padding: var(--space-24);
+  padding: var(--gap-xl);
   overflow-y: auto;
   max-height: calc(85vh - 8rem);
 }
@@ -72,8 +72,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  gap: var(--space-8);
-  padding: var(--space-24);
+  gap: var(--gap-sm);
+  padding: var(--gap-xl);
   border-top: 1px solid var(--border);
 }
 

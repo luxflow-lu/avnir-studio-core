@@ -14,12 +14,12 @@
   font-weight: 600;
   font-size: 0.875rem;
   text-align: left;
-  padding: var(--space-12);
+  padding: var(--gap-md);
   border-bottom: 1px solid var(--border);
 }
 
 .roles-matrix-cell {
-  padding: var(--space-12);
+  padding: var(--gap-md);
   border-bottom: 1px solid var(--border);
   text-align: center;
 }

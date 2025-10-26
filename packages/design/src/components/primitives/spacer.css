@@ -6,31 +6,31 @@
 
 /* Spacer sizes */
 .spacer--xs {
-  height: var(--space-4);
-  width: var(--space-4);
+  height: var(--gap-xs);
+  width: var(--gap-xs);
 }
 
 .spacer--sm {
-  height: var(--space-8);
-  width: var(--space-8);
+  height: var(--gap-sm);
+  width: var(--gap-sm);
 }
 
 .spacer--md {
-  height: var(--space-16);
-  width: var(--space-16);
+  height: var(--gap-md);
+  width: var(--gap-md);
 }
 
 .spacer--lg {
-  height: var(--space-24);
-  width: var(--space-24);
+  height: var(--gap-xl);
+  width: var(--gap-xl);
 }
 
 .spacer--xl {
-  height: var(--space-32);
-  width: var(--space-32);
+  height: var(--gap-xl);
+  width: var(--gap-xl);
 }
 
 .spacer--2xl {
-  height: var(--space-48);
-  width: var(--space-48);
+  height: var(--padding-section-sm);
+  width: var(--padding-section-sm);
 }

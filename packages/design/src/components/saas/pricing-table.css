@@ -3,7 +3,7 @@
 .pricing-table {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  gap: var(--space-24);
+  gap: var(--gap-xl);
   max-width: 80rem;
   margin: 0 auto;
 }
@@ -11,7 +11,7 @@
 .pricing-card {
   display: flex;
   flex-direction: column;
-  padding: var(--space-32);
+  padding: var(--gap-xl);
   background-color: var(--background);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
@@ -34,7 +34,7 @@
   top: -0.75rem;
   left: 50%;
   transform: translateX(-50%);
-  padding: var(--space-4) var(--space-12);
+  padding: var(--gap-xs) var(--gap-md);
   background-color: var(--primary);
   color: var(--bg);
   font-size: 0.75rem;
@@ -43,14 +43,14 @@
 }
 
 .pricing-card-header {
-  margin-bottom: var(--space-24);
+  margin-bottom: var(--gap-xl);
 }
 
 .pricing-card-name {
   font-size: 1.25rem;
   font-weight: 600;
   color: var(--foreground);
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--gap-sm);
 }
 
 .pricing-card-description {
@@ -59,7 +59,7 @@
 }
 
 .pricing-card-price {
-  margin-bottom: var(--space-24);
+  margin-bottom: var(--gap-xl);
 }
 
 .pricing-card-amount {
@@ -76,14 +76,14 @@
 
 .pricing-card-features {
   flex: 1;
-  margin-bottom: var(--space-24);
+  margin-bottom: var(--gap-xl);
 }
 
 .pricing-card-feature {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-8);
-  padding: var(--space-8) 0;
+  gap: var(--gap-sm);
+  padding: var(--gap-sm) 0;
   font-size: 0.875rem;
   color: var(--foreground);
 }

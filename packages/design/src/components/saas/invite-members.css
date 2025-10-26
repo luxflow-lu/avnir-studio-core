@@ -3,26 +3,26 @@
 .invite-members-form {
   display: flex;
   flex-direction: column;
-  gap: var(--space-16);
+  gap: var(--gap-md);
 }
 
 .invite-members-input-group {
   display: flex;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .invite-members-list {
   display: flex;
   flex-direction: column;
-  gap: var(--space-8);
-  margin-top: var(--space-16);
+  gap: var(--gap-sm);
+  margin-top: var(--gap-md);
 }
 
 .invite-member-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--space-12);
+  padding: var(--gap-md);
   background-color: var(--muted);
   border-radius: var(--radius-md);
 }

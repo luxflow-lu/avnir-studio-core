@@ -94,7 +94,7 @@
 .switch-wrapper {
   display: flex;
   align-items: center;
-  gap: var(--space-12);
+  gap: var(--gap-md);
 }
 
 .switch-label {

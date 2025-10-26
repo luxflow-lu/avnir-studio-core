@@ -2,7 +2,7 @@
 .model-selector {
   display: flex;
   flex-direction: column;
-  gap: var(--space-16);
+  gap: var(--gap-md);
 }
 
 .model-card {
@@ -28,7 +28,7 @@
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--gap-md);
 }
 
 .model-card-info {
@@ -38,8 +38,8 @@
 .model-card-title-row {
   display: flex;
   align-items: center;
-  gap: var(--space-8);
-  margin-bottom: var(--space-4);
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-xs);
   flex-wrap: wrap;
 }
 
@@ -102,7 +102,7 @@
 .model-card-description {
   font-size: 0.75rem;
   color: var(--muted);
-  margin: 0 0 var(--space-8);
+  margin: 0 0 var(--gap-sm);
   line-height: 1.4;
 }
 
@@ -128,7 +128,7 @@
 }
 
 .model-card-capabilities {
-  margin-bottom: var(--space-12);
+  margin-bottom: var(--gap-md);
 }
 
 .model-card-capabilities-title {
@@ -137,17 +137,17 @@
   color: var(--muted);
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin: 0 0 var(--space-8);
+  margin: 0 0 var(--gap-sm);
 }
 
 .model-card-capabilities-list {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-4);
+  gap: var(--gap-xs);
 }
 
 .model-capability {
-  padding: var(--space-4) var(--space-8);
+  padding: var(--gap-xs) var(--gap-sm);
   font-size: 0.75rem;
   background: rgba(255, 255, 255, 0.05);
   color: var(--muted);
@@ -156,8 +156,8 @@
 
 .model-card-selected {
   position: absolute;
-  top: var(--space-12);
-  right: var(--space-12);
+  top: var(--gap-md);
+  right: var(--gap-md);
 }
 
 .model-card-checkmark {
@@ -178,7 +178,7 @@
 
 .model-selector-empty {
   text-align: center;
-  padding: var(--space-32) var(--space-16);
+  padding: var(--gap-xl) var(--gap-md);
 }
 
 .model-selector-empty-text {

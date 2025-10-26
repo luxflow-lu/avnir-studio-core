@@ -3,8 +3,8 @@
 .banner {
   display: flex;
   align-items: center;
-  gap: var(--space-12);
-  padding: var(--space-12) var(--space-16);
+  gap: var(--gap-md);
+  padding: var(--gap-md) var(--gap-md);
   border-radius: var(--radius-md);
   border: 1px solid var(--border);
   background-color: var(--background);
@@ -25,7 +25,7 @@
 
 .banner-title {
   font-weight: 500;
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--gap-xs);
 }
 
 .banner-description {
@@ -37,7 +37,7 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: var(--space-4);
+  padding: var(--gap-xs);
   border-radius: var(--radius-sm);
   color: var(--muted-foreground);
   transition: all 0.2s ease;

@@ -3,7 +3,7 @@
 .variants-swatches {
   display: flex;
   flex-direction: column;
-  gap: var(--space-12);
+  gap: var(--gap-md);
 }
 
 .variants-swatches-label {
@@ -15,7 +15,7 @@
 .variants-swatches-group {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 /* Color swatches */
@@ -61,7 +61,7 @@
   width: auto;
   min-width: 2.5rem;
   height: 2.5rem;
-  padding: 0 var(--space-12);
+  padding: 0 var(--gap-md);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,7 +90,7 @@
   width: auto;
   min-width: 4rem;
   height: 2.5rem;
-  padding: 0 var(--space-16);
+  padding: 0 var(--gap-md);
   display: flex;
   align-items: center;
   justify-content: center;

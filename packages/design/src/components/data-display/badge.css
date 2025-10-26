@@ -7,7 +7,7 @@
   font-weight: 500;
   font-size: 0.75rem;
   line-height: 1;
-  padding: var(--space-2) var(--space-8);
+  padding: var(--gap-xs) var(--gap-sm);
   transition: all 0.2s ease;
 }
 
@@ -77,10 +77,10 @@
 /* Badge sizes */
 .badge--sm {
   font-size: 0.625rem;
-  padding: var(--space-1) var(--space-6);
+  padding: var(--gap-xs) var(--gap-sm);
 }
 
 .badge--lg {
   font-size: 0.875rem;
-  padding: var(--space-4) var(--space-12);
+  padding: var(--gap-xs) var(--gap-md);
 }

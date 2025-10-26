@@ -3,7 +3,7 @@
 .pricing-strip {
   width: 100%;
   margin: 0 auto;
-  padding: var(--space-64) var(--space-16);
+  padding: var(--padding-section-md) var(--gap-md);
   background-color: var(--surface);
 }
 
@@ -17,19 +17,19 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--titles);
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--gap-md);
 }
 
 .pricing-strip-description {
   color: var(--muted);
-  margin-bottom: var(--space-32);
+  margin-bottom: var(--gap-xl);
 }
 
 .pricing-strip-content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-24);
+  gap: var(--gap-xl);
 }
 
 @media (min-width: 768px) {
@@ -42,7 +42,7 @@
 .pricing-strip-price {
   display: flex;
   align-items: baseline;
-  gap: var(--space-8);
+  gap: var(--gap-sm);
 }
 
 .pricing-strip-amount {
@@ -58,7 +58,7 @@
 
 .pricing-strip-actions {
   display: flex;
-  gap: var(--space-16);
+  gap: var(--gap-md);
   flex-wrap: wrap;
   justify-content: center;
 }
