@@ -39212,3 +39212,487 @@ Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as '
 
 Import trace for requested module:
 ./app/(marketing)/page.tsx
+ [33m[1m⚠[22m[39m Fast Refresh had to perform a full reload due to a runtime error.
+ [33m[1m⚠[22m[39m ./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Card' is not exported from '@avnir/ui' (imported as 'Card').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+
+./app/(marketing)/page.tsx
+Attempted import error: 'Button' is not exported from '@avnir/ui' (imported as 'Button').
+
+Import trace for requested module:
+./app/(marketing)/page.tsx
+ [31m[1m⨯[22m[39m [Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.] {
+  digest: [32m'1508539828'[39m
+}
+ GET / [31m500[39m in 19321ms
