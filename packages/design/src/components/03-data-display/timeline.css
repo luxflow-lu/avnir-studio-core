@@ -1,0 +1,58 @@
+/* Timeline Component */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+}
+
+.timeline-item {
+  display: flex;
+  gap: var(--gap-md);
+}
+
+.timeline-marker {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: var(--radius-full);
+  background: var(--primary);
+  border: 2px solid var(--bg);
+  box-shadow: 0 0 0 2px var(--primary);
+}
+
+.timeline-step-line {
+  width: 2px;
+  flex: 1;
+  background: var(--border);
+  margin-top: var(--gap-xs);
+}
+
+.timeline-content {
+  flex: 1;
+  padding-bottom: var(--gap-md);
+}
+
+.timeline-date {
+  font-size: var(--text-small);
+  color: var(--muted);
+  margin-bottom: var(--gap-xs);
+}
+
+.timeline-title {
+  font-size: var(--text-body);
+  font-weight: var(--font-semibold);
+  color: var(--titles);
+  margin-bottom: var(--gap-xs);
+}
+
+.timeline-description {
+  font-size: var(--text-body);
+  color: var(--text);
+  line-height: var(--leading-relaxed);
+}

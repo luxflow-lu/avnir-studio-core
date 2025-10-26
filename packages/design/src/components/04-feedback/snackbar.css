@@ -1,0 +1,30 @@
+/* Snackbar Component */
+.snackbar {
+  position: fixed;
+  bottom: var(--gap-lg);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
+  padding: var(--gap-md) var(--gap-lg);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  min-width: 300px;
+  max-width: 600px;
+}
+
+.snackbar-message {
+  flex: 1;
+  font-size: var(--text-body);
+  color: var(--text);
+}
+
+.snackbar-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+}

@@ -1,0 +1,56 @@
+/* DataTable Component */
+.data-table {
+  overflow-x: auto;
+}
+
+.data-table-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.data-table-header-row {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.data-table-header {
+  padding: var(--gap-md);
+  text-align: left;
+  font-size: var(--text-small);
+  font-weight: var(--font-semibold);
+  color: var(--titles);
+}
+
+.data-table-sort-button {
+  width: 100%;
+  justify-content: flex-start;
+  padding: 0;
+  font-size: var(--text-small);
+  font-weight: var(--font-semibold);
+}
+
+.data-table-sort-icon {
+  margin-left: var(--gap-xs);
+  color: var(--primary);
+}
+
+.data-table-row {
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition-colors);
+}
+
+.data-table-row:hover {
+  background: var(--surface);
+}
+
+.data-table-row:last-child {
+  border-bottom: none;
+}
+
+.data-table-cell {
+  padding: var(--gap-md);
+  font-size: var(--text-body);
+  color: var(--text);
+}

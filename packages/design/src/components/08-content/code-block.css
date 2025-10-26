@@ -1,0 +1,53 @@
+/* CodeBlock Component */
+.code-block {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  background: var(--bg);
+}
+
+.code-block-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--gap-sm) var(--gap-md);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.code-block-language {
+  font-size: var(--text-small);
+  font-weight: var(--font-medium);
+  color: var(--muted);
+  text-transform: uppercase;
+}
+
+.code-block-pre {
+  margin: 0;
+  padding: var(--gap-md);
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: var(--text-small);
+  line-height: var(--leading-relaxed);
+}
+
+.code-block-code {
+  display: block;
+}
+
+.code-block-line {
+  display: flex;
+  gap: var(--gap-md);
+}
+
+.code-block-line-number {
+  display: inline-block;
+  min-width: 2em;
+  text-align: right;
+  color: var(--muted);
+  user-select: none;
+}
+
+.code-block-line-content {
+  flex: 1;
+}

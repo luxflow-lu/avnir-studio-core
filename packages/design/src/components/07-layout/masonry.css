@@ -1,0 +1,46 @@
+/* Masonry Component */
+.masonry {
+  column-count: 1;
+}
+
+.masonry--cols-2 {
+  column-count: 2;
+}
+
+.masonry--cols-3 {
+  column-count: 3;
+}
+
+.masonry--cols-4 {
+  column-count: 4;
+}
+
+.masonry--gap-sm {
+  column-gap: var(--gap-sm);
+}
+
+.masonry--gap-md {
+  column-gap: var(--gap-md);
+}
+
+.masonry--gap-lg {
+  column-gap: var(--gap-lg);
+}
+
+.masonry > * {
+  break-inside: avoid;
+  margin-bottom: var(--gap-md);
+}
+
+@media (max-width: 768px) {
+  .masonry--cols-3,
+  .masonry--cols-4 {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .masonry {
+    column-count: 1;
+  }
+}

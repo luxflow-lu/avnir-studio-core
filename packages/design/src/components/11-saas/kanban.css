@@ -1,0 +1,113 @@
+/* Kanban Component */
+.kanban {
+  display: flex;
+  gap: var(--gap-lg);
+  overflow-x: auto;
+  padding: var(--gap-md);
+}
+
+.kanban-column {
+  flex-shrink: 0;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.kanban-column-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--gap-md);
+  border-bottom: 1px solid var(--border);
+}
+
+.kanban-column-title {
+  font-size: var(--text-body);
+  font-weight: var(--font-semibold);
+  color: var(--titles);
+  margin: 0;
+}
+
+.kanban-column-count {
+  font-size: var(--text-small);
+  color: var(--muted);
+  background: var(--bg);
+  padding: var(--gap-xs) var(--gap-sm);
+  border-radius: var(--radius-xs);
+}
+
+.kanban-column-content {
+  flex: 1;
+  padding: var(--gap-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+  overflow-y: auto;
+}
+
+.kanban-card {
+  padding: var(--gap-md);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: var(--transition-transform);
+}
+
+.kanban-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.kanban-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-sm);
+  margin-bottom: var(--gap-sm);
+}
+
+.kanban-card-title {
+  font-size: var(--text-body);
+  font-weight: var(--font-medium);
+  color: var(--titles);
+  margin: 0;
+  flex: 1;
+}
+
+.kanban-card-priority {
+  font-size: var(--text-small);
+  padding: var(--gap-xs) var(--gap-sm);
+  border-radius: var(--radius-xs);
+  text-transform: capitalize;
+}
+
+.kanban-card-priority--low {
+  background: var(--surface);
+  color: var(--muted);
+}
+
+.kanban-card-priority--medium {
+  background: var(--warning);
+  color: #0b0b0d;
+}
+
+.kanban-card-priority--high {
+  background: var(--destructive);
+  color: var(--on-primary);
+}
+
+.kanban-card-description {
+  font-size: var(--text-small);
+  color: var(--text);
+  line-height: var(--leading-relaxed);
+  margin: 0 0 var(--gap-sm) 0;
+}
+
+.kanban-card-assignee {
+  font-size: var(--text-small);
+  color: var(--muted);
+}

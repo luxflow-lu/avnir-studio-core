@@ -1,0 +1,31 @@
+/* ScrollSpy Component */
+.scrollspy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-xs);
+  position: sticky;
+  top: var(--gap-lg);
+}
+
+.scrollspy-item {
+  padding: var(--gap-sm) var(--gap-md);
+  text-align: left;
+  font-size: var(--text-body);
+  color: var(--muted);
+  background: transparent;
+  border: none;
+  border-left: 2px solid var(--border);
+  cursor: pointer;
+  transition: var(--transition-colors);
+}
+
+.scrollspy-item:hover {
+  color: var(--text);
+  border-left-color: var(--primary);
+}
+
+.scrollspy-item--active {
+  color: var(--primary);
+  border-left-color: var(--primary);
+  font-weight: var(--font-medium);
+}

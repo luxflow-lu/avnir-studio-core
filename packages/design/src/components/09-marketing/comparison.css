@@ -1,0 +1,47 @@
+/* Comparison Component */
+.comparison {
+  overflow-x: auto;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.comparison-header {
+  padding: var(--gap-md) var(--gap-lg);
+  text-align: left;
+  font-size: var(--text-body);
+  font-weight: var(--font-semibold);
+  color: var(--titles);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.comparison-row {
+  border-bottom: 1px solid var(--border);
+}
+
+.comparison-row:last-child {
+  border-bottom: none;
+}
+
+.comparison-feature {
+  padding: var(--gap-md) var(--gap-lg);
+  font-size: var(--text-body);
+  color: var(--text);
+  font-weight: var(--font-medium);
+}
+
+.comparison-value {
+  padding: var(--gap-md) var(--gap-lg);
+  text-align: center;
+  font-size: var(--text-body);
+  color: var(--muted);
+}
+
+.comparison-row:hover {
+  background: var(--surface);
+}

@@ -1,0 +1,89 @@
+/* DocLayout Component - Documentation pages layout with sidebar */
+
+.doc-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0;
+  min-height: calc(100vh - 64px);
+}
+
+.doc-layout-sidebar {
+  border-right: 1px solid var(--border);
+  padding: var(--padding-section-md) var(--gap-xl);
+  position: sticky;
+  top: 64px;
+  height: calc(100vh - 64px);
+  overflow-y: auto;
+  background: var(--bg);
+}
+
+.doc-layout-content {
+  /* No padding here - sections handle their own spacing */
+  width: 100%;
+}
+
+/* Sidebar Navigation */
+.doc-nav-section {
+  margin-bottom: var(--gap-xl);
+}
+
+.doc-nav-title {
+  display: block;
+  font-size: var(--text-small);
+  font-weight: var(--font-semibold);
+  color: var(--titles);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--gap-md);
+  text-decoration: none;
+  padding: var(--gap-sm) 0;
+  transition: var(--transition-colors);
+  cursor: pointer;
+}
+
+.doc-nav-title:hover {
+  color: var(--primary);
+}
+
+.doc-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.doc-nav-list li {
+  margin-bottom: var(--gap-sm);
+}
+
+.doc-nav-link {
+  display: block;
+  padding: var(--gap-sm) var(--gap-md);
+  color: var(--text);
+  text-decoration: none;
+  border-radius: var(--radius-xs);
+  transition: var(--transition-colors);
+  font-size: var(--text-body);
+}
+
+.doc-nav-link:hover {
+  background-color: var(--surface);
+  color: var(--titles);
+}
+
+.doc-nav-link:active,
+.doc-nav-link[aria-current="page"] {
+  background-color: var(--primary);
+  color: #0b0b0d;
+  font-weight: var(--font-medium);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .doc-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .doc-layout-sidebar {
+    display: none;
+  }
+}

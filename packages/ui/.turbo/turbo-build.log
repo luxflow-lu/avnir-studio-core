@@ -1,26 +1,25 @@
 
-
 > @avnir/ui@0.1.0 build /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui
 > tsup src/index.ts --format esm,cjs --dts --sourcemap --clean && pnpm run build:css
 
-[34mCLI[39m Building entry: src/index.ts
-[34mCLI[39m Using tsconfig: tsconfig.json
-[34mCLI[39m tsup v8.5.0
-[34mCLI[39m Using tsup config: /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/tsup.config.ts
-[34mCLI[39m Target: es2022
-[34mCLI[39m Cleaning output folder
-[34mESM[39m Build start
-[34mCJS[39m Build start
-[32mESM[39m [1mdist/index.js     [22m[32m232.75 KB[39m
-[32mESM[39m [1mdist/index.js.map [22m[32m369.22 KB[39m
-[32mESM[39m ⚡️ Build success in 408ms
-[32mCJS[39m [1mdist/index.cjs     [22m[32m260.38 KB[39m
-[32mCJS[39m [1mdist/index.cjs.map [22m[32m362.96 KB[39m
-[32mCJS[39m ⚡️ Build success in 410ms
+CLI Building entry: src/index.ts
+CLI Using tsconfig: tsconfig.json
+CLI tsup v8.5.0
+CLI Using tsup config: /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/tsup.config.ts
+CLI Target: es2022
+CLI Cleaning output folder
+ESM Build start
+CJS Build start
+ESM dist/index.js     327.07 KB
+ESM dist/index.js.map 522.91 KB
+ESM ⚡️ Build success in 1106ms
+CJS dist/index.cjs     364.23 KB
+CJS dist/index.cjs.map 513.80 KB
+CJS ⚡️ Build success in 1448ms
 DTS Build start
-DTS ⚡️ Build success in 8755ms
-DTS dist/index.d.ts  55.64 KB
-DTS dist/index.d.cts 55.64 KB
+DTS ⚡️ Build success in 25363ms
+DTS dist/index.d.ts  82.56 KB
+DTS dist/index.d.cts 82.56 KB
 
 > @avnir/ui@0.1.0 build:css /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui
 > tailwindcss -c tailwind.build.config.cjs -i ./src/styles-source.css -o ./dist/styles.css --postcss ./postcss.build.config.cjs --minify
@@ -28,4 +27,4 @@ DTS dist/index.d.cts 55.64 KB
 
 Rebuilding...
 
-Done in 896ms.
+Done in 1707ms.

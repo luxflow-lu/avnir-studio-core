@@ -1,0 +1,6 @@
+/* Box Component */
+.box {
+  /* Box is a primitive with minimal styling */
+  /* Styling is meant to be added via className prop */
+  display: block;
+}

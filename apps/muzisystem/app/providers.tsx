@@ -10,7 +10,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         logo={<BrandLogo size="md" />}
         links={[
           { label: "Home", href: "/" },
-          { label: "Overview", href: "/overview/intro" },
+          { label: "Overview", href: "/overview" },
           { label: "Components", href: "/components" },
           { label: "Patterns", href: "/patterns" },
           { label: "Foundations", href: "/foundations/tokens" },
@@ -43,7 +43,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
               <Layout.Footer.Link href="/templates">Templates</Layout.Footer.Link>
             </Layout.Footer.Column>
             <Layout.Footer.Column title="Resources">
-              <Layout.Footer.Link href="/overview/intro">Documentation</Layout.Footer.Link>
+              <Layout.Footer.Link href="/overview">Documentation</Layout.Footer.Link>
               <Layout.Footer.Link href="/code/getting-started">Code</Layout.Footer.Link>
               <Layout.Footer.Link href="/tools/figma">Figma</Layout.Footer.Link>
               <Layout.Footer.Link href="/tools/playground">Playground</Layout.Footer.Link>

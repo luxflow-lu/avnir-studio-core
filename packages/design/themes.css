@@ -474,3 +474,47 @@ body {
   --text-8xl: var(--text-display-lg);
 }
 */
+
+/* ==================== UTILITY CLASSES ==================== */
+/* Classes utilitaires qui mappent nos variables CSS */
+/* Utilisées pour remplacer Tailwind dans les composants */
+
+/* Typography utilities */
+.text-xs { font-size: var(--text-tiny); }
+.text-sm { font-size: var(--text-small); }
+.text-base { font-size: var(--text-body); }
+.text-lg { font-size: var(--text-body-lg); }
+.text-xl { font-size: var(--text-h5); }
+.text-2xl { font-size: var(--text-h4); }
+.text-3xl { font-size: var(--text-h3); }
+.text-6xl { font-size: var(--text-display-sm); }
+
+/* Font weight utilities */
+.font-normal { font-weight: var(--font-normal); }
+.font-medium { font-weight: var(--font-medium); }
+.font-semibold { font-weight: var(--font-semibold); }
+.font-bold { font-weight: var(--font-bold); }
+
+/* Border radius utilities */
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded-md { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-xl { border-radius: var(--radius-xl); }
+.rounded-full { border-radius: var(--radius-full); }
+
+/* Shadow utilities */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+
+/* Color utilities for status */
+.bg-error { background-color: var(--error); }
+.bg-success { background-color: var(--success); }
+.bg-warning { background-color: var(--warning); }
+.bg-info { background-color: var(--info); }
+
+.text-error { color: var(--error); }
+.text-success { color: var(--success); }
+.text-warning { color: var(--warning); }
+.text-info { color: var(--info); }

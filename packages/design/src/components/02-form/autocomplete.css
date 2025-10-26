@@ -1,0 +1,62 @@
+/* Autocomplete Component */
+.autocomplete {
+  position: relative;
+  width: 100%;
+}
+
+.autocomplete--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.autocomplete-input {
+  width: 100%;
+  padding: var(--gap-sm) var(--gap-md);
+  font-size: var(--text-body);
+  color: var(--text);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  transition: var(--transition-colors);
+}
+
+.autocomplete-input:hover {
+  border-color: var(--primary);
+}
+
+.autocomplete-input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+.autocomplete-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  margin-top: var(--gap-xs);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-lg);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 50;
+}
+
+.autocomplete-option {
+  width: 100%;
+  padding: var(--gap-sm) var(--gap-md);
+  text-align: left;
+  font-size: var(--text-body);
+  color: var(--text);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-colors);
+}
+
+.autocomplete-option:hover {
+  background: var(--bg);
+}

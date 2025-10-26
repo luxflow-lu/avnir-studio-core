@@ -8,118 +8,162 @@
 @import './base/animations.css';
 @import './base/mixins.css';
 
-/* Component modules */
+/* Component modules - Organized by layer (01-13) */
 
-/* AVNIR Components */
-@import './components/avnir/asset-tile.css';
-@import './components/avnir/credit-balance.css';
-@import './components/avnir/permission-badge.css';
-@import './components/avnir/project-card.css';
-@import './components/avnir/model-selector.css';
-@import './components/avnir/project-header.css';
-@import './components/avnir/prompt-editor.css';
-@import './components/avnir/render-status.css';
+/* 01 - Primitives (Base components) */
+@import './components/01-primitives/card.css';
+@import './components/01-primitives/container.css';
+@import './components/01-primitives/divider.css';
+@import './components/01-primitives/spacer.css';
+@import './components/01-primitives/stack.css';
+@import './components/01-primitives/box.css';
+@import './components/01-primitives/flex.css';
+@import './components/01-primitives/aspect-ratio.css';
 
-/* Form Components */
-@import './components/form/button.css';
-@import './components/form/input.css';
-@import './components/form/select.css';
-@import './components/form/textarea.css';
-@import './components/form/checkbox.css';
-@import './components/form/radio.css';
-@import './components/form/switch.css';
-@import './components/form/icon-button.css';
-@import './components/form/field.css';
-@import './components/form/file-upload.css';
+/* 02 - Form (Form controls) */
+@import './components/02-form/button.css';
+@import './components/02-form/input.css';
+@import './components/02-form/select.css';
+@import './components/02-form/textarea.css';
+@import './components/02-form/checkbox.css';
+@import './components/02-form/radio.css';
+@import './components/02-form/switch.css';
+@import './components/02-form/icon-button.css';
+@import './components/02-form/field.css';
+@import './components/02-form/file-upload.css';
+@import './components/02-form/slider.css';
+@import './components/02-form/date-picker.css';
+@import './components/02-form/time-picker.css';
+@import './components/02-form/color-picker.css';
+@import './components/02-form/autocomplete.css';
 
-/* Data Display Components */
-@import './components/data-display/badge.css';
-@import './components/data-display/progress.css';
-@import './components/data-display/spinner.css';
-@import './components/data-display/table.css';
-@import './components/data-display/skeleton.css';
-@import './components/data-display/avatar.css';
-@import './components/data-display/empty-state.css';
+/* 03 - Data Display (Tables, badges, etc.) */
+@import './components/03-data-display/badge.css';
+@import './components/03-data-display/progress.css';
+@import './components/03-data-display/spinner.css';
+@import './components/03-data-display/table.css';
+@import './components/03-data-display/skeleton.css';
+@import './components/03-data-display/avatar.css';
+@import './components/03-data-display/empty-state.css';
+@import './components/03-data-display/accordion.css';
+@import './components/03-data-display/carousel.css';
+@import './components/03-data-display/timeline.css';
+@import './components/03-data-display/tree.css';
+@import './components/03-data-display/data-table.css';
+@import './components/03-data-display/typed-badge.css';
+@import './components/03-data-display/permission-badge.css';
+@import './components/03-data-display/project-card.css';
 
-/* Primitives Components */
-@import './components/primitives/card.css';
-@import './components/primitives/container.css';
-@import './components/primitives/divider.css';
-/* section.css supprimé - définition dans themes.css */
-@import './components/primitives/spacer.css';
-@import './components/primitives/stack.css';
+/* 04 - Feedback (Alerts, toasts, etc.) */
+@import './components/04-feedback/alert.css';
+@import './components/04-feedback/toast.css';
+@import './components/04-feedback/snackbar.css';
+@import './components/04-feedback/dialog.css';
+@import './components/04-feedback/confirm-dialog.css';
+@import './components/04-feedback/loading-overlay.css';
+@import './components/04-feedback/render-status.css';
 
-/* Feedback Components */
-@import './components/feedback/alert.css';
-@import './components/feedback/toast.css';
+/* 05 - Navigation (Menus, breadcrumbs, etc.) */
+@import './components/05-navigation/breadcrumb.css';
+@import './components/05-navigation/breadcrumbs.css';
+@import './components/05-navigation/pagination.css';
+@import './components/05-navigation/command-k.css';
+@import './components/05-navigation/menu.css';
+@import './components/05-navigation/stepper.css';
+@import './components/05-navigation/scrollspy.css';
+@import './components/05-navigation/command-palette.css';
+@import './components/05-navigation/tabs.css';
 
-/* Overlay Components */
-@import './components/overlay/modal.css';
-@import './components/overlay/dropdown.css';
-@import './components/overlay/drawer.css';
-@import './components/overlay/popover.css';
-@import './components/overlay/tooltip.css';
+/* 06 - Overlay (Modals, drawers, etc.) */
+@import './components/06-overlay/modal.css';
+@import './components/06-overlay/dropdown.css';
+@import './components/06-overlay/drawer.css';
+@import './components/06-overlay/popover.css';
+@import './components/06-overlay/tooltip.css';
+@import './components/06-overlay/dropdown-menu.css';
+@import './components/06-overlay/toast.css';
 
-/* Navigation Components */
-@import './components/navigation/breadcrumb.css';
-@import './components/navigation/pagination.css';
-@import './components/navigation/command-k.css';
+/* 07 - Layout (Navbar, footer, etc.) */
+@import './components/07-layout/banner.css';
+@import './components/07-layout/sidebar.css';
+@import './components/07-layout/page-header.css';
+@import './components/07-layout/navbar.css';
+@import './components/07-layout/footer.css';
+@import './components/07-layout/section-header.css';
+@import './components/07-layout/doc-layout.css';
+@import './components/07-layout/grid.css';
+@import './components/07-layout/masonry.css';
+@import './components/07-layout/split.css';
+@import './components/07-layout/project-header.css';
 
-/* Layout Components */
-@import './components/layout/tabs.css';
-@import './components/layout/banner.css';
-@import './components/layout/sidebar.css';
-@import './components/layout/page-header.css';
-@import './components/layout/navbar.css';
-@import './components/layout/footer.css';
-@import './components/layout/section-header.css';
-@import './components/layout/doc-layout.css';
+/* 08 - Content (Prose, markdown, etc.) */
+@import './components/08-content/prose.css';
+@import './components/08-content/code-block.css';
+@import './components/08-content/markdown.css';
 
-/* Content Components */
-@import './components/content/prose.css';
+/* 09 - Marketing (Hero, features, etc.) */
+@import './components/09-marketing/hero.css';
+@import './components/09-marketing/newsletter.css';
+@import './components/09-marketing/faq.css';
+@import './components/09-marketing/testimonials.css';
+@import './components/09-marketing/cta-section.css';
+@import './components/09-marketing/logo-cloud.css';
+@import './components/09-marketing/stats.css';
+@import './components/09-marketing/feature-grid.css';
+@import './components/09-marketing/comparison.css';
+@import './components/09-marketing/steps.css';
+@import './components/09-marketing/pricing-strip.css';
+@import './components/09-marketing/contact-block.css';
 
-/* Marketing Components */
-@import './components/marketing/hero.css';
-@import './components/marketing/newsletter.css';
-@import './components/marketing/faq.css';
-@import './components/marketing/testimonials.css';
-@import './components/marketing/cta-section.css';
-@import './components/marketing/logo-cloud.css';
-@import './components/marketing/stats.css';
+/* 10 - E-commerce (Products, cart, etc.) */
+@import './components/10-ecommerce/price.css';
+@import './components/10-ecommerce/mini-cart.css';
+@import './components/10-ecommerce/variants-swatches.css';
+@import './components/10-ecommerce/media-gallery.css';
+@import './components/10-ecommerce/checkout-steps.css';
+@import './components/10-ecommerce/faceted-search.css';
+@import './components/10-ecommerce/mega-menu.css';
+@import './components/10-ecommerce/product-card.css';
+@import './components/10-ecommerce/reviews.css';
+@import './components/10-ecommerce/wishlist-button.css';
 
-/* Ecommerce Components */
-@import './components/ecommerce/price.css';
-@import './components/ecommerce/mini-cart.css';
-@import './components/ecommerce/variants-swatches.css';
-@import './components/ecommerce/media-gallery.css';
-@import './components/ecommerce/checkout-steps.css';
-@import './components/ecommerce/faceted-search.css';
-@import './components/ecommerce/mega-menu.css';
-@import './components/marketing/steps.css';
-@import './components/marketing/pricing-strip.css';
-@import './components/marketing/contact-block.css';
+/* 11 - SaaS (Dashboard, metrics, etc.) */
+@import './components/11-saas/pricing-table.css';
+@import './components/11-saas/dashboard-kpi.css';
+@import './components/11-saas/api-keys.css';
+@import './components/11-saas/roles-matrix.css';
+@import './components/11-saas/plan-picker.css';
+@import './components/11-saas/invite-members.css';
+@import './components/11-saas/saved-views.css';
+@import './components/11-saas/import-export.css';
+@import './components/11-saas/activity-feed.css';
+@import './components/11-saas/notification-center.css';
+@import './components/11-saas/usage-metrics.css';
+@import './components/11-saas/billing-history.css';
+@import './components/11-saas/kanban.css';
+@import './components/11-saas/credit-balance.css';
 
-/* SaaS Components */
-@import './components/saas/pricing-table.css';
-@import './components/saas/dashboard-kpi.css';
-@import './components/saas/api-keys.css';
-@import './components/saas/roles-matrix.css';
-@import './components/saas/plan-picker.css';
-@import './components/saas/invite-members.css';
-@import './components/saas/saved-views.css';
-@import './components/saas/import-export.css';
+/* 12 - System (Error pages, theme, etc.) */
+@import './components/12-system/error-pages.css';
+@import './components/12-system/loading-boundary.css';
+@import './components/12-system/theme-toggle.css';
+@import './components/12-system/brand-theme-selector.css';
+@import './components/12-system/error-boundary.css';
+@import './components/12-system/not-found404.css';
+@import './components/12-system/server-error500.css';
+@import './components/12-system/feature-flag.css';
+@import './components/12-system/permission-gate.css';
 
-/* System Components */
-@import './components/system/error-pages.css';
-@import './components/system/loading-boundary.css';
-@import './components/system/theme-toggle.css';
-@import './components/system/brand-theme-selector.css';
-@import './components/system/error-boundary.css';
-@import './components/system/not-found404.css';
-@import './components/system/server-error500.css';
+/* 13 - AI (Prompt editors, model selectors, etc.) */
+@import './components/13-ai/prompt-editor.css';
+@import './components/13-ai/model-selector.css';
 
-/* Navigation Aliases */
-@import './components/navigation/breadcrumbs.css';
+/* 14 - Media (Asset management, media players, etc.) */
+@import './components/14-media/asset-tile.css';
 
-/* Data Display Aliases */
-@import './components/data-display/typed-badge.css';
+/* 15 - Auth (Authentication, login, register, etc.) */
+@import './components/15-auth/login-form.css';
+@import './components/15-auth/register-form.css';
+@import './components/15-auth/otp-input.css';
+@import './components/15-auth/password-strength.css';
+@import './components/15-auth/two-factor-auth.css';

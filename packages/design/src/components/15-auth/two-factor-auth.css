@@ -1,0 +1,177 @@
+/* Two Factor Auth */
+.two-factor-auth {
+  width: 100%;
+  max-width: 28rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+}
+
+/* Header */
+.two-factor-auth-header {
+  text-align: center;
+}
+
+.two-factor-auth-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: var(--gap-md);
+  background-color: var(--primary-muted);
+  border-radius: var(--radius-full);
+  color: var(--primary);
+}
+
+.two-factor-auth-icon .icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.two-factor-auth-title {
+  font-size: var(--text-h4);
+  font-weight: var(--font-semibold);
+  color: var(--foreground);
+  margin-bottom: var(--gap-xs);
+}
+
+.two-factor-auth-description {
+  font-size: var(--text-small);
+  color: var(--muted);
+}
+
+/* Error */
+.two-factor-auth-error {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  padding: var(--gap-md);
+  background-color: var(--error);
+  color: var(--error-foreground);
+  border-radius: var(--radius-md);
+  font-size: var(--text-small);
+}
+
+.two-factor-auth-error .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+
+/* Input */
+.two-factor-auth-input {
+  display: flex;
+  justify-content: center;
+  padding: var(--gap-md) 0;
+}
+
+/* Resend */
+.two-factor-auth-resend {
+  text-align: center;
+}
+
+.two-factor-auth-resend-timer {
+  font-size: var(--text-small);
+  color: var(--muted);
+}
+
+.two-factor-auth-resend-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  font-size: var(--text-small);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  transition: var(--transition-colors);
+  text-decoration: none;
+}
+
+.two-factor-auth-resend-btn:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+.two-factor-auth-resend-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Methods */
+.two-factor-auth-methods {
+  padding-top: var(--gap-md);
+  border-top: 1px solid var(--border);
+}
+
+.two-factor-auth-methods-title {
+  font-size: var(--text-tiny);
+  font-weight: var(--font-medium);
+  color: var(--muted);
+  text-align: center;
+  margin-bottom: var(--gap-sm);
+}
+
+.two-factor-auth-methods-list {
+  display: flex;
+  gap: var(--gap-sm);
+  justify-content: center;
+}
+
+.two-factor-auth-method-btn {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-xs);
+  padding: var(--gap-sm) var(--gap-md);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  color: var(--foreground);
+  font-size: var(--text-tiny);
+  font-weight: var(--font-medium);
+  cursor: pointer;
+  transition: var(--transition-colors);
+}
+
+.two-factor-auth-method-btn:hover:not(:disabled) {
+  background-color: var(--muted);
+  border-color: var(--primary);
+}
+
+.two-factor-auth-method-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.two-factor-auth-method-btn .icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+/* Loading */
+.two-factor-auth-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--gap-sm);
+  padding: var(--gap-md);
+  color: var(--muted);
+  font-size: var(--text-small);
+}
+
+.two-factor-auth-loading .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Animation */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite;
+}

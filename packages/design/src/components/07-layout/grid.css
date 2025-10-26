@@ -1,0 +1,23 @@
+/* Grid Component */
+.grid {
+  display: grid;
+}
+
+.grid--cols-1 { grid-template-columns: repeat(1, 1fr); }
+.grid--cols-2 { grid-template-columns: repeat(2, 1fr); }
+.grid--cols-3 { grid-template-columns: repeat(3, 1fr); }
+.grid--cols-4 { grid-template-columns: repeat(4, 1fr); }
+.grid--cols-6 { grid-template-columns: repeat(6, 1fr); }
+.grid--cols-12 { grid-template-columns: repeat(12, 1fr); }
+
+.grid--gap-sm { gap: var(--gap-sm); }
+.grid--gap-md { gap: var(--gap-md); }
+.grid--gap-lg { gap: var(--gap-lg); }
+.grid--gap-xl { gap: var(--gap-xl); }
+
+.grid-item--span-1 { grid-column: span 1; }
+.grid-item--span-2 { grid-column: span 2; }
+.grid-item--span-3 { grid-column: span 3; }
+.grid-item--span-4 { grid-column: span 4; }
+.grid-item--span-6 { grid-column: span 6; }
+.grid-item--span-12 { grid-column: span 12; }

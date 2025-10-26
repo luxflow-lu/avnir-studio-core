@@ -1,0 +1,54 @@
+/* Markdown Component */
+.markdown {
+  color: var(--text);
+  line-height: var(--leading-relaxed);
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3 {
+  color: var(--titles);
+  font-weight: var(--font-semibold);
+  margin-top: var(--gap-xl);
+  margin-bottom: var(--gap-md);
+}
+
+.markdown h1 {
+  font-size: var(--text-h1);
+}
+
+.markdown h2 {
+  font-size: var(--text-h2);
+}
+
+.markdown h3 {
+  font-size: var(--text-h3);
+}
+
+.markdown strong {
+  font-weight: var(--font-semibold);
+  color: var(--titles);
+}
+
+.markdown em {
+  font-style: italic;
+}
+
+.markdown code {
+  font-family: var(--font-mono);
+  font-size: var(--text-small);
+  background: var(--surface);
+  padding: 0.2em 0.4em;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border);
+}
+
+.markdown a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition-colors);
+}
+
+.markdown a:hover {
+  text-decoration: underline;
+}

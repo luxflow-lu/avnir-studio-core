@@ -1,0 +1,41 @@
+/* Tree Component */
+.tree {
+  display: flex;
+  flex-direction: column;
+}
+
+.tree-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.tree-item-content {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  padding: var(--gap-xs) var(--gap-sm);
+  padding-left: calc(var(--gap-lg) * var(--tree-level, 0));
+  border-radius: var(--radius-xs);
+  transition: var(--transition-colors);
+}
+
+.tree-item-content:hover {
+  background: var(--surface);
+}
+
+.tree-toggle {
+  min-width: 24px;
+  height: 24px;
+  padding: 0;
+  font-size: var(--text-small);
+}
+
+.tree-label {
+  font-size: var(--text-body);
+  color: var(--text);
+}
+
+.tree-children {
+  display: flex;
+  flex-direction: column;
+}

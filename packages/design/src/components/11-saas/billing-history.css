@@ -1,0 +1,64 @@
+/* BillingHistory Component */
+.billing-history {
+  overflow-x: auto;
+}
+
+.billing-table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.billing-table-header {
+  padding: var(--gap-md);
+  text-align: left;
+  font-size: var(--text-small);
+  font-weight: var(--font-semibold);
+  color: var(--titles);
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.billing-table-row {
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition-colors);
+}
+
+.billing-table-row:hover {
+  background: var(--surface);
+}
+
+.billing-table-row:last-child {
+  border-bottom: none;
+}
+
+.billing-table-cell {
+  padding: var(--gap-md);
+  font-size: var(--text-body);
+  color: var(--text);
+}
+
+.billing-status {
+  display: inline-block;
+  padding: var(--gap-xs) var(--gap-sm);
+  font-size: var(--text-small);
+  font-weight: var(--font-medium);
+  border-radius: var(--radius-xs);
+  text-transform: capitalize;
+}
+
+.billing-status--paid {
+  background: var(--success);
+  color: #0b0b0d;
+}
+
+.billing-status--pending {
+  background: var(--warning);
+  color: #0b0b0d;
+}
+
+.billing-status--failed {
+  background: var(--destructive);
+  color: var(--on-primary);
+}

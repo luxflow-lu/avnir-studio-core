@@ -1,0 +1,66 @@
+/* FeatureGrid Component */
+.feature-grid {
+  display: grid;
+  gap: var(--gap-xl);
+}
+
+.feature-grid--cols-2 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.feature-grid--cols-3 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.feature-grid--cols-4 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+  .feature-grid--cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .feature-grid--cols-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .feature-grid--cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .feature-grid--cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .feature-grid--cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.feature-grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+.feature-grid-icon {
+  font-size: var(--text-h2);
+  color: var(--primary);
+}
+
+.feature-grid-title {
+  font-size: var(--text-h4);
+  font-weight: var(--font-semibold);
+  color: var(--titles);
+  margin: 0;
+}
+
+.feature-grid-description {
+  font-size: var(--text-body);
+  color: var(--muted);
+  margin: 0;
+  line-height: var(--leading-relaxed);
+}
