@@ -1,0 +1,624 @@
+/* ============================================
+   AVNIR Design System - Core Themes & Variables
+   Architecture: Modulaire (composants dans src/components/)
+   ============================================ */
+
+:root {
+  /* ==================== 1. COLORS (Sémantiques) ==================== */
+  /* Base colors */
+  --bg: #0b0b0d;
+  --surface: #141317;
+  --text: #c5ccd6;
+  --titles: #ffffff;
+  --muted: #9ca3af;
+  --primary: #ededed;
+  --border: #1f1f23;
+  --accent: var(--primary);
+  
+  /* Component colors */
+  --card: var(--surface);
+  --card-foreground: var(--text);
+  --on-primary: #0b0b0d;
+  --ring: var(--primary);
+  
+  /* Status colors */
+  --success: #10b981;
+  --warning: #f59e0b;
+  --error: #ef4444;
+  --info: #3b82f6;
+  
+  /* RGB variants for alpha */
+  --primary-rgb: 237, 237, 237;
+  --success-rgb: 16, 185, 129;
+  --warning-rgb: 245, 158, 11;
+  --error-rgb: 239, 68, 68;
+  --info-rgb: 59, 130, 246;
+  
+  /* Fixed navbar/footer colors (never change) */
+  --navbar-bg: #0b0b0d;
+  --navbar-surface: #141317;
+  --navbar-border: #1f1f23;
+  --navbar-text: #ffffff;
+  --footer-bg: #0b0b0d;
+  --footer-surface: #141317;
+  --footer-border: #1f1f23;
+  --footer-text: #ffffff;
+
+  /* ==================== 2. SPACING (Sémantiques) ==================== */
+  /* Layout spacing */
+  --padding-container: 4rem;
+  --padding-section-sm: 2rem;
+  --padding-section-md: 4rem;
+  --padding-section-lg: 6rem;
+  --padding-section-xl: 8rem;
+  
+  /* Component spacing */
+  --gap-xs: 0.25rem;   /* 4px */
+  --gap-sm: 0.5rem;    /* 8px */
+  --gap-md: 1rem;      /* 16px */
+  --gap-lg: 1.5rem;    /* 24px */
+  --gap-xl: 2rem;      /* 32px */
+  
+  --margin-sm: 0.5rem;
+  --margin-md: 1rem;
+  --margin-lg: 2rem;
+  --margin-xl: 3rem;
+
+  --padding-xs: 0.25rem;  /* 4px */
+  --padding-sm: 0.5rem;   /* 8px */
+  --padding-md: 1rem;     /* 16px */
+  --padding-lg: 1.5rem;   /* 24px */
+  --padding-xl: 2rem;     /* 32px */
+  --padding-2xl: 3rem;    /* 48px */
+
+  /* ==================== 3. TYPOGRAPHY (Sémantiques) ==================== */
+  /* Font families */
+  --font-sans: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  
+  /* Headings */
+  --text-h1: 3.5rem;         /* 48px */
+  --text-h2: 3rem;      /* 36px */
+  --text-h3: 1.5rem;     /* 30px */
+  --text-h4: 1.25rem;       /* 24px */
+  --text-h5: 1.125rem;      /* 20px */
+  --text-h6: 1rem;     /* 18px */
+  
+  /* Display (hero titles) */
+  --text-display-sm: 3.75rem;  /* 60px */
+  --text-display-md: 4.5rem;   /* 72px */
+  --text-display-lg: 6rem;     /* 96px */
+  
+  /* Body text */
+  --text-body: 1rem;       /* 16px */
+  --text-body-sm: 0.875rem; /* 14px */
+  --text-body-lg: 1.5rem; /* 18px */
+  
+  /* Utility */
+  --text-small: 0.875rem;  /* 14px */
+  --text-tiny: 0.75rem;    /* 12px */
+  
+  /* Font weights */
+  --font-thin: 100;
+  --font-extralight: 200;
+  --font-light: 300;
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+  --font-black: 900;
+  
+  /* Line heights */
+  --leading-none: 1;
+  --leading-tight: 1.25;
+  --leading-snug: 1.375;
+  --leading-normal: 1.5;
+  --leading-relaxed: 1.625;
+  --leading-loose: 2;
+  
+  /* Letter spacing */
+  --tracking-tighter: -0.05em;
+  --tracking-tight: -0.025em;
+  --tracking-normal: 0em;
+  --tracking-wide: 0.025em;
+  --tracking-wider: 0.05em;
+  --tracking-widest: 0.1em;
+
+  /* ==================== 4. DESIGN TOKENS ==================== */
+  /* Border radius */
+  --radius-xs: 0.125rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  /* Z-index */
+  --z-drawer: 40;
+  --z-modal: 50;
+  --z-popover: 60;
+  --z-toast: 70;
+
+  /* Motion */
+  --duration-100: 100ms;
+  --duration-150: 150ms;
+  --duration-200: 200ms;
+  --duration-300: 300ms;
+  --duration-500: 500ms;
+  --easing-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  
+  --transition-all: all 0.2s ease;
+  --transition-colors: color, background-color, border-color 0.2s ease;
+
+  /* ==================== 5. COMPONENT SIZES ==================== */
+  /* Widths */
+  --width-xs: 20rem;    /* 320px */
+  --width-sm: 24rem;    /* 384px */
+  --width-md: 28rem;    /* 448px */
+  --width-lg: 32rem;    /* 512px */
+  --width-xl: 36rem;    /* 576px */
+  --width-2xl: 42rem;   /* 672px */
+  --width-3xl: 48rem;   /* 768px */
+  --width-4xl: 56rem;   /* 896px */
+  --width-5xl: 64rem;   /* 1024px */
+  --width-6xl: 72rem;   /* 1152px */
+  --width-7xl: 80rem;   /* 1280px */
+  --width-full: 100%;
+  --width-screen: 100vw;
+
+  /* Heights */
+  --height-xs: 20rem;   /* 320px */
+  --height-sm: 24rem;   /* 384px */
+  --height-md: 28rem;   /* 448px */
+  --height-lg: 32rem;   /* 512px */
+  --height-xl: 36rem;   /* 576px */
+  --height-2xl: 42rem;  /* 672px */
+  --height-3xl: 48rem;  /* 768px */
+  --height-full: 100%;
+  --height-screen: 100vh;
+
+  /* Border widths */
+  --border-width-0: 0;
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+  --border-width-3: 3px;
+  --border-width-4: 4px;
+  --border-width-8: 8px;
+
+  /* Opacity */
+  --opacity-0: 0;
+  --opacity-5: 0.05;
+  --opacity-10: 0.1;
+  --opacity-20: 0.2;
+  --opacity-25: 0.25;
+  --opacity-30: 0.3;
+  --opacity-40: 0.4;
+  --opacity-50: 0.5;
+  --opacity-60: 0.6;
+  --opacity-70: 0.7;
+  --opacity-75: 0.75;
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
+  --opacity-95: 0.95;
+  --opacity-100: 1;
+}
+
+/* ==================== BRAND COLORS ==================== */
+[data-brand="avnir-studio"] { --primary: #ededed; }
+[data-brand="muzidev"] { --primary: #5cb9f2; }
+[data-brand="muzipics"] { --primary: #ff2d55; }
+[data-brand="muziweb"] { --primary: #9802eb; }
+[data-brand="muzimerch"] { --primary: #ff9d00; }
+[data-brand="muzibase"] { --primary: #2fad66; }
+[data-brand="muzisystem"] { --primary: #ededed; }
+
+/* ==================== LIGHT THEME ==================== */
+[data-theme="light"] {
+  --bg: #f8f8f8;
+  --surface: #ffffff;
+  --text: #1f2937;
+  --titles: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+/* Special rule for light brands (avnir-studio, muzisystem) in light theme */
+/* Primary buttons need dark background to be visible */
+[data-theme="light"][data-brand="avnir-studio"] .btn-primary,
+[data-theme="light"][data-brand="muzisystem"] .btn-primary {
+  background-color: #0b0b0d !important; /* Dark bg from dark theme */
+  color: #ffffff !important; /* White text */
+}
+
+/* Semi-light: Force dark navbar and footer in light theme */
+[data-theme="light"] .navbar,
+[data-theme="light"] .footer {
+  background-color: var(--navbar-bg) !important;
+}
+
+/* Border bottom navbar reste dark */
+[data-theme="light"] .navbar {
+  border-bottom-color: var(--navbar-border) !important;
+}
+
+/* Textes navbar et footer */
+[data-theme="light"] .navbar-brand,
+[data-theme="light"] .navbar-link,
+[data-theme="light"] .navbar-menu-link,
+[data-theme="light"] .footer-logo,
+[data-theme="light"] .footer-link,
+[data-theme="light"] .footer-text,
+[data-theme="light"] .footer-newsletter-text,
+[data-theme="light"] .footer-copyright {
+  color: var(--navbar-text) !important;
+}
+
+/* Titres des colonnes footer */
+[data-theme="light"] .footer-column-title {
+  color: var(--footer-text) !important;
+}
+
+/* Liens hover */
+[data-theme="light"] .navbar-link:hover,
+[data-theme="light"] .navbar-menu-link:hover,
+[data-theme="light"] .footer-link:hover {
+  color: var(--primary) !important;
+}
+
+/* Borders dark dans navbar/footer */
+[data-theme="light"] .navbar-menu,
+[data-theme="light"] .footer-top {
+  background-color: var(--navbar-bg) !important;
+  border-color: var(--navbar-border) !important;
+}
+
+/* Footer separator garde border dark */
+[data-theme="light"] .footer-separator {
+  background: var(--footer-border) !important;
+}
+
+[data-theme="light"] .navbar-menu-link:hover {
+  background-color: var(--navbar-surface) !important;
+}
+
+/* Force dark inputs in navbar/footer */
+[data-theme="light"] .navbar input,
+[data-theme="light"] .navbar select,
+[data-theme="light"] .footer input,
+[data-theme="light"] .footer select,
+[data-theme="light"] .footer-newsletter-input {
+  background-color: var(--navbar-surface) !important;
+  border-color: var(--navbar-border) !important;
+  color: var(--navbar-text) !important;
+}
+
+/* Bouton Subscribe garde la couleur primary */
+[data-theme="light"] .footer-newsletter-button {
+  background-color: var(--primary) !important;
+  color: var(--navbar-bg) !important;
+  border-color: var(--primary) !important;
+}
+
+/* Lien Privacy Policy toujours en primary */
+[data-theme="light"] .footer-newsletter-disclaimer a {
+  color: var(--primary) !important;
+}
+
+/* Autres boutons dans navbar (selects) - exclure toggle */
+[data-theme="light"] .navbar button:not(.navbar-toggle),
+[data-theme="light"] .navbar select {
+  background-color: var(--navbar-surface) !important;
+  border-color: var(--navbar-border) !important;
+  color: var(--navbar-text) !important;
+}
+
+/* Navbar toggle button sans background */
+[data-theme="light"] .navbar-toggle {
+  background-color: transparent !important;
+}
+
+/* Separator dans navbar menu reste dark */
+[data-theme="light"] .navbar-menu-actions {
+  border-top-color: var(--navbar-border) !important;
+}
+
+/* ==================== GLOBAL STYLES ==================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+
+/* Screen reader only */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ============================================
+   FINSWEET STRUCTURE CLASSES
+   Used in apps for page layout
+   ============================================ */
+
+/* Container - Max width + horizontal padding */
+.container {
+  max-width: var(--container-max-width, 1280px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: var(--gap-md) !important;  /* 1rem mobile */
+  padding-right: var(--gap-md) !important;
+}
+
+/* Responsive container padding */
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--gap-xl) !important;  /* 2rem tablet */
+    padding-right: var(--gap-xl) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: var(--padding-container) !important;  /* 4rem desktop */
+    padding-right: var(--padding-container) !important;
+  }
+}
+
+/* Section - Vertical spacing */
+.section {
+  padding-top: var(--padding-section-md);
+  padding-bottom: var(--padding-section-md);
+}
+
+.section--sm {
+  padding-top: var(--padding-section-sm);
+  padding-bottom: var(--padding-section-sm);
+}
+
+.section--lg {
+  padding-top: var(--padding-section-lg);
+  padding-bottom: var(--padding-section-lg);
+}
+
+.section--xl {
+  padding-top: var(--padding-section-xl);
+  padding-bottom: var(--padding-section-xl);
+}
+
+/* Grid utilities */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-xl);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-xl);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-xl);
+}
+
+/* Responsive grids */
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   Component styles are in src/components/
+   Import via src/index.css
+   ============================================ */
+
+/* Component Showcase Utilities */
+.component-preview {
+  display: flex;
+  gap: var(--gap-md);
+  align-items: center;
+  flex-wrap: wrap;
+  padding: var(--padding-section-sm) 0;
+}
+
+.component-count {
+  font-size: var(--text-small);
+  color: var(--muted);
+  margin-top: var(--margin-sm);
+}
+
+/* ============================================
+   LEGACY ALIASES (⚠️ DEPRECATED - COMMENTED OUT)
+   Kept for reference only - DO NOT UNCOMMENT
+   Use semantic names instead:
+   - Spacing: --gap-*, --padding-*, --margin-*
+   - Typography: --text-h*, --text-body*, --text-display-*
+   ============================================ */
+
+/*
+:root {
+  Legacy spacing
+  --space-2: 0.125rem;
+  --space-4: 0.25rem;
+  --space-6: 0.375rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-20: 1.25rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-48: 3rem;
+  --space-64: 4rem;
+  --space-80: 5rem;
+  --space-96: 6rem;
+  --space-global-x: var(--padding-container);
+  --space-section-sm: var(--padding-section-sm);
+  --space-section-md: var(--padding-section-md);
+  --space-section-lg: var(--padding-section-lg);
+  --space-section-xl: var(--padding-section-xl);
+  
+  Legacy typography
+  --text-xs: var(--text-tiny);
+  --text-sm: var(--text-small);
+  --text-base: var(--text-body);
+  --text-lg: var(--text-body-lg);
+  --text-xl: var(--text-h5);
+  --text-2xl: var(--text-h4);
+  --text-3xl: var(--text-h3);
+  --text-4xl: var(--text-h2);
+  --text-5xl: var(--text-h1);
+  --text-6xl: var(--text-display-sm);
+  --text-7xl: var(--text-display-md);
+  --text-8xl: var(--text-display-lg);
+}
+*/
+
+/* ==================== UTILITY CLASSES ==================== */
+/* Classes utilitaires qui mappent nos variables CSS */
+/* Utilisées pour remplacer Tailwind dans les composants */
+
+/* Typography utilities */
+.text-xs { font-size: var(--text-tiny); }
+.text-sm { font-size: var(--text-small); }
+.text-base { font-size: var(--text-body); }
+.text-lg { font-size: var(--text-body-lg); }
+.text-xl { font-size: var(--text-h5); }
+.text-2xl { font-size: var(--text-h4); }
+.text-3xl { font-size: var(--text-h3); }
+.text-6xl { font-size: var(--text-display-sm); }
+
+/* Font weight utilities */
+.font-normal { font-weight: var(--font-normal); }
+.font-medium { font-weight: var(--font-medium); }
+.font-semibold { font-weight: var(--font-semibold); }
+.font-bold { font-weight: var(--font-bold); }
+
+/* Border radius utilities */
+.rounded-sm { border-radius: var(--radius-sm); }
+.rounded-md { border-radius: var(--radius-md); }
+.rounded-lg { border-radius: var(--radius-lg); }
+.rounded-xl { border-radius: var(--radius-xl); }
+.rounded-full { border-radius: var(--radius-full); }
+
+/* Shadow utilities */
+.shadow-sm { box-shadow: var(--shadow-sm); }
+.shadow-md { box-shadow: var(--shadow-md); }
+.shadow-lg { box-shadow: var(--shadow-lg); }
+.shadow-xl { box-shadow: var(--shadow-xl); }
+
+/* Color utilities for status */
+.bg-error { background-color: var(--error); }
+.bg-success { background-color: var(--success); }
+.bg-warning { background-color: var(--warning); }
+.bg-info { background-color: var(--info); }
+
+.text-error { color: var(--error); }
+.text-success { color: var(--success); }
+.text-warning { color: var(--warning); }
+.text-info { color: var(--info); }
+
+/* Section actions (CTA buttons at bottom of sections) */
+.section-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-md);
+  margin-top: var(--gap-xl);
+  flex-wrap: wrap;
+}
+
+/* Color swatches for design tokens demo */
+.color-swatch {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-xs);
+  flex-shrink: 0;
+}
+
+.color-swatch-group {
+  display: flex;
+  gap: var(--gap-sm);
+  margin-top: var(--gap-md);
+}
+
+/* Brand color preview */
+.brand-swatch {
+  width: 100%;
+  height: 60px;
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--gap-md);
+}
+
+/* Typography demo group */
+.typography-demo {
+  margin-top: var(--gap-md);
+}
+
+/* Spacing demo group */
+.spacing-demo {
+  display: flex;
+  gap: var(--gap-sm);
+  margin-top: var(--gap-md);
+  align-items: flex-end;
+}

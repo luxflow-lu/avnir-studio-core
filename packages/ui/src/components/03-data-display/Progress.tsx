@@ -5,31 +5,25 @@ import { cx } from "../../utils/cx";
 export interface ProgressProps extends React.HTMLAttributes<HTMLDivElement> {
   value: number;
   max?: number;
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "xl";
   showValue?: boolean;
 }
-
-const sizes = {
-  sm: "h-1",
-  md: "h-2",
-  lg: "h-3",
-};
 
 export const Progress = React.forwardRef<HTMLDivElement, ProgressProps>(
   ({ className, value, max = 100, size = "md", showValue = false, ...props }, ref) => {
     const percentage = Math.min(Math.max((value / max) * 100, 0), 100);
 
     return (
-      <div ref={ref} className={cx("w-full", className)} {...props}>
+      <div ref={ref} className={cx("progress-container", className)} {...props}>
         {showValue && (
-          <div className="flex-between items-center mb-2">
-            <span className="text-sm text-foreground">Progress</span>
-            <span className="text-sm text-muted">{Math.round(percentage)}%</span>
+          <div className="progress-label">
+            <span>Progress</span>
+            <span className="progress-value">{Math.round(percentage)}%</span>
           </div>
         )}
-        <div className={cx("w-full bg-muted-full overflow-hidden", sizes[size])}>
+        <div className={cx("progress", `progress--${size}`)}>
           <div
-            className="h-full bg-brand duration-300 ease-out"
+            className="progress-indicator"
             style={{ width: `${percentage}%` }}
             role="progressbar"
             aria-valuenow={value}

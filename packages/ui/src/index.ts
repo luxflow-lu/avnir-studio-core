@@ -60,8 +60,12 @@ export * as Templates from "./components/templates";
 // DIRECT EXPORTS (for backward compatibility)
 // ============================================
 
-// Only export non-conflicting components directly
-export { Banner } from "./components/Banner";
+// Most commonly used components exported directly for convenience
+// Use namespace imports (Form.Button, Primitives.Card) for better tree-shaking
+export { Button } from "./components/02-form/Button";
+export { Input } from "./components/02-form/Input";
+export { Card } from "./components/01-primitives/Card";
+export { Badge } from "./components/03-data-display/Badge";
 
 // ============================================
 // UTILITIES & HOOKS

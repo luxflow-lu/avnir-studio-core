@@ -2,16 +2,18 @@ import * as React from "react";
 
 import { cx } from "../../utils/cx";
 
-export type BadgeVariant = "default" | "success" | "warning" | "destructive";
+export type BadgeVariant = "default" | "primary" | "secondary" | "success" | "warning" | "destructive";
 export interface BadgeProps extends React.HTMLAttributes<HTMLSpanElement> {
   variant?: BadgeVariant;
 }
 
 const variants: Record<BadgeVariant, string> = {
-  default: "badge badge--secondary",
+  default: "badge badge--default",
+  primary: "badge badge--primary",
+  secondary: "badge badge--secondary",
   success: "badge badge--success",
   warning: "badge badge--warning",
-  destructive: "badge badge--error",
+  destructive: "badge badge--destructive",
 };
 
 export const Badge = React.forwardRef<HTMLSpanElement, BadgeProps>(

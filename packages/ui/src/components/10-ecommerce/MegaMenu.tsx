@@ -52,7 +52,7 @@ export const MegaMenu = React.forwardRef<HTMLDivElement, MegaMenuProps>(
     }, [isOpen, setOpen]);
 
     return (
-      <div ref={ref} className={cx("relative", className)} {...props}>
+      <div ref={ref} className={cx("mega-menu", className)} {...props}>
         {React.cloneElement(trigger, {
           ref: triggerRef,
           onClick: () => setOpen(!isOpen),
@@ -62,40 +62,33 @@ export const MegaMenu = React.forwardRef<HTMLDivElement, MegaMenuProps>(
         {isOpen && (
           <div
             ref={menuRef}
-            className="absolute top-full left-0 w-screen max-w-4xl bg-surface border border-muted rounded-lg z-50 p-6"
+            className="mega-menu-panel"
             onMouseLeave={() => setOpen(false)}
           >
-            <div className="grid-1 md:grid-3 gap-8">
+            <div className="mega-menu-content">
               {sections.map((section) => (
-                <div key={section.id}>
-                  <h3 className="text-sm font-semibold text-foreground mb-4 border-b border-muted pb-2">
+                <div key={section.id} className="mega-menu-section">
+                  <h3 className="mega-menu-section-title">
                     {section.title}
                   </h3>
-                  <ul className="stack-3">
+                  <ul className="mega-menu-links">
                     {section.items.map((item) => (
                       <li key={item.id}>
-                        <a
-                          href={item.href}
-                          className="group flex-start gap-3 p-2 rounded-sm hover:bg-muted"
-                        >
+                        <a href={item.href} className="mega-menu-link">
                           {item.icon && (
-                            <div className="flex-shrink-0 icon text-brand mt-0.5">
+                            <div className="mega-menu-link-icon">
                               {item.icon}
                             </div>
                           )}
-                          <div >
-                            <div className="flex-row gap-2">
-                              <span className="text-sm font-medium text-foreground group-hover:text-brand">
-                                {item.label}
-                              </span>
+                          <div className="mega-menu-link-content">
+                            <div className="mega-menu-link-title">
+                              {item.label}
                               {item.badge && (
-                                <span className="px-2 py-1 text-xs bg-brand-muted text-brand">
-                                  {item.badge}
-                                </span>
+                                <span className="badge badge--sm">{item.badge}</span>
                               )}
                             </div>
                             {item.description && (
-                              <p className="text-xs text-muted mt-1">
+                              <p className="mega-menu-link-description">
                                 {item.description}
                               </p>
                             )}
@@ -109,16 +102,12 @@ export const MegaMenu = React.forwardRef<HTMLDivElement, MegaMenuProps>(
             </div>
 
             {/* Featured Section */}
-            <div className="mt-8 pt-6 border-t border-muted">
-              <div className="flex-between">
-                <div>
-                  <h4 className="text-sm font-medium text-foreground">Featured Products</h4>
-                  <p className="text-xs text-muted">Discover our latest offerings</p>
-                </div>
-                <a href="/featured" className="text-sm text-brand hover:underline">
-                  View All →
-                </a>
-              </div>
+            <div className="mega-menu-featured">
+              <h4 className="mega-menu-featured-title">Featured Products</h4>
+              <p className="mega-menu-featured-description">Discover our latest offerings</p>
+              <a href="/featured" className="mega-menu-link">
+                View All →
+              </a>
             </div>
           </div>
         )}

@@ -86,17 +86,12 @@ export const CommandK = React.forwardRef<HTMLDivElement, CommandKProps>(
     if (!open) return null;
 
     return (
-      <div className="fixed inset-0 z-50 flex-start justify-center pt-[20vh]">
-        <div className="fixed inset-0 bg-overlay backdrop-blur-sm" onClick={onClose} />
-        <div
-          ref={ref}
-          className="relative bg-surface-lg max-w-lg mx-4 overflow-hidden"
-          role="dialog"
-          aria-modal="true"
-        >
-          <div className="flex-center-b-white/10 px-4">
+      <>
+        <div className="command-k-overlay" onClick={onClose} />
+        <div ref={ref} className="command-k" role="dialog" aria-modal="true">
+          <div className="command-k-input-wrapper">
             <svg
-              className="icon text-muted mr-3"
+              className="command-k-item-icon"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -113,19 +108,17 @@ export const CommandK = React.forwardRef<HTMLDivElement, CommandKProps>(
               placeholder={placeholder}
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="flex-1 bg-transparent-none outline-none py-4 text-foreground placeholder-[var(--text-muted)]"
+              className="command-k-input"
               autoFocus
             />
-            <kbd className="hidden sm:inline-flex-center gap-1-white/20 px-2 py-1 text-xs text-muted">
-              ESC
-            </kbd>
+            <kbd className="command-k-item-shortcut">ESC</kbd>
           </div>
 
-          <div className="max-h-80 overflow-y-auto">
+          <div className="command-k-list">
             {filteredItems.length === 0 ? (
-              <div className="px-4 py-8 text-muted">No results found</div>
+              <div className="command-k-item">No results found</div>
             ) : (
-              <div className="py-2">
+              <>
                 {filteredItems.map((item, index) => (
                   <button
                     key={item.id}
@@ -134,28 +127,24 @@ export const CommandK = React.forwardRef<HTMLDivElement, CommandKProps>(
                       onClose();
                     }}
                     className={cx(
-                      "w-full items-center gap-3 px-4 py-3",
-                      index === selectedIndex
-                        ? "bg-brand/10 text-brand"
-                        : "text-on-primary hover:bg-muted",
+                      "command-k-item",
+                      index === selectedIndex && "command-k-item--selected"
                     )}
                   >
-                    {item.icon && <span className="flex-shrink-0 icon">{item.icon}</span>}
-                    <div >
-                      <div className="font-medium">{item.label}</div>
+                    {item.icon && <span className="command-k-item-icon">{item.icon}</span>}
+                    <div className="command-k-item-content">
+                      <div className="command-k-item-title">{item.label}</div>
                       {item.description && (
-                        <div className="text-sm text-muted truncate">
-                          {item.description}
-                        </div>
+                        <div className="command-k-item-subtitle">{item.description}</div>
                       )}
                     </div>
                   </button>
                 ))}
-              </div>
+              </>
             )}
           </div>
         </div>
-      </div>
+      </>
     );
   },
 );

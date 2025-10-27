@@ -15,7 +15,7 @@
 .input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.1);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--primary) 10%, transparent);
 }
 
 .input:disabled {
@@ -46,7 +46,7 @@
 
 .input--error:focus {
   border-color: var(--destructive);
-  box-shadow: 0 0 0 2px rgba(var(--destructive-rgb), 0.1);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--destructive) 10%, transparent);
 }
 
 .input--success {
@@ -55,5 +55,18 @@
 
 .input--success:focus {
   border-color: var(--success);
-  box-shadow: 0 0 0 2px rgba(var(--success-rgb), 0.1);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--success) 10%, transparent);
+}
+
+/* Force dark input in navbar/footer even in light theme */
+[data-theme="light"] .navbar .input,
+[data-theme="light"] .footer .input {
+  background-color: #141317 !important;
+  border-color: #1f1f23 !important;
+  color: #ffffff !important;
+}
+
+[data-theme="light"] .navbar .input::placeholder,
+[data-theme="light"] .footer .input::placeholder {
+  color: #9ca3af !important;
 }

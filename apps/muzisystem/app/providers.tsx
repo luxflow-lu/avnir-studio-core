@@ -11,9 +11,9 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         links={[
           { label: "Home", href: "/" },
           { label: "Overview", href: "/overview" },
+          { label: "Foundations", href: "/foundations/tokens" },
           { label: "Components", href: "/components" },
           { label: "Patterns", href: "/patterns" },
-          { label: "Foundations", href: "/foundations/tokens" },
         ]}
         actions={<System.BrandThemeSelector />}
       />

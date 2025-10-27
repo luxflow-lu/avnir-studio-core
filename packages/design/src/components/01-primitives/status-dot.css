@@ -1,0 +1,59 @@
+/* StatusDot Component */
+
+.status-dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: var(--gap-sm);
+  height: var(--gap-sm);
+  border-radius: var(--radius-full);
+  background-color: var(--muted);
+}
+
+/* Status variants */
+.status-dot--online {
+  background-color: var(--success);
+}
+
+.status-dot--offline {
+  background-color: var(--muted-foreground);
+}
+
+.status-dot--away {
+  background-color: var(--warning);
+}
+
+.status-dot--busy {
+  background-color: var(--destructive);
+}
+
+/* Sizes */
+.status-dot--sm {
+  width: var(--gap-xs);
+  height: var(--gap-xs);
+}
+
+.status-dot--md {
+  width: var(--gap-sm);
+  height: var(--gap-sm);
+}
+
+.status-dot--lg {
+  width: var(--gap-md);
+  height: var(--gap-md);
+}
+
+/* Pulse animation */
+.status-dot--pulse {
+  animation: pulse-dot 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}

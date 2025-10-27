@@ -24,6 +24,15 @@ pnpm test || exit 1
 echo "📚 Validating documentation..."
 pnpm docs:validate || exit 1
 
+# 5.1. Check if docs were modified - Remind Cascade to reload
+if git diff --cached --name-only | grep -q "^docs/"; then
+  echo ""
+  echo "⚠️  📚 DOCUMENTATION MODIFIÉE DÉTECTÉE ⚠️"
+  echo "🤖 RAPPEL POUR CASCADE : Recharger la documentation !"
+  echo "   Commande : 'Doc modifiée, recharge' ou 'Update memory'"
+  echo ""
+fi
+
 # 5.5. Architecture validation
 echo "🏗️ Validating architecture..."
 pnpm architecture:check || exit 1

@@ -1,25 +1,5 @@
 /* Stats Component */
 
-.stats,
-.stats-section {
-  width: 100%;
-  margin: 0 auto;
-  padding: var(--padding-section-md) var(--gap-md);
-}
-
-.stats-container {
-  margin: 0 auto;
-  max-width: 80rem;
-}
-
-.stats-title {
-  font-size: var(--text-h4);
-  font-weight: var(--font-semibold);
-  color: var(--titles);
-  text-align: center;
-  margin-bottom: var(--padding-section-sm);
-}
-
 .stats-grid {
   display: grid;
   gap: var(--gap-xl);

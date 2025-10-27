@@ -55,68 +55,79 @@ export const Pagination = React.forwardRef<HTMLDivElement, PaginationProps>(
 
     const visiblePages = getVisiblePages();
 
-    const buttonClass =
-      "px-3 py-2 text-sm font-medium rounded-sm transition-colors focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2 focus:ring-offset-[var(--bg)]";
-    const activeClass = "bg-brand text-[var(--brand-on)]";
-    const inactiveClass = "text-muted hover:text-on-primary hover:bg-white/5";
-    const disabledClass = "text-muted opacity-50 cursor-not-allowed";
-
     return (
-      <div ref={ref} className={cx("flex items-center gap-1", className)} {...props}>
-        {showFirstLast && (
-          <button
-            onClick={() => onPageChange(1)}
-            disabled={currentPage === 1}
-            className={cx(buttonClass, currentPage === 1 ? disabledClass : inactiveClass)}
-          >
-            First
-          </button>
-        )}
+      <div ref={ref} className={cx("pagination", className)} {...props}>
+        <div className="pagination-content">
+          {showFirstLast && (
+            <button
+              onClick={() => onPageChange(1)}
+              disabled={currentPage === 1}
+              className={cx(
+                "pagination-item pagination-previous",
+                currentPage === 1 && "pagination-item--disabled"
+              )}
+            >
+              First
+            </button>
+          )}
 
-        {showPrevNext && (
-          <button
-            onClick={() => onPageChange(currentPage - 1)}
-            disabled={currentPage === 1}
-            className={cx(buttonClass, currentPage === 1 ? disabledClass : inactiveClass)}
-          >
-            Previous
-          </button>
-        )}
+          {showPrevNext && (
+            <button
+              onClick={() => onPageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+              className={cx(
+                "pagination-item pagination-previous",
+                currentPage === 1 && "pagination-item--disabled"
+              )}
+            >
+              Previous
+            </button>
+          )}
 
-        {visiblePages.map((page, index) => (
-          <React.Fragment key={index}>
-            {typeof page === "string" ? (
-              <span className="px-3 py-2 text-muted">{page}</span>
-            ) : (
-              <button
-                onClick={() => onPageChange(page)}
-                className={cx(buttonClass, page === currentPage ? activeClass : inactiveClass)}
-              >
-                {page}
-              </button>
-            )}
-          </React.Fragment>
-        ))}
+          {visiblePages.map((page, index) => (
+            <React.Fragment key={index}>
+              {typeof page === "string" ? (
+                <span className="pagination-ellipsis">{page}</span>
+              ) : (
+                <button
+                  onClick={() => onPageChange(page)}
+                  className={cx(
+                    "pagination-item",
+                    page === currentPage && "pagination-item--active"
+                  )}
+                >
+                  {page}
+                </button>
+              )}
+            </React.Fragment>
+          ))}
 
-        {showPrevNext && (
-          <button
-            onClick={() => onPageChange(currentPage + 1)}
-            disabled={currentPage === totalPages}
-            className={cx(buttonClass, currentPage === totalPages ? disabledClass : inactiveClass)}
-          >
-            Next
-          </button>
-        )}
+          {showPrevNext && (
+            <button
+              onClick={() => onPageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+              className={cx(
+                "pagination-item pagination-next",
+                currentPage === totalPages && "pagination-item--disabled"
+              )}
+            >
+              Next
+            </button>
+          )}
 
-        {showFirstLast && (
-          <button
-            onClick={() => onPageChange(totalPages)}
-            disabled={currentPage === totalPages}
-            className={cx(buttonClass, currentPage === totalPages ? disabledClass : inactiveClass)}
-          >
-            Last
-          </button>
-        )}
+          {showFirstLast && (
+            <button
+              onClick={() => onPageChange(totalPages)}
+              disabled={currentPage === totalPages}
+              className={cx(
+                "pagination-item pagination-next",
+                currentPage === totalPages && "pagination-item--disabled"
+              )}
+            >
+              Last
+            </button>
+          )}
+        </div>
       </div>
     );
   },

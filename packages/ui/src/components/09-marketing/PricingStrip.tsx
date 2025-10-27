@@ -12,15 +12,11 @@ export type PricingStripProps = {
 export const PricingStrip = React.forwardRef<HTMLElement, PricingStripProps>(
   ({ title, subtitle, cta, className, ...props }, ref) => {
     return (
-      <section ref={ref} className={cx("w-full mx-auto px-4 md:px-6 py-12", className)} {...props}>
-        <div className="mx-auto max-w-7xl">
-          {title && (
-            <h2 className="text-2xl md:text-3xl font-semibold tracking-tight text-foreground">
-              {title}
-            </h2>
-          )}
-          {subtitle && <p className="mt-2 text-muted-foreground">{subtitle}</p>}
-          <div className="mt-4 inline-flex-row gap-3">{cta}</div>
+      <section ref={ref} className={cx("pricing-strip", className)} {...props}>
+        <div className="pricing-strip-container">
+          {title && <h2 className="pricing-strip-title">{title}</h2>}
+          {subtitle && <p className="pricing-strip-description">{subtitle}</p>}
+          <div className="pricing-strip-actions">{cta}</div>
         </div>
       </section>
     );

@@ -1,0 +1,16 @@
+/* Center Component */
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Variants */
+.center--inline {
+  display: inline-flex;
+}
+
+.center--vertical {
+  flex-direction: column;
+}

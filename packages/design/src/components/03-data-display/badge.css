@@ -3,43 +3,44 @@
 .badge {
   display: inline-flex;
   align-items: center;
-  border-radius: var(--radius-full);
-  font-weight: 500;
-  font-size: 0.75rem;
-  line-height: 1;
+  border-radius: var(--radius-sm);
+  font-weight: var(--font-semibold);
+  font-size: var(--text-tiny);
+  line-height: var(--leading-none);
   padding: var(--gap-xs) var(--gap-sm);
-  transition: all 0.2s ease;
+  transition: var(--transition-all);
 }
 
 /* Badge variants */
 .badge--default {
   background-color: var(--muted);
-  color: var(--muted-foreground);
+  color: var(--bg);
 }
 
 .badge--primary {
   background-color: var(--primary);
-  color: var(--primary-foreground);
+  color: var(--bg);
 }
 
 .badge--secondary {
-  background-color: var(--secondary);
-  color: var(--secondary-foreground);
+  background-color: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
 }
 
 .badge--success {
   background-color: var(--success);
-  color: var(--success-foreground);
+  color: var(--bg);
 }
 
 .badge--warning {
   background-color: var(--warning);
-  color: var(--warning-foreground);
+  color: var(--bg);
 }
 
 .badge--destructive {
-  background-color: var(--destructive);
-  color: var(--destructive-foreground);
+  background-color: var(--error);
+  color: var(--bg);
 }
 
 /* Badge outline variants */
@@ -76,11 +77,11 @@
 
 /* Badge sizes */
 .badge--sm {
-  font-size: 0.625rem;
+  font-size: var(--text-tiny);
   padding: var(--gap-xs) var(--gap-sm);
 }
 
 .badge--lg {
-  font-size: 0.875rem;
+  font-size: var(--text-small);
   padding: var(--gap-xs) var(--gap-md);
 }

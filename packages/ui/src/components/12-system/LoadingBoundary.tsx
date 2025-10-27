@@ -11,10 +11,10 @@ export interface LoadingBoundaryProps {
 }
 
 const DefaultLoadingFallback = () => (
-  <div className="min-h-[200px] flex-center">
-    <div className="text-center">
-      <Spinner size="lg" className="mb-4" />
-      <p className="text-muted">Loading...</p>
+  <div className="loading-page">
+    <div className="loading-page-content">
+      <Spinner size="lg" />
+      <p className="loading-page-text">Loading...</p>
     </div>
   </div>
 );
@@ -23,7 +23,7 @@ export const LoadingBoundary = React.forwardRef<HTMLDivElement, LoadingBoundaryP
   ({ children, loading = false, fallback, className }, ref) => {
     if (loading) {
       return (
-        <div ref={ref} className={cx("bg-muted", className)}>
+        <div ref={ref} className={cx("loading-boundary", className)}>
           {fallback || <DefaultLoadingFallback />}
         </div>
       );

@@ -1,0 +1,48 @@
+/* Blockquote Component */
+
+.blockquote {
+  margin: 0;
+  padding-left: var(--gap-lg);
+  border-left: 4px solid var(--border);
+  font-size: var(--text-body-lg);
+  font-style: italic;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+
+/* Variants */
+.blockquote--primary {
+  border-left-color: var(--primary);
+  color: var(--foreground);
+}
+
+.blockquote--success {
+  border-left-color: var(--success);
+}
+
+.blockquote--warning {
+  border-left-color: var(--warning);
+}
+
+.blockquote--error {
+  border-left-color: var(--destructive);
+}
+
+/* Sizes */
+.blockquote--sm {
+  font-size: var(--text-body);
+  padding-left: var(--gap-md);
+  border-left-width: 3px;
+}
+
+.blockquote--md {
+  font-size: var(--text-body-lg);
+  padding-left: var(--gap-lg);
+  border-left-width: 4px;
+}
+
+.blockquote--lg {
+  font-size: var(--text-h5);
+  padding-left: var(--gap-xl);
+  border-left-width: 5px;
+}

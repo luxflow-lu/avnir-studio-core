@@ -4,7 +4,7 @@
   position: relative;
   width: 100%;
   overflow: hidden;
-  background-color: var(--secondary);
+  background-color: var(--surface);
   border-radius: var(--radius-full);
 }
 
@@ -13,25 +13,25 @@
   width: 100%;
   flex: 1;
   background-color: var(--primary);
-  transition: all 0.3s ease;
+  transition: var(--transition-all);
   border-radius: var(--radius-full);
 }
 
 /* Progress sizes */
 .progress--sm {
-  height: 0.25rem;
+  height: var(--gap-xs);
 }
 
 .progress--md {
-  height: 0.5rem;
+  height: var(--gap-sm);
 }
 
 .progress--lg {
-  height: 0.75rem;
+  height: var(--gap-md);
 }
 
 .progress--xl {
-  height: 1rem;
+  height: var(--gap-lg);
 }
 
 /* Progress variants */
@@ -40,7 +40,7 @@
 }
 
 .progress--secondary .progress-indicator {
-  background-color: var(--secondary);
+  background-color: var(--surface);
 }
 
 .progress--success .progress-indicator {
@@ -66,11 +66,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.875rem;
+  font-size: var(--text-small);
   color: var(--text);
 }
 
 .progress-value {
-  font-weight: 500;
-  color: var(--muted-foreground);
+  font-weight: var(--font-medium);
+  color: var(--muted);
 }

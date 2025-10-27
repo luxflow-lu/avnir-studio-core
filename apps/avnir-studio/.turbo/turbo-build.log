@@ -5,11 +5,4 @@
    ▲ Next.js 15.5.6
 
    Creating an optimized production build ...
-
-warn - Your `content` configuration includes a pattern which looks like it's accidentally matching all of `node_modules` and can cause serious performance issues.
-warn - Pattern: `../../packages/ui/**/*.tsx`
-warn - See our documentation for recommendations:
-warn - https://tailwindcss.com/docs/content-configuration#pattern-recommendations
- ✓ Compiled successfully in 66s
-   Linting and checking validity of types ...
  ELIFECYCLE  Command failed with exit code 130.

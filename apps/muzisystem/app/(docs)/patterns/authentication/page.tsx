@@ -1,20 +1,20 @@
 "use client";
 
-import { Layout, Content, Card } from "@avnir/ui";
+import { Layout, Content, Marketing, Feedback, DataDisplay, Primitives } from "@avnir/ui";
 
 export default function AuthenticationPatternPage() {
   return (
     <>
-      <div className="section">
+      <section className="section">
         <div className="container">
           <Layout.PageHeader
             title="Authentication Patterns"
             subtitle="Secure and user-friendly authentication flows for login, signup, and password management."
           />
         </div>
-      </div>
+      </section>
 
-      <div className="section">
+      <section className="section">
         <div className="container">
           <Content.Prose>
             <h2>Overview</h2>
@@ -28,75 +28,48 @@ export default function AuthenticationPatternPage() {
             </p>
           </Content.Prose>
         </div>
-      </div>
+      </section>
 
-      <div className="section">
+      <section className="section">
+        <div className="container">
+          <Feedback.Alert variant="warning" title="Security First">
+            All authentication patterns follow OWASP best practices and include built-in protection against common attacks (brute force, CSRF, XSS).
+          </Feedback.Alert>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container">
           <Content.Prose>
             <h2>Authentication Flows</h2>
           </Content.Prose>
-
-          <div className="grid-2">
-            <Card>
-              <h3>🔐 Login</h3>
-              <p style={{ fontSize: 'var(--text-small)', marginBottom: 'var(--gap-md)' }}>
-                Standard email/password login with remember me option and error handling.
-              </p>
-              <ul style={{ fontSize: 'var(--text-small)' }}>
-                <li>Email validation</li>
-                <li>Password visibility toggle</li>
-                <li>Remember me checkbox</li>
-                <li>Forgot password link</li>
-                <li>Social login options</li>
-              </ul>
-            </Card>
-
-            <Card>
-              <h3>✍️ Signup</h3>
-              <p style={{ fontSize: 'var(--text-small)', marginBottom: 'var(--gap-md)' }}>
-                User registration with validation and password strength indicator.
-              </p>
-              <ul style={{ fontSize: 'var(--text-small)' }}>
-                <li>Real-time validation</li>
-                <li>Password strength meter</li>
-                <li>Terms acceptance</li>
-                <li>Email verification</li>
-                <li>Social signup options</li>
-              </ul>
-            </Card>
-
-            <Card>
-              <h3>🔑 Password Reset</h3>
-              <p style={{ fontSize: 'var(--text-small)', marginBottom: 'var(--gap-md)' }}>
-                Secure password recovery flow with email verification.
-              </p>
-              <ul style={{ fontSize: 'var(--text-small)' }}>
-                <li>Email verification</li>
-                <li>Secure token generation</li>
-                <li>Password confirmation</li>
-                <li>Success confirmation</li>
-                <li>Expiration handling</li>
-              </ul>
-            </Card>
-
-            <Card>
-              <h3>🔒 Two-Factor Auth</h3>
-              <p style={{ fontSize: 'var(--text-small)', marginBottom: 'var(--gap-md)' }}>
-                Additional security layer with TOTP or SMS verification.
-              </p>
-              <ul style={{ fontSize: 'var(--text-small)' }}>
-                <li>QR code setup</li>
-                <li>Backup codes</li>
-                <li>SMS fallback</li>
-                <li>Recovery options</li>
-                <li>Device trust</li>
-              </ul>
-            </Card>
-          </div>
+          
+          <Marketing.FeatureGrid>
+            <Marketing.FeatureGridItem
+              icon="🔐"
+              title="Login"
+              description="Standard email/password login with remember me option and error handling. Includes email validation, password visibility toggle, and social login options."
+            />
+            <Marketing.FeatureGridItem
+              icon="✍️"
+              title="Signup"
+              description="User registration with real-time validation and password strength indicator. Features terms acceptance, email verification, and social signup options."
+            />
+            <Marketing.FeatureGridItem
+              icon="🔑"
+              title="Password Reset"
+              description="Secure password recovery flow with email verification, token generation, and expiration handling. Includes password confirmation and success feedback."
+            />
+            <Marketing.FeatureGridItem
+              icon="🔒"
+              title="Two-Factor Auth"
+              description="Additional security layer with TOTP or SMS verification. Supports QR code setup, backup codes, SMS fallback, and device trust."
+            />
+          </Marketing.FeatureGrid>
         </div>
-      </div>
+      </section>
 
-      <div className="section">
+      <section className="section">
         <div className="container">
           <Content.Prose>
             <h2>Security Best Practices</h2>
@@ -110,27 +83,103 @@ export default function AuthenticationPatternPage() {
             </ul>
           </Content.Prose>
         </div>
-      </div>
+      </section>
 
-      <div className="section">
+      <section className="section">
         <div className="container">
           <Content.Prose>
             <h2>Social Login Integration</h2>
             <p>Support for popular OAuth providers:</p>
-            <ul>
-              <li><strong>Google</strong> - OAuth 2.0 with profile access</li>
-              <li><strong>GitHub</strong> - OAuth with email verification</li>
-              <li><strong>Apple</strong> - Sign in with Apple (iOS requirement)</li>
-              <li><strong>Microsoft</strong> - Azure AD integration</li>
-            </ul>
-            <p>
+          </Content.Prose>
+          
+          <Layout.Grid cols={4} gap="lg">
+            <Primitives.Card interactive>
+              <Primitives.CardHeader>
+                <DataDisplay.LogoPlaceholder>G</DataDisplay.LogoPlaceholder>
+                <Primitives.CardTitle>Google</Primitives.CardTitle>
+              </Primitives.CardHeader>
+              <Primitives.CardContent>
+                <p>OAuth 2.0 authentication with Google accounts. Most widely used provider with high trust.</p>
+              </Primitives.CardContent>
+            </Primitives.Card>
+
+            <Primitives.Card interactive>
+              <Primitives.CardHeader>
+                <DataDisplay.LogoPlaceholder>GH</DataDisplay.LogoPlaceholder>
+                <Primitives.CardTitle>GitHub</Primitives.CardTitle>
+              </Primitives.CardHeader>
+              <Primitives.CardContent>
+                <p>Perfect for developer-focused applications. Provides access to user repositories and profile.</p>
+              </Primitives.CardContent>
+            </Primitives.Card>
+
+            <Primitives.Card interactive>
+              <Primitives.CardHeader>
+                <DataDisplay.LogoPlaceholder>A</DataDisplay.LogoPlaceholder>
+                <Primitives.CardTitle>Apple</Primitives.CardTitle>
+              </Primitives.CardHeader>
+              <Primitives.CardContent>
+                <p>Privacy-focused authentication with email relay option. Required for iOS apps.</p>
+              </Primitives.CardContent>
+            </Primitives.Card>
+
+            <Primitives.Card interactive>
+              <Primitives.CardHeader>
+                <DataDisplay.LogoPlaceholder>MS</DataDisplay.LogoPlaceholder>
+                <Primitives.CardTitle>Microsoft</Primitives.CardTitle>
+              </Primitives.CardHeader>
+              <Primitives.CardContent>
+                <p>Enterprise-grade authentication with Azure AD integration. Ideal for B2B applications.</p>
+              </Primitives.CardContent>
+            </Primitives.Card>
+          </Layout.Grid>
+          
+          <Content.Prose>
+            <p className="text-center mt-24">
               Social login reduces friction for users while maintaining security through trusted providers.
             </p>
           </Content.Prose>
         </div>
-      </div>
+      </section>
 
-      <div className="section">
+      <section className="section">
+        <div className="container">
+          <Content.Prose>
+            <h2>Authentication Flow</h2>
+            <p>Step-by-step process from login to session:</p>
+          </Content.Prose>
+          
+          <DataDisplay.Timeline>
+            <DataDisplay.TimelineItem
+              title="User Input"
+              description="User enters credentials (email/password or social login)"
+              date="Step 1"
+            />
+            <DataDisplay.TimelineItem
+              title="Client Validation"
+              description="Immediate feedback on format and required fields"
+              date="Step 2"
+            />
+            <DataDisplay.TimelineItem
+              title="Server Authentication"
+              description="Secure verification against database with rate limiting"
+              date="Step 3"
+            />
+            <DataDisplay.TimelineItem
+              title="Token Generation"
+              description="JWT access token (15min) + refresh token (7 days)"
+              date="Step 4"
+            />
+            <DataDisplay.TimelineItem
+              title="Session Created"
+              description="User authenticated and redirected to dashboard"
+              date="Step 5"
+            />
+          </DataDisplay.Timeline>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="container">
           <Content.Prose>
             <h2>Error Handling</h2>
@@ -146,9 +195,9 @@ export default function AuthenticationPatternPage() {
             </p>
           </Content.Prose>
         </div>
-      </div>
+      </section>
 
-      <div className="section">
+      <section className="section">
         <div className="container">
           <Content.Prose>
             <h2>Accessibility</h2>
@@ -161,9 +210,9 @@ export default function AuthenticationPatternPage() {
             </ul>
           </Content.Prose>
         </div>
-      </div>
+      </section>
 
-      <div className="section">
+      <section className="section">
         <div className="container">
           <Content.Prose>
             <h2>Implementation Guidelines</h2>
@@ -176,7 +225,7 @@ export default function AuthenticationPatternPage() {
             </ul>
           </Content.Prose>
         </div>
-      </div>
+      </section>
     </>
   );
 }

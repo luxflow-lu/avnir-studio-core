@@ -5,38 +5,60 @@
    ▲ Next.js 15.5.6
 
    Creating an optimized production build ...
+
+warn - Your `content` configuration includes a pattern which looks like it's accidentally matching all of `node_modules` and can cause serious performance issues.
+warn - Pattern: `../../packages/ui/**/*.tsx`
+warn - See our documentation for recommendations:
+warn - https://tailwindcss.com/docs/content-configuration#pattern-recommendations
+ ✓ Compiled successfully in 21.9s
+   Linting and checking validity of types ...
+
+ ⚠ The Next.js plugin was not detected in your ESLint configuration. See https://nextjs.org/docs/app/api-reference/config/eslint#migrating-existing-config
+
+./app/(docs)/layout.tsx
+10:13  Warning: 'React' is not defined.  no-undef
+
+./app/(marketing)/layout.tsx
+4:13  Warning: 'React' is not defined.  no-undef
+
+./app/components/ai/page.tsx
+98:36  Warning: Unexpected console statement.  no-console
+
+./app/components/auth/page.tsx
+97:15  Warning: Unexpected console statement.  no-console
+99:37  Warning: Unexpected console statement.  no-console
+100:29  Warning: Unexpected console statement.  no-console
+113:15  Warning: Unexpected console statement.  no-console
+115:29  Warning: Unexpected console statement.  no-console
+178:15  Warning: Unexpected console statement.  no-console
+181:15  Warning: Unexpected console statement.  no-console
+
+./app/components/media/page.tsx
+106:29  Warning: Unexpected console statement.  no-console
+107:33  Warning: Unexpected console statement.  no-console
+108:31  Warning: Unexpected console statement.  no-console
+118:29  Warning: Unexpected console statement.  no-console
+127:33  Warning: Unexpected console statement.  no-console
+128:31  Warning: Unexpected console statement.  no-console
+
+./app/layout.tsx
+11:62  Warning: 'React' is not defined.  no-undef
+
+./app/providers.tsx
+6:53  Warning: 'React' is not defined.  no-undef
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
 Failed to compile.
 
-./app/all-components/page.tsx
-Error:   [31mx[0m Expression expected
-     ,-[[36;1;4m/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/app/all-components/page.tsx[0m:752:1]
- [2m749[0m |           //               ]}
- [2m750[0m |           //               columns={2}
- [2m751[0m |           //             />
- [2m752[0m |           </div>
-     : [35;1m          ^[0m
- [2m753[0m | 
- [2m754[0m |           {/* Social Proof */}
- [2m755[0m |           <div className="mb-8">
-     `----
-  [31mx[0m Unterminated regexp literal
-     ,-[[36;1;4m/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/app/all-components/page.tsx[0m:752:1]
- [2m749[0m |           //               ]}
- [2m750[0m |           //               columns={2}
- [2m751[0m |           //             />
- [2m752[0m |           </div>
-     : [35;1m           ^^^^^[0m
- [2m753[0m | 
- [2m754[0m |           {/* Social Proof */}
- [2m755[0m |           <div className="mb-8">
-     `----
+./app/components/ai/page.tsx:100:15
+Type error: Property 'category' is missing in type '{ id: string; name: string; prompt: string; tags: string[]; }' but required in type 'PromptPreset'.
 
-Caused by:
-    Syntax Error
-
-Import trace for requested module:
-./app/all-components/page.tsx
-
-
-> Build failed because of webpack errors
+[0m [90m  98 |[39m             onGenerate[33m=[39m{(value) [33m=>[39m console[33m.[39mlog([32m'Generate:'[39m[33m,[39m value)}
+ [90m  99 |[39m             presets[33m=[39m{[
+[31m[1m>[22m[39m[90m 100 |[39m               {
+ [90m     |[39m               [31m[1m^[22m[39m
+ [90m 101 |[39m                 id[33m:[39m [32m"1"[39m[33m,[39m
+ [90m 102 |[39m                 name[33m:[39m [32m"Beat Description"[39m[33m,[39m
+ [90m 103 |[39m                 prompt[33m:[39m [32m"Create a detailed description for a hip-hop beat with..."[39m[33m,[39m[0m
+Next.js build worker exited with code: 1 and signal: null
  ELIFECYCLE  Command failed with exit code 1.

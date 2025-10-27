@@ -53,6 +53,7 @@
 @import './components/03-data-display/typed-badge.css';
 @import './components/03-data-display/permission-badge.css';
 @import './components/03-data-display/project-card.css';
+@import './components/03-data-display/logo-placeholder.css';
 
 /* 04 - Feedback (Alerts, toasts, etc.) */
 @import './components/04-feedback/alert.css';

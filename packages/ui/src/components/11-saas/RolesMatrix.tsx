@@ -48,98 +48,65 @@ export const RolesMatrix = React.forwardRef<HTMLDivElement, RolesMatrixProps>(
     };
 
     return (
-      <div
-        ref={ref}
-        className={cx("bg-surface-lg overflow-hidden", className)} {...props}
-      >
-        <div className="p-6-b-white/10">
-          <h3 className="text-lg font-semibold text-foreground mb-2">Roles & Permissions</h3>
-          <p className="text-muted text-sm">
-            Manage what each role can do in your workspace
-          </p>
+      <div ref={ref} className={cx("card", className)} {...props}>
+        <div className="card-header">
+          <div>
+            <h3 className="card-title">Roles & Permissions</h3>
+            <p className="card-description">Manage what each role can do in your workspace</p>
+          </div>
         </div>
 
-        <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead className="bg-muted">
-              <tr>
-                <th className="text-left p-4 text-sm font-medium text-foreground w-1/3">Permission</th>
-                {roles.map((role) => (
-                  <th
-                    key={role.id}
-                    className="text-center p-4 text-sm font-medium text-foreground min-w-[120px]"
-                  >
-                    <div className="flex-col items-center gap-2">
-                      <Badge className={role.color || "bg-brand-muted text-brand"}>
-                        {role.name}
-                      </Badge>
+        <div className="card-content">
+          <div className="roles-matrix">
+            <table className="roles-matrix-table">
+              <thead>
+                <tr>
+                  <th className="roles-matrix-header">Permission</th>
+                  {roles.map((role) => (
+                    <th key={role.id} className="roles-matrix-header">
+                      <Badge>{role.name}</Badge>
                       {role.description && (
-                        <span className="text-xs text-muted">
-                          {role.description}
-                        </span>
+                        <div className="text-xs text-muted">{role.description}</div>
                       )}
-                    </div>
-                  </th>
-                ))}
-              </tr>
-            </thead>
-            <tbody>
-              {categories.map((category) => (
-                <React.Fragment key={category}>
-                  <tr>
-                    <td colSpan={roles.length + 1} className="p-4 bg-muted">
-                      <div className="text-sm font-medium text-foreground">{category}</div>
-                    </td>
-                  </tr>
-                  {getPermissionsByCategory(category).map((permission) => (
-                    <tr key={permission.id} className="border-b-white/5 hover:bg-muted">
-                      <td className="p-4">
-                        <div>
-                          <div className="text-sm font-medium text-foreground">{permission.name}</div>
-                          {permission.description && (
-                            <div className="text-xs text-muted mt-1">
-                              {permission.description}
-                            </div>
-                          )}
-                        </div>
-                      </td>
-                      {roles.map((role) => (
-                        <td key={role.id} className="p-4">
-                          <button
-                            onClick={() => togglePermission(role.id, permission.id)}
-                            disabled={readonly}
-                            className={cx(
-                              "w-5 h-5-2",
-                              hasPermission(role.id, permission.id)
-                                ? "bg-brand-[var(--brand)]"
-                                : "border-muted hover:border-white/40",
-                              readonly ? "cursor-default" : "cursor-pointer",
-                              "focus:outline-none focus:ring-2 focus:ring-[var(--brand)] focus:ring-offset-2 focus:ring-offset-[var(--surface)]",
-                            )}
-                            aria-label={`${hasPermission(role.id, permission.id) ? "Remove" : "Grant"} ${permission.name} for ${role.name}`}
-                          >
-                            {hasPermission(role.id, permission.id) && (
-                              <svg
-                                className="w-3 h-3 text-[var(--brand-on)] mx-auto"
-                                fill="currentColor"
-                                viewBox="0 0 20 20"
-                              >
-                                <path
-                                  fillRule="evenodd"
-                                  d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                  clipRule="evenodd"
-                                />
-                              </svg>
-                            )}
-                          </button>
-                        </td>
-                      ))}
-                    </tr>
+                    </th>
                   ))}
-                </React.Fragment>
-              ))}
-            </tbody>
-          </table>
+                </tr>
+              </thead>
+              <tbody>
+                {categories.map((category) => (
+                  <React.Fragment key={category}>
+                    <tr>
+                      <td colSpan={roles.length + 1} className="roles-matrix-header">
+                        {category}
+                      </td>
+                    </tr>
+                    {getPermissionsByCategory(category).map((permission) => (
+                      <tr key={permission.id}>
+                        <td className="roles-matrix-permission">
+                          <div>{permission.name}</div>
+                          {permission.description && (
+                            <div className="text-xs text-muted">{permission.description}</div>
+                          )}
+                        </td>
+                        {roles.map((role) => (
+                          <td key={role.id} className="roles-matrix-cell">
+                            <input
+                              type="checkbox"
+                              checked={hasPermission(role.id, permission.id)}
+                              onChange={() => togglePermission(role.id, permission.id)}
+                              disabled={readonly}
+                              className="checkbox"
+                              aria-label={`${hasPermission(role.id, permission.id) ? "Remove" : "Grant"} ${permission.name} for ${role.name}`}
+                            />
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
+                  </React.Fragment>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     );

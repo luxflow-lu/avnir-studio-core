@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { cx } from "../../utils/cx";
+import { Button } from "../02-form/Button";
 
 export type ContactBlockProps = {
   title?: string;
@@ -60,9 +61,9 @@ export const ContactBlock = React.forwardRef<HTMLElement, ContactBlockProps>(
                       className="textarea"
                     />
                   </div>
-                  <button className="btn btn-primary">
+                  <Button variant="solid">
                     Envoyer
-                  </button>
+                  </Button>
                 </form>
               )}
             </div>

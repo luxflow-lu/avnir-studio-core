@@ -1,0 +1,68 @@
+/* ProgressCircle Component */
+
+.progress-circle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress-circle-svg {
+  transform: rotate(-90deg);
+}
+
+.progress-circle-track {
+  fill: none;
+  stroke: var(--muted);
+}
+
+.progress-circle-indicator {
+  fill: none;
+  stroke: var(--primary);
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+.progress-circle-label {
+  position: absolute;
+  font-size: var(--text-small);
+  font-weight: var(--font-semibold);
+  color: var(--foreground);
+}
+
+/* Variants */
+.progress-circle--success .progress-circle-indicator {
+  stroke: var(--success);
+}
+
+.progress-circle--warning .progress-circle-indicator {
+  stroke: var(--warning);
+}
+
+.progress-circle--error .progress-circle-indicator {
+  stroke: var(--destructive);
+}
+
+/* Sizes */
+.progress-circle--sm {
+  width: var(--space-48);
+  height: var(--space-48);
+}
+
+.progress-circle--sm .progress-circle-label {
+  font-size: var(--text-tiny);
+}
+
+.progress-circle--md {
+  width: var(--space-64);
+  height: var(--space-64);
+}
+
+.progress-circle--lg {
+  width: var(--space-96);
+  height: var(--space-96);
+}
+
+.progress-circle--lg .progress-circle-label {
+  font-size: var(--text-body);
+}

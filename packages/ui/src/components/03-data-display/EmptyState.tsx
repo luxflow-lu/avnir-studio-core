@@ -1,8 +1,23 @@
 import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
 
 import { cx } from "../../utils/cx";
 
-export interface EmptyStateProps extends React.HTMLAttributes<HTMLDivElement> {
+const emptyStateVariants = cva("empty-state", {
+  variants: {
+    variant: {
+      default: "",
+      compact: "empty-state--compact",
+    },
+  },
+  defaultVariants: {
+    variant: "default",
+  },
+});
+
+export interface EmptyStateProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof emptyStateVariants> {
   icon?: React.ReactNode;
   title: string;
   description?: string;
@@ -10,19 +25,16 @@ export interface EmptyStateProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export const EmptyState = React.forwardRef<HTMLDivElement, EmptyStateProps>(
-  ({ className, icon, title, description, action, ...props }, ref) => (
-    <div
-      ref={ref}
-      className={cx("flex flex-col items-center justify-center text-center py-12", className)} {...props}
-    >
+  ({ className, variant, icon, title, description, action, ...props }, ref) => (
+    <div ref={ref} className={cx(emptyStateVariants({ variant }), className)} {...props}>
       {icon && (
-        <div className="mb-4 text-muted" aria-hidden="true">
+        <div className="empty-state-icon" aria-hidden="true">
           {icon}
         </div>
       )}
-      <h3 className="text-lg font-semibold text-foreground mb-2">{title}</h3>
-      {description && <p className="text-muted mb-6 max-w-sm">{description}</p>}
-      {action && <div>{action}</div>}
+      <h3 className="empty-state-title">{title}</h3>
+      {description && <p className="empty-state-description">{description}</p>}
+      {action && <div className="empty-state-action">{action}</div>}
     </div>
   ),
 );

@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { cx } from "../../utils/cx";
+import { IconButton } from "../02-form/IconButton";
 
 export interface SidebarItem {
   id: string;
@@ -43,27 +44,19 @@ export const Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>(
         <div key={item.id}>
           <div
             className={cx(
-              "flex-center gap-3 px-3 py-2-sm",
-              item.active
-                ? "bg-brand/10 text-brand"
-                : "text-muted hover:text-on-primary hover:bg-muted",
-              level > 0 && "ml-6",
+              "sidebar-nav-item",
+              item.active && "sidebar-nav-item--active",
+              level > 0 && "ml-6"
             )}
             onClick={hasChildren ? () => toggleExpanded(item.id) : undefined}
           >
-            {item.icon && (
-              <span
-                className={cx("flex-shrink-0", collapsed && level === 0 ? "w-5 h-5" : "w-4 h-4")}
-              >
-                {item.icon}
-              </span>
-            )}
+            {item.icon && <span className="sidebar-nav-icon">{item.icon}</span>}
             {(!collapsed || level > 0) && (
               <>
                 <span className="flex-1 truncate">{item.label}</span>
                 {hasChildren && (
                   <svg
-                    className={cx("w-4 h-4 transition-transform", isExpanded && "rotate-90")}
+                    className={cx("sidebar-nav-icon transition-transform", isExpanded && "rotate-90")}
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -80,7 +73,7 @@ export const Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>(
             )}
           </div>
           {hasChildren && isExpanded && !collapsed && (
-            <div className="mt-1 space-y-1">
+            <div className="sidebar-nav">
               {item.children!.map((child) => renderItem(child, level + 1))}
             </div>
           )}
@@ -91,39 +84,38 @@ export const Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>(
     return (
       <div
         ref={ref}
-        className={cx(
-          "flex-col bg-surface-r-white/10 duration-300",
-          collapsed ? "w-16" : "w-64",
-          className,
-        )} {...props}
+        className={cx("sidebar", collapsed && "sidebar--collapsed", className)}
+        {...props}
       >
-        {header && <div className="p-4-b-white/10">{header}</div>}
+        {header && <div className="sidebar-header">{header}</div>}
 
-        <div className="flex-1 p-4 stack-2 overflow-y-auto">
-          {items.map((item) => renderItem(item))}
+        <div className="sidebar-content">
+          <div className="sidebar-nav">{items.map((item) => renderItem(item))}</div>
         </div>
 
-        {footer && <div className="p-4-t-white/10">{footer}</div>}
+        {footer && <div className="sidebar-footer">{footer}</div>}
 
         {onToggle && (
-          <button
+          <IconButton
+            variant="ghost"
+            size="sm"
             onClick={onToggle}
-            className="absolute -right-3 top-6 bg-surface-white/10-full p-1 text-muted hover:text-foreground"
-          >
-            <svg
-              className={cx("w-4 h-4 transition-transform", collapsed && "rotate-180")}
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M15 19l-7-7 7-7"
-              />
-            </svg>
-          </button>
+            icon={
+              <svg
+                className={cx("transition-transform", collapsed && "rotate-180")}
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M15 19l-7-7 7-7"
+                />
+              </svg>
+            }
+          />
         )}
       </div>
     );

@@ -154,6 +154,12 @@
   opacity: 0.3;
 }
 
+/* Force dark separator in light theme */
+[data-theme="light"] .footer-separator {
+  background: #1f1f23 !important;
+  opacity: 0.3 !important;
+}
+
 /* Bottom section: Copyright + Social */
 .footer-bottom .container {
   display: flex;

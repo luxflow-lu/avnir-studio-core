@@ -1,0 +1,40 @@
+/* Logo Placeholder Component */
+
+.logo-placeholder {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: var(--radius-md);
+  background: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--text-small);
+  font-weight: var(--font-semibold);
+  color: var(--muted-foreground);
+  flex-shrink: 0;
+}
+
+/* Sizes */
+.logo-placeholder--sm {
+  width: 2rem;
+  height: 2rem;
+  font-size: var(--text-tiny);
+}
+
+.logo-placeholder--md {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: var(--text-small);
+}
+
+.logo-placeholder--lg {
+  width: 3rem;
+  height: 3rem;
+  font-size: var(--text-body);
+}
+
+.logo-placeholder--xl {
+  width: 4rem;
+  height: 4rem;
+  font-size: var(--text-h6);
+}

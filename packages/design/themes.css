@@ -3,17 +3,36 @@
    Architecture: Modulaire (composants dans src/components/)
    ============================================ */
 
+/* ==================== BRAND COLORS ==================== */
+[data-brand="avnir-studio"] { --primary: #ededed; }
+[data-brand="muzidev"] { --primary: #5cb9f2; }
+[data-brand="muzipics"] { --primary: #ff2d55; }
+[data-brand="muziweb"] { --primary: #9802eb; }
+[data-brand="muzimerch"] { --primary: #ff9d00; }
+[data-brand="muzibase"] { --primary: #2fad66; }
+[data-brand="muzisystem"] { --primary: #ededed; }
+
 :root {
   /* ==================== 1. COLORS (Sémantiques) ==================== */
-  /* Base colors */
+  /* Base colors - Dark mode (default) */
   --bg: #0b0b0d;
   --surface: #141317;
   --text: #c5ccd6;
+  --foreground: var(--text);
   --titles: #ffffff;
   --muted: #9ca3af;
-  --primary: #ededed;
+  --muted-foreground: var(--muted);
+  /* --primary défini par [data-brand] */
   --border: #1f1f23;
   --accent: var(--primary);
+  
+  /* Dark mode fixed values (for light theme overrides) */
+  --dark-bg: #0b0b0d;
+  --dark-surface: #141317;
+  --dark-text: #c5ccd6;
+  --dark-titles: #ffffff;
+  --dark-muted: #9ca3af;
+  --dark-border: #1f1f23;
   
   /* Component colors */
   --card: var(--surface);
@@ -25,24 +44,18 @@
   --success: #10b981;
   --warning: #f59e0b;
   --error: #ef4444;
+  --destructive: var(--error);
   --info: #3b82f6;
   
-  /* RGB variants for alpha */
-  --primary-rgb: 237, 237, 237;
-  --success-rgb: 16, 185, 129;
-  --warning-rgb: 245, 158, 11;
-  --error-rgb: 239, 68, 68;
-  --info-rgb: 59, 130, 246;
-  
-  /* Fixed navbar/footer colors (never change) */
-  --navbar-bg: #0b0b0d;
-  --navbar-surface: #141317;
-  --navbar-border: #1f1f23;
-  --navbar-text: #ffffff;
-  --footer-bg: #0b0b0d;
-  --footer-surface: #141317;
-  --footer-border: #1f1f23;
-  --footer-text: #ffffff;
+  /* Navbar/Footer colors (simplified - use base tokens) */
+  --navbar-bg: var(--bg);
+  --navbar-surface: var(--surface);
+  --navbar-border: var(--border);
+  --navbar-text: var(--titles);
+  --footer-bg: var(--bg);
+  --footer-surface: var(--surface);
+  --footer-border: var(--border);
+  --footer-text: var(--titles);
 
   /* ==================== 2. SPACING (Sémantiques) ==================== */
   /* Layout spacing */
@@ -52,17 +65,27 @@
   --padding-section-lg: 6rem;
   --padding-section-xl: 8rem;
   
-  /* Component spacing */
-  --gap-xs: 0.25rem;   /* 4px */
-  --gap-sm: 0.5rem;    /* 8px */
-  --gap-md: 1rem;      /* 16px */
-  --gap-lg: 1.5rem;    /* 24px */
-  --gap-xl: 2rem;      /* 32px */
+  /* Component spacing - Gap (between elements) */
+  --gap-2xs: 0.125rem;  /* 2px */
+  --gap-xs: 0.25rem;    /* 4px */
+  --gap-sm: 0.5rem;     /* 8px */
+  --gap-md: 1rem;       /* 16px */
+  --gap-lg: 1.5rem;     /* 24px */
+  --gap-xl: 2rem;       /* 32px */
   
+  /* Component spacing - Margin (around elements) */
   --margin-sm: 0.5rem;
   --margin-md: 1rem;
   --margin-lg: 2rem;
   --margin-xl: 3rem;
+
+  /* Component spacing - Padding (inside elements) */
+  --padding-xs: 0.25rem;  /* 4px */
+  --padding-sm: 0.5rem;   /* 8px */
+  --padding-md: 1rem;     /* 16px */
+  --padding-lg: 1.5rem;   /* 24px */
+  --padding-xl: 2rem;     /* 32px */
+  --padding-2xl: 3rem;    /* 48px */
 
   /* ==================== 3. TYPOGRAPHY (Sémantiques) ==================== */
   /* Font families */
@@ -70,26 +93,26 @@
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   
   /* Headings */
-  --text-h1: 3.5rem;         /* 48px */
-  --text-h2: 3rem;      /* 36px */
-  --text-h3: 1.5rem;     /* 30px */
-  --text-h4: 1.25rem;       /* 24px */
-  --text-h5: 1.125rem;      /* 20px */
-  --text-h6: 1rem;     /* 18px */
+  --text-h1: 3.5rem;      /* 56px */
+  --text-h2: 3rem;        /* 48px */
+  --text-h3: 1.5rem;      /* 24px */
+  --text-h4: 1.25rem;     /* 20px */
+  --text-h5: 1.125rem;    /* 18px */
+  --text-h6: 1rem;        /* 16px */
   
   /* Display (hero titles) */
   --text-display-sm: 3.75rem;  /* 60px */
   --text-display-md: 4.5rem;   /* 72px */
   --text-display-lg: 6rem;     /* 96px */
   
-  /* Body text */
+  /* Body text (paragraphs) */
   --text-body: 1rem;       /* 16px */
-  --text-body-sm: 0.875rem; /* 14px */
-  --text-body-lg: 1.5rem; /* 18px */
+  --text-body-sm: 0.875rem; /* 14px - Small paragraphs */
+  --text-body-lg: 1.5rem;  /* 24px - Large paragraphs */
   
-  /* Utility */
-  --text-small: 0.875rem;  /* 14px */
-  --text-tiny: 0.75rem;    /* 12px */
+  /* Utility text (labels, captions, metadata) */
+  --text-small: 0.875rem;  /* 14px - Labels, captions */
+  --text-tiny: 0.75rem;    /* 12px - Metadata, badges */
   
   /* Font weights */
   --font-thin: 100;
@@ -150,61 +173,113 @@
   
   --transition-all: all 0.2s ease;
   --transition-colors: color, background-color, border-color 0.2s ease;
+
+  /* ==================== 5. COMPONENT SIZES ==================== */
+  /* Widths */
+  --width-xs: 20rem;    /* 320px */
+  --width-sm: 24rem;    /* 384px */
+  --width-md: 28rem;    /* 448px */
+  --width-lg: 32rem;    /* 512px */
+  --width-xl: 36rem;    /* 576px */
+  --width-2xl: 42rem;   /* 672px */
+  --width-3xl: 48rem;   /* 768px */
+  --width-4xl: 56rem;   /* 896px */
+  --width-5xl: 64rem;   /* 1024px */
+  --width-6xl: 72rem;   /* 1152px */
+  --width-7xl: 80rem;   /* 1280px */
+  --width-full: 100%;
+  --width-screen: 100vw;
+
+  /* Heights */
+  --height-xs: 20rem;   /* 320px */
+  --height-sm: 24rem;   /* 384px */
+  --height-md: 28rem;   /* 448px */
+  --height-lg: 32rem;   /* 512px */
+  --height-xl: 36rem;   /* 576px */
+  --height-2xl: 42rem;  /* 672px */
+  --height-3xl: 48rem;  /* 768px */
+  --height-full: 100%;
+  --height-screen: 100vh;
+
+  /* Border widths */
+  --border-width-0: 0;
+  --border-width-1: 1px;
+  --border-width-2: 2px;
+  --border-width-3: 3px;
+  --border-width-4: 4px;
+  --border-width-8: 8px;
+
+  /* Opacity */
+  --opacity-0: 0;
+  --opacity-5: 0.05;
+  --opacity-10: 0.1;
+  --opacity-20: 0.2;
+  --opacity-25: 0.25;
+  --opacity-30: 0.3;
+  --opacity-40: 0.4;
+  --opacity-50: 0.5;
+  --opacity-60: 0.6;
+  --opacity-70: 0.7;
+  --opacity-75: 0.75;
+  --opacity-80: 0.8;
+  --opacity-90: 0.9;
+  --opacity-95: 0.95;
+  --opacity-100: 1;
 }
 
-/* ==================== BRAND COLORS ==================== */
-[data-brand="avnir-studio"] { --primary: #ededed; }
-[data-brand="muzidev"] { --primary: #5cb9f2; }
-[data-brand="muzipics"] { --primary: #ff2d55; }
-[data-brand="muziweb"] { --primary: #9802eb; }
-[data-brand="muzimerch"] { --primary: #ff9d00; }
-[data-brand="muzibase"] { --primary: #2fad66; }
-[data-brand="muzisystem"] { --primary: #ededed; }
-
-/* ==================== LIGHT THEME ==================== */
+/* ==================== LIGHT THEME (Override base colors) ==================== */
 [data-theme="light"] {
   --bg: #f8f8f8;
   --surface: #ffffff;
   --text: #1f2937;
+  --foreground: var(--text);
   --titles: #111827;
   --muted: #6b7280;
+  --muted-foreground: var(--muted);
   --border: #e5e7eb;
 }
 
-/* Special rule for light brands (avnir-studio, muzisystem) in light theme */
-/* Primary buttons need dark background to be visible */
+/* ==================== LIGHT THEME - SPECIAL RULES ==================== */
+
+/* Light brands (avnir-studio, muzisystem) - Primary buttons */
+/* Primary buttons need dark background to be visible on light bg */
 [data-theme="light"][data-brand="avnir-studio"] .btn-primary,
 [data-theme="light"][data-brand="muzisystem"] .btn-primary {
-  background-color: #0b0b0d !important; /* Dark bg from dark theme */
-  color: #ffffff !important; /* White text */
+  background-color: var(--dark-bg) !important;
+  color: var(--dark-titles) !important;
 }
 
-/* Semi-light: Force dark navbar and footer in light theme */
+/* Semi-light rule: Force dark navbar and footer in light theme */
 [data-theme="light"] .navbar,
 [data-theme="light"] .footer {
-  background-color: var(--navbar-bg) !important;
+  background-color: var(--dark-bg) !important;
+  border-bottom-color: var(--dark-border) !important;
+  border-top-color: var(--dark-border) !important;
+  /* Force dark theme variables for footer text colors */
+  --text: var(--dark-text);
+  --muted: var(--dark-muted);
+  --titles: var(--dark-titles);
 }
 
-/* Border bottom navbar reste dark */
-[data-theme="light"] .navbar {
-  border-bottom-color: var(--navbar-border) !important;
-}
-
-/* Textes navbar et footer */
+/* Textes navbar - Sélecteurs spécifiques (blanc) */
 [data-theme="light"] .navbar-brand,
 [data-theme="light"] .navbar-link,
 [data-theme="light"] .navbar-menu-link,
-[data-theme="light"] .footer-logo,
-[data-theme="light"] .footer-link,
-[data-theme="light"] .footer-text,
-[data-theme="light"] .footer-newsletter-text,
-[data-theme="light"] .footer-copyright {
-  color: var(--navbar-text) !important;
+[data-theme="light"] .navbar-toggle,
+[data-theme="light"] .navbar select,
+[data-theme="light"] .navbar input,
+[data-theme="light"] .navbar label,
+[data-theme="light"] .navbar span,
+[data-theme="light"] .navbar p,
+[data-theme="light"] .navbar a {
+  color: #ffffff !important;
 }
 
-/* Titres des colonnes footer */
+/* Footer - Titres et liens en blanc, textes gardent var(--text)/var(--muted) */
+[data-theme="light"] .footer-logo,
+[data-theme="light"] .footer-link,
 [data-theme="light"] .footer-column-title {
-  color: var(--footer-text) !important;
+  color: #ffffff !important;
 }
 
 /* Liens hover */
@@ -217,58 +292,82 @@
 /* Borders dark dans navbar/footer */
 [data-theme="light"] .navbar-menu,
 [data-theme="light"] .footer-top {
-  background-color: var(--navbar-bg) !important;
-  border-color: var(--navbar-border) !important;
+  background-color: var(--dark-bg) !important;
+  border-color: #1f1f23 !important;
 }
 
-/* Footer separator garde border dark */
 [data-theme="light"] .footer-separator {
-  background: var(--footer-border) !important;
+  background: #1f1f23 !important;
 }
 
 [data-theme="light"] .navbar-menu-link:hover {
-  background-color: var(--navbar-surface) !important;
+  background-color: #141317 !important;
 }
 
-/* Force dark inputs in navbar/footer */
+/* Force dark inputs, selects in navbar/footer */
 [data-theme="light"] .navbar input,
 [data-theme="light"] .navbar select,
 [data-theme="light"] .footer input,
 [data-theme="light"] .footer select,
 [data-theme="light"] .footer-newsletter-input {
-  background-color: var(--navbar-surface) !important;
-  border-color: var(--navbar-border) !important;
-  color: var(--navbar-text) !important;
+  background-color: #141317 !important;
+  border-color: #1f1f23 !important;
+  color: #ffffff !important;
 }
 
-/* Bouton Subscribe garde la couleur primary */
+/* Buttons in navbar (except primary) */
+[data-theme="light"] .navbar button:not(.btn-primary),
+[data-theme="light"] .footer button:not(.btn-primary):not(.footer-newsletter-button) {
+  background-color: #141317 !important;
+  border-color: #1f1f23 !important;
+  color: #ffffff !important;
+}
+
+/* Primary buttons keep their brand color */
+[data-theme="light"] .footer .btn-primary,
 [data-theme="light"] .footer-newsletter-button {
   background-color: var(--primary) !important;
-  color: var(--navbar-bg) !important;
   border-color: var(--primary) !important;
 }
 
-/* Lien Privacy Policy toujours en primary */
-[data-theme="light"] .footer-newsletter-disclaimer a {
+/* Light brands need dark text for contrast */
+[data-theme="light"][data-brand="avnir-studio"] .footer .btn-primary,
+[data-theme="light"][data-brand="avnir-studio"] .footer-newsletter-button,
+[data-theme="light"][data-brand="muzisystem"] .footer .btn-primary,
+[data-theme="light"][data-brand="muzisystem"] .footer-newsletter-button {
+  color: #0b0b0d !important;
+}
+
+/* Dark brands can use white text */
+[data-theme="light"][data-brand="muzidev"] .footer .btn-primary,
+[data-theme="light"][data-brand="muzidev"] .footer-newsletter-button,
+[data-theme="light"][data-brand="muzipics"] .footer .btn-primary,
+[data-theme="light"][data-brand="muzipics"] .footer-newsletter-button,
+[data-theme="light"][data-brand="muziweb"] .footer .btn-primary,
+[data-theme="light"][data-brand="muziweb"] .footer-newsletter-button,
+[data-theme="light"][data-brand="muzimerch"] .footer .btn-primary,
+[data-theme="light"][data-brand="muzimerch"] .footer-newsletter-button,
+[data-theme="light"][data-brand="muzibase"] .footer .btn-primary,
+[data-theme="light"][data-brand="muzibase"] .footer-newsletter-button {
+  color: #ffffff !important;
+}
+
+/* Privacy Policy et autres liens dans disclaimer toujours en primary */
+[data-theme="light"] .footer-newsletter-disclaimer a,
+.footer-newsletter-disclaimer a {
   color: var(--primary) !important;
 }
 
-/* Autres boutons dans navbar (selects) - exclure toggle */
-[data-theme="light"] .navbar button:not(.navbar-toggle),
-[data-theme="light"] .navbar select {
-  background-color: var(--navbar-surface) !important;
-  border-color: var(--navbar-border) !important;
-  color: var(--navbar-text) !important;
-}
-
-/* Navbar toggle button sans background */
 [data-theme="light"] .navbar-toggle {
   background-color: transparent !important;
 }
 
-/* Separator dans navbar menu reste dark */
+[data-theme="light"] .navbar-toggle span {
+  background-color: var(--primary) !important;
+}
+
 [data-theme="light"] .navbar-menu-actions {
-  border-top-color: var(--navbar-border) !important;
+  border-top-color: #1f1f23 !important;
 }
 
 /* ==================== GLOBAL STYLES ==================== */
@@ -331,154 +430,6 @@ body {
   border-width: 0;
 }
 
-/* ============================================
-   FINSWEET STRUCTURE CLASSES
-   Used in apps for page layout
-   ============================================ */
-
-/* Container - Max width + horizontal padding */
-.container {
-  max-width: var(--container-max-width, 1280px) !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: var(--gap-md) !important;  /* 1rem mobile */
-  padding-right: var(--gap-md) !important;
-}
-
-/* Responsive container padding */
-@media (min-width: 768px) {
-  .container {
-    padding-left: var(--gap-xl) !important;  /* 2rem tablet */
-    padding-right: var(--gap-xl) !important;
-  }
-}
-
-@media (min-width: 1024px) {
-  .container {
-    padding-left: var(--padding-container) !important;  /* 4rem desktop */
-    padding-right: var(--padding-container) !important;
-  }
-}
-
-/* Section - Vertical spacing */
-.section {
-  padding-top: var(--padding-section-md);
-  padding-bottom: var(--padding-section-md);
-}
-
-.section--sm {
-  padding-top: var(--padding-section-sm);
-  padding-bottom: var(--padding-section-sm);
-}
-
-.section--lg {
-  padding-top: var(--padding-section-lg);
-  padding-bottom: var(--padding-section-lg);
-}
-
-.section--xl {
-  padding-top: var(--padding-section-xl);
-  padding-bottom: var(--padding-section-xl);
-}
-
-/* Grid utilities */
-.grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--gap-xl);
-}
-
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--gap-xl);
-}
-
-.grid-4 {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--gap-xl);
-}
-
-/* Responsive grids */
-@media (max-width: 768px) {
-  .grid-2,
-  .grid-3,
-  .grid-4 {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* ============================================
-   Component styles are in src/components/
-   Import via src/index.css
-   ============================================ */
-
-/* Component Showcase Utilities */
-.component-preview {
-  display: flex;
-  gap: var(--gap-md);
-  align-items: center;
-  flex-wrap: wrap;
-  padding: var(--padding-section-sm) 0;
-}
-
-.component-count {
-  font-size: var(--text-small);
-  color: var(--muted);
-  margin-top: var(--margin-sm);
-}
-
-/* ============================================
-   LEGACY ALIASES (⚠️ DEPRECATED - COMMENTED OUT)
-   Kept for reference only - DO NOT UNCOMMENT
-   Use semantic names instead:
-   - Spacing: --gap-*, --padding-*, --margin-*
-   - Typography: --text-h*, --text-body*, --text-display-*
-   ============================================ */
-
-/*
-:root {
-  Legacy spacing
-  --space-2: 0.125rem;
-  --space-4: 0.25rem;
-  --space-6: 0.375rem;
-  --space-8: 0.5rem;
-  --space-12: 0.75rem;
-  --space-16: 1rem;
-  --space-20: 1.25rem;
-  --space-24: 1.5rem;
-  --space-32: 2rem;
-  --space-48: 3rem;
-  --space-64: 4rem;
-  --space-80: 5rem;
-  --space-96: 6rem;
-  --space-global-x: var(--padding-container);
-  --space-section-sm: var(--padding-section-sm);
-  --space-section-md: var(--padding-section-md);
-  --space-section-lg: var(--padding-section-lg);
-  --space-section-xl: var(--padding-section-xl);
-  
-  Legacy typography
-  --text-xs: var(--text-tiny);
-  --text-sm: var(--text-small);
-  --text-base: var(--text-body);
-  --text-lg: var(--text-body-lg);
-  --text-xl: var(--text-h5);
-  --text-2xl: var(--text-h4);
-  --text-3xl: var(--text-h3);
-  --text-4xl: var(--text-h2);
-  --text-5xl: var(--text-h1);
-  --text-6xl: var(--text-display-sm);
-  --text-7xl: var(--text-display-md);
-  --text-8xl: var(--text-display-lg);
-}
-*/
-
-/* ==================== UTILITY CLASSES ==================== */
-/* Classes utilitaires qui mappent nos variables CSS */
-/* Utilisées pour remplacer Tailwind dans les composants */
-
 /* Typography utilities */
 .text-xs { font-size: var(--text-tiny); }
 .text-sm { font-size: var(--text-small); }
@@ -518,3 +469,140 @@ body {
 .text-success { color: var(--success); }
 .text-warning { color: var(--warning); }
 .text-info { color: var(--info); }
+
+/* ============================================
+   LAYOUT UTILITIES (Finsweet Structure)
+   ============================================ */
+
+/* Container - Max width + horizontal padding */
+.container {
+  max-width: var(--container-max-width, 1280px) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  padding-left: var(--gap-md) !important;
+  padding-right: var(--gap-md) !important;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: var(--gap-xl) !important;
+    padding-right: var(--gap-xl) !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding-left: var(--padding-container) !important;
+    padding-right: var(--padding-container) !important;
+  }
+}
+
+/* Section - Vertical spacing */
+.section {
+  padding-top: var(--padding-section-md);
+  padding-bottom: var(--padding-section-md);
+}
+
+.section--sm {
+  padding-top: var(--padding-section-sm);
+  padding-bottom: var(--padding-section-sm);
+}
+
+.section--lg {
+  padding-top: var(--padding-section-lg);
+  padding-bottom: var(--padding-section-lg);
+}
+
+.section--xl {
+  padding-top: var(--padding-section-xl);
+  padding-bottom: var(--padding-section-xl);
+}
+
+/* Section actions (CTA buttons at bottom of sections) */
+.section-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--gap-md);
+  margin-top: var(--gap-xl);
+  flex-wrap: wrap;
+}
+
+/* Grid utilities */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-xl);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--gap-xl);
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-xl);
+}
+
+@media (max-width: 768px) {
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   Component styles are in src/components/
+   Import via src/index.css
+   ============================================ */
+
+/* ============================================
+   LEGACY ALIASES (⚠️ DEPRECATED - COMMENTED OUT)
+   Kept for reference only - DO NOT UNCOMMENT
+   Use semantic names instead:
+   - Spacing: --gap-*, --padding-*, --margin-*
+   - Typography: --text-h*, --text-body*, --text-display-*
+   - Colors: --foreground, --muted-foreground, --destructive
+   ============================================ */
+
+/*
+:root {
+  Legacy spacing
+  --space-2: 0.125rem;
+  --space-4: 0.25rem;
+  --space-6: 0.375rem;
+  --space-8: 0.5rem;
+  --space-12: 0.75rem;
+  --space-16: 1rem;
+  --space-20: 1.25rem;
+  --space-24: 1.5rem;
+  --space-32: 2rem;
+  --space-48: 3rem;
+  --space-64: 4rem;
+  --space-80: 5rem;
+  --space-96: 6rem;
+  --space-global-x: var(--padding-container);
+  --space-section-sm: var(--padding-section-sm);
+  --space-section-md: var(--padding-section-md);
+  --space-section-lg: var(--padding-section-lg);
+  --space-section-xl: var(--padding-section-xl);
+  
+  Legacy typography
+  --text-xs: var(--text-tiny);
+  --text-sm: var(--text-small);
+  --text-base: var(--text-body);
+  --text-lg: var(--text-body-lg);
+  --text-xl: var(--text-h5);
+  --text-2xl: var(--text-h4);
+  --text-3xl: var(--text-h3);
+  --text-4xl: var(--text-h2);
+  --text-5xl: var(--text-h1);
+  --text-6xl: var(--text-display-sm);
+  --text-7xl: var(--text-display-md);
+  --text-8xl: var(--text-display-lg);
+}
+*/

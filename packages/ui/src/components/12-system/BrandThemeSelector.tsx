@@ -41,11 +41,11 @@ export const BrandThemeSelector = React.forwardRef<HTMLDivElement, BrandThemeSel
     };
 
     return (
-      <div ref={ref} className={cx("flex items-center gap-4", className)} {...props}>
+      <div ref={ref} className={cx("flex gap-4", className)} {...props}>
         <select
           value={currentBrand}
           onChange={(e) => updateBrand(e.target.value)}
-          className="select text-sm"
+          className="select"
         >
           {brands.map((brand) => (
             <option key={brand} value={brand}>
@@ -57,7 +57,7 @@ export const BrandThemeSelector = React.forwardRef<HTMLDivElement, BrandThemeSel
         <select
           value={currentTheme}
           onChange={(e) => updateTheme(e.target.value)}
-          className="select text-sm"
+          className="select"
         >
           {themes.map((theme) => (
             <option key={theme} value={theme}>

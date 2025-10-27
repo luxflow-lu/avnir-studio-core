@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { cx } from "../../utils/cx";
+import { Button } from "../02-form/Button";
 
 export interface ErrorBoundaryProps {
   children: React.ReactNode;
@@ -14,9 +15,9 @@ interface ErrorBoundaryState {
 }
 
 const DefaultErrorFallback = ({ error, resetError }: { error: Error; resetError: () => void }) => (
-  <div className="min-h-[400px]-center bg-muted">
-    <div className="text-center max-w-md mx-auto p-6">
-      <div className="icon-xl mx-auto mb-4 text-destructive">
+  <div className="error-page">
+    <div className="error-page-content">
+      <div className="error-page-icon">
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
             strokeLinecap="round"
@@ -26,24 +27,15 @@ const DefaultErrorFallback = ({ error, resetError }: { error: Error; resetError:
           />
         </svg>
       </div>
-      <h2 className="text-xl font-semibold text-foreground mb-2">Something went wrong</h2>
-      <p className="text-muted mb-4">
+      <h2 className="error-page-title">Something went wrong</h2>
+      <p className="error-page-description">
         An unexpected error occurred. Please try again.
       </p>
-      <details className="text-left mb-4">
-        <summary className="cursor-pointer text-sm text-muted hover:text-foreground">
-          Error details
-        </summary>
-        <pre className="mt-2 text-xs bg-surface p-3 overflow-auto text-destructive">
-          {error.message}
-        </pre>
+      <details className="error-page-details">
+        <summary>Error details</summary>
+        <pre className="error-page-code">{error.message}</pre>
       </details>
-      <button
-        onClick={resetError}
-        className="px-4 py-2 bg-brand text-[var(--brand-on)]-sm hover:opacity-90 transition-opacity"
-      >
-        Try again
-      </button>
+      <Button onClick={resetError}>Try again</Button>
     </div>
   </div>
 );

@@ -1,46 +1,5 @@
 /* LogoCloud Component */
 
-.logo-cloud {
-  width: 100%;
-  margin: 0 auto;
-  padding: var(--padding-section-md) var(--gap-md);
-}
-
-@media (min-width: 768px) {
-  .logo-cloud {
-    padding: var(--padding-section-xl) var(--gap-xl);
-  }
-}
-
-.logo-cloud-container {
-  margin: 0 auto;
-  max-width: 80rem;
-}
-
-.logo-cloud-header {
-  margin-bottom: var(--gap-xl);
-  text-align: center;
-}
-
-.logo-cloud-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  color: var(--titles);
-  margin-bottom: var(--gap-sm);
-}
-
-@media (min-width: 768px) {
-  .logo-cloud-title {
-    font-size: 1.875rem;
-  }
-}
-
-.logo-cloud-subtitle {
-  color: var(--muted);
-  margin: 0;
-}
-
 .logo-cloud-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

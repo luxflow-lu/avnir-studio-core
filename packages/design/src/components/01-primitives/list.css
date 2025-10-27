@@ -1,0 +1,78 @@
+/* List Component */
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list li {
+  position: relative;
+  padding-left: var(--gap-lg);
+  font-size: var(--text-small);
+  line-height: 1.5;
+  color: var(--muted-foreground);
+}
+
+.list li::before {
+  content: "•";
+  position: absolute;
+  left: var(--gap-sm);
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* Variants */
+.list--checklist li::before {
+  content: "✓";
+  color: var(--success);
+}
+
+.list--numbered {
+  counter-reset: list-counter;
+}
+
+.list--numbered li::before {
+  content: counter(list-counter) ".";
+  counter-increment: list-counter;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+/* Sizes */
+.list--sm {
+  gap: var(--gap-xs);
+}
+
+.list--sm li {
+  font-size: var(--text-tiny);
+  padding-left: var(--gap-md);
+}
+
+.list--sm li::before {
+  left: var(--gap-xs);
+}
+
+.list--md {
+  gap: var(--gap-sm);
+}
+
+.list--md li {
+  font-size: var(--text-small);
+}
+
+.list--lg {
+  gap: var(--gap-md);
+}
+
+.list--lg li {
+  font-size: var(--text-body);
+  padding-left: var(--gap-xl);
+}
+
+.list--lg li::before {
+  left: var(--gap-md);
+}

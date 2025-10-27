@@ -4,24 +4,18 @@ import { cx } from "../../utils/cx";
 
 export type Stat = { label: string; value: string; sublabel?: string };
 export type StatsProps = {
-  title?: string;
   items: Stat[];
   columns?: 2 | 3 | 4;
   className?: string;
-} & React.HTMLAttributes<HTMLElement>;
+} & React.HTMLAttributes<HTMLDivElement>;
 
-export const Stats = React.forwardRef<HTMLElement, StatsProps>(
-  ({ title, items, columns = 4, className, ...props }, ref) => {
+export const Stats = React.forwardRef<HTMLDivElement, StatsProps>(
+  ({ items, columns = 4, className, ...props }, ref) => {
     return (
-      <section
+      <div
         ref={ref}
-        className={cx("stats-section", `stats-section--${columns}`, className)} {...props}
+        className={cx("stats-grid", `stats-grid--${columns}`, className)} {...props}
       >
-        <div className="stats-container">
-          {title && (
-            <h2 className="stats-title">{title}</h2>
-          )}
-          <div className={cx("stats-grid", `stats-grid--${columns}`)}>
             {items.map((s, i) => (
               <div key={i} className="stat-card">
                 <div className="stat-value">{s.value}</div>
@@ -31,9 +25,7 @@ export const Stats = React.forwardRef<HTMLElement, StatsProps>(
                 )}
               </div>
             ))}
-          </div>
-        </div>
-      </section>
+      </div>
     );
   },
 );

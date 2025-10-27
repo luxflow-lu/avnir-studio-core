@@ -12,6 +12,7 @@ export {
   Carousel,
   DataTable,
   EmptyState,
+  LogoPlaceholder,
   PermissionBadge,
   Progress,
   ProjectCard,

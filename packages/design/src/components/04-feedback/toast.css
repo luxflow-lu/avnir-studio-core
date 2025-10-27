@@ -103,25 +103,25 @@
 .toast-item--destructive {
   border-color: var(--destructive);
   color: var(--destructive);
-  background-color: rgba(var(--destructive-rgb), 0.1);
+  background-color: color-mix(in srgb, var(--destructive) 10%, transparent);
 }
 
 .toast-item--success {
   border-color: var(--success);
   color: var(--success);
-  background-color: rgba(var(--success-rgb), 0.1);
+  background-color: color-mix(in srgb, var(--success) 10%, transparent);
 }
 
 .toast-item--warning {
   border-color: var(--warning);
   color: var(--warning);
-  background-color: rgba(var(--warning-rgb), 0.1);
+  background-color: color-mix(in srgb, var(--warning) 10%, transparent);
 }
 
 .toast-item--info {
   border-color: var(--info);
   color: var(--info);
-  background-color: rgba(var(--info-rgb), 0.1);
+  background-color: color-mix(in srgb, var(--info) 10%, transparent);
 }
 
 /* Toast animations */

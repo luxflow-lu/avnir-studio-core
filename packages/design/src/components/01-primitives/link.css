@@ -1,0 +1,90 @@
+/* Link Component */
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-xs);
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.link:hover {
+  color: var(--primary);
+  opacity: 0.8;
+}
+
+.link:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+/* Variants */
+.link--underline {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.link--underline:hover {
+  text-decoration-thickness: 2px;
+}
+
+.link--muted {
+  color: var(--muted-foreground);
+}
+
+.link--muted:hover {
+  color: var(--foreground);
+}
+
+.link--subtle {
+  color: var(--foreground);
+}
+
+.link--subtle:hover {
+  color: var(--primary);
+}
+
+/* Sizes */
+.link--xs {
+  font-size: var(--text-tiny);
+  gap: var(--gap-2xs);
+}
+
+.link--sm {
+  font-size: var(--text-small);
+  gap: var(--gap-xs);
+}
+
+.link--md {
+  font-size: var(--text-body);
+}
+
+.link--lg {
+  font-size: var(--text-body-lg);
+}
+
+/* External link icon */
+.link--external::after {
+  content: "";
+  display: inline-block;
+  width: 0.875em;
+  height: 0.875em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+}
+
+.link--external:hover::after {
+  opacity: 1;
+}
+
+/* Disabled */
+.link--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}

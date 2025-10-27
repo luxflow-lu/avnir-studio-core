@@ -22,106 +22,42 @@ export const CheckoutSteps = React.forwardRef<HTMLDivElement, CheckoutStepsProps
     const isHorizontal = orientation === "horizontal";
 
     return (
-      <div
-        ref={ref}
-        className={cx(
-          "w-full",
-          isHorizontal ? "flex items-center" : "flex flex-col space-y-4",
-          className,
-        )} {...props}
-      >
-        {steps.map((step, index) => {
-          const isLast = index === steps.length - 1;
-          const canClick = onStepClick && !step.disabled && (step.completed || step.current);
-
-          return (
-            <div
-              key={step.id}
-              className={cx("flex items-center", isHorizontal ? "flex-1" : "w-full")}
-            >
-              {/* Step Content */}
-              <div
-                className={cx(
-                  "flex items-center",
-                  canClick && "cursor-pointer",
-                  isHorizontal ? "flex-col text-center" : "flex-row",
-                )}
-                onClick={canClick ? () => onStepClick(step.id) : undefined}
-              >
-                {/* Step Circle */}
-                <div
-                  className={cx(
-                    "flex items-center justify-center icon-lg rounded-full border-2 transition-all",
-                    step.completed
-                      ? "bg-brand border-brand text-[var(--brand-on)]"
-                      : step.current
-                        ? "border-brand text-brand bg-brand/10"
-                        : step.disabled
-                          ? "border-white/20 text-muted bg-white/5"
-                          : "border-white/40 text-muted hover:border-white/60",
-                    canClick && "group-hover:scale-105",
-                    isHorizontal ? "mb-2" : "mr-4",
-                  )}
-                >
-                  {step.completed ? (
-                    <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
-                  ) : (
-                    <span className="text-sm font-medium">{index + 1}</span>
-                  )}
-                </div>
-
-                {/* Step Text */}
-                <div className={cx(isHorizontal ? "text-center" : "flex-1")}>
-                  <h3
-                    className={cx(
-                      "text-sm font-medium transition-colors",
-                      step.current
-                        ? "text-on-primary"
-                        : step.completed
-                          ? "text-on-primary"
-                          : step.disabled
-                            ? "text-muted"
-                            : "text-muted",
-                      canClick && "group-hover:text-on-primary",
-                    )}
-                  >
-                    {step.title}
-                  </h3>
-                  {step.description && (
-                    <p
-                      className={cx(
-                        "text-xs mt-1 transition-colors",
-                        step.current || step.completed
-                          ? "text-muted"
-                          : "text-muted/70",
-                      )}
-                    >
-                      {step.description}
-                    </p>
-                  )}
-                </div>
-              </div>
-
-              {/* Connector Line */}
-              {!isLast && (
-                <div
-                  className={cx(
-                    "transition-colors",
-                    isHorizontal ? "flex-1 h-0.5 mx-4" : "w-0.5 h-8 ml-5 -mt-2 mb-2",
-                    step.completed ? "bg-brand" : "bg-white/20",
-                  )}
-                />
+      <div ref={ref} className={cx("checkout-steps", className)} {...props}>
+        {steps.map((step, index) => (
+          <div
+            key={step.id}
+            className={cx(
+              "checkout-step",
+              step.current && "checkout-step--active",
+              step.completed && "checkout-step--completed"
+            )}
+            onClick={
+              onStepClick && !step.disabled && (step.completed || step.current)
+                ? () => onStepClick(step.id)
+                : undefined
+            }
+          >
+            <div className="checkout-step-indicator">
+              {step.completed ? (
+                <svg className="icon" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              ) : (
+                <span>{index + 1}</span>
               )}
             </div>
-          );
-        })}
+            <div className="checkout-step-label">
+              <div>{step.title}</div>
+              {step.description && <div className="text-xs">{step.description}</div>}
+            </div>
+            <div className="checkout-step-connector" />
+          </div>
+        ))}
       </div>
     );
   },

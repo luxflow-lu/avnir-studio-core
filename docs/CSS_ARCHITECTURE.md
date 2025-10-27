@@ -282,18 +282,30 @@ pnpm build --filter=@avnir/ui
 ## ✅ Standards à Respecter
 
 ### ✅ FAIRE
-- Utiliser **variables CSS** : `var(--primary)`, `var(--space-*)`, `var(--radius-*)`
+- **TOUJOURS utiliser les variables sémantiques** de `themes.css` dans vos fichiers CSS :
+  - Typography : `var(--text-h1)`, `var(--text-body)`, `var(--text-small)`, etc.
+  - Spacing : `var(--gap-sm)`, `var(--gap-md)`, `var(--padding-section-md)`, etc.
+  - Colors : `var(--primary)`, `var(--foreground)`, `var(--muted)`, etc.
+  - Radius : `var(--radius-sm)`, `var(--radius-md)`, etc.
+  - Fonts : `var(--font-sans)`, `var(--font-mono)`, `var(--font-bold)`, etc.
 - Classes **sémantiques** : `.mon-composant`, `.mon-composant__element`
 - **BEM naming** : `.block__element--modifier`
 - **Mobile-first** : media queries `@media (min-width: ...)`
 - **Accessibilité** : focus states, ARIA attributes
 
 ### ❌ NE PAS FAIRE
+- **Classes utilitaires** dans composants (`.text-sm`, `.gap-4`, `.p-4`) → Utiliser variables CSS dans fichiers CSS
 - Classes **Tailwind** dans composants
 - Couleurs **hardcodées** (#5cb9f2, rgb(255, 0, 0))
+- Font-sizes **hardcodées** (0.875rem, 1rem, 16px) → Utiliser `var(--text-*)`
+- Spacing **hardcodé** (0.5rem, 8px, 1rem) → Utiliser `var(--gap-*)` ou `var(--padding-*)`
 - Styles **inline** (style={{}})
 - Valeurs **magiques** (padding: 23px)
 - **!important** (sauf cas exceptionnel)
+
+### 📌 RÈGLE D'OR
+**Les classes utilitaires (`.text-sm`, `.gap-4`, etc.) dans `themes.css` sont pour usage ponctuel uniquement.**  
+**Les composants DOIVENT utiliser les variables CSS (`var(--text-small)`, `var(--gap-sm)`) dans leurs fichiers CSS.**
 
 ---
 

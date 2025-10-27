@@ -128,11 +128,7 @@ export const Popover = React.forwardRef<HTMLDivElement, PopoverProps>(
         {isOpen && (
           <div
             ref={contentRef}
-            className={cx(
-              "fixed z-50 bg-[var(--surface)] border border-white/10 rounded-[var(--radius-lg)] shadow-lg p-4",
-              "animate-in fade-in-0 zoom-in-95 duration-200",
-              className,
-            )}
+            className={cx("popover", `popover--${side}`, className)}
             style={{ left: position.x, top: position.y }}
           >
             {content}

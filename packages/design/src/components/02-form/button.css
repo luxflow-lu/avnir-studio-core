@@ -59,7 +59,7 @@
 /* Solid (Primary) */
 .btn-primary {
   background-color: var(--primary) !important;
-  color: var(--bg) !important;
+  color: #0b0b0d !important;
   border: none !important;
 }
 

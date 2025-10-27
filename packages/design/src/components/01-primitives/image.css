@@ -1,0 +1,84 @@
+/* Image Component */
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+}
+
+/* Border radius variants */
+.image--rounded {
+  border-radius: var(--radius-lg);
+}
+
+.image--circle {
+  border-radius: var(--radius-full);
+}
+
+/* Aspect ratio variants */
+.image--square {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.image--portrait {
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+}
+
+.image--landscape {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.image--widescreen {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.image--ultrawide {
+  aspect-ratio: 21 / 9;
+  object-fit: cover;
+}
+
+.image--video {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Object fit */
+.image--cover {
+  object-fit: cover;
+}
+
+.image--contain {
+  object-fit: contain;
+}
+
+.image--fill {
+  object-fit: fill;
+}
+
+/* Loading states */
+.image--loading {
+  background-color: var(--muted);
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.image--error {
+  background-color: var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted-foreground);
+}

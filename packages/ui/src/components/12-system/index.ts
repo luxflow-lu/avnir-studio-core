@@ -6,3 +6,5 @@ export { ThemeToggle } from "./ThemeToggle";
 export { BrandThemeSelector } from "./BrandThemeSelector";
 export * from "./FeatureFlag";
 export * from "./PermissionGate";
+export * from "./ColorSwatch";
+export * from "./BrandSwatch";

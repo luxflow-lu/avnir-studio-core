@@ -2,6 +2,7 @@ export * from "./Accordion";
 export * from "./Avatar";
 export * from "./Badge";
 export * from "./EmptyState";
+export * from "./LogoPlaceholder";
 export * from "./Progress";
 export * from "./Skeleton";
 export * from "./Spinner";

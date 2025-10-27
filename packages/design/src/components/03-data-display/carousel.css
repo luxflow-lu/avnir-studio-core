@@ -7,6 +7,7 @@
 
 .carousel-viewport {
   overflow: hidden;
+  min-height: 400px;
 }
 
 .carousel-container {
@@ -27,21 +28,35 @@
   z-index: 10;
   background: var(--surface);
   border: 1px solid var(--border);
-  font-size: var(--text-h2);
+  font-size: var(--text-h4);
   padding: var(--gap-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
 }
 
 .carousel-button--prev {
-  left: var(--gap-md);
+  left: var(--gap-sm);
 }
 
 .carousel-button--next {
-  right: var(--gap-md);
+  right: var(--gap-sm);
+}
+
+@media (min-width: 768px) {
+  .carousel-button--prev {
+    left: var(--gap-md);
+  }
+  
+  .carousel-button--next {
+    right: var(--gap-md);
+  }
 }
 
 .carousel-indicators {
   position: absolute;
-  bottom: var(--gap-md);
+  bottom: var(--gap-xl);
   left: 50%;
   transform: translateX(-50%);
   display: flex;

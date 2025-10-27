@@ -418,7 +418,83 @@ function checkCssVariables() {
   }
 }
 
-// 8. Compter les composants utilisés dans les apps
+// 8. Vérifier cohérence CSS/TSX
+function checkCssTsxConsistency() {
+  info('\n🔗 Vérification de la cohérence CSS/TSX...');
+  
+  let cssClassesNotUsed = 0;
+  let tsxWithoutCssClasses = 0;
+  
+  let categories = fs.readdirSync(UI_PATH).filter(f => 
+    fs.statSync(path.join(UI_PATH, f)).isDirectory()
+  );
+
+  if (CATEGORY_FILTER) {
+    categories = categories.filter(c => c === CATEGORY_FILTER);
+  }
+
+  categories.forEach(category => {
+    const componentDir = path.join(UI_PATH, category);
+    const cssDir = path.join(DESIGN_PATH, category);
+    
+    const components = fs.readdirSync(componentDir)
+      .filter(f => f.endsWith('.tsx') && f !== 'index.ts');
+
+    components.forEach(comp => {
+      const componentName = comp.replace('.tsx', '');
+      const componentPath = path.join(componentDir, comp);
+      const tsxContent = fs.readFileSync(componentPath, 'utf8');
+      
+      // Conversion nom CSS
+      let cssFileName = componentName
+        .replace(/([A-Z])/g, '-$1')
+        .toLowerCase()
+        .replace(/^-/, '') + '.css';
+      
+      const cssPath = path.join(cssDir, cssFileName);
+      
+      if (fs.existsSync(cssPath)) {
+        const cssContent = fs.readFileSync(cssPath, 'utf8');
+        
+        // Extraire les classes CSS définies
+        const cssClassRegex = /\.([a-zA-Z_-][\w-]*)/g;
+        const cssClasses = new Set();
+        let match;
+        
+        while ((match = cssClassRegex.exec(cssContent)) !== null) {
+          const className = match[1];
+          // Ignorer les pseudo-classes et media queries
+          if (!className.includes(':') && !className.includes('@')) {
+            cssClasses.add(className);
+          }
+        }
+        
+        // Vérifier si les classes CSS sont utilisées dans le TSX
+        if (cssClasses.size > 0) {
+          let usedClasses = 0;
+          cssClasses.forEach(cssClass => {
+            if (tsxContent.includes(cssClass) || tsxContent.includes(`"${cssClass}"`)) {
+              usedClasses++;
+            }
+          });
+          
+          if (usedClasses === 0 && tsxContent.includes('className')) {
+            cssClassesNotUsed++;
+            warn(`Classes CSS non utilisées dans ${category}/${componentName}.tsx (${cssClasses.size} classes définies)`);
+          }
+        }
+      }
+    });
+  });
+  
+  if (cssClassesNotUsed === 0) {
+    success('Toutes les classes CSS sont utilisées dans les composants TSX');
+  } else {
+    warn(`${cssClassesNotUsed} composants n'utilisent pas leurs classes CSS`);
+  }
+}
+
+// 9. Compter les composants utilisés dans les apps
 function checkComponentUsage() {
   info('\n📊 Analyse de l\'utilisation des composants...');
   
@@ -506,6 +582,7 @@ function runHealthCheck() {
   checkAccessibility();
   checkCssImports();
   checkCssVariables();
+  checkCssTsxConsistency();
   checkComponentUsage();
   
   // Résumé

@@ -1,0 +1,34 @@
+/* Kbd Component (Keyboard shortcuts) */
+
+.kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5em;
+  padding: var(--gap-2xs) var(--gap-xs);
+  font-family: var(--font-mono);
+  font-size: var(--text-small);
+  font-weight: var(--font-medium);
+  line-height: 1;
+  color: var(--foreground);
+  background-color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 1px 0 0 var(--border);
+}
+
+/* Sizes */
+.kbd--sm {
+  font-size: var(--text-tiny);
+  padding: var(--gap-2xs) var(--gap-2xs);
+}
+
+.kbd--md {
+  font-size: var(--text-small);
+  padding: var(--gap-2xs) var(--gap-xs);
+}
+
+.kbd--lg {
+  font-size: var(--text-body);
+  padding: var(--gap-xs) var(--gap-sm);
+}

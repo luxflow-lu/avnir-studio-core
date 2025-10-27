@@ -1,0 +1,66 @@
+/* Code Component (inline code) */
+
+.code {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--gap-xs);
+  padding: var(--gap-2xs) var(--gap-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-small);
+  line-height: 1.4;
+  color: var(--foreground);
+  background-color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+}
+
+/* Variants */
+.code--primary {
+  background-color: var(--primary);
+  color: var(--bg);
+  border-color: var(--primary);
+  opacity: 0.9;
+}
+
+.code--success {
+  background-color: var(--success);
+  color: var(--bg);
+  border-color: var(--success);
+  opacity: 0.9;
+}
+
+.code--warning {
+  background-color: var(--warning);
+  color: var(--bg);
+  border-color: var(--warning);
+  opacity: 0.9;
+}
+
+.code--error {
+  background-color: var(--destructive);
+  color: var(--bg);
+  border-color: var(--destructive);
+  opacity: 0.9;
+}
+
+/* Sizes */
+.code--xs {
+  font-size: var(--text-tiny);
+  padding: var(--gap-2xs) var(--gap-xs);
+}
+
+.code--sm {
+  font-size: var(--text-small);
+  padding: var(--gap-2xs) var(--gap-xs);
+}
+
+.code--md {
+  font-size: var(--text-small);
+  padding: var(--gap-2xs) var(--gap-sm);
+}
+
+.code--lg {
+  font-size: var(--text-body);
+  padding: var(--gap-xs) var(--gap-sm);
+}

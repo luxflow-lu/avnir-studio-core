@@ -1,54 +1,63 @@
 import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
 
 import { cx } from "../../utils/cx";
 
-type Direction = "row" | "col";
-interface StackProps extends React.HTMLAttributes<HTMLDivElement> {
-  direction?: Direction;
-  gap?: keyof typeof gaps;
-  align?: "start" | "center" | "end" | "stretch";
-  justify?: "start" | "center" | "end" | "between";
-}
+const stackVariants = cva("stack", {
+  variants: {
+    direction: {
+      vertical: "",
+      horizontal: "stack--horizontal",
+    },
+    gap: {
+      xs: "stack--xs",
+      sm: "stack--sm",
+      md: "stack--md",
+      lg: "stack--lg",
+      xl: "stack--xl",
+    },
+    align: {
+      start: "stack--start",
+      center: "stack--center",
+      end: "stack--end",
+      stretch: "stack--stretch",
+    },
+    justify: {
+      start: "stack--justify-start",
+      center: "stack--justify-center",
+      end: "stack--justify-end",
+      between: "stack--justify-between",
+    },
+  },
+  defaultVariants: {
+    direction: "vertical",
+    gap: "md",
+    align: "stretch",
+    justify: "start",
+  },
+});
 
-const gaps = { none: "", xs: "gap-2", sm: "gap-3", md: "gap-4", lg: "gap-6", xl: "gap-8" } as const;
+export interface StackProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof stackVariants> {}
 
 export const Stack = React.forwardRef<HTMLDivElement, StackProps>(
-  (
-    { className, direction = "col", gap = "md", align = "stretch", justify = "start", ...props },
-    ref,
-  ) => (
+  ({ className, direction, gap, align, justify, ...props }, ref) => (
     <div
       ref={ref}
-      className={cx(
-        direction === "row" ? "flex flex-row" : "flex flex-col",
-        gaps[gap],
-        align === "start"
-          ? "items flex-start"
-          : align === "center"
-            ? "items-center"
-            : align === "end"
-              ? "items-end"
-              : "items-stretch",
-        justify === "start"
-          ? "justify flex-start"
-          : justify === "center"
-            ? "justify-center"
-            : justify === "end"
-              ? "justify-end"
-              : "justify-between",
-        className,
-      )} {...props}
+      className={cx(stackVariants({ direction, gap, align, justify }), className)}
+      {...props}
     />
   ),
 );
 Stack.displayName = "Stack";
 
 export const HStack = React.forwardRef<HTMLDivElement, Omit<StackProps, "direction">>(
-  (props, ref) => <Stack ref={ref} direction="row" {...props} />,
+  (props, ref) => <Stack ref={ref} direction="horizontal" {...props} />,
 );
 HStack.displayName = "HStack";
 
 export const VStack = React.forwardRef<HTMLDivElement, Omit<StackProps, "direction">>(
-  (props, ref) => <Stack ref={ref} direction="col" {...props} />,
+  (props, ref) => <Stack ref={ref} direction="vertical" {...props} />,
 );
 VStack.displayName = "VStack";

@@ -1,0 +1,48 @@
+/* Video Component */
+
+.video {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  background-color: var(--muted);
+}
+
+/* Aspect ratio variants */
+.video--square {
+  aspect-ratio: 1 / 1;
+}
+
+.video--video {
+  aspect-ratio: 16 / 9;
+}
+
+.video--widescreen {
+  aspect-ratio: 16 / 9;
+}
+
+.video--ultrawide {
+  aspect-ratio: 21 / 9;
+}
+
+.video--vertical {
+  aspect-ratio: 9 / 16;
+}
+
+/* Border radius variants */
+.video--rounded {
+  border-radius: var(--radius-lg);
+}
+
+/* Object fit */
+.video--cover {
+  object-fit: cover;
+}
+
+.video--contain {
+  object-fit: contain;
+}
+
+.video--fill {
+  object-fit: fill;
+}

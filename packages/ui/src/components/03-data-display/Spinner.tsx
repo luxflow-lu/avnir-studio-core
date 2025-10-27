@@ -1,29 +1,43 @@
 import * as React from "react";
+import { cva, type VariantProps } from "class-variance-authority";
 
 import { cx } from "../../utils/cx";
 
-export type SpinnerSize = "sm" | "md" | "lg";
-export interface SpinnerProps extends React.HTMLAttributes<HTMLDivElement> {
-  size?: SpinnerSize;
-}
+const spinnerVariants = cva("spinner", {
+  variants: {
+    size: {
+      xs: "spinner--xs",
+      sm: "spinner--sm",
+      md: "spinner--md",
+      lg: "spinner--lg",
+      xl: "spinner--xl",
+    },
+    variant: {
+      primary: "spinner--primary",
+      secondary: "spinner--secondary",
+      success: "spinner--success",
+      warning: "spinner--warning",
+      destructive: "spinner--destructive",
+    },
+  },
+  defaultVariants: {
+    size: "md",
+    variant: "primary",
+  },
+});
 
-const sizes: Record<SpinnerSize, string> = {
-  sm: "h-4 w-4 border-2",
-  md: "h-6 w-6 border-2",
-  lg: "h-8 w-8 border-4",
-};
+export interface SpinnerProps
+  extends React.HTMLAttributes<HTMLDivElement>,
+    VariantProps<typeof spinnerVariants> {}
 
 export const Spinner = React.forwardRef<HTMLDivElement, SpinnerProps>(
-  ({ className, size = "md", ...props }, ref) => (
+  ({ className, size, variant, ...props }, ref) => (
     <div
       ref={ref}
-      className={cx(
-        "animate-spin rounded-full border-brand border-t-transparent",
-        sizes[size],
-        className,
-      )}
+      className={cx(spinnerVariants({ size, variant }), className)}
       role="status"
-      aria-label="Loading" {...props}
+      aria-label="Loading"
+      {...props}
     />
   ),
 );

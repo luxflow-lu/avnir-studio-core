@@ -38,7 +38,8 @@
     "docs:add-metadata": "node scripts/update-doc-metadata.js add-all",
     "cascade:sync": "node scripts/sync-cascade.js",
     "architecture:check": "node scripts/architecture-check.js",
-    "architecture:graph": "depcruise --config .dependency-cruiser.js --output-type dot apps/muzisystem/src | dot -T svg > dep-graph.svg"
+    "architecture:graph": "depcruise --config .dependency-cruiser.js --output-type dot apps/muzisystem/src | dot -T svg > dep-graph.svg",
+    "components:validate": "node scripts/validate-component-pages.js"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,css,md,json}": "prettier --write"
