@@ -55,10 +55,10 @@ export const ServerError500 = React.forwardRef<HTMLDivElement, ServerError500Pro
 
           <div className="bg-error/10 border border-error/20 rounded-lg p-4 mb-6">
             <p className="text-destructive text-sm">
-              <strong>Error ID:</strong> {Math.random().toString(36).substr(2, 9)}
+              <strong>Error ID:</strong> {React.useMemo(() => Math.random().toString(36).substr(2, 9), [])}
             </p>
             <p className="text-destructive text-sm mt-1">
-              <strong>Time:</strong> {new Date().toLocaleString()}
+              <strong>Time:</strong> {React.useMemo(() => new Date().toLocaleString(), [])}
             </p>
           </div>
         </div>

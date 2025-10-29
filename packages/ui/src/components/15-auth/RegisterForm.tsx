@@ -289,9 +289,9 @@ export const RegisterForm = React.forwardRef<HTMLFormElement, RegisterFormProps>
                   required
                 />
                 <span>
-                  J'accepte les{" "}
+                  J&apos;accepte les{" "}
                   <a href={termsUrl} target="_blank" rel="noopener noreferrer" className="register-form-link">
-                    conditions d'utilisation
+                    conditions d&apos;utilisation
                   </a>{" "}
                   et la{" "}
                   <a href={privacyUrl} target="_blank" rel="noopener noreferrer" className="register-form-link">

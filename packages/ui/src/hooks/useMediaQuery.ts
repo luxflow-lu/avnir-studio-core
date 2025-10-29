@@ -17,14 +17,12 @@ export function useMediaQuery(query: string): boolean {
       setMatches(event.matches);
     };
 
-    // Set initial value in case it changed since mount
-    if (mediaQuery.matches !== matches) {
-      setMatches(mediaQuery.matches);
-    }
+    // Sync with current state
+    setMatches(mediaQuery.matches);
 
     mediaQuery.addEventListener("change", handler);
     return () => mediaQuery.removeEventListener("change", handler);
-  }, [query, matches]);
+  }, [query]);
 
   return matches;
 }

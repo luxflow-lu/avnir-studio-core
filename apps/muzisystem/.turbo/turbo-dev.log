@@ -652,3 +652,235 @@ Import trace for requested module:
  ✓ Compiled in 4.7s (1355 modules)
  ✓ Compiled in 7.2s (1355 modules)
  ✓ Compiled in 11.9s (1504 modules)
+ ✓ Compiled in 3.9s (1504 modules)
+ ✓ Compiled in 9.3s (1504 modules)
+ ⨯ ../../packages/ui/src/components/12-system/ServerError500.tsx
+Error:   [31mx[0m Expected '{', got '=>'
+    ,-[[36;1;4m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/src/components/12-system/ServerError500.tsx[0m:43:1]
+ [2m40[0m |       ...props
+ [2m41[0m |     },
+ [2m42[0m |     ref,
+ [2m43[0m |   ) => (
+    : [35;1m    ^^[0m
+ [2m44[0m |     <div
+ [2m45[0m |       ref={ref}
+ [2m46[0m |       className={cx("min-h-screen items-center justify-center bg-muted px-4", className)} {...props}
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+../../packages/ui/src/components/12-system/ServerError500.tsx
+../../packages/ui/src/components/12-system/index.ts
+../../packages/ui/src/index.ts
+./app/providers.tsx
+ ⨯ ../../packages/ui/src/components/12-system/ServerError500.tsx
+Error:   [31mx[0m Expected '{', got '=>'
+    ,-[[36;1;4m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/src/components/12-system/ServerError500.tsx[0m:43:1]
+ [2m40[0m |       ...props
+ [2m41[0m |     },
+ [2m42[0m |     ref,
+ [2m43[0m |   ) => (
+    : [35;1m    ^^[0m
+ [2m44[0m |     <div
+ [2m45[0m |       ref={ref}
+ [2m46[0m |       className={cx("min-h-screen items-center justify-center bg-muted px-4", className)} {...props}
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+../../packages/ui/src/components/12-system/ServerError500.tsx
+../../packages/ui/src/components/12-system/index.ts
+../../packages/ui/src/index.ts
+./app/providers.tsx
+ ⨯ ../../packages/ui/src/components/12-system/ServerError500.tsx
+Error:   [31mx[0m Expected '{', got '=>'
+    ,-[[36;1;4m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/src/components/12-system/ServerError500.tsx[0m:43:1]
+ [2m40[0m |       ...props
+ [2m41[0m |     },
+ [2m42[0m |     ref,
+ [2m43[0m |   ) => (
+    : [35;1m    ^^[0m
+ [2m44[0m |     <div
+ [2m45[0m |       ref={ref}
+ [2m46[0m |       className={cx("min-h-screen items-center justify-center bg-muted px-4", className)} {...props}
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+../../packages/ui/src/components/12-system/ServerError500.tsx
+../../packages/ui/src/components/12-system/index.ts
+../../packages/ui/src/index.ts
+./app/providers.tsx
+ ⨯ ../../packages/ui/src/components/12-system/ServerError500.tsx
+Error:   [31mx[0m Expected '{', got '=>'
+    ,-[[36;1;4m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/src/components/12-system/ServerError500.tsx[0m:43:1]
+ [2m40[0m |       ...props
+ [2m41[0m |     },
+ [2m42[0m |     ref,
+ [2m43[0m |   ) => (
+    : [35;1m    ^^[0m
+ [2m44[0m |     <div
+ [2m45[0m |       ref={ref}
+ [2m46[0m |       className={cx("min-h-screen items-center justify-center bg-muted px-4", className)} {...props}
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+../../packages/ui/src/components/12-system/ServerError500.tsx
+../../packages/ui/src/components/12-system/index.ts
+../../packages/ui/src/index.ts
+./app/providers.tsx
+ ⨯ ../../packages/ui/src/components/12-system/ServerError500.tsx
+Error:   [31mx[0m Expected '{', got '=>'
+    ,-[[36;1;4m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/src/components/12-system/ServerError500.tsx[0m:43:1]
+ [2m40[0m |       ...props
+ [2m41[0m |     },
+ [2m42[0m |     ref,
+ [2m43[0m |   ) => (
+    : [35;1m    ^^[0m
+ [2m44[0m |     <div
+ [2m45[0m |       ref={ref}
+ [2m46[0m |       className={cx("min-h-screen items-center justify-center bg-muted px-4", className)} {...props}
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+../../packages/ui/src/components/12-system/ServerError500.tsx
+../../packages/ui/src/components/12-system/index.ts
+../../packages/ui/src/index.ts
+./app/providers.tsx
+ ⨯ ../../packages/ui/src/components/12-system/ServerError500.tsx
+Error:   [31mx[0m Expected '{', got '=>'
+    ,-[[36;1;4m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/src/components/12-system/ServerError500.tsx[0m:43:1]
+ [2m40[0m |       ...props
+ [2m41[0m |     },
+ [2m42[0m |     ref,
+ [2m43[0m |   ) => (
+    : [35;1m    ^^[0m
+ [2m44[0m |     <div
+ [2m45[0m |       ref={ref}
+ [2m46[0m |       className={cx("min-h-screen items-center justify-center bg-muted px-4", className)} {...props}
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+../../packages/ui/src/components/12-system/ServerError500.tsx
+../../packages/ui/src/components/12-system/index.ts
+../../packages/ui/src/index.ts
+./app/providers.tsx
+ ⨯ ../../packages/ui/src/components/12-system/ServerError500.tsx
+Error:   [31mx[0m Expected '{', got '=>'
+    ,-[[36;1;4m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/src/components/12-system/ServerError500.tsx[0m:43:1]
+ [2m40[0m |       ...props
+ [2m41[0m |     },
+ [2m42[0m |     ref,
+ [2m43[0m |   ) => (
+    : [35;1m    ^^[0m
+ [2m44[0m |     <div
+ [2m45[0m |       ref={ref}
+ [2m46[0m |       className={cx("min-h-screen items-center justify-center bg-muted px-4", className)} {...props}
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+../../packages/ui/src/components/12-system/ServerError500.tsx
+../../packages/ui/src/components/12-system/index.ts
+../../packages/ui/src/index.ts
+./app/providers.tsx
+ ⨯ ../../packages/ui/src/components/12-system/ServerError500.tsx
+Error:   [31mx[0m Expected '{', got '=>'
+    ,-[[36;1;4m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/src/components/12-system/ServerError500.tsx[0m:43:1]
+ [2m40[0m |       ...props
+ [2m41[0m |     },
+ [2m42[0m |     ref,
+ [2m43[0m |   ) => (
+    : [35;1m    ^^[0m
+ [2m44[0m |     <div
+ [2m45[0m |       ref={ref}
+ [2m46[0m |       className={cx("min-h-screen items-center justify-center bg-muted px-4", className)} {...props}
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+../../packages/ui/src/components/12-system/ServerError500.tsx
+../../packages/ui/src/components/12-system/index.ts
+../../packages/ui/src/index.ts
+./app/providers.tsx
+ ⨯ ../../packages/ui/src/components/12-system/ServerError500.tsx
+Error:   [31mx[0m Expected '{', got '=>'
+    ,-[[36;1;4m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/src/components/12-system/ServerError500.tsx[0m:43:1]
+ [2m40[0m |       ...props
+ [2m41[0m |     },
+ [2m42[0m |     ref,
+ [2m43[0m |   ) => (
+    : [35;1m    ^^[0m
+ [2m44[0m |     <div
+ [2m45[0m |       ref={ref}
+ [2m46[0m |       className={cx("min-h-screen items-center justify-center bg-muted px-4", className)} {...props}
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+../../packages/ui/src/components/12-system/ServerError500.tsx
+../../packages/ui/src/components/12-system/index.ts
+../../packages/ui/src/index.ts
+./app/providers.tsx
+ ⨯ ../../packages/ui/src/components/12-system/ServerError500.tsx
+Error:   [31mx[0m Expected '{', got '=>'
+    ,-[[36;1;4m/Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui/src/components/12-system/ServerError500.tsx[0m:43:1]
+ [2m40[0m |       ...props
+ [2m41[0m |     },
+ [2m42[0m |     ref,
+ [2m43[0m |   ) => (
+    : [35;1m    ^^[0m
+ [2m44[0m |     <div
+ [2m45[0m |       ref={ref}
+ [2m46[0m |       className={cx("min-h-screen items-center justify-center bg-muted px-4", className)} {...props}
+    `----
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+../../packages/ui/src/components/12-system/ServerError500.tsx
+../../packages/ui/src/components/12-system/index.ts
+../../packages/ui/src/index.ts
+./app/providers.tsx
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ✓ Compiled in 1416ms (652 modules)
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+

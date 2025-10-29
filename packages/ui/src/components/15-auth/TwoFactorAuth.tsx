@@ -1,7 +1,6 @@
 import * as React from "react";
 
 import { cx } from "../../utils/cx";
-import { Button } from "../02-form/Button";
 
 import { OTPInput } from "./OTPInput";
 

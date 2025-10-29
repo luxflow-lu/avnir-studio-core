@@ -80,7 +80,7 @@ export const PasswordStrength = React.forwardRef<HTMLDivElement, PasswordStrengt
       return { level, score, percentage };
     };
 
-    const { level, score, percentage } = calculateStrength();
+    const { level, score } = calculateStrength();
 
     const getLevelLabel = (lvl: PasswordStrengthLevel): string => {
       const labels: Record<PasswordStrengthLevel, string> = {

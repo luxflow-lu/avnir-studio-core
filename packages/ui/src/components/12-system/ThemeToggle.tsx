@@ -5,7 +5,7 @@ import * as React from "react";
 import { cx } from "../../utils/cx";
 import { Button } from "../02-form/Button";
 
-export interface ThemeToggleProps extends React.HTMLAttributes<HTMLDivElement> {}
+export type ThemeToggleProps = React.HTMLAttributes<HTMLDivElement>;
 
 export const ThemeToggle = React.forwardRef<HTMLDivElement, ThemeToggleProps>(
   ({ className, ...props }, ref) => {

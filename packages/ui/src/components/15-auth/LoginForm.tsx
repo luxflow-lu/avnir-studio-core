@@ -229,7 +229,7 @@ export const LoginForm = React.forwardRef<HTMLFormElement, LoginFormProps>(
               className="login-form-link"
               disabled={loading}
             >
-              S'inscrire
+              S&apos;inscrire
             </button>
           </div>
         )}
