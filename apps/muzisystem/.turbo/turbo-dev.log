@@ -436,3 +436,24 @@ Import trace for requested module:
 ./app/globals.css
  ✓ Compiled in 3.2s (721 modules)
  GET /components/primitives 200 in 637ms
+ GET /icon-192x192.png 404 in 280ms
+ ○ Compiling /overview ...
+ ✓ Compiled /overview in 1691ms (576 modules)
+ GET /components/primitives 200 in 763ms
+ GET /overview 200 in 2742ms
+ ○ Compiling / ...
+ ✓ Compiled / in 2.2s (582 modules)
+ GET / 200 in 3490ms
+ GET /brands/muziweb.svg 404 in 1571ms
+ GET /brands/muzipics.svg 404 in 1591ms
+ GET /brands/muzidev.svg 404 in 1604ms
+ GET /brands/avnir.svg 404 in 1606ms
+ GET /brands/muzitools.svg 404 in 424ms
+ GET /brands/muzisystem.svg 404 in 249ms
+ ○ Compiling /foundations ...
+ ✓ Compiled /foundations in 1747ms (587 modules)
+ GET /foundations 200 in 2512ms
+ ○ Compiling /guidelines ...
+ ✓ Compiled /guidelines in 1466ms (587 modules)
+ GET /guidelines 200 in 2164ms
+[?25h

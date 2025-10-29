@@ -9,6 +9,18 @@ export const metadata: Metadata = defaultMetadata;
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr" data-brand="muzisystem" data-theme="dark">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                document.documentElement.setAttribute('data-brand', 'muzisystem');
+                document.documentElement.setAttribute('data-theme', 'dark');
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className="min-h-screen">
         <AppLayout>{children}</AppLayout>
       </body>
