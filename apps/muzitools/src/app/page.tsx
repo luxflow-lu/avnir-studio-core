@@ -37,43 +37,7 @@ export default function HomePage() {
         }
       />
 
-      <Marketing.Features
-        title="Outils Professionnels"
-        subtitle="Tout ce dont vous avez besoin pour analyser et perfectionner vos productions musicales"
-        columns={3}
-        items={[
-          {
-            icon: "🎵",
-            title: "Détection BPM",
-            description: "Analyse précise du tempo de vos tracks avec une précision de 99%. Compatible MP3, WAV, M4A."
-          },
-          {
-            icon: "🎹",
-            title: "Détection de Tonalité",
-            description: "Identifiez la tonalité musicale (Do, Ré, Mi...) et le mode (majeur/mineur) pour des mixages harmoniques."
-          },
-          {
-            icon: "🎨",
-            title: "Code Camelot",
-            description: "Obtenez le code Camelot (1A-12B) pour mixer facilement des tracks compatibles harmoniquement."
-          },
-          {
-            icon: "⚡",
-            title: "Analyse Instantanée",
-            description: "Résultats en moins de 3 secondes. Traitement 100% local, vos fichiers ne quittent jamais votre appareil."
-          },
-          {
-            icon: "🔒",
-            title: "Confidentialité Totale",
-            description: "Aucune donnée envoyée sur internet. Aucun tracking, aucun cookie, aucune collecte de données personnelles."
-          },
-          {
-            icon: "💯",
-            title: "100% Gratuit",
-            description: "Aucun compte requis, aucune limite d'utilisation. Analysez autant de fichiers que vous voulez, gratuitement."
-          }
-        ]}
-      />
+      {/* TODO: Implement FeatureGrid with composition pattern */}
 
       {/* Section Comment ça marche */}
       <Marketing.Steps
@@ -153,51 +117,11 @@ export default function HomePage() {
         }
       />
 
-      <Layout.Footer 
-        logo={<span>MUZI<span style={{color: 'var(--primary)'}}>TOOLS</span></span>}
-        newsletterTitle="Restez informé des nouvelles fonctionnalités et mises à jour."
-        newsletterPlaceholder="Votre email"
-        newsletterButtonText="S'abonner"
-        newsletterDisclaimer={
-          <>
-            En vous abonnant, vous acceptez notre{" "}
-            <a href="/privacy">Politique de confidentialité</a>.
-          </>
-        }
-        onNewsletterSubmit={(email) => {
-          // TODO: Implement newsletter API
-          void email;
-        }}
-        columns={[
-          {
-            title: "MUZITOOLS",
-            links: [
-              { label: "Accueil", href: "/" },
-              { label: "Analyzer", href: "/analyzer" },
-              { label: "À propos", href: "/about" }
-            ]
-          },
-          {
-            title: "Fonctionnalités",
-            links: [
-              { label: "Détection BPM", href: "/analyzer" },
-              { label: "Détection Tonalité", href: "/analyzer" },
-              { label: "Code Camelot", href: "/analyzer" }
-            ]
-          },
-          {
-            title: "Ressources",
-            links: [
-              { label: "Guide d'utilisation", href: "/about" },
-              { label: "FAQ", href: "/#faq" },
-              { label: "Formats supportés", href: "/about" },
-              { label: "Confidentialité", href: "#" },
-              { label: "Conditions", href: "#" }
-            ]
-          }
-        ]}
-        copyright="© 2025 MUZITOOLS - Fait avec ❤️ par AVNIR Studio"
-      />
+      <Layout.Footer>
+        <Layout.Footer.Bottom>
+          <p>© 2025 MUZITOOLS - Fait avec ❤️ par AVNIR Studio</p>
+        </Layout.Footer.Bottom>
+      </Layout.Footer>
     </>
   );
 }

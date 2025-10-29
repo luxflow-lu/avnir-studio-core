@@ -196,7 +196,8 @@ export default function AnalyzerPage() {
         </div>
       </section>
 
-      <Marketing.Features
+      {/* TODO: Implement FeatureGrid with composition pattern */}
+      {/* <Marketing.Features
         title="Pourquoi utiliser notre analyseur ?"
         columns={3}
         items={[
@@ -216,7 +217,7 @@ export default function AnalyzerPage() {
             description: "Vos fichiers restent privés et ne sont jamais stockés"
           }
         ]}
-      />
+      /> */}
 
       {/* Notifications */}
       {notifications.length > 0 && (
