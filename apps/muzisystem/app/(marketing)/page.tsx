@@ -415,28 +415,28 @@ export default function HomePage() {
           <Marketing.Faq
             items={[
           {
-            q: "Quelle est la différence avec Material UI ou Chakra UI ?",
-            a: "MUZISYSTEM est spécialement conçu pour le multi-brand. Contrairement aux autres design systems, nous gérons nativement 8 brands avec des thèmes dark/light, sans duplication de code. De plus, notre approche CSS modulaire (0 Tailwind) garantit une performance optimale et une maintenance simplifiée.",
+            q: "What's the difference with Material UI or Chakra UI?",
+            a: "MUZISYSTEM is specifically designed for multi-brand support. Unlike other design systems, we natively manage 8 brands with dark/light themes, without code duplication. Plus, our modular CSS approach (0 Tailwind in components) ensures optimal performance and simplified maintenance.",
           },
           {
-            q: "Comment migrer depuis Tailwind ou Bootstrap ?",
-            a: "La migration est progressive. Vous pouvez commencer par utiliser nos composants tout en gardant votre CSS existant. Nous fournissons un guide de migration complet avec des exemples de conversion classe par classe. La plupart des projets migrent en 2-3 semaines.",
+            q: "How do I migrate from Tailwind or Bootstrap?",
+            a: "Migration is progressive. You can start using our components while keeping your existing CSS. We provide a complete migration guide with class-by-class conversion examples. Most projects migrate in 2-3 weeks.",
           },
           {
-            q: "Les composants sont-ils accessibles (WCAG) ?",
-            a: "Oui, 100% des composants respectent WCAG 2.1 AA minimum. Nous testons avec des lecteurs d'écran (NVDA, JAWS, VoiceOver), garantissons la navigation clavier complète, et maintenons des ratios de contraste ≥4.5:1. Chaque composant inclut les attributs ARIA appropriés.",
+            q: "Are the components accessible (WCAG)?",
+            a: "Yes, 100% of components meet WCAG 2.1 AA minimum standards. We test with screen readers (NVDA, JAWS, VoiceOver), ensure full keyboard navigation, and maintain contrast ratios ≥4.5:1. Each component includes appropriate ARIA attributes.",
           },
           {
-            q: "Puis-je utiliser MUZISYSTEM avec Next.js, Remix ou Astro ?",
-            a: "Absolument ! MUZISYSTEM est framework-agnostic. Nous fournissons des guides d'intégration pour Next.js (App Router & Pages), Remix, Astro, SvelteKit, et même Vanilla JS. Les composants sont des React components standards, compatibles avec tous les frameworks React.",
+            q: "Can I use MUZISYSTEM with Next.js, Remix or Astro?",
+            a: "Absolutely! MUZISYSTEM is framework-agnostic. We provide integration guides for Next.js (App Router & Pages), Remix, Astro, SvelteKit, and even Vanilla JS. Components are standard React components, compatible with all React frameworks.",
           },
           {
-            q: "Comment gérer les thèmes personnalisés ?",
-            a: "Vous pouvez créer votre propre brand en définissant simplement vos variables CSS (--primary, --surface, etc.). Le système de tokens est entièrement customisable. Nous fournissons un générateur de thème interactif pour visualiser vos couleurs en temps réel.",
+            q: "How do I manage custom themes?",
+            a: "You can create your own brand by simply defining your CSS variables (--primary, --surface, etc.). The token system is fully customizable. We provide an interactive theme generator to visualize your colors in real-time.",
           },
           {
-            q: "Quelle est la taille du bundle final ?",
-            a: "Grâce au tree-shaking, vous n'importez que ce que vous utilisez. Un projet typique avec 10-15 composants pèse ~50KB (JS) + ~15KB (CSS) gzippé. Notre CSS modulaire permet d'importer uniquement les styles nécessaires, contrairement aux frameworks monolithiques.",
+            q: "What's the final bundle size?",
+            a: "Thanks to tree-shaking, you only import what you use. A typical project with 10-15 components weighs ~50KB (JS) + ~15KB (CSS) gzipped. Our modular CSS allows importing only necessary styles, unlike monolithic frameworks.",
           },
         ]}
           />
