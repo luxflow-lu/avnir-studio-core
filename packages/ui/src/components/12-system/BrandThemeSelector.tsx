@@ -16,7 +16,7 @@ const brands = [
 
 const themes = ["dark", "light"];
 
-export interface BrandThemeSelectorProps extends React.HTMLAttributes<HTMLDivElement> {}
+export type BrandThemeSelectorProps = React.HTMLAttributes<HTMLDivElement>;
 
 export const BrandThemeSelector = React.forwardRef<HTMLDivElement, BrandThemeSelectorProps>(
   ({ className, ...props }, ref) => {

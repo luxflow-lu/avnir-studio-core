@@ -14,7 +14,7 @@ const brands = [
   "muzisystem",
 ];
 
-export interface BrandSelectorProps extends React.HTMLAttributes<HTMLDivElement> {}
+export type BrandSelectorProps = React.HTMLAttributes<HTMLDivElement>;
 
 export const BrandSelector = React.forwardRef<HTMLDivElement, BrandSelectorProps>(
   ({ className, ...props }, ref) => {

@@ -25,7 +25,7 @@ export const DocLayout = React.forwardRef<HTMLDivElement, DocLayoutProps>(
 DocLayout.displayName = "DocLayout";
 
 // Sidebar component
-export interface DocLayoutSidebarProps extends React.HTMLAttributes<HTMLElement> {}
+export type DocLayoutSidebarProps = React.HTMLAttributes<HTMLElement>;
 
 export const DocLayoutSidebar = React.forwardRef<HTMLElement, DocLayoutSidebarProps>(
   ({ className, children, ...props }, ref) => (
@@ -37,7 +37,7 @@ export const DocLayoutSidebar = React.forwardRef<HTMLElement, DocLayoutSidebarPr
 DocLayoutSidebar.displayName = "DocLayoutSidebar";
 
 // Content component
-export interface DocLayoutContentProps extends React.HTMLAttributes<HTMLElement> {}
+export type DocLayoutContentProps = React.HTMLAttributes<HTMLElement>;
 
 export const DocLayoutContent = React.forwardRef<HTMLElement, DocLayoutContentProps>(
   ({ className, children, ...props }, ref) => (

@@ -4,7 +4,7 @@ import { cx } from "../../utils/cx";
 import { Button as UIButton } from "../02-form/Button";
 
 // Main Footer component - accepts children for composition
-export interface FooterProps extends React.HTMLAttributes<HTMLElement> {}
+export type FooterProps = React.HTMLAttributes<HTMLElement>;
 
 const FooterRoot = React.forwardRef<HTMLElement, FooterProps>(
   ({ className, children, ...props }, ref) => (
