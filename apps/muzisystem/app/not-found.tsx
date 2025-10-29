@@ -1,7 +1,7 @@
 "use client";
 
-import { Button, Layout } from "@avnir/ui";
 import Link from "next/link";
+import { Button } from "@avnir/ui";
 
 export default function NotFound() {
   return (

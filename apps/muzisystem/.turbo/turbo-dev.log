@@ -127,3 +127,216 @@ Import trace for requested module:
  GET /favicon-32x32.png 404 in 165ms
  GET /favicon-16x16.png 404 in 133ms
  GET / 200 in 272ms
+ GET /brands/muziweb.svg 404 in 350ms
+ GET /brands/muzipics.svg 404 in 353ms
+ GET /brands/muzidev.svg 404 in 355ms
+ GET /brands/avnir.svg 404 in 357ms
+ GET /brands/muzitools.svg 404 in 310ms
+ GET /brands/muzisystem.svg 404 in 304ms
+ GET /favicon-32x32.png 404 in 74ms
+ GET /favicon-16x16.png 404 in 73ms
+ ✓ Compiled in 4.9s (1257 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json',
+  page: '/'
+}
+ ○ Compiling /_error ...
+ ✓ Compiled /_error in 6.8s (1448 modules)
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+ ✓ Compiled in 11s (1448 modules)
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+ GET / 500 in 28559ms
+ GET / 500 in 3617ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+ GET / 500 in 3134ms
+  errno: -2,
+  syscall: 'open',
+ GET / 500 in 398ms
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+ GET / 500 in 2119ms
+ GET / 500 in 363ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+ GET / 500 in 2541ms
+ GET / 500 in 515ms
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET / 500 in 7355ms
+ ✓ Compiled in 7.1s (1597 modules)
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json',
+  page: '/'
+}
+ ⨯ [Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',

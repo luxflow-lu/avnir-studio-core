@@ -1,7 +1,8 @@
 "use client";
 
-import { Layout, System } from "@avnir/ui";
+import type React from "react";
 import { BrandLogo } from "@avnir/brandkit";
+import { Layout, System } from "@avnir/ui";
 
 export function AppLayout({ children }: { children: React.ReactNode }) {
   return (

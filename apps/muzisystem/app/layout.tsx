@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
+import type React from "react";
+
+import { defaultMetadata } from "../lib/metadata";
+
+import { AppLayout } from "./providers";
 
 import "./globals.css";
-import { AppLayout } from "./providers";
-import { defaultMetadata } from "../lib/metadata";
 
 export const metadata: Metadata = defaultMetadata;
 
