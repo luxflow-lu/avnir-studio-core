@@ -38,3 +38,17 @@ warn - https://tailwindcss.com/docs/content-configuration#pattern-recommendation
  ✓ Compiled /_not-found in 812ms (557 modules)
  GET /icon-192x192.png 404 in 2223ms
  GET /foundations 200 in 1409ms
+ GET /icon-192x192.png 404 in 127ms
+ ✓ Compiled in 1082ms (699 modules)
+ GET /foundations 200 in 408ms
+ GET /icon-192x192.png 404 in 559ms
+ ○ Compiling /overview ...
+ ✓ Compiled /overview in 1296ms (1114 modules)
+ GET /overview 200 in 2162ms
+ GET / 200 in 336ms
+ GET /brands/muziweb.svg 404 in 943ms
+ GET /brands/muzidev.svg 404 in 966ms
+ GET /brands/avnir.svg 404 in 968ms
+ GET /brands/muzipics.svg 404 in 964ms
+ GET /brands/muzisystem.svg 404 in 281ms
+ GET /brands/muzitools.svg 404 in 284ms

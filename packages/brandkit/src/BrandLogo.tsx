@@ -21,7 +21,12 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   className = "",
   size = "md",
 }) => {
-  const [brand, setBrand] = React.useState("avnir-studio");
+  // Get initial brand from HTML or default to muzisystem
+  const initialBrand = typeof document !== 'undefined' 
+    ? document.documentElement.getAttribute("data-brand") || "muzisystem"
+    : "muzisystem";
+  
+  const [brand, setBrand] = React.useState(initialBrand);
   const [theme, setTheme] = React.useState("dark");
 
   React.useEffect(() => {
@@ -29,7 +34,7 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 
     const updateBrandAndTheme = () => {
       const html = document.documentElement;
-      setBrand(html.getAttribute("data-brand") || "avnir-studio");
+      setBrand(html.getAttribute("data-brand") || "muzisystem");
       setTheme(html.getAttribute("data-theme") || "dark");
     };
 
