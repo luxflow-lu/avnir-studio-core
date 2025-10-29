@@ -20,7 +20,7 @@ export const Testimonials = React.forwardRef<HTMLDivElement, TestimonialsProps>(
         className="testimonial-card"
       >
         <blockquote className="testimonial-quote">
-          "{t.quote}"
+          &ldquo;{t.quote}&rdquo;
         </blockquote>
         <figcaption className="testimonial-author">
           {t.avatarSrc ? (

@@ -48,7 +48,7 @@ export const Newsletter = React.forwardRef<HTMLElement, NewsletterProps>(
               type="submit"
               className="newsletter-button"
             >
-              S'inscrire
+              S&apos;inscrire
             </button>
           </form>
         </div>
