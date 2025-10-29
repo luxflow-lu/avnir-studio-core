@@ -3,4 +3,13 @@ export default {
   eslint: {
     ignoreDuringBuilds: false,
   },
+  async redirects() {
+    return [
+      {
+        source: '/colors',
+        destination: '/foundations/colors',
+        permanent: true,
+      },
+    ];
+  },
 };

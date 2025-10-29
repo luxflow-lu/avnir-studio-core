@@ -1,6 +1,7 @@
 "use client";
 
-import { Button, Card, Layout, Marketing, System } from "@avnir/ui";
+import React from "react";
+import { Badge, Button, Card, Form, Layout, Marketing, Primitives, System } from "@avnir/ui";
 
 export default function HomePage() {
   return (
@@ -19,7 +20,7 @@ export default function HomePage() {
       />
 
       {/* 2) Stats - Key Metrics */}
-      <section className="section--lg">
+      <section className="section--xl">
         <div className="container">
           <Layout.SectionHeader
             title="By the Numbers"
@@ -28,7 +29,7 @@ export default function HomePage() {
           />
           <div className="grid-4">
             <Card>
-              <h2 style={{ fontSize: 'var(--text-h1)', fontWeight: 'var(--font-bold)', color: 'var(--primary)', marginBottom: 'var(--gap-xs)' }}>142</h2>
+              <h2 style={{ fontSize: 'var(--text-h1)', fontWeight: 'var(--font-bold)', color: 'var(--primary)', marginBottom: 'var(--gap-xs)' }}>144</h2>
               <p className="text-small" style={{ color: 'var(--muted)' }}>Production Components</p>
             </Card>
             <Card>
@@ -48,7 +49,7 @@ export default function HomePage() {
       </section>
 
       {/* 3) Logo Cloud - Brands Powered */}
-      <section className="section--lg">
+      <section className="section--xl">
         <div className="container">
           <Layout.SectionHeader
             title="Powering the AVNIR Ecosystem"
@@ -144,8 +145,71 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* 3.5) Brand Selector - Live Demo */}
+      <section className="section--xl">
+        <div className="container">
+          <Layout.SectionHeader
+            title="Try It Live"
+            subtitle="Switch between brands to see the design system in action"
+            align="center"
+          />
+          <Card style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
+            <h3 style={{ marginBottom: 'var(--margin-md)' }}>Select a Brand</h3>
+            <p className="text-small" style={{ color: 'var(--muted)', marginBottom: 'var(--margin-lg)' }}>
+              Change the active brand to see how colors, components, and styles adapt instantly across the entire site.
+            </p>
+            <System.BrandSelector />
+            <p className="text-small" style={{ color: 'var(--muted)', marginTop: 'var(--margin-xl)', marginBottom: 'var(--margin-md)' }}>
+              ✨ Watch the components below change colors in real-time
+            </p>
+            
+            {/* Preview Components */}
+            <div style={{ 
+              display: 'grid', 
+              gridTemplateColumns: 'repeat(2, 1fr)', 
+              gap: 'var(--gap-lg)', 
+              padding: 'var(--padding-xl)', 
+              backgroundColor: 'var(--surface)', 
+              borderRadius: 'var(--radius-md)',
+              transition: 'all 0.3s ease'
+            }}>
+              {/* Button */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap-sm)', alignItems: 'center' }}>
+                <Button variant="solid">Primary Button</Button>
+                <span className="text-small" style={{ color: 'var(--muted)', fontSize: 'var(--text-xs)' }}>Button</span>
+              </div>
+              
+              {/* Badge */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap-sm)', alignItems: 'center' }}>
+                <Badge variant="primary">Primary Badge</Badge>
+                <span className="text-small" style={{ color: 'var(--muted)', fontSize: 'var(--text-xs)' }}>Badge</span>
+              </div>
+              
+              {/* Input */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap-sm)', alignItems: 'center', width: '100%' }}>
+                <Form.Input placeholder="Type here..." style={{ width: '100%' }} />
+                <span className="text-small" style={{ color: 'var(--muted)', fontSize: 'var(--text-xs)' }}>Input</span>
+              </div>
+              
+              {/* Color Swatch */}
+              <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--gap-sm)', alignItems: 'center' }}>
+                <div style={{ 
+                  width: '60px', 
+                  height: '60px', 
+                  backgroundColor: 'var(--primary)', 
+                  borderRadius: 'var(--radius-md)',
+                  boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
+                  transition: 'all 0.3s ease'
+                }} title="Primary color"></div>
+                <span className="text-small" style={{ color: 'var(--muted)', fontSize: 'var(--text-xs)' }}>Primary Color</span>
+              </div>
+            </div>
+          </Card>
+        </div>
+      </section>
+
       {/* 4) Tokens Essentiels */}
-      <section className="section--lg">
+      <section className="section--xl">
         <div className="container">
           <Layout.SectionHeader
             title="Design Tokens"

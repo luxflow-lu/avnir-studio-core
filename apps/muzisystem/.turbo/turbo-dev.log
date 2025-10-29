@@ -2,96 +2,418 @@
 > muzisystem@0.0.0 dev /Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem
 > next dev
 
- ⚠ Port 3000 is in use by process 18650, using available port 3001 instead.
+ ⚠ Port 3000 is in use by process 3490, using available port 3001 instead.
    ▲ Next.js 15.5.6
    - Local:        http://localhost:3001
    - Network:      http://192.168.1.237:3001
 
  ✓ Starting...
- ✓ Ready in 7s
+ ✓ Ready in 4.4s
  ○ Compiling / ...
 
 warn - Your `content` configuration includes a pattern which looks like it's accidentally matching all of `node_modules` and can cause serious performance issues.
 warn - Pattern: `../../packages/ui/**/*.tsx`
 warn - See our documentation for recommendations:
 warn - https://tailwindcss.com/docs/content-configuration#pattern-recommendations
- ✓ Compiled / in 14.1s (1169 modules)
- GET / 200 in 15309ms
+ ✓ Compiled / in 20.7s (1169 modules)
+ GET / 200 in 22994ms
  ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 5.3s (1025 modules)
- GET /brands/muziweb.svg 404 in 4456ms
- GET /brands/avnir.svg 404 in 4487ms
- GET /brands/muzidev.svg 404 in 4582ms
- GET /brands/muzisystem.svg 404 in 4307ms
- GET /brands/muzipics.svg 404 in 4513ms
- GET /brands/muzitools.svg 404 in 4504ms
- ⚠ Cross origin request detected from 127.0.0.1 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
-Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ ✓ Compiled /_not-found in 6.8s (1025 modules)
+ GET /brands/muzitools.svg 404 in 5900ms
+ GET /brands/muziweb.svg 404 in 5978ms
+ GET /brands/muzipics.svg 404 in 5980ms
+ GET /brands/muzidev.svg 404 in 6007ms
+ GET /brands/avnir.svg 404 in 6073ms
+ GET /brands/muzisystem.svg 404 in 5727ms
  ○ Compiling /components ...
- ✓ Compiled /components in 4.6s (1258 modules)
- GET /components 200 in 5501ms
- ○ Compiling /components/content ...
- ✓ Compiled /components/content in 1797ms (1265 modules)
- GET /components/content 200 in 2167ms
- ○ Compiling /components/ai ...
- ✓ Compiled /components/ai in 1434ms (1272 modules)
- GET /components/ai 200 in 2100ms
+ ✓ Compiled /components in 2.2s (1032 modules)
+ GET /components 200 in 3005ms
+ ○ Compiling /components/primitives ...
+ ✓ Compiled /components/primitives in 1192ms (1039 modules)
+ GET /components/primitives 200 in 1822ms
+ GET /components 200 in 293ms
+ ✓ Compiled in 7.1s (1183 modules)
+ GET /components 200 in 297ms
+ ○ Compiling /components/form ...
+ ✓ Compiled /components/form in 2.4s (1190 modules)
+You provided a `checked` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultChecked`. Otherwise, set either `onChange` or `readOnly`.
+You provided a `checked` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultChecked`. Otherwise, set either `onChange` or `readOnly`.
+ GET /components/form 200 in 3410ms
+ ✓ Compiled in 5.7s (1190 modules)
+ GET /components/form 200 in 402ms
+ ✓ Compiled in 2.5s (1190 modules)
+ GET /components/form 200 in 743ms
+ GET /components 200 in 445ms
+ GET /components/primitives 200 in 457ms
+ GET /components 200 in 448ms
+You provided a `checked` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultChecked`. Otherwise, set either `onChange` or `readOnly`.
+ GET /components/form 200 in 1270ms
+ ✓ Compiled in 3.9s (1190 modules)
+ GET /components/form 200 in 817ms
+You provided a `checked` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultChecked`. Otherwise, set either `onChange` or `readOnly`.
+ GET /components/form 200 in 582ms
+ ✓ Compiled in 4.2s (1190 modules)
+ GET /components/form 200 in 547ms
+ GET /components 200 in 1107ms
+ GET /components/primitives 200 in 507ms
+ GET /components 200 in 393ms
+You provided a `checked` prop to a form field without an `onChange` handler. This will render a read-only field. If the field should be mutable use `defaultChecked`. Otherwise, set either `onChange` or `readOnly`.
+ GET /components/form 200 in 383ms
+ ✓ Compiled in 4.1s (1190 modules)
+ GET /components/form 200 in 503ms
+ GET /components 200 in 883ms
+ GET /components/primitives 200 in 432ms
+ GET /components 200 in 326ms
+ GET /components 200 in 1850ms
+ ✓ Compiled in 6.4s (1190 modules)
+ ✓ Compiled in 6.9s (1190 modules)
+ ✓ Compiled in 4s (1041 modules)
+ ✓ Compiled in 6.5s (1190 modules)
+ ✓ Compiled in 1261ms (688 modules)
+ ○ Compiling /components/data-display ...
+ ✓ Compiled /components/data-display in 4.2s (1197 modules)
+ GET /components/data-display 200 in 5711ms
+ GET /components 200 in 551ms
+ GET /components 200 in 1968ms
+ ✓ Compiled in 4.8s (1197 modules)
+ ✓ Compiled in 5.1s (1197 modules)
+ ○ Compiling /components/layout ...
+ ✓ Compiled /components/layout in 3s (1204 modules)
+ GET /components/layout 200 in 3886ms
+ GET /components 200 in 701ms
+ GET /components/layout 200 in 420ms
+ ✓ Compiled in 4s (1196 modules)
+ GET /components/layout 200 in 203ms
+ ✓ Compiled in 3.4s (1196 modules)
+ GET /components/layout 200 in 1041ms
+ GET /components 200 in 718ms
+ GET /components 200 in 2897ms
+ ✓ Compiled in 6.6s (1196 modules)
+ ✓ Compiled in 7.5s (1196 modules)
+ ○ Compiling /components/marketing ...
+ ✓ Compiled /components/marketing in 10.4s (1203 modules)
+ ○ Compiling /_not-found ...
+ GET /components/marketing 200 in 12369ms
+ ✓ Compiled /_not-found in 3.2s (1059 modules)
+ GET /logo-placeholder.svg 404 in 3914ms
+ ✓ Compiled in 5.4s (1208 modules)
+ GET /logo-placeholder.svg 404 in 4211ms
+ GET /components/marketing 200 in 654ms
+ GET /components 200 in 310ms
+ GET /components/layout 200 in 510ms
+ GET /components 200 in 639ms
+ GET /components 200 in 1618ms
+ ✓ Compiled in 5.1s (1198 modules)
+ ✓ Compiled in 3.9s (1198 modules)
+ ○ Compiling /components/ecommerce ...
+ ✓ Compiled /components/ecommerce in 1742ms (1056 modules)
+ ○ Compiling /_not-found ...
+ GET /components/ecommerce 200 in 3798ms
+ ✓ Compiled /_not-found in 3.3s (1061 modules)
+ GET /product-1.jpg 404 in 4336ms
+ GET /product-placeholder.jpg 404 in 4342ms
+ GET /product-3.jpg 404 in 4331ms
+ GET /product-2.jpg 404 in 4332ms
+ GET /components 200 in 378ms
+ GET /components 200 in 2581ms
+ ✓ Compiled in 7.7s (1200 modules)
+ ✓ Compiled in 3.1s (1200 modules)
+ ○ Compiling /components/saas ...
+ ✓ Compiled /components/saas in 1925ms (1207 modules)
+ GET /components/saas 200 in 3791ms
+ GET /components 200 in 339ms
+ GET /components 200 in 2466ms
+ ✓ Compiled in 5.6s (1202 modules)
+ ✓ Compiled in 1369ms (1202 modules)
+ ○ Compiling /components/system ...
+ ✓ Compiled /components/system in 2.4s (1060 modules)
+ GET /components/system 200 in 3924ms
+ ✓ Compiled in 4.6s (700 modules)
+ GET /components/system 200 in 341ms
+ ✓ Compiled in 6.9s (1204 modules)
+ GET /components/system 200 in 562ms
+ ✓ Compiled in 3s (1206 modules)
+ GET /components/system 200 in 4179ms
  ⚠ Fast Refresh had to perform a full reload due to a runtime error.
- ✓ Compiled in 16.6s (1408 modules)
- GET /components 200 in 3652ms
- ✓ Compiled in 4.6s (694 modules)
- GET /components 200 in 592ms
- ✓ Compiled in 9.3s (1408 modules)
- GET /components 200 in 3015ms
- GET /components 200 in 2927ms
-<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/cache/webpack/client-development/34.pack.gz_' -> '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/cache/webpack/client-development/34.pack.gz'
- GET /components/ai 200 in 76ms
- GET /components/ai 200 in 5370ms
- ✓ Compiled in 11.5s (1408 modules)
- ✓ Compiled in 8s (1408 modules)
- ✓ Compiled in 3.9s (694 modules)
- ✓ Compiled in 4.8s (694 modules)
- ✓ Compiled in 3.2s (694 modules)
- ✓ Compiled in 4.1s (694 modules)
- ✓ Compiled in 3.7s (694 modules)
- ✓ Compiled in 4.3s (694 modules)
-<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/cache/webpack/client-development/0.pack.gz_' -> '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/cache/webpack/client-development/0.pack.gz'
- ✓ Compiled in 3.4s (694 modules)
- ✓ Compiled in 4.6s (694 modules)
- ✓ Compiled in 3.3s (694 modules)
- GET /components 200 in 1262ms
- ○ Compiling /components/overlay ...
- ✓ Compiled /components/overlay in 2.6s (1415 modules)
- ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
- GET /components/overlay 200 in 3022ms
- GET /components 200 in 533ms
- GET /components/overlay 200 in 53ms
- GET /components/overlay 200 in 2523ms
- ✓ Compiled in 9.1s (1415 modules)
-<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/cache/webpack/client-development/1.pack.gz_' -> '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/cache/webpack/client-development/1.pack.gz'
- ✓ Compiled in 4.6s (696 modules)
- ✓ Compiled in 8.3s (1033 modules)
-<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/cache/webpack/server-development/9.pack.gz_' -> '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/cache/webpack/server-development/9.pack.gz'
- ✓ Compiled in 3.5s (688 modules)
- ○ Compiling /_not-found ...
- ✓ Compiled /_not-found in 5.1s (1187 modules)
- GET /components 404 in 6244ms
- GET /components 404 in 98ms
- GET /components 404 in 71ms
+ ✓ Compiled in 4.9s (1206 modules)
+ ⨯ ReferenceError: theme is not defined
+    at SystemPage (app/components/system/page.tsx:175:20)
+  173 |         preview={
+  174 |           <System.ThemeToggle
+> 175 |             theme={theme}
+      |                    ^
+  176 |             onThemeChange={setTheme}
+  177 |           />
+  178 |         } {
+  digest: '1512795075'
+}
+ GET /components/system 500 in 3894ms
+ ✓ Compiled in 3.3s (1206 modules)
+ ⚠ Fast Refresh had to perform a full reload due to a runtime error.
+ GET /components/system 200 in 2263ms
+ ✓ Compiled in 1876ms (1206 modules)
+ GET /components/system 200 in 461ms
+ ✓ Compiled in 4.4s (1206 modules)
+ GET /components/system 200 in 449ms
+ ✓ Compiled in 6.1s (1206 modules)
+ GET /components/system 200 in 375ms
+ ✓ Compiled in 4.1s (1206 modules)
+ GET /components/system 200 in 949ms
+ ✓ Compiled in 6.9s (1206 modules)
+ GET /components/system 200 in 352ms
+ ✓ Compiled in 4.9s (1206 modules)
+ GET /components/system 200 in 966ms
  ○ Compiling / ...
- ✓ Compiled / in 614ms (503 modules)
- GET / 200 in 1099ms
- GET /brands/muziweb.svg 404 in 962ms
- GET /brands/muzitools.svg 404 in 960ms
- GET /brands/muzipics.svg 404 in 961ms
- GET /brands/avnir.svg 404 in 960ms
- GET /brands/muzidev.svg 404 in 973ms
- GET /brands/muzisystem.svg 404 in 347ms
- GET /components 404 in 306ms
+ ✓ Compiled / in 2.4s (513 modules)
+ GET / 200 in 2990ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 3.7s (1070 modules)
+ GET /brands/muzitools.svg 404 in 4526ms
+ GET /brands/muziweb.svg 404 in 4530ms
+ GET /brands/muzipics.svg 404 in 4541ms
+ GET /brands/muzidev.svg 404 in 4557ms
+ GET /brands/avnir.svg 404 in 4585ms
+ GET /brands/muzisystem.svg 404 in 3275ms
+ ✓ Compiled in 8.5s (1214 modules)
+ GET / 200 in 608ms
+ ✓ Compiled in 4.5s (1209 modules)
+ GET / 200 in 392ms
+ GET / 200 in 399ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 543ms (1065 modules)
+ GET /brands/muzisystem.svg 404 in 1195ms
+ GET /brands/muzitools.svg 404 in 1198ms
+ GET /brands/muziweb.svg 404 in 1283ms
+ GET /brands/muzipics.svg 404 in 1285ms
+ GET /brands/muzidev.svg 404 in 1290ms
+ GET /brands/avnir.svg 404 in 1295ms
+ ✓ Compiled in 6.3s (1209 modules)
+ GET / 200 in 681ms
+ ✓ Compiled in 7.5s (1209 modules)
+ GET / 200 in 604ms
+ ✓ Compiled in 1564ms (1209 modules)
+ GET / 200 in 585ms
+ ✓ Compiled in 9.1s (1209 modules)
+ GET / 200 in 289ms
+ ✓ Compiled in 6.7s (1209 modules)
+ GET / 200 in 1581ms
+ ✓ Compiled in 8.5s (1209 modules)
+ GET / 200 in 383ms
+ ✓ Compiled in 11s (1209 modules)
+ GET / 200 in 597ms
+ ✓ Compiled in 2.9s (1209 modules)
+ GET / 200 in 612ms
+ ✓ Compiled in 1960ms (1209 modules)
+ GET / 200 in 748ms
+ ✓ Compiled in 1946ms (701 modules)
+ GET / 200 in 220ms
+ ✓ Compiled in 1358ms (701 modules)
+ GET / 200 in 817ms
+ GET / 200 in 3044ms
+ ✓ Compiled in 7.7s (1060 modules)
+ ✓ Compiled in 5.5s (1209 modules)
+ ✓ Compiled in 900ms (701 modules)
+ ✓ Compiled in 8.2s (1209 modules)
+ ✓ Compiled in 4.7s (1209 modules)
+ ✓ Compiled in 8.4s (1209 modules)
+ ✓ Compiled in 3.7s (1209 modules)
+ ✓ Compiled in 5.3s (1209 modules)
+ ✓ Compiled in 6.9s (1209 modules)
+ ✓ Compiled in 32.7s (1128 modules)
+ ⚠ Found a change in next.config.mjs. Restarting the server to apply the changes...
+   ▲ Next.js 15.5.6
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.1.237:3001
+
+ ✓ Starting...
+ ✓ Ready in 8.1s
  ○ Compiling /components ...
- ✓ Compiled /components in 13.5s (1040 modules)
- GET /components 200 in 13124ms
- GET /components 200 in 114ms
- ✓ Compiled in 7.9s (1189 modules)
- GET /components 200 in 741ms
-<w> [webpack.cache.PackFileCacheStrategy] Caching failed for pack: Error: ENOENT: no such file or directory, rename '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/cache/webpack/client-development/1.pack.gz_' -> '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/cache/webpack/client-development/1.pack.gz'
+
+warn - Your `content` configuration includes a pattern which looks like it's accidentally matching all of `node_modules` and can cause serious performance issues.
+warn - Pattern: `../../packages/ui/**/*.tsx`
+warn - See our documentation for recommendations:
+warn - https://tailwindcss.com/docs/content-configuration#pattern-recommendations
+ ✓ Compiled /components in 21.2s (1235 modules)
+ GET /components 200 in 23723ms
+ ✓ Compiled in 2.7s (693 modules)
+ ○ Compiling /legal/licenses ...
+ ✓ Compiled /legal/licenses in 7s (1093 modules)
+ GET /legal/licenses 200 in 6141ms
+ ○ Compiling /foundations/tokens ...
+ ✓ Compiled /foundations/tokens in 2.4s (1108 modules)
+ GET /foundations/tokens 200 in 3375ms
+ GET /foundations/tokens 200 in 439ms
+ ○ Compiling / ...
+ ✓ Compiled / in 4s (1119 modules)
+ GET / 200 in 4613ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 788ms (1120 modules)
+ GET /brands/muzisystem.svg 404 in 1770ms
+ GET /brands/muzitools.svg 404 in 1774ms
+ GET /brands/muziweb.svg 404 in 1902ms
+ GET /brands/muzipics.svg 404 in 1903ms
+ GET /brands/muzidev.svg 404 in 1906ms
+ GET /brands/avnir.svg 404 in 1913ms
+ GET / 200 in 431ms
+ GET /brands/muziweb.svg 404 in 622ms
+ GET /brands/muzipics.svg 404 in 624ms
+ GET /brands/muzidev.svg 404 in 626ms
+ GET /brands/avnir.svg 404 in 641ms
+ GET /brands/muzisystem.svg 404 in 262ms
+ GET /brands/muzitools.svg 404 in 325ms
+ ✓ Compiled in 9.1s (1258 modules)
+ GET / 200 in 362ms
+ ✓ Compiled in 2.1s (1258 modules)
+ GET / 200 in 881ms
+ ✓ Compiled in 2.4s (1258 modules)
+ GET / 200 in 757ms
+ GET / 200 in 2809ms
+ ✓ Compiled in 5.6s (1258 modules)
+ ✓ Compiled in 2.6s (1258 modules)
+ ✓ Compiled in 1281ms (1258 modules)
+ ○ Compiling /foundations ...
+ ✓ Compiled /foundations in 1379ms (1121 modules)
+ GET /foundations 200 in 3083ms
+ GET /foundations 200 in 224ms
+ ○ Compiling /patterns ...
+ ✓ Compiled /patterns in 1171ms (1128 modules)
+ GET /patterns 200 in 1712ms
+ GET /foundations 200 in 291ms
+ GET /foundations 200 in 182ms
+ ✓ Compiled in 4.8s (1277 modules)
+ GET /foundations 200 in 311ms
+ ✓ Compiled in 1528ms (1277 modules)
+ GET /foundations 200 in 1056ms
+ GET /foundations 200 in 436ms
+ GET / 200 in 328ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 1023ms (571 modules)
+ GET /brands/muzisystem.svg 404 in 1603ms
+ GET /brands/muzitools.svg 404 in 1815ms
+ GET /brands/muziweb.svg 404 in 1850ms
+ GET /brands/muzipics.svg 404 in 1852ms
+ GET /brands/muzidev.svg 404 in 1859ms
+ GET /brands/avnir.svg 404 in 1864ms
+ ✓ Compiled in 3.6s (1277 modules)
+ ⚠ Found a change in next.config.mjs. Restarting the server to apply the changes...
+   ▲ Next.js 15.5.6
+   - Local:        http://localhost:3001
+   - Network:      http://192.168.1.237:3001
+
+ ✓ Starting...
+ ✓ Ready in 6.1s
+ ○ Compiling /guidelines ...
+
+warn - Your `content` configuration includes a pattern which looks like it's accidentally matching all of `node_modules` and can cause serious performance issues.
+warn - Pattern: `../../packages/ui/**/*.tsx`
+warn - See our documentation for recommendations:
+warn - https://tailwindcss.com/docs/content-configuration#pattern-recommendations
+ ✓ Compiled /guidelines in 8.6s (1412 modules)
+ GET /guidelines 200 in 10271ms
+ ✓ Compiled in 1847ms (695 modules)
+ ○ Compiling /guidelines/accessibility ...
+ ✓ Compiled /guidelines/accessibility in 1900ms (1270 modules)
+ GET /guidelines/accessibility 200 in 2291ms
+ ○ Compiling /guidelines/writing ...
+ ✓ Compiled /guidelines/writing in 971ms (1277 modules)
+ GET /guidelines/writing 200 in 1300ms
+ GET /guidelines 200 in 68ms
+ ✓ Compiled in 3.5s (1257 modules)
+ GET /guidelines 200 in 873ms
+ ✓ Compiled in 1611ms (700 modules)
+ GET /guidelines 200 in 555ms
+ GET /guidelines 200 in 2578ms
+ ✓ Compiled in 6.7s (1257 modules)
+ ✓ Compiled in 576ms (700 modules)
+ ✓ Compiled in 4.7s (1257 modules)
+ ✓ Compiled in 717ms (700 modules)
+ ○ Compiling /overview ...
+ ✓ Compiled /overview in 1703ms (1115 modules)
+ GET /overview 200 in 3116ms
+ GET /overview 200 in 1338ms
+ ✓ Compiled in 7.3s (1264 modules)
+ GET /overview 200 in 764ms
+ ○ Compiling / ...
+ ✓ Compiled / in 5.4s (1126 modules)
+ GET / 200 in 7561ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 3.5s (1127 modules)
+ GET /brands/muzisystem.svg 404 in 7507ms
+ GET /brands/muzitools.svg 404 in 7759ms
+ GET /brands/muziweb.svg 404 in 7835ms
+ GET /brands/muzipics.svg 404 in 7836ms
+ GET /brands/muzidev.svg 404 in 7840ms
+ GET /brands/avnir.svg 404 in 7855ms
+ ✓ Compiled in 4.1s (705 modules)
+ ✓ Compiled in 6.2s (1276 modules)
+ GET / 200 in 317ms
+ ○ Compiling /foundations ...
+ ✓ Compiled /foundations in 1574ms (1134 modules)
+ GET /foundations 200 in 2202ms
+ ○ Compiling /foundations/colors ...
+ ✓ Compiled /foundations/colors in 1606ms (1141 modules)
+ GET /foundations/colors 200 in 1790ms
+ GET /foundations 200 in 91ms
+ ○ Compiling /foundations/spacing ...
+ ✓ Compiled /foundations/spacing in 764ms (1137 modules)
+ GET /foundations/spacing 200 in 1440ms
+ ○ Compiling /foundations/shadows ...
+ ✓ Compiled /foundations/shadows in 672ms (1139 modules)
+ GET /foundations/shadows 200 in 1097ms
+ ○ Compiling /foundations/breakpoints ...
+ ✓ Compiled /foundations/breakpoints in 768ms (1146 modules)
+ GET /foundations/breakpoints 200 in 1040ms
+ ○ Compiling /components ...
+ ✓ Compiled /components in 3.7s (1140 modules)
+ GET /components 200 in 4943ms
+ ○ Compiling /components/primitives ...
+ ✓ Compiled /components/primitives in 2.6s (1142 modules)
+ GET /components/primitives 200 in 3388ms
+ ✓ Compiled in 8.8s (719 modules)
+ GET /components/primitives 200 in 336ms
+ GET /components 200 in 399ms
+ ○ Compiling /components/form ...
+ ✓ Compiled /components/form in 7.5s (1293 modules)
+ GET /components/form 200 in 11273ms
+ ✓ Compiled in 4.9s (1288 modules)
+ GET /components/form 200 in 547ms
+ ✓ Compiled in 4.9s (1288 modules)
+                                                                                                                                                                                                                                                                syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+ GET /components 500 in 919ms
+ GET /components 500 in 350ms
+[Error: ENOENT: no such file or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
+  errno: -2,
+  syscall: 'open',
+  code: 'ENOENT',
+  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
+}
+ ✓ Compiled in 5.8s (1469 modules)
+ ✓ Compiled in 817ms (600 modules)
+ ✓ Compiled in 2.8s (1320 modules)
+ ✓ Compiled in 741ms (869 modules)
+ ✓ Compiled in 667ms (869 modules)
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ✓ Compiled in 1550ms (869 modules)

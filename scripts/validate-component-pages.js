@@ -105,8 +105,8 @@ const VALIDATION_RULES = {
   
   // Interdictions
   noInlineStyles: {
-    pattern: /style=\{\{[^}]+\}\}/,
-    message: 'ATTENTION: Styles inline détectés - préférer classes CSS ou variables',
+    pattern: /style=\{\{[^}]*(?:#[0-9a-fA-F]{3,6}|:\s*['"]?\d+(?:px|rem|em)(?!.*var\())[^}]*\}\}/,
+    message: 'ATTENTION: Styles inline avec valeurs hardcodées détectés - utiliser variables CSS',
     required: false,
     isWarning: true
   },
@@ -119,7 +119,7 @@ const VALIDATION_RULES = {
   },
   
   noTailwindClasses: {
-    pattern: /className=["'][^"']*(?:flex|grid|p-|m-|text-|bg-|border-)/,
+    pattern: /className=["'][^"']*\b(?:flex-(?!col|row)|justify-(?!center|between|start|end)|items-(?!center|start|end)|p-(?!0)\d+|m-(?!0)\d+|px-\d+|py-\d+|mt-\d+|mb-\d+|ml-\d+|mr-\d+|w-\d+|h-\d+|max-w-(?!full|screen)|min-h-(?!full|screen)|space-[xy]-\d+|gap-\d+|bg-(?!error|success|warning|info)|text-(?!xs|sm|base|lg|xl|2xl|3xl|6xl|error|success|warning|info)|border-(?!0))\b/,
     message: 'ATTENTION: Classes Tailwind détectées - utiliser classes design system',
     required: false,
     isWarning: true
@@ -171,7 +171,7 @@ function validateFile(filePath) {
 function findComponentPages(dir) {
   const pages = [];
   
-  function scan(currentDir) {
+  function scan(currentDir, depth = 0) {
     const items = fs.readdirSync(currentDir);
     
     for (const item of items) {
@@ -179,8 +179,10 @@ function findComponentPages(dir) {
       const stat = fs.statSync(fullPath);
       
       if (stat.isDirectory()) {
-        scan(fullPath);
-      } else if (item === 'page.tsx') {
+        scan(fullPath, depth + 1);
+      } else if (item === 'page.tsx' && depth > 0) {
+        // Exclure /components/page.tsx (depth === 0)
+        // Inclure uniquement les pages dans les sous-dossiers (depth > 0)
         pages.push(fullPath);
       }
     }

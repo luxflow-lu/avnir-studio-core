@@ -3,6 +3,7 @@ export { LoadingBoundary } from "./LoadingBoundary";
 export { NotFound404 } from "./NotFound404";
 export { ServerError500 } from "./ServerError500";
 export { ThemeToggle } from "./ThemeToggle";
+export { BrandSelector } from "./BrandSelector";
 export { BrandThemeSelector } from "./BrandThemeSelector";
 export * from "./FeatureFlag";
 export * from "./PermissionGate";

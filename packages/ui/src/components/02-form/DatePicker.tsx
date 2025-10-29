@@ -3,7 +3,7 @@ import * as React from "react";
 import { cx } from "../../utils/cx";
 
 export interface DatePickerProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "onChange" | "value"> {
-  value?: Date;
+  value?: Date | undefined;
   onChange: (date: Date | null) => void;
   minDate?: Date;
   maxDate?: Date;
@@ -27,11 +27,11 @@ export const DatePicker = React.forwardRef<HTMLInputElement, DatePickerProps>(
     };
 
     return (
-      <div className={cx("datepicker", error && "datepicker--error", disabled && "datepicker--disabled", className)}>
+      <div className={cx("date-picker", error && "date-picker--error", disabled && "date-picker--disabled", className)}>
         <input
           ref={ref}
           type="date"
-          className="datepicker-input"
+          className="date-picker-input"
           value={formatDate(value)}
           onChange={handleChange}
           min={minDate ? formatDate(minDate) : undefined}
@@ -39,7 +39,7 @@ export const DatePicker = React.forwardRef<HTMLInputElement, DatePickerProps>(
           disabled={disabled}
           {...props}
         />
-        {error && <div className="datepicker-error">{error}</div>}
+        {error && <div className="date-picker-error">{error}</div>}
       </div>
     );
   }

@@ -11,11 +11,12 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         links={[
           { label: "Home", href: "/" },
           { label: "Overview", href: "/overview" },
-          { label: "Foundations", href: "/foundations/tokens" },
+          { label: "Foundations", href: "/foundations" },
           { label: "Components", href: "/components" },
+          { label: "Guidelines", href: "/guidelines" },
           { label: "Patterns", href: "/patterns" },
         ]}
-        actions={<System.BrandThemeSelector />}
+        actions={<System.ThemeToggle />}
       />
       <main>{children}</main>
       <Layout.Footer>
@@ -32,33 +33,29 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
               <Layout.Footer.Button>Subscribe</Layout.Footer.Button>
             </Layout.Footer.Form>
             <Layout.Footer.Disclaimer>
-              By subscribing you agree to with our <a href="/privacy">Privacy Policy</a> and provide consent to receive updates from our company.
+              By subscribing you agree to with our <a href="/legal/privacy">Privacy Policy</a> and provide consent to receive updates from our company.
             </Layout.Footer.Disclaimer>
           </Layout.Footer.Newsletter>
           <Layout.Footer.Links>
             <Layout.Footer.Column title="Product">
               <Layout.Footer.Link href="/components">Components</Layout.Footer.Link>
-              <Layout.Footer.Link href="/foundations/tokens">Foundations</Layout.Footer.Link>
+              <Layout.Footer.Link href="/foundations">Foundations</Layout.Footer.Link>
               <Layout.Footer.Link href="/patterns">Patterns</Layout.Footer.Link>
-              <Layout.Footer.Link href="/templates">Templates</Layout.Footer.Link>
             </Layout.Footer.Column>
             <Layout.Footer.Column title="Resources">
               <Layout.Footer.Link href="/overview">Documentation</Layout.Footer.Link>
-              <Layout.Footer.Link href="/code/getting-started">Code</Layout.Footer.Link>
-              <Layout.Footer.Link href="/tools/figma">Figma</Layout.Footer.Link>
-              <Layout.Footer.Link href="/tools/playground">Playground</Layout.Footer.Link>
-            </Layout.Footer.Column>
-            <Layout.Footer.Column title="Governance">
-              <Layout.Footer.Link href="/governance/contribute">Contribute</Layout.Footer.Link>
-              <Layout.Footer.Link href="/governance/roadmap">Roadmap</Layout.Footer.Link>
-              <Layout.Footer.Link href="/governance/changelog">Changelog</Layout.Footer.Link>
-              <Layout.Footer.Link href="/quality/audits">Quality</Layout.Footer.Link>
+              <Layout.Footer.Link href="/guidelines">Guidelines</Layout.Footer.Link>
+              <Layout.Footer.Link href="/patterns">Patterns</Layout.Footer.Link>
             </Layout.Footer.Column>
             <Layout.Footer.Column title="Company">
               <Layout.Footer.Link href="https://avnir.studio">About AVNIR</Layout.Footer.Link>
               <Layout.Footer.Link href="/foundations/brands">Brands</Layout.Footer.Link>
-              <Layout.Footer.Link href="/legal/licenses">Legal</Layout.Footer.Link>
               <Layout.Footer.Link href="/governance/support">Support</Layout.Footer.Link>
+            </Layout.Footer.Column>
+            <Layout.Footer.Column title="Legal">
+              <Layout.Footer.Link href="/legal/privacy">Privacy Policy</Layout.Footer.Link>
+              <Layout.Footer.Link href="/legal/terms">Terms of Service</Layout.Footer.Link>
+              <Layout.Footer.Link href="/legal/licenses">Licenses</Layout.Footer.Link>
             </Layout.Footer.Column>
           </Layout.Footer.Links>
         </Layout.Footer.Top>
