@@ -1,6 +1,6 @@
 {
-  "buildCommand": "pnpm -w --filter ./apps/muzisystem run build",
-  "installCommand": "pnpm -w install --frozen-lockfile",
+  "buildCommand": "cd ../.. && pnpm build --filter=muzisystem...",
+  "installCommand": "pnpm install --frozen-lockfile",
   "framework": "nextjs",
   "outputDirectory": ".next"
 }
