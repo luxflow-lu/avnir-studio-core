@@ -4,11 +4,6 @@
    ============================================ */
 
 /* ==================== BRAND COLORS ==================== */
-:root {
-  /* Default brand: muzisystem */
-  --primary: #ededed;
-}
-
 [data-brand="avnir-studio"] { --primary: #ededed; }
 [data-brand="muzidev"] { --primary: #5cb9f2; }
 [data-brand="muzipics"] { --primary: #ff2d55; }
