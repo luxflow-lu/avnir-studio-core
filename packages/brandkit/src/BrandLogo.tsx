@@ -1,3 +1,5 @@
+/* eslint-disable no-restricted-syntax */
+// SVG logos contain brand-specific hex colors that are intentional and should not be replaced
 "use client";
 
 import * as React from "react";

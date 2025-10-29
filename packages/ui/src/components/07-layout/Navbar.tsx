@@ -53,7 +53,8 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
       return () => observer.disconnect();
     }, []);
 
-    // Brand colors for hamburger menu
+    // Brand colors for hamburger menu (fixed brand colors, not CSS variables)
+    /* eslint-disable no-restricted-syntax */
     const brandColors: Record<string, string> = {
       "avnir-studio": "#ededed",
       muzidev: "#5CB9F2",
@@ -65,6 +66,7 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
     };
 
     const brandColor = brandColors[brand] || "#ededed";
+    /* eslint-enable no-restricted-syntax */
 
     return (
       <header

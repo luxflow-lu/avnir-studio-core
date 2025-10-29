@@ -11,6 +11,7 @@ export interface ColorPickerProps extends Omit<React.InputHTMLAttributes<HTMLInp
 }
 
 export const ColorPicker = React.forwardRef<HTMLInputElement, ColorPickerProps>(
+  // eslint-disable-next-line no-restricted-syntax
   ({ className, value = "#000000", onChange, presets, disabled, ...props }, ref) => {
     return (
       <div className={cx("colorpicker", disabled && "colorpicker--disabled", className)}>
