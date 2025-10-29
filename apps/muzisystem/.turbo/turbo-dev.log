@@ -112,3 +112,18 @@ Module not found: Can't resolve '@avnir/ui/styles.css'
 
 https://nextjs.org/docs/messages/module-not-found
 
+Import trace for requested module:
+./app/globals.css
+ ✓ Compiled in 1259ms (701 modules)
+ GET / 200 in 222ms
+ GET /icon-192x192.png 404 in 151ms
+ GET / 200 in 719ms
+ GET /brands/muzipics.svg 404 in 446ms
+ GET /brands/muzidev.svg 404 in 451ms
+ GET /brands/avnir.svg 404 in 463ms
+ GET /brands/muziweb.svg 404 in 454ms
+ GET /brands/muzisystem.svg 404 in 420ms
+ GET /brands/muzitools.svg 404 in 427ms
+ GET /favicon-32x32.png 404 in 165ms
+ GET /favicon-16x16.png 404 in 133ms
+ GET / 200 in 272ms
