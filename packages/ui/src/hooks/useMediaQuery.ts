@@ -17,9 +17,8 @@ export function useMediaQuery(query: string): boolean {
       setMatches(event.matches);
     };
 
-    // Sync with current state
-    setMatches(mediaQuery.matches);
-
+    // Initial state is already set in useState, no need to sync here
+    // Only listen for changes
     mediaQuery.addEventListener("change", handler);
     return () => mediaQuery.removeEventListener("change", handler);
   }, [query]);
