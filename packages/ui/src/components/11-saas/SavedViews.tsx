@@ -58,7 +58,6 @@ export const SavedViews = React.forwardRef<HTMLDivElement, SavedViewsProps>(
     };
 
     const hasActiveFilters = Object.keys(currentFilters).length > 0;
-    const currentViewData = views.find((v) => v.id === currentView);
 
     return (
       <div

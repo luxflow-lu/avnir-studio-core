@@ -25,7 +25,7 @@ export interface PricingTableProps extends React.HTMLAttributes<HTMLDivElement> 
 }
 
 export const PricingTable = React.forwardRef<HTMLDivElement, PricingTableProps>(
-  ({ className, plans, annual = false, ...props }, ref) => (
+  ({ className, plans, annual: _annual = false, ...props }, ref) => (
     <div
       ref={ref}
       className={cx("pricing-table", className)} {...props}

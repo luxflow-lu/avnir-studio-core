@@ -125,7 +125,7 @@ export const AssetTile = React.forwardRef<HTMLDivElement, AssetTileProps>(
   (
     {
       className,
-      id: _id,
+      
       name,
       type,
       status,
