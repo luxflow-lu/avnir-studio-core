@@ -64,7 +64,7 @@
 }
 
 .hero-title {
-  font-size: clamp(var(--text-h1), 8vw, var(--text-display-md));
+  font-size: clamp(var(--text-h1), 8vw, var(--text-display-sm));
   line-height: var(--leading-none);
   font-weight: var(--font-bold);
   color: var(--titles);
