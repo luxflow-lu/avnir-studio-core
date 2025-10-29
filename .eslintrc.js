@@ -5,6 +5,11 @@ module.exports = {
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['@typescript-eslint', 'import', 'react'],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   env: {
     node: true,
     browser: true,

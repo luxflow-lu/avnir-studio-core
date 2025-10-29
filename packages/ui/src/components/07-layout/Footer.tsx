@@ -42,16 +42,19 @@ const Text: React.FC<React.HTMLAttributes<HTMLParagraphElement>> = ({ className,
   </p>
 );
 
+// eslint-disable-next-line react/prop-types
 const Form: React.FC<React.FormHTMLAttributes<HTMLFormElement>> = ({ className, children, ...props }) => (
   <form className={cx("footer-newsletter-form", className)} {...props}>
     {children}
   </form>
 );
 
+// eslint-disable-next-line react/prop-types
 const Input: React.FC<React.InputHTMLAttributes<HTMLInputElement>> = ({ className, ...props }) => (
   <input className={cx("footer-newsletter-input", className)} {...props} />
 );
 
+// eslint-disable-next-line react/prop-types
 const Button: React.FC<React.ButtonHTMLAttributes<HTMLButtonElement>> = ({ className, children, ...props }) => (
   <UIButton variant="solid" className={cx("footer-newsletter-button", className)} {...props}>
     {children}
