@@ -34,7 +34,7 @@ export const List = React.forwardRef<HTMLUListElement, ListProps>(
 
     return (
       <Component
-        ref={ref as any}
+        ref={ref as React.Ref<HTMLUListElement | HTMLOListElement>}
         className={cx(listVariants({ variant, size }), className)}
         {...props}
       >

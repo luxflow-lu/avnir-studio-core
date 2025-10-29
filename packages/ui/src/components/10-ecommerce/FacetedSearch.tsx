@@ -13,19 +13,19 @@ export interface SearchFilter {
   options?: { value: string; label: string; count?: number }[];
   min?: number;
   max?: number;
-  value?: any;
+  value?: string | number | boolean;
 }
 
 export interface ActiveFilter {
   filterId: string;
-  value: any;
+  value: string | number | boolean;
   label: string;
 }
 
 export interface FacetedSearchProps extends React.HTMLAttributes<HTMLDivElement> {
   filters: SearchFilter[];
   activeFilters: ActiveFilter[];
-  onFilterChange: (filterId: string, value: any) => void;
+  onFilterChange: (filterId: string, value: string | number | boolean) => void;
   onClearFilter: (filterId: string) => void;
   onClearAll: () => void;
   searchQuery?: string;

@@ -9,7 +9,7 @@ export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export const Box = React.forwardRef<HTMLDivElement, BoxProps>(
   ({ className, as: Component = "div", children, ...props }, ref) => {
-    const Element = Component as any;
+    const Element = Component as React.ElementType;
     
     return (
       <Element

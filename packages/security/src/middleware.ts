@@ -27,11 +27,15 @@ export const securityHeaders: SecurityHeaders = {
 /**
  * Rate limiting middleware factory
  */
+type Request = { ip?: string; connection?: { remoteAddress?: string } };
+type Response = { status: (code: number) => Response; json: (data: unknown) => void };
+type NextFunction = () => void;
+
 export function rateLimitMiddleware(config: { windowMs: number; max: number }) {
   const attempts = new Map<string, { count: number; resetTime: number }>();
   
-  return (req: any, res: any, next: any) => {
-    const key = req.ip || req.connection.remoteAddress || 'unknown';
+  return (req: Request, res: Response, next: NextFunction) => {
+    const key = req.ip || req.connection?.remoteAddress || 'unknown';
     const now = Date.now();
     const record = attempts.get(key);
     

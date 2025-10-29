@@ -9,7 +9,7 @@ import { Modal } from "../06-overlay/Modal";
 export interface SavedView {
   id: string;
   name: string;
-  filters: Record<string, any>;
+  filters: Record<string, unknown>;
   isDefault?: boolean;
   createdAt: Date;
   updatedAt: Date;
@@ -19,10 +19,10 @@ export interface SavedViewsProps extends React.HTMLAttributes<HTMLDivElement> {
   views: SavedView[];
   currentView?: string;
   onSelectView?: (viewId: string) => void;
-  onSaveView?: (name: string, filters: Record<string, any>) => Promise<void>;
+  onSaveView?: (name: string, filters: Record<string, unknown>) => Promise<void>;
   onDeleteView?: (viewId: string) => Promise<void>;
   onSetDefault?: (viewId: string) => Promise<void>;
-  currentFilters?: Record<string, any>;
+  currentFilters?: Record<string, unknown>;
 }
 
 export const SavedViews = React.forwardRef<HTMLDivElement, SavedViewsProps>(

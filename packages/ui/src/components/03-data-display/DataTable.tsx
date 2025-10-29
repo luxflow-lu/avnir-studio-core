@@ -16,7 +16,7 @@ export interface DataTableProps<T> extends React.HTMLAttributes<HTMLDivElement> 
   onSort?: (key: string, direction: "asc" | "desc") => void;
 }
 
-export const DataTable = <T extends Record<string, any>>({
+export const DataTable = <T extends Record<string, unknown>>({
   className,
   columns,
   data,

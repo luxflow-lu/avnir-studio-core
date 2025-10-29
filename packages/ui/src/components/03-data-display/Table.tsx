@@ -2,14 +2,14 @@ import * as React from "react";
 
 import { cx } from "../../utils/cx";
 
-export interface Column<T = any> {
+export interface Column<T = unknown> {
   key: string;
   title: string;
   sortable?: boolean;
-  render?: (value: any, row: T) => React.ReactNode;
+  render?: (value: unknown, row: T) => React.ReactNode;
 }
 
-export interface TableProps<T = any> extends React.HTMLAttributes<HTMLDivElement> {
+export interface TableProps<T = unknown> extends React.HTMLAttributes<HTMLDivElement> {
   columns: Column<T>[];
   data: T[];
   sortBy?: string;

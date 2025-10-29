@@ -50,7 +50,7 @@ export const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
 
     return (
       <Component
-        ref={ref as any}
+        ref={ref as React.Ref<HTMLHeadingElement>}
         className={cx(headingVariants({ level, variant, align, spacing }), className)}
         {...props}
       >
