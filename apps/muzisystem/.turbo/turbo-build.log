@@ -5,4 +5,144 @@
    ▲ Next.js 15.5.6
 
    Creating an optimized production build ...
- ELIFECYCLE  Command failed with exit code 130.
+
+warn - Your `content` configuration includes a pattern which looks like it's accidentally matching all of `node_modules` and can cause serious performance issues.
+warn - Pattern: `../../packages/ui/**/*.tsx`
+warn - See our documentation for recommendations:
+warn - https://tailwindcss.com/docs/content-configuration#pattern-recommendations
+ ✓ Compiled successfully in 10.5s
+   Linting and checking validity of types ...
+
+ ⚠ The Next.js plugin was not detected in your ESLint configuration. See https://nextjs.org/docs/app/api-reference/config/eslint#migrating-existing-config
+
+./app/(docs)/layout.tsx
+10:13  Warning: 'React' is not defined.  no-undef
+
+./app/(marketing)/layout.tsx
+4:13  Warning: 'React' is not defined.  no-undef
+
+./app/(marketing)/page.tsx
+4:56  Warning: 'Primitives' is defined but never used.  no-unused-vars
+4:56  Warning: 'Primitives' is defined but never used.  @typescript-eslint/no-unused-vars
+
+./app/components/ai/page.tsx
+135:36  Warning: Unexpected console statement.  no-console
+
+./app/components/auth/page.tsx
+134:15  Warning: Unexpected console statement.  no-console
+136:37  Warning: Unexpected console statement.  no-console
+137:29  Warning: Unexpected console statement.  no-console
+150:15  Warning: Unexpected console statement.  no-console
+152:29  Warning: Unexpected console statement.  no-console
+215:15  Warning: Unexpected console statement.  no-console
+218:15  Warning: Unexpected console statement.  no-console
+
+./app/components/ecommerce/page.tsx
+162:32  Warning: Unexpected console statement.  no-console
+
+./app/components/feedback/page.tsx
+222:57  Warning: Unexpected console statement.  no-console
+
+./app/components/form/page.tsx
+383:35  Warning: Unexpected console statement.  no-console
+486:37  Warning: Unexpected console statement.  no-console
+
+./app/components/marketing/page.tsx
+310:34  Warning: Unexpected console statement.  no-console
+
+./app/components/media/page.tsx
+139:29  Warning: Unexpected console statement.  no-console
+140:33  Warning: Unexpected console statement.  no-console
+141:31  Warning: Unexpected console statement.  no-console
+152:29  Warning: Unexpected console statement.  no-console
+162:33  Warning: Unexpected console statement.  no-console
+163:31  Warning: Unexpected console statement.  no-console
+
+./app/components/navigation/page.tsx
+116:10  Warning: 'activeTab' is assigned a value but never used.  no-unused-vars
+116:10  Warning: 'activeTab' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+259:77  Warning: Unexpected console statement.  no-console
+260:81  Warning: Unexpected console statement.  no-console
+261:77  Warning: Unexpected console statement.  no-console
+
+./app/components/overlay/page.tsx
+117:10  Warning: 'isToastVisible' is assigned a value but never used.  no-unused-vars
+117:10  Warning: 'isToastVisible' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+
+./app/components/page.tsx
+25:9  Warning: 'totalComponents' is assigned a value but never used.  no-unused-vars
+25:9  Warning: 'totalComponents' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+26:9  Warning: 'readyCategories' is assigned a value but never used.  no-unused-vars
+26:9  Warning: 'readyCategories' is assigned a value but never used.  @typescript-eslint/no-unused-vars
+
+./app/components/saas/page.tsx
+178:61  Warning: Unexpected console statement.  no-console
+187:61  Warning: Unexpected console statement.  no-console
+220:35  Warning: Unexpected console statement.  no-console
+269:38  Warning: Unexpected console statement.  no-console
+314:35  Warning: Unexpected console statement.  no-console
+315:36  Warning: Unexpected console statement.  no-console
+
+./app/error.tsx
+15:5  Warning: Unexpected console statement.  no-console
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/43) ...
+   Generating static pages (10/43) 
+   Generating static pages (21/43) 
+   Generating static pages (32/43) 
+ ✓ Generating static pages (43/43)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                                 Size  First Load JS
+┌ ○ /                                    5.06 kB         110 kB
+├ ○ /_not-found                            139 B         102 kB
+├ ○ /components                           3.3 kB         105 kB
+├ ○ /components/ai                       4.84 kB         107 kB
+├ ○ /components/auth                     6.99 kB         109 kB
+├ ○ /components/content                  3.22 kB         105 kB
+├ ○ /components/data-display             8.96 kB         111 kB
+├ ○ /components/ecommerce                6.47 kB         108 kB
+├ ○ /components/feedback                 6.36 kB         108 kB
+├ ○ /components/form                      7.2 kB         109 kB
+├ ○ /components/layout                   6.45 kB         108 kB
+├ ○ /components/marketing                4.66 kB         109 kB
+├ ○ /components/media                    3.67 kB         106 kB
+├ ○ /components/navigation               5.02 kB         107 kB
+├ ○ /components/overlay                  4.46 kB         106 kB
+├ ○ /components/primitives               7.66 kB         110 kB
+├ ○ /components/saas                     7.01 kB         109 kB
+├ ○ /components/system                   5.22 kB         107 kB
+├ ○ /foundations                         2.94 kB         105 kB
+├ ○ /foundations/breakpoints             3.29 kB         105 kB
+├ ○ /foundations/colors                  3.34 kB         105 kB
+├ ○ /foundations/shadows                 2.88 kB         105 kB
+├ ○ /foundations/spacing                 2.87 kB         105 kB
+├ ○ /foundations/tokens                  2.95 kB         105 kB
+├ ○ /foundations/typography              3.65 kB         106 kB
+├ ○ /guidelines                          2.12 kB         104 kB
+├ ○ /guidelines/accessibility            3.25 kB         105 kB
+├ ○ /guidelines/responsive               3.24 kB         105 kB
+├ ○ /guidelines/writing                  3.59 kB         105 kB
+├ ○ /legal/licenses                      3.47 kB         105 kB
+├ ○ /legal/privacy                       2.64 kB         104 kB
+├ ○ /legal/terms                         3.32 kB         105 kB
+├ ○ /overview                             2.6 kB         104 kB
+├ ○ /overview/architecture               3.16 kB         105 kB
+├ ○ /overview/intro                      3.25 kB         105 kB
+├ ○ /overview/principles                 3.31 kB         105 kB
+├ ○ /patterns                            2.02 kB         104 kB
+├ ○ /patterns/authentication             4.37 kB         106 kB
+├ ○ /patterns/upload                     4.35 kB         106 kB
+├ ○ /robots.txt                            139 B         102 kB
+└ ○ /sitemap.xml                           139 B         102 kB
++ First Load JS shared by all             102 kB
+  ├ chunks/2982-6dcb4271dfc78a15.js      45.7 kB
+  ├ chunks/b98a28df-15d402e47d59fbda.js  54.2 kB
+  └ other shared chunks (total)          1.96 kB
+
+
+○  (Static)  prerendered as static content
+

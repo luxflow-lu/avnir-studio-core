@@ -9,9 +9,12 @@ export interface ThemeToggleProps extends React.HTMLAttributes<HTMLDivElement> {
 
 export const ThemeToggle = React.forwardRef<HTMLDivElement, ThemeToggleProps>(
   ({ className, ...props }, ref) => {
-    const [currentTheme, setCurrentTheme] = React.useState("dark");
+    // Read theme from HTML - no hardcoded default
+    const [currentTheme, setCurrentTheme] = React.useState<string>("");
 
     React.useEffect(() => {
+      if (typeof window === "undefined") return;
+      
       // Read from localStorage or HTML
       const savedTheme = localStorage.getItem("theme");
       const html = document.documentElement;
@@ -27,6 +30,9 @@ export const ThemeToggle = React.forwardRef<HTMLDivElement, ThemeToggleProps>(
       localStorage.setItem("theme", newTheme);
       setCurrentTheme(newTheme);
     };
+
+    // Don't render until theme is loaded
+    if (!currentTheme) return null;
 
     return (
       <div ref={ref} className={cx("flex gap-4", className)} {...props}>

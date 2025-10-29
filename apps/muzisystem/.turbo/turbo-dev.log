@@ -554,3 +554,86 @@ Require stack:
 [TypeError: Cannot read properties of undefined (reading '/_app')]
  GET /brands/avnir.svg 500 in 6713ms
  GET /brands/avnir.svg 500 in 690ms
+ GET /brands/muzidev.svg 500 in 6705ms
+ GET /brands/muzidev.svg 500 in 690ms
+ GET /brands/muzipics.svg 500 in 6595ms
+ GET /brands/muzipics.svg 500 in 691ms
+ GET /brands/muziweb.svg 500 in 6586ms
+ GET /brands/muziweb.svg 500 in 691ms
+ GET /brands/muzitools.svg 500 in 6526ms
+ GET /brands/muzitools.svg 500 in 694ms
+ GET /brands/muzisystem.svg 500 in 6525ms
+ GET /brands/muzisystem.svg 500 in 693ms
+ GET /favicon-32x32.png 404 in 670ms
+ GET /favicon-16x16.png 404 in 101ms
+ ✓ Compiled in 5.8s (652 modules)
+ ✓ Compiled in 7.6s (1355 modules)
+ ✓ Compiled in 2.1s (852 modules)
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ✓ Compiled in 1161ms (852 modules)
+ ✓ Compiled in 6.2s (1504 modules)
+ ✓ Compiled in 1211ms (1504 modules)
+ ⨯ ../../packages/icons/dist/index.js
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/icons/dist/index.js
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+../../packages/icons/dist/index.js
+../../packages/ui/src/index.ts
+./app/providers.tsx
+ ✓ Compiled in 2.8s (1355 modules)
+ ✓ Compiled in 472ms (852 modules)
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
