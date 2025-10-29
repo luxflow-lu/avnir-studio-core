@@ -18,15 +18,18 @@ export interface BrandSelectorProps extends React.HTMLAttributes<HTMLDivElement>
 
 export const BrandSelector = React.forwardRef<HTMLDivElement, BrandSelectorProps>(
   ({ className, ...props }, ref) => {
-    const [currentBrand, setCurrentBrand] = React.useState("avnir-studio");
+    const [currentBrand, setCurrentBrand] = React.useState("muzisystem");
 
     React.useEffect(() => {
       // Always reset to muzisystem on page load
       const html = document.documentElement;
       const defaultBrand = "muzisystem";
       
+      // Only update if different from default
+      if (html.getAttribute("data-brand") !== defaultBrand) {
+        html.setAttribute("data-brand", defaultBrand);
+      }
       setCurrentBrand(defaultBrand);
-      html.setAttribute("data-brand", defaultBrand);
     }, []);
 
     const updateBrand = (brand: string) => {

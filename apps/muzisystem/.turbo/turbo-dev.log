@@ -391,17 +391,28 @@ warn - https://tailwindcss.com/docs/content-configuration#pattern-recommendation
  GET /components/primitives 200 in 614ms
  ○ Compiling /_not-found ...
  ✓ Compiled /_not-found in 1276ms (571 modules)
-le or directory, open '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'] {
-  errno: -2,
-  syscall: 'open',
-  code: 'ENOENT',
-  path: '/Users/maximezaoui/Desktop/repo/avnir-studio-core/apps/muzisystem/.next/routes-manifest.json'
-}
- ✓ Compiled in 5.8s (1469 modules)
- ✓ Compiled in 817ms (600 modules)
- ✓ Compiled in 2.8s (1320 modules)
- ✓ Compiled in 741ms (869 modules)
- ✓ Compiled in 667ms (869 modules)
+ GET /favicon-32x32.png 404 in 3056ms
+ GET /manifest.json 404 in 3104ms
+ GET /components/primitives 200 in 1841ms
+ GET /favicon-16x16.png 404 in 502ms
+ GET /manifest.json 404 in 407ms
+ ✓ Compiled in 4.6s (1292 modules)
+ GET /components/primitives 200 in 495ms
+ GET /manifest.json 404 in 433ms
+ ✓ Compiled in 4s (1292 modules)
+ GET /components/primitives 200 in 3697ms
+ GET /components/primitives 200 in 200ms
+ GET /manifest.json 404 in 284ms
+ ✓ Compiled in 9.3s (1289 modules)
+ GET /components/primitives 200 in 422ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 862ms (571 modules)
+ GET /icon-192x192.png 404 in 1774ms
+ ✓ Compiled in 1569ms (571 modules)
+ ✓ Compiled in 6.8s (1143 modules)
+ ✓ Compiled in 1595ms (721 modules)
+ GET /components/primitives 200 in 714ms
+ GET /icon-192x192.png 404 in 392ms
  ⨯ ./app/globals.css
 Module not found: Can't resolve '@avnir/ui/styles.css'
 
@@ -423,4 +434,5 @@ https://nextjs.org/docs/messages/module-not-found
 
 Import trace for requested module:
 ./app/globals.css
- ✓ Compiled in 1550ms (869 modules)
+ ✓ Compiled in 3.2s (721 modules)
+ GET /components/primitives 200 in 637ms
