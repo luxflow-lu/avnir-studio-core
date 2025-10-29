@@ -52,3 +52,63 @@ warn - https://tailwindcss.com/docs/content-configuration#pattern-recommendation
  GET /brands/muzipics.svg 404 in 964ms
  GET /brands/muzisystem.svg 404 in 281ms
  GET /brands/muzitools.svg 404 in 284ms
+ GET / 200 in 1055ms
+ GET /brands/muzipics.svg 404 in 731ms
+ GET /brands/muzidev.svg 404 in 750ms
+ GET /brands/avnir.svg 404 in 752ms
+ GET /brands/muziweb.svg 404 in 736ms
+ GET /brands/muzitools.svg 404 in 341ms
+ GET /brands/muzisystem.svg 404 in 339ms
+ GET /favicon-32x32.png 404 in 77ms
+ GET /favicon-16x16.png 404 in 210ms
+ ✓ Compiled in 1760ms (556 modules)
+ ✓ Compiled in 4.4s (1108 modules)
+ GET / 200 in 1149ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 801ms (557 modules)
+ GET /brands/muzisystem.svg 404 in 1960ms
+ GET /brands/muzitools.svg 404 in 1968ms
+ GET /brands/muziweb.svg 404 in 2146ms
+ GET /brands/muzipics.svg 404 in 2153ms
+ GET /brands/muzidev.svg 404 in 2159ms
+ GET /brands/avnir.svg 404 in 2168ms
+ GET /favicon-32x32.png 404 in 111ms
+ GET /favicon-16x16.png 404 in 99ms
+ ○ Compiling /overview ...
+ ✓ Compiled /overview in 1244ms (562 modules)
+ GET /overview 200 in 2092ms
+ GET /brands/muzidev.svg 404 in 463ms
+ GET /brands/avnir.svg 404 in 468ms
+ GET / 200 in 966ms
+ GET /brands/muzipics.svg 404 in 445ms
+ GET /brands/muziweb.svg 404 in 443ms
+ GET /brands/muzisystem.svg 404 in 448ms
+ GET /brands/muzitools.svg 404 in 462ms
+ ✓ Compiled in 8.5s (1257 modules)
+ GET / 200 in 927ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 648ms (557 modules)
+ GET /icon-192x192.png 404 in 1230ms
+ ✓ Compiled in 1732ms (1258 modules)
+ GET / 200 in 664ms
+ GET /icon-192x192.png 404 in 645ms
+ ✓ Compiled in 1227ms (557 modules)
+ ✓ Compiled in 2.6s (1109 modules)
+ ✓ Compiled in 622ms (701 modules)
+ GET / 200 in 369ms
+ GET /icon-192x192.png 404 in 483ms
+ ✓ Compiled in 943ms (701 modules)
+ GET / 200 in 329ms
+ GET /icon-192x192.png 404 in 83ms
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+
+Import trace for requested module:
+./app/globals.css
+ ⨯ ./app/globals.css
+Module not found: Can't resolve '@avnir/ui/styles.css'
+
+https://nextjs.org/docs/messages/module-not-found
+

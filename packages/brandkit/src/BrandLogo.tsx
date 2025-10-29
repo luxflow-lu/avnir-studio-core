@@ -21,13 +21,9 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
   className = "",
   size = "md",
 }) => {
-  // Get initial brand from HTML or default to muzisystem
-  const initialBrand = typeof document !== 'undefined' 
-    ? document.documentElement.getAttribute("data-brand") || "muzisystem"
-    : "muzisystem";
-  
-  const [brand, setBrand] = React.useState(initialBrand);
-  const [theme, setTheme] = React.useState("dark");
+  // Read brand from HTML - no hardcoded default
+  const [brand, setBrand] = React.useState<string>("");
+  const [theme, setTheme] = React.useState<string>("dark");
 
   React.useEffect(() => {
     if (typeof document === "undefined") return;
@@ -60,6 +56,9 @@ export const BrandLogo: React.FC<BrandLogoProps> = ({
 
     return () => observer.disconnect();
   }, []);
+
+  // Don't render until brand is loaded
+  if (!brand) return null;
 
   // Determine contrast based on theme if auto
   const effectiveContrast = contrast === "auto" ? (theme === "light" ? "dark" : "light") : contrast;
