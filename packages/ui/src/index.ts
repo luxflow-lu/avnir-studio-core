@@ -77,6 +77,6 @@ export * from "./utils";
 // ============================================
 // EXTERNAL PACKAGES
 // ============================================
-
-export * from "@avnir/icons";
-export * from "@avnir/brandkit";
+// Note: @avnir/icons and @avnir/brandkit should be imported directly by apps
+// export * from "@avnir/icons";
+// export * from "@avnir/brandkit";

@@ -66,7 +66,7 @@ export const DataTable = <T extends Record<string, unknown>>({
             <tr key={rowIndex} className="data-table-row">
               {columns.map((column) => (
                 <td key={column.key} className="data-table-cell">
-                  {column.render ? column.render(row) : row[column.key]}
+                  {column.render ? column.render(row) : String(row[column.key] ?? '')}
                 </td>
               ))}
             </tr>

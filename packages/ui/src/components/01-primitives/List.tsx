@@ -34,7 +34,8 @@ export const List = React.forwardRef<HTMLUListElement, ListProps>(
 
     return (
       <Component
-        ref={ref as React.Ref<HTMLUListElement | HTMLOListElement>}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        ref={ref as any}
         className={cx(listVariants({ variant, size }), className)}
         {...props}
       >

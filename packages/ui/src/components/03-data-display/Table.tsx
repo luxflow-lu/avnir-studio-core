@@ -91,7 +91,7 @@ export const Table = React.forwardRef<HTMLDivElement, TableProps>(
                   <tr key={index} className="hover:bg-muted">
                     {columns.map((column) => (
                       <td key={column.key} className="px-4 py-3 text-sm text-foreground">
-                        {column.render ? column.render(row[column.key], row) : row[column.key]}
+                        {column.render ? column.render((row as Record<string, unknown>)[column.key], row) : String((row as Record<string, unknown>)[column.key])}
                       </td>
                     ))}
                   </tr>

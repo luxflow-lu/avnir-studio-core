@@ -69,7 +69,8 @@ export const Text = React.forwardRef<HTMLElement, TextProps>(
 
     return (
       <Component
-        ref={ref as React.Ref<HTMLElement>}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        ref={ref as any}
         className={cx(textVariants({ size, variant, weight, align, transform, truncate }), className)}
         {...props}
       >
