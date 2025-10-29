@@ -10,9 +10,20 @@ interface ComponentSectionProps {
   description: string;
   variants?: string[];
   preview: React.ReactNode;
+  status?: 'stable' | 'beta' | 'deprecated';
+  browsers?: string[];
+  a11y?: 'AA' | 'AAA';
 }
 
-function ComponentSection({ name, category, description, variants, preview }: ComponentSectionProps) {
+function ComponentSection({ name, category, description, variants, preview, status = 'stable', browsers = ['all'], a11y = 'AA' }: ComponentSectionProps) {
+  const statusConfig = {
+    stable: { label: 'Stable', color: 'var(--success)', emoji: '✅' },
+    beta: { label: 'Beta', color: 'var(--warning)', emoji: '🧪' },
+    deprecated: { label: 'Deprecated', color: 'var(--error)', emoji: '⚠️' }
+  };
+
+  const currentStatus = statusConfig[status];
+
   return (
     <section className="section">
       <div className="container">
@@ -52,6 +63,32 @@ function ComponentSection({ name, category, description, variants, preview }: Co
                 </div>
               </div>
             )}
+            
+            {/* Status Badges */}
+            <div style={{ marginBottom: 'var(--margin-lg)' }}>
+              <p className="text-small" style={{ color: 'var(--muted)', marginBottom: 'var(--margin-sm)', fontWeight: 'var(--font-medium)' }}>
+                Status
+              </p>
+              <div style={{ display: 'flex', gap: 'var(--gap-sm)', flexWrap: 'wrap', alignItems: 'center' }}>
+                <Badge style={{ backgroundColor: currentStatus.color, color: '#0b0b0d' }}>
+                  {currentStatus.emoji} {currentStatus.label}
+                </Badge>
+                
+                {browsers.includes('all') ? (
+                  <Badge variant="default">
+                    🌐 All Browsers
+                  </Badge>
+                ) : (
+                  <Badge variant="default">
+                    🌐 {browsers.join(', ')}
+                  </Badge>
+                )}
+                
+                <Badge variant="default">
+                  ♿ WCAG 2.1 {a11y}
+                </Badge>
+              </div>
+            </div>
             
             <Button variant="outline" size="lg">
               View Full Documentation →
