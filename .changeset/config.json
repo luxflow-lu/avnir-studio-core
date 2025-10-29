@@ -14,5 +14,5 @@
   "___experimentalUnsafeOptions_WILL_CHANGE_IN_PATCH": {
     "onlyUpdatePeerDependentsWhenOutOfRange": true
   },
-  "ignore": ["muzisystem", "avnir-studio", "muzidev", "muzipics", "@avnir/docs", "@avnir/ladle"]
+  "ignore": ["muzisystem", "avnir-studio", "muzidev", "muzipics", "muziweb", "muzimerch", "muzibase", "muzimanager", "muzitools", "@avnir/docs"]
 }
