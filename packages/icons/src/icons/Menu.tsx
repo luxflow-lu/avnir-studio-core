@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import type { IconProps } from "./ChevronRight";
 
 export const Menu: React.FC<IconProps> = ({ size = 24, ...props }) => (

@@ -2,7 +2,6 @@ import * as React from "react";
 
 import { cx } from "../../utils/cx";
 import { Button } from "../02-form/Button";
-import { Badge } from "../03-data-display/Badge";
 
 export interface PricingPlan {
   id: string;
@@ -25,7 +24,7 @@ export interface PricingTableProps extends React.HTMLAttributes<HTMLDivElement> 
 }
 
 export const PricingTable = React.forwardRef<HTMLDivElement, PricingTableProps>(
-  ({ className, plans, annual: _annual = false, ...props }, ref) => (
+  ({ className, plans, ...props }, ref) => (
     <div
       ref={ref}
       className={cx("pricing-table", className)} {...props}

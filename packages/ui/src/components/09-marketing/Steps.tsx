@@ -12,7 +12,7 @@ export type StepsProps = {
 } & React.HTMLAttributes<HTMLElement>;
 
 export const Steps = React.forwardRef<HTMLElement, StepsProps>(
-  ({ title, subtitle, items, direction: _direction = "horizontal", className, ...props }, ref) => {
+  ({ title, subtitle, items, className, ...props }, ref) => {
     return (
       <section
         ref={ref}

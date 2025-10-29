@@ -1,6 +1,7 @@
+import crypto from 'crypto';
+
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
-import crypto from 'crypto';
 
 /**
  * AUTHENTICATION UTILITIES - SECURITY FIRST

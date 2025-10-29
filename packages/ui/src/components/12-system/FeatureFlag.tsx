@@ -8,7 +8,6 @@ export interface FeatureFlagProps {
 }
 
 export const FeatureFlag: React.FC<FeatureFlagProps> = ({
-  flag: _flag,
   enabled = false,
   children,
   fallback = null,

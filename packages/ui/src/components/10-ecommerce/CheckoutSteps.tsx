@@ -18,7 +18,7 @@ export interface CheckoutStepsProps extends React.HTMLAttributes<HTMLDivElement>
 }
 
 export const CheckoutSteps = React.forwardRef<HTMLDivElement, CheckoutStepsProps>(
-  ({ className, steps, onStepClick, orientation = "horizontal", ...props }, ref) => {
+  ({ className, steps, onStepClick, ...props }, ref) => {
     return (
       <div ref={ref} className={cx("checkout-steps", className)} {...props}>
         {steps.map((step, index) => (

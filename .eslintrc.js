@@ -25,8 +25,9 @@ module.exports = {
     'no-empty': 'warn',
     'no-redeclare': 'warn',
     '@typescript-eslint/no-empty-object-type': 'error', // Re-enabled: no empty interfaces
-    'react/prop-types': 'off', // Not needed with TypeScript
+    'react/prop-types': 'off', // Not needed with TypeScript (we use TypeScript interfaces)
     'react/no-unescaped-entities': 'error', // Enforce escaped quotes
+    'react/display-name': 'off', // Not needed with forwardRef displayName pattern
     
     // ZERO TOLERANCE - Imports
     'import/order': ['error', {
