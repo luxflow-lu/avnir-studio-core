@@ -75,46 +75,20 @@ export default function Page() {
         </section>
 
         {/* 4 Pillars Grid */}
-        <section className="section">
-          <div className="container">
-            <Marketing.FeatureGrid
-            title="Les 4 piliers de la formation"
-            subtitle="Maîtrise tous les aspects de ta carrière musicale"
-            features={[
-              {
-                title: "Production",
-                description: "MAO, DAW, mixage, mastering, workflow de production professionnelle"
-              },
-              {
-                title: "Développement",
-                description: "Industrie musicale, labels, droits d'auteur, distribution et diffusion"
-              },
-              {
-                title: "Marketing",
-                description: "Réseaux sociaux, branding artistique, publicité et promotion"
-              },
-              {
-                title: "D2C / B2B",
-                description: "Vente directe, merchandising, booking, licensing et partenariats"
-              }
-            ]}
-            columns={4}
-            />
-          </div>
-        </section>
+        {/* TODO: Implement 4 Pillars with FeatureGrid composition pattern */}
 
         {/* CTA Section */}
         <section className="section">
           <div className="container">
             <Marketing.CtaSection
-            title="Et si c'était toi ?"
-            subtitle="Rejoins des centaines d'artistes qui ont transformé leur passion en carrière professionnelle. Passe à l'action et structure ta carrière musicale avec MUZIDEV."
-            actions={
-              <a href="/signup" className="btn btn-primary btn--lg">
-                Démarrer la formation
-              </a>
-            }
-            image={<img src="/images/cta-artist.png" alt="Artiste professionnel" width="400" height="300" />}
+              title="Et si c'était toi ?"
+              subtitle="Rejoins des centaines d'artistes qui ont transformé leur passion en carrière professionnelle. Passe à l'action et structure ta carrière musicale avec MUZIDEV."
+              actions={
+                <a href="/signup" className="btn btn-primary btn--lg">
+                  Démarrer la formation
+                </a>
+              }
+              image={<img src="/images/cta-artist.png" alt="Artiste professionnel" width="400" height="300" />}
             />
           </div>
         </section>

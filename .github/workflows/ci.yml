@@ -18,6 +18,13 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Build packages
+        run: |
+          pnpm -w run build:tokens
+          pnpm -w run build:design
+          pnpm -w run build:brandkit
+          pnpm -w run build:ui
+
       - name: Type check
         run: pnpm typecheck
 
@@ -27,7 +34,7 @@ jobs:
       - name: Test
         run: pnpm test
 
-      - name: Build
+      - name: Build apps
         run: pnpm -w build
 
   ladle-preview:
