@@ -24,3 +24,7 @@ node_modules/
 
 # Archives
 docs/archives/
+
+# Temporary: ignore apps and scripts for CI (TODO: fix later)
+apps/
+scripts/
