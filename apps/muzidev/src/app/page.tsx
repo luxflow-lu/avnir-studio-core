@@ -77,10 +77,10 @@ export default function Page() {
         {/* 4 Pillars Grid */}
         <section className="section">
           <div className="container">
-            <Marketing.Features
+            <Marketing.FeatureGrid
             title="Les 4 piliers de la formation"
             subtitle="Maîtrise tous les aspects de ta carrière musicale"
-            items={[
+            features={[
               {
                 title: "Production",
                 description: "MAO, DAW, mixage, mastering, workflow de production professionnelle"
@@ -254,9 +254,12 @@ export default function Page() {
         {/* AVNIR Studio CTA */}
         <section className="section">
           <div className="container">
+            <Layout.SectionHeader
+              title="L'application des artistes 2.0"
+              subtitle="Découvre AVNIR-Studio, notre écosystème d'outils et services pour accélérer ta croissance artistique et professionnelle."
+              align="center"
+            />
             <Marketing.LogoCloud
-            title="L'application des artistes 2.0"
-            subtitle="Découvre AVNIR-Studio, notre écosystème d'outils et services pour accélérer ta croissance artistique et professionnelle."
             logos={[
               { src: "/logos/jacques.svg", alt: "Jacques" },
               { src: "/logos/avnir-studio.svg", alt: "AVNIR-Studio" },
@@ -287,56 +290,11 @@ export default function Page() {
       </main>
 
       {/* Footer */}
-      <Layout.Footer
-        sections={[
-          {
-            title: "Explorer",
-            links: [
-              { label: "Accueil", href: "/" },
-              { label: "Formation", href: "/formation" },
-              { label: "Tarifs", href: "/pricing" },
-              { label: "FAQ", href: "/faq" },
-              { label: "Contact", href: "/contact" }
-            ]
-          },
-          {
-            title: "Services",
-            links: [
-              { label: "MUZIDEV", href: "/" },
-              { label: "MUZIPICS", href: "#" },
-              { label: "MUZIMERCH", href: "#" },
-              { label: "MUZIWEB", href: "#" },
-              { label: "MUZIBASE", href: "#" },
-              { label: "MUZIMANAGER", href: "#" }
-            ]
-          },
-          {
-            title: "Société",
-            links: [
-              { label: "AVNIR-Studio", href: "https://avnir.studio" },
-              { label: "Jacques", href: "https://jacques.lu" },
-              { label: "Mentions légales", href: "/legal" },
-              { label: "Confidentialité", href: "/privacy" },
-              { label: "Cookies", href: "/cookies" }
-            ]
-          }
-        ]}
-        bottomContent={
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-muted-foreground">
-              © 2025 AVNIR-Studio. Tous droits réservés.
-            </p>
-            <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                Instagram
-              </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                YouTube
-              </a>
-            </div>
-          </div>
-        }
-      />
+      <Layout.Footer>
+        <Layout.Footer.Bottom>
+          <p>&copy; 2024 MUZIDEV. Tous droits réservés.</p>
+        </Layout.Footer.Bottom>
+      </Layout.Footer>
     </>
   );
 }
