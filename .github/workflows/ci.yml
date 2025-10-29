@@ -7,13 +7,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        run: corepack enable && corepack prepare pnpm@9.6.0 --activate
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: "pnpm"
-
-      - name: Setup pnpm
-        run: corepack enable && corepack prepare pnpm@9.6.0 --activate
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -37,13 +37,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Setup pnpm
+        run: corepack enable && corepack prepare pnpm@9.6.0 --activate
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: "pnpm"
-
-      - name: Setup pnpm
-        run: corepack enable && corepack prepare pnpm@9.6.0 --activate
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
