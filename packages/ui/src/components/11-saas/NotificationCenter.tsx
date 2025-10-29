@@ -3,7 +3,7 @@ import * as React from "react";
 import { cx } from "../../utils/cx";
 import { Button } from "../02-form/Button";
 
-export interface Notification {
+export interface NotificationItem {
   id: string;
   title: string;
   message: string;
@@ -13,7 +13,7 @@ export interface Notification {
 }
 
 export interface NotificationCenterProps extends React.HTMLAttributes<HTMLDivElement> {
-  notifications: Notification[];
+  notifications: NotificationItem[];
   onMarkAsRead?: (id: string) => void;
   onMarkAllAsRead?: () => void;
   onClear?: (id: string) => void;
