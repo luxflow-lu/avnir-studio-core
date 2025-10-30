@@ -62,8 +62,8 @@ export default function HomePage() {
               { alt: "MUZIDEV", src: "/brands/muzidev.svg" },
               { alt: "MUZIPICS", src: "/brands/muzipics.svg" },
               { alt: "MUZIWEB", src: "/brands/muziweb.svg" },
-              { alt: "MUZITOOLS", src: "/brands/muzitools.svg" },
-              { alt: "MUZISYSTEM", src: "/brands/muzisystem.svg" },
+              { alt: "MUZIBASE", src: "/brands/muzibase.svg" },
+              { alt: "MUZIMERCH", src: "/brands/muzimerch.svg" },
             ]}
           />
         </div>
