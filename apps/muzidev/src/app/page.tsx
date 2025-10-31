@@ -8,6 +8,7 @@ export default function Page() {
   return (
     <main>
       {/* Hero Section */}
+      <section id="accueil">
       <Marketing.Hero
         title="La formation en ligne des artistes et producteurs"
         subtitle="La formation la plus complète d'internet pour les artistes et producteurs indépendants. Apprends à maîtriser chaque étape de ta carrière musicale, de la création à la réussite."
@@ -15,20 +16,21 @@ export default function Page() {
         backgroundImage="/images/hero-muzidev-bg.jpg"
         actions={
           <>
-            <Button variant="solid" size="lg" onClick={() => window.location.href = '/signup'}>Commencer gratuitement</Button>
-            <Button variant="outline" size="lg" onClick={() => window.location.href = '/formation'}>Découvrir la formation</Button>
+            <Button variant="solid" size="lg" onClick={() => window.location.href = '/#tarifs'}>Commencer gratuitement</Button>
+            <Button variant="outline" size="lg" onClick={() => window.location.href = '/#formation'}>Découvrir la formation</Button>
           </>
         }
       />
+      </section>
 
-      {/* Program Highlight avec ContentSplit */}
-      <section className="section--xl">
+      {/* Program Highlight avec ContentSplit - Formation Section */}
+      <section id="formation" className="section--xl">
         <div className="container">
           <Marketing.ContentSplit
             title="La formation la plus complète d'internet"
             subtitle="Découvrez la première formation en ligne conçue pour vous accompagner dans toutes les étapes de votre carrière musicale. Que vous soyez rappeur, beatmaker, chanteur ou producteur, cette formation vous accompagne de la création à la vente de vos projets musicaux."
             actions={
-              <Button variant="solid" size="lg" onClick={() => window.location.href = '/formation'}>Découvrir le programme</Button>
+              <Button variant="solid" size="lg" onClick={() => window.location.href = '/#tarifs'}>Voir les tarifs</Button>
             }
             image={
               <img src="/images/formation-preview.jpg" alt="Formation MUZIDEV" />
@@ -161,13 +163,13 @@ export default function Page() {
             ))}
           </div>
           <div className="section-actions">
-            <Button variant="solid" size="lg" onClick={() => window.location.href = '/formation'}>Voir le programme complet</Button>
+            <Button variant="solid" size="lg" onClick={() => window.location.href = '/#tarifs'}>Commencer maintenant</Button>
           </div>
         </div>
       </section>
 
       {/* Pricing Section */}
-      <section className="section--xl">
+      <section id="tarifs" className="section--xl">
         <div className="container">
           <Layout.SectionHeader
             title="Des formules pensées pour tous les artistes"
@@ -243,7 +245,7 @@ export default function Page() {
       </section>
 
       {/* FAQ */}
-      <section className="section--xl">
+      <section id="faq" className="section--xl">
         <div className="container">
           <Marketing.Faq
             title="Questions fréquentes"

@@ -10,10 +10,10 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
       <Layout.Navbar
         logo={<BrandLogo size="md" />}
         links={[
-          { label: "Accueil", href: "/" },
-          { label: "Formation", href: "/formation" },
-          { label: "Tarifs", href: "/pricing" },
-          { label: "FAQ", href: "/faq" },
+          { label: "Accueil", href: "/#accueil" },
+          { label: "Formation", href: "/#formation" },
+          { label: "Tarifs", href: "/#tarifs" },
+          { label: "FAQ", href: "/#faq" },
           { label: "Contact", href: "/contact" },
         ]}
         actions={
@@ -32,10 +32,10 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         brand="muzidev"
         logo={<BrandLogo size="lg" />}
         exploreLinks={[
-          { label: "Accueil", href: "/" },
-          { label: "Formation", href: "/formation" },
-          { label: "Tarifs", href: "/pricing" },
-          { label: "FAQ", href: "/faq" },
+          { label: "Accueil", href: "/#accueil" },
+          { label: "Formation", href: "/#formation" },
+          { label: "Tarifs", href: "/#tarifs" },
+          { label: "FAQ", href: "/#faq" },
           { label: "Contact", href: "/contact" },
         ]}
         newsletterAction="mailto:contact@avnir-studio.com?subject=Inscription Newsletter MUZIDEV"
