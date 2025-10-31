@@ -47,11 +47,39 @@ const companyLinks = [
   { label: "MUZISYSTEM", href: "https://muzisystem.com", external: true },
 ];
 
-const legalLinks = [
-  { label: "Mentions légales", href: "/legal/mentions" },
-  { label: "Confidentialité", href: "/legal/privacy" },
-  { label: "Cookies", href: "/legal/cookies" },
-];
+// Legal links will be determined by site type
+// Imported from @avnir/content in the future
+function getLegalLinks(brand: string) {
+  // Map brand to site type
+  const siteTypeMap: Record<string, string> = {
+    "muzidev": "learning",
+    "muzipics": "saas",
+    "muziweb": "vitrine",
+    "muzibase": "marketplace",
+    "muzimerch": "ecommerce",
+    "muzitools": "saas",
+    "muzisystem": "vitrine",
+    "avnir-studio": "saas",
+  };
+
+  const siteType = siteTypeMap[brand] || "vitrine";
+  
+  const baseLinks = [
+    { label: "Mentions légales", href: "/legal/mentions" },
+    { label: "Confidentialité", href: "/legal/privacy" },
+    { label: "Cookies", href: "/legal/cookies" },
+  ];
+
+  // Add CGU for sites with specific terms
+  if (siteType !== "vitrine") {
+    baseLinks.push({
+      label: "Conditions Générales",
+      href: "/legal/terms",
+    });
+  }
+
+  return baseLinks;
+}
 
 function getServicesLinks(currentBrand: string) {
   return Object.entries(avnirSites)
@@ -79,6 +107,7 @@ export const StandardFooter: React.FC<StandardFooterProps> = ({
 }) => {
   const brandName = avnirSites[brand].name;
   const servicesLinks = getServicesLinks(brand);
+  const legalLinks = getLegalLinks(brand);
   const copyright = getCopyright(brandName);
 
   return (
