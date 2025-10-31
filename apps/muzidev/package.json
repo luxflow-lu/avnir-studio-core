@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@avnir/brandkit": "workspace:^",
+    "@avnir/content": "workspace:^",
     "@avnir/design": "workspace:^",
     "@avnir/icons": "workspace:^",
     "@avnir/ui": "workspace:^",

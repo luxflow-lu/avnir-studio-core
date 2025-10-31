@@ -265,6 +265,9 @@ importers:
       '@avnir/brandkit':
         specifier: workspace:^
         version: link:../../packages/brandkit
+      '@avnir/content':
+        specifier: workspace:^
+        version: link:../../packages/content
       '@avnir/design':
         specifier: workspace:^
         version: link:../../packages/design
@@ -378,6 +381,9 @@ importers:
       '@avnir/brandkit':
         specifier: workspace:*
         version: link:../../packages/brandkit
+      '@avnir/content':
+        specifier: workspace:^
+        version: link:../../packages/content
       '@avnir/design':
         specifier: workspace:^
         version: link:../../packages/design

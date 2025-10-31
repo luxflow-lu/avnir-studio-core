@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@avnir/brandkit": "workspace:*",
+    "@avnir/content": "workspace:^",
     "@avnir/design": "workspace:^",
     "@avnir/ui": "workspace:*",
     "next": "^15.5.6",
