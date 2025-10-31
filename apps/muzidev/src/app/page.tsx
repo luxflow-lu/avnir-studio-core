@@ -12,7 +12,7 @@ export default function Page() {
         title="La formation en ligne des artistes et producteurs"
         subtitle="La formation la plus complète d'internet pour les artistes et producteurs indépendants. Apprends à maîtriser chaque étape de ta carrière musicale, de la création à la réussite."
         layout="left"
-        backgroundImage="/images/hero-muzidev-bg.webp"
+        backgroundImage="/images/hero-muzidev-bg.jpg"
         actions={
           <>
             <Button variant="solid" size="lg" onClick={() => window.location.href = '/signup'}>Commencer gratuitement</Button>
@@ -31,7 +31,7 @@ export default function Page() {
               <Button variant="solid" size="lg" onClick={() => window.location.href = '/formation'}>Découvrir le programme</Button>
             }
             image={
-              <img src="/images/formation-preview.webp" alt="Formation MUZIDEV" />
+              <img src="/images/formation-preview.jpg" alt="Formation MUZIDEV" />
             }
             reverse
           />
@@ -134,7 +134,7 @@ export default function Page() {
               <Button variant="solid" size="lg" onClick={() => window.location.href = '/signup'}>Démarrer la formation</Button>
             }
             image={
-              <img src="/images/artist-studio.webp" alt="Artiste en studio" />
+              <img src="/images/artist-studio.jpg" alt="Artiste en studio" />
             }
           />
         </div>
