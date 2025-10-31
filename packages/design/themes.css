@@ -105,12 +105,12 @@
   --text-display-lg: 6rem;     /* 96px */
   
   /* Body text (paragraphs) */
-  --text-body: 1.15rem;       /* 16px */
+  --text-body: 1rem;       /* 16px */
   --text-body-sm: 0.875rem; /* 14px - Small paragraphs */
   --text-body-lg: 1.5rem;  /* 24px - Large paragraphs */
   
   /* Utility text (labels, captions, metadata) */
-  --text-small: 1.15rem;  /* 14px - Labels, captions */
+  --text-small: 1rem;  /* 14px - Labels, captions */
   --text-tiny: 0.75rem;    /* 12px - Metadata, badges */
   
   /* Font weights */
