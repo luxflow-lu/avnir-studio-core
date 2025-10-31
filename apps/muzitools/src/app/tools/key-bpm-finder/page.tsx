@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Button, Layout, Form, Marketing } from "@avnir/ui";
+import { Button, Card, CardContent, CardTitle, CardDescription, Layout, Form, Marketing } from "@avnir/ui";
 
 interface AnalysisResult {
   bpm: number | null;
@@ -152,49 +152,6 @@ export default function KeyBpmFinderPage() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="section--xl">
-        <div className="container">
-          <Layout.SectionHeader
-            title="Tout ce dont tu as besoin pour tes mixages"
-            subtitle="Détection BPM ultra-précise, analyse de tonalité, code Camelot pour mixage harmonique. Tout ça en quelques secondes."
-            align="center"
-          />
-          <Marketing.FeatureGrid columns={3}>
-            <Marketing.FeatureGridItem
-              icon="🎵"
-              title="Détection BPM précise"
-              description="Algorithme calibré pour tous les genres musicaux. De 60 à 200 BPM, précision de 99%. Fonctionne même sur des tracks complexes avec tempo variable."
-            />
-            <Marketing.FeatureGridItem
-              icon="🎹"
-              title="Analyse de tonalité"
-              description="Détecte la tonalité (key) de tes tracks en notation standard (C, D, E, F, G, A, B) avec majeur/mineur. Essentiel pour le mixage harmonique."
-            />
-            <Marketing.FeatureGridItem
-              icon="🎯"
-              title="Code Camelot"
-              description="Calcul automatique du code Camelot (1A-12B) pour faciliter le mixage harmonique. Trouve instantanément les tracks compatibles pour tes transitions."
-            />
-            <Marketing.FeatureGridItem
-              icon="⏱️"
-              title="Durée de la track"
-              description="Affiche la durée totale du fichier audio en format minutes:secondes. Pratique pour organiser tes sets et playlists."
-            />
-            <Marketing.FeatureGridItem
-              icon="📋"
-              title="Copie rapide"
-              description="Copie tous les résultats d'un clic dans ton presse-papier. Colle directement dans Rekordbox, Serato, Traktor ou ton DAW préféré."
-            />
-            <Marketing.FeatureGridItem
-              icon="🔒"
-              title="100% privé"
-              description="Tes fichiers ne quittent jamais ton appareil. Analyse locale dans le navigateur, zéro upload, zéro tracking. Tes tracks restent chez toi."
-            />
-          </Marketing.FeatureGrid>
-        </div>
-      </section>
-
       {/* How It Works */}
       <section className="section--xl">
         <div className="container">
@@ -219,34 +176,6 @@ export default function KeyBpmFinderPage() {
         </div>
       </section>
 
-      {/* Use Cases */}
-      <section className="section--xl">
-        <div className="container">
-          <Layout.SectionHeader
-            title="Parfait pour tous les workflows"
-            subtitle="Que tu sois DJ, producteur ou beatmaker, le Key & BPM Finder s'intègre parfaitement dans ton processus créatif"
-            align="center"
-          />
-          <div className="grid-3">
-            <div className="text-center">
-              <div className="text-4xl mb-4">🎧</div>
-              <h3 className="text-lg font-semibold mb-2">DJs</h3>
-              <p className="text-sm text-muted">Prépare tes sets en analysant tes tracks. Utilise le code Camelot pour des transitions harmoniques parfaites. Compatible Rekordbox, Serato, Traktor.</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">🎹</div>
-              <h3 className="text-lg font-semibold mb-2">Producteurs</h3>
-              <p className="text-sm text-muted">Analyse tes samples et loops avant de les intégrer dans tes projets. Détecte le BPM et la tonalité pour un workflow de production fluide.</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">🥁</div>
-              <h3 className="text-lg font-semibold mb-2">Beatmakers</h3>
-              <p className="text-sm text-muted">Vérifie le BPM de tes beats, analyse la tonalité de tes mélodies. Organise ta bibliothèque de samples par BPM et key.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Stats Section */}
       <section className="section--xl">
         <div className="container">
@@ -259,6 +188,46 @@ export default function KeyBpmFinderPage() {
               { label: "Taille max fichier", value: "50MB" }
             ]}
           />
+        </div>
+      </section>
+
+      {/* Use Cases */}
+      <section className="section--xl">
+        <div className="container">
+          <Layout.SectionHeader
+            title="Parfait pour tous les workflows"
+            subtitle="Que tu sois DJ, producteur ou beatmaker, le Key & BPM Finder s'intègre parfaitement dans ton processus créatif"
+            align="center"
+          />
+          <div className="grid-3">
+            <Card>
+              <CardContent>
+                <div className="card-icon">🎧</div>
+                <CardTitle>DJs</CardTitle>
+                <CardDescription>
+                  Prépare tes sets en analysant tes tracks. Utilise le code Camelot pour des transitions harmoniques parfaites. Compatible Rekordbox, Serato, Traktor.
+                </CardDescription>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent>
+                <div className="card-icon">🎹</div>
+                <CardTitle>Producteurs</CardTitle>
+                <CardDescription>
+                  Analyse tes samples et loops avant de les intégrer dans tes projets. Détecte le BPM et la tonalité pour un workflow de production fluide.
+                </CardDescription>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent>
+                <div className="card-icon">🥁</div>
+                <CardTitle>Beatmakers</CardTitle>
+                <CardDescription>
+                  Vérifie le BPM de tes beats, analyse la tonalité de tes mélodies. Organise ta bibliothèque de samples par BPM et key.
+                </CardDescription>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
@@ -294,6 +263,26 @@ export default function KeyBpmFinderPage() {
                 a: "Actuellement, l'outil analyse un fichier à la fois. Une fonctionnalité d'analyse par lots est prévue dans une future mise à jour."
               }
             ]}
+          />
+        </div>
+      </section>
+
+      {/* CTA Final */}
+      <section className="section--xl">
+        <div className="container">
+          <Marketing.CtaSection
+            title="Découvre les autres outils MUZITOOLS"
+            subtitle="Le Key & BPM Finder n'est que le début. D'autres outils arrivent bientôt pour compléter ta boîte à outils audio."
+            actions={
+              <>
+                <Button variant="solid" size="lg" onClick={() => window.location.href = '/#tools'}>
+                  Voir tous les outils
+                </Button>
+                <Button variant="outline" size="lg" onClick={() => window.location.href = '/'}>
+                  Retour à l'accueil
+                </Button>
+              </>
+            }
           />
         </div>
       </section>
