@@ -33,13 +33,31 @@
   font-size: var(--text-h2);
   font-weight: var(--font-bold);
   color: var(--titles);
-  line-height: var(--leading-tight);
+  line-height: var(--leading-none);
 }
 
 .content-split-subtitle {
   font-size: var(--text-body);
   color: var(--text);
   line-height: var(--leading-tight);
+}
+
+.content-split-features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content-split-feature {
+  font-size: var(--text-body);
+  font-weight: var(--font-bold);
+  color: var(--titles);
+  display: flex;
+  align-items: center;
+  gap: var(--gap-md);
 }
 
 .content-split-actions {

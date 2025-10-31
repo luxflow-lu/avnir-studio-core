@@ -29,6 +29,11 @@ export default function Page() {
           <Marketing.ContentSplit
             title="La formation la plus complète d'internet"
             subtitle="Découvrez la première formation en ligne conçue pour vous accompagner dans toutes les étapes de votre carrière musicale. Que vous soyez rappeur, beatmaker, chanteur ou producteur, cette formation vous accompagne de la création à la vente de vos projets musicaux."
+            features={[
+              "📚 +100 chapitres de contenu",
+              "♾️ Mises à jour infinies",
+              "🎯 Cas pratiques concrets"
+            ]}
             actions={
               <Button variant="solid" size="lg" onClick={() => window.location.href = '/#tarifs'}>Voir les tarifs</Button>
             }

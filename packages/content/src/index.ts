@@ -15,6 +15,7 @@ export * from "./legal/terms/learning";
 export * from "./seo/types";
 export * from "./seo/generator";
 export * from "./seo/sites/muzidev";
+export * from "./seo/sites/muzipics";
 export * from "./seo/sites/muzisystem";
 
 // Contact

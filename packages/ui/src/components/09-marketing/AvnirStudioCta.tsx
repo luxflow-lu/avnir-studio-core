@@ -20,7 +20,7 @@ export const AvnirStudioCta = React.forwardRef<HTMLElement, AvnirStudioCtaProps>
               <Button 
                 variant="solid" 
                 size="lg" 
-                onClick={() => window.location.href = 'https://avnir-studio.com'}
+                onClick={() => window.open('https://avnir-studio.com', '_blank', 'noopener,noreferrer')}
               >
                 Découvrir AVNIR-Studio
               </Button>

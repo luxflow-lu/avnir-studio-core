@@ -14,11 +14,12 @@ export interface NavbarProps extends React.HTMLAttributes<HTMLElement> {
   logo?: React.ReactNode;
   links?: NavLink[];
   actions?: React.ReactNode;
+  transparent?: boolean;
 }
 
 
 export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
-  ({ className, logo, links = [], actions, ...props }, ref) => {
+  ({ className, logo, links = [], actions, transparent = false, ...props }, ref) => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [brand, setBrand] = React.useState("avnir-studio");
 
@@ -71,7 +72,13 @@ export const Navbar = React.forwardRef<HTMLElement, NavbarProps>(
     return (
       <header
         ref={ref}
-        className={cx("navbar", className)} {...props}
+        className={cx(
+          "navbar",
+          transparent && "navbar--transparent",
+          isMenuOpen && "navbar--menu-open",
+          className
+        )}
+        {...props}
       >
         <div className="navbar-container">
           {/* Brand Logo - Left */}

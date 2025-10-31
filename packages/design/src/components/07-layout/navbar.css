@@ -9,6 +9,20 @@
   z-index: 50;
 }
 
+/* Transparent variant - absolute positioning with no background */
+.navbar--transparent {
+  background-color: transparent;
+  border-bottom: none;
+  position: absolute;
+  width: 100%;
+}
+
+/* Exception: when mobile menu is open, restore background for readability */
+.navbar--transparent.navbar--menu-open {
+  background-color: var(--navbar-bg);
+  border-bottom: 1px solid var(--navbar-border);
+}
+
 /* Navbar inner container */
 .navbar-container {
   max-width: 100%;

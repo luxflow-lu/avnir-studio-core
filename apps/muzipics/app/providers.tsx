@@ -8,6 +8,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Layout.Navbar
+        transparent
         logo={<BrandLogo size="md" />}
         links={[
           { label: "Accueil", href: "/" },

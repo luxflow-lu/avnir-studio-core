@@ -2,3 +2,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Gallery placeholder */
+.gallery-placeholder {
+  aspect-ratio: 1/1;
+  background: var(--surface-variant);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+}
