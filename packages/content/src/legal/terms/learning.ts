@@ -18,10 +18,10 @@ Les formations sont accessibles en ligne 24h/24, 7j/7, sous réserve de disponib
     title: "12. Abonnement et paiement",
     content: `Les modalités d'abonnement sont les suivantes :`,
     items: [
-      "**Formules disponibles** : Gratuit (accès limité), Mensuel, Annuel",
-      "**Paiement** : Par carte bancaire via notre prestataire sécurisé (Stripe)",
-      "**Renouvellement** : Automatique sauf résiliation avant la date d'échéance",
-      "**Facturation** : Une facture est envoyée par email après chaque paiement",
+      "<strong>Formules disponibles</strong> : Gratuit (accès limité), Mensuel, Annuel",
+      "<strong>Paiement</strong> : Par carte bancaire via notre prestataire sécurisé (Stripe)",
+      "<strong>Renouvellement</strong> : Automatique sauf résiliation avant la date d'échéance",
+      "<strong>Facturation</strong> : Une facture est envoyée par email après chaque paiement",
     ],
   },
   {
@@ -29,10 +29,10 @@ Les formations sont accessibles en ligne 24h/24, 7j/7, sous réserve de disponib
     title: "13. Résiliation et remboursement",
     content: `Vous pouvez résilier votre abonnement à tout moment depuis votre compte.`,
     items: [
-      "**Résiliation** : Effective à la fin de la période en cours (pas de remboursement au prorata)",
-      "**Droit de rétractation** : 14 jours à compter de la souscription (conformément à la loi)",
-      "**Remboursement** : Possible dans les 14 jours si aucune formation n'a été commencée",
-      "**Accès après résiliation** : Maintenu jusqu'à la fin de la période payée",
+      "<strong>Résiliation</strong> : Effective à la fin de la période en cours (pas de remboursement au prorata)",
+      "<strong>Droit de rétractation</strong> : 14 jours à compter de la souscription (conformément à la loi)",
+      "<strong>Remboursement</strong> : Possible dans les 14 jours si aucune formation n'a été commencée",
+      "<strong>Accès après résiliation</strong> : Maintenu jusqu'à la fin de la période payée",
     ],
   },
   {

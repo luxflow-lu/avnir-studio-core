@@ -78,9 +78,9 @@ export const cookiesPolicy: LegalDocument = {
       title: "3. Gestion de vos préférences",
       content: "Vous pouvez gérer vos préférences cookies de plusieurs façons :",
       items: [
-        "**Bandeau de consentement** : À votre première visite, un bandeau vous permet d'accepter ou refuser les cookies non-essentiels",
-        "**Paramètres du site** : Vous pouvez modifier vos préférences à tout moment via le lien 'Gérer les cookies' en bas de page",
-        "**Paramètres du navigateur** : Vous pouvez configurer votre navigateur pour bloquer ou supprimer les cookies",
+        "<strong>Bandeau de consentement</strong> : À votre première visite, un bandeau vous permet d'accepter ou refuser les cookies non-essentiels",
+        "<strong>Paramètres du site</strong> : Vous pouvez modifier vos préférences à tout moment via le lien 'Gérer les cookies' en bas de page",
+        "<strong>Paramètres du navigateur</strong> : Vous pouvez configurer votre navigateur pour bloquer ou supprimer les cookies",
       ],
     },
     {
@@ -88,10 +88,10 @@ export const cookiesPolicy: LegalDocument = {
       title: "4. Configuration du navigateur",
       content: "Voici comment gérer les cookies dans les principaux navigateurs :",
       items: [
-        "**Chrome** : Paramètres > Confidentialité et sécurité > Cookies",
-        "**Firefox** : Paramètres > Vie privée et sécurité > Cookies",
-        "**Safari** : Préférences > Confidentialité > Cookies",
-        "**Edge** : Paramètres > Confidentialité > Cookies",
+        "<strong>Chrome</strong> : Paramètres > Confidentialité et sécurité > Cookies",
+        "<strong>Firefox</strong> : Paramètres > Vie privée et sécurité > Cookies",
+        "<strong>Safari</strong> : Préférences > Confidentialité > Cookies",
+        "<strong>Edge</strong> : Paramètres > Confidentialité > Cookies",
       ],
     },
     {
@@ -99,8 +99,8 @@ export const cookiesPolicy: LegalDocument = {
       title: "5. Cookies tiers",
       content: "Certains cookies sont déposés par des services tiers (Google Analytics, réseaux sociaux). Ces services ont leurs propres politiques de confidentialité :",
       items: [
-        "**Google Analytics** : https://policies.google.com/privacy",
-        "**Facebook** : https://www.facebook.com/privacy/explanation",
+        "<strong>Google Analytics</strong> : https://policies.google.com/privacy",
+        "<strong>Facebook</strong> : https://www.facebook.com/privacy/explanation",
       ],
     },
     {
