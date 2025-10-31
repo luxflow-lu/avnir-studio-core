@@ -192,17 +192,20 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Social Proof */}
+      {/* Logo Cloud */}
       <section className="section--xl">
         <div className="container">
-          <Marketing.SocialProof
+          <Layout.SectionHeader
             title="Utilisé par des milliers d'artistes"
             subtitle="Producteurs, DJs, beatmakers et artistes indépendants font confiance à MUZITOOLS pour leur workflow quotidien"
+            align="center"
+          />
+          <Marketing.LogoCloud
             logos={[
-              { name: "Artist 1", src: "/logos/artist-1.svg" },
-              { name: "Artist 2", src: "/logos/artist-2.svg" },
-              { name: "Artist 3", src: "/logos/artist-3.svg" },
-              { name: "Artist 4", src: "/logos/artist-4.svg" },
+              { src: "/logos/artist-1.svg", alt: "Artist 1" },
+              { src: "/logos/artist-2.svg", alt: "Artist 2" },
+              { src: "/logos/artist-3.svg", alt: "Artist 3" },
+              { src: "/logos/artist-4.svg", alt: "Artist 4" },
             ]}
           />
         </div>
@@ -237,19 +240,19 @@ export default function Page() {
                 quote: "Enfin un outil BPM qui respecte ma vie privée. Plus besoin d'uploader mes tracks sur des sites chelous. Ça marche direct dans le navigateur, c'est rapide et précis.",
                 author: "DJ Nexus",
                 role: "DJ & Producteur",
-                avatar: "/avatars/dj-nexus.jpg"
+                avatarSrc: "/avatars/dj-nexus.jpg"
               },
               {
                 quote: "J'utilise le Key Finder avant chaque session de mixage. La détection du code Camelot est ultra précise, ça me fait gagner un temps fou pour préparer mes sets.",
                 author: "Sarah K.",
                 role: "DJ Techno",
-                avatar: "/avatars/sarah-k.jpg"
+                avatarSrc: "/avatars/sarah-k.jpg"
               },
               {
                 quote: "100% gratuit, aucune inscription, ça marche instantanément. C'est exactement ce dont j'avais besoin pour mon workflow de production. Merci MUZITOOLS !",
                 author: "Beatmaker Pro",
                 role: "Producteur Hip-Hop",
-                avatar: "/avatars/beatmaker-pro.jpg"
+                avatarSrc: "/avatars/beatmaker-pro.jpg"
               }
             ]}
           />
