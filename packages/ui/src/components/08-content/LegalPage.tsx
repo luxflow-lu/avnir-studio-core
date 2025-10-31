@@ -51,9 +51,11 @@ export const LegalPage = React.forwardRef<HTMLDivElement, LegalPageProps>(
               {section.items && section.items.length > 0 && (
                 <ul className="legal-section-items">
                   {section.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="legal-section-item">
-                      {item}
-                    </li>
+                    <li 
+                      key={itemIndex} 
+                      className="legal-section-item"
+                      dangerouslySetInnerHTML={{ __html: item }}
+                    />
                   ))}
                 </ul>
               )}
