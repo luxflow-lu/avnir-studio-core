@@ -1,0 +1,6 @@
+{
+  "buildCommand": "cd ../.. && pnpm build --filter=muzitools",
+  "installCommand": "cd ../.. && pnpm install --frozen-lockfile",
+  "framework": "nextjs",
+  "outputDirectory": ".next"
+}
