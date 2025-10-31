@@ -15,7 +15,7 @@ export async function POST(request: Request) {
     }
 
     // Configuration du transporteur Gmail
-    const transporter = nodemailer.createTransporter({
+    const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
         user: process.env.GMAIL_USER,
@@ -56,8 +56,10 @@ ${message}
     );
   } catch (error) {
     console.error("Erreur lors de l'envoi de l'email:", error);
+    console.error("GMAIL_USER:", process.env.GMAIL_USER);
+    console.error("GMAIL_APP_PASSWORD exists:", !!process.env.GMAIL_APP_PASSWORD);
     return NextResponse.json(
-      { error: "Erreur lors de l'envoi de l'email" },
+      { error: "Erreur lors de l'envoi de l'email", details: error instanceof Error ? error.message : String(error) },
       { status: 500 }
     );
   }
