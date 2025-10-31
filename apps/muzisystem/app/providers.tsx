@@ -24,10 +24,12 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         brand="muzisystem"
         logo={<BrandLogo size="lg" />}
         exploreLinks={[
-          { label: "Components", href: "/components" },
+          { label: "Home", href: "/" },
+          { label: "Overview", href: "/overview" },
           { label: "Foundations", href: "/foundations" },
-          { label: "Patterns", href: "/patterns" },
+          { label: "Components", href: "/components" },
           { label: "Guidelines", href: "/guidelines" },
+          { label: "Patterns", href: "/patterns" },
         ]}
       />
     </>
