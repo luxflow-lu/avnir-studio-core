@@ -1,6 +1,6 @@
 # Documentation Index - AVNIR Studio Core
 
-**Dernière mise à jour :** 24 octobre 2024
+**Dernière mise à jour :** 31 octobre 2024
 
 ## 📋 Structure de la Documentation
 
@@ -12,6 +12,7 @@
 ### 🎨 Design System & UI
 - **[03_design_system_guide.md](./03_design_system_guide.md)** - Guide du design system
 - **[04_development_best_practices.md](./04_development_best_practices.md)** - Bonnes pratiques de développement
+- **[12_standardizations.md](./12_standardizations.md)** - Standardisations (Analytics, Monitoring, Emails, etc.)
 
 ### 🧪 Qualité & Tests
 - **[05_testing_standards.md](./05_testing_standards.md)** - Standards de tests et qualité
@@ -65,8 +66,9 @@
 
 ## 📊 Statistiques
 
-- **Total documents :** 15 standards + 4 outils + 1 RFC
-- **Couverture :** Architecture, Sécurité, Performance, Accessibilité, Déploiement
+- **Total documents :** 16 standards + 4 outils + 1 RFC
+- **Couverture :** Architecture, Sécurité, Performance, Accessibilité, Déploiement, Standardisations
+- **Packages standardisés :** 15 systèmes (Analytics, Monitoring, Emails, Features, Consent, etc.)
 - **Statut :** ✅ Tous actifs et à jour
 
 ## 🔄 Maintenance
