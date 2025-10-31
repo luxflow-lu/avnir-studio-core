@@ -16,3 +16,6 @@ export * from "./seo/types";
 export * from "./seo/generator";
 export * from "./seo/sites/muzidev";
 export * from "./seo/sites/muzisystem";
+
+// Contact
+export * from "./contact/config";
