@@ -6,6 +6,7 @@ export * from "./Select";
 export * from "./Checkbox";
 export * from "./Radio";
 export * from "./Switch";
+export * from "./ToggleButton";
 export * from "./Field";
 export * from "./FileUpload";
 export * from "./DatePicker";

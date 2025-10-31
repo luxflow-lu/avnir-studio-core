@@ -1,7 +1,9 @@
 /* SectionHeader Component */
 
 .section-header {
-  margin-bottom: var(--margin-xl);
+  margin-bottom: var(--padding-container);
+  padding-left: var(--padding-section-xl);
+  padding-right: var(--padding-section-xl);
 }
 
 .section-header--left {
@@ -26,8 +28,8 @@
 .section-header-subtitle {
   font-size: var(--text-body-lg);
   color: var(--muted);
-  line-height: var(--leading-relaxed);
-  margin-bottom: var(--margin-md);
+  line-height: var(--leading-tight);
+  margin-bottom: var(--margin-lg);
 }
 
 .section-header-actions {

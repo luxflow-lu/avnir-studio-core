@@ -18,7 +18,7 @@ FooterRoot.displayName = "Footer";
 // Sub-components for composition
 const Top: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ className, children, ...props }) => (
   <div className={cx("footer-top", className)} {...props}>
-    <div className="container">
+    <div className="footer-container">
       {children}
     </div>
   </div>
@@ -93,14 +93,14 @@ const Link: React.FC<LinkProps> = ({ className, children, ...props }) => (
 );
 
 const Separator: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ className, ...props }) => (
-  <div className="container">
+  <div className="footer-container">
     <div className={cx("footer-separator", className)} {...props} />
   </div>
 );
 
 const Bottom: React.FC<React.HTMLAttributes<HTMLDivElement>> = ({ className, children, ...props }) => (
   <div className={cx("footer-bottom", className)} {...props}>
-    <div className="container">
+    <div className="footer-container">
       {children}
     </div>
   </div>

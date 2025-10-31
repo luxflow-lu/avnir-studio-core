@@ -2,6 +2,7 @@ import * as React from "react";
 
 import { cx } from "../../utils/cx";
 import { Button } from "../02-form/Button";
+import { ToggleButton } from "../02-form/ToggleButton";
 import { Badge } from "../03-data-display/Badge";
 
 export interface Plan {
@@ -23,55 +24,34 @@ export interface PlanPickerProps extends React.HTMLAttributes<HTMLDivElement> {
   onBillingChange: (billing: "monthly" | "yearly") => void;
   onSelectPlan: (planId: string) => void;
   selectedPlan?: string;
+  columns?: 2 | 3;
 }
 
 export const PlanPicker = React.forwardRef<HTMLDivElement, PlanPickerProps>(
-  ({ className, plans, billing, onBillingChange, onSelectPlan, selectedPlan, ...props }, ref) => {
-    const firstPlan = plans[0];
-    const yearlyDiscount = firstPlan
-      ? Math.max(
-          0,
-          Math.round((1 - (firstPlan.price.yearly * 12) / (firstPlan.price.monthly * 12)) * 100) ||
-            0,
-        )
-      : 0;
-
+  ({ className, plans, billing, onBillingChange, onSelectPlan, selectedPlan, columns = 3, ...props }, ref) => {
     return (
       <div ref={ref} className={cx("plan-picker-container", className)} {...props}>
         {/* Billing Toggle */}
-        <div className="plan-picker-billing">
-          <div className="plan-picker-billing-toggle">
-            <button
-              onClick={() => onBillingChange("monthly")}
-              className={cx(
-                "plan-picker-billing-button",
-                billing === "monthly" && "plan-picker-billing-button--active",
-              )}
-            >
-              Monthly
-            </button>
-            <button
-              onClick={() => onBillingChange("yearly")}
-              className={cx(
-                "plan-picker-billing-button",
-                billing === "yearly" && "plan-picker-billing-button--active",
-              )}
-            >
-              Yearly
-              {yearlyDiscount > 0 && (
-                <Badge className="plan-picker-badge">
-                  -{yearlyDiscount}%
-                </Badge>
-              )}
-            </button>
-          </div>
-        </div>
+        <ToggleButton
+          value={billing}
+          onChange={(value) => onBillingChange(value as "monthly" | "yearly")}
+          options={[
+            { value: "monthly", label: "Monthly" },
+            { value: "yearly", label: "Yearly" },
+          ]}
+        />
 
         {/* Plans Grid */}
-        <div className="plan-picker-grid">
+        <div className={cx("plan-picker-grid", columns === 2 && "plan-picker-grid--two-cols")}>
           {plans.map((plan) => {
             const price = billing === "monthly" ? plan.price.monthly : plan.price.yearly;
             const isSelected = selectedPlan === plan.id;
+            const yearlyDiscount = plan.price.monthly > 0
+              ? Math.max(
+                  0,
+                  Math.round((1 - plan.price.yearly / (plan.price.monthly * 12)) * 100) || 0
+                )
+              : 0;
 
             return (
               <div
@@ -103,10 +83,12 @@ export const PlanPicker = React.forwardRef<HTMLDivElement, PlanPickerProps>(
                     </span>
                   </div>
 
-                  {billing === "yearly" && (
-                    <p className="plan-picker-price-note">
-                      €{Math.round(price / 12)}/mois facturé annuellement
-                    </p>
+                  {billing === "yearly" && yearlyDiscount > 0 && (
+                    <div className="plan-picker-price-note">
+                      <Badge variant="primary" size="sm">
+                        🎉 -{yearlyDiscount}% de réduction
+                      </Badge>
+                    </div>
                   )}
                 </div>
 

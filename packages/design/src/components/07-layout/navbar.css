@@ -11,9 +11,9 @@
 
 /* Navbar inner container */
 .navbar-container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 var(--gap-md);
+  max-width: 100%;
+  margin: 0 0;
+  padding: 0 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -51,10 +51,10 @@
 }
 
 .navbar-link {
-  color: var(--text);
+  color: var(--titles);
   text-decoration: none;
   font-size: var(--text-body);
-  font-weight: 500;
+  font-weight: var(--font-semibold);
   transition: color 0.2s;
 }
 
@@ -106,7 +106,7 @@
   text-decoration: none;
   font-size: var(--text-body);
   font-weight: 500;
-  padding: var(--gap-md);
+  padding: var(--gap-sm);
   border-radius: var(--radius-xs);
   transition: background-color 0.2s, color 0.2s;
 }
@@ -125,6 +125,8 @@
   margin-top: var(--gap-md);
   padding-top: var(--gap-md);
   border-top: 1px solid var(--border);
+  display: flex;
+  gap: var(--gap-md);
 }
 
 /* Responsive - Tablet and Mobile */

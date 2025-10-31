@@ -1,0 +1,40 @@
+/* ToggleButton Component */
+
+.toggle-button {
+  display: flex;
+  justify-content: center;
+}
+
+.toggle-button-group {
+  display: flex;
+  background-color: var(--surface);
+  padding: var(--gap-xs);
+  border-radius: var(--radius-lg);
+  gap: var(--gap-xs);
+}
+
+.toggle-button-option {
+  padding: var(--gap-sm) var(--gap-md);
+  font-size: var(--text-small);
+  font-weight: var(--font-medium);
+  border-radius: var(--radius-md);
+  transition: var(--transition-all);
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  color: var(--muted-foreground);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+}
+
+.toggle-button-option:hover {
+  color: var(--foreground);
+}
+
+.toggle-button-option--active {
+  background-color: transparent;
+  color: var(--primary);
+  font-weight: var(--font-semibold);
+}

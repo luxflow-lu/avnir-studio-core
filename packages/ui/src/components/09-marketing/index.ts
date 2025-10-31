@@ -1,5 +1,6 @@
 export * from "./Hero";
 export * from "./CtaSection";
+export * from "./ContentSplit";
 export * from "./Faq";
 export * from "./LogoCloud";
 export * from "./Testimonials";
@@ -10,3 +11,4 @@ export * from "./Newsletter";
 export * from "./ContactBlock";
 export * from "./FeatureGrid";
 export * from "./Comparison";
+export * from "./AvnirStudioCta";

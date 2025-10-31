@@ -8,7 +8,7 @@ export default function HomePage() {
     <>
       {/* 1) Hero Section */}
       <Marketing.Hero
-        title="Multi-Brands Design System"
+        title="Multi-Brand Design System"
         subtitle="Production-ready components and design tokens for building consistent, accessible, and scalable user interfaces across the AVNIR-Studio ecosystem."
         layout="center"
         actions={

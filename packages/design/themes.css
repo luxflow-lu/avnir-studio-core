@@ -93,7 +93,7 @@
   
   /* Headings */
   --text-h1: 3rem;      /* 56px */
-  --text-h2: 2rem;        /* 48px */
+  --text-h2: 2.5rem;        /* 48px */
   --text-h3: 1.5rem;      /* 24px */
   --text-h4: 1.25rem;     /* 20px */
   --text-h5: 1.125rem;    /* 18px */
@@ -105,12 +105,12 @@
   --text-display-lg: 6rem;     /* 96px */
   
   /* Body text (paragraphs) */
-  --text-body: 1rem;       /* 16px */
+  --text-body: 1.15rem;       /* 16px */
   --text-body-sm: 0.875rem; /* 14px - Small paragraphs */
   --text-body-lg: 1.5rem;  /* 24px - Large paragraphs */
   
   /* Utility text (labels, captions, metadata) */
-  --text-small: 0.875rem;  /* 14px - Labels, captions */
+  --text-small: 1.15rem;  /* 14px - Labels, captions */
   --text-tiny: 0.75rem;    /* 12px - Metadata, badges */
   
   /* Font weights */
@@ -605,3 +605,10 @@ body {
   --text-8xl: var(--text-display-lg);
 }
 */
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-md);
+  justify-content: center;
+  margin-bottom: var(--gap-xl);
+}

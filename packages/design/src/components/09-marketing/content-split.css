@@ -1,0 +1,62 @@
+/* Content Split Component - Image + Content Layout */
+
+.content-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-xl);
+  align-items: center;
+}
+
+.content-split-image {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+}
+
+.content-split-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content-split-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+.content-split-title {
+  font-size: var(--text-h2);
+  font-weight: var(--font-bold);
+  color: var(--titles);
+  line-height: var(--leading-tight);
+}
+
+.content-split-subtitle {
+  font-size: var(--text-body);
+  color: var(--text);
+  line-height: var(--leading-tight);
+}
+
+.content-split-actions {
+  display: flex;
+  gap: var(--gap-md);
+  flex-wrap: wrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .content-split {
+    grid-template-columns: 1fr;
+    gap: var(--gap-xl);
+  }
+
+  /* Image always on top on mobile */
+  .content-split-image {
+    order: -1;
+  }
+}

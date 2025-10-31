@@ -17,6 +17,8 @@
     "dev:ui": "turbo run dev --filter=@avnir/ui",
     "dev:muzisystem": "turbo run dev --filter=muzisystem",
     "build:muzisystem": "turbo run build --filter=muzisystem",
+    "dev:muzidev": "turbo run dev --filter=muzidev",
+    "build:muzidev": "turbo run build --filter=muzidev",
     "dev:muzitools": "turbo run dev --filter=muzitools",
     "build:muzitools": "turbo run build --filter=muzitools",
     "typecheck": "turbo run typecheck",

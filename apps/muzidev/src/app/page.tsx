@@ -1,154 +1,206 @@
 "use client";
 import React from "react";
-import { Layout, Marketing, Saas, Form } from "@avnir/ui";
-import { BrandLogo } from "@avnir/brandkit";
+import { Badge, Button, Card, CardContent, CardTitle, CardDescription, CardFooter, Layout, Marketing, Saas } from "@avnir/ui";
 
 export default function Page() {
+  const [billing, setBilling] = React.useState<"monthly" | "yearly">("monthly");
+
   return (
-    <>
-      {/* Navigation */}
-      <Layout.Navbar
-        logo={<BrandLogo variant="full" size="md" />}
-        links={[
-          { label: "Accueil", href: "/" },
-          { label: "Formation", href: "/formation" },
-          { label: "Tarifs", href: "/pricing" },
-          { label: "FAQ", href: "/faq" },
-          { label: "Se connecter", href: "/login" },
-        ]}
+    <main>
+      {/* Hero Section */}
+      <Marketing.Hero
+        title="La formation en ligne des artistes et producteurs"
+        subtitle="La formation la plus complète d'internet pour les artistes et producteurs indépendants. Apprends à maîtriser chaque étape de ta carrière musicale, de la création à la réussite."
+        layout="left"
+        backgroundImage="/images/hero-muzidev-bg.webp"
         actions={
-          <a href="/signup" className="btn btn-primary btn--md">
-            S'inscrire
-          </a>
+          <>
+            <Button variant="solid" size="lg" onClick={() => window.location.href = '/signup'}>Commencer gratuitement</Button>
+            <Button variant="outline" size="lg" onClick={() => window.location.href = '/formation'}>Découvrir la formation</Button>
+          </>
         }
       />
 
-      <main>
-        {/* Hero Section */}
-        <Marketing.Hero
-          title="La formation en ligne des artistes et producteurs"
-          subtitle="La formation la plus complète d'internet pour les artistes et producteurs indépendants. Apprends à maîtriser chaque étape de ta carrière musicale, de la création à la réussite."
-          actions={
-            <div className="hero-actions">
-              <a href="/signup" className="btn btn-primary btn--lg">
-                Créer un compte gratuit
-              </a>
-              <a href="/formation" className="btn btn-secondary btn--lg">
-                Découvrir la formation
-              </a>
-            </div>
-          }
-        />
+      {/* Program Highlight avec ContentSplit */}
+      <section className="section--xl">
+        <div className="container">
+          <Marketing.ContentSplit
+            title="La formation la plus complète d'internet"
+            subtitle="Découvrez la première formation en ligne conçue pour vous accompagner dans toutes les étapes de votre carrière musicale. Que vous soyez rappeur, beatmaker, chanteur ou producteur, cette formation vous accompagne de la création à la vente de vos projets musicaux."
+            actions={
+              <Button variant="solid" size="lg" onClick={() => window.location.href = '/formation'}>Découvrir le programme</Button>
+            }
+            image={
+              <img src="/images/formation-preview.webp" alt="Formation MUZIDEV" />
+            }
+            reverse
+          />
+        </div>
+      </section>
 
-        {/* Program Highlight */}
-        <section className="content-section">
-          <div className="container">
-            <div className="content-grid">
-              <div className="content-text">
-                <h2 className="content-title">
-                  La formation la plus complète d'internet
-                </h2>
-                <p className="content-description">
-                  Des modules concrets, mis à jour régulièrement, issus de l'expérience terrain. 
-                  Avance pas-à-pas et transforme ta passion en carrière musicale professionnelle.
-                </p>
-                <div className="flex flex-wrap gap-3 mb-8">
-                  <span className="badge badge--primary">
-                    +100 chapitres
-                  </span>
-                  <span className="badge badge--primary">
-                    Mises à jour régulières
-                  </span>
-                  <span className="badge badge--primary">
-                    Contenus issus de l'expérience réelle
-                  </span>
-                </div>
-                <a href="/formation" className="btn btn-primary btn--md">
-                  Découvrir le programme
-                </a>
-              </div>
-              <div className="content-image">
-                <img src="/images/program-illustration.png" alt="Programme MUZIDEV" width="500" height="350" />
-              </div>
-            </div>
+      {/* Stats Section */}
+      <section className="section--xl">
+        <div className="container">
+          <Marketing.Stats
+            columns={3}
+            items={[
+              { value: "+100", label: "Chapitres", sublabel: "Contenus complets" },
+              { value: "Infinies", label: "Mises à jour", sublabel: "Toujours à jour" },
+              { value: "+10 ans", label: "Expérience terrain", sublabel: "Cas concrets" }
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* Les 4 piliers de la formation */}
+      <section className="section--xl">
+        <div className="container">
+          <Layout.SectionHeader
+            title="Les 4 piliers essentiels pour bâtir une carrière solide"
+            subtitle="Une formation complète qui couvre tous les aspects de la carrière d'artiste indépendant"
+            align="center"
+          />
+          <div className="grid-2">
+            <Card>
+              <img src="/images/production.jpg" alt="Production musicale" className="card-image" />
+              <CardContent>
+                <CardTitle>Production</CardTitle>
+                <CardDescription>
+                  Maîtrise les outils de création musicale, de la composition au mastering. Apprends à produire des morceaux professionnels avec les techniques des pros.
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Button variant="outline" size="md" onClick={() => window.location.href = '/formation#production'}>
+                  En savoir plus
+                </Button>
+              </CardFooter>
+            </Card>
+            
+            <Card>
+              <img src="/images/developpement.jpg" alt="Développement artistique" className="card-image" />
+              <CardContent>
+                <CardTitle>Développement</CardTitle>
+                <CardDescription>
+                  Construis ton identité artistique et développe ta présence en ligne. Stratégies pour créer une communauté engagée autour de ta musique.
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Button variant="outline" size="md" onClick={() => window.location.href = '/formation#developpement'}>
+                  En savoir plus
+                </Button>
+              </CardFooter>
+            </Card>
+            
+            <Card>
+              <img src="/images/marketing.jpg" alt="Marketing musical" className="card-image" />
+              <CardContent>
+                <CardTitle>Marketing</CardTitle>
+                <CardDescription>
+                  Apprends à promouvoir ta musique efficacement. Réseaux sociaux, campagnes publicitaires, relations presse et stratégies de lancement.
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Button variant="outline" size="md" onClick={() => window.location.href = '/formation#marketing'}>
+                  En savoir plus
+                </Button>
+              </CardFooter>
+            </Card>
+            
+            <Card>
+              <img src="/images/business.jpg" alt="Business musical" className="card-image" />
+              <CardContent>
+                <CardTitle>Business</CardTitle>
+                <CardDescription>
+                  Comprends les aspects juridiques et financiers de la musique. Contrats, droits d'auteur, monétisation et gestion de carrière.
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Button variant="outline" size="md" onClick={() => window.location.href = '/formation#business'}>
+                  En savoir plus
+                </Button>
+              </CardFooter>
+            </Card>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* 4 Pillars Grid */}
-        {/* TODO: Implement 4 Pillars with FeatureGrid composition pattern */}
+      {/* Et si c'était toi ? */}
+      <section className="section--xl">
+        <div className="container">
+          <Marketing.ContentSplit
+            title="Et si c'était toi ?"
+            subtitle="Tu fais de la musique depuis un moment, mais tu sens qu'il te manque une vraie méthode ? MUZIDEV t'aide à structurer ta carrière, à professionnaliser ton image et à avancer plus vite. Pas de théorie inutile, que du concret, étape par étape."
+            actions={
+              <Button variant="solid" size="lg" onClick={() => window.location.href = '/signup'}>Démarrer la formation</Button>
+            }
+            image={
+              <img src="/images/artist-studio.webp" alt="Artiste en studio" />
+            }
+          />
+        </div>
+      </section>
 
-        {/* CTA Section */}
-        <section className="section">
-          <div className="container">
-            <Marketing.CtaSection
-              title="Et si c'était toi ?"
-              subtitle="Rejoins des centaines d'artistes qui ont transformé leur passion en carrière professionnelle. Passe à l'action et structure ta carrière musicale avec MUZIDEV."
-              actions={
-                <a href="/signup" className="btn btn-primary btn--lg">
-                  Démarrer la formation
-                </a>
-              }
-              image={<img src="/images/cta-artist.png" alt="Artiste professionnel" width="400" height="300" />}
-            />
+      {/* Topics Cloud */}
+      <section className="section--xl">
+        <div className="container">
+          <Layout.SectionHeader
+            title="Des dizaines de thèmes, pour maîtriser chaque facette du métier"
+            subtitle="Chaque module aborde un aspect concret… Découvre tout ce que tu vas apprendre :"
+            align="center"
+          />
+          <div className="tag-cloud">
+            {[
+              "Réseaux Sociaux", "Médias", "Diffusions", "Dossier de presse", 
+              "Distribution", "Live / Booking", "Merchandising", "Endorsement", 
+              "Crowdfunding", "Prestations", "Théorie musicale", "Composition",
+              "Mixage", "Mastering", "Branding", "Spotify for Artists",
+              "TikTok Marketing", "YouTube", "Collaborations", "Sync Licensing",
+              "Contrats", "Droits d'auteur", "SACEM", "Publishing"
+            ].map((topic, i) => (
+              <Badge key={i} variant="secondary" size="lg">{topic}</Badge>
+            ))}
           </div>
-        </section>
-
-        {/* Topics Cloud */}
-        <section className="section">
-          <div className="container">
-            <div className="section-header">
-              <h2 className="section-title">
-                Des dizaines de thèmes, pour maîtriser chaque facette du métier
-              </h2>
-              <p className="section-subtitle">
-                Chaque module aborde un aspect concret… Découvre tout ce que tu vas apprendre :
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3 justify-center mb-8">
-              {[
-                "Réseaux Sociaux", "Médias", "Diffusions", "Dossier de presse", "Distribution",
-                "Live / Booking", "Merchandising", "Endorsement", "Crowdfunding", "Prestations",
-                "Théorie musicale", "Composition"
-              ].map((topic, i) => (
-                <span key={i} className="badge badge--secondary">
-                  {topic}
-                </span>
-              ))}
-            </div>
-            <div className="text-center">
-              <a href="/formation" className="btn btn-secondary btn--md">
-                Voir le programme complet
-              </a>
-            </div>
+          <div className="section-actions">
+            <Button variant="solid" size="lg" onClick={() => window.location.href = '/formation'}>Voir le programme complet</Button>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Pricing Section */}
-        <section className="section">
-          <div className="container">
-            <div className="section-header">
-              <h2 className="section-title">Tarifs</h2>
-              <p className="section-subtitle">Choisis le plan qui te correspond</p>
-            </div>
-          <Saas.PricingTable
+      {/* Pricing Section */}
+      <section className="section--xl">
+        <div className="container">
+          <Layout.SectionHeader
+            title="Des formules pensées pour tous les artistes"
+            subtitle="Choisis ton rythme. Que tu débutes ou que tu sois déjà lancé, MUZIDEV s'adapte à toi. Tu peux commencer gratuitement et évoluer à ton rythme, sans engagement ni contrainte"
+            align="center"
+          />
+          <Saas.PlanPicker
+            columns={2}
+            billing={billing}
+            onBillingChange={setBilling}
+            onSelectPlan={(planId) => window.location.href = '/signup'}
             plans={[
               {
                 id: "starter",
                 name: "Starter",
-                price: "Gratuit",
-                period: "",
+                price: {
+                  monthly: 0,
+                  yearly: 0
+                },
                 features: [
                   "Leçons gratuites uniquement",
                   "Accès limité aux outils et ressources",
                   "Notifications sur les mises à jour"
                 ],
-                cta: { label: "Créer un compte", href: "/signup" }
+                cta: "Créer un compte"
               },
               {
                 id: "pro",
                 name: "Pro",
-                price: "39€",
-                period: "par mois",
+                price: {
+                  monthly: 39,
+                  yearly: 374
+                },
                 popular: true,
                 features: [
                   "Accès complet à la formation",
@@ -157,51 +209,56 @@ export default function Page() {
                   "Accès aux futures mises à jour sans frais supplémentaires",
                   "Accès prioritaire aux événements, masterclass et bonus exclusifs"
                 ],
-                cta: { label: "Démarrer la formation", href: "/signup" }
+                cta: "Démarrer la formation"
               }
             ]}
           />
-            <div className="text-center mt-8">
-              <p className="text-muted text-sm mb-4">
-                Moins de 1,30 € / jour pour investir dans ta carrière
-              </p>
-              <a href="/signup" className="btn btn-primary btn--md">
-                C'est parti !
-              </a>
-            </div>
+          <div className="section-actions">
+            <p className="text-muted">Moins de 1,30 € / jour pour investir dans ta carrière</p>
+            <Button variant="solid" size="md" onClick={() => window.location.href = '/signup'}>C'est parti !</Button>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Testimonials */}
-        <section className="section">
-          <div className="container">
-            <Marketing.Testimonials
-              title="Ce qu'en disent nos étudiants"
-              items={[
-                {
-                  quote: "MUZIDEV m'a aidé à structurer ma carrière et à comprendre tous les aspects du métier. Les modules sont concrets et directement applicables.",
-                  author: "Léo R.",
-                  role: "Beatmaker indépendant"
-                },
-                {
-                  quote: "Une vraie révélation ! J'ai enfin compris comment monétiser ma musique et développer mon audience. La formation est complète et bien structurée.",
-                  author: "Sara M.",
-                  role: "Chanteuse et autrice-compositrice"
-                }
-              ]}
-            />
-          </div>
-        </section>
+      {/* Testimonials */}
+      <section className="section--xl">
+        <div className="container">
+          <Marketing.Testimonials
+            title="Ce qu'en disent nos étudiants"
+            variant="carousel"
+            items={[
+              {
+                quote: "MUZIDEV m'a aidé à structurer ma carrière et à comprendre tous les aspects du métier. Les modules sont concrets et directement applicables.",
+                author: "Léo R.",
+                role: "Beatmaker indépendant"
+              },
+              {
+                quote: "Une vraie révélation ! J'ai enfin compris comment monétiser ma musique et développer mon audience. La formation est complète et bien structurée.",
+                author: "Sara M.",
+                role: "Chanteuse et autrice-compositrice"
+              }
+            ]}
+          />
+        </div>
+      </section>
 
-        {/* FAQ */}
-        <section className="section">
-          <div className="container">
-            <Marketing.Faq
+      {/* FAQ */}
+      <section className="section--xl">
+        <div className="container">
+          <Marketing.Faq
             title="Questions fréquentes"
             items={[
               {
                 q: "La formation est adaptée aux débutants ?",
                 a: "Oui, absolument ! La formation part des bases et progresse étape par étape. Que tu sois débutant ou que tu aies déjà de l'expérience, tu trouveras des modules adaptés à ton niveau."
+              },
+              {
+                q: "Combien de temps ai-je accès à la formation ?",
+                a: "Avec le plan Pro, tu as un accès illimité à l'ensemble de la formation tant que ton abonnement est actif. Si tu annules, tu conserves l'accès au plan gratuit. En reprenant un plan Pro, tu retrouves immédiatement l'accès complet à tous les contenus."
+              },
+              {
+                q: "Puis-je annuler mon abonnement à tout moment ?",
+                a: "Oui, tu peux annuler ton abonnement à tout moment en un clic depuis ton compte. Aucun engagement, aucune question posée. Tu conserveras l'accès aux leçons gratuites même après l'annulation."
               },
               {
                 q: "Que vais-je savoir faire à la fin de la formation ?",
@@ -216,59 +273,15 @@ export default function Page() {
                 a: "Non, ce n'est pas obligatoire pour commencer. Nous proposons des alternatives gratuites pour chaque outil et expliquons comment débuter avec un budget minimal."
               }
             ]}
-            />
-            <div className="text-center mt-8">
-              <a href="/contact" className="btn btn-secondary btn--md">
-                D'autres questions ? Contacte-nous
-              </a>
-            </div>
+          />
+          <div className="section-actions">
+            <Button variant="outline" size="lg" onClick={() => window.location.href = '/contact'}>D'autres questions ? Contacte-nous</Button>
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* AVNIR Studio CTA */}
-        <section className="section">
-          <div className="container">
-            <Layout.SectionHeader
-              title="L'application des artistes 2.0"
-              subtitle="Découvre AVNIR-Studio, notre écosystème d'outils et services pour accélérer ta croissance artistique et professionnelle."
-              align="center"
-            />
-            <Marketing.LogoCloud
-            logos={[
-              { src: "/logos/jacques.svg", alt: "Jacques" },
-              { src: "/logos/avnir-studio.svg", alt: "AVNIR-Studio" },
-              { src: "/logos/muzidev.svg", alt: "MUZIDEV" }
-            ]}
-            />
-            <div className="text-center mt-8">
-              <a href="https://avnir.studio" className="btn btn-primary btn--md">
-                Découvrir AVNIR-Studio
-              </a>
-            </div>
-          </div>
-        </section>
-
-        {/* Newsletter */}
-        <section className="section">
-          <div className="container">
-            <Marketing.Newsletter
-              title="Rejoins la newsletter pour suivre les nouveautés"
-              subtitle="Reçois en avant-première les nouveaux modules, les événements exclusifs et les conseils d'experts. En t'inscrivant, tu acceptes notre politique de confidentialité."
-              onSubmit={(email) => {
-                // TODO: Implement newsletter signup
-                void email; // Placeholder until API is implemented
-              }}
-            />
-          </div>
-        </section>
-      </main>
-
-      {/* Footer */}
-      <Layout.Footer>
-        <Layout.Footer.Bottom>
-          <p>&copy; 2024 MUZIDEV. Tous droits réservés.</p>
-        </Layout.Footer.Bottom>
-      </Layout.Footer>
-    </>
+      {/* AVNIR Studio CTA */}
+      <Marketing.AvnirStudioCta />
+    </main>
   );
 }

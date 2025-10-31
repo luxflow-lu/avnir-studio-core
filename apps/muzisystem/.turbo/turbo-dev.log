@@ -20,3 +20,15 @@ Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allow
  GET / 200 in 1125ms
  ○ Compiling /_not-found ...
  ✓ Compiled /_not-found in 1339ms (1090 modules)
+ GET /icon-192x192.png 404 in 2066ms
+ ✓ Compiled in 1595ms (1239 modules)
+ GET / 200 in 370ms
+ GET /icon-192x192.png 404 in 502ms
+ ✓ Compiled in 2.1s (1239 modules)
+ GET / 200 in 543ms
+ GET /icon-192x192.png 404 in 610ms
+ ✓ Compiled in 3.4s (1238 modules)
+ GET / 200 in 549ms
+ GET / 200 in 425ms
+ ○ Compiling /_not-found ...
+ ✓ Compiled /_not-found in 987ms (546 modules)

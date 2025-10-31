@@ -1,0 +1,168 @@
+/* AVNIR Studio CTA Component */
+
+/* Override content-split overflow for sphere */
+.content-split:has(.avnir-sphere-container) {
+  overflow: visible;
+}
+
+.content-split:has(.avnir-sphere-container) .content-split-media {
+  overflow: visible;
+  border-radius: 0;
+}
+
+.avnir-sphere-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 31.25rem;
+  overflow: visible !important;
+  padding: 3.125rem;
+  perspective: 1000px;
+}
+
+.gradient-avnir {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    #ff2d55,  /* muzipics */
+    #ff9d00,  /* muzimerch */
+    #2fad66,  /* muzibase */
+    #5cb9f2,  /* muzidev */
+    #9802eb,  /* muziweb */
+    #ff2d55   /* muzipics - loop */
+  );
+  filter: blur(3.125rem) brightness(1.25);
+  animation: avnir-spin 15s linear infinite;
+  mix-blend-mode: screen;
+  z-index: 2;
+}
+
+@keyframes avnir-spin {
+  from { transform: rotate(0deg) scale(1.02); }
+  to   { transform: rotate(360deg) scale(1.02); }
+}
+
+/* Horizontal orbit - simple left/right movement */
+.orbiter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carrier {
+  position: absolute;
+}
+
+/* AVNIR starts on right */
+.orbiter--avnir .carrier {
+  animation: orbit-horizontal 30s linear infinite;
+}
+
+/* Jacques starts on left (opposite) - use delay instead of reverse */
+.orbiter--jacques .carrier {
+  animation: orbit-horizontal 30s linear infinite;
+  animation-delay: -15s;
+}
+
+/* Planet */
+.planet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+}
+
+.orbiter--avnir .planet {
+  animation: orbit-depth 30s linear infinite;
+}
+
+.orbiter--jacques .planet {
+  animation: orbit-depth 30s linear infinite;
+  animation-delay: -15s;
+}
+
+.planet-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Planet variants */
+.planet--avnir {
+  background: #1b1b1d;
+}
+
+.planet--jacques {
+  background: #1b1b1d;
+}
+
+/* Animations */
+@keyframes orbit-horizontal {
+  0% {
+    transform: translateX(11rem) translateY(0rem);
+  }
+  25% {
+    transform: translateX(0rem) translateY(-3rem);
+  }
+  50% {
+    transform: translateX(-11rem) translateY(0rem);
+  }
+  75% {
+    transform: translateX(0rem) translateY(3rem);
+  }
+  100% {
+    transform: translateX(11rem) translateY(0rem);
+  }
+}
+
+@keyframes orbit-depth {
+  0% {
+    transform: scale(1.3);
+    z-index: 3;
+  }
+  25% {
+    transform: scale(0.9);
+    z-index: 2;
+  }
+  50% {
+    transform: scale(0.7);
+    z-index: 1;
+  }
+  75% {
+    transform: scale(0.9);
+    z-index: 2;
+  }
+  100% {
+    transform: scale(1.3);
+    z-index: 3;
+  }
+}
+
+@media (max-width: 48rem) {
+  .avnir-sphere-container {
+    min-height: 18.75rem;
+  }
+  
+  .gradient-avnir {
+    filter: blur(3.75rem) brightness(1.25);
+  }
+  
+  .sphere-logo {
+    width: 4rem;
+    height: 4rem;
+  }
+  
+  .sphere-logo-text {
+    font-size: var(--text-h3);
+  }
+}

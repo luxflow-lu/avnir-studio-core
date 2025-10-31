@@ -10,7 +10,7 @@
 
 .faq-item {
   background-color: var(--surface);
-  border: 1px solid var(--border);
+  border: none;
   border-radius: var(--radius-lg);
   overflow: hidden;
 }
@@ -50,7 +50,7 @@
 .faq-answer {
   padding: 0 var(--padding-section-sm) var(--gap-xl) var(--padding-section-sm);
   color: var(--text);
-  line-height: var(--leading-relaxed);
+  line-height: var(--leading-tight);
   font-size: var(--text-body);
   background-color: var(--surface);
 }

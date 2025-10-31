@@ -7,7 +7,7 @@
   justify-content: center;
   gap: var(--gap-md);
   font-family: inherit;
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semibold);
   border: none !important;
   border-radius: var(--radius-sm) !important;
   transition: var(--transition-all);
@@ -76,6 +76,7 @@
   background-color: var(--bg);
   border: 1px solid var(--border) !important;
   color: var(--text);
+  gap: var(--gap-md);
 }
 
 .btn-secondary:hover:not(:disabled) {
@@ -93,6 +94,7 @@
   background-color: transparent;
   color: var(--text);
   border: none;
+  gap: var(--gap-md);
 }
 
 .btn-ghost:hover:not(:disabled) {

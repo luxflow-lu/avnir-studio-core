@@ -9,6 +9,7 @@ export type HeroProps = {
   actions?: React.ReactNode;
   image?: React.ReactNode;
   layout?: "center" | "split" | "left";
+  backgroundImage?: string;
   className?: string;
 } & React.HTMLAttributes<HTMLElement>;
 
@@ -21,6 +22,7 @@ export const Hero = React.forwardRef<HTMLElement, HeroProps>(
       actions,
       image,
       layout = "center",
+      backgroundImage,
       className,
       ...props
     },
@@ -29,9 +31,11 @@ export const Hero = React.forwardRef<HTMLElement, HeroProps>(
     return (
       <section
         ref={ref}
-        className={cx("hero", `hero--${layout}`, className)}
+        className={cx("hero", `hero--${layout}`, backgroundImage && "hero--with-bg", className)}
+        style={backgroundImage ? { backgroundImage: `url(${backgroundImage})`, backgroundSize: 'cover', backgroundPosition: 'center' } : undefined}
         aria-label={eyebrow ? `${eyebrow} — ${title}` : title} {...props}
       >
+        {backgroundImage && <div className="hero-overlay" />}
         <div className="hero-container">
           {layout === "center" ? (
             <div className="hero-content hero-content--center">

@@ -25,7 +25,7 @@
 .badge--secondary {
   background-color: var(--surface);
   color: var(--text);
-  border: 1px solid var(--border);
+  border: none;
 }
 
 .badge--success {
@@ -83,5 +83,5 @@
 
 .badge--lg {
   font-size: var(--text-small);
-  padding: var(--gap-xs) var(--gap-md);
+  padding: var(--gap-md) var(--gap-lg);
 }

@@ -38,7 +38,7 @@
 
 @media (min-width: 768px) {
   .testimonial-card {
-    padding: var(--gap-xl);
+    padding: var(--gap-lg);
   }
 }
 

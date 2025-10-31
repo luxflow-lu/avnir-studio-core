@@ -3,8 +3,16 @@
 .footer {
   background: var(--footer-bg);
   color: var(--text);
-  padding: var(--padding-section-md) 0 var(--gap-xl);
+  padding: var(--padding-section-md) 0;
   border-top: 1px solid var(--footer-border);
+}
+
+/* Footer container */
+.footer-container {
+  max-width: 100%;
+  margin: 0;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 /* Top section: Newsletter + Links */
@@ -12,14 +20,14 @@
   margin-bottom: var(--padding-section-md);
 }
 
-.footer-top .container {
+.footer-top .footer-container {
   display: grid;
   grid-template-columns: 1.2fr 2fr;
-  gap: var(--padding-section-lg);
+  gap: var(--padding-section-xl);
 }
 
 @media (max-width: 768px) {
-  .footer-top .container {
+  .footer-top .footer-container {
     grid-template-columns: 1fr;
     gap: var(--padding-section-sm);
   }
@@ -98,32 +106,25 @@
 .footer-links {
   display: grid !important;
   grid-template-columns: repeat(4, 1fr) !important;
-  gap: var(--gap-xl);
+  gap: var(--gap-xs);
   align-items: start;
 }
 
 @media (max-width: 1024px) {
   .footer-links {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--gap-lg);
-  }
-}
-
-@media (max-width: 640px) {
-  .footer-links {
-    grid-template-columns: 1fr;
-    gap: var(--gap-lg);
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: var(--gap-xl);
   }
 }
 
 .footer-column {
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
+  gap: var(--gap-sm);
 }
 
 .footer-column-title {
-  font-size: var(--text-body);
+  font-size: var(--text-h4);
   font-weight: var(--font-semibold);
   color: var(--titles);
   margin-bottom: var(--gap-xs);
@@ -138,6 +139,7 @@
 .footer-link {
   font-size: var(--text-small);
   color: var(--text);
+  font-weight: var(--font-semibold);
   text-decoration: none;
   transition: color 0.2s;
 }
@@ -161,14 +163,14 @@
 }
 
 /* Bottom section: Copyright + Social */
-.footer-bottom .container {
+.footer-bottom .footer-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 @media (max-width: 640px) {
-  .footer-bottom .container {
+  .footer-bottom .footer-container {
     flex-direction: column;
     gap: var(--gap-md);
     text-align: center;
@@ -191,6 +193,7 @@
   align-items: center;
   gap: var(--gap-sm);
   font-size: var(--text-small);
+  font-weight: var(--font-semibold);
   color: var(--text);
   text-decoration: none;
   transition: color 0.2s;

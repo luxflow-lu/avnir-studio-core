@@ -1,24 +1,25 @@
 /* Card Component */
 
 .card {
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  border: none;
   background-color: var(--card);
   color: var(--card-foreground);
   box-shadow: var(--shadow-sm);
   transition: var(--transition-all);
-  padding: var(--padding-section-sm);
+  padding: 0;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: var(--gap-md);
+  gap: 0;
+  height: 100%;
 }
 
 /* Direct children styling for simple usage */
 .card > h3 {
   font-size: var(--text-h3);
   font-weight: var(--font-semibold);
-  line-height: var(--leading-tight);
+  line-height: var(--leading-normal);
   letter-spacing: var(--tracking-tight);
   color: var(--titles);
   margin: 0;
@@ -27,7 +28,7 @@
 .card > p {
   font-size: var(--text-body);
   color: var(--text);
-  line-height: var(--leading-relaxed);
+  line-height: var(--leading-tight);
   margin: 0;
 }
 
@@ -49,26 +50,34 @@
 .card-title {
   font-size: var(--text-h3);
   font-weight: var(--font-semibold);
-  line-height: var(--leading-tight);
+  line-height: var(--leading-normal);
   letter-spacing: var(--tracking-tight);
   color: var(--titles);
   display: flex;
   align-items: center;
-  gap: var(--gap-sm);
+  gap: var(--gap-md);
 }
 
 .card-description {
   font-size: var(--text-body);
   color: var(--text);
-  line-height: var(--leading-relaxed);
+  line-height: var(--leading-tight);
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-sm);
+  padding: var(--padding-section-sm);
 }
 
 .card-footer {
   display: flex;
   align-items: center;
-  margin-top: var(--gap-lg);
-  padding-top: var(--gap-lg);
-  border-top: 1px solid var(--border);
+  margin-top: var(--gap-md);
+  padding: 0 var(--padding-section-sm) var(--padding-section-sm);
+  border-top: none;
 }
 
 /* Card variants */
@@ -116,4 +125,29 @@
 
 .card--interactive:active {
   transform: translateY(0);
+}
+
+/* Card image (for image at top of card) */
+.card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0;
+  margin: 0;
+}
+
+/* Card link (for "En savoir plus" style links) */
+.card-link {
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: var(--gap-xs);
+  text-decoration: none;
+  font-size: var(--text-small);
+  font-weight: var(--font-medium);
+  transition: var(--transition-all);
+}
+
+.card-link:hover {
+  opacity: 0.8;
 }
