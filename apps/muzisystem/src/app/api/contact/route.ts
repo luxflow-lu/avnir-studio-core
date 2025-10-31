@@ -25,7 +25,7 @@ export async function POST(request: Request) {
     }
 
     // Get brand config
-    const config = contactConfig[brand || "muzidev"];
+    const config = contactConfig[brand || "muzisystem"];
     if (!config) {
       return NextResponse.json(
         { error: "Configuration invalide" },
@@ -77,8 +77,6 @@ ${message}
     );
   } catch (error) {
     console.error("Erreur lors de l'envoi de l'email:", error);
-    console.error("GMAIL_USER:", process.env.GMAIL_USER);
-    console.error("GMAIL_APP_PASSWORD exists:", !!process.env.GMAIL_APP_PASSWORD);
     return NextResponse.json(
       { error: "Erreur lors de l'envoi de l'email", details: error instanceof Error ? error.message : String(error) },
       { status: 500 }

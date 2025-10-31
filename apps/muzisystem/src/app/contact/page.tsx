@@ -4,13 +4,13 @@ export default function ContactPage() {
   return (
     <main>
       <Layout.PageHeader
-        title="Contactez-nous"
-        subtitle="Une question ? Un projet ? N'hésite pas à nous contacter, nous te répondrons dans les plus brefs délais."
+        title="Nous contacter"
+        subtitle="Une question sur le design system ? Besoin d'aide pour l'intégration ? Contactez-nous, nous vous répondrons rapidement."
       />
       
       <section className="section--xl">
         <div className="container">
-          <Form.ContactForm brand="muzidev" />
+          <Form.ContactForm brand="muzisystem" />
         </div>
       </section>
     </main>
