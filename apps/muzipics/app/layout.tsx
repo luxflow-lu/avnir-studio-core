@@ -9,8 +9,8 @@ import "./globals.css";
 export const metadata: Metadata = {
   ...generateMetadata(muzipicsSEO, { page: "home" }),
   icons: {
-    icon: "/favicon.svg",
-    apple: "/favicon.svg",
+    icon: "/favicon.png",
+    apple: "/favicon.png",
   },
 };
 
