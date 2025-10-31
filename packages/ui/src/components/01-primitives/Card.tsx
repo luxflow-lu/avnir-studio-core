@@ -79,6 +79,15 @@ export const CardContent = React.forwardRef<HTMLDivElement, CardContentProps>(
 );
 CardContent.displayName = "CardContent";
 
+// Card Image
+export type CardImageProps = React.ImgHTMLAttributes<HTMLImageElement>;
+export const CardImage = React.forwardRef<HTMLImageElement, CardImageProps>(
+  ({ className, ...props }, ref) => (
+    <img ref={ref} className={cx("card-image", className)} {...props} />
+  )
+);
+CardImage.displayName = "CardImage";
+
 // Card Footer
 export type CardFooterProps = React.HTMLAttributes<HTMLDivElement>;
 export const CardFooter = React.forwardRef<HTMLDivElement, CardFooterProps>(

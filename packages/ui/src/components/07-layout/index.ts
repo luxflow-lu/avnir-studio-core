@@ -1,4 +1,5 @@
 export * from "./Footer";
+export * from "./StandardFooter";
 export * from "./Navbar";
 export * from "./PageHeader";
 export * from "./SectionHeader";

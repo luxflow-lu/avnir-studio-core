@@ -11,16 +11,16 @@
 [34mCLI[39m Cleaning output folder
 [34mESM[39m Build start
 [34mCJS[39m Build start
-[32mESM[39m [1mdist/index.js     [22m[32m346.88 KB[39m
-[32mESM[39m [1mdist/index.js.map [22m[32m563.51 KB[39m
-[32mESM[39m ⚡️ Build success in 595ms
-[32mCJS[39m [1mdist/index.cjs     [22m[32m386.78 KB[39m
-[32mCJS[39m [1mdist/index.cjs.map [22m[32m557.62 KB[39m
-[32mCJS[39m ⚡️ Build success in 604ms
+[32mESM[39m [1mdist/index.js     [22m[32m351.97 KB[39m
+[32mESM[39m [1mdist/index.js.map [22m[32m572.95 KB[39m
+[32mESM[39m ⚡️ Build success in 498ms
+[32mCJS[39m [1mdist/index.cjs     [22m[32m392.60 KB[39m
+[32mCJS[39m [1mdist/index.cjs.map [22m[32m566.99 KB[39m
+[32mCJS[39m ⚡️ Build success in 502ms
 DTS Build start
-DTS ⚡️ Build success in 11319ms
-DTS dist/index.d.ts  98.35 KB
-DTS dist/index.d.cts 98.35 KB
+DTS ⚡️ Build success in 13507ms
+DTS dist/index.d.ts  99.49 KB
+DTS dist/index.d.cts 99.49 KB
 
 > @avnir/ui@0.1.0 build:css /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui
 > tailwindcss -c tailwind.build.config.cjs -i ./src/styles-source.css -o ./dist/styles.css --postcss ./postcss.build.config.cjs --minify
@@ -28,4 +28,4 @@ DTS dist/index.d.cts 98.35 KB
 
 Rebuilding...
 
-Done in 1001ms.
+Done in 1293ms.

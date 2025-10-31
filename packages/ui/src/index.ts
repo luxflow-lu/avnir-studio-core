@@ -64,8 +64,9 @@ export * as Templates from "./components/templates";
 // Use namespace imports (Form.Button, Primitives.Card) for better tree-shaking
 export { Button } from "./components/02-form/Button";
 export { Input } from "./components/02-form/Input";
-export { Card, CardContent, CardTitle, CardDescription, CardFooter, CardHeader } from "./components/01-primitives/Card";
+export { Card, CardContent, CardTitle, CardDescription, CardFooter, CardHeader, CardImage } from "./components/01-primitives/Card";
 export { Badge } from "./components/03-data-display/Badge";
+export { StandardFooter } from "./components/07-layout/StandardFooter";
 
 // ============================================
 // UTILITIES & HOOKS

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Badge, Button, Card, CardContent, CardTitle, CardDescription, CardFooter, Layout, Marketing, Saas } from "@avnir/ui";
+import { Badge, Button, Card, CardContent, CardTitle, CardDescription, CardFooter, CardImage, Layout, Marketing, Saas } from "@avnir/ui";
 
 export default function Page() {
   const [billing, setBilling] = React.useState<"monthly" | "yearly">("monthly");
@@ -62,7 +62,7 @@ export default function Page() {
           />
           <div className="grid-2">
             <Card>
-              <img src="/images/production.jpg" alt="Production musicale" className="card-image" />
+              <CardImage src="/images/production.jpg" alt="Production musicale" />
               <CardContent>
                 <CardTitle>Production</CardTitle>
                 <CardDescription>
@@ -77,7 +77,7 @@ export default function Page() {
             </Card>
             
             <Card>
-              <img src="/images/developpement.jpg" alt="Développement artistique" className="card-image" />
+              <CardImage src="/images/developpement.jpg" alt="Développement artistique" />
               <CardContent>
                 <CardTitle>Développement</CardTitle>
                 <CardDescription>
@@ -92,7 +92,7 @@ export default function Page() {
             </Card>
             
             <Card>
-              <img src="/images/marketing.jpg" alt="Marketing musical" className="card-image" />
+              <CardImage src="/images/marketing.jpg" alt="Marketing musical" />
               <CardContent>
                 <CardTitle>Marketing</CardTitle>
                 <CardDescription>
@@ -107,7 +107,7 @@ export default function Page() {
             </Card>
             
             <Card>
-              <img src="/images/business.jpg" alt="Business musical" className="card-image" />
+              <CardImage src="/images/business.jpg" alt="Business musical" />
               <CardContent>
                 <CardTitle>Business</CardTitle>
                 <CardDescription>
