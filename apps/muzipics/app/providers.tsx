@@ -33,10 +33,10 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         brand="muzipics"
         logo={<BrandLogo size="lg" />}
         exploreLinks={[
-          { label: "Accueil", href: "/" },
-          { label: "Galerie", href: "/gallery" },
-          { label: "Tarifs", href: "/pricing" },
-          { label: "FAQ", href: "/faq" },
+          { label: "Accueil", href: "/#accueil" },
+          { label: "Cover Generator", href: "/#generator" },
+          { label: "Tarifs", href: "/#tarifs" },
+          { label: "FAQ", href: "/#faq" },
           { label: "Contact", href: "/contact" },
         ]}
         newsletterAction="mailto:contact@avnir-studio.com?subject=Inscription Newsletter MUZIPICS"
