@@ -228,7 +228,7 @@
 
 /* ==================== LIGHT THEME (Override base colors) ==================== */
 [data-theme="light"] {
-  --bg: #f8f8f8;
+  --bg: #f7f8fa;
   --surface: #ffffff;
   --text: #1f2937;
   --foreground: var(--text);
