@@ -7,11 +7,11 @@
   color: var(--card-foreground);
   box-shadow: var(--shadow-sm);
   transition: var(--transition-all);
-  padding: 0;
+  padding: var(--padding-section-sm);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: var(--gap-md);
   height: 100%;
 }
 
