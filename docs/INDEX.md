@@ -12,24 +12,24 @@
 ### 🎨 Design System & UI
 - **[03_design_system_guide.md](./03_design_system_guide.md)** - Guide du design system
 - **[04_development_best_practices.md](./04_development_best_practices.md)** - Bonnes pratiques de développement
-- **[12_standardizations.md](./12_standardizations.md)** - Standardisations (Analytics, Monitoring, Emails, etc.)
+- **[05_standardizations.md](./05_standardizations.md)** - Standardisations (Analytics, Monitoring, Emails, etc.)
 
 ### 🧪 Qualité & Tests
-- **[05_testing_standards.md](./05_testing_standards.md)** - Standards de tests et qualité
+- **[06_testing_standards.md](./06_testing_standards.md)** - Standards de tests et qualité
 
 ### 🔒 Sécurité & Conformité
-- **[06_security_standards.md](./06_security_standards.md)** - Standards de sécurité
-- **[11_data_privacy_standards.md](./11_data_privacy_standards.md)** - Protection des données et RGPD
+- **[07_security_standards.md](./07_security_standards.md)** - Standards de sécurité
+- **[08_data_privacy_standards.md](./08_data_privacy_standards.md)** - Protection des données et RGPD
 
 ### ⚡ Performance & Optimisation
-- **[07_performance_standards.md](./07_performance_standards.md)** - Standards de performance
-- **[08_build_optimization_standards.md](./08_build_optimization_standards.md)** - Optimisation et factorisation CSS
+- **[09_performance_standards.md](./09_performance_standards.md)** - Standards de performance
+- **[10_build_optimization_standards.md](./10_build_optimization_standards.md)** - Optimisation et factorisation CSS
 
 ### ♿ Accessibilité
-- **[09_accessibility_standards.md](./09_accessibility_standards.md)** - Standards d'accessibilité WCAG 2.1 AA
+- **[11_accessibility_standards.md](./11_accessibility_standards.md)** - Standards d'accessibilité WCAG 2.1 AA
 
 ### 🚀 Déploiement
-- **[10_deployment_standards.md](./10_deployment_standards.md)** - Standards de déploiement
+- **[12_deployment_standards.md](./12_deployment_standards.md)** - Standards de déploiement
 
 ### 🔧 Outils & Configuration
 - **[CASCADE_RULES.md](./CASCADE_RULES.md)** - Règles Cascade
@@ -39,7 +39,7 @@
 ### 📚 Processus & Gouvernance
 - **[DOCUMENTATION_LIFECYCLE.md](./DOCUMENTATION_LIFECYCLE.md)** - Cycle de vie de la documentation
 - **[CONFLICT_RESOLUTION.md](./CONFLICT_RESOLUTION.md)** - Résolution de conflits
-- **[REVIEW_FINAL.md](./REVIEW_FINAL.md)** - Revue finale
+- **[CSS_ARCHITECTURE.md](./CSS_ARCHITECTURE.md)** - Architecture CSS modulaire
 
 ### 📋 RFCs
 - **[rfcs/](./rfcs/)** - Requests for Comments et décisions architecturales
@@ -52,17 +52,19 @@
 3. `02_architecture_framework.md` - Architecture
 4. `03_design_system_guide.md` - Design system
 5. `04_development_best_practices.md` - Bonnes pratiques
+6. `05_standardizations.md` - Standardisations
 
 ### Pour la mise en production :
-1. `05_testing_standards.md` - Tests obligatoires
-2. `06_security_standards.md` - Sécurité
-3. `07_performance_standards.md` - Performance
-4. `08_accessibility_standards.md` - Accessibilité
-5. `09_deployment_standards.md` - Déploiement
+1. `06_testing_standards.md` - Tests obligatoires
+2. `07_security_standards.md` - Sécurité
+3. `08_data_privacy_standards.md` - Données et RGPD
+4. `09_performance_standards.md` - Performance
+5. `11_accessibility_standards.md` - Accessibilité
+6. `12_deployment_standards.md` - Déploiement
 
 ### Pour l'optimisation :
-1. `11_build_optimization_standards.md` - Build et CSS
-2. `10_data_privacy_standards.md` - Données et RGPD
+1. `10_build_optimization_standards.md` - Build et CSS
+2. `09_performance_standards.md` - Performance
 
 ## 📊 Statistiques
 

@@ -1,13 +1,14 @@
 # Standardisations AVNIR
 
 <!-- METADATA -->
-<!-- Version: 1.0.0 -->
+<!-- Version: 1.0.1 -->
 <!-- Last Updated: 2025-10-31 -->
 <!-- Last Validated: 2025-10-31 -->
 <!-- Next Review: 2025-11-30 -->
-<!-- Dependencies: 01_repository_overview.md -->
+<!-- Dependencies: 01_repository_overview.md, 03_design_system_guide.md -->
 <!-- Breaking Changes: None -->
 <!-- Status: ACTIVE -->
+<!-- Note: Renumbered from 12 to 05 for better logical flow -->
 <!-- /METADATA -->
 
 ## Vue d'ensemble
