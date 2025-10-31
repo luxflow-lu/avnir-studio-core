@@ -5,7 +5,7 @@ export default function MentionsPage() {
   const mentions = getMentionsLegales("MUZISYSTEM");
   
   return (
-    <section className="section">
+    <section className="section--xl">
       <div className="container">
         <Content.LegalPage
           title="Mentions Légales"

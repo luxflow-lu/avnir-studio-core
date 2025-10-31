@@ -6,7 +6,7 @@ export default function TermsPage() {
   const allSections = [...commonTermsSections, ...learningTermsSections];
   
   return (
-    <section className="section">
+    <section className="section--xl">
       <div className="container">
         <Content.LegalPage
           title="Conditions Générales d'Utilisation"

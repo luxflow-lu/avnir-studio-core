@@ -3,7 +3,7 @@ import { cookiesPolicy } from "@avnir/content";
 
 export default function CookiesPage() {
   return (
-    <section className="section">
+    <section className="section--xl">
       <div className="container">
         <Content.LegalPage
           title="Politique de Cookies"
