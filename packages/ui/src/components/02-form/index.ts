@@ -1,5 +1,5 @@
 export * from "./Button";
-export * from "./Button";
+export * from "./IconButton";
 export * from "./Input";
 export * from "./ContactForm";
 export * from "./Textarea";
