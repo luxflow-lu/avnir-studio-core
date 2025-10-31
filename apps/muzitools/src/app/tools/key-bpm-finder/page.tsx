@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Button, Layout, Form } from "@avnir/ui";
+import { Button, Layout, Form, Marketing } from "@avnir/ui";
 
 interface AnalysisResult {
   bpm: number | null;
@@ -152,31 +152,78 @@ export default function KeyBpmFinderPage() {
         </div>
       </section>
 
-      {/* Info Section */}
+      {/* How It Works */}
       <section className="section--xl">
         <div className="container">
-          <Layout.SectionHeader
+          <Marketing.Steps
             title="Comment ça marche ?"
             subtitle="Analyse tes fichiers audio en 3 étapes simples"
-            align="center"
+            items={[
+              {
+                title: "1. Importe ton fichier",
+                description: "Glisse-dépose ton fichier audio (MP3, WAV, M4A) ou clique pour sélectionner. Taille max: 50MB."
+              },
+              {
+                title: "2. Analyse automatique",
+                description: "Notre algorithme analyse le BPM, la tonalité et calcule le code Camelot en quelques secondes."
+              },
+              {
+                title: "3. Utilise les résultats",
+                description: "Copie les informations pour tes playlists, DJ sets ou sessions de production musicale."
+              }
+            ]}
           />
-          <div className="grid-3">
-            <div className="text-center">
-              <div className="text-4xl mb-4">1️⃣</div>
-              <h3 className="text-lg font-semibold mb-2">Importe ton fichier</h3>
-              <p className="text-sm text-muted">Glisse-dépose ton fichier audio (MP3, WAV, M4A) ou clique pour sélectionner.</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">2️⃣</div>
-              <h3 className="text-lg font-semibold mb-2">Analyse automatique</h3>
-              <p className="text-sm text-muted">Notre algorithme analyse le BPM, la tonalité et calcule le code Camelot.</p>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl mb-4">3️⃣</div>
-              <h3 className="text-lg font-semibold mb-2">Utilise les résultats</h3>
-              <p className="text-sm text-muted">Copie les informations pour tes playlists, DJ sets ou sessions de production.</p>
-            </div>
-          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="section--xl">
+        <div className="container">
+          <Marketing.Stats
+            title="Key & BPM Finder en chiffres"
+            items={[
+              { label: "Précision BPM", value: "99%" },
+              { label: "Temps d'analyse", value: "<3s" },
+              { label: "Formats supportés", value: "3" },
+              { label: "Taille max fichier", value: "50MB" }
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="section--xl">
+        <div className="container">
+          <Marketing.Faq
+            title="Questions fréquentes"
+            subtitle="Tout ce que tu dois savoir sur le Key & BPM Finder"
+            items={[
+              {
+                q: "Quels formats audio sont supportés ?",
+                a: "Le Key & BPM Finder supporte les formats MP3, WAV et M4A. La taille maximale par fichier est de 50MB."
+              },
+              {
+                q: "Mes fichiers sont-ils envoyés sur un serveur ?",
+                a: "Non, absolument pas. L'analyse est effectuée 100% localement dans ton navigateur. Tes fichiers ne quittent jamais ton appareil."
+              },
+              {
+                q: "Quelle est la précision de l'analyse ?",
+                a: "Notre algorithme offre une précision de 99% pour la détection du BPM et de la tonalité sur la plupart des genres musicaux."
+              },
+              {
+                q: "Qu'est-ce que le code Camelot ?",
+                a: "Le code Camelot (1A-12B) est un système de notation qui facilite le mixage harmonique. Les tracks avec des codes adjacents se mixent harmonieusement."
+              },
+              {
+                q: "Comment copier les résultats ?",
+                a: "Après l'analyse, clique sur le bouton 'Copier les résultats' pour copier toutes les informations dans ton presse-papier."
+              },
+              {
+                q: "Puis-je analyser plusieurs fichiers ?",
+                a: "Actuellement, l'outil analyse un fichier à la fois. Une fonctionnalité d'analyse par lots est prévue dans une future mise à jour."
+              }
+            ]}
+          />
         </div>
       </section>
     </main>

@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Button, Card, Layout, Marketing } from "@avnir/ui";
+import { Button, Card, CardContent, CardTitle, CardDescription, CardFooter, Layout, Marketing } from "@avnir/ui";
 
 export default function Page() {
 
@@ -35,54 +35,88 @@ export default function Page() {
           />
           <div className="grid-3">
             <Card>
-              <div className="card-content">
+              <CardContent>
                 <div className="card-icon">🎵</div>
-                <h3 className="card-title">Key & BPM Finder</h3>
-                <p className="card-description">Analyse instantanée du BPM, de la tonalité et du code Camelot de tes tracks.</p>
+                <CardTitle>Key & BPM Finder</CardTitle>
+                <CardDescription>
+                  Analyse instantanée du BPM, de la tonalité et du code Camelot de tes tracks.
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
                 <Button variant="solid" size="sm" onClick={() => window.location.href = '/tools/key-bpm-finder'}>
                   Utiliser l'outil
                 </Button>
-              </div>
+              </CardFooter>
             </Card>
             <Card>
-              <div className="card-content">
+              <CardContent>
                 <div className="card-icon">🎤</div>
-                <h3 className="card-title">Stems Separator</h3>
-                <p className="card-description">Sépare les voix, batteries, basse et instruments de n'importe quelle track.</p>
-                <span className="badge badge--outline">Bientôt</span>
-              </div>
+                <CardTitle>Stems Separator</CardTitle>
+                <CardDescription>
+                  Sépare les voix, batteries, basse et instruments de n'importe quelle track.
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Button variant="outline" size="sm" disabled>
+                  Bientôt disponible
+                </Button>
+              </CardFooter>
             </Card>
             <Card>
-              <div className="card-content">
+              <CardContent>
                 <div className="card-icon">🔇</div>
-                <h3 className="card-title">Vocal Remover</h3>
-                <p className="card-description">Extrait ou supprime les voix d'une chanson pour créer des instrumentales.</p>
-                <span className="badge badge--outline">Bientôt</span>
-              </div>
+                <CardTitle>Vocal Remover</CardTitle>
+                <CardDescription>
+                  Extrait ou supprime les voix d'une chanson pour créer des instrumentales.
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Button variant="outline" size="sm" disabled>
+                  Bientôt disponible
+                </Button>
+              </CardFooter>
             </Card>
             <Card>
-              <div className="card-content">
+              <CardContent>
                 <div className="card-icon">📊</div>
-                <h3 className="card-title">Audio Normalizer</h3>
-                <p className="card-description">Normalise le volume de tes tracks pour un niveau sonore cohérent.</p>
-                <span className="badge badge--outline">Bientôt</span>
-              </div>
+                <CardTitle>Audio Normalizer</CardTitle>
+                <CardDescription>
+                  Normalise le volume de tes tracks pour un niveau sonore cohérent.
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Button variant="outline" size="sm" disabled>
+                  Bientôt disponible
+                </Button>
+              </CardFooter>
             </Card>
             <Card>
-              <div className="card-content">
+              <CardContent>
                 <div className="card-icon">🔄</div>
-                <h3 className="card-title">Format Converter</h3>
-                <p className="card-description">Convertis tes fichiers audio entre différents formats (MP3, WAV, FLAC, etc.).</p>
-                <span className="badge badge--outline">Bientôt</span>
-              </div>
+                <CardTitle>Format Converter</CardTitle>
+                <CardDescription>
+                  Convertis tes fichiers audio entre différents formats (MP3, WAV, FLAC, etc.).
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Button variant="outline" size="sm" disabled>
+                  Bientôt disponible
+                </Button>
+              </CardFooter>
             </Card>
             <Card>
-              <div className="card-content">
+              <CardContent>
                 <div className="card-icon">✂️</div>
-                <h3 className="card-title">Audio Trimmer</h3>
-                <p className="card-description">Découpe et édite tes fichiers audio avec précision.</p>
-                <span className="badge badge--outline">Bientôt</span>
-              </div>
+                <CardTitle>Audio Trimmer</CardTitle>
+                <CardDescription>
+                  Découpe et édite tes fichiers audio avec précision.
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Button variant="outline" size="sm" disabled>
+                  Bientôt disponible
+                </Button>
+              </CardFooter>
             </Card>
           </div>
         </div>
@@ -116,41 +150,16 @@ export default function Page() {
         </div>
       </section>
 
-      {/* How It Works */}
-      <section className="section--xl">
-        <div className="container">
-          <Marketing.Steps
-            title="Comment ça marche ?"
-            subtitle="Analyse tes productions en 3 étapes simples"
-            items={[
-              {
-                title: "1. Importe ton fichier",
-                description: "Glisse-dépose ton fichier audio (MP3, WAV, M4A) ou clique pour sélectionner. Taille max: 50MB."
-              },
-              {
-                title: "2. Analyse automatique",
-                description: "Notre algorithme analyse le BPM, la tonalité et calcule le code Camelot en quelques secondes."
-              },
-              {
-                title: "3. Utilise les résultats",
-                description: "Copie les informations pour tes playlists, DJ sets ou sessions de production musicale."
-              }
-            ]}
-          />
-        </div>
-      </section>
-
-
       {/* Stats Section */}
       <section className="section--xl">
         <div className="container">
           <Marketing.Stats
             title="MUZITOOLS en chiffres"
             items={[
-              { label: "Précision BPM", value: "99%" },
-              { label: "Temps d'analyse", value: "<3s" },
-              { label: "Formats supportés", value: "3" },
-              { label: "Taille max fichier", value: "50MB" }
+              { label: "Outils disponibles", value: "1" },
+              { label: "Outils à venir", value: "5+" },
+              { label: "Utilisateurs", value: "100%" },
+              { label: "Prix", value: "0€" }
             ]}
           />
         </div>
@@ -164,28 +173,28 @@ export default function Page() {
             subtitle="Tout ce que tu dois savoir sur MUZITOOLS"
             items={[
               {
-                q: "Quels formats audio sont supportés ?",
-                a: "MUZITOOLS supporte les formats MP3, WAV et M4A. La taille maximale par fichier est de 50MB."
-              },
-              {
-                q: "Mes fichiers sont-ils envoyés sur un serveur ?",
-                a: "Non, absolument pas. L'analyse est effectuée 100% localement dans ton navigateur. Tes fichiers ne quittent jamais ton appareil."
-              },
-              {
                 q: "Est-ce vraiment gratuit ?",
                 a: "Oui, MUZITOOLS est 100% gratuit sans limitation. Aucun compte requis, aucun abonnement, aucune publicité."
               },
               {
-                q: "Quelle est la précision de l'analyse ?",
-                a: "Notre algorithme offre une précision de 99% pour la détection du BPM et de la tonalité sur la plupart des genres musicaux."
+                q: "Mes fichiers sont-ils envoyés sur un serveur ?",
+                a: "Non, absolument pas. Tous les outils fonctionnent 100% localement dans ton navigateur. Tes fichiers ne quittent jamais ton appareil."
               },
               {
-                q: "Qu'est-ce que le code Camelot ?",
-                a: "Le code Camelot (1A-12B) est un système de notation qui facilite le mixage harmonique. Les tracks avec des codes adjacents se mixent harmonieusement."
+                q: "Quels outils sont disponibles actuellement ?",
+                a: "Le Key & BPM Finder est actuellement disponible. D'autres outils comme le Stems Separator, Vocal Remover et Audio Normalizer arrivent bientôt."
+              },
+              {
+                q: "Dois-je créer un compte ?",
+                a: "Non, aucun compte n'est nécessaire. Tous les outils sont accessibles directement sans inscription."
               },
               {
                 q: "Puis-je utiliser MUZITOOLS hors ligne ?",
                 a: "Actuellement non, mais une version PWA avec support hors ligne est prévue dans une future mise à jour."
+              },
+              {
+                q: "Comment puis-je soutenir le projet ?",
+                a: "MUZITOOLS fait partie de l'écosystème AVNIR Studio. Tu peux nous soutenir en utilisant nos autres services comme MUZIDEV (formation) ou MUZIPICS (générateur de visuels)."
               }
             ]}
           />

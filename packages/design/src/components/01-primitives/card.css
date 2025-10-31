@@ -69,6 +69,18 @@
   display: flex;
   flex-direction: column;
   gap: var(--gap-sm);
+  justify-content: space-between;
+}
+
+.card-content > .btn,
+.card-content > button {
+  margin-top: var(--gap-md);
+  align-self: flex-start;
+}
+
+.card-content > .badge {
+  margin-top: var(--gap-md);
+  align-self: flex-start;
 }
 
 .card-footer {
