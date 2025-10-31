@@ -31,6 +31,10 @@ export const logos = {
     full: "/brands/muzisystem/logo.svg",
     icon: "/brands/muzisystem/icon.svg",
   },
+  muzitools: {
+    full: "/brands/muzitools/logo.svg",
+    icon: "/brands/muzitools/icon.svg",
+  },
 } as const;
 
 export const ogImages = {
@@ -46,4 +50,5 @@ export const favicons = {
   muzibase: "/favicons/muzibase/",
   muzimanager: "/favicons/muzimanager/",
   muzisystem: "/favicons/muzisystem/",
+  muzitools: "/favicons/muzitools/",
 } as const;
