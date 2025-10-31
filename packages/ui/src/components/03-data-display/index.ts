@@ -14,3 +14,4 @@ export * from "./DataTable";
 export * from "./PermissionBadge";
 export * from "./ProjectCard";
 export * from "./TypedBadge";
+export * from "./LoadingCard";
