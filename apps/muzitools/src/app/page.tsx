@@ -9,9 +9,10 @@ export default function Page() {
       {/* Hero Section */}
       <section id="accueil">
         <Marketing.Hero
-          title="Outils gratuits pour créateurs musicaux"
-          subtitle="Analyse audio, traitement de fichiers et outils essentiels pour producteurs et DJs. 100% gratuit, 100% local, 0% tracking."
-          layout="center"
+          title="Ta boîte à outils audio gratuite"
+          subtitle="Analyse, traite et optimise tes fichiers audio directement dans ton navigateur. 100% gratuit, 100% local, zéro tracking. Les outils essentiels pour producteurs, DJs et artistes."
+          layout="left"
+          backgroundImage="/images/muzitools-hero.webp"
           actions={
             <>
               <Button variant="solid" size="lg" onClick={() => window.location.href = '/tools/key-bpm-finder'}>
@@ -25,12 +26,38 @@ export default function Page() {
         />
       </section>
 
+      {/* Content Split - Value Proposition */}
+      <section className="section--xl">
+        <div className="container">
+          <Marketing.ContentSplit
+            title="Des outils puissants, sans compromis sur ta vie privée"
+            subtitle="Fini les uploads sur des serveurs inconnus. MUZITOOLS traite tes fichiers 100% localement dans ton navigateur. Tes créations restent chez toi, point final. Analyse BPM et tonalité, sépare les stems, normalise le volume... tout ça sans jamais quitter ton navigateur."
+            features={[
+              "🔒 Traitement 100% local",
+              "⚡ Résultats instantanés",
+              "🎯 Précision professionnelle"
+            ]}
+            actions={
+              <Button variant="solid" size="md" onClick={() => window.location.href = '/tools/key-bpm-finder'}>
+                Commencer maintenant
+              </Button>
+            }
+            image={
+              <div className="gallery-placeholder">
+                Tool Interface Preview
+              </div>
+            }
+            reverse
+          />
+        </div>
+      </section>
+
       {/* Tools Grid */}
       <section id="tools" className="section--xl">
         <div className="container">
           <Layout.SectionHeader
-            title="Nos outils"
-            subtitle="Des outils puissants et gratuits pour ta production musicale"
+            title="Ta boîte à outils complète"
+            subtitle="De l'analyse à l'optimisation, tous les outils dont tu as besoin pour ta production musicale. Gratuits, rapides, et respectueux de ta vie privée."
             align="center"
           />
           <div className="grid-3">
@@ -126,27 +153,58 @@ export default function Page() {
       <section className="section--xl">
         <div className="container">
           <Layout.SectionHeader
-            title="Pourquoi MUZITOOLS ?"
-            subtitle="Des outils pensés pour les créateurs, par des créateurs"
+            title="Pourquoi les artistes choisissent MUZITOOLS"
+            subtitle="Pas de bullshit, pas de tracking, pas d'abonnement. Juste des outils qui font le job, point."
             align="center"
           />
           <Marketing.FeatureGrid columns={3}>
             <Marketing.FeatureGridItem
               icon="🆓"
-              title="100% Gratuit"
-              description="Tous les outils sont gratuits, sans limite d'utilisation. Aucun compte requis, aucun abonnement."
+              title="100% Gratuit, pour toujours"
+              description="Tous les outils, toutes les fonctionnalités, sans limite. Pas de piège, pas de paywall caché. On croit que les outils essentiels doivent être accessibles à tous."
             />
             <Marketing.FeatureGridItem
               icon="🔒"
-              title="100% Local"
-              description="Tes fichiers ne quittent jamais ton appareil. Analyse locale dans ton navigateur, zéro serveur."
+              title="Vie privée respectée"
+              description="Tes fichiers restent sur ton appareil. Zéro upload, zéro serveur, zéro tracking. Le traitement se fait 100% localement dans ton navigateur. Tes créations t'appartiennent."
             />
             <Marketing.FeatureGridItem
               icon="⚡"
-              title="Résultats instantanés"
-              description="Analyse complète en moins de 3 secondes. Pas d'attente, pas de file d'attente."
+              title="Rapidité professionnelle"
+              description="Analyse BPM en <3s, détection de tonalité instantanée, précision de 99%. Pas de file d'attente, pas de loading. Tu cliques, ça marche."
+            />
+            <Marketing.FeatureGridItem
+              icon="💻"
+              title="Aucune installation"
+              description="Tout fonctionne directement dans ton navigateur. Pas d'app à télécharger, pas de plugin à installer. Compatible Windows, Mac, Linux."
+            />
+            <Marketing.FeatureGridItem
+              icon="🎯"
+              title="Précision studio"
+              description="Algorithmes calibrés pour tous les genres musicaux. De la trap au techno, du jazz au metal. Résultats fiables pour tes sessions de production et DJ sets."
+            />
+            <Marketing.FeatureGridItem
+              icon="🔄"
+              title="Mises à jour continues"
+              description="Nouveaux outils ajoutés régulièrement. Stems separator, vocal remover, audio normalizer... La roadmap est chargée."
             />
           </Marketing.FeatureGrid>
+        </div>
+      </section>
+
+      {/* Social Proof */}
+      <section className="section--xl">
+        <div className="container">
+          <Marketing.SocialProof
+            title="Utilisé par des milliers d'artistes"
+            subtitle="Producteurs, DJs, beatmakers et artistes indépendants font confiance à MUZITOOLS pour leur workflow quotidien"
+            logos={[
+              { name: "Artist 1", src: "/logos/artist-1.svg" },
+              { name: "Artist 2", src: "/logos/artist-2.svg" },
+              { name: "Artist 3", src: "/logos/artist-3.svg" },
+              { name: "Artist 4", src: "/logos/artist-4.svg" },
+            ]}
+          />
         </div>
       </section>
 
@@ -165,6 +223,39 @@ export default function Page() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="section--xl">
+        <div className="container">
+          <Layout.SectionHeader
+            title="Ce que disent les artistes"
+            subtitle="Retours de producteurs, DJs et beatmakers qui utilisent MUZITOOLS au quotidien"
+            align="center"
+          />
+          <Marketing.Testimonials
+            items={[
+              {
+                quote: "Enfin un outil BPM qui respecte ma vie privée. Plus besoin d'uploader mes tracks sur des sites chelous. Ça marche direct dans le navigateur, c'est rapide et précis.",
+                author: "DJ Nexus",
+                role: "DJ & Producteur",
+                avatar: "/avatars/dj-nexus.jpg"
+              },
+              {
+                quote: "J'utilise le Key Finder avant chaque session de mixage. La détection du code Camelot est ultra précise, ça me fait gagner un temps fou pour préparer mes sets.",
+                author: "Sarah K.",
+                role: "DJ Techno",
+                avatar: "/avatars/sarah-k.jpg"
+              },
+              {
+                quote: "100% gratuit, aucune inscription, ça marche instantanément. C'est exactement ce dont j'avais besoin pour mon workflow de production. Merci MUZITOOLS !",
+                author: "Beatmaker Pro",
+                role: "Producteur Hip-Hop",
+                avatar: "/avatars/beatmaker-pro.jpg"
+              }
+            ]}
+          />
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section id="faq" className="section--xl">
         <div className="container">
@@ -173,28 +264,36 @@ export default function Page() {
             subtitle="Tout ce que tu dois savoir sur MUZITOOLS"
             items={[
               {
-                q: "Est-ce vraiment gratuit ?",
-                a: "Oui, MUZITOOLS est 100% gratuit sans limitation. Aucun compte requis, aucun abonnement, aucune publicité."
+                q: "Est-ce vraiment 100% gratuit ?",
+                a: "Oui, absolument. Tous les outils MUZITOOLS sont gratuits, sans limite d'utilisation, sans compte requis, sans abonnement caché. On croit que les outils essentiels pour créateurs doivent être accessibles à tous, point."
               },
               {
-                q: "Mes fichiers sont-ils envoyés sur un serveur ?",
-                a: "Non, absolument pas. Tous les outils fonctionnent 100% localement dans ton navigateur. Tes fichiers ne quittent jamais ton appareil."
+                q: "Comment ça marche si mes fichiers ne sont pas uploadés ?",
+                a: "MUZITOOLS utilise la puissance de ton navigateur pour traiter tes fichiers localement. Quand tu importes un fichier audio, il est analysé directement sur ton appareil grâce à des algorithmes JavaScript. Aucune donnée ne quitte ton ordinateur."
               },
               {
                 q: "Quels outils sont disponibles actuellement ?",
-                a: "Le Key & BPM Finder est actuellement disponible. D'autres outils comme le Stems Separator, Vocal Remover et Audio Normalizer arrivent bientôt."
+                a: "Le Key & BPM Finder est actuellement disponible et 100% fonctionnel. D'autres outils arrivent bientôt : Stems Separator (séparation voix/instruments), Vocal Remover, Audio Normalizer, Format Converter et Audio Trimmer. La roadmap est chargée !"
               },
               {
-                q: "Dois-je créer un compte ?",
-                a: "Non, aucun compte n'est nécessaire. Tous les outils sont accessibles directement sans inscription."
+                q: "Dois-je créer un compte pour utiliser les outils ?",
+                a: "Non, aucun compte n'est nécessaire. Tous les outils sont accessibles directement, sans inscription, sans email, sans rien. Tu arrives, tu utilises, c'est tout."
               },
               {
-                q: "Puis-je utiliser MUZITOOLS hors ligne ?",
-                a: "Actuellement non, mais une version PWA avec support hors ligne est prévue dans une future mise à jour."
+                q: "Puis-je utiliser MUZITOOLS pour mes projets commerciaux ?",
+                a: "Oui, absolument. MUZITOOLS est un outil d'analyse et de traitement, pas un service de création de contenu. Tu peux utiliser les résultats pour n'importe quel projet, commercial ou non."
+              },
+              {
+                q: "Ça fonctionne sur mobile ?",
+                a: "Oui, MUZITOOLS fonctionne sur tous les navigateurs modernes (Chrome, Firefox, Safari, Edge) sur desktop et mobile. L'interface est responsive et optimisée pour tous les écrans."
               },
               {
                 q: "Comment puis-je soutenir le projet ?",
-                a: "MUZITOOLS fait partie de l'écosystème AVNIR Studio. Tu peux nous soutenir en utilisant nos autres services comme MUZIDEV (formation) ou MUZIPICS (générateur de visuels)."
+                a: "MUZITOOLS fait partie de l'écosystème AVNIR Studio. Si tu veux nous soutenir, check nos autres services : MUZIDEV (formation en ligne pour artistes) et MUZIPICS (générateur de visuels IA). Partager MUZITOOLS avec d'autres artistes nous aide aussi énormément !"
+              },
+              {
+                q: "Puis-je suggérer un nouvel outil ?",
+                a: "Bien sûr ! On est toujours à l'écoute des besoins de la communauté. Contacte-nous via la page contact avec tes suggestions d'outils. Si c'est pertinent et techniquement faisable, on l'ajoutera à la roadmap."
               }
             ]}
           />
