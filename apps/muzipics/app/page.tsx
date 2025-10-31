@@ -8,6 +8,7 @@ export default function Page() {
   return (
     <>
       {/* Hero Section */}
+      <section id="accueil">
       <Marketing.Hero
         title="Génère tes visuels d'album 2.0"
         subtitle="Crée instantanément des covers d'albums, singles et visuels musicaux professionnels grâce à l'intelligence artificielle."
@@ -24,6 +25,7 @@ export default function Page() {
           </>
         }
       />
+      </section>
 
       {/* Content Split - Présentation */}
       <section className="section--xl">
@@ -79,7 +81,7 @@ export default function Page() {
       </section>
 
       {/* Pricing Section */}
-      <section className="section--xl">
+      <section id="tarifs" className="section--xl">
         <div className="container">
           <Layout.SectionHeader
             title="Des formules pensées pour tous les artistes"
@@ -150,7 +152,7 @@ export default function Page() {
       </section>
 
       {/* Gallery/Examples Section */}
-      <section className="section--xl">
+      <section id="galerie" className="section--xl">
         <div className="container">
           <Layout.SectionHeader
             title="Exemples de covers générées avec MUZIPICS"
@@ -196,7 +198,7 @@ export default function Page() {
       </section>
 
       {/* FAQ Section */}
-      <section className="section--xl">
+      <section id="faq" className="section--xl">
         <div className="container">
           <Marketing.Faq
             title="Questions fréquentes"

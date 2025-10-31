@@ -11,10 +11,10 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         transparent
         logo={<BrandLogo size="md" />}
         links={[
-          { label: "Accueil", href: "/" },
-          { label: "Galerie", href: "/gallery" },
-          { label: "Tarifs", href: "/pricing" },
-          { label: "FAQ", href: "/faq" },
+          { label: "Accueil", href: "/#accueil" },
+          { label: "Galerie", href: "/#galerie" },
+          { label: "Tarifs", href: "/#tarifs" },
+          { label: "FAQ", href: "/#faq" },
           { label: "Contact", href: "/contact" },
         ]}
         actions={
