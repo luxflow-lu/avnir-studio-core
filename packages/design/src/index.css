@@ -102,6 +102,7 @@
 @import './components/08-content/prose.css';
 @import './components/08-content/code-block.css';
 @import './components/08-content/markdown.css';
+@import './components/08-content/legal-page.css';
 
 /* 09 - Marketing (Hero, features, etc.) */
 @import './components/09-marketing/hero.css';
