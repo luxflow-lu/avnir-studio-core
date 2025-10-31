@@ -11,8 +11,7 @@ export default function Page() {
         <Marketing.Hero
           title="Ta boîte à outils audio gratuite"
           subtitle="Analyse, traite et optimise tes fichiers audio directement dans ton navigateur. 100% gratuit, 100% local, zéro tracking. Les outils essentiels pour producteurs, DJs et artistes."
-          layout="left"
-          backgroundImage="/images/muzitools-hero.webp"
+          layout="center"
           actions={
             <>
               <Button variant="solid" size="lg" onClick={() => window.location.href = '/tools/key-bpm-finder'}>
@@ -192,25 +191,6 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Logo Cloud */}
-      <section className="section--xl">
-        <div className="container">
-          <Layout.SectionHeader
-            title="Utilisé par des milliers d'artistes"
-            subtitle="Producteurs, DJs, beatmakers et artistes indépendants font confiance à MUZITOOLS pour leur workflow quotidien"
-            align="center"
-          />
-          <Marketing.LogoCloud
-            logos={[
-              { src: "/logos/artist-1.svg", alt: "Artist 1" },
-              { src: "/logos/artist-2.svg", alt: "Artist 2" },
-              { src: "/logos/artist-3.svg", alt: "Artist 3" },
-              { src: "/logos/artist-4.svg", alt: "Artist 4" },
-            ]}
-          />
-        </div>
-      </section>
-
       {/* Stats Section */}
       <section className="section--xl">
         <div className="container">
@@ -235,6 +215,7 @@ export default function Page() {
             align="center"
           />
           <Marketing.Testimonials
+            variant="carousel"
             items={[
               {
                 quote: "Enfin un outil BPM qui respecte ma vie privée. Plus besoin d'uploader mes tracks sur des sites chelous. Ça marche direct dans le navigateur, c'est rapide et précis.",
