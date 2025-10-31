@@ -5,10 +5,14 @@ export default function MentionsPage() {
   const mentions = getMentionsLegales("MUZIDEV");
   
   return (
-    <Content.LegalPage
-      title="Mentions Légales"
-      lastUpdated={mentions.lastUpdated}
-      sections={mentions.sections}
-    />
+    <section className="section">
+      <div className="container">
+        <Content.LegalPage
+          title="Mentions Légales"
+          lastUpdated={mentions.lastUpdated}
+          sections={mentions.sections}
+        />
+      </div>
+    </section>
   );
 }

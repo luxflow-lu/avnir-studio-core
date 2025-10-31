@@ -3,10 +3,14 @@ import { cookiesPolicy } from "@avnir/content";
 
 export default function CookiesPage() {
   return (
-    <Content.LegalPage
-      title="Politique de Cookies"
-      lastUpdated={cookiesPolicy.lastUpdated}
-      sections={cookiesPolicy.sections}
-    />
+    <section className="section">
+      <div className="container">
+        <Content.LegalPage
+          title="Politique de Cookies"
+          lastUpdated={cookiesPolicy.lastUpdated}
+          sections={cookiesPolicy.sections}
+        />
+      </div>
+    </section>
   );
 }

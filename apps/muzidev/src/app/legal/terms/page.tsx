@@ -6,10 +6,14 @@ export default function TermsPage() {
   const allSections = [...commonTermsSections, ...learningTermsSections];
   
   return (
-    <Content.LegalPage
-      title="Conditions Générales d'Utilisation"
-      lastUpdated="2025-01-31"
-      sections={allSections}
-    />
+    <section className="section">
+      <div className="container">
+        <Content.LegalPage
+          title="Conditions Générales d'Utilisation"
+          lastUpdated="2025-01-31"
+          sections={allSections}
+        />
+      </div>
+    </section>
   );
 }
