@@ -12,7 +12,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         logo={<BrandLogo size="md" />}
         links={[
           { label: "Accueil", href: "/#accueil" },
-          { label: "Galerie", href: "/#galerie" },
+          { label: "Cover Generator", href: "/#generator" },
           { label: "Tarifs", href: "/#tarifs" },
           { label: "FAQ", href: "/#faq" },
           { label: "Contact", href: "/contact" },

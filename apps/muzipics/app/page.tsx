@@ -53,7 +53,7 @@ export default function Page() {
       </section>
 
       {/* Features Section */}
-      <section className="section--xl">
+      <section id="generator" className="section--xl">
         <div className="container">
           <Layout.SectionHeader
             title="Les fonctionnalités qui font la différence"
