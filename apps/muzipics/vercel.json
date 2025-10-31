@@ -1,5 +1,5 @@
 {
-  "buildCommand": "pnpm -w --filter ./apps/muzipics run build",
+  "buildCommand": "cd ../.. && pnpm turbo run build --filter=muzipics",
   "installCommand": "pnpm -w install --frozen-lockfile",
   "framework": "nextjs",
   "outputDirectory": ".next"
