@@ -6,6 +6,16 @@
 
 @tailwind utilities;
 
+/* Smooth scroll for anchor navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Offset scroll for fixed navbar (if needed) */
+section[id] {
+  scroll-margin-top: 80px;
+}
+
 /* Force grid gaps - debug */
 .grid-2,
 .grid-3,

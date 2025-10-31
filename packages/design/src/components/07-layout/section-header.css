@@ -2,8 +2,24 @@
 
 .section-header {
   margin-bottom: var(--padding-container);
-  padding-left: var(--padding-section-xl);
-  padding-right: var(--padding-section-xl);
+  padding-left: var(--padding-section-sm);
+  padding-right: var(--padding-section-sm);
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .section-header {
+    padding-left: var(--padding-section-md);
+    padding-right: var(--padding-section-md);
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .section-header {
+    padding-left: var(--padding-section-xl);
+    padding-right: var(--padding-section-xl);
+  }
 }
 
 .section-header--left {
