@@ -22,7 +22,7 @@
 
 .file-upload--active {
   border-color: var(--primary);
-  background-color: var(--accent);
+  background-color: var(--surface);
 }
 
 .file-upload-input {

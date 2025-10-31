@@ -3,5 +3,5 @@
 .cta-section {
   padding: var(--space-section-lg) var(--padding-container);
   text-align: center;
-  background-color: var(--surface);
+  background-color: none;
 }

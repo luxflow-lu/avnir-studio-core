@@ -86,6 +86,22 @@ export default function KeyBpmFinderPage() {
         subtitle="Détecte instantanément le BPM, la tonalité et le code Camelot de tes tracks. Analyse 100% locale, résultats en <3s, précision de 99%. Parfait pour DJs, producteurs et beatmakers."
       />
 
+      {/* Stats Section */}
+      <section className="section--xl">
+        <div className="container">
+          <Marketing.Stats
+            title="Key & BPM Finder en chiffres"
+            items={[
+              { label: "Précision BPM", value: "99%" },
+              { label: "Temps d'analyse", value: "<3s" },
+              { label: "Formats supportés", value: "3" },
+              { label: "Taille max fichier", value: "50MB" }
+            ]}
+          />
+        </div>
+      </section>
+
+      {/* Tool Section */}
       <section className="section--xl">
         <div className="container">
           {!file && !results && (
@@ -171,21 +187,6 @@ export default function KeyBpmFinderPage() {
                 title: "3. Utilise les résultats",
                 description: "Copie les informations d'un clic pour tes playlists, DJ sets ou sessions de production. Analyse un autre fichier ou exporte les données."
               }
-            ]}
-          />
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="section--xl">
-        <div className="container">
-          <Marketing.Stats
-            title="Key & BPM Finder en chiffres"
-            items={[
-              { label: "Précision BPM", value: "99%" },
-              { label: "Temps d'analyse", value: "<3s" },
-              { label: "Formats supportés", value: "3" },
-              { label: "Taille max fichier", value: "50MB" }
             ]}
           />
         </div>
