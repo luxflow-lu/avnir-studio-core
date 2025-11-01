@@ -31,7 +31,21 @@ async function loadEssentiaScript(): Promise<void> {
     const script = document.createElement('script');
     script.src = 'https://cdn.jsdelivr.net/npm/essentia.js@0.1.3/dist/essentia-wasm.web.js';
     script.async = true;
-    script.onload = () => resolve();
+    script.onload = () => {
+      // Attendre que Essentia soit disponible
+      const checkEssentia = setInterval(() => {
+        if ((window as any).Essentia) {
+          clearInterval(checkEssentia);
+          resolve();
+        }
+      }, 100);
+      
+      // Timeout après 10 secondes
+      setTimeout(() => {
+        clearInterval(checkEssentia);
+        reject(new Error('Timeout: Essentia.js non disponible'));
+      }, 10000);
+    };
     script.onerror = () => reject(new Error('Impossible de charger Essentia.js'));
     document.head.appendChild(script);
   });
