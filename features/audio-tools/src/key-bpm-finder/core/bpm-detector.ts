@@ -83,6 +83,12 @@ async function initEssentia(): Promise<any> {
     const Essentia = (window as any).Essentia;
     const EssentiaWASM = (window as any).EssentiaWASM;
     
+    console.log('Objets chargés:', {
+      Essentia: typeof Essentia,
+      EssentiaWASM: typeof EssentiaWASM,
+      EssentiaWASMKeys: EssentiaWASM ? Object.keys(EssentiaWASM) : []
+    });
+    
     if (!Essentia) {
       throw new Error('Essentia class non disponible');
     }
