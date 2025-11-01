@@ -110,7 +110,7 @@ async function resampleMonoFloat32(
     // Copie manuelle pour éviter les conflits de types ArrayBufferLike
     const channelData = srcBuffer.getChannelData(0);
     for (let i = 0; i < mono.length; i++) {
-      channelData[i] = mono[i];
+      channelData[i] = mono[i] || 0;
     }
 
     // Utilise le ctx target pour faire le rendu au sample rate cible
