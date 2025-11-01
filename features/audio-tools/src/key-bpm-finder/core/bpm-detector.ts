@@ -79,18 +79,34 @@ async function initEssentia(): Promise<any> {
     // Charger les scripts
     await loadEssentiaScript();
 
-    // Initialiser Essentia avec EssentiaWASM
+    // Récupérer Essentia et EssentiaWASM depuis window
     const Essentia = (window as any).Essentia;
     const EssentiaWASM = (window as any).EssentiaWASM;
     
-    if (!Essentia || !EssentiaWASM) {
-      throw new Error('Essentia.js non disponible');
+    if (!Essentia) {
+      throw new Error('Essentia class non disponible');
+    }
+    
+    if (!EssentiaWASM) {
+      throw new Error('EssentiaWASM non disponible');
     }
 
+    console.log('Initialisation Essentia avec WASM...');
+    
+    // Créer l'instance Essentia
     essentiaInstance = new Essentia(EssentiaWASM);
     
-    // Attendre que le WASM soit initialisé
-    await essentiaInstance.module;
+    console.log('Essentia instance créée, attente du module WASM...');
+    
+    // Attendre que le module WASM soit prêt
+    if (essentiaInstance.module) {
+      await essentiaInstance.module;
+    }
+    
+    console.log('Essentia prêt !', {
+      version: essentiaInstance.version,
+      algorithms: essentiaInstance.algorithmNames?.length || 0
+    });
     
     return essentiaInstance;
   })();
