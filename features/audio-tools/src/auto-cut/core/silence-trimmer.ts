@@ -165,26 +165,26 @@ export function trimSilence(
 
   // Quiet = nearNoise & flat & stable
   const quiet = new Uint8Array(med.length);
-  for (let i = 0; i < med.length; i++) quiet[i] = (nearNoiseArr[i] & flatArr[i] & stableArr[i]);
+  for (let i = 0; i < med.length; i++) quiet[i] = ((nearNoiseArr[i] || 0) & (flatArr[i] || 0) & (stableArr[i] || 0));
 
   // Somme cumulative pour tester "fenêtre 100% quiet"
   const pref = new Uint32Array(med.length + 1);
-  for (let i = 0; i < med.length; i++) pref[i + 1] = pref[i] + quiet[i];
+  for (let i = 0; i < med.length; i++) pref[i + 1] = (pref[i] || 0) + (quiet[i] || 0);
 
   let plateauStart = -1;
   for (let j = 0; j + needBelow <= med.length; j++) {
-    const cnt = pref[j + needBelow] - pref[j];
+    const cnt = (pref[j + needBelow] || 0) - (pref[j] || 0);
     if (cnt === needBelow) plateauStart = j; // on garde le dernier segment valide
   }
 
   // Fallbacks si rien
   if (plateauStart < 0) {
     // F1) relâcher "stable"
-    for (let i = 0; i < med.length; i++) quiet[i] = (nearNoiseArr[i] & flatArr[i]);
+    for (let i = 0; i < med.length; i++) quiet[i] = ((nearNoiseArr[i] || 0) & (flatArr[i] || 0));
     pref.fill(0);
-    for (let i = 0; i < med.length; i++) pref[i + 1] = pref[i] + quiet[i];
+    for (let i = 0; i < med.length; i++) pref[i + 1] = (pref[i] || 0) + (quiet[i] || 0);
     for (let j = 0; j + needBelow <= med.length; j++) {
-      const cnt = pref[j + needBelow] - pref[j];
+      const cnt = (pref[j + needBelow] || 0) - (pref[j] || 0);
       if (cnt === needBelow) plateauStart = j;
     }
     if (plateauStart >= 0) console.warn("[AutoCut:F1] Fin trouvée sans 'stable'");
@@ -194,9 +194,9 @@ export function trimSilence(
     const absThrSoft = noise_db + Math.min(marginDb, 12);
     for (let i = 0; i < med.length; i++) quiet[i] = (med[i] || 0) <= absThrSoft ? 1 : 0;
     pref.fill(0);
-    for (let i = 0; i < med.length; i++) pref[i + 1] = pref[i] + quiet[i];
+    for (let i = 0; i < med.length; i++) pref[i + 1] = (pref[i] || 0) + (quiet[i] || 0);
     for (let j = 0; j + needBelow <= med.length; j++) {
-      const cnt = pref[j + needBelow] - pref[j];
+      const cnt = (pref[j + needBelow] || 0) - (pref[j] || 0);
       if (cnt === needBelow) plateauStart = j;
     }
     if (plateauStart >= 0) console.warn("[AutoCut:F2] Fin trouvée nearNoise-only");
