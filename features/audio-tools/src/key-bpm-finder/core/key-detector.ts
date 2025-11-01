@@ -44,8 +44,11 @@ export function detectKey(audioData: Float32Array, sampleRate: number): KeyResul
  */
 function calculateChromaProfile(audioData: Float32Array, sampleRate: number): number[] {
   const chroma = new Array(12).fill(0);
-  const fftSize = 4096;
-  const hopSize = fftSize / 2;
+  const fftSize = 2048; // Réduit de 4096 à 2048
+  const hopSize = fftSize * 4; // Augmenté pour moins de fenêtres
+  
+  // Limiter l'analyse aux premières 30 secondes max
+  const maxSamples = Math.min(audioData.length, sampleRate * 30);
   
   // Fréquences de référence pour les 12 notes (A4 = 440Hz)
   const A4 = 440;
@@ -55,8 +58,8 @@ function calculateChromaProfile(audioData: Float32Array, sampleRate: number): nu
     return A4 * Math.pow(2, semitonesFromA4 / 12);
   });
   
-  // Analyser par fenêtres
-  for (let i = 0; i < audioData.length - fftSize; i += hopSize) {
+  // Analyser par fenêtres (beaucoup moins de fenêtres)
+  for (let i = 0; i < maxSamples - fftSize; i += hopSize) {
     const window = audioData.slice(i, i + fftSize);
     const spectrum = simpleFFT(window);
     
@@ -82,18 +85,20 @@ function calculateChromaProfile(audioData: Float32Array, sampleRate: number): nu
  * @returns Magnitude du spectre
  */
 function simpleFFT(data: Float32Array): number[] {
-  const N = data.length;
+  const N = Math.min(data.length, 1024); // Limiter à 1024 samples max
   const spectrum = new Array(N / 2).fill(0);
   
-  // DFT simplifiée (pas optimisée, mais suffisante pour notre usage)
-  for (let k = 0; k < N / 2; k++) {
+  // DFT simplifiée avec sous-échantillonnage
+  const step = Math.max(1, Math.floor(data.length / N));
+  
+  for (let k = 0; k < N / 2; k += 2) { // Sauter 1 sur 2 pour aller plus vite
     let real = 0;
     let imag = 0;
     
-    for (let n = 0; n < N; n++) {
+    for (let n = 0; n < N; n += step) {
       const angle = (2 * Math.PI * k * n) / N;
-      real += data[n] * Math.cos(angle);
-      imag -= data[n] * Math.sin(angle);
+      real += data[n * step] * Math.cos(angle);
+      imag -= data[n * step] * Math.sin(angle);
     }
     
     spectrum[k] = Math.sqrt(real * real + imag * imag);

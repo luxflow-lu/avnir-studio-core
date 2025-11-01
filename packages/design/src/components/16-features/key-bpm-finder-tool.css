@@ -19,7 +19,7 @@
 
 .key-bpm-finder-upload:hover {
   border-color: var(--primary);
-  background-color: var(--muted);
+  background-color: var(--surface);
 }
 
 .key-bpm-finder-upload-icon {

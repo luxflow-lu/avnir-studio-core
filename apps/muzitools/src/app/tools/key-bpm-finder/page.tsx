@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Card, CardContent, CardTitle, CardDescription, Layout, Marketing, Features } from "@avnir/ui";
+import { Button, Card, CardContent, CardTitle, CardDescription, Layout, Marketing, Features } from "@avnir/ui";
 import type { AnalysisResult } from "@features/audio-tools";
 
 export default function KeyBpmFinderPage() {
