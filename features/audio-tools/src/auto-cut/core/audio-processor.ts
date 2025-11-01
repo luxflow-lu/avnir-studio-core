@@ -75,7 +75,7 @@ function audioBufferToMonoCopy(ab: AudioBuffer): Float32Array {
   for (let ch = 0; ch < numberOfChannels; ch++) {
     const data = ab.getChannelData(ch);
     for (let i = 0; i < length; i++) {
-      out[i] += data[i] / numberOfChannels;
+      out[i] = (out[i] || 0) + data[i] / numberOfChannels;
     }
   }
   return out;
