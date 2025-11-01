@@ -11,6 +11,12 @@ export * from "./legal/site-config";
 export * from "./legal/terms/common";
 export * from "./legal/terms/learning";
 
+// MUZITOOLS Legal
+export * from "./legal/muzitools-privacy";
+export * from "./legal/muzitools-terms";
+export * from "./legal/muzitools-cookies";
+export * from "./legal/muzitools-mentions";
+
 // SEO
 export * from "./seo/types";
 export * from "./seo/generator";
