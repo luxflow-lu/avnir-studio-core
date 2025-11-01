@@ -1,11 +1,8 @@
 /**
  * BPM Detector
  * Détecte le tempo (BPM) d'un fichier audio
- * Utilise Essentia.js pour une détection professionnelle
+ * Utilise Essentia.js via CDN pour une détection professionnelle
  */
-
-// @ts-ignore - essentia.js types
-import Essentia from 'essentia.js';
 
 export interface BPMResult {
   bpm: number;
@@ -13,6 +10,32 @@ export interface BPMResult {
 }
 
 let essentiaInstance: any = null;
+let essentiaLoading: Promise<any> | null = null;
+
+/**
+ * Charge Essentia.js depuis le CDN
+ */
+async function loadEssentiaScript(): Promise<void> {
+  return new Promise((resolve, reject) => {
+    if (typeof window === 'undefined') {
+      reject(new Error('Essentia.js nécessite un environnement navigateur'));
+      return;
+    }
+
+    // Vérifier si déjà chargé
+    if ((window as any).Essentia) {
+      resolve();
+      return;
+    }
+
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/essentia.js@0.1.3/dist/essentia-wasm.web.js';
+    script.async = true;
+    script.onload = () => resolve();
+    script.onerror = () => reject(new Error('Impossible de charger Essentia.js'));
+    document.head.appendChild(script);
+  });
+}
 
 /**
  * Initialise Essentia.js (chargement du WASM)
@@ -21,11 +44,27 @@ async function initEssentia(): Promise<any> {
   if (essentiaInstance) {
     return essentiaInstance;
   }
-  
-  // @ts-ignore
-  const essentia = new Essentia();
-  essentiaInstance = essentia;
-  return essentia;
+
+  if (essentiaLoading) {
+    await essentiaLoading;
+    return essentiaInstance;
+  }
+
+  essentiaLoading = (async () => {
+    // Charger le script
+    await loadEssentiaScript();
+
+    // Initialiser Essentia
+    const Essentia = (window as any).Essentia;
+    if (!Essentia) {
+      throw new Error('Essentia.js non disponible');
+    }
+
+    essentiaInstance = new Essentia();
+    return essentiaInstance;
+  })();
+
+  return essentiaLoading;
 }
 
 /**
