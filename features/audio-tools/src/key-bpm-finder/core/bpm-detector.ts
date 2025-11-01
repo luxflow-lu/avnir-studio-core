@@ -23,31 +23,42 @@ async function loadEssentiaScript(): Promise<void> {
     }
 
     // Vérifier si déjà chargé
-    if ((window as any).Essentia) {
+    if ((window as any).Essentia && (window as any).EssentiaWASM) {
       resolve();
       return;
     }
 
-    const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/essentia.js@0.1.3/dist/essentia-wasm.web.js';
-    script.async = true;
-    script.onload = () => {
-      // Attendre que Essentia soit disponible
-      const checkEssentia = setInterval(() => {
-        if ((window as any).Essentia) {
-          clearInterval(checkEssentia);
-          resolve();
-        }
-      }, 100);
+    // Charger d'abord le WASM
+    const wasmScript = document.createElement('script');
+    wasmScript.src = 'https://cdn.jsdelivr.net/npm/essentia.js@0.1.3/dist/essentia-wasm.web.js';
+    
+    wasmScript.onload = () => {
+      // Puis charger le core
+      const coreScript = document.createElement('script');
+      coreScript.src = 'https://cdn.jsdelivr.net/npm/essentia.js@0.1.3/dist/essentia.js-core.js';
       
-      // Timeout après 10 secondes
-      setTimeout(() => {
-        clearInterval(checkEssentia);
-        reject(new Error('Timeout: Essentia.js non disponible'));
-      }, 10000);
+      coreScript.onload = () => {
+        // Attendre que les deux soient disponibles
+        const checkEssentia = setInterval(() => {
+          if ((window as any).Essentia && (window as any).EssentiaWASM) {
+            clearInterval(checkEssentia);
+            resolve();
+          }
+        }, 100);
+        
+        // Timeout après 10 secondes
+        setTimeout(() => {
+          clearInterval(checkEssentia);
+          reject(new Error('Timeout: Essentia.js non disponible'));
+        }, 10000);
+      };
+      
+      coreScript.onerror = () => reject(new Error('Impossible de charger essentia.js-core'));
+      document.head.appendChild(coreScript);
     };
-    script.onerror = () => reject(new Error('Impossible de charger Essentia.js'));
-    document.head.appendChild(script);
+    
+    wasmScript.onerror = () => reject(new Error('Impossible de charger essentia-wasm'));
+    document.head.appendChild(wasmScript);
   });
 }
 
@@ -65,16 +76,22 @@ async function initEssentia(): Promise<any> {
   }
 
   essentiaLoading = (async () => {
-    // Charger le script
+    // Charger les scripts
     await loadEssentiaScript();
 
-    // Initialiser Essentia
+    // Initialiser Essentia avec EssentiaWASM
     const Essentia = (window as any).Essentia;
-    if (!Essentia) {
+    const EssentiaWASM = (window as any).EssentiaWASM;
+    
+    if (!Essentia || !EssentiaWASM) {
       throw new Error('Essentia.js non disponible');
     }
 
-    essentiaInstance = new Essentia();
+    essentiaInstance = new Essentia(EssentiaWASM);
+    
+    // Attendre que le WASM soit initialisé
+    await essentiaInstance.module;
+    
     return essentiaInstance;
   })();
 
