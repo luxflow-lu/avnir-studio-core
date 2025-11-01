@@ -104,6 +104,11 @@ export default function KeyBpmFinderPage() {
       {/* Tool Section */}
       <section className="section--xl">
         <div className="container">
+          <Layout.SectionHeader
+            title="Analyse ton fichier audio"
+            subtitle="Importe ton fichier MP3, WAV ou M4A pour obtenir instantanément le BPM, la tonalité et le code Camelot. Taille max : 50MB."
+            align="center"
+          />
           {!file && !results && (
             <Form.FileUpload
               accept=".mp3,.wav,.m4a,audio/*"

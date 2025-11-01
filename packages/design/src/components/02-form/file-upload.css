@@ -17,7 +17,7 @@
 
 .file-upload:hover {
   border-color: var(--primary);
-  background-color: var(--muted);
+  background-color: var(--surface);
 }
 
 .file-upload--active {
