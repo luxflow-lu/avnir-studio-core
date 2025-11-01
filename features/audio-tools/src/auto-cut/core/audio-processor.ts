@@ -133,7 +133,7 @@ async function resampleMonoFloat32(
       const i0 = Math.floor(pos);
       const i1 = Math.min(mono.length - 1, i0 + 1);
       const frac = pos - i0;
-      out[i] = mono[i0] * (1 - frac) + mono[i1] * frac;
+      out[i] = (mono[i0] || 0) * (1 - frac) + (mono[i1] || 0) * frac;
     }
     return { signal: out, sampleRate: targetSR };
   }
@@ -170,7 +170,7 @@ export function exportToWav(signal: Float32Array, sampleRate: number): Blob {
   // Float32 [-1,1] -> Int16 little endian
   let offset = 44;
   for (let i = 0; i < signal.length; i++) {
-    const s = Math.max(-1, Math.min(1, signal[i]));
+    const s = Math.max(-1, Math.min(1, signal[i] || 0));
     view.setInt16(offset, s < 0 ? s * 0x8000 : s * 0x7fff, true);
     offset += 2;
   }
