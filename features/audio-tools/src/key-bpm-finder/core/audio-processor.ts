@@ -94,7 +94,7 @@ function audioBufferToMono(audioBuffer: AudioBuffer): Float32Array {
   for (let channel = 0; channel < numberOfChannels; channel++) {
     const channelData = audioBuffer.getChannelData(channel);
     for (let i = 0; i < length; i++) {
-      monoSignal[i] += (channelData[i] || 0) / numberOfChannels;
+      monoSignal[i] = (monoSignal[i] || 0) + (channelData[i] || 0) / numberOfChannels;
     }
   }
   
@@ -253,10 +253,13 @@ export function detectEnergyPeaks(
   
   for (let i = 1; i < envelope.length - 1; i++) {
     // Crête locale au-dessus du seuil
+    const curr = envelope[i] || 0;
+    const prev = envelope[i - 1] || 0;
+    const next = envelope[i + 1] || 0;
     if (
-      envelope[i] > minThreshold &&
-      envelope[i] > envelope[i - 1] &&
-      envelope[i] > envelope[i + 1]
+      curr > minThreshold &&
+      curr > prev &&
+      curr > next
     ) {
       peaks.push(i);
     }
