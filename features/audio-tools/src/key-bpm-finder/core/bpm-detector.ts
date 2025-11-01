@@ -4,6 +4,7 @@
  * Utilise la librairie music-tempo pour une détection précise
  */
 
+// @ts-ignore - music-tempo n'a pas de types officiels
 import MusicTempo from 'music-tempo';
 
 export interface BPMResult {
