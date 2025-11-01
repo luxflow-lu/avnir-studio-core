@@ -173,3 +173,6 @@
 @import './components/15-auth/otp-input.css';
 @import './components/15-auth/password-strength.css';
 @import './components/15-auth/two-factor-auth.css';
+
+/* 16 - Features (Specialized features like audio tools) */
+@import './components/16-features/key-bpm-finder-tool.css';

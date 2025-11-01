@@ -53,6 +53,9 @@ export * as Media from "./components/14-media";
 // 15 - Auth (Authentication, login, register, etc.)
 export * as Auth from "./components/15-auth";
 
+// 16 - Features (Specialized features like audio tools)
+export * as Features from "./components/16-features";
+
 // Templates
 export * as Templates from "./components/templates";
 
