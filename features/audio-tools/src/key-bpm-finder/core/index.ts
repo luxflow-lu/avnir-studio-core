@@ -41,7 +41,7 @@ export async function analyzeAudioFile(
     
     // 2. Détecter le BPM
     onProgress?.(0.4, 'Détection du BPM...');
-    const bpmResult = detectBPM(audioData.channelData, audioData.sampleRate);
+    const bpmResult = await detectBPM(audioData.channelData, audioData.sampleRate);
     
     // 3. Détecter la tonalité
     onProgress?.(0.7, 'Détection de la tonalité...');
