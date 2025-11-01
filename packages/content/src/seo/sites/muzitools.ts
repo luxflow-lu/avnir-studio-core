@@ -12,7 +12,7 @@ export const muzitoolsSEO: SiteSEOConfig = {
   twitter: "@muzitools",
   defaultOgImage: "/og-image.png",
   defaultDescription:
-    "Outils gratuits pour créateurs musicaux. Key & BPM Finder, analyse audio, et plus encore. 100% gratuit, 100% local, 0% tracking.",
+    "Outils gratuits pour créateurs musicaux. Key & BPM Finder, AutoCut, analyse audio, et plus encore. 100% gratuit, 100% local, 0% tracking.",
   defaultKeywords: [
     "BPM finder",
     "key finder",
@@ -22,6 +22,9 @@ export const muzitoolsSEO: SiteSEOConfig = {
     "DJ tools",
     "producer tools",
     "free music tools",
+    "audio trimmer",
+    "autocut",
+    "waveform editor",
     "stems separator",
     "vocal remover",
   ],
@@ -31,8 +34,8 @@ export const muzitoolsSEO: SiteSEOConfig = {
     home: {
       title: "MUZITOOLS - Outils Gratuits pour Créateurs Musicaux",
       description:
-        "Key & BPM Finder, analyse audio et outils gratuits pour producteurs et DJs. Analyse locale, résultats instantanés, aucun tracking.",
-      keywords: ["BPM finder", "key finder", "camelot", "music tools"],
+        "Key & BPM Finder, AutoCut, analyse audio et outils gratuits pour producteurs et DJs. Analyse locale, résultats instantanés, aucun tracking.",
+      keywords: ["BPM finder", "key finder", "camelot", "music tools", "audio trimmer", "autocut"],
     },
     contact: {
       title: "Contact - MUZITOOLS",

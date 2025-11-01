@@ -133,14 +133,14 @@ export default function Page() {
             <Card>
               <CardContent>
                 <div className="card-icon">✂️</div>
-                <CardTitle>Audio Trimmer</CardTitle>
+                <CardTitle>AutoCut</CardTitle>
                 <CardDescription>
-                  Découpe et édite tes fichiers audio avec précision.
+                  Trim tes fichiers audio avec précision. Éditeur waveform interactif et raccourcis clavier.
                 </CardDescription>
               </CardContent>
               <CardFooter>
-                <Button variant="outline" size="sm" disabled>
-                  Bientôt disponible
+                <Button variant="solid" size="sm" onClick={() => window.location.href = '/tools/auto-cut'}>
+                  Utiliser l'outil
                 </Button>
               </CardFooter>
             </Card>
@@ -200,8 +200,8 @@ export default function Page() {
           />
           <Marketing.Stats
             items={[
-              { label: "Outils disponibles", value: "1" },
-              { label: "Outils à venir", value: "5+" },
+              { label: "Outils disponibles", value: "2" },
+              { label: "Outils à venir", value: "4+" },
               { label: "Utilisateurs", value: "100%" },
               { label: "Prix", value: "0€" }
             ]}
@@ -263,7 +263,7 @@ export default function Page() {
               },
               {
                 q: "Quels outils sont disponibles actuellement ?",
-                a: "Le Key & BPM Finder est actuellement disponible et 100% fonctionnel. D'autres outils arrivent bientôt : Stems Separator (séparation voix/instruments), Vocal Remover, Audio Normalizer, Format Converter et Audio Trimmer. La roadmap est chargée !"
+                a: "Le Key & BPM Finder et AutoCut sont actuellement disponibles et 100% fonctionnels. D'autres outils arrivent bientôt : Stems Separator (séparation voix/instruments), Vocal Remover, Audio Normalizer et Format Converter. La roadmap est chargée !"
               },
               {
                 q: "Dois-je créer un compte pour utiliser les outils ?",

@@ -35,15 +35,17 @@ export const WaveformEditor = React.forwardRef<HTMLDivElement, WaveformEditorPro
       const width = canvas.width;
       const height = canvas.height;
 
-      // Clear
-      ctx.fillStyle = "#1a1a1a";
+      // Clear avec la couleur de fond
+      const bgColor = getComputedStyle(canvas).getPropertyValue('--bg').trim() || '#1a1a1a';
+      ctx.fillStyle = bgColor;
       ctx.fillRect(0, 0, width, height);
 
       // Calculer les samples par pixel avec zoom
       const samplesPerPixel = Math.floor(audioBuffer.length / (width * zoom));
 
-      // Dessiner la waveform
-      ctx.strokeStyle = "#00d9ff";
+      // Dessiner la waveform avec la couleur primaire
+      const primaryColor = getComputedStyle(canvas).getPropertyValue('--primary').trim() || '#00d9ff';
+      ctx.strokeStyle = primaryColor;
       ctx.lineWidth = 1;
       ctx.beginPath();
 
