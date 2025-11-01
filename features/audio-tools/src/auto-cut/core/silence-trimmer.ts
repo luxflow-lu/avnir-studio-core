@@ -63,10 +63,10 @@ function movingMedianDb(src: Float32Array, wFrames: number): Float32Array {
   const out = new Float32Array(src.length);
   const buf: number[] = [];
   for (let i = 0; i < src.length; i++) {
-    buf.push(src[i]);
+    buf.push(src[i] || 0);
     if (buf.length > wFrames) buf.shift();
     const tmp = [...buf].sort((a, b) => a - b);
-    out[i] = tmp[Math.floor(tmp.length / 2)];
+    out[i] = tmp[Math.floor(tmp.length / 2)] || 0;
   }
   return out;
 }
@@ -74,7 +74,7 @@ function movingMedianDb(src: Float32Array, wFrames: number): Float32Array {
 function movingSlopeDbPerSec(med: Float32Array, framesLag: number, secPerFrame: number): Float32Array {
   const out = new Float32Array(med.length);
   for (let i = framesLag; i < med.length; i++) {
-    out[i] = (med[i] - med[i - framesLag]) / (framesLag * secPerFrame);
+    out[i] = ((med[i] || 0) - (med[i - framesLag] || 0)) / (framesLag * secPerFrame);
   }
   return out; // i < framesLag => 0
 }
@@ -85,7 +85,7 @@ function movingStdDb(med: Float32Array, wFrames: number): Float32Array {
   let sum = 0, sum2 = 0;
   const q: number[] = [];
   for (let i = 0; i < med.length; i++) {
-    const v = med[i];
+    const v = med[i] || 0;
     q.push(v); sum += v; sum2 += v * v;
     if (q.length > wFrames) {
       const old = q.shift()!; sum -= old; sum2 -= old * old;
@@ -158,9 +158,9 @@ export function trimSilence(
   const flatArr      = new Uint8Array(med.length);
   const stableArr    = new Uint8Array(med.length);
   for (let i = 0; i < med.length; i++) {
-    nearNoiseArr[i] = med[i] <= absThr ? 1 : 0;
-    flatArr[i]      = Math.abs(slope[i]) <= slopeLimit ? 1 : 0;
-    stableArr[i]    = stdLocal[i] <= varLimitDb ? 1 : 0;
+    nearNoiseArr[i] = (med[i] || 0) <= absThr ? 1 : 0;
+    flatArr[i]      = Math.abs(slope[i] || 0) <= slopeLimit ? 1 : 0;
+    stableArr[i]    = (stdLocal[i] || 0) <= varLimitDb ? 1 : 0;
   }
 
   // Quiet = nearNoise & flat & stable
@@ -192,7 +192,7 @@ export function trimSilence(
   if (plateauStart < 0) {
     // F2) nearNoise seul avec marge plus souple (min 12 dB)
     const absThrSoft = noise_db + Math.min(marginDb, 12);
-    for (let i = 0; i < med.length; i++) quiet[i] = med[i] <= absThrSoft ? 1 : 0;
+    for (let i = 0; i < med.length; i++) quiet[i] = (med[i] || 0) <= absThrSoft ? 1 : 0;
     pref.fill(0);
     for (let i = 0; i < med.length; i++) pref[i + 1] = pref[i] + quiet[i];
     for (let j = 0; j + needBelow <= med.length; j++) {
@@ -244,9 +244,9 @@ export function calculateRMSEnvelope(signal: Float32Array, windowSec: number, sa
   const rms: number[] = [];
   let acc = 0;
   for (let i = 0; i < signal.length; i++) {
-    const x = signal[i];
+    const x = signal[i] || 0;
     acc += x * x;
-    if (i >= win) acc -= signal[i - win] * signal[i - win];
+    if (i >= win) acc -= (signal[i - win] || 0) * (signal[i - win] || 0);
     if (i >= win - 1) rms.push(Math.sqrt(acc / win));
   }
   return new Float32Array(rms);
