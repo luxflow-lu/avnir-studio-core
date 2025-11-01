@@ -61,7 +61,7 @@ export function getMonoData(audioBuffer: AudioBuffer): Float32Array {
   for (let channel = 0; channel < numberOfChannels; channel++) {
     const channelData = audioBuffer.getChannelData(channel);
     for (let i = 0; i < length; i++) {
-      monoData[i] += channelData[i] / numberOfChannels;
+      monoData[i] += (channelData[i] || 0) / numberOfChannels;
     }
   }
   
@@ -104,11 +104,11 @@ export function calculateAmplitudeEnvelope(
  */
 export function lowPassFilter(data: Float32Array, cutoff: number = 0.1): Float32Array {
   const filtered = new Float32Array(data.length);
-  let previous = data[0];
+  let previous = data[0] || 0;
   
   for (let i = 0; i < data.length; i++) {
-    filtered[i] = previous + cutoff * (data[i] - previous);
-    previous = filtered[i];
+    filtered[i] = previous + cutoff * ((data[i] || 0) - previous);
+    previous = filtered[i] || 0;
   }
   
   return filtered;

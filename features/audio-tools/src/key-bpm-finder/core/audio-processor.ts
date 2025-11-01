@@ -94,7 +94,7 @@ function audioBufferToMono(audioBuffer: AudioBuffer): Float32Array {
   for (let channel = 0; channel < numberOfChannels; channel++) {
     const channelData = audioBuffer.getChannelData(channel);
     for (let i = 0; i < length; i++) {
-      monoSignal[i] += channelData[i] / numberOfChannels;
+      monoSignal[i] += (channelData[i] || 0) / numberOfChannels;
     }
   }
   
@@ -226,7 +226,8 @@ export function calculateEnergyEnvelope(
     
     let energy = 0;
     for (let j = start; j < end; j++) {
-      energy += signal[j] * signal[j];
+      const val = signal[j] || 0;
+      energy += val * val;
     }
     
     envelope[i] = Math.sqrt(energy / (end - start));

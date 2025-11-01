@@ -148,7 +148,7 @@ function correlate(profile1: number[], profile2: number[]): number {
   let sum = 0;
   
   for (let i = 0; i < profile1.length; i++) {
-    sum += profile1[i] * profile2[i];
+    sum += (profile1[i] || 0) * (profile2[i] || 0);
   }
   
   return sum;

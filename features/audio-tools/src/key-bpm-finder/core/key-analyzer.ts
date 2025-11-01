@@ -124,7 +124,7 @@ async function analyzeKeyWithProfile(
   
   const mean = new Float32Array(len);
   for (const v of hpcps) {
-    for (let i = 0; i < len; i++) mean[i] += v[i];
+    for (let i = 0; i < len; i++) mean[i] += (v[i] || 0);
   }
   for (let i = 0; i < len; i++) mean[i] /= hpcps.length;
   
