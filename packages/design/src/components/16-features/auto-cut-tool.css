@@ -1,0 +1,166 @@
+/**
+ * AutoCut Tool
+ * Styles pour l'outil de trim automatique des silences
+ */
+
+.auto-cut-tool {
+  width: 100%;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+/* Upload zone */
+.auto-cut-tool-upload {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--padding-section-md);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  background-color: var(--surface);
+}
+
+.auto-cut-tool-upload:hover {
+  border-color: var(--primary);
+  background-color: var(--surface);
+}
+
+.auto-cut-tool-upload-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  margin-bottom: var(--gap-md);
+  color: var(--primary);
+}
+
+.auto-cut-tool-upload-title {
+  font-size: var(--text-h4);
+  font-weight: var(--font-semibold);
+  color: var(--titles);
+  margin-bottom: var(--gap-sm);
+}
+
+.auto-cut-tool-upload-subtitle {
+  font-size: var(--text-body);
+  color: var(--text);
+  margin-bottom: var(--gap-xs);
+}
+
+.auto-cut-tool-upload-formats {
+  font-size: var(--text-sm);
+  color: var(--muted);
+}
+
+/* Analyzing state */
+.auto-cut-tool-processing {
+  text-align: center;
+  padding: var(--padding-section-md);
+}
+
+.auto-cut-tool-spinner {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto var(--gap-md);
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: var(--radius-full);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.auto-cut-tool-processing-text {
+  font-size: var(--text-h4);
+  font-weight: var(--font-semibold);
+  color: var(--titles);
+  margin-bottom: var(--gap-sm);
+}
+
+/* Results */
+.auto-cut-tool-results {
+  padding: var(--padding-section-md);
+  background-color: var(--surface);
+  border-radius: var(--radius-lg);
+}
+
+.auto-cut-tool-results-header {
+  text-align: center;
+  margin-bottom: var(--gap-xl);
+}
+
+.auto-cut-tool-results-title {
+  font-size: var(--text-h4);
+  font-weight: var(--font-semibold);
+  color: var(--titles);
+  margin-bottom: var(--gap-sm);
+}
+
+.auto-cut-tool-results-file {
+  font-size: var(--text-body);
+  color: var(--text);
+  word-break: break-word;
+}
+
+.auto-cut-tool-results-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--gap-md);
+  margin-bottom: var(--gap-xl);
+}
+
+@media (min-width: 640px) {
+  .auto-cut-tool-results-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.auto-cut-tool-result-card {
+  text-align: center;
+  padding: var(--gap-lg);
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+}
+
+.auto-cut-tool-result-label {
+  font-size: var(--text-sm);
+  font-weight: var(--font-medium);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--gap-xs);
+}
+
+.auto-cut-tool-result-value {
+  font-size: var(--text-h3);
+  font-weight: var(--font-bold);
+  color: var(--primary);
+}
+
+.auto-cut-tool-results-actions {
+  display: flex;
+  gap: var(--gap-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.auto-cut-tool-results-actions .btn {
+  flex: 1;
+  min-width: 12rem;
+}
+
+@media (max-width: 640px) {
+  .auto-cut-tool-results-actions {
+    flex-direction: column;
+  }
+  
+  .auto-cut-tool-results-actions .btn {
+    width: 100%;
+  }
+}

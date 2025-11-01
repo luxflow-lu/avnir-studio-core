@@ -1,7 +1,8 @@
 import * as React from "react";
-import { analyzeAudioFile, type AnalysisResult } from "@features/audio-tools";
+import { analyzeAudioFile, formatDuration, formatKey, type AnalysisResult } from "@features/audio-tools";
 
 import { cx } from "../../utils/cx";
+import { Button } from "../02-form/Button";
 
 export interface KeyBpmFinderToolProps {
   onAnalysisComplete?: (results: AnalysisResult) => void;
@@ -71,7 +72,9 @@ export const KeyBpmFinderTool = React.forwardRef<HTMLDivElement, KeyBpmFinderToo
       if (!results) return;
 
       try {
-        const text = `BPM: ${results.bpm}\nKey: ${results.key}\nCamelot: ${results.camelot}\nDurée: ${results.duration}`;
+        const keyFormatted = formatKey(results.key.key, results.key.scale);
+        const durationFormatted = formatDuration(results.duration);
+        const text = `BPM: ${results.bpm.bpm}\nKey: ${keyFormatted}\nCamelot: ${results.camelot}\nDurée: ${durationFormatted}`;
         await navigator.clipboard.writeText(text);
       } catch (err) {
         console.error("Erreur de copie:", err);
@@ -167,12 +170,18 @@ export const KeyBpmFinderTool = React.forwardRef<HTMLDivElement, KeyBpmFinderToo
             <div className="key-bpm-finder-results-grid">
               <div className="key-bpm-finder-result-card">
                 <div className="key-bpm-finder-result-label">BPM</div>
-                <div className="key-bpm-finder-result-value">{results.bpm}</div>
+                <div className="key-bpm-finder-result-value">
+                  {Number.isInteger(results.bpm.bpm) 
+                    ? results.bpm.bpm 
+                    : results.bpm.bpm.toFixed(1)}
+                </div>
               </div>
 
               <div className="key-bpm-finder-result-card">
                 <div className="key-bpm-finder-result-label">Tonalité</div>
-                <div className="key-bpm-finder-result-value">{results.key}</div>
+                <div className="key-bpm-finder-result-value">
+                  {formatKey(results.key.key, results.key.scale)}
+                </div>
               </div>
 
               <div className="key-bpm-finder-result-card">
@@ -182,25 +191,25 @@ export const KeyBpmFinderTool = React.forwardRef<HTMLDivElement, KeyBpmFinderToo
 
               <div className="key-bpm-finder-result-card">
                 <div className="key-bpm-finder-result-label">Durée</div>
-                <div className="key-bpm-finder-result-value">{results.duration}</div>
+                <div className="key-bpm-finder-result-value">
+                  {formatDuration(results.duration)}
+                </div>
               </div>
             </div>
 
             <div className="key-bpm-finder-results-actions">
-              <button
-                type="button"
-                className="btn btn-outline"
+              <Button
+                variant="solid"
                 onClick={resetAnalysis}
               >
                 Analyser un autre fichier
-              </button>
-              <button
-                type="button"
-                className="btn btn-solid"
+              </Button>
+              <Button
+                variant="outline"
                 onClick={copyResults}
               >
                 Copier les résultats
-              </button>
+              </Button>
             </div>
           </div>
         )}

@@ -71,6 +71,11 @@ export { Card, CardContent, CardTitle, CardDescription, CardFooter, CardHeader, 
 export { Badge } from "./components/03-data-display/Badge";
 export { StandardFooter } from "./components/07-layout/StandardFooter";
 
+// Features (Audio tools)
+export { KeyBpmFinderTool } from "./components/16-features/KeyBpmFinderTool";
+export { AutoCutTool } from "./components/16-features/AutoCutTool";
+export { WaveformEditor } from "./components/16-features/WaveformEditor";
+
 // ============================================
 // UTILITIES & HOOKS
 // ============================================

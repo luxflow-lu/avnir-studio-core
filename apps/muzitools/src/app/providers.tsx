@@ -13,6 +13,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         links={[
           { label: "Accueil", href: "/" },
           { label: "Key & BPM Finder", href: "/tools/key-bpm-finder" },
+          { label: "AutoCut", href: "/tools/auto-cut" },
           { label: "FAQ", href: "/#faq" },
           { label: "Contact", href: "/contact" },
         ]}
@@ -29,6 +30,7 @@ export function AppLayout({ children }: { children: React.ReactNode }) {
         exploreLinks={[
           { label: "Accueil", href: "/" },
           { label: "Key & BPM Finder", href: "/tools/key-bpm-finder" },
+          { label: "AutoCut", href: "/tools/auto-cut" },
           { label: "FAQ", href: "/#faq" },
           { label: "Contact", href: "/contact" },
         ]}

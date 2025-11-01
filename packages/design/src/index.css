@@ -176,3 +176,5 @@
 
 /* 16 - Features (Specialized features like audio tools) */
 @import './components/16-features/key-bpm-finder-tool.css';
+@import './components/16-features/auto-cut-tool.css';
+@import './components/16-features/waveform-editor.css';

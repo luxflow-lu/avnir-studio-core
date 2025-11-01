@@ -1,0 +1,153 @@
+/**
+ * Waveform Editor
+ * Éditeur manuel de waveform avec curseurs draggables
+ */
+
+.waveform-editor {
+  width: 100%;
+  background: var(--surface);
+  border-radius: var(--radius-lg);
+  padding: var(--padding-lg);
+  border: 1px solid var(--border);
+}
+
+.waveform-editor-header {
+  margin-bottom: var(--margin-lg);
+}
+
+.waveform-editor-title {
+  font-size: var(--text-h3);
+  font-weight: var(--font-bold);
+  color: var(--titles);
+  margin: 0 0 var(--margin-sm) 0;
+}
+
+.waveform-editor-subtitle {
+  font-size: var(--text-body);
+  color: var(--muted);
+  margin: 0;
+}
+
+.waveform-editor canvas {
+  border-radius: var(--radius-md);
+  background: var(--bg);
+  border: 1px solid var(--border);
+}
+
+.waveform-editor-controls {
+  margin-top: var(--margin-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-md);
+}
+
+.waveform-editor-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding-sm) var(--padding-md);
+  background: var(--card);
+  border-radius: var(--radius-md);
+  font-size: var(--text-small);
+  font-weight: var(--font-medium);
+  color: var(--muted);
+}
+
+.waveform-editor-time span {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-xs);
+}
+
+.waveform-editor-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--gap-md);
+}
+
+.waveform-editor-zoom {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-sm);
+  padding: var(--padding-xs) var(--padding-md);
+  background: var(--card);
+  border-radius: var(--radius-md);
+}
+
+.waveform-editor-zoom span {
+  font-size: var(--text-small);
+  font-weight: var(--font-medium);
+  color: var(--muted);
+  min-width: 60px;
+  text-align: center;
+}
+
+.waveform-editor-zoom-btn {
+  min-width: 32px !important;
+  width: 32px;
+  height: 32px;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.waveform-editor-help {
+  padding: var(--padding-sm) var(--padding-md);
+  margin-top: var(--margin-lg);
+  background: var(--card);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--primary);
+}
+
+.waveform-editor-help small {
+  font-size: var(--text-tiny);
+  color: var(--muted);
+  line-height: var(--leading-normal);
+}
+
+.waveform-editor-help strong {
+  color: var(--text);
+  font-weight: var(--font-semibold);
+}
+
+.waveform-editor-separator {
+  height: 1px;
+  background: var(--border);
+  margin-top: var(--margin-lg);
+  margin-bottom: var(--margin-lg);
+}
+
+.waveform-editor-actions-bottom {
+  display: flex;
+  gap: var(--gap-md);
+  justify-content: flex-start;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .waveform-editor {
+    padding: var(--padding-md);
+  }
+
+  .waveform-editor-time {
+    flex-direction: column;
+    gap: var(--gap-xs);
+    align-items: flex-start;
+  }
+
+  .waveform-editor-actions {
+    flex-direction: column;
+  }
+
+  .waveform-editor-play-btn,
+  .waveform-editor-zoom {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .waveform-editor-help small {
+    font-size: 10px;
+  }
+}

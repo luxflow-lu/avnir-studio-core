@@ -11,16 +11,20 @@
 [34mCLI[39m Cleaning output folder
 [34mESM[39m Build start
 [34mCJS[39m Build start
-[32mESM[39m [1mdist/index.js     [22m[32m383.72 KB[39m
-[32mESM[39m [1mdist/index.js.map [22m[32m633.50 KB[39m
-[32mESM[39m ⚡️ Build success in 870ms
-[32mCJS[39m [1mdist/index.cjs     [22m[32m426.81 KB[39m
-[32mCJS[39m [1mdist/index.cjs.map [22m[32m627.01 KB[39m
-[32mCJS[39m ⚡️ Build success in 881ms
+[32mESM[39m [1mdist/index.js                 [22m[32m425.00 KB[39m
+[32mESM[39m [1mdist/chunk-5FUTL2UF.js        [22m[32m836.00 B[39m
+[32mESM[39m [1mdist/chunk-5FUTL2UF.js.map    [22m[32m71.00 B[39m
+[32mESM[39m [1mdist/index.js.map             [22m[32m720.97 KB[39m
+[32mESM[39m [1mdist/essentia-XUMLSWFB.js     [22m[32m2.78 MB[39m
+[32mESM[39m [1mdist/essentia-XUMLSWFB.js.map [22m[32m3.44 MB[39m
+[32mESM[39m ⚡️ Build success in 3225ms
+[32mCJS[39m [1mdist/index.cjs     [22m[32m3.24 MB[39m
+[32mCJS[39m [1mdist/index.cjs.map [22m[32m4.14 MB[39m
+[32mCJS[39m ⚡️ Build success in 3245ms
 DTS Build start
-DTS ⚡️ Build success in 12754ms
-DTS dist/index.d.ts  103.38 KB
-DTS dist/index.d.cts 103.38 KB
+DTS ⚡️ Build success in 17613ms
+DTS dist/index.d.ts  104.25 KB
+DTS dist/index.d.cts 104.25 KB
 
 > @avnir/ui@0.1.0 build:css /Users/maximezaoui/Desktop/repo/avnir-studio-core/packages/ui
 > tailwindcss -c tailwind.build.config.cjs -i ./src/styles-source.css -o ./dist/styles.css --postcss ./postcss.build.config.cjs --minify
@@ -28,4 +32,4 @@ DTS dist/index.d.cts 103.38 KB
 
 Rebuilding...
 
-Done in 1320ms.
+Done in 1045ms.
