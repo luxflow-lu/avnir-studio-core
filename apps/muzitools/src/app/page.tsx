@@ -76,6 +76,20 @@ export default function Page() {
             </Card>
             <Card>
               <CardContent>
+                <div className="card-icon">✂️</div>
+                <CardTitle>AutoCut</CardTitle>
+                <CardDescription>
+                  Trim tes fichiers audio avec précision. Éditeur waveform interactif et raccourcis clavier.
+                </CardDescription>
+              </CardContent>
+              <CardFooter>
+                <Button variant="solid" size="sm" onClick={() => window.location.href = '/tools/auto-cut'}>
+                  Utiliser l'outil
+                </Button>
+              </CardFooter>
+            </Card>
+            <Card>
+              <CardContent>
                 <div className="card-icon">🎤</div>
                 <CardTitle>Stems Separator</CardTitle>
                 <CardDescription>
@@ -127,20 +141,6 @@ export default function Page() {
               <CardFooter>
                 <Button variant="outline" size="sm" disabled>
                   Bientôt disponible
-                </Button>
-              </CardFooter>
-            </Card>
-            <Card>
-              <CardContent>
-                <div className="card-icon">✂️</div>
-                <CardTitle>AutoCut</CardTitle>
-                <CardDescription>
-                  Trim tes fichiers audio avec précision. Éditeur waveform interactif et raccourcis clavier.
-                </CardDescription>
-              </CardContent>
-              <CardFooter>
-                <Button variant="solid" size="sm" onClick={() => window.location.href = '/tools/auto-cut'}>
-                  Utiliser l'outil
                 </Button>
               </CardFooter>
             </Card>
