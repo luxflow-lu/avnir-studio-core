@@ -37,11 +37,11 @@ function toDb(x: number) {
   return 20 * Math.log10(x + 1e-12);
 }
 
-function percentileDb(arr: Float32Array, p: number) {
+function percentileDb(arr: Float32Array, p: number): number {
   const a = Array.from(arr).filter(Number.isFinite).sort((x, y) => x - y);
   if (!a.length) return DB_MIN;
   const k = Math.min(a.length - 1, Math.max(0, Math.round((p / 100) * (a.length - 1))));
-  return a[k];
+  return a[k] || DB_MIN;
 }
 
 function rmsDb(signal: Float32Array, win: number, hop: number): Float32Array {
