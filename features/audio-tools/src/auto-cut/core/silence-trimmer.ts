@@ -141,7 +141,7 @@ export function trimSilence(
   {
     let run = 0;
     for (let i = 0; i < med.length; i++) {
-      if (med[i] >= thrStart) {
+      if ((med[i] || DB_MIN) >= thrStart) {
         run++;
         if (run >= needAbove) { startFrame = Math.max(0, i - needAbove + 1); break; }
       } else run = 0;
