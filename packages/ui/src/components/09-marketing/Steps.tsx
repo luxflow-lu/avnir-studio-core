@@ -12,7 +12,7 @@ export type StepsProps = {
 } & React.HTMLAttributes<HTMLElement>;
 
 export const Steps = React.forwardRef<HTMLElement, StepsProps>(
-  ({ title, subtitle, items, className, ...props }, ref) => {
+  ({ title, subtitle, items, direction = "vertical", className, ...props }, ref) => {
     return (
       <section
         ref={ref}
@@ -30,7 +30,10 @@ export const Steps = React.forwardRef<HTMLElement, StepsProps>(
             </div>
           )}
           <ol
-            className="steps-list"
+            className={cx(
+              "steps-list",
+              direction === "horizontal" && "steps-list--horizontal"
+            )}
             aria-label="Étapes"
           >
             {items.map((s, i) => (

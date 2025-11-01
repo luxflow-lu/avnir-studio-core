@@ -89,8 +89,11 @@ export default function KeyBpmFinderPage() {
       {/* Stats Section */}
       <section className="section--xl">
         <div className="container">
-          <Marketing.Stats
+          <Layout.SectionHeader
             title="Key & BPM Finder en chiffres"
+            align="center"
+          />
+          <Marketing.Stats
             items={[
               { label: "Précision BPM", value: "99%" },
               { label: "Temps d'analyse", value: "<3s" },
@@ -176,21 +179,25 @@ export default function KeyBpmFinderPage() {
       {/* How It Works */}
       <section className="section--xl">
         <div className="container">
-          <Marketing.Steps
+          <Layout.SectionHeader
             title="Comment ça marche ?"
             subtitle="Analyse tes fichiers audio en 3 étapes simples"
+            align="center"
+          />
+          <Marketing.Steps
+            direction="horizontal"
             items={[
               {
-                title: "1. Importe ton fichier",
-                description: "Glisse-dépose ton fichier audio (MP3, WAV, M4A) ou clique pour sélectionner. Taille max: 50MB. Formats supportés : MP3, WAV, M4A."
+                title: "Importe ton fichier",
+                description: "Glisse-dépose ton fichier audio (MP3, WAV, M4A) ou clique pour sélectionner. Taille max: 50MB."
               },
               {
-                title: "2. Analyse automatique",
+                title: "Analyse automatique",
                 description: "Notre algorithme analyse le BPM, détecte la tonalité et calcule le code Camelot en moins de 3 secondes. Traitement 100% local dans ton navigateur."
               },
               {
-                title: "3. Utilise les résultats",
-                description: "Copie les informations d'un clic pour tes playlists, DJ sets ou sessions de production. Analyse un autre fichier ou exporte les données."
+                title: "Utilise les résultats",
+                description: "Copie les informations d'un clic pour tes playlists, DJ sets ou sessions de production. Analyse un autre fichier instantanément."
               }
             ]}
           />
@@ -240,9 +247,12 @@ export default function KeyBpmFinderPage() {
       {/* FAQ Section */}
       <section className="section--xl">
         <div className="container">
-          <Marketing.Faq
+          <Layout.SectionHeader
             title="Questions fréquentes"
             subtitle="Tout ce que tu dois savoir sur le Key & BPM Finder"
+            align="center"
+          />
+          <Marketing.Faq
             items={[
               {
                 q: "Quels formats audio sont supportés ?",

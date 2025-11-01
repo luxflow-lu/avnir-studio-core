@@ -47,6 +47,25 @@
   }
 }
 
+/* Horizontal variant */
+.steps-list--horizontal {
+  flex-direction: row;
+  gap: var(--gap-xl);
+}
+
+@media (min-width: 768px) {
+  .steps-list--horizontal {
+    gap: var(--padding-section-md);
+  }
+}
+
+.steps-list--horizontal .step-item {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
 .step-item {
   display: flex;
   gap: var(--gap-xl);

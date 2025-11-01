@@ -194,8 +194,11 @@ export default function Page() {
       {/* Stats Section */}
       <section className="section--xl">
         <div className="container">
-          <Marketing.Stats
+          <Layout.SectionHeader
             title="MUZITOOLS en chiffres"
+            align="center"
+          />
+          <Marketing.Stats
             items={[
               { label: "Outils disponibles", value: "1" },
               { label: "Outils à venir", value: "5+" },
@@ -243,9 +246,12 @@ export default function Page() {
       {/* FAQ Section */}
       <section id="faq" className="section--xl">
         <div className="container">
-          <Marketing.Faq
+          <Layout.SectionHeader
             title="Questions fréquentes"
             subtitle="Tout ce que tu dois savoir sur MUZITOOLS"
+            align="center"
+          />
+          <Marketing.Faq
             items={[
               {
                 q: "Est-ce vraiment 100% gratuit ?",
